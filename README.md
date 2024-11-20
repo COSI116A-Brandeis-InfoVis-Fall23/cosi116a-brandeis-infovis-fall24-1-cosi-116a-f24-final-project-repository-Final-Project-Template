@@ -6,6 +6,7 @@ This template will help you get started with your project. Please look through a
 ## The GitHub Pages Website
 
 Make sure you publish your project to github pages, and put the URL here: 
+cosi-116a-f24-final-project-7.github.io
 
 ### Github Pages
 
