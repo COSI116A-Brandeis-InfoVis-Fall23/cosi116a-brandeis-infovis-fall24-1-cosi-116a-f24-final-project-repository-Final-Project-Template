@@ -1,0 +1,79 @@
+[
+  {
+    "country": "France",
+    "infrastructureInvestment": 11557639689,
+    "infrastructureMaintenance": 3444677623,
+    "railUsageTotalPassengers2022": 879640000,
+    "population": 67391582
+  },
+  {
+    "country": "Switzerland",
+    "infrastructureInvestment": 3666955699,
+    "infrastructureMaintenance": 666917884.2,
+    "railUsageTotalPassengers2022": 382000000,
+    "population": 8670000
+  },
+  {
+    "country": "Austria",
+    "infrastructureInvestment": 2249500000,
+    "infrastructureMaintenance": 596900000,
+    "railUsageTotalPassengers2022": 194080000,
+    "population": 8917205
+  },
+  {
+    "country": "Turkey",
+    "infrastructureInvestment": 2184971147,
+    "infrastructureMaintenance": 179612114.3,
+    "railUsageTotalPassengers2022": 136100000,
+    "population": 85861200
+  },
+  {
+    "country": "Czechia",
+    "infrastructureInvestment": 1448913705,
+    "infrastructureMaintenance": 794368108.3,
+    "railUsageTotalPassengers2022": 124400000,
+    "population": 10693939
+  },
+  {
+    "country": "Belgium",
+    "infrastructureInvestment": 1137261091,
+    "infrastructureMaintenance": 303000000,
+    "railUsageTotalPassengers2022": 185500000,
+    "population": 11589623
+  },
+  {
+    "country": "Hungary",
+    "infrastructureInvestment": 645515782,
+    "infrastructureMaintenance": 723493606.7,
+    "railUsageTotalPassengers2022": 81020000,
+    "population": 9660351
+  },
+  {
+    "country": "Finland",
+    "infrastructureInvestment": 606000000,
+    "infrastructureMaintenance": 270000000,
+    "railUsageTotalPassengers2022": 55010000,
+    "population": 5540720
+  },
+  {
+    "country": "Slovenia",
+    "infrastructureInvestment": 377000000,
+    "infrastructureMaintenance": 99000000,
+    "railUsageTotalPassengers2022": 11860000,
+    "population": 2078654
+  },
+  {
+    "country": "Slovak Rep.",
+    "infrastructureInvestment": 220000000,
+    "infrastructureMaintenance": 16000000,
+    "railUsageTotalPassengers2022": 45670000,
+    "population": 5456362
+  },
+  {
+    "country": "Lithuania",
+    "infrastructureInvestment": 109000000,
+    "infrastructureMaintenance": 162000000,
+    "railUsageTotalPassengers2022": 4130000,
+    "population": 2722289
+  }
+]

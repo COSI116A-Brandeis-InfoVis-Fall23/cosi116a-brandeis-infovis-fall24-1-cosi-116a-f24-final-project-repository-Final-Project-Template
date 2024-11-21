@@ -21,6 +21,22 @@ h1, h2, h3 {
   height: 100%;
 }
 
+/*I added this*/
+.point {
+	stroke-width: 3;
+  }
+
+.countryLabel {
+   font-size: 12px;
+   fill: black;
+}
+
+.axisLabel {
+	font-size: 15px;
+	fill: Black;
+
+}
+
 /* Fork on GitHub ribbon via https://codepo8.github.io/css-fork-on-github-ribbon/# */  
 #forkongithub a{
 	background:#00F;
