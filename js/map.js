@@ -13,25 +13,18 @@ var projection = d3.geoMercator()
 
 var path = d3.geoPath().projection(projection);
 
-var tooltip = d3.select(".tooltip");
-
 // Load and render GeoJSON data
-d3.json("data/boston.geojson", function(error, data) {
+d3.json("data/bostonV2.json", function(error, data) {
     if (error) {
         console.error("Error loading GeoJSON:", error);
         return;
     }
-
     // Draw map regions inside the <g> element
     g.selectAll(".boston")
         .data(data.features)
         .enter().append("path")
         .attr("class", "neighborhood")
         .attr("d", path)
-        .on("mousemove", function(event) {
-            tooltip.style("left", (event.pageX + 5) + "px")
-                .style("top", (event.pageY - 28) + "px");
-        })
         .on("mouseover", function(event, d) {
             // Remove 'hovered' class from all regions
             g.selectAll(".neighborhood").classed("hovered", false);
@@ -43,20 +36,23 @@ d3.json("data/boston.geojson", function(error, data) {
             // Remove highlight (hovered class) from all regions when the mouse leaves a region
             g.selectAll(".boston").classed("hovered", false);
         })
-        .on("click", function(event, d) {
-            var clickedRegion = d3.select(this);
-
-            var neighborhood = d.properties && d.properties.name ? d.properties.name : "Unknown Neighborhood";
-             // Display region name in the #region-name div
-             d3.select("#neighborhood-name").text("Neighborhood: " + neighborhood);
-
-            // Toggle highlighted class on click
+        .on("click", function(d) {
+            console.log(d); 
+            var clickedRegion = d3.select(this); // Get the clicked region
+            var neighborhood = d.properties && d.properties.name; // Extract neighborhood name from GeoJSON data
+        
+            // Display the neighborhood name in the #neighborhood-name element
+            d3.select("#neighborhood-name").text("Neighborhood: " + neighborhood);
+        
+            // Check if the clicked region is already highlighted
             if (clickedRegion.classed("highlighted")) {
-                clickedRegion.classed("highlighted", false);  // Remove highlight
+                clickedRegion.classed("highlighted", false); // Remove highlight if it exists
             } else {
-                // Optionally, remove highlight from previously clicked regions
+                // Remove highlight from all other regions
                 g.selectAll(".boston").classed("highlighted", false);
-                clickedRegion.classed("highlighted", true);  // Add highlight
+        
+                // Add highlight to the clicked region
+                clickedRegion.classed("highlighted", true);
             }
         });
     map.on("mouseout", function() {
