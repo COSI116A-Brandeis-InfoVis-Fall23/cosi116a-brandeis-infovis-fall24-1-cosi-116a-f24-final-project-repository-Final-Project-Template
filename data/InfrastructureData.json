@@ -44,7 +44,7 @@
   {
     "country": "Hungary",
     "infrastructureInvestment": 645515782,
-    "infrastructureMaintenance": 723493606.7,
+    "infrastructureMaintenance": 523493606.7,
     "railUsageTotalPassengers2022": 81020000,
     "population": 9660351
   },
@@ -72,7 +72,7 @@
   {
     "country": "Lithuania",
     "infrastructureInvestment": 109000000,
-    "infrastructureMaintenance": 162000000,
+    "infrastructureMaintenance": 62000000,
     "railUsageTotalPassengers2022": 4130000,
     "population": 2722289
   }

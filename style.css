@@ -26,6 +26,21 @@ h1, h2, h3 {
 	stroke-width: 3;
   }
 
+  /* I added this for showing which point is hovered over */
+circle.mouseover {
+	fill: pink;
+	stroke: red;
+	opacity: 5;
+  }
+
+  /* Shows which point is being looked at */
+  circle.selected {
+	fill: green;
+	stroke: white;
+	opacity: 5;
+  }
+
+
 .countryLabel {
    font-size: 12px;
    fill: black;
