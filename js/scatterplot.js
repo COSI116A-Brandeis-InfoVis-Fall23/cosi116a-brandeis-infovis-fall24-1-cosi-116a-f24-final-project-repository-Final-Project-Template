@@ -52,6 +52,51 @@ function scatterplot() {
         .style("text-anchor", "middle")
         .text(yLabelText);
 
+     // Highlight points when brushed
+     function brush(g) {
+      const brush = d3.brush() 
+        .on("start brush", highlight) 
+        .on("end", brushEnd) 
+        .extent([
+          [-margin.left, -margin.bottom],
+          [width + margin.right, height + margin.top]
+        ]);
+        
+      ourBrush = brush;
+
+      g.call(brush); 
+
+      // Highlight the selected circles
+      function highlight() {
+        if (d3.event.selection === null) return;
+        const [
+          [x0, y0],
+          [x1, y1]
+        ] = d3.event.selection;
+
+        // Remove "selected" class from all points
+        points.classed("selected", false);
+
+        // If within the bounds of the brush, select it
+        points.classed("selected", d =>
+          x0 <= xScale(xValue(d)) && xScale(xValue(d)) <= x1 && y0 <= yScale(yValue(d)) && yScale(yValue(d)) <= y1
+        );
+
+        let dispatchString = Object.getOwnPropertyNames(dispatcher._)[0];
+        console.log(svg.selectAll(".selected").data());
+
+        dispatcher.call(dispatchString, this, svg.selectAll(".selected").data());
+      }
+
+      function brushEnd() {
+        if (d3.event.sourceEvent.type != "end") {
+          d3.select(this).call(brush.move, null);
+        }
+      }
+    }
+
+    svg.call(brush);
+
     // Add the points
     let points = svg.append("g")
       .selectAll(".scatterPoint")
@@ -74,25 +119,26 @@ function scatterplot() {
         d3.select(this).classed("mouseover", false);
       })
       .on("click", function(d) {
-        // Only trigger click event if the brush is not active
-        if (!isBrushing) {
-          // Toggle selection on click
-          const isSelected = d3.select(this).classed("selected");
-          d3.select(this).classed("selected", !isSelected);
+        // Remove "selected" class from all points
+        points.classed("selected", false);
 
-          // Update selected country
-          if (!isSelected) {
-            selectedCountry = d.country; // Set selected country
-          } else {
-            selectedCountry = null; // Unselect country
-          }
+        // Toggle selection on click
+        const isSelected = d3.select(this).classed("selected");
+        d3.select(this).classed("selected", !isSelected);
 
-          // Dispatch the countrySelected event with the country name
-          dispatcher.call("countrySelected", this, selectedCountry);
+        // Update selected country
+        if (!isSelected) {
+          selectedCountry = d.country; // Set selected country
+        } else {
+          selectedCountry = null; // Unselect country
+        }
+
+        // Dispatch the countrySelected event with the country name
+        dispatcher.call("countrySelected", this, selectedCountry);
         
         // Update the bar visibility
         updateBar();
-        }
+        
       });
 
     // Add the country name labels
@@ -110,47 +156,6 @@ function scatterplot() {
         .text(d => d.country);
 
     selectableElements = points;
-
-    // Highlight points when brushed
-    function brush(g) {
-      const brush = d3.brush() 
-        .on("start brush", highlight) 
-        .on("end", brushEnd) 
-        .extent([
-          [-margin.left, -margin.bottom],
-          [width + margin.right, height + margin.top]
-        ]);
-        
-      ourBrush = brush;
-
-      g.call(brush); 
-
-      // Highlight the selected circles
-      function highlight() {
-        if (d3.event.selection === null) return;
-        const [
-          [x0, y0],
-          [x1, y1]
-        ] = d3.event.selection;
-
-        // If within the bounds of the brush, select it
-        points.classed("selected", d =>
-          x0 <= xScale(xValue(d)) && xScale(xValue(d)) <= x1 && y0 <= yScale(yValue(d)) && yScale(yValue(d)) <= y1
-        );
-
-        let dispatchString = Object.getOwnPropertyNames(dispatcher._)[0];
-
-        dispatcher.call(dispatchString, this, svg.selectAll(".selected").data());
-      }
-
-      function brushEnd() {
-        if (d3.event.sourceEvent.type != "end") {
-          d3.select(this).call(brush.move, null);
-        }
-      }
-    }
-
-    svg.call(brush);
 
     // The x-accessor from the datum
     function X(d) {
