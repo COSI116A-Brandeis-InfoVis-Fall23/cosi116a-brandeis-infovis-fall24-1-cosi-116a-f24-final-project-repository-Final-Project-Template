@@ -47,9 +47,9 @@ function scatterplot() {
         .append("text")
         .attr("class", "axisLabel")
         .attr("transform", "rotate(-90)") 
-        .attr("x", -height / 2)  
-        .attr("y", -40)  
-        .style("text-anchor", "middle") 
+        .attr("x", -height / 2)
+        .attr("y", -40)
+        .style("text-anchor", "middle")
         .text(yLabelText);
 
     // Add the points
@@ -60,40 +60,40 @@ function scatterplot() {
     points.exit().remove();
 
     points = points.enter()
-    .append("circle")
-    .attr("class", "point scatterPoint")
+      .append("circle")
+      .attr("class", "point scatterPoint")
     .merge(points)
     .attr("cx", X)
     .attr("cy", Y)
-    .attr("r", d => sizeScale(d.population))
-    .attr("fill", d => colorScale(d.country))
-    .on("mouseover", function() {
-      d3.select(this).classed("mouseover", true);
-    })
-    .on("mouseout", function() {
-      d3.select(this).classed("mouseover", false);
-    })
-    .on("click", function(d) {
-      // Only trigger click event if the brush is not active
-      if (!isBrushing) {
-        // Toggle selection on click
-        const isSelected = d3.select(this).classed("selected");
-        d3.select(this).classed("selected", !isSelected);
+      .attr("r", d => sizeScale(d.population))
+      .attr("fill", d => colorScale(d.country))
+      .on("mouseover", function() {
+        d3.select(this).classed("mouseover", true);
+      })
+      .on("mouseout", function() {
+        d3.select(this).classed("mouseover", false);
+      })
+      .on("click", function(d) {
+        // Only trigger click event if the brush is not active
+        if (!isBrushing) {
+          // Toggle selection on click
+          const isSelected = d3.select(this).classed("selected");
+          d3.select(this).classed("selected", !isSelected);
 
-        // Update selected country
-        if (!isSelected) {
-          selectedCountry = d.country; // Set selected country
-        } else {
-          selectedCountry = null; // Unselect country
-        }
+          // Update selected country
+          if (!isSelected) {
+            selectedCountry = d.country; // Set selected country
+          } else {
+            selectedCountry = null; // Unselect country
+          }
 
-        // Dispatch the countrySelected event with the country name
-        dispatcher.call("countrySelected", this, selectedCountry);
+          // Dispatch the countrySelected event with the country name
+          dispatcher.call("countrySelected", this, selectedCountry);
         
         // Update the bar visibility
         updateBar();
-      }
-    });
+        }
+      });
 
     // Add the country name labels
     let countryLabels = svg.selectAll(".countryLabel")
@@ -111,43 +111,42 @@ function scatterplot() {
 
     selectableElements = points;
 
-    // Define brushing behavior
+    // Highlight points when brushed
     function brush(g) {
-      const brush = d3.brush()
-        .on("start", startBrush)
-        .on("brush", brushing)
-        .on("end", endBrush)
+      const brush = d3.brush() 
+        .on("start brush", highlight) 
+        .on("end", brushEnd) 
         .extent([
           [-margin.left, -margin.bottom],
           [width + margin.right, height + margin.top]
         ]);
+        
+      ourBrush = brush;
 
-      // g.call(brush); <-- THIS IS COMMENTED TO MAKE SURE CLICKING WORKS.
+      g.call(brush); 
 
-      function startBrush() {
-        isBrushing = true; // Mark that brushing has started
-      }
-
-      function brushing() {
+      // Highlight the selected circles
+      function highlight() {
         if (d3.event.selection === null) return;
         const [
           [x0, y0],
           [x1, y1]
         ] = d3.event.selection;
 
-        // Only allow brushing if the user has dragged (not just clicked)
-        if (Math.abs(x0 - x1) > 5 || Math.abs(y0 - y1) > 5) {
-          points.classed("selected", d =>
-            x0 <= X(d) && X(d) <= x1 && y0 <= Y(d) && Y(d) <= y1
-          );
+        // If within the bounds of the brush, select it
+        points.classed("selected", d =>
+          x0 <= xScale(xValue(d)) && xScale(xValue(d)) <= x1 && y0 <= yScale(yValue(d)) && yScale(yValue(d)) <= y1
+        );
 
-          // Dispatch the brushed selection
-          dispatcher.call("selectionUpdated", this, svg.selectAll(".selected").data());
-        }
+        let dispatchString = Object.getOwnPropertyNames(dispatcher._)[0];
+
+        dispatcher.call(dispatchString, this, svg.selectAll(".selected").data());
       }
 
-      function endBrush() {
-        isBrushing = false; // Reset brushing state after dragging
+      function brushEnd() {
+        if (d3.event.sourceEvent.type != "end") {
+          d3.select(this).call(brush.move, null);
+        }
       }
     }
 
