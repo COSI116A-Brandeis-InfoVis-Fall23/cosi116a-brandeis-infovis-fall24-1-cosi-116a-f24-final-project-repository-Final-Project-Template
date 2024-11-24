@@ -38,13 +38,13 @@ function linechart() {
         .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
     //Define scales
-    // xScale
-    //   .domain(d3.map(data, xValue).keys())
-    //   .rangeRound([0, width]);
+    xScale
+      .domain(d3.map(data, xValue).keys())
+      .rangeRound([0, width]);
 
-    let xScale = d3.scalePoint()
-        .domain(d3.range(1999, 2023)) // Creates an array of years from 1999 to 2022
-        .rangeRound([0, width]);
+    // let xScale = d3.scalePoint()
+    //     .domain(d3.range(1999, 2023)) // Creates an array of years from 1999 to 2022
+    //     .rangeRound([0, width]);
 
     yScale
       .domain([
@@ -133,10 +133,10 @@ function linechart() {
           x0 <= X(d) && X(d) <= x1 && y0 <= Y(d) && Y(d) <= y1
         );
 
-        // Get the name of our dispatcher's event
+    //     // Get the name of our dispatcher's event
         let dispatchString = Object.getOwnPropertyNames(dispatcher._)[0];
 
-        // Let other charts know
+    //     // Let other charts know
         dispatcher.call(dispatchString, this, svg.selectAll(".selected").data());
       }
       
