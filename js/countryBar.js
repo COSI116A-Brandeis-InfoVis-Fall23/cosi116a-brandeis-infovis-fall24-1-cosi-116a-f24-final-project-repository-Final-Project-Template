@@ -46,7 +46,7 @@ function countryBar() {
             .attr("y", height / 4 - 10)  // Position the text above the bar
             .attr("text-anchor", "middle")
             .attr("font-size", "16px")
-            .text("Percentage of Infrastructure Spending on Maintenance");
+            .text(countryData.country + " % of Infrastructure Spending on Maintenance");
 
         // Title for maintenance section
         chartGroup.append("text")
@@ -73,6 +73,14 @@ function countryBar() {
             .attr("font-size", "11px")
             .attr("fill", "white")
             .text(`${(otherPercentage * 100).toFixed(1)}%`);
+
+        // Add the percentage text for the other section (blue)
+        chartGroup.append("text")
+            .attr("x", width * (maintenancePercentage + otherPercentage / 2))
+            .attr("y", height / 1 + 10)  // Position the text below the bar
+            .attr("text-anchor", "middle")
+            .attr("font-size", "11px")
+            .text("Other");
 
         return chart;
     }
