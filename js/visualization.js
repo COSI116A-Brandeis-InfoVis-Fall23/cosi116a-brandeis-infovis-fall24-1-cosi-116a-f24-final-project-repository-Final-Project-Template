@@ -45,6 +45,8 @@
           }
         ];
         countryBarChart("#bar-container", countryBarData);
+        barGraph1.updateSelection([countryData]);
+        barGraph2.updateSelection([countryData]);
       } else {
         countryBarChart("#bar-container");
         console.log("Missing required data for the selected country");
