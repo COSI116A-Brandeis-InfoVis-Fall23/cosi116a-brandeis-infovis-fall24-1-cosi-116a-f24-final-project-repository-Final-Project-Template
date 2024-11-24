@@ -106,9 +106,9 @@ function scatterplot() {
     points = points.enter()
       .append("circle")
       .attr("class", "point scatterPoint")
-    .merge(points)
-    .attr("cx", X)
-    .attr("cy", Y)
+      .merge(points)
+      .attr("cx", X)
+      .attr("cy", Y)
       .attr("r", d => sizeScale(d.population))
       .attr("fill", d => colorScale(d.country))
       .on("mouseover", function() {
