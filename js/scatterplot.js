@@ -83,8 +83,7 @@ function scatterplot() {
         );
 
         let dispatchString = Object.getOwnPropertyNames(dispatcher._)[0];
-        console.log(svg.selectAll(".selected").data());
-
+       
         dispatcher.call(dispatchString, this, svg.selectAll(".selected").data());
       }
 
@@ -256,12 +255,16 @@ function scatterplot() {
     return chart;
   };
 
-  // Update the selection based on selected data
+  // Given selected data from another visualization 
+  // select the relevant elements here (linking)
   chart.updateSelection = function (selectedData) {
     if (!arguments.length) return;
+
+    // Select an element if its datum was selected
     selectableElements.classed("selected", d => {
-      return selectedData.some(sd => sd.country === d.country);
+      return selectedData.includes(d)
     });
+
   };
 
   return chart;

@@ -52,15 +52,14 @@
   </div>
   
   <!-- Your visualization here -->
-  <div class="vis-holder">
-    <!-- Change viewbox to whatever you want, e.g. "0 0 1000 6000" This determines your aspect ratio and coordinate system -->    
-    <!-- Delete all the sample SVG code below after the viewbox to before the closing tag. Populate this part of the SVG with D3. -->
-    <svg id="scatterplot"
-      preserveAspectRatio="xMidYMid meet" class="marks" viewBox="0 0 821 520" width="70%" height ="60%">  
-     
-    <!-- Don't delete the closing tag! -->
-    </svg>
-     <svg id="bar-container" width="70%" height ="60%"></svg>
+  <div class="vis-container">
+    <div class="scatterplot-container">
+      <svg id="scatterplot" preserveAspectRatio="xMidYMid meet" class="marks" viewBox="0 0 750 500" width="100%" height="100%"></svg>
+    </div>
+    <div class="bar-graphs-container">
+      <svg id="bar-graph-1" width="100%" height="50%"></svg>
+      <svg id="bar-graph-2" width="100%" height="50%"></svg>
+    </div>
   </div>
   
   <!-- Your writeup goes here -->
@@ -122,6 +121,7 @@
   <script src="lib/d3.v4/d3.v4.js"></script>
   <script src="js/scatterplot.js"></script>
   <script src="js/countryBar.js"></script>
+  <script src="js/countryBarGraphs.js"></script>
   <script src="js/visualization.js"></script>
 </body>
 </html>

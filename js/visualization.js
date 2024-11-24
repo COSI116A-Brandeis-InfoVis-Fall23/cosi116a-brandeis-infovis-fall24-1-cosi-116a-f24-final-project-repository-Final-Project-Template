@@ -13,9 +13,25 @@
       .selectionDispatcher(d3.dispatch(dispatchString, countrySelectedString)) // Register both events
     ("#scatterplot", data);
 
-    // Listen to the "countrySelected" event after initializing scatterplot
-    scatter.selectionDispatcher().on("countrySelected", function(countryName) {
+    // Initialize the bar graphs
+    const barGraph1 = countryBarGraphs();
+    const barGraph2 = countryBarGraphs();
 
+    barGraph1("#bar-graph-1", data, d => d.railUsageTotalPassengers2022 / d.population, "Rail Passengers per Capita");
+    barGraph2("#bar-graph-2", data, d => d.infrastructureInvestment, "Transportation Investment");
+
+    barGraph1.selectionDispatcher().on(dispatchString, (selectedData) => {
+      scatter.updateSelection(selectedData);
+      barGraph2.updateSelection(selectedData);
+    });
+
+    barGraph2.selectionDispatcher().on(dispatchString, (selectedData) => {
+      scatter.updateSelection(selectedData);
+      barGraph1.updateSelection(selectedData);
+    });
+
+    // Handle country selection
+    scatter.selectionDispatcher().on(countrySelectedString, function(countryName) {
       // Find the data for the selected country
       const countryData = data.find(d => d.country === countryName);
 
@@ -39,7 +55,9 @@
     const countryBarChart = countryBar();
 
     // Handle selection updates
-    scatter.selectionDispatcher().on("selectionUpdated", (selectedData) => {
+    scatter.selectionDispatcher().on(dispatchString, (selectedData) => {
+      barGraph1.updateSelection(selectedData);
+      barGraph2.updateSelection(selectedData);
     });
   });
 })();
