@@ -19,8 +19,10 @@ svg {
   }
 
 path {
-	fill: none;
+	fill:none;
 	stroke: black;
+	stroke-width: .5px;
+
   }
 
 /* Your text should be in a nice narrow column */
@@ -34,20 +36,6 @@ path {
   width: 100%;
   height: 100%;
 }
-
-/* The line chart will take the left half of the screen */
-.linechart-holder {
-	flex: 0 0 50%;
-  }
-
- #linechart {
-	width: 100%;
-	height: 500px;
-}
-
-/* .axisLabel {
-	fill: #475d7c;
-  } */
 
 /* Fork on GitHub ribbon via https://codepo8.github.io/css-fork-on-github-ribbon/# */  
 #forkongithub a{

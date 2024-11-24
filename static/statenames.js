@@ -1,4 +1,4 @@
-[
+var statenames= [
     {
         "name": "Alabama",
         "abbreviation": "AL"
