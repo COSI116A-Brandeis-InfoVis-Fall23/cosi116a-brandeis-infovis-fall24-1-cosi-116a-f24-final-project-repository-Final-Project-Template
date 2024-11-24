@@ -47,11 +47,14 @@
     
     <h1>Visualization</h1>
     
-    <p><em>Include the interactive visualization as part of this page. Static example follows.</em></p>
+    <p><em>Interact with the graphs by clicking on the scatterplot points or brushing over them to select one or more countries. The bar charts will update to show data for the selected countries. If you click on a country, an extra bar graph will display infrastructure investment for that country. Use the "Clear Selection" button to reset the selection.</em></p>
     
   </div>
   
   <!-- Your visualization here -->
+  <div class="clear-button-container">
+    <button id="clear-button">Clear Selection</button>
+  </div>
   <div class="vis-container">
     <div class="scatterplot-container">
       <svg id="scatterplot" preserveAspectRatio="xMidYMid meet" class="marks" viewBox="0 0 750 500" width="100%" height="100%"></svg>

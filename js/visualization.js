@@ -61,5 +61,12 @@
       barGraph1.updateSelection(selectedData);
       barGraph2.updateSelection(selectedData);
     });
+
+    document.getElementById("clear-button").addEventListener("click", function() {
+      scatter.updateSelection([]);
+      barGraph1.updateSelection([]);
+      barGraph2.updateSelection([]);
+      countryBarChart("#bar-chart", []);
+    });
   });
 })();
