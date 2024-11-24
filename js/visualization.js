@@ -30,7 +30,7 @@
       barGraph1.updateSelection(selectedData);
     });
 
-    // Handle country selection
+    // When clicking on a scatterplot point, update the countryBar.js bar and countryBarGraphs.js bar charts
     scatter.selectionDispatcher().on(countrySelectedString, function(countryName) {
       // Find the data for the selected country
       const countryData = data.find(d => d.country === countryName);
@@ -44,11 +44,11 @@
             infrastructureMaintenance: countryData.infrastructureMaintenance
           }
         ];
-        countryBarChart("#bar-container", countryBarData);
+        countryBarChart("#bar-chart", countryBarData);
         barGraph1.updateSelection([countryData]);
         barGraph2.updateSelection([countryData]);
       } else {
-        countryBarChart("#bar-container");
+        countryBarChart("#bar-chart");
         console.log("Missing required data for the selected country");
       }
     });
