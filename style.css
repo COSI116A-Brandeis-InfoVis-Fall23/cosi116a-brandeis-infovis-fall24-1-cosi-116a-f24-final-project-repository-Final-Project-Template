@@ -35,6 +35,12 @@ path {
   height: 100%;
 }
 
+/*linechart takes up half of the left side of the screen*/
+ #linechart {
+	width: 50%;
+	height: 500px;
+}
+
 /* Fork on GitHub ribbon via https://codepo8.github.io/css-fork-on-github-ribbon/# */  
 #forkongithub a{
 	background:#00F;

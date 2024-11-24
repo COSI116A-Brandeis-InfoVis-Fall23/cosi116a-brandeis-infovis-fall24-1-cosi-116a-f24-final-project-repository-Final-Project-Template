@@ -6,7 +6,7 @@
   <meta charset="utf-8">
   
   <!-- Title -->
-  <title>Project Team #: Topic, COSI 116A F23</title>
+  <title>Project Team 7: Heart Disease, COSI 116A F23</title>
   
   <!-- CSS Styling -->
   <link rel="stylesheet" href="style.css">
@@ -20,10 +20,13 @@
   <meta name="msapplication-TileColor" content="#da532c">
   <meta name="msapplication-config" content="favicons/browserconfig.xml">
   <meta name="theme-color" content="#ffffff">
+
   <script src="http://d3js.org/d3.v4.min.js" charset="utf-8"></script>
   <script src="http://d3js.org/topojson.v1.min.js"></script>
   <script src="static/colors.js"></script>
   <script src="js/renderMap.js"></script>
+  <script src="js/linechart.js"></script> 
+  <script src="js/visualization.js"></script>
 </head>
 
 <!-- Main page content -->
@@ -35,9 +38,9 @@
   <!-- Your writeup goes here -->
   <div class = "content-column">
   
-    <h1>Project Team #: Topic, COSI 116A F23</h1>
+    <h1>Project Team 7: Heart Disease, COSI 116A F23</h1>
     
-    <p><strong>Student One</strong>, <strong>Student Two</strong>, <strong>Student Three</strong></p>
+    <p><strong>Michael Sun</strong>, <strong>Noah Bunis</strong>, <strong>Margaret Potagal</strong>, <strong>Madison Sansone</strong></p>
     
     <p>Project-long Course Project as part of COSI 116A: Information Visualization</a>, taught by <a href="https://cs.brandeis.edu/~dylan/">Prof. Dylan Cashman</a>, <a href="https://cs.brandeis.edu/">Brandeis University</a>.</p>
     
@@ -63,6 +66,10 @@
     <g id="states"></g>
   </svg>
   </div>
+  <div class="linechart-holder" id="linechart"></div>
+
+
+
   
   <!-- Your writeup goes here -->
   <div class = "content-column">
@@ -121,6 +128,7 @@
   
   <!-- Scripts at the end avoid need for dealing with async, defer, or onload event handlers -->
   <script src="js/renderMap.js"></script>
+  <script src="js/linechart.js"></script>
   <script src="lib/d3.v4/d3.v4.js"></script>
   <script src="js/visualization.js"></script>
 
