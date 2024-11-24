@@ -21,6 +21,28 @@ h1, h2, h3 {
   height: 100%;
 }
 
+.vis-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center; /* Center vertically */
+  width: 100%;
+  height: 100%;
+}
+
+.scatterplot-container {
+  width: 55%; /* Make scatter plot smaller */
+  height: 100%;
+}
+
+.bar-graphs-container {
+  width: 50%; /* Make bar graphs bigger */
+  height: 80%; /* Adjust height to center vertically */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center; /* Center horizontally */
+}
+
 /*I added this*/
 .point {
 	stroke-width: 3;
