@@ -1,0 +1,158 @@
+[
+  {
+    "country": "France",
+    "infrastructureInvestment": 11557639689,
+    "infrastructureMaintenance": 3444677623,
+    "railUsageTotalPassengers2022": 879640000,
+    "inlandInfrastructureInvestment": 21600520000,
+    "population": 67391582,
+    "access": 95.29852,
+    "quality": 5.62,
+    "density": 5.14
+  },
+  {
+    "country": "Switzerland",
+    "infrastructureInvestment": 3666955699,
+    "infrastructureMaintenance": 666917884.2,
+    "railUsageTotalPassengers2022": 382000000,
+    "inlandInfrastructureInvestment": 8584713598,
+    "population": 8670000,
+    "access": 92.07692,
+    "quality": 6.71,
+    "density": 7.84
+  },
+  {
+    "country": "Austria",
+    "infrastructureInvestment": 2249500000,
+    "infrastructureMaintenance": 596900000,
+    "railUsageTotalPassengers2022": 194080000,
+    "inlandInfrastructureInvestment": 2733800000,
+    "population": 8917205,
+    "access": 95.74286,
+    "quality": 5.1,
+    "density": 5.81
+
+  },
+  {
+    "country": "Turkey",
+    "infrastructureInvestment": 2184971147,
+    "infrastructureMaintenance": 179612114.3,
+    "railUsageTotalPassengers2022": 136100000,
+    "inlandInfrastructureInvestment": 6432172679,
+    "population": 85861200,
+    "access": 58.3,
+    "quality": 3.14,
+    "density": 1.32
+  },
+  {
+    "country": "Czechia",
+    "infrastructureInvestment": 1448913705,
+    "infrastructureMaintenance": 794368108.3,
+    "railUsageTotalPassengers2022": 124400000,
+    "inlandInfrastructureInvestment": 3296278678,
+    "population": 10693939,
+    "access": 90.36875,
+    "quality": 4.42,
+    "density": 11.91
+  },
+  {
+    "country": "Belgium",
+    "infrastructureInvestment": 1137261091,
+    "infrastructureMaintenance": 303000000,
+    "railUsageTotalPassengers2022": 185500000,
+    "inlandInfrastructureInvestment": 3010261091,
+    "population": 11589623,
+    "access": 92.815384,
+    "quality": 4.57,
+    "density": 11.81
+  },
+  {
+    "country": "Hungary",
+    "infrastructureInvestment": 645515782,
+    "infrastructureMaintenance": 523493606.7,
+    "railUsageTotalPassengers2022": 81020000,
+    "inlandInfrastructureInvestment": 2540880182,
+    "population": 9660351,
+    "access": 92.27857,
+    "quality": 3.79,
+    "density": 8.16
+  },
+  {
+    "country": "Finland",
+    "infrastructureInvestment": 606000000,
+    "infrastructureMaintenance": 270000000,
+    "railUsageTotalPassengers2022": 55010000,
+    "inlandInfrastructureInvestment": 2272000000,
+    "population": 5540720,
+    "access": 94.2375,
+    "quality": 5.57,
+    "density": 1.75
+  },
+  {
+    "country": "Slovenia",
+    "infrastructureInvestment": 377000000,
+    "infrastructureMaintenance": 99000000,
+    "railUsageTotalPassengers2022": 11860000,
+    "inlandInfrastructureInvestment": 675000000,
+    "population": 2078654,
+    "access": 92.5,
+    "quality": 2.87,
+    "density": 5.96
+  },
+  {
+    "country": "Slovak Rep.",
+    "infrastructureInvestment": 220000000,
+    "infrastructureMaintenance": 16000000,
+    "railUsageTotalPassengers2022": 45670000,
+    "inlandInfrastructureInvestment": 1333000000,
+    "population": 5456362,
+    "access": 92.41429,
+    "quality": 4.36,
+    "density": 7.4
+  },
+  {
+    "country": "Lithuania",
+    "infrastructureInvestment": 109000000,
+    "infrastructureMaintenance": 62000000,
+    "railUsageTotalPassengers2022": 4130000,
+    "inlandInfrastructureInvestment": 553000000,
+    "population": 2722289,
+    "access": 88.479996,
+    "quality": 4.31,
+    "density": 2.93
+  },
+  {
+    "country": "Australia",
+    "infrastructureInvestment": 6750072092,
+    "infrastructureMaintenance": null,
+    "railUsageTotalPassengers2022": 194080000,
+    "inlandInfrastructureInvestment": 19984533689,
+    "population": 26141369,
+    "access": 83.48948,
+    "quality": 4.04,
+    "density": 0.11
+  },
+  {
+    "country": "Germany",
+    "infrastructureInvestment": 10078000000,
+    "infrastructureMaintenance": null,
+    "railUsageTotalPassengers2022": 1202980000,
+    "inlandInfrastructureInvestment": 27218000000,
+    "population": 84316622,
+    "access": 93.27524,
+    "quality": 5.54,
+    "density": 9.35
+  },
+  {
+    "country": "United States",
+    "infrastructureInvestment": 8650612590,
+    "infrastructureMaintenance": null,
+    "railUsageTotalPassengers2022": 10100000,
+    "inlandInfrastructureInvestment": 104000000000,
+    "population": 337341954,
+    "access": 58.905712,
+    "quality": 5.85,
+    "density": 1.53
+  }
+
+]
