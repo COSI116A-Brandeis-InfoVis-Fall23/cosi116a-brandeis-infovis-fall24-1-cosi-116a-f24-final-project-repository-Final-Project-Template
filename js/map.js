@@ -30,58 +30,55 @@ d3.json("data/bostonV2.json", function(error, data) {
         .enter().append("path")
         .attr("class", "neighborhood")
         .attr("d", path)
-        .on("click", function(d) {
-            console.log(d); 
-            var clickedRegion = d3.select(this); // Get the clicked region
-            var neighborhood = d.properties && d.properties.name; // Extract neighborhood name from GeoJSON data
-        
-            // Display the neighborhood name in the #neighborhood-name element
-            d3.select("#neighborhood-name").text("Neighborhood: " + neighborhood);
-        
-            // Check if the clicked region is already highlighted
-            if (clickedRegion.classed("highlighted")) {
-                clickedRegion.classed("highlighted", false); // Remove highlight if it exists
-            } else {
-                // Remove highlight from all other regions
-                g.selectAll(".boston").classed("highlighted", false);
-        
-                // Add highlight to the clicked region
-                clickedRegion.classed("highlighted", true);
-            }
-        });
-   // Add brush functionality
-   var brush = d3.brush()
-   .extent([[0, 0], [width, height]]) // Match the SVG dimensions
-   .on("brush", brushed)
-   .on("end", brushEnd);
-
-// brushing code done with assistance from ChatGPT
-
-// Append the brush to the map
-map.append("g")
-   .attr("class", "brush")
-   .call(brush);
-
+        ;
 // Brush event handlers
-function brushed(event) {
-  // Ensure the event object is passed correctly
+function brushed() {
+  // Use d3.event to access the event object in D3 v4
   var selection = d3.event.selection;
   if (!selection) return;
 
   var [[x0, y0], [x1, y1]] = selection;
 
+  // Array to store the names of selected neighborhoods
+  var selectedNeighborhoods = [];
+
   g.selectAll(".neighborhood").classed("highlighted", function (d) {
       var centroid = path.centroid(d);
       var [cx, cy] = centroid;
-      return cx >= x0 && cx <= x1 && cy >= y0 && cy <= y1;
+
+      // Check if the centroid is within the selection box
+      var isSelected = cx >= x0 && cx <= x1 && cy >= y0 && cy <= y1;
+
+      if (isSelected && d.properties && d.properties.name) {
+          selectedNeighborhoods.push(d.properties.name);
+      }
+
+      return isSelected;
   });
+
+  // Display the selected neighborhood names
+  d3.select("#selected-neighborhoods").text(
+      "Selected Neighborhoods: " + (selectedNeighborhoods.length ? selectedNeighborhoods.join(", ") : "None")
+  );
 }
 
-function brushEnd(event) {
+function brushEnd() {
   var selection = d3.event.selection;
 
+  // Clear highlights and selection display if brush is removed
   if (!selection) {
       g.selectAll(".neighborhood").classed("highlighted", false);
+      d3.select("#selected-neighborhoods").text("Selected Neighborhoods: None");
   }
 }
+
+// Add brush functionality
+var brush = d3.brush()
+  .extent([[0, 0], [width, height]]) // Match the SVG dimensions
+  .on("brush", brushed)
+  .on("end", brushEnd);
+
+map.append("g")
+  .attr("class", "brush")
+  .call(brush);
 });
