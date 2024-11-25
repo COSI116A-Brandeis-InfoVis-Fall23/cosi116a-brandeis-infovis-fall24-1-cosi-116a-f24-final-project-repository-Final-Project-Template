@@ -1,4 +1,9 @@
-var map = d3.select("#map"),
+// everything done with assitance from ChatGPT
+
+var map = d3.select("#map")
+    .attr("width", 800) // Set your desired width
+    .attr("height", 800); // Set your desired height
+
     width = +map.attr("width"),
     height = +map.attr("height");
 
@@ -8,7 +13,7 @@ var g = map.append("g");
 // Set up the projection and path generator
 var projection = d3.geoMercator()
     .scale(100000)
-    .center([-71.2, 42.4501])
+    .center([-70.975, 42.29])
     .translate([width / 2, height / 2 - 100]);
 
 var path = d3.geoPath().projection(projection);
@@ -25,17 +30,6 @@ d3.json("data/bostonV2.json", function(error, data) {
         .enter().append("path")
         .attr("class", "neighborhood")
         .attr("d", path)
-        .on("mouseover", function(event, d) {
-            // Remove 'hovered' class from all regions
-            g.selectAll(".neighborhood").classed("hovered", false);
-
-            // Add 'hovered' class to the current region
-            d3.select(this).classed("hovered", true);
-        })
-        .on("mouseout", function() {
-            // Remove highlight (hovered class) from all regions when the mouse leaves a region
-            g.selectAll(".boston").classed("hovered", false);
-        })
         .on("click", function(d) {
             console.log(d); 
             var clickedRegion = d3.select(this); // Get the clicked region
@@ -55,7 +49,39 @@ d3.json("data/bostonV2.json", function(error, data) {
                 clickedRegion.classed("highlighted", true);
             }
         });
-    map.on("mouseout", function() {
-        g.selectAll(".boston").classed("hovered", false); // Remove highlight from all regions
-    });
+   // Add brush functionality
+   var brush = d3.brush()
+   .extent([[0, 0], [width, height]]) // Match the SVG dimensions
+   .on("brush", brushed)
+   .on("end", brushEnd);
+
+// brushing code done with assistance from ChatGPT
+
+// Append the brush to the map
+map.append("g")
+   .attr("class", "brush")
+   .call(brush);
+
+// Brush event handlers
+function brushed(event) {
+  // Ensure the event object is passed correctly
+  var selection = d3.event.selection;
+  if (!selection) return;
+
+  var [[x0, y0], [x1, y1]] = selection;
+
+  g.selectAll(".neighborhood").classed("highlighted", function (d) {
+      var centroid = path.centroid(d);
+      var [cx, cy] = centroid;
+      return cx >= x0 && cx <= x1 && cy >= y0 && cy <= y1;
+  });
+}
+
+function brushEnd(event) {
+  var selection = d3.event.selection;
+
+  if (!selection) {
+      g.selectAll(".neighborhood").classed("highlighted", false);
+  }
+}
 });
