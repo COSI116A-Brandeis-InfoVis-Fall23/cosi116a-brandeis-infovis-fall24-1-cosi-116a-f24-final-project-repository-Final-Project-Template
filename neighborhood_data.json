@@ -1,0 +1,434 @@
+[
+    {
+        "neighborhood": "Allston",
+        "demographics": {
+            "Total Population": 19261,
+            "White Alone": 9839,
+            "White %": 51.1,
+            "Black/African-American": 1099,
+            "Black/African-American %": 5.7,
+            "Hispanic": 2586,
+            "Hispanic %": 13.4,
+            "Asian Alone": 4811,
+            "Asian Alone %": 25.0,
+            "Other Races": 926,
+            "Other Races %": 4.8
+        }
+    },
+    {
+        "neighborhood": "Back Bay",
+        "demographics": {
+            "Total Population": 17783,
+            "White Alone": 13044,
+            "White %": 73.4,
+            "Black/African-American": 761,
+            "Black/African-American %": 4.3,
+            "Hispanic": 1715,
+            "Hispanic %": 9.6,
+            "Asian Alone": 1917,
+            "Asian Alone %": 10.8,
+            "Other Races": 346,
+            "Other Races %": 1.9
+        }
+    },
+    {
+        "neighborhood": "Beacon Hill",
+        "demographics": {
+            "Total Population": 9648,
+            "White Alone": 8074,
+            "White %": 83.7,
+            "Black/African-American": 138,
+            "Black/African-American %": 1.4,
+            "Hispanic": 580,
+            "Hispanic %": 6.0,
+            "Asian Alone": 578,
+            "Asian Alone %": 6.0,
+            "Other Races": 278,
+            "Other Races %": 2.9
+        }
+    },
+    {
+        "neighborhood": "Brighton",
+        "demographics": {
+            "Total Population": 55297,
+            "White Alone": 36019,
+            "White %": 65.1,
+            "Black/African-American": 2379,
+            "Black/African-American %": 4.3,
+            "Hispanic": 6689,
+            "Hispanic %": 12.1,
+            "Asian Alone": 8160,
+            "Asian Alone %": 14.8,
+            "Other Races": 2050,
+            "Other Races %": 3.7
+        }
+    },
+    {
+        "neighborhood": "Charlestown",
+        "demographics": {
+            "Total Population": 19890,
+            "White Alone": 14692,
+            "White %": 73.9,
+            "Black/African-American": 1019,
+            "Black/African-American %": 5.1,
+            "Hispanic": 2198,
+            "Hispanic %": 11.1,
+            "Asian Alone": 1613,
+            "Asian Alone %": 8.1,
+            "Other Races": 368,
+            "Other Races %": 1.9
+        }
+    },
+    {
+        "neighborhood": "Dorchester",
+        "demographics": {
+            "Total Population": 126909,
+            "White Alone": 28244,
+            "White %": 22.3,
+            "Black/African-American": 55787,
+            "Black/African-American %": 44.0,
+            "Hispanic": 25288,
+            "Hispanic %": 19.9,
+            "Asian Alone": 12540,
+            "Asian Alone %": 9.9,
+            "Other Races": 5050,
+            "Other Races %": 4.0
+        }
+    },
+    {
+        "neighborhood": "Downtown",
+        "demographics": {
+            "Total Population": 18306,
+            "White Alone": 10172,
+            "White %": 55.6,
+            "Black/African-American": 730,
+            "Black/African-American %": 4.0,
+            "Hispanic": 1100,
+            "Hispanic %": 6.0,
+            "Asian Alone": 5701,
+            "Asian Alone %": 31.1,
+            "Other Races": 603,
+            "Other Races %": 3.3
+        }
+    },
+    {
+        "neighborhood": "East Boston",
+        "demographics": {
+            "Total Population": 47263,
+            "White Alone": 16011,
+            "White %": 33.9,
+            "Black/African-American": 1171,
+            "Black/African-American %": 2.5,
+            "Hispanic": 26707,
+            "Hispanic %": 56.5,
+            "Asian Alone": 2167,
+            "Asian Alone %": 4.6,
+            "Other Races": 1207,
+            "Other Races %": 2.6
+        }
+    },
+    {
+        "neighborhood": "Fenway",
+        "demographics": {
+            "Total Population": 33489,
+            "White Alone": 18856,
+            "White %": 56.3,
+            "Black/African-American": 1810,
+            "Black/African-American %": 5.4,
+            "Hispanic": 4022,
+            "Hispanic %": 12.0,
+            "Asian Alone": 7071,
+            "Asian Alone %": 21.1,
+            "Other Races": 1730,
+            "Other Races %": 5.2
+        }
+    },
+    {
+        "neighborhood": "Hyde Park",
+        "demographics": {
+            "Total Population": 38924,
+            "White Alone": 8719,
+            "White %": 22.4,
+            "Black/African-American": 18042,
+            "Black/African-American %": 46.4,
+            "Hispanic": 10242,
+            "Hispanic %": 26.3,
+            "Asian Alone": 763,
+            "Asian Alone %": 2.0,
+            "Other Races": 1158,
+            "Other Races %": 3.0
+        }
+    },
+    {
+        "neighborhood": "Jamaica Plain",
+        "demographics": {
+            "Total Population": 40867,
+            "White Alone": 22533,
+            "White %": 55.1,
+            "Black/African-American": 5825,
+            "Black/African-American %": 14.3,
+            "Hispanic": 9001,
+            "Hispanic %": 22.0,
+            "Asian Alone": 2004,
+            "Asian Alone %": 4.9,
+            "Other Races": 1504,
+            "Other Races %": 3.7
+        }
+    },
+    {
+        "neighborhood": "Longwood",
+        "demographics": {
+            "Total Population": 5351,
+            "White Alone": 3746,
+            "White %": 70.0,
+            "Black/African-American": 291,
+            "Black/African-American %": 5.4,
+            "Hispanic": 389,
+            "Hispanic %": 7.3,
+            "Asian Alone": 752,
+            "Asian Alone %": 14.1,
+            "Other Races": 173,
+            "Other Races %": 3.2
+        }
+    },
+    {
+        "neighborhood": "Mattapan",
+        "demographics": {
+            "Total Population": 26659,
+            "White Alone": 1612,
+            "White %": 6.0,
+            "Black/African-American": 19821,
+            "Black/African-American %": 74.4,
+            "Hispanic": 3771,
+            "Hispanic %": 14.1,
+            "Asian Alone": 499,
+            "Asian Alone %": 1.9,
+            "Other Races": 956,
+            "Other Races %": 3.6
+        }
+    },
+    {
+        "neighborhood": "Mission Hill",
+        "demographics": {
+            "Total Population": 17386,
+            "White Alone": 7156,
+            "White %": 41.2,
+            "Black/African-American": 2662,
+            "Black/African-American %": 15.3,
+            "Hispanic": 3716,
+            "Hispanic %": 21.4,
+            "Asian Alone": 3419,
+            "Asian Alone %": 19.7,
+            "Other Races": 433,
+            "Other Races %": 2.5
+        }
+    },
+    {
+        "neighborhood": "North End",
+        "demographics": {
+            "Total Population": 8749,
+            "White Alone": 7692,
+            "White %": 87.9,
+            "Black/African-American": 29,
+            "Black/African-American %": 0.3,
+            "Hispanic": 614,
+            "Hispanic %": 7.0,
+            "Asian Alone": 287,
+            "Asian Alone %": 3.3,
+            "Other Races": 127,
+            "Other Races %": 1.5
+        }
+    },
+    {
+        "neighborhood": "Roslindale",
+        "demographics": {
+            "Total Population": 30021,
+            "White Alone": 15291,
+            "White %": 50.9,
+            "Black/African-American": 5805,
+            "Black/African-American %": 19.3,
+            "Hispanic": 7182,
+            "Hispanic %": 23.9,
+            "Asian Alone": 750,
+            "Asian Alone %": 2.5,
+            "Other Races": 993,
+            "Other Races %": 3.3
+        }
+    },
+    {
+        "neighborhood": "Roxbury",
+        "demographics": {
+            "Total Population": 54161,
+            "White Alone": 5937,
+            "White %": 11.0,
+            "Black/African-American": 27243,
+            "Black/African-American %": 50.3,
+            "Hispanic": 16637,
+            "Hispanic %": 30.7,
+            "Asian Alone": 1905,
+            "Asian Alone %": 3.5,
+            "Other Races": 2439,
+            "Other Races %": 4.5
+        }
+    },
+    {
+        "neighborhood": "South Boston",
+        "demographics": {
+            "Total Population": 36772,
+            "White Alone": 28008,
+            "White %": 76.2,
+            "Black/African-American": 2064,
+            "Black/African-American %": 5.6,
+            "Hispanic": 4065,
+            "Hispanic %": 11.1,
+            "Asian Alone": 2070,
+            "Asian Alone %": 5.6,
+            "Other Races": 565,
+            "Other Races %": 1.5
+        }
+    },
+    {
+        "neighborhood": "South Boston Waterfront",
+        "demographics": {
+            "Total Population": 4403,
+            "White Alone": 3640,
+            "White %": 82.7,
+            "Black/African-American": 93,
+            "Black/African-American %": 2.1,
+            "Hispanic": 128,
+            "Hispanic %": 2.9,
+            "Asian Alone": 425,
+            "Asian Alone %": 9.7,
+            "Other Races": 117,
+            "Other Races %": 2.7
+        }
+    },
+    {
+        "neighborhood": "South End",
+        "demographics": {
+            "Total Population": 32571,
+            "White Alone": 18044,
+            "White %": 55.4,
+            "Black/African-American": 3669,
+            "Black/African-American %": 11.3,
+            "Hispanic": 4715,
+            "Hispanic %": 14.5,
+            "Asian Alone": 4974,
+            "Asian Alone %": 15.3,
+            "Other Races": 1169,
+            "Other Races %": 3.6
+        }
+    },
+    {
+        "neighborhood": "West End",
+        "demographics": {
+            "Total Population": 6619,
+            "White Alone": 4436,
+            "White %": 67.0,
+            "Black/African-American": 463,
+            "Black/African-American %": 7.0,
+            "Hispanic": 838,
+            "Hispanic %": 12.7,
+            "Asian Alone": 706,
+            "Asian Alone %": 10.7,
+            "Other Races": 176,
+            "Other Races %": 2.7
+        }
+    },
+    {
+        "neighborhood": "West Roxbury",
+        "demographics": {
+            "Total Population": 33526,
+            "White Alone": 22584,
+            "White %": 67.4,
+            "Black/African-American": 4094,
+            "Black/African-American %": 12.2,
+            "Hispanic": 3376,
+            "Hispanic %": 10.1,
+            "Asian Alone": 2500,
+            "Asian Alone %": 7.5,
+            "Other Races": 972,
+            "Other Races %": 2.9
+        }
+    },
+    {
+        "neighborhood": "",
+        "demographics": {
+            "Total Population": 0,
+            "White Alone": 0,
+            "White %": 0.0,
+            "Black/African-American": 0,
+            "Black/African-American %": 0.0,
+            "Hispanic": 0,
+            "Hispanic %": 0.0,
+            "Asian Alone": 0,
+            "Asian Alone %": 0.0,
+            "Other Races": 0,
+            "Other Races %": 0.0
+        }
+    },
+    {
+        "neighborhood": "Source: U.S. Census Bureau, 2015-2019 American Community Survey, BPDA Research Division Analysis",
+        "demographics": {
+            "Total Population": 0,
+            "White Alone": 0,
+            "White %": 0.0,
+            "Black/African-American": 0,
+            "Black/African-American %": 0.0,
+            "Hispanic": 0,
+            "Hispanic %": 0.0,
+            "Asian Alone": 0,
+            "Asian Alone %": 0.0,
+            "Other Races": 0,
+            "Other Races %": 0.0
+        }
+    },
+    {
+        "neighborhood": "Table Name: Hispanic or Latino Origin by Race",
+        "demographics": {
+            "Total Population": 0,
+            "White Alone": 0,
+            "White %": 0.0,
+            "Black/African-American": 0,
+            "Black/African-American %": 0.0,
+            "Hispanic": 0,
+            "Hispanic %": 0.0,
+            "Asian Alone": 0,
+            "Asian Alone %": 0.0,
+            "Other Races": 0,
+            "Other Races %": 0.0
+        }
+    },
+    {
+        "neighborhood": "Table ID:  B03002",
+        "demographics": {
+            "Total Population": 0,
+            "White Alone": 0,
+            "White %": 0.0,
+            "Black/African-American": 0,
+            "Black/African-American %": 0.0,
+            "Hispanic": 0,
+            "Hispanic %": 0.0,
+            "Asian Alone": 0,
+            "Asian Alone %": 0.0,
+            "Other Races": 0,
+            "Other Races %": 0.0
+        }
+    },
+    {
+        "neighborhood": "Universe: Total Population",
+        "demographics": {
+            "Total Population": 0,
+            "White Alone": 0,
+            "White %": 0.0,
+            "Black/African-American": 0,
+            "Black/African-American %": 0.0,
+            "Hispanic": 0,
+            "Hispanic %": 0.0,
+            "Asian Alone": 0,
+            "Asian Alone %": 0.0,
+            "Other Races": 0,
+            "Other Races %": 0.0
+        }
+    }
+]
