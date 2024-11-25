@@ -1,7 +1,7 @@
 /* General formatting */
 body {
 	padding: 0 10px;
-	font: 18px/1.5 -apple-system, BlinkMacSystemFont, "avenir next",avenir, "Segoe UI", "lucida grande", "helvetica neue", helvetica, "Fira Sans",roboto, noto, "Droid Sans", cantarell, oxygen, ubuntu, "franklin gothic medium", "century gothic", "Liberation Sans",
+	font: 11px/1.5 -apple-system, BlinkMacSystemFont, "avenir next",avenir, "Segoe UI", "lucida grande", "helvetica neue", helvetica, "Fira Sans",roboto, noto, "Droid Sans", cantarell, oxygen, ubuntu, "franklin gothic medium", "century gothic", "Liberation Sans",
 	sans-serif;
 }
 
@@ -85,9 +85,9 @@ h1, h2, h3 {
 }
 
 .my-table th, .my-table td {
-    border: 1px solid #ddd;
+    border: 1px solid #0e0e0e;
     padding: 8px;
-    text-align: left;
+    text-align: center;
 }
 
 .my-table th {
