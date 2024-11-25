@@ -21,9 +21,12 @@ svg {
 path {
 	fill:none;
 	stroke: black;
-	stroke-width: .5px;
-
+	stroke-width: 0.5px;
   }
+
+path.mouseover{
+	stroke-width: 5px;
+}
 
 /* Your text should be in a nice narrow column */
 .content-column {

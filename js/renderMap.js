@@ -41,11 +41,19 @@ d3.json("data/states.json", function(error, topologies) {  // (4)
 });
 
 
+d3.selectAll("svg").on("mouseover", (d, i, elements) =>{          //highlight states on mouseover - add brushing later
+  d3.selectAll("g path").on("mouseover", (d, i, elements) =>{
+    d3.select(elements[i]).classed("mouseover", true);
+  });
+  d3.selectAll("g path").on("mouseout", (d, i, elements) =>{
+    d3.select(elements[i]).classed("mouseover", false);
+  });
+});
+
+
 
 
 function getColor(rate, max) {
-  console.log(rate);
-  console.log(max);
   var color = (rate/max)**2;  
   return color;  // return that number to the caller
 }
