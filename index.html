@@ -59,10 +59,26 @@
     </select>
   </div>
 
-  <div id="tooltip" style="opacity: 0;"></div>
+  
 
-  <!-- SVG container where the US map will be rendered -->
-  <svg width="960" height="600"></svg>
+    <!-- Tooltip for Map -->
+    <div id="tooltip" class="tooltip" style="opacity: 0;"></div>
+  <!-- Map Section -->
+  <div id="map-container">
+    <svg width="960" height="600"></svg>
+  </div>
+
+  <div id="charts-container">
+    <div class="chart-section" id="bar-chart-section">
+        <h2>Bar Chart: Mortgage, Rent & Income</h2>
+        <div id="bar-chart"></div>
+    </div>
+    <div class="chart-section" id="line-chart-section">
+        <h2>Line Chart: Mortgage, Rent & Income</h2>
+        <div id="line-chart"></div>
+    </div>
+</div>
+  
 
   <!-- Include D3.js for data-driven documents -->
   <script src="https://d3js.org/d3.v4.min.js"></script>

@@ -1,134 +1,178 @@
-/* style.css */
+/* General Body Styling */
 body {
-    font-family: Arial, sans-serif;
-    background-color: #2e3b4e;
-    color: white;
-    margin: 20px;
-  }
-  
-  #controls {
-    margin-bottom: 20px;
-  }
-  
-  #controls label {
-    font-weight: bold;
-    margin-right: 10px;
-  }
+  font-family: Arial, sans-serif;
+  background-color: #2e3b4e;
+  color: white;
+  margin: 20px;
+}
 
-  #controls select {
-    padding: 5px;
-    font-size: 16px;
-    margin-right: 20px;
-    background-color: #f8f9fa;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-  }
-  
-  #costBurden {
-    padding: 5px;
-    font-size: 16px;
-    background-color: #f8f9fa;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-  }
+/* Controls Section Styling */
+#controls {
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  gap: 20px; /* Controls之间的间距 */
+  justify-content: center; /* 控件居中 */
+}
 
-  a {
-    color: #f1be84;  /* Change this to your preferred color */
-    text-decoration: none;
+#controls label {
+  font-weight: bold;
+  margin-right: 10px;
+  color: #ffffff; /* 白色文字 */
+}
+
+#controls select {
+  padding: 5px;
+  font-size: 16px;
+  background-color: #f8f9fa;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+/* Link Styling */
+a {
+  color: #f1be84;  /* Change this to your preferred color */
+  text-decoration: none;
 }
 
 a:hover {
-    color: #f69351;  /* Darker shade for hover state */
-    text-decoration: underline;
+  color: #f69351;  /* Darker shade for hover state */
+  text-decoration: underline;
 }
 
-
-  /* Set default state fill color */
+/* Map Styling */
 .states path {
-    fill: rgb(195, 157, 205); /* Change to your desired color */
-  }
-  
-  /* State hover effect */
-  .states :hover {
-    fill: rgb(154, 12, 180); /* Change state color on hover */
-  }
-  
-  /* State borders style */
-  .state-borders {
-    fill: none;
-    stroke: #fff;
-    stroke-width: 0.5px;
-    stroke-linejoin: round;
-    stroke-linecap: round;
-    pointer-events: none;
-  }
-  
+  fill: rgb(195, 157, 205); /* Default state color */
+  cursor: pointer; /* Pointer cursor for interactivity */
+  transition: fill 0.3s ease-in-out; /* Smooth color transition */
+}
 
+.states path:hover {
+  fill: rgb(154, 12, 180); /* Hover color */
+}
 
-  #tooltip {
-    position: absolute;
-    background: white;
-    padding: 0;
-    border: 1px solid #ddd;
-    border-radius: 4px;
-    pointer-events: none;
-    font-size: 14px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-    z-index: 1000;
-    min-width: 200px;
-    opacity: 0;
-    transition: opacity 0.2s;
+.state-borders {
+  fill: none;
+  stroke: #fff;
+  stroke-width: 0.5px;
+  pointer-events: none; /* Prevents border from interfering with hover */
+}
+
+/* Tooltip for Map */
+#tooltip {
+  position: absolute;
+  background: #ffffff;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  pointer-events: none;
+  font-size: 14px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  min-width: 200px;
+  opacity: 0;
+  transition: opacity 0.2s ease-in-out;
 }
 
 .tooltip-container {
-    margin: 0;
+  margin: 0;
 }
 
 .tooltip-state-header {
-    background: #f8f9fa;
-    padding: 8px 12px;
-    border-bottom: 1px solid #eee;
-    border-radius: 4px 4px 0 0;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+  background: #f8f9fa;
+  padding: 8px 12px;
+  border-bottom: 1px solid #eee;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .tooltip-state-name {
-    font-size: 16px;
-    font-weight: bold;
-    color:#2e3b4e;
+  font-size: 16px;
+  font-weight: bold;
+  color: #2e3b4e;
 }
 
 .tooltip-year {
-    color: #666;
+  color: #666;
 }
 
 .tooltip-state-details {
-    padding: 8px 12px;
+  padding: 8px 12px;
 }
 
 .tooltip-metric-row {
-    margin: 4px 0;
-    display: flex;
-    justify-content: space-between;
-    gap: 12px;
+  margin: 4px 0;
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
 }
 
 .tooltip-metric-label {
-    color: #666;
+  color: #666;
 }
 
 .tooltip-metric-value {
-    font-weight: 500;
-    color:#666;
+  font-weight: 500;
+  color: #666;
 }
 
-.state-path {
-    transition: fill 0.75s ease;
-    cursor: pointer;
+#charts-container {
+    display: flex;
+    flex-direction: row; /* 水平排列 */
+    justify-content: space-between; /* 图表之间均匀分布 */
+    gap: 20px; /* 图表之间的间距 */
+    margin-top: 20px; /* 和地图的间距 */
 }
 
-.state-path:hover {
-    opacity: 0.8;
+.chart-section {
+    flex: 1; /* 每个图表等宽 */
+    padding: 20px;
+    background-color: #ffffff; /* 白色背景 */
+    border-radius: 8px; /* 圆角 */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* 添加阴影 */
+}
+
+.chart-section h2 {
+    text-align: center;
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: #333333; /* 深色标题 */
+}
+
+.chart-section div {
+    width: 100%; /* 图表填满容器 */
+    height: 400px; /* 控制高度 */
+}
+
+
+/* Tooltip for Bar/Line Chart */
+#chart-tooltip {
+  position: absolute;
+  background: #ffffff;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  pointer-events: none;
+  font-size: 14px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  opacity: 0;
+  transition: opacity 0.2s ease-in-out;
+}
+
+/* Chart Hover State */
+.bar-chart rect:hover,
+.line-chart path:hover {
+  opacity: 0.8; /* Slightly reduce opacity on hover */
+  stroke-width: 3px; /* Increase line width on hover for better visibility */
+}
+
+.brush .selection {
+  fill: rgba(0, 0, 255, 0.2); /* 半透明蓝色用于选区 */
+  stroke: #000;               /* 边框颜色 */
+}
+.brush .handle {
+  fill: #fff;                 /* 手柄颜色 */
+  stroke: #000;               /* 手柄边框 */
 }
