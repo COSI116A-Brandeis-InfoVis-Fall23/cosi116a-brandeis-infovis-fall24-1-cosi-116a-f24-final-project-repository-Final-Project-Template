@@ -1,195 +1,183 @@
-(() => {
-  // Constants for the visualization
-  const width = 960;
-  const height = 600;
-  const margin = { top: 20, right: 40, bottom: 60, left: 40 };
+document.addEventListener("DOMContentLoaded", function () {
+  console.log("DOM is fully loaded and parsed!");
+  var svg = d3.select("svg");
+  var path = d3.geoPath();
+  var colorScale;
 
-  // Create SVG container with adjusted dimensions
-  const svg = d3.select("#vis-svg")
-    .attr("width", width)
-    .attr("height", height);
-
-  // Create tooltip
-  const tooltip = d3.select(".tooltip");
-
-  // Create a projection and path generator
-  const projection = d3.geoAlbersUsa()
-    .translate([width / 2, height / 2])
-    .scale(1000);
-
-  const path = d3.geoPath()
-    .projection(projection);
-
-  // Add metric constants
-  const metrics = {
-    ownerCosts: "Median Monthly Owner Costs (Mortgage)",
-    rent: "Median Gross Rent",
-    income: "Median Income"
+  // State name to FIPS code mapping
+  const stateNameToFips = {
+      'Alabama': '01', 'Alaska': '02', 'Arizona': '04', 'Arkansas': '05', 'California': '06',
+      'Colorado': '08', 'Connecticut': '09', 'Delaware': '10', 'Florida': '12', 'Georgia': '13',
+      'Hawaii': '15', 'Idaho': '16', 'Illinois': '17', 'Indiana': '18', 'Iowa': '19',
+      'Kansas': '20', 'Kentucky': '21', 'Louisiana': '22', 'Maine': '23', 'Maryland': '24',
+      'Massachusetts': '25', 'Michigan': '26', 'Minnesota': '27', 'Mississippi': '28', 'Missouri': '29',
+      'Montana': '30', 'Nebraska': '31', 'Nevada': '32', 'New Hampshire': '33', 'New Jersey': '34',
+      'New Mexico': '35', 'New York': '36', 'North Carolina': '37', 'North Dakota': '38', 'Ohio': '39',
+      'Oklahoma': '40', 'Oregon': '41', 'Pennsylvania': '42', 'Rhode Island': '44', 'South Carolina': '45',
+      'South Dakota': '46', 'Tennessee': '47', 'Texas': '48', 'Utah': '49', 'Vermont': '50',
+      'Virginia': '51', 'Washington': '53', 'West Virginia': '54', 'Wisconsin': '55', 'Wyoming': '56'
   };
 
-  // Update color scale to be more flexible
-  const colorScale = d3.scaleQuantile()
-    .range(d3.schemeBlues[9]);
+  // Create reverse mapping (FIPS to state name)
+  const fipsToStateName = {};
+  for (let state in stateNameToFips) {
+      fipsToStateName[stateNameToFips[state]] = state;
+  }
 
-  // Load data
-  Promise.all([
-    d3.json("data/us-states.json"),
-    d3.csv("data/8_years_median_costs_rents_income_by_state.csv")
-  ]).then(([us, costData]) => {
-    // Process the data
-    const dataByStateYear = new Map();
-    costData.forEach(d => {
-      if (!dataByStateYear.has(d.State)) {
-        dataByStateYear.set(d.State, new Map());
-      }
-      dataByStateYear.get(d.State).set(d.Year, {
-        ownerCosts: +d["Median Monthly Owner Costs (Mortgage)"],
-        rent: +d["Median Gross Rent"],
-        income: +d["Median Income"]
-      });
-    });
-
-    // Populate year dropdown
-    const yearSelect = document.getElementById('year');
-    for (let year = 2015; year <= 2023; year++) {
-      const option = document.createElement('option');
-      option.value = year;
-      option.textContent = year;
-      yearSelect.appendChild(option);
-    }
-
-    // Populate metric dropdown
-    const metricSelect = document.getElementById('metricSelect');
-    Object.entries(metrics).forEach(([key, label]) => {
-      const option = document.createElement('option');
-      option.value = key;
-      option.textContent = label;
-      metricSelect.appendChild(option);
-    });
-
-    // Update function to handle both year and metric changes
-    function updateVisualization(year, metric) {
-      // Update color scale domain based on selected metric and year
-      const valuesForYear = costData
-        .filter(d => d.Year === year)
-        .map(d => +d[metrics[metric]]);
-      colorScale.domain(d3.extent(valuesForYear));
-
-      // Update map colors
-      svg.selectAll(".state")
-        .transition()
-        .duration(750)
-        .style("fill", d => {
-          const stateData = dataByStateYear.get(d.properties.name)?.get(year);
-          return stateData ? colorScale(stateData[metric]) : "#ccc";
-        });
-
-      // Update tooltip content
-      svg.selectAll(".state")
-        .on("mouseover", function(event, d) {
-          const stateData = dataByStateYear.get(d.properties.name)?.get(year);
-          
-          if (stateData) {
-            tooltip.style("opacity", 0.9)
-              .html(`
-                <strong>${d.properties.name}</strong><br/>
-                ${metrics[metric]}: $${stateData[metric].toLocaleString()}<br/>
-                Year: ${year}
-              `)
-              .style("left", (event.pageX + 10) + "px")
-              .style("top", (event.pageY - 28) + "px");
+  // Load both files using d3.v4 syntax
+  d3.queue()
+      .defer(d3.json, "https://d3js.org/us-10m.v1.json")
+      .defer(d3.csv, "data/updated_data.csv")
+      .await(function(error, us, csvData) {
+          if (error) {
+              console.error("Error loading data:", error);
+              return;
           }
-        });
 
-      // Update legend
-      updateLegend(colorScale.quantiles(), metrics[metric]);
-    }
+          // Process the data
+          var dataMap = {};
+          csvData.forEach(d => {
+              const fips = stateNameToFips[d.State];
+              if (!fips) {
+                  console.warn(`Skipping: ${d.State}`);
+                  return;
+              }
 
-    // Create states
-    svg.selectAll("path")
-      .data(us.features)
-      .enter()
-      .append("path")
-      .attr("class", "state")
-      .attr("d", path)
-      .style("stroke", "white")
-      .style("stroke-width", "0.5")
-      .on("mouseover", function(event, d) {
-        const year = d3.select("#year").property("value");
-        const stateData = dataByStateYear.get(d.properties.name)?.get(year);
-        
-        if (stateData) {
-          tooltip.style("opacity", 0.9)
-            .html(`
-              <strong>${d.properties.name}</strong><br/>
-              Owner Costs: $${stateData.ownerCosts.toLocaleString()}<br/>
-              Rent: $${stateData.rent.toLocaleString()}<br/>
-              Income: $${stateData.income.toLocaleString()}
-            `)
-            .style("left", (event.pageX + 10) + "px")
-            .style("top", (event.pageY - 28) + "px");
-        }
-      })
-      .on("mouseout", function() {
-        tooltip.style("opacity", 0);
+              if (!dataMap[fips]) dataMap[fips] = {};
+              dataMap[fips][d.Year] = {
+                  mortgage: +d["Mortgage/Income (%)"] / 100,
+                  rent: +d["Rent/Income (%)"] / 100,
+                  income: +d["Median Income"]
+              };
+          });
+
+          // Draw the base map
+          svg.append("g")
+              .attr("class", "states")
+              .selectAll("path")
+              .data(topojson.feature(us, us.objects.states).features)
+              .enter().append("path")
+              .attr("d", path)
+              .attr("class", "state-path")
+              .attr("fill", "#ccc")
+              .attr("stroke", "#fff");
+
+          // Draw state borders
+          svg.append("path")
+              .attr("class", "state-borders")
+              .attr("d", path(topojson.mesh(us, us.objects.states, (a, b) => a !== b)))
+              .attr("fill", "none")
+              .attr("stroke", "#fff");
+
+          function createDetailedTooltip(d, selectedYear) {
+              var stateData = dataMap[d.id] && dataMap[d.id][selectedYear];
+              
+              if (!stateData) return '';
+
+              const stateName = fipsToStateName[d.id] || 'Unknown State';
+              const mortgageValue = (stateData.mortgage * 100).toFixed(1);
+              const rentValue = (stateData.rent * 100).toFixed(1);
+              const incomeValue = Math.round(stateData.income).toLocaleString();
+              
+              return `
+                 <div class="tooltip-container">
+          <div class="tooltip-state-header">
+              <strong class="tooltip-state-name">${stateName}</strong>
+              <span class="tooltip-year">${selectedYear}</span>
+          </div>
+          <div class="tooltip-state-details">
+              <div class="tooltip-metric-row">
+                  <span class="tooltip-metric-label">Median Income:</span>
+                  <span class="tooltip-metric-value">$${stateData.income.toLocaleString()}</span>
+              </div>
+              <div class="tooltip-metric-row">
+                  <span class="tooltip-metric-label">Mortgage Burden:</span>
+                  <span class="tooltip-metric-value">${(stateData.mortgage * 100).toFixed(1)}%</span>
+              </div>
+              <div class="tooltip-metric-row">
+                  <span class="tooltip-metric-label">Rent Burden:</span>
+                  <span class="tooltip-metric-value">${(stateData.rent * 100).toFixed(1)}%</span>
+              </div>
+          </div>
+      </div>
+              `;
+          }
+
+          function updateMap() {
+              var selectedYear = d3.select("#yearSelect").property("value");
+              var selectedMetric = d3.select("#costBurden").property("value");
+              
+              // Get valid values for the selected metric and year
+              var values = [];
+              for (let fips in dataMap) {
+                  if (dataMap[fips][selectedYear] && dataMap[fips][selectedYear][selectedMetric] != null) {
+                      values.push(dataMap[fips][selectedYear][selectedMetric]);
+                  }
+              }
+
+              if (values.length === 0) {
+                  console.warn("No data for selected year and metric");
+                  return;
+              }
+
+              var minValue = d3.min(values);
+              var maxValue = d3.max(values);
+
+              // Create color scale based on metric
+              if (selectedMetric === 'income') {
+                  colorScale = d3.scaleLinear()
+                      .domain([minValue, maxValue])
+                      .range(["#f7fbff", "#084594"]); // Light to dark blue
+              } else {
+                  colorScale = d3.scaleLinear()
+                      .domain([minValue, maxValue])
+                      .range(["#fcfafd", "#54278f"]); // Light to dark purple
+              }
+
+              // Update colors
+              svg.selectAll(".state-path")
+                  .transition()
+                  .duration(750)
+                  .style("fill", function(d) {
+                      if (!dataMap[d.id] || !dataMap[d.id][selectedYear]) {
+                          return "#ccc";
+                      }
+                      var value = dataMap[d.id][selectedYear][selectedMetric];
+                      return value != null ? colorScale(value) : "#ccc";
+                  });
+
+              // Update tooltips
+              svg.selectAll(".state-path")
+                  .on("mouseover", function(d) {
+                      d3.select(this)
+                          .style("opacity", 0.8);
+
+                      d3.select("#tooltip")
+                          .style("opacity", 1)
+                          .style("left", (d3.event.pageX + 10) + "px")
+                          .style("top", (d3.event.pageY - 10) + "px")
+                          .html(createDetailedTooltip(d, selectedYear));
+                  })
+                  .on("mousemove", function() {
+                      d3.select("#tooltip")
+                          .style("left", (d3.event.pageX + 10) + "px")
+                          .style("top", (d3.event.pageY - 10) + "px");
+                  })
+                  .on("mouseout", function() {
+                      d3.select(this)
+                          .style("opacity", 1);
+                      d3.select("#tooltip")
+                          .style("opacity", 0);
+                  });
+          }
+
+          // Add event listeners
+          d3.select("#yearSelect").on("change", updateMap);
+          d3.select("#costBurden").on("change", updateMap);
+
+          // Initial render
+          updateMap();
       });
+});
 
-    // Create legend
-    const legend = svg.append("g")
-      .attr("class", "legend")
-      .attr("transform", `translate(${width - 180}, ${height - 150})`);
 
-    // Update legend function to include metric title
-    function updateLegend(breaks, metricTitle) {
-      const legendWidth = 20;
-      const legendHeight = 20;
-
-      legend.selectAll("*").remove();
-
-      // Add title
-      legend.append("text")
-        .attr("class", "legend-title")
-        .attr("x", 0)
-        .attr("y", -10)
-        .text(metricTitle);
-
-      // Add color boxes
-      legend.selectAll("rect")
-        .data(colorScale.range())
-        .enter()
-        .append("rect")
-        .attr("x", (d, i) => i * legendWidth)
-        .attr("width", legendWidth)
-        .attr("height", legendHeight)
-        .style("fill", d => d);
-
-      // Add labels
-      legend.selectAll(".legend-label")
-        .data(breaks)
-        .enter()
-        .append("text")
-        .attr("class", "legend-label")
-        .attr("x", (d, i) => (i + 1) * legendWidth)
-        .attr("y", legendHeight + 15)
-        .style("text-anchor", "middle")
-        .style("font-size", "10px")
-        .text(d => Math.round(d));
-    }
-
-    // Event listeners for dropdowns
-    d3.select("#yearSelect").on("change", function() {
-      const selectedMetric = d3.select("#metricSelect").property("value");
-      updateVisualization(this.value, selectedMetric);
-    });
-
-    d3.select("#metricSelect").on("change", function() {
-      const selectedYear = d3.select("#yearSelect").property("value");
-      updateVisualization(selectedYear, this.value);
-    });
-
-    // Initial render with default values
-    const initialYear = "2022";
-    const initialMetric = "ownerCosts";
-    updateVisualization(initialYear, initialMetric);
-  });
-})();
