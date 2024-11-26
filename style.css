@@ -11,16 +11,153 @@ h1, h2, h3 {
 
 /* Your text should be in a nice narrow column */
 .content-column {
-	max-width: 650px;
+	max-width: 1200px;
 	margin: 40px auto;
+	padding: 0 20px;
 }
 
-/* But your visualization should be full-width and full-height */
+.lead {
+	font-size: 1.2em;
+	line-height: 1.6;
+	color: #555;
+	margin-bottom: 2em;
+}
+
+/* Visualization Container */
+.vis-container {
+	background: #fff;
+	border-radius: 8px;
+	box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+	padding: 20px;
+	margin: 2em 0;
+}
+
+/* Controls Panel */
+.controls-panel {
+	display: flex;
+	justify-content: center;
+	gap: 2em;
+	padding: 1em;
+	background: #f8f9fa;
+	border-radius: 6px;
+	margin-bottom: 1.5em;
+}
+
+.control-group {
+	display: flex;
+	align-items: center;
+	gap: 0.5em;
+}
+
+.select-styled {
+	padding: 8px 12px;
+	border: 1px solid #ddd;
+	border-radius: 4px;
+	font-size: 0.9em;
+	background: white;
+	cursor: pointer;
+	min-width: 150px;
+}
+
+/* Findings Grid */
+.findings-grid {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+	gap: 1.5em;
+	margin: 2em 0;
+}
+
+.finding-card {
+	background: #fff;
+	padding: 1.5em;
+	border-radius: 6px;
+	box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.finding-card h3 {
+	color: #2c3e50;
+	margin-bottom: 0.5em;
+}
+
+/* Methodology Section */
+.methodology-section {
+	background: #f8f9fa;
+	padding: 2em;
+	border-radius: 6px;
+	margin: 2em 0;
+}
+
+.metric-definitions {
+	margin-top: 1.5em;
+}
+
+.metric-definitions ul {
+	list-style-type: none;
+	padding: 0;
+}
+
+.metric-definitions li {
+	margin: 0.8em 0;
+	padding-left: 1em;
+	border-left: 3px solid #007bff;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+	.controls-panel {
+		flex-direction: column;
+		align-items: stretch;
+		gap: 1em;
+	}
+	
+	.control-group {
+		flex-direction: column;
+		align-items: stretch;
+	}
+	
+	.findings-grid {
+		grid-template-columns: 1fr;
+	}
+}
+
+/* Enhanced Tooltip */
+.tooltip {
+	background: rgba(255, 255, 255, 0.98);
+	border: none;
+	box-shadow: 0 3px 14px rgba(0,0,0,0.15);
+	padding: 15px;
+	border-radius: 6px;
+}
+
+/* Map Container */
 .vis-holder {
-  width: 100%;
-  height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin: 20px 0;
 }
 
+#map {
+	max-width: 100%;
+	height: auto;
+}
+
+.state {
+	transition: fill 0.3s ease;
+  }
+  
+  .legend-title {
+	font-size: 12px;
+  }
+  
+  .break-label {
+	font-size: 10px;
+  }
+  
+  .tooltip {
+	box-shadow: 0 0 10px rgba(0,0,0,0.1);
+	pointer-events: none;
+  }
 /* Fork on GitHub ribbon via https://codepo8.github.io/css-fork-on-github-ribbon/# */  
 #forkongithub a{
 	background:#00F;
@@ -76,4 +213,94 @@ h1, h2, h3 {
 		-o-transform:rotate(45deg);
 		box-shadow:4px 4px 10px rgba(0,0,0,0.8);
 	}
+}
+
+.tooltip {
+  position: absolute;
+  padding: 12px;
+  background: rgba(255, 255, 255, 0.95);
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  pointer-events: none;
+  font-size: 12px;
+  opacity: 0;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.vis-holder {
+  width: 100%;
+  margin: 20px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#vis-svg {
+  max-width: 1000px;
+  width: 100%;
+  height: auto;
+}
+
+.controls {
+  margin: 20px 0;
+  text-align: center;
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  justify-content: center;
+}
+
+.state {
+  transition: fill 0.3s ease;
+}
+
+.state:hover {
+  stroke: #000;
+  stroke-width: 1.5px;
+}
+
+.legend-title {
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.legend-label {
+  font-size: 10px;
+}
+
+select {
+  padding: 5px 10px;
+  font-size: 14px;
+  border-radius: 4px;
+}
+
+.metric-selector {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+/* Legend styles */
+.legend {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  position: absolute;
+  right: 20px;
+  bottom: 20px;
+  background: rgba(255, 255, 255, 0.9);
+  padding: 10px;
+  border-radius: 4px;
+  border: 1px solid #ddd;
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.legend-color {
+  width: 20px;
+  height: 20px;
 }
