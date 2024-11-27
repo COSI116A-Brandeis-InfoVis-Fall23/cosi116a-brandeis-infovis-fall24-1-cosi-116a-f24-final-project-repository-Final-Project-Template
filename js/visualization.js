@@ -295,8 +295,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 // Add axes
                 barSvg.append("g")
                     .attr("transform", `translate(0, ${height})`)
-                    .call(d3.axisBottom(xBar)
-                        .tickValues(xBar.domain().filter((_, i) => i % 2 === 0))); // Show every other year
+                    .call(d3.axisBottom(xBar)); // Show all years
 
                 barSvg.append("g")
                     .call(d3.axisLeft(yBar)
@@ -357,8 +356,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 // Add axes
                 scatterSvg.append("g")
                     .attr("transform", `translate(0, ${height})`)
-                    .call(d3.axisBottom(xLine)
-                        .tickValues(xLine.domain().filter((_, i) => i % 2 === 0))); // Show every other year
+                    .call(d3.axisBottom(xLine)); // Show all years
 
                 scatterSvg.append("g")
                     .call(d3.axisLeft(yLine)
@@ -497,8 +495,7 @@ document.addEventListener("DOMContentLoaded", function () {
                     scatterSvg.append("g")
                         .attr("class", "x-axis")
                         .attr("transform", `translate(0, ${height})`)
-                        .call(d3.axisBottom(xLine)
-                            .tickValues(xLine.domain().filter((_, i) => i % 2 === 0))); // Show every other year
+                        .call(d3.axisBottom(xLine)); // Show all years
 
                     // Update y-axis
                     scatterSvg.selectAll(".y-axis").remove();
