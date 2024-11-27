@@ -1,17 +1,6 @@
-/* global D3 */
-
-// Initialize a scatterplot. Modeled after Mike Bostock's
-// Reusable Chart framework https://bost.ocks.org/mike/chart/
 function scatterplot() {
   const colorScale = d3.scaleOrdinal(d3.schemeCategory10);
-  // Based on Mike Bostock's margin convention
-  // https://bl.ocks.org/mbostock/3019563
-  let margin = {
-      top: 60,
-      left: 50,
-      right: 30,
-      bottom: 50
-    },
+  let margin = { top: 60, left: 50, right: 30, bottom: 50 },
     width = 750 - margin.left - margin.right,
     height = 500 - margin.top - margin.bottom,
     xValue = d => d[0],
@@ -22,12 +11,12 @@ function scatterplot() {
     xScale = d3.scaleLinear(),
     yScale = d3.scaleLinear(),
     sizeScale = d3.scaleLinear(),
-    ourBrush = null,
     selectableElements = d3.select(null),
-    dispatcher;
-    
-  // Create the chart by adding an svg to the div with the id 
-  // specified by the selector using the given data
+    dispatcher = d3.dispatch("selectionUpdated", "countrySelected");
+
+  let isBrushing = false; // Track if brushing is happening
+  let selectedCountry = null; // Track the selected country for the bar
+
   function chart(selector, data) {
     let svg = d3.select(selector)
       .append("svg")
@@ -38,86 +27,36 @@ function scatterplot() {
     svg = svg.append("g")
         .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
-    //Define scales
-    xScale
-      .domain([
-        d3.min(data, d => xValue(d)),
-        d3.max(data, d => xValue(d))
-      ])
-      .rangeRound([0, width]);
-
-    yScale
-      .domain([
-        d3.min(data, d => yValue(d)),
-        d3.max(data, d => yValue(d))
-      ])
-      .rangeRound([height, 0]);
-    
-    /*Add scale for population*/ 
-    sizeScale
-     .domain([0, d3.max(data, d => d.population)])
-     .range([5, 20]);
+    // Define scales
+    xScale.domain([d3.min(data, d => xValue(d)), d3.max(data, d => xValue(d))]).rangeRound([0, width]);
+    yScale.domain([d3.min(data, d => yValue(d)), d3.max(data, d => yValue(d))]).rangeRound([height, 0]);
+    sizeScale.domain([0, d3.max(data, d => d.population)]).range([5, 20]);
 
     let xAxis = svg.append("g")
-        .attr("transform", "translate(0," + (height) + ")")
+        .attr("transform", "translate(0," + height + ")")
         .call(d3.axisBottom(xScale).ticks(5));
-        
-    // X axis label
-    xAxis.append("text")        
+
+    xAxis.append("text")
         .attr("class", "axisLabel")
         .attr("transform", "translate(" + (width / 2) + ", 40)")
-        .style("text-anchor", "middle") 
+        .style("text-anchor", "middle")
         .text(xLabelText);
-      
+
     let yAxis = svg.append("g")
         .call(d3.axisLeft(yScale))
         .append("text")
         .attr("class", "axisLabel")
         .attr("transform", "rotate(-90)") 
-        .attr("x", -height / 2)  
-        .attr("y", -40)  
-        .style("text-anchor", "middle") 
+        .attr("x", -height / 2)
+        .attr("y", -40)
+        .style("text-anchor", "middle")
         .text(yLabelText);
 
-    // Add the points
-    let points = svg.append("g")
-      .selectAll(".scatterPoint")
-        .data(data);
-
-    points.exit().remove();
-
-    points = points.enter()
-        .append("circle")
-        .attr("class", "point scatterPoint")
-        .merge(points)
-        .attr("cx", X)
-        .attr("cy", Y)
-        .attr("r", d => sizeScale(d.population))
-        .attr("fill", d => colorScale(d.country));
-    
-    /*Add the country name labels*/ 
-    let countryLabels = svg.selectAll(".countryLabel")
-        .data(data);
-    
-    countryLabels.exit().remove();
-    
-    countryLabels = countryLabels.enter()
-        .append("text")
-        .attr("class", "countryLabel")
-        .merge(countryLabels)
-        .attr("x", d => xScale(xValue(d)) + 5)
-        .attr("y", d => yScale(yValue(d)) - 5) 
-        .text(d => d.country);
-
-    selectableElements = points;
-    
-    svg.call(brush);
-
-    // Highlight points when brushed
-    function brush(g) {
-      const brush = d3.brush() // Create a 2D interactive brush
-        .on("start brush", highlight) // When the brush starts/continues do...
-        .on("end", brushEnd) // When the brush ends do...
+     // Highlight points when brushed
+     function brush(g) {
+      const brush = d3.brush() 
+        .on("start brush", highlight) 
+        .on("end", brushEnd) 
         .extent([
           [-margin.left, -margin.bottom],
           [width + margin.right, height + margin.top]
@@ -125,7 +64,7 @@ function scatterplot() {
         
       ourBrush = brush;
 
-      g.call(brush); // Adds the brush to this element
+      g.call(brush); 
 
       // Highlight the selected circles
       function highlight() {
@@ -135,39 +74,132 @@ function scatterplot() {
           [x1, y1]
         ] = d3.event.selection;
 
+        // Remove "selected" class from all points
+        points.classed("selected", false);
+
         // If within the bounds of the brush, select it
         points.classed("selected", d =>
-          x0 <= X(d) && X(d) <= x1 && y0 <= Y(d) && Y(d) <= y1
+          x0 <= xScale(xValue(d)) && xScale(xValue(d)) <= x1 && y0 <= yScale(yValue(d)) && yScale(yValue(d)) <= y1
         );
 
-        // Get the name of our dispatcher's event
         let dispatchString = Object.getOwnPropertyNames(dispatcher._)[0];
-
-        // Let other charts know about our selection
+       
         dispatcher.call(dispatchString, this, svg.selectAll(".selected").data());
       }
-      
-      function brushEnd(){
-        // We don't want infinite recursion
-        if(d3.event.sourceEvent.type!="end"){
+
+      function brushEnd() {
+        if (d3.event.sourceEvent.type != "end") {
           d3.select(this).call(brush.move, null);
-        }         
+        }
       }
     }
+
+    svg.call(brush);
+
+    // Add the points
+    let points = svg.append("g")
+      .selectAll(".scatterPoint")
+      .data(data);
+
+    points.exit().remove();
+
+    points = points.enter()
+      .append("circle")
+      .attr("class", "point scatterPoint")
+      .merge(points)
+      .attr("cx", X)
+      .attr("cy", Y)
+      .attr("r", d => sizeScale(d.population))
+      .attr("fill", d => colorScale(d.country))
+      .on("mouseover", function() {
+        d3.select(this).classed("mouseover", true);
+      })
+      .on("mouseout", function() {
+        d3.select(this).classed("mouseover", false);
+      })
+      .on("click", function(d) {
+        // Remove "selected" class from all points
+        points.classed("selected", false);
+
+        // Toggle selection on click
+        const isSelected = d3.select(this).classed("selected");
+        d3.select(this).classed("selected", !isSelected);
+
+        // Update selected country
+        if (!isSelected) {
+          selectedCountry = d.country; // Set selected country
+        } else {
+          selectedCountry = null; // Unselect country
+        }
+
+        // Dispatch the countrySelected event with the country name
+        dispatcher.call("countrySelected", this, selectedCountry);
+        
+        // Update the bar visibility
+        updateBar();
+        
+      });
+
+    // Add the country name labels
+    let countryLabels = svg.selectAll(".countryLabel")
+        .data(data);
+
+    countryLabels.exit().remove();
+
+    countryLabels = countryLabels.enter()
+        .append("text")
+        .attr("class", "countryLabel")
+        .merge(countryLabels)
+        .attr("x", d => xScale(xValue(d)) + 5)
+        .attr("y", d => yScale(yValue(d)) - 5) 
+        .text(d => d.country);
+
+    selectableElements = points;
+
+    // The x-accessor from the datum
+    function X(d) {
+      return xScale(xValue(d));
+    }
+
+    // The y-accessor from the datum
+    function Y(d) {
+      return yScale(yValue(d));
+    }
+
+    // Add a bar element that will be shown/hidden based on selection
+    const bar = svg.append("rect")
+      .attr("class", "selection-bar")
+      .attr("width", 0)  // Start hidden (width 0)
+      .attr("height", 20)
+      .attr("y", height + margin.top + 10)
+      .style("fill", "steelblue");
+
+    // Function to update the bar visibility and position
+    function updateBar() {
+      if (selectedCountry !== null) {
+        const selectedData = data.find(d => d.country === selectedCountry);
+        const xPos = xScale(xValue(selectedData));
+
+        // Show the bar and position it based on the selected country's x value
+        bar.transition()
+          .duration(200)
+          .attr("x", xPos)
+          .attr("width", 20); // Set bar width
+      } else {
+        // Hide the bar when no country is selected
+        bar.transition()
+          .duration(200)
+          .attr("width", 0);
+      }
+    }
+
+    // Initial update of the bar (it will be hidden if no country is selected)
+    updateBar();
 
     return chart;
   }
 
-  // The x-accessor from the datum
-  function X(d) {
-    return xScale(xValue(d));
-  }
-
-  // The y-accessor from the datum
-  function Y(d) {
-    return yScale(yValue(d));
-  }
-
+  // Setters and getters for chart configuration
   chart.margin = function (_) {
     if (!arguments.length) return margin;
     margin = _;
@@ -215,8 +247,8 @@ function scatterplot() {
     yLabelOffsetPx = _;
     return chart;
   };
-  
-  // Gets or sets the dispatcher we use for selection events
+
+  // Gets or sets the dispatcher for selection events
   chart.selectionDispatcher = function (_) {
     if (!arguments.length) return dispatcher;
     dispatcher = _;
@@ -237,4 +269,3 @@ function scatterplot() {
 
   return chart;
 }
-  
