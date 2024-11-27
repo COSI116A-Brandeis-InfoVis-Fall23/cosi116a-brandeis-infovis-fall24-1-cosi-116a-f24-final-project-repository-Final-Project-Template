@@ -68,9 +68,12 @@ function linechart() {
     // X axis label
     xAxis.append("text")        
         .attr("class", "axisLabel")
-        .attr("transform", "translate(" + (width - 50) + ",-10)")
+        // .attr("transform", "translate(" + (width - 50) + ",-10)")
+        .attr("x", width / 2) // Center the label
+        .attr("y", margin.bottom - 10) // Position below the axis
+        .style("text-anchor", "middle")
         .text(xLabelText);
-    
+
     // Y axis and label
     let yAxis = svg.append("g")
         .call(d3.axisLeft(yScale))
@@ -94,7 +97,7 @@ function linechart() {
       .selectAll(".linePoint")
         .data(data);
     
-    points.exit().remove();
+    // points.exit().remove();
           
     points = points.enter()
       .append("circle")
@@ -102,12 +105,12 @@ function linechart() {
       .merge(points)
         .attr("cx", X)
         .attr("cy", Y)        
-        .attr("r",5);
+        .attr("r",3);
         
-    selectableElements = points;
+    // selectableElements = points;
 
-    svg.call(brush);
-
+    // svg.call(brush);
+      
     // Highlight points when brushed
     function brush(g) {
       const brush = d3.brush()
