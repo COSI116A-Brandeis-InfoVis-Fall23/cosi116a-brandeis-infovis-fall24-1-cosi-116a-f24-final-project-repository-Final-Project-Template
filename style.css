@@ -14,18 +14,35 @@ h1, h2, h3 {
 	max-width: 650px;
 	margin: 40px auto;
 }
+#map-header {
+	text-align: center;
+}
 
+#selected-neighborhoods {
+	position: relative;         /* Position relative to parent if needed */                /* Move the div right by 50% of its width */
+    width: 95%;               /* Fixed width for the box */
+    height: 100px; /* Set max height */           /* Fixed height for the box */
+    background-color: #ffffff;
+  	padding: 10px 20px;
+  	border: 1px solid #ccc;
+  	border-radius: 5px;
+  	font-size: 16px;
+  	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  	overflow-y: scroll; /* Enable vertical scrolling */
+  	box-sizing: border-box; /* Ensure padding doesn't increase the overall height */
+  	scroll-behavior: smooth; /* Optional: Smooth scrolling */
+}
 #map-container {
     position: relative;
     top: 20px;
     left: 35%;
     width: 500px;
-    height: 500px;
+    height: 600px;
 }
 #map {
 	width: 95%;
-	height: 95%;
-    left: 20px;
+	height: 80%;
+
 }
 svg {
 	background-color: #eef;

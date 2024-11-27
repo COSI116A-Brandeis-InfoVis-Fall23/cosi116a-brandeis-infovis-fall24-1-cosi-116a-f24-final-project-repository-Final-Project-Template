@@ -58,7 +58,7 @@ function brushed() {
 
   // Display the selected neighborhood names
   d3.select("#selected-neighborhoods").text(
-      "Selected Neighborhoods: " + (selectedNeighborhoods.length ? selectedNeighborhoods.join(", ") : "None")
+       (selectedNeighborhoods.length ? selectedNeighborhoods.join(", ") : "None")
   );
 }
 
@@ -68,7 +68,7 @@ function brushEnd() {
   // Clear highlights and selection display if brush is removed
   if (!selection) {
       g.selectAll(".neighborhood").classed("highlighted", false);
-      d3.select("#selected-neighborhoods").text("Selected Neighborhoods: None");
+      d3.select("#selected-neighborhoods").text("None");
   }
 }
 
