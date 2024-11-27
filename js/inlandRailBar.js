@@ -80,7 +80,7 @@ function inlandRailBar() {
             .attr("y", height / 1 + 10)  // Position the text below the bar
             .attr("text-anchor", "middle")
             .attr("font-size", "11px")
-            .text("Other inland transport investment");
+            .text("Other Inland Transport Investment");
 
         return chart;
     }
