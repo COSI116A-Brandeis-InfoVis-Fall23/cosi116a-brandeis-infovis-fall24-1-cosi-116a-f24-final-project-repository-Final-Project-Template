@@ -99,8 +99,8 @@ document.addEventListener("DOMContentLoaded", function () {
                     <span class="tooltip-metric-value">${(stateData.rent * 100).toFixed(1)}%</span>
                 </div>
             </div>
-        </div>
-                `;
+        </div>`
+                ;
             }
   
             function updateMap() {
@@ -179,60 +179,62 @@ document.addEventListener("DOMContentLoaded", function () {
             updateMap();
             renderBarAndLineCharts();
         });
+        
         function renderBarAndLineCharts() {
-            const dataPath = "data/bar_line_chart_data.csv"; // 数据路径
-        
-            // 图表尺寸和边距
-            const margin = { top: 40, right: 30, bottom: 50, left: 50 };
-            const width = 600 - margin.left - margin.right;
-            const height = 300 - margin.top - margin.bottom;
-        
-            // 颜色映射
+
+            const dataPath = "data/bar_line_chart_data.csv";
+            const margin = { top: 20, right: 30, bottom: 20, left: 30 };
+            const width = 550 - margin.left - margin.right;
+            const height = 280 - margin.top - margin.bottom;
+
+            // Fixed y-axis range for both charts (10% to 40%)
+            const yDomain = [15, 35];
+
             const color = d3.scaleOrdinal()
                 .domain(['Mortgage', 'Rent'])
-                .range(['#3b7cc5', '#f1be84']);
-        
-            // 加载数据
-            d3.csv(dataPath, function (error, rawData) {
+                .range(['#3498db', '#34495e']);  // Blue for Mortgage, Dark Blue for Rent
+
+            d3.csv(dataPath, function(error, rawData) {
                 if (error) {
                     console.error("Error loading CSV data:", error);
                     return;
                 }
-        
-                // 格式化数据
+
+                // Format data
                 const data = rawData.map(d => ({
                     Year: d.Year,
                     Mortgage: +d.Mortgage,
                     Rent: +d.Rent,
                     Income: +d.Income,
                 }));
-        
-                // === 柱状图 ===
+
+                // === Bar Chart Setup ===
                 const xBar = d3.scaleBand()
-                    .domain(data.map(d => d.Year)) // X轴为年份
+                    .domain(data.map(d => d.Year))
                     .range([0, width])
                     .padding(0.2);
-        
+
                 const yBar = d3.scaleLinear()
-                    .domain([0, d3.max(data, d => Math.max(d.Mortgage, d.Rent))]) // Y轴为百分比
+                    .domain(yDomain)  // Set fixed range 10-40%
                     .range([height, 0]);
-        
+
                 const barSvg = d3.select("#bar-chart")
                     .append("svg")
                     .attr("width", width + margin.left + margin.right)
                     .attr("height", height + margin.top + margin.bottom)
                     .append("g")
                     .attr("transform", `translate(${margin.left}, ${margin.top})`);
-        
-                // 添加柱状图标题
+
+                // Add title with updated styling
                 barSvg.append("text")
                     .attr("class", "chart-title")
                     .attr("x", width / 2)
-                    .attr("y", -margin.top / 2)
+                    .attr("y", -margin.top/2)
                     .attr("text-anchor", "middle")
-                    .text("Bar Chart: Mortgage and Rent as Percentage of Income");
-        
-                // 绘制每组柱状
+                    .attr("dominant-baseline", "middle")
+                    .text("Housing Cost Burden by Year");
+
+                // Draw bars
                 ['Mortgage', 'Rent'].forEach((key, i) => {
                     barSvg.selectAll(`.bar-${key}`)
                         .data(data)
@@ -242,89 +244,278 @@ document.addEventListener("DOMContentLoaded", function () {
                         .attr("y", d => yBar(d[key]))
                         .attr("width", xBar.bandwidth() / 2)
                         .attr("height", d => height - yBar(d[key]))
-                        .attr("fill", color(key));
+                        .attr("fill", color(key))
+                        .attr("opacity", 0.8)  // Slightly transparent
+                        .on("mouseover", function() {
+                            d3.select(this)
+                                .transition()
+                                .duration(200)
+                                .attr("opacity", 1)
+                                .attr("stroke", "#2c3e50")
+                                .attr("stroke-width", 1);
+                        })
+                        .on("mouseout", function() {
+                            d3.select(this)
+                                .transition()
+                                .duration(200)
+                                .attr("opacity", 0.8)
+                                .attr("stroke-width", 0);
+                        });
                 });
-        
-                // 添加 X 和 Y 轴
+
+                // Add legend
+                const legend = barSvg.append("g")
+                    .attr("class", "legend")
+                    .attr("transform", `translate(${width - 50}, -10)`);
+
+                ['Mortgage', 'Rent'].forEach((key, i) => {
+                    const legendRow = legend.append("g")
+                        .attr("transform", `translate(0, ${i * 20})`);
+                    
+                    legendRow.append("rect")
+                        .attr("width", 15)
+                        .attr("height", 15)
+                        .attr("fill", color(key))
+                        .attr("opacity", 0.8);
+                    
+                    legendRow.append("text")
+                        .attr("x", 20)
+                        .attr("y", 12)
+                        .style("font-size", "12px")
+                        .text(key);
+                });
+
+                // Add axes
                 barSvg.append("g")
                     .attr("transform", `translate(0, ${height})`)
-                    .call(d3.axisBottom(xBar));
-        
+                    .call(d3.axisBottom(xBar)
+                        .tickValues(xBar.domain().filter((_, i) => i % 2 === 0))); // Show every other year
+
                 barSvg.append("g")
-                    .call(d3.axisLeft(yBar).tickFormat(d => `${d}%`));
-        
-                // === 散点图（替代折线图） ===
-                const xLine = d3.scalePoint()
-                    .domain(data.map(d => d.Year)) // X轴为年份
-                    .range([0, width]);
-        
+                    .call(d3.axisLeft(yBar)
+                        .tickFormat(d => `${d}%`)
+                        .ticks(6)); // Adjust number of ticks
+
+                // === Scatter/Line Chart Setup ===
+                const xLine = d3.scaleBand()
+                    .domain(data.map(d => d.Year))
+                    .range([0, width])
+                    .padding(0.2);
+
                 const yLine = d3.scaleLinear()
-                    .domain([0, d3.max(data, d => Math.max(d.Mortgage, d.Rent))]) // Y轴为百分比
+                    .domain(yDomain)  // Set fixed range 10-40%
                     .range([height, 0]);
-        
+
                 const scatterSvg = d3.select("#line-chart")
                     .append("svg")
                     .attr("width", width + margin.left + margin.right)
                     .attr("height", height + margin.top + margin.bottom)
                     .append("g")
                     .attr("transform", `translate(${margin.left}, ${margin.top})`);
-        
-                // 添加散点图标题
+
+
+                // Add title for line chart
                 scatterSvg.append("text")
                     .attr("class", "chart-title")
                     .attr("x", width / 2)
-                    .attr("y", -margin.top / 2)
+                    .attr("y", -margin.top/2)
                     .attr("text-anchor", "middle")
-                    .text("Scatter Chart: Mortgage and Rent Trends Over Years");
-        
-                // 绘制散点
+                    .attr("dominant-baseline", "middle")
+                    .text("Housing Cost Burden Trends");
+
+                // Add legend for line chart
+                const lineLegend = scatterSvg.append("g")
+                    .attr("class", "legend")
+                    .attr("transform", `translate(${width - 50}, -10)`);
+
                 ['Mortgage', 'Rent'].forEach((key, i) => {
-                    scatterSvg.selectAll(`.dot-${key}`)
-                        .data(data)
-                        .enter().append("circle")
-                        .attr("class", `dot-${key}`)
-                        .attr("cx", d => xLine(d.Year))
-                        .attr("cy", d => yLine(d[key]))
-                        .attr("r", 5)
+                    const legendRow = lineLegend.append("g")
+                        .attr("transform", `translate(0, ${i * 20})`);
+                    
+                    legendRow.append("circle")  // Use circle instead of rect to match the dots
+                        .attr("cx", 6)  // Half of the circle size
+                        .attr("cy", 6)
+                        .attr("r", 6)
                         .attr("fill", color(key))
-                        .attr("stroke", "#fff")
-                        .attr("stroke-width", 1);
+                        .attr("opacity", 0.85);
+                    
+                    legendRow.append("text")
+                        .attr("x", 20)
+                        .attr("y", 9)
+                        .style("font-size", "12px")
+                        .style("font-weight", "500")
+                        .text(key);
                 });
-        
-                // 添加 X 和 Y 轴
+
+                // Add axes
                 scatterSvg.append("g")
                     .attr("transform", `translate(0, ${height})`)
-                    .call(d3.axisBottom(xLine));
-        
+                    .call(d3.axisBottom(xLine)
+                        .tickValues(xLine.domain().filter((_, i) => i % 2 === 0))); // Show every other year
+
                 scatterSvg.append("g")
-                    .call(d3.axisLeft(yLine).tickFormat(d => `${d}%`));
-        
-// === Brush & Link ===
-const brush = d3.brushX()
-    .extent([[0, 0], [width, height]]) // Brush 的范围
-    .on("brush end", function(event) {
-        console.log("Event:", event);
-        console.log("Selection:", event.selection);
-        // 检查是否有选区
-        const selection = event.selection;
-        if (!selection) {
-            console.log("No selection made");
-            return;
-        }
-                // 映射选区范围到年份
-                const [x0, x1] = selection.map(x => xScalePointToYear(x, xLine));
-                console.log("Brush range in years:", x0, x1);
-        
-                // 根据选区范围筛选数据并更新右侧图表
-                const filteredData = data.filter(d => d.Year >= x0 && d.Year <= x1);
-                scatterSvg.selectAll(".dot")
-                    .attr("fill", d => filteredData.includes(d) ? "red" : "blue");
-            });
-        
-                // 在柱状图上添加 Brush
+                    .call(d3.axisLeft(yLine)
+                        .tickFormat(d => `${d}%`)
+                        .ticks(6));
+
+                // Add mouseout handler to scatter plot area
+                scatterSvg.append("rect")
+                    .attr("class", "mouse-capture")
+                    .attr("width", width)
+                    .attr("height", height)
+                    .style("fill", "none")
+                    .style("pointer-events", "all")
+                    .on("mouseout", function(event) {
+                        const e = event || window.event;
+                        const relatedTarget = e.relatedTarget || e.toElement;
+                        if (!relatedTarget || relatedTarget.tagName === "svg") {
+                            // Clear brush when mouse leaves scatter plot
+                            barSvg.select(".brush").call(brush.move, null);
+                            updateScatterPlot(data);
+                        }
+                    });
+
+                // Helper function to get year from x position
+                function getYearFromX(xPos) {
+                    const bandwidth = xBar.bandwidth();
+                    const step = xBar.step();
+                    const index = Math.floor(xPos / step);
+                    return xBar.domain()[index];
+                }
+
+                // Create brush
+                const brush = d3.brushX()
+                    .extent([[0, 0], [width, height]])
+                    .on("brush end", brushed);
+
+                function brushed(event) {
+                    // Get brush selection
+                    const selection = d3.event.selection;
+                    if (!selection) {
+                        // If no selection, show all dots
+                        updateScatterPlot(data);
+                        return;
+                    }
+
+                    // Convert brush coordinates to years
+                    const [startX, endX] = selection;
+                    const startYear = getYearFromX(startX);
+                    const endYear = getYearFromX(endX);
+
+                    // Filter data for selected years
+                    const filteredData = data.filter(d => {
+                        return d.Year >= startYear && d.Year <= endYear;
+                    });
+
+                    // Update scatter plot
+                    updateScatterPlot(filteredData);
+                }
+
+                function updateScatterPlot(filteredData) {
+                    const selectedYears = filteredData.map(d => d.Year);
+                    const isFiltered = filteredData.length !== data.length;
+
+                    ['Mortgage', 'Rent'].forEach(metric => {
+                        // Remove existing dots and lines
+                        scatterSvg.selectAll(`.dot-${metric}`).remove();
+                        scatterSvg.selectAll(`.line-${metric}`).remove();
+
+                        // Add dots
+                        scatterSvg.selectAll(`.dot-${metric}`)
+                            .data(data)
+                            .enter().append("circle")
+                            .attr("class", `dot-${metric}`)
+                            .attr("cx", d => xLine(d.Year) + xLine.bandwidth() / 2)
+                            .attr("cy", d => yLine(d[metric]))
+                            .attr("r", 5)
+                            .attr("fill", color(metric))
+                            .attr("opacity", d => selectedYears.includes(d.Year) ? 1 : 0.2)
+                            .attr("stroke", "white")
+                            .attr("stroke-width", 1.5)
+                            .on("mouseover", function(d) {
+                                // Highlight dot
+                                d3.select(this)
+                                    .transition()
+                                    .duration(200)
+                                    .attr("r", 7);
+
+                                // Highlight legend item
+                                lineLegend.selectAll("g")
+                                    .filter(g => g === metric)
+                                    .style("opacity", 1);
+
+                                // Show tooltip
+                                tooltip.transition()
+                                    .duration(200)
+                                    .style("opacity", .9);
+                                tooltip.html(`${metric}: ${d[metric]}%<br/>Year: ${d.Year}`)
+                                    .style("left", (d3.event.pageX + 5) + "px")
+                                    .style("top", (d3.event.pageY - 28) + "px");
+                            })
+                            .on("mouseout", function() {
+                                // Reset dot
+                                d3.select(this)
+                                    .transition()
+                                    .duration(200)
+                                    .attr("r", 5);
+
+                                // Reset legend
+                                lineLegend.selectAll("g")
+                                    .style("opacity", 0.85);
+
+                                // Hide tooltip
+                                tooltip.transition()
+                                    .duration(500)
+                                    .style("opacity", 0);
+                            });
+
+                        // Add connecting lines only when filtered
+                        if (isFiltered && filteredData.length > 0) {
+                            const line = d3.line()
+                                .x(d => xLine(d.Year) + xLine.bandwidth() / 2)
+                                .y(d => yLine(d[metric]));
+
+                            scatterSvg.append("path")
+                                .datum(filteredData)
+                                .attr("class", `line-${metric}`)
+                                .attr("fill", "none")
+                                .attr("stroke", color(metric))
+                                .attr("stroke-width", 2)
+                                .attr("opacity", 0.7)
+                                .attr("d", line);
+                        }
+                    });
+
+                    // Update x-axis to match bar chart format
+                    scatterSvg.selectAll(".x-axis").remove();
+                    scatterSvg.append("g")
+                        .attr("class", "x-axis")
+                        .attr("transform", `translate(0, ${height})`)
+                        .call(d3.axisBottom(xLine)
+                            .tickValues(xLine.domain().filter((_, i) => i % 2 === 0))); // Show every other year
+
+                    // Update y-axis
+                    scatterSvg.selectAll(".y-axis").remove();
+                    scatterSvg.append("g")
+                        .attr("class", "y-axis")
+                        .call(d3.axisLeft(yLine)
+                            .tickFormat(d => `${d}%`)
+                            .ticks(6));
+
+                    // Make sure not to remove the title when updating
+                    scatterSvg.selectAll(".chart-title").raise();
+
+                    // Make sure legend stays on top
+                    scatterSvg.select(".legend").raise();
+                }
+
+                // Add brush to bar chart
                 barSvg.append("g")
                     .attr("class", "brush")
                     .call(brush);
+
+                // Initial render showing all dots without lines
+                updateScatterPlot(data);
             });
         }
         
