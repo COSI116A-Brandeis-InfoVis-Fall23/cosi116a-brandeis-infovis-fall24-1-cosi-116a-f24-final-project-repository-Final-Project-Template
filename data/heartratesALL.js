@@ -103,7 +103,8 @@ var rates= {
       "Virginia": 245.77,
       "Washington": 209.74,
       "West Virginia": 305.56,
-      "Wisconsin": 237.45
+      "Wisconsin": 237.45,
+      "Wyoming":200.9
     },
   
     "2001": {

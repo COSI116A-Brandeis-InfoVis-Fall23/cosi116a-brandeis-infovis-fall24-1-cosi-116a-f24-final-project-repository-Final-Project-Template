@@ -1,7 +1,7 @@
 var svgStates = d3.select("svg #states"),
     svgBoundary = d3.select("svg #boundary"),
     states = {},
-    currentYear = 1999;   //this will change based on year selected
+    currentYear = 2021;   //this will change based on year selected
 
 var width = window.innerWidth, // (1)
   height = window.innerHeight;
