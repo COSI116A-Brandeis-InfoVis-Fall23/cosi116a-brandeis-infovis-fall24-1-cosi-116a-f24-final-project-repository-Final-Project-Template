@@ -1,7 +1,8 @@
 var svgStates = d3.select("svg #states"),
     svgBoundary = d3.select("svg #boundary"),
     states = {},
-    currentYear = 2021;   //this will change based on year selected
+    // currentYear = 2021;   //this will change based on year selected
+    currentYear = document.getElementById('years').value;
 
 var width = window.innerWidth, // (1)
   height = window.innerHeight;
@@ -19,11 +20,9 @@ d3.json("data/usa.json", function(error, boundary) {
      .attr("d", path)
 });
 
-var min = Infinity, max = -Infinity;
 
 d3.json("data/states.json", function(error, topologies) {  // (4)
   var state = topojson.feature(topologies[12], topologies[12].objects.stdin);  // (5)
-  setMinMax();      //set the minimum and maximum values
   svgStates.selectAll("path")  
       .data(state.features)
       .enter()
@@ -31,7 +30,7 @@ d3.json("data/states.json", function(error, topologies) {  // (4)
     .attr("d", path)
     .style('fill-opacity', function(d, i){
       var name = d.properties.STATENAM.replace(" Territory", "");
-      return getColor(rates[currentYear][name], max);
+      return getColor(rates[currentYear][name], getMax());
     })
     .style("fill", function(d, i) { 
       return "red";
@@ -50,6 +49,16 @@ d3.selectAll("svg").on("mouseover", (d, i, elements) =>{          //highlight st
   });
 });
 
+d3.selectAll("button").on("mousedown", (d, i, elements) =>{          //add button to confirm year
+  currentYear = document.getElementById('years').value;
+  svgStates.selectAll("path") 
+  .style('fill-opacity', function(d, i){                            //rerender state color and details
+    var name = d.properties.STATENAM.replace(" Territory", "");
+    return getColor(rates[currentYear][name], getMax());
+  })
+  .append("svg:title")                                              //dod is not working yet
+  .text(function(d) { return d.properties.STATENAM + ","+ rates[currentYear][d.properties.STATENAM]; });
+});
 
 
 
@@ -58,16 +67,14 @@ function getColor(rate, max) {
   return color;  // return that number to the caller
 }
 
-function setMinMax(){   //get range of data for color purposes
+function getMax(){   //get range of data for color purposes
+  let max = -Infinity;
   for (let i=0; i<50; i++){
   let name = statenames[i].name;
   let rate = rates[currentYear][name];
-  if (rate<=min && rate!="undefined"){
-    min=rate;
-  }
   if(rate>=max && rate!="undefined"){
     max=rate;
   }
 }
-return min, max;
+return max;
 }
