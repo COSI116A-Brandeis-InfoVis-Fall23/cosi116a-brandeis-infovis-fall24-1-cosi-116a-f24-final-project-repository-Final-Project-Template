@@ -18,14 +18,22 @@ function scatterplot() {
   let selectedCountry = null; // Track the selected country for the bar
 
   function chart(selector, data) {
+
+    const container = d3.select(".scatterplot-container").node(); // Get the container element
+    const containerBounds = container.getBoundingClientRect(); // Get container's position and size
+
+    const tooltip = d3.select("body")
+      .append("div")
+      .attr("class", "tooltip");
+ 
     let svg = d3.select(selector)
       .append("svg")
-        .attr("preserveAspectRatio", "xMidYMid meet")
-        .attr("viewBox", [0, 0, width + margin.left + margin.right, height + margin.top + margin.bottom].join(' '))
-        .classed("svg-content", true);
+      .attr("preserveAspectRatio", "xMidYMid meet")
+      .attr("viewBox", [0, 0, width + margin.left + margin.right, height + margin.top + margin.bottom].join(' '))
+      .classed("svg-content", true);
 
     svg = svg.append("g")
-        .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+      .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
     // Define scales
     xScale.domain([d3.min(data, d => xValue(d)), d3.max(data, d => xValue(d))]).rangeRound([0, width]);
@@ -33,38 +41,38 @@ function scatterplot() {
     sizeScale.domain([0, d3.max(data, d => d.population)]).range([5, 20]);
 
     let xAxis = svg.append("g")
-        .attr("transform", "translate(0," + height + ")")
-        .call(d3.axisBottom(xScale).ticks(5));
+      .attr("transform", "translate(0," + height + ")")
+      .call(d3.axisBottom(xScale).ticks(5));
 
     xAxis.append("text")
-        .attr("class", "axisLabel")
-        .attr("transform", "translate(" + (width / 2) + ", 40)")
-        .style("text-anchor", "middle")
-        .text(xLabelText);
+      .attr("class", "axisLabel")
+      .attr("transform", "translate(" + (width / 2) + ", 40)")
+      .style("text-anchor", "middle")
+      .text(xLabelText);
 
     let yAxis = svg.append("g")
-        .call(d3.axisLeft(yScale))
-        .append("text")
-        .attr("class", "axisLabel")
-        .attr("transform", "rotate(-90)") 
-        .attr("x", -height / 2)
-        .attr("y", -40)
-        .style("text-anchor", "middle")
-        .text(yLabelText);
+      .call(d3.axisLeft(yScale))
+      .append("text")
+      .attr("class", "axisLabel")
+      .attr("transform", "rotate(-90)")
+      .attr("x", -height / 2)
+      .attr("y", -40)
+      .style("text-anchor", "middle")
+      .text(yLabelText);
 
-     // Highlight points when brushed
-     function brush(g) {
-      const brush = d3.brush() 
-        .on("start brush", highlight) 
-        .on("end", brushEnd) 
+    // Highlight points when brushed
+    function brush(g) {
+      const brush = d3.brush()
+        .on("start brush", highlight)
+        .on("end", brushEnd)
         .extent([
           [-margin.left, -margin.bottom],
           [width + margin.right, height + margin.top]
         ]);
-        
+
       ourBrush = brush;
 
-      g.call(brush); 
+      g.call(brush);
 
       // Highlight the selected circles
       function highlight() {
@@ -83,7 +91,7 @@ function scatterplot() {
         );
 
         let dispatchString = Object.getOwnPropertyNames(dispatcher._)[0];
-       
+
         dispatcher.call(dispatchString, this, svg.selectAll(".selected").data());
       }
 
@@ -111,13 +119,52 @@ function scatterplot() {
       .attr("cy", Y)
       .attr("r", d => sizeScale(d.population))
       .attr("fill", d => colorScale(d.country))
-      .on("mouseover", function() {
+      .on("mouseover", function (d) {
         d3.select(this).classed("mouseover", true);
+        let currentCount = 0; //Used to dynamically update tooltip height to match the data per country  
+        let tooltipContent = "<strong>Country:</strong>" + " " + d.country + `<br><strong>Population: </strong> ${d3.format(",")(d.population)}`;
+
+        if (d.infrastructureInvestment) {
+          tooltipContent += `<br><strong>Infrastructure Investment: </strong> $${d3.format(",.2f")(d.infrastructureInvestment)}`;
+   
+          currentCount ++;
+        }
+        if (d.infrastructureMaintenance) {
+          tooltipContent += `<br><strong>Maintenance Investment: </strong> $${d3.format(",.2f")(d.infrastructureMaintenance)}`;
+          currentCount ++;
+        }
+        let currentHeight = 30 + (40 * currentCount); //Updates tooltip height
+        const x = d3.event.pageX;  // Page coordinates
+        const y = d3.event.pageY;  // Page coordinates
+        
+        if (currentCount < 2) {
+          currentCount = 0;
+        }
+
+        tooltip
+          .style("opacity", 1)
+          .style("visibility", "visible")
+          .style("height", currentHeight +"px")
+          .style("left", `${d3.event.pageX - containerBounds.left + 10}px`) // Adjust relative to the container
+          .style("top", `${d3.event.pageY - containerBounds.top  + (65 - (currentCount * 21))}px`) // Adjust relative to the container
+          .html(tooltipContent);  // Display the tooltip content
       })
-      .on("mouseout", function() {
+      .on("mousemove", function () {
+        const x = d3.event.pageX;  // Page coordinates
+        const y = d3.event.pageY;  // Page coordinates
+
+
+        tooltip
+          .style("opacity", 1)
+          .style("visibility", "visible")
+          .style("left", `${d3.event.pageX - containerBounds.left + 10}px`) // Adjust relative to the container
+          .style("top", `${d3.event.pageY - + (65 - (currentCount * 21))}px`) // Adjust relative to the container
+      })
+      .on("mouseout", function () {
         d3.select(this).classed("mouseover", false);
+        tooltip.style("opacity", 0); // Hide tooltip
       })
-      .on("click", function(d) {
+      .on("click", function (d) {
         // Remove "selected" class from all points
         points.classed("selected", false);
 
@@ -134,25 +181,25 @@ function scatterplot() {
 
         // Dispatch the countrySelected event with the country name
         dispatcher.call("countrySelected", this, selectedCountry);
-        
+
         // Update the bar visibility
         updateBar();
-        
+
       });
 
     // Add the country name labels
     let countryLabels = svg.selectAll(".countryLabel")
-        .data(data);
+      .data(data);
 
     countryLabels.exit().remove();
 
     countryLabels = countryLabels.enter()
-        .append("text")
-        .attr("class", "countryLabel")
-        .merge(countryLabels)
-        .attr("x", d => xScale(xValue(d)) + 5)
-        .attr("y", d => yScale(yValue(d)) - 5) 
-        .text(d => d.country);
+      .append("text")
+      .attr("class", "countryLabel")
+      .merge(countryLabels)
+      .attr("x", d => xScale(xValue(d)) + 5)
+      .attr("y", d => yScale(yValue(d)) - 5)
+      .text(d => d.country);
 
     selectableElements = points;
 
