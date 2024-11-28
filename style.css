@@ -1,101 +1,266 @@
 /* General formatting */
 body {
 	padding: 0 10px;
-	font: 11px/1.5 -apple-system, BlinkMacSystemFont, "avenir next",avenir, "Segoe UI", "lucida grande", "helvetica neue", helvetica, "Fira Sans",roboto, noto, "Droid Sans", cantarell, oxygen, ubuntu, "franklin gothic medium", "century gothic", "Liberation Sans",
-	sans-serif;
-}
-
-h1, h2, h3 {
-	line-height: 1.2
-}
-
-/* Your text should be in a nice narrow column */
-.content-column {
+	font: 11px/1.5 -apple-system, BlinkMacSystemFont, "avenir next", avenir, "Segoe UI", "lucida grande", "helvetica neue", helvetica, "Fira Sans", roboto, noto, "Droid Sans", cantarell, oxygen, ubuntu, "franklin gothic medium", "century gothic", "Liberation Sans", sans-serif;
+	margin: 0;
+	box-sizing: border-box;
+  }
+  
+  h1, h2, h3 {
+	line-height: 1.2;
+  }
+  
+  /* Your text should be in a nice narrow column */
+  .content-column {
 	max-width: 650px;
 	margin: 40px auto;
-}
-
-/* But your visualization should be full-width and full-height */
-.vis-holder {
-  width: 100%;
-  height: 100%;
-}
-
-/* Fork on GitHub ribbon via https://codepo8.github.io/css-fork-on-github-ribbon/# */  
-#forkongithub a{
-	background:#00F;
-	color:#fff;
-	text-decoration:none;
-	font-family:arial,sans-serif;
-	text-align:center;
-	font-weight:bold;
-	padding:5px 40px;
-	font-size:1rem;
-	line-height:1.4rem;
-	position:relative;
-	transition:0.5s;
-}
-#forkongithub a:hover{
-	background:#118;
-	color:#fff;
-}
-#forkongithub a::before,#forkongithub a::after{
-	content:"";
-	width:100%;
-	display:block;
-	position:absolute;
-	top:1px;
-	left:0;
-	height:1px;
-	background:#fff;
-}
-#forkongithub a::after{
-	bottom:1px;
-	top:auto;
-}
-@media screen and (min-width:1000px){
-	#forkongithub{
-		position:fixed;
-		display:block;
-		top:0;
-		right:0;
-		width:200px;
-		overflow:hidden;
-		height:200px;
-		z-index:9999;
+  }
+  
+  /* But your visualization should be full-width and full-height */
+  .vis-holder {
+	width: 100%;
+	height: 100%;
+  }
+  
+  /* Fork on GitHub ribbon via https://codepo8.github.io/css-fork-on-github-ribbon/# */  
+  #forkongithub a {
+	background: #00F;
+	color: #fff;
+	text-decoration: none;
+	font-family: arial, sans-serif;
+	text-align: center;
+	font-weight: bold;
+	padding: 5px 40px;
+	font-size: 1rem;
+	line-height: 1.4rem;
+	position: relative;
+	transition: 0.5s;
+  }
+  #forkongithub a:hover {
+	background: #118;
+	color: #fff;
+  }
+  #forkongithub a::before, #forkongithub a::after {
+	content: "";
+	width: 100%;
+	display: block;
+	position: absolute;
+	top: 1px;
+	left: 0;
+	height: 1px;
+	background: #fff;
+  }
+  #forkongithub a::after {
+	bottom: 1px;
+	top: auto;
+  }
+  @media screen and (min-width: 1000px) {
+	#forkongithub {
+	  position: fixed;
+	  display: block;
+	  top: 0;
+	  right: 0;
+	  width: 200px;
+	  overflow: hidden;
+	  height: 200px;
+	  z-index: 9999;
 	}
-	#forkongithub a{
-		width:200px;
-		position:absolute;
-		top:60px;
-		right:-60px;
-		transform:rotate(45deg);
-		-webkit-transform:rotate(45deg);
-		-ms-transform:rotate(45deg);
-		-moz-transform:rotate(45deg);
-		-o-transform:rotate(45deg);
-		box-shadow:4px 4px 10px rgba(0,0,0,0.8);
+	#forkongithub a {
+	  width: 200px;
+	  position: absolute;
+	  top: 60px;
+	  right: -60px;
+	  transform: rotate(45deg);
+	  -webkit-transform: rotate(45deg);
+	  -ms-transform: rotate(45deg);
+	  -moz-transform: rotate(45deg);
+	  -o-transform: rotate(45deg);
+	  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.8);
 	}
-}
-
-.my-table {
-    border-collapse: collapse;
-    width: 100%;
-    margin: 20px 0;
-}
-
-.my-table th, .my-table td {
-    border: 1px solid #0e0e0e;
-    padding: 8px;
-    text-align: center;
-}
-
-.my-table th {
-    background-color: #f4f4f4;
-    font-weight: bold;
-}
-
-#stacked-linechart {
-    width: 100%;
-    height: 500px;
-}
+  }
+  
+  .my-table {
+	border-collapse: collapse;
+	width: 100%;
+	margin: 20px 0;
+  }
+  
+  .my-table th, .my-table td {
+	border: 1px solid #0e0e0e;
+	padding: 8px;
+	text-align: center;
+  }
+  
+  .my-table th {
+	background-color: #f4f4f4;
+	font-weight: bold;
+  }
+  
+  #stacked-linechart {
+	width: 100%;
+	height: 500px;
+	margin: 20px;
+  }
+  
+  /* Tooltip Styling */
+  .tooltip {
+	position: absolute;
+	background: #f4f4f4;
+	padding: 10px;
+	border-radius: 5px;
+	box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+	pointer-events: none;
+	visibility: hidden;
+	z-index: 9999;
+  }
+  
+  
+  /* Hover Line Styling */
+  .hover-line {
+	stroke: #ff0000;  /* Bright color to stand out */
+	stroke-width: 2px;
+	stroke-dasharray: 3, 3;
+	visibility: hidden;
+  }
+  
+  /* Legend Styling */
+  .legend {
+	font-size: 12px;
+  }
+  
+  .legend-item rect {
+	width: 18px;
+	height: 18px;
+  }
+  
+  .legend-item text {
+	font-size: 12px;
+	fill: #333;
+  }
+  
+  /* Chart Title and Axis Labels */
+  .chart-title {
+	font-size: 16px;
+	text-anchor: middle;
+  }
+  
+  .axis-label {
+	font-size: 14px;
+	text-anchor: middle;
+  }
+  
+  /* Brush Selection Styling */
+  .brush .selection {
+	fill: #69b3a2;
+	fill-opacity: 0.3;
+	stroke: none;
+  }
+  
+  .brush .handle {
+	fill: #666;
+	stroke: #000;
+	stroke-width: 1.5px;
+  }
+  
+  /* Axis Styling */
+  .axis path,
+  .axis line {
+	fill: none;
+	stroke: #000;
+	shape-rendering: crispEdges;
+  }
+  
+  .axis text {
+	font-size: 12px;
+	fill: #333;
+  }
+  
+  /* Layer Styling for Stacked Areas */
+  .layer {
+	opacity: 0.8;
+	transition: opacity 0.3s ease;
+  }
+  
+  .layer:hover {
+	opacity: 1;
+  }
+  
+  /* General Container Styling */
+  .container {
+	width: 80%;
+	margin: 0 auto;
+	padding: 20px;
+  }
+  
+  /* Table Styling */
+  .table {
+	width: 100%;
+	border-collapse: collapse;
+	margin-top: 20px;
+  }
+  
+  .table th, .table td {
+	border: 1px solid #ddd;
+	padding: 8px;
+	text-align: left;
+  }
+  
+  .table th {
+	background-color: #f2f2f2;
+	font-weight: bold;
+  }
+  
+  .table tr:nth-child(even) {
+	background-color: #f9f9f9;
+  }
+  
+  .table-title {
+	text-align: center;
+	margin-bottom: 10px;
+	font-size: 18px;
+	font-weight: bold;
+  }
+  
+  /* Button Styling */
+  .button {
+	display: inline-block;
+	padding: 10px 20px;
+	font-size: 14px;
+	cursor: pointer;
+	text-align: center;
+	text-decoration: none;
+	outline: none;
+	color: #fff;
+	background-color: #4CAF50;
+	border: none;
+	border-radius: 15px;
+	box-shadow: 0 9px #999;
+	margin-top: 20px;
+  }
+  
+  .button:hover {background-color: #3e8e41}
+  
+  .button:active {
+	background-color: #3e8e41;
+	box-shadow: 0 5px #666;
+	transform: translateY(4px);
+  }
+  
+  /* Input Field Styling */
+  input[type="text"], input[type="number"] {
+	width: 100%;
+	padding: 12px;
+	margin: 8px 0;
+	box-sizing: border-box;
+	border: 2px solid #ccc;
+	border-radius: 4px;
+  }
+  
+  /* Header Styling */
+  .header {
+	text-align: center;
+	padding: 20px;
+	font-size: 24px;
+	background-color: #f4f4f4;
+  }
+  
