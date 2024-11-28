@@ -48,7 +48,7 @@ d3.selectAll("svg").on("mouseover", (d, i, elements) =>{          //highlight st
     d3.select(elements[i]).classed("mouseover", false);
   });
 });
-
+//eventually need to add a on mousedown thing here for linking
 d3.selectAll("button").on("mousedown", (d, i, elements) =>{          //add button to confirm year
   currentYear = document.getElementById('years').value;
   svgStates.selectAll("path") 
@@ -56,8 +56,9 @@ d3.selectAll("button").on("mousedown", (d, i, elements) =>{          //add butto
     var name = d.properties.STATENAM.replace(" Territory", "");
     return getColor(rates[currentYear][name], getMax());
   })
-  .append("svg:title")                                              //dod is not working yet
-  .text(function(d) { return d.properties.STATENAM + ","+ rates[currentYear][d.properties.STATENAM]; });
+  .select('title')                                                  //update title with new data
+  .text(function(d) { return d.properties.STATENAM + ", "+ rates[currentYear][d.properties.STATENAM]; });
+  d3.selectAll("#titleYear").text(currentYear);
 });
 
 
