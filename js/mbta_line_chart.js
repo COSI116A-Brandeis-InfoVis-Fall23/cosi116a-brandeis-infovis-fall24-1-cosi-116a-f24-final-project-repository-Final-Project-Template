@@ -47,11 +47,11 @@ d3.json("data/mbta_miles_traveled.json").then((data) => {
       .range([height, 0]);
 
   //Maps a color for each fuel type
-  /*    Diesel--> red
-        Gasoline --> yellow
-        Electric Propulsion--> green
-        Other Fuel --> pink
-        Compressed Natural Gas --> orange
+  /*    Diesel--> red, #FF0000
+        Gasoline --> yellow, #CCCC00
+        Electric Propulsion--> green #008000
+        Other Fuel --> pink, #FF69B4
+        Compressed Natural Gas --> orange, #FFA500
     */
       const colorScale = d3.scaleOrdinal()
       .domain(["Diesel", "Gasoline", "Electric Propulsion", "Other Fuel", "Compressed Natural Gas"])
