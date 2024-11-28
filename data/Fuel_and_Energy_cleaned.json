@@ -7,6 +7,13 @@
   },
   {
     "Year": 2016,
+    "Mode": "DO",
+    "Fuel_Source": "Compressed Natural Gas",
+    "Miles_Traveled": 7801279
+  },
+  
+  {
+    "Year": 2016,
     "Mode": "DR",
     "Fuel_Source": "Gasoline",
     "Miles_Traveled": 12928651
