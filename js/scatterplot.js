@@ -283,19 +283,6 @@ function scatterplot() {
             });
       }
 
-    // Add the country name labels
-    //let countryLabels = svg.selectAll(".countryLabel")
-    //  .data(data);
-
-    //countryLabels.exit().remove();
-
-    //countryLabels = countryLabels.enter()
-    //  .append("text")
-    //  .attr("class", "countryLabel")
-    //  .merge(countryLabels)
-    //  .attr("x", d => xScale(xValue(d)) + 5)
-    //  .attr("y", d => yScale(yValue(d)) - 5)
-    // .text(d => d.country);
 
     selectableElements = points;
 
