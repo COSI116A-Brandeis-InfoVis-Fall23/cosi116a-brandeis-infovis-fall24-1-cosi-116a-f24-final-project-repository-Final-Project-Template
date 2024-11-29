@@ -78,11 +78,6 @@ function table() {
     .on("mouseout", (d, i, elements) => {
       d3.select(elements[i]).classed("highlighted", false)
     });
-
-
-
-
-    
   return chart;
 }
 
