@@ -48,13 +48,15 @@ h1, h2, h3 {
 .tooltip {
 	position: absolute;
 	padding: 5px;
-	background: rgba(22, 55, 164, 0.5);
+	background: rgb(88, 113, 192);
 	border: 1px solid #ccc;
 	border-radius: 5px;
-	width: 180px;
+	width: 160px;
+	color: black;
 	height: 30px;
 	font-size: 12px;
-	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+	text-decoration-color: white;
+	box-shadow: 0 2px 5px rgba(0, 0, 0, .4);
 	pointer-events: none;
 	visibility: hidden;
 	opacity: 0; /* Hidden by default */
