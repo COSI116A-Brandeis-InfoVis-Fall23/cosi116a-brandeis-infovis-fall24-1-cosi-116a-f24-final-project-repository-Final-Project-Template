@@ -85,3 +85,16 @@ function table() {
     
   return chart;
 }
+
+
+  // Load the CSV data
+  d3.csv("data/your-data-file.csv").then(data => {
+
+    data.forEach(d => {
+      d.Year = +d.Value; 
+    });
+
+    // Initialize the table
+    const myTable = table(); // Call your table function
+    myTable("#table", data);
+  });
