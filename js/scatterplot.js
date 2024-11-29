@@ -137,9 +137,6 @@ function scatterplot() {
         const x = d3.event.pageX;  // Page coordinates
         const y = d3.event.pageY;  // Page coordinates
         
-        // if (currentCount < 2) {
-        //   currentCount = 0;
-        // }
 
         tooltip
           .style("opacity", 1)
