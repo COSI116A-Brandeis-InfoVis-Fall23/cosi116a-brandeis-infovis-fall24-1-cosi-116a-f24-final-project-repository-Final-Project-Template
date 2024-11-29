@@ -22,6 +22,7 @@ function scatterplot() {
     const container = d3.select(".scatterplot-container").node(); // Get the container element
     const containerBounds = container.getBoundingClientRect(); // Get container's position and size
 
+
     const tooltip = d3.select("body")
       .append("div")
       .attr("class", "tooltip");
@@ -45,11 +46,13 @@ function scatterplot() {
       .attr("transform", "translate(0," + height + ")")
       .call(d3.axisBottom(xScale).ticks(5));
 
+
     xAxis.append("text")
       .attr("class", "axisLabel")
       .attr("transform", "translate(" + (width / 2) + ", 40)")
       .style("text-anchor", "middle")
       .text(xLabelText);
+
 
     let yAxis = svg.append("g")
       .call(d3.axisLeft(yScale))
@@ -60,6 +63,50 @@ function scatterplot() {
       .attr("y", -40)
       .style("text-anchor", "middle")
       .text(yLabelText);
+
+    // Highlight points when brushed
+    function brush(g) {
+      const brush = d3.brush()
+        .on("start brush", highlight)
+        .on("end", brushEnd)
+        .extent([
+          [-margin.left, -margin.bottom],
+          [width + margin.right, height + margin.top]
+        ]);
+
+      ourBrush = brush;
+
+      g.call(brush);
+
+      // Highlight the selected circles
+      function highlight() {
+        if (d3.event.selection === null) return;
+        const [
+          [x0, y0],
+          [x1, y1]
+        ] = d3.event.selection;
+
+        // Remove "selected" class from all points
+        points.classed("selected", false);
+
+        // If within the bounds of the brush, select it
+        points.classed("selected", d =>
+          x0 <= xScale(xValue(d)) && xScale(xValue(d)) <= x1 && y0 <= yScale(yValue(d)) && yScale(yValue(d)) <= y1
+        );
+
+        let dispatchString = Object.getOwnPropertyNames(dispatcher._)[0];
+
+        dispatcher.call(dispatchString, this, svg.selectAll(".selected").data());
+      }
+
+      function brushEnd() {
+        if (d3.event.sourceEvent.type != "end") {
+          d3.select(this).call(brush.move, null);
+        }
+      }
+    }
+
+    svg.call(brush);
 
     // Highlight points when brushed
     function brush(g) {
@@ -146,8 +193,8 @@ function scatterplot() {
           .style("opacity", 1)
           .style("visibility", "visible")
           .style("height", currentHeight +"px")
-          .style("left", `${d3.event.pageX - containerBounds.left + 10}px`) // Adjust relative to the container
-          .style("top", `${d3.event.pageY - containerBounds.top  + (65 - (currentCount * 21))}px`) // Adjust relative to the container
+          .style("left", `${x - containerBounds.left + 10}px`) // Adjust relative to the container
+          .style("top", `${y - containerBounds.top  + (120 -(currentCount * 20))}px`) // Adjust relative to the container
           .html(tooltipContent);  // Display the tooltip content
       })
       .on("mousemove", function () {
@@ -158,8 +205,8 @@ function scatterplot() {
         tooltip
           .style("opacity", 1)
           .style("visibility", "visible")
-          .style("left", `${d3.event.pageX - containerBounds.left + 10}px`) // Adjust relative to the container
-          .style("top", `${d3.event.pageY - + (65 - (currentCount * 21))}px`) // Adjust relative to the container
+          .style("left", `${x - containerBounds.left + 10}px`) // Adjust relative to the container
+          .style("top", `${y - containerBounds.top  + (120 -(currentCount * 20))}px`) // Adjust relative to the container
       })
       .on("mouseout", function () {
         d3.select(this).classed("mouseover", false);
@@ -354,13 +401,19 @@ function scatterplot() {
 
   // Given selected data from another visualization 
   // select the relevant elements here (linking)
+  // Given selected data from another visualization 
+  // select the relevant elements here (linking)
   chart.updateSelection = function (selectedData) {
     if (!arguments.length) return;
 
     // Select an element if its datum was selected
+
+    // Select an element if its datum was selected
     selectableElements.classed("selected", d => {
       return selectedData.includes(d)
+      return selectedData.includes(d)
     });
+
 
   };
 

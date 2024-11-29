@@ -12,6 +12,10 @@ h1, h2, h3 {
 	display: none;
   }
   
+.hidden {
+	display: none;
+  }
+  
 
 /* Your text should be in a nice narrow column */
 .content-column {
@@ -44,17 +48,17 @@ h1, h2, h3 {
 .tooltip {
 	position: absolute;
 	padding: 5px;
-	background: rgba(24, 92, 107, 0.5);
+	background: rgba(22, 55, 164, 0.5);
 	border: 1px solid #ccc;
 	border-radius: 5px;
-	width: 200px;
+	width: 180px;
 	height: 30px;
 	font-size: 12px;
 	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 	pointer-events: none;
 	visibility: hidden;
 	opacity: 0; /* Hidden by default */
-	transition: opacity 0.2s ease-in-out;
+	transition: opacity 0.1s ease-in-out;
 	z-index: 999999; /* Ensures it is at the front of the graph */
   }
 
