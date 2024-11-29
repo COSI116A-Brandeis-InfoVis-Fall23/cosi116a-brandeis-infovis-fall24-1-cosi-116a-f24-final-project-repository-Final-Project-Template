@@ -44,9 +44,15 @@
       // Create a table given the following: 
       // a dispatcher (d3-dispatch) for selection events; 
       // a div id selector to put our table in; and the data to use.
-      let tableData = table()
-        .selectionDispatcher(d3.dispatch(dispatchString))
-        ("#table", data);
+      d3.csv("data/transport_spend_as_per_gdp - transport_spend_as_per_gdp.csv").then(data => {
+        data.forEach(d => {
+          d.Year = +d.Value; // Ensure numeric conversion if necessary
+        });
+      
+        // Initialize the table
+        const myTable = table(); // Call your table function
+        myTable("#table", data); // Pass data to the table function
+      });
   
        /* 
       // When the line chart selection is updated via brushing, 

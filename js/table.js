@@ -87,14 +87,3 @@ function table() {
 }
 
 
-  // Load the CSV data
-  d3.csv("transport_spend_as_per_gdp - transport_spend_as_per_gdp.csv").then(data => {
-
-    data.forEach(d => {
-      d.Year = +d.Value; 
-    });
-
-    // Initialize the table
-    const myTable = table(); // Call your table function
-    myTable("#table", data);
-  });
