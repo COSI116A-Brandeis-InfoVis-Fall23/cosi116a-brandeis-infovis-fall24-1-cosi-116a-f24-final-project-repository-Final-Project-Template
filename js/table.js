@@ -88,7 +88,7 @@ function table() {
 
 
   // Load the CSV data
-  d3.csv("data/your-data-file.csv").then(data => {
+  d3.csv("transport_spend_as_per_gdp - transport_spend_as_per_gdp.csv").then(data => {
 
     data.forEach(d => {
       d.Year = +d.Value; 
