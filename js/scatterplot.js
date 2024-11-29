@@ -10,7 +10,7 @@ function scatterplot() {
     yLabelOffsetPx = 0,
     xScale = d3.scaleLinear(),
     yScale = d3.scaleLinear(),
-    sizeScale = d3.scaleLinear(),
+    sizeScale = d3.scaleSqrt(), //!!scaleLinear
     selectableElements = d3.select(null),
     dispatcher = d3.dispatch("selectionUpdated", "countrySelected");
 
@@ -34,11 +34,12 @@ function scatterplot() {
 
     svg = svg.append("g")
       .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
-
+    
     // Define scales
     xScale.domain([d3.min(data, d => xValue(d)), d3.max(data, d => xValue(d))]).rangeRound([0, width]);
     yScale.domain([d3.min(data, d => yValue(d)), d3.max(data, d => yValue(d))]).rangeRound([height, 0]);
     sizeScale.domain([0, d3.max(data, d => d.population)]).range([5, 20]);
+
 
     let xAxis = svg.append("g")
       .attr("transform", "translate(0," + height + ")")
@@ -186,20 +187,68 @@ function scatterplot() {
         updateBar();
 
       });
+      
+      appendLegend(svg, data, sizeScale);
+      
+      //add legend to scatterplot for population size
+      function appendLegend(svg, data, sizeScale){
+        let legend = svg.append("g")
+          .attr("class", "legend")
+          .attr("transform",  "translate(" + (width + margin.right - 100) + ",30)");
+        
+        legend.append("text")
+          .attr("x", -60)
+          .attr("y", -25)
+          .attr("class", "legendTitle")
+          .style("fill", "black")
+          .text("Population (Millions)");
+
+        //get range of populations 
+        let populationRanges = [
+          [d3.max(data, d => d.population) / 2, d3.max(data, d => d.population)],
+          [d3.mean(data, d => d.population), d3.max(data, d => d.population) / 2],
+          [d3.min(data, d => d.population), d3.mean(data, d => d.population)],
+          [0, d3.min(data, d => d.population)]
+        ];
+        
+        //create circles in legend 
+        legend.selectAll(".legendCircle")
+          .data(populationRanges)
+          .enter()
+          .append("circle")
+            .attr("class", "legendCircle")
+            .attr("cx", 0)
+            .attr("cy", (d, i) => i * (25 + sizeScale(d[1]))) 
+            .attr("r", d => sizeScale(d[1]))
+            .style("fill", "black");
+        
+        legend.selectAll(".legendText")
+            .data(populationRanges)
+            .enter()
+            .append("text")
+              .attr("x", 30)
+              .attr("y", (d, i) => i * (27 + sizeScale(d[1]))) 
+              .style("font-size", "12px")
+              .style("fill", "black")
+              .text(function(d) {
+                // Format population as millions and append "mill"
+                return `${d3.format(".0f")(d[0] / 1000000)} - ${d3.format(".0f")(d[1] / 1000000)}`;
+            });
+      }
 
     // Add the country name labels
-    let countryLabels = svg.selectAll(".countryLabel")
-      .data(data);
+    //let countryLabels = svg.selectAll(".countryLabel")
+    //  .data(data);
 
-    countryLabels.exit().remove();
+    //countryLabels.exit().remove();
 
-    countryLabels = countryLabels.enter()
-      .append("text")
-      .attr("class", "countryLabel")
-      .merge(countryLabels)
-      .attr("x", d => xScale(xValue(d)) + 5)
-      .attr("y", d => yScale(yValue(d)) - 5)
-      .text(d => d.country);
+    //countryLabels = countryLabels.enter()
+    //  .append("text")
+    //  .attr("class", "countryLabel")
+    //  .merge(countryLabels)
+    //  .attr("x", d => xScale(xValue(d)) + 5)
+    //  .attr("y", d => yScale(yValue(d)) - 5)
+    // .text(d => d.country);
 
     selectableElements = points;
 
@@ -245,6 +294,7 @@ function scatterplot() {
 
     return chart;
   }
+
 
   // Setters and getters for chart configuration
   chart.margin = function (_) {
