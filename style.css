@@ -12,6 +12,10 @@ h1, h2, h3 {
 	display: none;
   }
   
+.hidden {
+	display: none;
+  }
+  
 
 /* Your text should be in a nice narrow column */
 .content-column {
@@ -115,7 +119,10 @@ h1, h2, h3 {
 }
 
 .point {
-	stroke-width: 3;
+	stroke-width: 1px;
+	stroke: black;
+	opacity: .8;
+
 }
 
 circle.mouseover {
@@ -140,6 +147,13 @@ circle.selected {
 	font-size: 15px;
 	fill: Black;
 
+}
+
+.legendContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: flex-start;
 }
 
 /* Fork on GitHub ribbon via https://codepo8.github.io/css-fork-on-github-ribbon/# */  

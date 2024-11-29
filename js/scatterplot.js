@@ -10,7 +10,7 @@ function scatterplot() {
     yLabelOffsetPx = 0,
     xScale = d3.scaleLinear(),
     yScale = d3.scaleLinear(),
-    sizeScale = d3.scaleLinear(),
+    sizeScale = d3.scaleSqrt(), //!!scaleLinear
     selectableElements = d3.select(null),
     dispatcher = d3.dispatch("selectionUpdated", "countrySelected");
 
@@ -21,6 +21,7 @@ function scatterplot() {
 
     const container = d3.select(".scatterplot-container").node(); // Get the container element
     const containerBounds = container.getBoundingClientRect(); // Get container's position and size
+
 
     const tooltip = d3.select("body")
       .append("div")
@@ -34,21 +35,24 @@ function scatterplot() {
 
     svg = svg.append("g")
       .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
-
+    
     // Define scales
     xScale.domain([d3.min(data, d => xValue(d)), d3.max(data, d => xValue(d))]).rangeRound([0, width]);
     yScale.domain([d3.min(data, d => yValue(d)), d3.max(data, d => yValue(d))]).rangeRound([height, 0]);
     sizeScale.domain([0, d3.max(data, d => d.population)]).range([5, 20]);
 
+
     let xAxis = svg.append("g")
       .attr("transform", "translate(0," + height + ")")
       .call(d3.axisBottom(xScale).ticks(5));
+
 
     xAxis.append("text")
       .attr("class", "axisLabel")
       .attr("transform", "translate(" + (width / 2) + ", 40)")
       .style("text-anchor", "middle")
       .text(xLabelText);
+
 
     let yAxis = svg.append("g")
       .call(d3.axisLeft(yScale))
@@ -59,6 +63,50 @@ function scatterplot() {
       .attr("y", -40)
       .style("text-anchor", "middle")
       .text(yLabelText);
+
+    // Highlight points when brushed
+    function brush(g) {
+      const brush = d3.brush()
+        .on("start brush", highlight)
+        .on("end", brushEnd)
+        .extent([
+          [-margin.left, -margin.bottom],
+          [width + margin.right, height + margin.top]
+        ]);
+
+      ourBrush = brush;
+
+      g.call(brush);
+
+      // Highlight the selected circles
+      function highlight() {
+        if (d3.event.selection === null) return;
+        const [
+          [x0, y0],
+          [x1, y1]
+        ] = d3.event.selection;
+
+        // Remove "selected" class from all points
+        points.classed("selected", false);
+
+        // If within the bounds of the brush, select it
+        points.classed("selected", d =>
+          x0 <= xScale(xValue(d)) && xScale(xValue(d)) <= x1 && y0 <= yScale(yValue(d)) && yScale(yValue(d)) <= y1
+        );
+
+        let dispatchString = Object.getOwnPropertyNames(dispatcher._)[0];
+
+        dispatcher.call(dispatchString, this, svg.selectAll(".selected").data());
+      }
+
+      function brushEnd() {
+        if (d3.event.sourceEvent.type != "end") {
+          d3.select(this).call(brush.move, null);
+        }
+      }
+    }
+
+    svg.call(brush);
 
     // Highlight points when brushed
     function brush(g) {
@@ -137,13 +185,16 @@ function scatterplot() {
         const x = d3.event.pageX;  // Page coordinates
         const y = d3.event.pageY;  // Page coordinates
         
+        if (currentCount < 2) {
+          currentCount = 0;
+        }
 
         tooltip
           .style("opacity", 1)
           .style("visibility", "visible")
           .style("height", currentHeight +"px")
           .style("left", `${x - containerBounds.left + 10}px`) // Adjust relative to the container
-          .style("top", `${y - containerBounds.top  + ((currentCount * 10) -(currentCount * 22))}px`) // Adjust relative to the container
+          .style("top", `${y - containerBounds.top  + (120 -(currentCount * 20))}px`) // Adjust relative to the container
           .html(tooltipContent);  // Display the tooltip content
       })
       .on("mousemove", function () {
@@ -155,7 +206,7 @@ function scatterplot() {
           .style("opacity", 1)
           .style("visibility", "visible")
           .style("left", `${x - containerBounds.left + 10}px`) // Adjust relative to the container
-          .style("top", `${y - containerBounds.top  + ((currentCount * 10) -(currentCount * 22))}px`) // Adjust relative to the container
+          .style("top", `${y - containerBounds.top  + (120 -(currentCount * 20))}px`) // Adjust relative to the container
       })
       .on("mouseout", function () {
         d3.select(this).classed("mouseover", false);
@@ -183,20 +234,68 @@ function scatterplot() {
         updateBar();
 
       });
+      
+      appendLegend(svg, data, sizeScale);
+      
+      //add legend to scatterplot for population size
+      function appendLegend(svg, data, sizeScale){
+        let legend = svg.append("g")
+          .attr("class", "legend")
+          .attr("transform",  "translate(" + (width + margin.right - 100) + ",30)");
+        
+        legend.append("text")
+          .attr("x", -60)
+          .attr("y", -25)
+          .attr("class", "legendTitle")
+          .style("fill", "black")
+          .text("Population (Millions)");
+
+        //get range of populations 
+        let populationRanges = [
+          [d3.max(data, d => d.population) / 2, d3.max(data, d => d.population)],
+          [d3.mean(data, d => d.population), d3.max(data, d => d.population) / 2],
+          [d3.min(data, d => d.population), d3.mean(data, d => d.population)],
+          [0, d3.min(data, d => d.population)]
+        ];
+        
+        //create circles in legend 
+        legend.selectAll(".legendCircle")
+          .data(populationRanges)
+          .enter()
+          .append("circle")
+            .attr("class", "legendCircle")
+            .attr("cx", 0)
+            .attr("cy", (d, i) => i * (25 + sizeScale(d[1]))) 
+            .attr("r", d => sizeScale(d[1]))
+            .style("fill", "black");
+        
+        legend.selectAll(".legendText")
+            .data(populationRanges)
+            .enter()
+            .append("text")
+              .attr("x", 30)
+              .attr("y", (d, i) => i * (27 + sizeScale(d[1]))) 
+              .style("font-size", "12px")
+              .style("fill", "black")
+              .text(function(d) {
+                // Format population as millions and append "mill"
+                return `${d3.format(".0f")(d[0] / 1000000)} - ${d3.format(".0f")(d[1] / 1000000)}`;
+            });
+      }
 
     // Add the country name labels
-    let countryLabels = svg.selectAll(".countryLabel")
-      .data(data);
+    //let countryLabels = svg.selectAll(".countryLabel")
+    //  .data(data);
 
-    countryLabels.exit().remove();
+    //countryLabels.exit().remove();
 
-    countryLabels = countryLabels.enter()
-      .append("text")
-      .attr("class", "countryLabel")
-      .merge(countryLabels)
-      .attr("x", d => xScale(xValue(d)) + 5)
-      .attr("y", d => yScale(yValue(d)) - 5)
-      .text(d => d.country);
+    //countryLabels = countryLabels.enter()
+    //  .append("text")
+    //  .attr("class", "countryLabel")
+    //  .merge(countryLabels)
+    //  .attr("x", d => xScale(xValue(d)) + 5)
+    //  .attr("y", d => yScale(yValue(d)) - 5)
+    // .text(d => d.country);
 
     selectableElements = points;
 
@@ -242,6 +341,7 @@ function scatterplot() {
 
     return chart;
   }
+
 
   // Setters and getters for chart configuration
   chart.margin = function (_) {
@@ -301,13 +401,19 @@ function scatterplot() {
 
   // Given selected data from another visualization 
   // select the relevant elements here (linking)
+  // Given selected data from another visualization 
+  // select the relevant elements here (linking)
   chart.updateSelection = function (selectedData) {
     if (!arguments.length) return;
 
     // Select an element if its datum was selected
+
+    // Select an element if its datum was selected
     selectableElements.classed("selected", d => {
       return selectedData.includes(d)
+      return selectedData.includes(d)
     });
+
 
   };
 
