@@ -137,16 +137,16 @@ function scatterplot() {
         const x = d3.event.pageX;  // Page coordinates
         const y = d3.event.pageY;  // Page coordinates
         
-        if (currentCount < 2) {
-          currentCount = 0;
-        }
+        // if (currentCount < 2) {
+        //   currentCount = 0;
+        // }
 
         tooltip
           .style("opacity", 1)
           .style("visibility", "visible")
           .style("height", currentHeight +"px")
-          .style("left", `${d3.event.pageX - containerBounds.left + 10}px`) // Adjust relative to the container
-          .style("top", `${d3.event.pageY - containerBounds.top  + (65 - (currentCount * 21))}px`) // Adjust relative to the container
+          .style("left", `${x - containerBounds.left + 10}px`) // Adjust relative to the container
+          .style("top", `${y - containerBounds.top  + ((currentCount * 10) -(currentCount * 22))}px`) // Adjust relative to the container
           .html(tooltipContent);  // Display the tooltip content
       })
       .on("mousemove", function () {
@@ -157,8 +157,8 @@ function scatterplot() {
         tooltip
           .style("opacity", 1)
           .style("visibility", "visible")
-          .style("left", `${d3.event.pageX - containerBounds.left + 10}px`) // Adjust relative to the container
-          .style("top", `${d3.event.pageY - + (65 - (currentCount * 21))}px`) // Adjust relative to the container
+          .style("left", `${x - containerBounds.left + 10}px`) // Adjust relative to the container
+          .style("top", `${y - containerBounds.top  + ((currentCount * 10) -(currentCount * 22))}px`) // Adjust relative to the container
       })
       .on("mouseout", function () {
         d3.select(this).classed("mouseover", false);
