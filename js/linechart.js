@@ -2,6 +2,7 @@
 
 // Initialize a line chart. Modeled after Mike Bostock's
 // Reusable Chart framework https://bost.ocks.org/mike/chart/
+document.getElementById("state").textContent = "Georgia"; //Georgia as a placeholder
 function linechart() {
 
   // Based on Mike Bostock's margin convention
