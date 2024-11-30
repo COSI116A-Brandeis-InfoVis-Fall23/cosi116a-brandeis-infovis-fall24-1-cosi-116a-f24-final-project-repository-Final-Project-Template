@@ -269,6 +269,7 @@ function scatterplot() {
             .attr("r", d => sizeScale(d[1]))
             .style("fill", "black");
         
+        //add legend text 
         legend.selectAll(".legendText")
             .data(populationRanges)
             .enter()
