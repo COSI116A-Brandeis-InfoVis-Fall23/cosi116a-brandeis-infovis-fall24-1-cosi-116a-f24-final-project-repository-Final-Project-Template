@@ -20,7 +20,7 @@
 let lcHeartDisease = linechart()
   .xLabel("Year")
   .yLabel("Age-Adjusted Heart Disease Death Rate")
-  .yLabelOffset(-40);
+  .yLabelOffset(40)
 
 lcHeartDisease("#linechart", linechartData);
 

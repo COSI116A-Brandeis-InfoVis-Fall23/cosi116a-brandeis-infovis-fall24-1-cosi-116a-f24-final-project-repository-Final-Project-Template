@@ -25,7 +25,7 @@
   <script src="https://d3js.org/topojson.v1.min.js"></script>
   <script src="static/colors.js"></script>
   <script src="static/statenames.js"></script>
-  <script src="data/ratesTest.js"></script>
+  <script src="data/heartratesALL.js"></script>
 
   <script src="js/renderMap.js"></script>
   <script src="js/linechart.js"></script> 
@@ -62,7 +62,35 @@
   </div>
   
   <!-- Your visualization here -->
+  <h1>United States Age Adjusted Heart Disease Rate in <span id="titleYear">1999</span></h1>
+  <label for="cars">Choose a year:</label>
 
+  <select name="years" id="years">
+    <option value="1999">1999</option>
+    <option value="2000">2000</option>
+    <option value="2001">2001</option>
+    <option value="2002">2002</option>
+    <option value="2003">2003</option>
+    <option value="2004">2004</option>
+    <option value="2005">2005</option>
+    <option value="2006">2006</option>
+    <option value="2007">2007</option>
+    <option value="2008">2008</option>
+    <option value="2009">2009</option>
+    <option value="2010">2010</option>
+    <option value="2011">2011</option>
+    <option value="2012">2012</option>
+    <option value="2013">2013</option>
+    <option value="2014">2014</option>
+    <option value="2015">2015</option>
+    <option value="2016">2016</option>
+    <option value="2017">2017</option>
+    <option value="2018">2018</option>
+    <option value="2019">2019</option>
+    <option value="2020">2020</option>
+    <option value="2021">2021</option>
+  </select>
+  <button id ="submit" type="button">Go!</button>
   <!-- Wrap the map and legend in a flex container -->
 <div class="vis-container" style="display: flex; align-items: center; justify-content: center; gap: 10px;">
   <!-- Map section -->
@@ -84,6 +112,8 @@
     </div>
   </div>
 </div>
+
+<h2>Age Adjustead Heart Disease Death Rate for <span id="state">State</span> in <span id="titleYear">1999</span></h2>
 <div class="linechart-holder" id="linechart"></div>
 
   <!-- Your writeup goes here -->
