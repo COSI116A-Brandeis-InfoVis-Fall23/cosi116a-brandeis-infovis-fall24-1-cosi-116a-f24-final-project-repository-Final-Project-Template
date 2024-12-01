@@ -1,0 +1,303 @@
+[
+  {
+    "Year": 2016,
+    "Mode": "CR",
+    "Fuel_Source": "Diesel",
+    "Miles_Traveled": 8486922
+  },
+  {
+    "Year": 2016,
+    "Mode": "DO",
+    "Fuel_Source": "Compressed Natural Gas",
+    "Miles_Traveled": 7801279
+  },
+  
+  {
+    "Year": 2016,
+    "Mode": "DR",
+    "Fuel_Source": "Gasoline",
+    "Miles_Traveled": 12928651
+  },
+  {
+    "Year": 2016,
+    "Mode": "FB",
+    "Fuel_Source": "Diesel",
+    "Miles_Traveled": 230426
+  },
+  {
+    "Year": 2016,
+    "Mode": "HR",
+    "Fuel_Source": "Electric Propulsion",
+    "Miles_Traveled": 23910785
+  },
+  {
+    "Year": 2016,
+    "Mode": "LR",
+    "Fuel_Source": "Electric Propulsion",
+    "Miles_Traveled": 6538302
+  },
+  {
+    "Year": 2016,
+    "Mode": "MB",
+    "Fuel_Source": "Diesel",
+    "Miles_Traveled": 17030651
+  },
+  {
+    "Year": 2016,
+    "Mode": "MB",
+    "Fuel_Source": "Other Fuel",
+    "Miles_Traveled": 297847
+  },
+  {
+    "Year": 2016,
+    "Mode": "MB",
+    "Fuel_Source": "Diesel",
+    "Miles_Traveled": 282828
+  },
+  {
+    "Year": 2016,
+    "Mode": "MB",
+    "Fuel_Source": "Gasoline",
+    "Miles_Traveled": 160707
+  },
+  {
+    "Year": 2017,
+    "Mode": "MB",
+    "Fuel_Source": "Other Fuel",
+    "Miles_Traveled": 144860
+  },
+  {
+    "Year": 2017,
+    "Mode": "MB",
+    "Fuel_Source": "Diesel",
+    "Miles_Traveled": 304021
+  },
+  {
+    "Year": 2017,
+    "Mode": "MB",
+    "Fuel_Source": "Gasoline",
+    "Miles_Traveled": 104495
+  },
+  {
+    "Year": 2017,
+    "Mode": "RB",
+    "Fuel_Source": "Diesel",
+    "Miles_Traveled": 178915
+  },
+  {
+    "Year": 2017,
+    "Mode": "RB",
+    "Fuel_Source": "Other Fuel",
+    "Miles_Traveled": 381007
+  },
+  {
+    "Year": 2017,
+    "Mode": "TB",
+    "Fuel_Source": "Electric Propulsion",
+    "Miles_Traveled": 436717
+  },
+  {
+    "Year": 2018,
+    "Mode": "CR",
+    "Fuel_Source": "Diesel",
+    "Miles_Traveled": 7234954
+  },
+  {
+    "Year": 2018,
+    "Mode": "DR",
+    "Fuel_Source": "Gasoline",
+    "Miles_Traveled": 12221854
+  },
+  {
+    "Year": 2018,
+    "Mode": "FB",
+    "Fuel_Source": "Diesel",
+    "Miles_Traveled": 191183
+  },
+  {
+    "Year": 2018,
+    "Mode": "HR",
+    "Fuel_Source": "Electric Propulsion",
+    "Miles_Traveled": 23880613
+  },
+  {
+    "Year": 2018,
+    "Mode": "LR",
+    "Fuel_Source": "Electric Propulsion",
+    "Miles_Traveled": 6202925
+  },
+  {
+    "Year": 2018,
+    "Mode": "MB",
+    "Fuel_Source": "Compressed Natural Gas",
+    "Miles_Traveled": 4396790
+  },
+  {
+    "Year": 2018,
+    "Mode": "MB",
+    "Fuel_Source": "Diesel",
+    "Miles_Traveled": 20363490
+  },
+  {
+    "Year": 2018,
+    "Mode": "MB",
+    "Fuel_Source": "Diesel",
+    "Miles_Traveled": 311808
+  },
+  {
+    "Year": 2018,
+    "Mode": "MB",
+    "Fuel_Source": "Gasoline",
+    "Miles_Traveled": 105974
+  },
+  {
+    "Year": 2018,
+    "Mode": "RB",
+    "Fuel_Source": "Diesel",
+    "Miles_Traveled": 370931
+  },
+  {
+    "Year": 2018,
+    "Mode": "RB",
+    "Fuel_Source": "Other Fuel",
+    "Miles_Traveled": 839893
+  },
+  {
+    "Year": 2018,
+    "Mode": "TB",
+    "Fuel_Source": "Electric Propulsion",
+    "Miles_Traveled": 613097
+  },
+  {
+    "Year": 2019,
+    "Mode": "CR",
+    "Fuel_Source": "Diesel",
+    "Miles_Traveled": 7667743
+  },
+  {
+    "Year": 2019,
+    "Mode": "DR",
+    "Fuel_Source": "Gasoline",
+    "Miles_Traveled": 16306583
+  },
+  {
+    "Year": 2016,
+    "Mode": "RB",
+    "Fuel_Source": "Diesel",
+    "Miles_Traveled": 376385
+  },
+  {
+    "Year": 2016,
+    "Mode": "RB",
+    "Fuel_Source": "Other Fuel",
+    "Miles_Traveled": 734646
+  },
+  {
+    "Year": 2016,
+    "Mode": "TB",
+    "Fuel_Source": "Electric Propulsion",
+    "Miles_Traveled": 267588
+  },
+  {
+    "Year": 2017,
+    "Mode": "CR",
+    "Fuel_Source": "Diesel",
+    "Miles_Traveled": 8010666
+  },
+  {
+    "Year": 2017,
+    "Mode": "DR",
+    "Fuel_Source": "Gasoline",
+    "Miles_Traveled": 13232478
+  },
+  {
+    "Year": 2017,
+    "Mode": "FB",
+    "Fuel_Source": "Diesel",
+    "Miles_Traveled": 231504
+  },
+  {
+    "Year": 2017,
+    "Mode": "HR",
+    "Fuel_Source": "Electric Propulsion",
+    "Miles_Traveled": 24234458
+  },
+  {
+    "Year": 2017,
+    "Mode": "LR",
+    "Fuel_Source": "Electric Propulsion",
+    "Miles_Traveled": 6163437
+  },
+  {
+    "Year": 2017,
+    "Mode": "MB",
+    "Fuel_Source": "Compressed Natural Gas",
+    "Miles_Traveled": 6675387
+  },
+  {
+    "Year": 2017,
+    "Mode": "MB",
+    "Fuel_Source": "Diesel",
+    "Miles_Traveled": 18934431
+  },
+  {
+    "Year": 2019,
+    "Mode": "FB",
+    "Fuel_Source": "Diesel",
+    "Miles_Traveled": 239955
+  },
+  {
+    "Year": 2019,
+    "Mode": "HR",
+    "Fuel_Source": "Electric Propulsion",
+    "Miles_Traveled": 23639631
+  },
+  {
+    "Year": 2019,
+    "Mode": "LR",
+    "Fuel_Source": "Electric Propulsion",
+    "Miles_Traveled": 5784446
+  },
+  {
+    "Year": 2019,
+    "Mode": "MB",
+    "Fuel_Source": "Compressed Natural Gas",
+    "Miles_Traveled": 4338409
+  },
+  {
+    "Year": 2019,
+    "Mode": "MB",
+    "Fuel_Source": "Diesel",
+    "Miles_Traveled": 20391374
+  },
+  {
+    "Year": 2019,
+    "Mode": "MB",
+    "Fuel_Source": "Diesel",
+    "Miles_Traveled": 291398
+  },
+  {
+    "Year": 2019,
+    "Mode": "MB",
+    "Fuel_Source": "Gasoline",
+    "Miles_Traveled": 102417
+  },
+  {
+    "Year": 2019,
+    "Mode": "RB",
+    "Fuel_Source": "Diesel",
+    "Miles_Traveled": 403276
+  },
+  {
+    "Year": 2019,
+    "Mode": "RB",
+    "Fuel_Source": "Other Fuel",
+    "Miles_Traveled": 1170837
+  },
+  {
+    "Year": 2019,
+    "Mode": "TB",
+    "Fuel_Source": "Electric Propulsion",
+    "Miles_Traveled": 582121
+  }
+]
