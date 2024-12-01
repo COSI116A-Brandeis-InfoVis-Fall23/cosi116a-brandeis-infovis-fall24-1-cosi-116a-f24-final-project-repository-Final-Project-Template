@@ -1,14 +1,13 @@
-// everything done with assitance from ChatGPT
-
 var map = d3.select("#map")
     .attr("width", 800) // Set your desired width
     .attr("height", 800); // Set your desired height
 
-    width = +map.attr("width"),
+var width = +map.attr("width"),
     height = +map.attr("height");
 
-// Append a <g> element to the SVG
-var g = map.append("g");
+// Append <g> elements for neighborhoods and LineString
+var gNeighborhoods = map.append("g").attr("class", "neighborhoods");
+var gLineString = map.append("g").attr("class", "linestrings");
 
 // Set up the projection and path generator
 var projection = d3.geoMercator()
@@ -18,67 +17,104 @@ var projection = d3.geoMercator()
 
 var path = d3.geoPath().projection(projection);
 
-// Load and render GeoJSON data
-d3.json("data/bostonV2.json", function(error, data) {
+// Load and render GeoJSON data for neighborhoods
+d3.json("data/bostonV2.json", function (error, data) {
     if (error) {
         console.error("Error loading GeoJSON:", error);
         return;
     }
-    // Draw map regions inside the <g> element
-    g.selectAll(".boston")
+
+    // Define a color for neighborhoods (static color or dynamic based on properties)
+    var neighborhoodColor = "#a3d1ff"; // Light blue for all neighborhoods
+
+    gNeighborhoods.selectAll(".neighborhood")
         .data(data.features)
-        .enter().append("path")
+        .enter()
+        .append("path")
         .attr("class", "neighborhood")
         .attr("d", path)
-        ;
-// Brush event handlers
-function brushed() {
-  // Use d3.event to access the event object in D3 v4
-  var selection = d3.event.selection;
-  if (!selection) return;
+        .style("fill", neighborhoodColor) // Apply the color here
+        .style("stroke", "#000") // Optional: Add a border color
+        .style("stroke-width", 0.5); // Optional: Set border thickness
 
-  var [[x0, y0], [x1, y1]] = selection;
+    // Add brush functionality (unchanged)
+    var brush = d3.brush()
+        .extent([[0, 0], [width, height]])
+        .on("brush", brushed)
+        .on("end", brushEnd);
 
-  // Array to store the names of selected neighborhoods
-  var selectedNeighborhoods = [];
+    map.append("g")
+        .attr("class", "brush")
+        .call(brush);
 
-  g.selectAll(".neighborhood").classed("highlighted", function (d) {
-      var centroid = path.centroid(d);
-      var [cx, cy] = centroid;
+    function brushed() {
+        var selection = d3.event.selection;
+        if (!selection) return;
 
-      // Check if the centroid is within the selection box
-      var isSelected = cx >= x0 && cx <= x1 && cy >= y0 && cy <= y1;
+        var [[x0, y0], [x1, y1]] = selection;
 
-      if (isSelected && d.properties && d.properties.name) {
-          selectedNeighborhoods.push(d.properties.name);
-      }
+        var selectedNeighborhoods = [];
 
-      return isSelected;
-  });
+        gNeighborhoods.selectAll(".neighborhood").classed("highlighted", function (d) {
+            var centroid = path.centroid(d);
+            var [cx, cy] = centroid;
 
-  // Display the selected neighborhood names
-  d3.select("#selected-neighborhoods").text(
-       (selectedNeighborhoods.length ? selectedNeighborhoods.join(", ") : "None")
-  );
-}
+            var isSelected = cx >= x0 && cx <= x1 && cy >= y0 && cy <= y1;
 
-function brushEnd() {
-  var selection = d3.event.selection;
+            if (isSelected && d.properties && d.properties.name) {
+                selectedNeighborhoods.push(d.properties.name);
+            }
 
-  // Clear highlights and selection display if brush is removed
-  if (!selection) {
-      g.selectAll(".neighborhood").classed("highlighted", false);
-      d3.select("#selected-neighborhoods").text("None");
-  }
-}
+            return isSelected;
+        });
 
-// Add brush functionality
-var brush = d3.brush()
-  .extent([[0, 0], [width, height]]) // Match the SVG dimensions
-  .on("brush", brushed)
-  .on("end", brushEnd);
+        d3.select("#selected-neighborhoods").text(
+            selectedNeighborhoods.length ? selectedNeighborhoods.join(", ") : "None"
+        );
+    }
 
-map.append("g")
-  .attr("class", "brush")
-  .call(brush);
+    function brushEnd() {
+        var selection = d3.event.selection;
+
+        if (!selection) {
+            gNeighborhoods.selectAll(".neighborhood").classed("highlighted", false);
+            d3.select("#selected-neighborhoods").text("None");
+        }
+    }
+});
+// https://github.com/singingwolfboy/MBTA-GeoJSON source of json data
+// Load and render GeoJSON data for LineString
+d3.json("data/routes.json", function (error, lineData) {
+    if (error) {
+        console.error("Error loading LineString GeoJSON:", error);
+        return;
+    }
+
+    var customColors = {
+      "red": "#ff0000", // Red
+      "green-d": "#33ff57", // Green
+      "green-c": "#33ff57", // green
+      "green-b": "#33ff57", // green
+      "green-e": "#33ff57", // green
+      "blue": "#3357ff", // Blue
+      "orange": "#ffa533",  // Orange
+      "sl1": "#C0C0C0", // Silver
+      "sl2": "#C0C0C0", // Silver
+      "sl3": "#C0C0C0", // Silver
+      "sl4": "#C0C0C0", // Silver
+      "sl5": "#C0C0C0" // Silver
+  };
+    // Filter features to include only those with IDs in customColors
+    var filteredFeatures = lineData.features.filter(d => customColors[d.properties.id]);
+
+    // Draw LineStrings
+    gLineString.selectAll(".linestring")
+        .data(filteredFeatures) // Use the filtered features
+        .enter()
+        .append("path")
+        .attr("class", "linestring")
+        .attr("d", path)
+        .style("fill", "none") // Ensure LineString is not filled
+        .style("stroke", d => customColors[d.properties.id]) // Assign color from customColors
+        .style("stroke-width", 2); // Set stroke width
 });

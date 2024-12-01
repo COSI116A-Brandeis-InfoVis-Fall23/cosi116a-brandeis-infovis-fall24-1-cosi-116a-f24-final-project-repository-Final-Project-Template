@@ -1052,7 +1052,27 @@
           [
             -71.063229,
             42.284219
-          ],
+          ]
+        ]
+      },
+      "type": "Feature",
+      "properties": {
+        "directions": [
+          "I",
+          "O"
+        ],
+        "id": "red",
+        "stops": [
+          "to be determined"
+        ],
+        "name": "Ashmont (B)"
+      }
+    },
+    {
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          
           [
             -71.142449,
             42.395261
