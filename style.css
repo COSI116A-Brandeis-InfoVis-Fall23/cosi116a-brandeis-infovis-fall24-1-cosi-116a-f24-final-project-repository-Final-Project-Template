@@ -44,6 +44,14 @@ h1, h2, h3 {
 	height: 80%;
 
 }
+
+#button-container {
+	display: flex;
+	justify-content: center; /* Centers horizontally */
+    align-items: center;     /* Centers vertically */
+	height: 30px;
+}
+
 svg {
 	background-color: #eef;
 }
