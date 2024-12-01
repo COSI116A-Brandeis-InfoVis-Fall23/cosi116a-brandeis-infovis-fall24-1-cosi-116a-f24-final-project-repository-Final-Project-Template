@@ -182,8 +182,7 @@ function scatterplot() {
           currentCount ++;
         }
         let currentHeight = 30 + (40 * currentCount); //Updates tooltip height
-        const x = d3.event.pageX;  // Page coordinates
-        const y = d3.event.pageY;  // Page coordinates
+
         
         if (currentCount < 2) {
           currentCount = 0;
@@ -193,20 +192,19 @@ function scatterplot() {
           .style("opacity", 1)
           .style("visibility", "visible")
           .style("height", currentHeight +"px")
-          .style("left", `${x - containerBounds.left + 10}px`) // Adjust relative to the container
-          .style("top", `${y - containerBounds.top  + (65 -(currentCount * 20))}px`) // Adjust relative to the container
+          .style("left", `${d3.event.pageX - containerBounds.left + 10}px`) // Adjust relative to the container
+          .style("top", `${d3.event.pageY - (containerBounds.top - (250 -( currentCount * 20)))}px`) // Adjust relative to the container
           .html(tooltipContent);  // Display the tooltip content
       })
       .on("mousemove", function () {
-        const x = d3.event.pageX;  // Page coordinates
-        const y = d3.event.pageY;  // Page coordinates
+
 
 
         tooltip
           .style("opacity", 1)
           .style("visibility", "visible")
-          .style("left", `${x - containerBounds.left + 10}px`) // Adjust relative to the container
-          .style("top", `${y - containerBounds.top  + (65 -(currentCount *20))}px`) // Adjust relative to the container
+          .style("left", `${d3.event.pageX - containerBounds.left + 10}px`) // Adjust relative to the container
+          .style("top", `${d3.event.pageY - (containerBounds.top - (250 - (currentCount * 20)))}px`) // Adjust relative to the container
       })
       .on("mouseout", function () {
         d3.select(this).classed("mouseover", false);
