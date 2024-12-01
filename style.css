@@ -105,3 +105,9 @@ path.mouseover{
 	height: 500px;
 }
 }
+
+#figmaVisSketch{
+	width: 600px; /* Set the width of the image */
+	height: 400px;/* Set the height of the image */
+}
+
