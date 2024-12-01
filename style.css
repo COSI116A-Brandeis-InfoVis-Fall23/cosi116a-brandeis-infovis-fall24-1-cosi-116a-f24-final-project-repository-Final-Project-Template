@@ -48,18 +48,12 @@ svg {
 	background-color: #eef;
 }
 .neighborhood {
-	fill: #ccc;
+	fill: #ffffff;
 	stroke: #333;
 	stroke-width: 0.5px;
 	transition: fill 0.3s ease;
 }
 
-/* Highlighted color on hover */
-.hovered {
-    fill: #ffbb47; /* Change to a different color when hovered */
-    stroke: #000000;
-    stroke-width: 2;
-}
 
 .highlighted {
     fill: #ff6347;  /* A reddish color to highlight */

@@ -7,7 +7,7 @@ var width = +map.attr("width"),
 
 // Append <g> elements for neighborhoods and LineString
 var gNeighborhoods = map.append("g").attr("class", "neighborhoods");
-var gLineString = map.append("g").attr("class", "linestrings");
+
 
 // Set up the projection and path generator
 var projection = d3.geoMercator()
@@ -23,17 +23,12 @@ d3.json("data/bostonV2.json", function (error, data) {
         console.error("Error loading GeoJSON:", error);
         return;
     }
-
-    // Define a color for neighborhoods (static color or dynamic based on properties)
-    var neighborhoodColor = "#a3d1ff"; // Light blue for all neighborhoods
-
     gNeighborhoods.selectAll(".neighborhood")
         .data(data.features)
         .enter()
         .append("path")
         .attr("class", "neighborhood")
         .attr("d", path)
-        .style("fill", neighborhoodColor) // Apply the color here
         .style("stroke", "#000") // Optional: Add a border color
         .style("stroke-width", 0.5); // Optional: Set border thickness
 
@@ -82,16 +77,18 @@ d3.json("data/bostonV2.json", function (error, data) {
         }
     }
 });
-// https://github.com/singingwolfboy/MBTA-GeoJSON source of json data
+
+var gLineString = map.append("g").attr("class", "lines");
+// https://github.com/singingwolfboy/MBTA-GeoJSON source of json data for stops and lines
 // Load and render GeoJSON data for LineString
 d3.json("data/routes.json", function (error, lineData) {
     if (error) {
         console.error("Error loading LineString GeoJSON:", error);
         return;
     }
-
     var customColors = {
       "red": "#ff0000", // Red
+      "mattapan": "#ff0000", // Red
       "green-d": "#33ff57", // Green
       "green-c": "#33ff57", // green
       "green-b": "#33ff57", // green
@@ -117,4 +114,53 @@ d3.json("data/routes.json", function (error, lineData) {
         .style("fill", "none") // Ensure LineString is not filled
         .style("stroke", d => customColors[d.properties.id]) // Assign color from customColors
         .style("stroke-width", 2); // Set stroke width
+});
+// Button to toggle lines visibility
+d3.select("#toggle-lines-button").on("click", function () {
+    var linesVisible = gLineString.style("display") !== "none";
+    gLineString.style("display", linesVisible ? "none" : "block");
+});
+
+// Define the color scale for points based on the 'category' property (or another property)
+var colorScale = d3.scaleOrdinal()
+    .domain(["green", "red", "blue",'orange','silver','mattapan', "green-e",
+        "green-d",]) // The categories or properties you want to map
+    .range(["#33ff57", "#ff0000", "#3357ff",'#ffa533','#C0C0C0','#ff0000',"#33ff57","#33ff57"]); // Assign colors for each category
+
+// Create a new group for points and set it to be hidden initially
+var gPoints = map.append("g").attr("class", "points").style("display", "none");
+
+d3.json("data/stops.json", function (error, pointData) {
+    if (error) {
+        console.error("Error loading point data:", error);
+        return;
+    }
+
+    // Render points (circles) and color them based on the 'category' property
+    gPoints.selectAll(".point")
+        .data(pointData.features)
+        .enter()
+        .append("circle")
+        .attr("class", "point")
+        .attr("cx", function (d) {
+            var coords = projection(d.geometry.coordinates);
+            return coords[0]; // Longitude to x position
+        })
+        .attr("cy", function (d) {
+            var coords = projection(d.geometry.coordinates);
+            return coords[1]; // Latitude to y position
+        })
+        .attr("r", 5) // Set radius of the point
+        .style("fill", function(d) {
+            var lineType = d.properties.lines[0];
+            return colorScale(lineType); // Color scale based on the 'category' property
+        })
+        .style("stroke", "#ffffff") // Optional: Add a stroke around the point
+        .style("stroke-width", 1);
+});
+
+// Button to toggle points visibility
+d3.select("#toggle-points-button").on("click", function () {
+    var pointsVisible = gPoints.style("display") !== "none";
+    gPoints.style("display", pointsVisible ? "none" : "block");
 });
