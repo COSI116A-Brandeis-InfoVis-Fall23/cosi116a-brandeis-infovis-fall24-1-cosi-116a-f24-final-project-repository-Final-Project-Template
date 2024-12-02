@@ -27,6 +27,16 @@
   });
 console.log(data);
 
+const scatterData = Object.entries(rates["1999"]).map(([state, value], index) => ({
+  state,
+  x: value, // The numerical value for x-axis
+  y: Math.random() * 10 //random val, placeholder
+}));
+
+console.log("test")
+console.log(scatterData);
+
+
 // Create and render the line chart
 let lcHeartDisease = linechart()
   .x(d => d.year)
@@ -41,13 +51,13 @@ lcHeartDisease("#linechart", data);
     // a dispatcher (d3-dispatch) for selection events; 
     // a div id selector to put our svg in; and the data to use.
 let scHeartDisease = scatterplot()
-    .x(d => d.value)
+    .x(d => d.x)
     // .xLabel("Age-Adjusted Heart Disease Death Rate in 1999")
-    .y(d => d.value) //this needs to change to the other data set. currently its using the same data for x and y axis
+    .y(d => d.y) //this needs to change to the other data set. currently its using the same data for x and y axis
     // .yLabel("Life Expectancy per State in 1999")
     .yLabelOffset(150)
     
-scHeartDisease("#scatterplot", data);
+scHeartDisease("#scatterplot", scatterData);
 
 })
 
