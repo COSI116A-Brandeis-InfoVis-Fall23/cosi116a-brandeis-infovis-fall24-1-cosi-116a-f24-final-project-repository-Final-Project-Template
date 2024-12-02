@@ -85,11 +85,12 @@ d3.csv("data/neighborhood_ridership.csv", function (error, data) {
         .style("display", "none")
         .style("pointer-events", "none");
 
-    svg.selectAll("rect")
+        svg.selectAll("rect")
         .on("mouseover", (event, d) => {
             tooltip
                 .html(`Neighborhood: <strong>${event.Neighborhood}</strong><br>Ridership: <strong>${event.gated_entries.toLocaleString()}</strong>`)
                 .style("display", "block");
+                console.log("Tooltip HTML updated", tooltip.node()); // Debug tooltip element
         })
         .on("mousemove", (event) => {
             const tooltipWidth = tooltip.node().offsetWidth;
@@ -98,7 +99,10 @@ d3.csv("data/neighborhood_ridership.csv", function (error, data) {
             const top = Math.min(event.pageY - 20, window.innerHeight - tooltipHeight - 10);
             tooltip.style("left", `${left}px`).style("top", `${top}px`);
         })
-        .on("mouseout", () => tooltip.style("display", "none"));
+        .on("mouseout", () => {
+            tooltip.style("display", "none");
+            console.log("Tooltip hidden"); // Debugging
+        });
 
     // Add X-axis label
     svg.append("text")
