@@ -52,7 +52,7 @@ h1, h2, h3 {
 	border: 1px solid #ccc;
 	border-radius: 5px;
 	width: 160px;
-	color: black;
+	color: rgb(255, 255, 255);
 	height: 30px;
 	font-size: 12px;
 	text-decoration-color: white;
