@@ -30,15 +30,24 @@ console.log(data);
 // Create and render the line chart
 let lcHeartDisease = linechart()
   .x(d => d.year)
-  .xLabel("Year")
+  // .xLabel("Year")
   .y(d => d.value)
-  .yLabel("Age-Adjusted Heart Disease Death Rate")
+  // .yLabel("Age-Adjusted Heart Disease Death Rate")
   .yLabelOffset(40)
 
 lcHeartDisease("#linechart", data);
-}).catch((error) => {
-  console.error("Error loading the JSON file:", error);
 
-});
+    // Create a scatterplot given x and y attributes, labels, offsets; 
+    // a dispatcher (d3-dispatch) for selection events; 
+    // a div id selector to put our svg in; and the data to use.
+let scHeartDisease = scatterplot()
+    .x(d => d.value)
+    // .xLabel("Age-Adjusted Heart Disease Death Rate in 1999")
+    .y(d => d.value) //this needs to change to the other data set. currently its using the same data for x and y axis
+    // .yLabel("Life Expectancy per State in 1999")
+    .yLabelOffset(150)
+    
+scHeartDisease("#scatterplot", data);
+})
 
 })());

@@ -100,14 +100,26 @@ path.mouseover{
 .linechart-holder {
 	flex: 0 0 50%;
   }
+
+  /* The scatterplot will take the right half of the screen */
+.scatterplot-holder {
+	flex: 1;  
+  }
+
  #linechart {
 	width: 100%;
 	height: 500px;
 }
+
+#scatterplot {
+	width: 100%;
+	height: 500px;
 }
+
 
 #figmaVisSketch{
 	width: 600px; /* Set the width of the image */
 	height: 400px;/* Set the height of the image */
+}
 }
 
