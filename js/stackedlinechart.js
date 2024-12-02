@@ -2,7 +2,7 @@ function drawStackedLineChart(selector, data, dispatcher) {
     const margin = { top: 40, right: 450, bottom: 30, left: 70 },
         width = (window.innerWidth * 0.8) - margin.left - margin.right,
         height = 500 - margin.top - margin.bottom;
-
+    let selectedCategories = [];
     let svg = d3.select(selector).select("svg");
     if (svg.empty()) {
         // Create the SVG element if it doesn't exist
@@ -77,7 +77,21 @@ function drawStackedLineChart(selector, data, dispatcher) {
                 .attr("y", 9)
                 .attr("dy", ".35em")
                 .text(d);
+
+            legendItem.on("click", function() {
+            const category = d;
+            // Toggle category selection
+            if (selectedCategories.includes(category)) {
+                selectedCategories = selectedCategories.filter(c => c !== category);
+            } else {
+                selectedCategories.push(category);
+            }
+            // Update legend item appearance
+            d3.select(this).classed("selected", selectedCategories.includes(category));
+            // Dispatch selection with both selected years and categories
+            dispatcher.call("selectionUpdated", this, { selectedYears: [], selectedCategories: selectedCategories });
         });
+    });
 
     // Axes
     svg.append("g")
@@ -189,10 +203,30 @@ function drawStackedLineChart(selector, data, dispatcher) {
             });
 
             // Update dispatcher with selected years
-            dispatcher.call("selectionUpdated", this, selectedYears);
+            dispatcher.call("selectionUpdated", this, { selectedYears: selectedYears, selectedCategories: selectedCategories });
+
         } else {
             // Clear selection
-            dispatcher.call("selectionUpdated", this, []);
+            dispatcher.call("selectionUpdated", this, { selectedYears: [], selectedCategories: selectedCategories });
         }
     }
+
+    function updateSelection(selection) {
+        // Highlight the selected years
+        const selectedYears = selection.selectedYears || [];
+        const selectedCategories = selection.selectedCategories || [];
+        svg.selectAll(".layer")
+        .style("opacity", function(d) {
+            const category = d.key.trim();
+            if (selectedCategories.length === 0) {
+                return 1;
+            } else {
+                return selectedCategories.includes(category) ? 1 : 0.2;
+            }
+        });
+    }
+
+    return {
+        updateSelection: updateSelection
+    };
 }

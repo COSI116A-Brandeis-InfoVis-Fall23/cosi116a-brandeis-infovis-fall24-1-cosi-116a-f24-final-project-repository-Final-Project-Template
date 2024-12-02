@@ -48,10 +48,12 @@ function drawTable(selector, data, dispatcher) {
 
         // Append cells to rows
         rowsEnter.selectAll("td")
-            .data(d => headers.map(key => d[key]))
-            .enter()
-            .append("td")
-            .text(d => (typeof d === "number" ? d.toFixed(2) : d));
+        .data(d => headers.map(key => ({ key: key, value: d[key] })))
+        .enter()
+        .append("td")
+        .attr("data-category", d => d.key)
+        .text(d => (typeof d.value === "number" ? d.value.toFixed(2) : d.value));
+
 
         // Update rows with new data
         rowsEnter.merge(rows);
@@ -88,76 +90,35 @@ function drawTable(selector, data, dispatcher) {
         const selectedData = tbody.selectAll(".selected").data();
         dispatcher.call("selectionUpdated", this, selectedData);
     }
-
-
-    // Listen for dispatcher updates and filter data
-    dispatcher.on("selectionUpdated", selectedYears => {
-        const filteredData = data.filter(d => selectedYears.includes(d.year));
-        updateTable(filteredData);
-    });
-
-    // Dispatcher listener for linking
-    dispatcher.on("selectionUpdated", function (selectedData) {
-        tbody.selectAll("tr").classed("selected", d => selectedData.includes(d));
-    });
-
-    // Mouse and touch zoom functionality
-    let zoomLevel = 1;
-    const zoomStep = 0.1;
-    const maxZoom = 2; // Maximum zoom level
-    const minZoom = 0.5; // Minimum zoom level
-
-    function adjustZoom(delta) {
-        // Adjust zoom level within the limits
-        zoomLevel = Math.min(maxZoom, Math.max(minZoom, zoomLevel + delta));
-        container.style("transform", `scale(${zoomLevel})`);
-    }
-
-    // Mouse wheel zoom
-    container.on("wheel", event => {
-        event.preventDefault(); // Prevent default scroll behavior
-        const delta = event.deltaY < 0 ? zoomStep : -zoomStep; // Zoom in or out
-        adjustZoom(delta);
-    });
-
-    // Touch gesture zoom (pinch zoom)
-    let initialPinchDistance = null;
-
-    container.on("touchstart", event => {
-        if (event.touches.length === 2) {
-            // Two-finger touch for pinch zoom
-            const touch1 = event.touches[0];
-            const touch2 = event.touches[1];
-            initialPinchDistance = Math.hypot(
-                touch2.clientX - touch1.clientX,
-                touch2.clientY - touch1.clientY
-            );
-        }
-    });
-
-    container.on("touchmove", event => {
-        if (event.touches.length === 2 && initialPinchDistance) {
-            // Two-finger touch movement
-            const touch1 = event.touches[0];
-            const touch2 = event.touches[1];
-            const currentPinchDistance = Math.hypot(
-                touch2.clientX - touch1.clientX,
-                touch2.clientY - touch1.clientY
-            );
-
-            // Calculate zoom delta based on pinch movement
-            const delta = (currentPinchDistance - initialPinchDistance) * 0.001; // Adjust sensitivity
-            adjustZoom(delta);
-            initialPinchDistance = currentPinchDistance; // Update the distance
-        }
-    });
-
-    container.on("touchend", () => {
-        // Reset initial pinch distance when fingers are lifted
-        initialPinchDistance = null;
+    dispatcher.on("selectionUpdated.table", function (selection) {
+        const selectedYears = selection.selectedYears || [];
+        const selectedCategories = selection.selectedCategories || [];
+    
+        // Update row highlighting based on selected years
+        tbody.selectAll("tr").classed("selected", d => selectedYears.includes(d.year));
+    
+        // Update cell highlighting based on selected categories
+        tbody.selectAll("tr").selectAll("td")
+            .classed("selected", function(d, i) {
+                const category = headers[i];
+                return selectedCategories.includes(category);
+            });
     });
 
     return {
-        updateSelection: updateTable // Expose for external use
+        updateSelection: function(selection) {
+            const selectedYears = selection.selectedYears || [];
+            const selectedCategories = selection.selectedCategories || [];
+    
+            // Update row highlighting
+            tbody.selectAll("tr").classed("selected", d => selectedYears.includes(d.year));
+    
+            // Update cell highlighting
+            tbody.selectAll("tr").selectAll("td")
+                .classed("selected", function(d, i) {
+                    const category = headers[i];
+                    return selectedCategories.includes(category);
+                });
+        }
     };
 }

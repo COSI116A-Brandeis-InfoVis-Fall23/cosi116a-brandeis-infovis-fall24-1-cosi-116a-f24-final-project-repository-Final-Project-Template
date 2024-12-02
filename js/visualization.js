@@ -80,7 +80,7 @@
             .xLabel("YEAR")
             .yLabel("Federal Expenditure (% of Total)")
             .title("Percentage of Federal Spending Categories from 1964 to 2017")
-            .selectionDispatcher(d3.dispatch(dispatcherString)) // Keep dispatcher
+            .selectionDispatcher(dispatcher) // Keep dispatcher
             ("#stacked-linechart", data);
 
         // Add a title to the table
@@ -93,16 +93,16 @@
         // Initialize the table
         let table = drawTable("#tablet", data, dispatcher); // Pass dispatcher
 
-        dispatcher.on(dispatcherString, function (selectedData) {
-            if (selectedData.every(d => typeof d === "number")) {
-                // Selection is an array of years
-                const filteredData = data.filter(d => selectedData.includes(d.year));
-                table.updateSelection(filteredData); // Update the table
-            } else {
-                // Selection is an array of objects (rows)
-                const selectedYears = selectedData.map(d => d.year);
-                stackedChart.updateSelection(selectedYears); // Update the chart
-            }
+        // visualization.js
+        dispatcher.on(dispatcherString, function (selection) {
+            const selectedYears = selection.selectedYears || [];
+            const selectedCategories = selection.selectedCategories || [];
+        
+            // Update the stacked chart
+            stackedChart.updateSelection(selection);
+        
+            // Update the table
+            table.updateSelection(selection);
         });
     });
 })();

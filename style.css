@@ -99,3 +99,16 @@ h1, h2, h3 {
     width: 100%;
     height: 500px;
 }
+
+tr.selected {
+    background-color: #ffff99; /* Highlight color for selected rows */
+}
+
+td.selected {
+    background-color: #cce5ff; /* Highlight color for selected cells */
+}
+
+.legend-item.selected rect {
+    stroke: black;
+    stroke-width: 2px;
+}
