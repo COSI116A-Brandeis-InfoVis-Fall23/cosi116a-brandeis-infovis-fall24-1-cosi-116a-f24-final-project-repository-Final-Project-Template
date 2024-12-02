@@ -141,5 +141,19 @@ svg {
 		-o-transform:rotate(45deg);
 		box-shadow:4px 4px 10px rgba(0,0,0,0.8);
 	}
+
+	#interactive-chart {
+		margin: 20px auto;
+		text-align: center;
+	}
+	
+	.tooltip {
+		position: absolute;
+		background: white;
+		border: 1px solid #ddd;
+		padding: 5px;
+		font-size: 12px;
+		pointer-events: none;
+	}
 	
 }
