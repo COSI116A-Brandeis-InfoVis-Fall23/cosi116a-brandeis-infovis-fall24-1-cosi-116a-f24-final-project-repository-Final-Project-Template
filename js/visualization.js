@@ -48,8 +48,6 @@
         .selectionDispatcher(d3.dispatch(dispatchString))
         ("#table", data);
 
-  
-
         console.log(data);
       });
 
