@@ -103,40 +103,51 @@ function countryBarGraphs() {
         // Hover events
         infoGroup.on("mouseover", function (d) {
             d3.select(this).classed("mouseover", true);
-            let currentCount = 0; 
+            let currentHeight = 0; 
+            let currentWidth = 0;
             let tooltipContent = '';
             if(xValue == 'd => d.quality'){
-                tooltipContent = "WEF Global Competitiveness Index for rail quality, measured on a scale of 1-7 in 2019."+
+                tooltipContent = "WEF Global Competitiveness Index for rail quality, measured on a scale of 1-7 in 2019. "+
                 "Respondants to a survey report 1 for poor quality and 7 for amongst the best quality.";
-
+                currentHeight = 55;
+                currentWidth = 360;
             }else if(xValue == 'd => d.access'){
-                tooltipContent = "Share of the urban population who can access a public transport stop within"+
-                "a walking distance of 500 meters (for low-capacity public transport systems) or 1000 meters"+ 
+                tooltipContent = "Share of the urban population who can access a public transport stop within "+
+                "a walking distance of 500 meters (for low-capacity public transport systems) or 1000 meters "+ 
                 "(for high-capacity public transport systems) in the year 2020.";
+                currentHeight = 68;
+                currentWidth = 365;
             }else if(xValue == 'd => d.density'){
-                tooltipContent = "Density of the rail system measured in kilometers of rail per 100 square kilometer."+
-                 " Measured in the year 2021";
+                tooltipContent = "Density of the rail system measured in kilometers of rail per 100 square kilometers."+
+                 " Measured in the year 2021.";
+                 currentHeight = 40;
+                 currentWidth = 360;
             }
             else if(xValue == 'd => d.infrastructureInvestment'){
-                tooltipContent = "Investment in Rail Infrastructure in 2021 per country.";
+                tooltipContent = "Investment in rail infrastructure in 2021 per country.";
+                currentHeight = 20;
+                currentWidth = 300;
             }
             else if(xValue == 'd => d.railUsageTotalPassengers2022 / d.population'){
                 tooltipContent = "Usage of rail systems per country in 2022 measured in total passengers per capita, "+
-                "or total passengers divided by the population in order to keep measures proporitional to population";
+                "or total passengers divided by the population in order to keep measures proporitional to population.";
+                currentHeight = 55;
+                currentWidth = 390;
             }
             else{
                 tooltipContent = "<strong>Country:</strong>" + xValue+ " " + `<br><strong>Population: </strong>`;
 
             }
             
-            currentCount ++;
-            let currentHeight = 30 + (40 * currentCount); //Updates tooltip height
+
+
     
     
             tooltip
               .style("opacity", 1)
               .style("visibility", "visible")
               .style("height", currentHeight +"px")
+              .style("width", currentWidth + "px")
               .html(tooltipContent);  // Display the tooltip content
           })
           .on("mousemove", function () {
