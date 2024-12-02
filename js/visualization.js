@@ -42,8 +42,15 @@
         */
 
 
-      d3.csv("/data/Data.csv", function(data){
+      d3.csv("/data/Data.csv", (data) => {
 
+        let tableData = table()
+        .selectionDispatcher(d3.dispatch(dispatchString))
+        ("#table", data);
+
+  
+
+        console.log(data);
       });
 
 
