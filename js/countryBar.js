@@ -17,9 +17,20 @@ function countryBar() {
         // Clear previous chart elements to avoid overlap when a new country is selected
         chartGroup.selectAll("*").remove();
 
+        // If the country data is not available, display a message and return
+        if (!data || data.length === 0) {
+            chartGroup.append("text")
+                .attr("x", width / 2)
+                .attr("y", height / 2)
+                .attr("text-anchor", "middle")
+                .attr("dy", ".35em")
+                .text("No maintenance data available")
+            return;
+        }
+
         // Assuming data is an array with one element for the selected country
         const countryData = data[0];  // Only using the first data element as we are displaying data for a single country
-
+        
         // Calculate the maintenance percentage
         const maintenancePercentage = countryData.infrastructureMaintenance / countryData.infrastructureInvestment;
         const otherPercentage = 1 - maintenancePercentage;

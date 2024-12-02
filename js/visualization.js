@@ -41,6 +41,7 @@
       barGraphQuality.updateSelection(selectedData);
       barGraphDensity.updateSelection(selectedData);
     });
+
     barGraphAccess.selectionDispatcher().on(dispatchString, (selectedData) => {
       scatter.updateSelection(selectedData);
       barGraph1.updateSelection(selectedData);
@@ -48,6 +49,7 @@
       barGraphQuality.updateSelection(selectedData);
       barGraphDensity.updateSelection(selectedData);
     });
+
     barGraphQuality.selectionDispatcher().on(dispatchString, (selectedData) => {
       scatter.updateSelection(selectedData);
       barGraph1.updateSelection(selectedData);
@@ -55,13 +57,13 @@
       barGraphAccess.updateSelection(selectedData);
       barGraphDensity.updateSelection(selectedData);
     });
+
     barGraphDensity.selectionDispatcher().on(dispatchString, (selectedData) => {
       scatter.updateSelection(selectedData);
       barGraph1.updateSelection(selectedData);
       barGraph2.updateSelection(selectedData);
       barGraphAccess.updateSelection(selectedData);
       barGraphQuality.updateSelection(selectedData);
-      
     });
 
     // When clicking on a scatterplot point, update the countryBar.js bar and countryBarGraphs.js bar charts
