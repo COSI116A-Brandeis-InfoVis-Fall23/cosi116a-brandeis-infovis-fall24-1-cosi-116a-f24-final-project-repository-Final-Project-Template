@@ -1,8 +1,7 @@
 function scatterplot() {
-  const colorScale = d3.scaleOrdinal(d3.schemeCategory10);
   let margin = { top: 60, left: 50, right: 30, bottom: 50 },
     width = 750 - margin.left - margin.right,
-    height = 500 - margin.top - margin.bottom,
+    height = 600 - margin.top - margin.bottom,
     xValue = d => d[0],
     yValue = d => d[1],
     xLabelText = "",
@@ -14,8 +13,7 @@ function scatterplot() {
     selectableElements = d3.select(null),
     dispatcher = d3.dispatch("selectionUpdated", "countrySelected");
 
-  let isBrushing = false; // Track if brushing is happening
-  let selectedCountry = null; // Track the selected country for the bar
+  let selectedCountry = null;
 
   function chart(selector, data) {
 
@@ -26,7 +24,7 @@ function scatterplot() {
     const tooltip = d3.select("body")
       .append("div")
       .attr("class", "tooltip");
- 
+
     let svg = d3.select(selector)
       .append("svg")
       .attr("preserveAspectRatio", "xMidYMid meet")
@@ -35,24 +33,21 @@ function scatterplot() {
 
     svg = svg.append("g")
       .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
-    
+
     // Define scales
     xScale.domain([d3.min(data, d => xValue(d)), d3.max(data, d => xValue(d))]).rangeRound([0, width]);
     yScale.domain([d3.min(data, d => yValue(d)), d3.max(data, d => yValue(d))]).rangeRound([height, 0]);
     sizeScale.domain([0, d3.max(data, d => d.population)]).range([5, 20]);
 
-
     let xAxis = svg.append("g")
       .attr("transform", "translate(0," + height + ")")
       .call(d3.axisBottom(xScale).ticks(5));
-
 
     xAxis.append("text")
       .attr("class", "axisLabel")
       .attr("transform", "translate(" + (width / 2) + ", 40)")
       .style("text-anchor", "middle")
       .text(xLabelText);
-
 
     let yAxis = svg.append("g")
       .call(d3.axisLeft(yScale))
@@ -166,7 +161,7 @@ function scatterplot() {
       .attr("cx", X)
       .attr("cy", Y)
       .attr("r", d => sizeScale(d.population))
-      .attr("fill", d => colorScale(d.country))
+      .attr("fill", d => "steelblue")
       .on("mouseover", function (d) {
         d3.select(this).classed("mouseover", true);
         let currentCount = 0; //Used to dynamically update tooltip height to match the data per country  
@@ -226,6 +221,63 @@ function scatterplot() {
         updateBar();
 
       });
+
+      // Add labels
+      let labels = svg.append("g")
+      .selectAll(".scatterLabel")
+      .data(data);
+
+      labels.exit().remove();
+
+      labels = labels.enter()
+      .append("text")
+      .attr("class", "scatterLabel")
+      .merge(labels)
+      .attr("x", X)
+      .attr("y", Y)
+      .attr("dy", -20) 
+      .attr("dx", 27) 
+      .attr("text-anchor", "middle")
+      .style("font-size", "10px")
+      .style("fill", "black")
+      .text(d => d.country);
+
+      // Add lines
+      let lines = svg.append("g")
+      .selectAll(".labelLine")
+      .data(data);
+
+      lines.exit().remove();
+
+      lines = lines.enter()
+      .append("line")
+      .attr("class", "labelLine")
+      .merge(lines)
+      .attr("x1", X)
+      .attr("y1", Y)
+      .attr("x2", X)
+      .attr("y2", Y)
+      .style("stroke", "black")
+      .style("stroke-width", 1)
+      .style("opacity", 0.4);
+
+      // Apply force simulation to avoid overlapping labels
+      d3.forceSimulation(data)
+      .force("x", d3.forceX(d => X(d)).strength(1))
+      .force("y", d3.forceY(d => Y(d)).strength(1))
+      .force("collide", d3.forceCollide(32)) // Adjust the radius as needed
+      .on("tick", () => {
+        labels
+          .attr("x", (d, i) => data[i].x)
+          .attr("y", (d, i) => data[i].y);
+
+        lines
+          .attr("x1", (d, i) => X(d))
+          .attr("y1", (d, i) => Y(d))
+          .attr("x2", (d, i) => data[i].x + 20 + 7) // Adjust for dx
+          .attr("y2", (d, i) => data[i].y - 20 + 5); // Adjust for dy
+      });
+
       
       appendLegend(svg, data, sizeScale);
       
@@ -236,7 +288,7 @@ function scatterplot() {
           .attr("transform",  "translate(" + (width + margin.right - 100) + ",30)");
         
         legend.append("text")
-          .attr("x", -60)
+          .attr("x", -70)
           .attr("y", -25)
           .attr("class", "legendTitle")
           .style("fill", "black")
@@ -321,7 +373,6 @@ function scatterplot() {
 
     return chart;
   }
-
 
   // Setters and getters for chart configuration
   chart.margin = function (_) {

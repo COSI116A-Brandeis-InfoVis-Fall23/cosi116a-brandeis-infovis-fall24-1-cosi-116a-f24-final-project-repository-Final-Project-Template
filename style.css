@@ -31,10 +31,46 @@ h1, h2, h3 {
 
 .vis-container {
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
+  justify-content: center; /* Center horizontally */
   align-items: center; /* Center vertically */
   width: 100%;
   height: 100%;
+}
+
+.scatter_bar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+.bar-graph {
+	width: 100%; 
+	height: 100%; 
+}
+
+.bar-button-container button {
+	background-color: #f0f0f0;
+	border: 1px solid #ccc;
+	border-radius: 5px;
+	padding: 10px 20px;
+	margin: 5px;
+	cursor: pointer;
+	font-size: 16px;
+	transition: background-color 0.3s, color 0.3s;
+}
+  
+.bar-button-container button:hover {
+	background-color: #e0e0e0;
+}
+
+.bar-button-container button.active {
+	background-color: #007bff;
+	color: white;
+	border-color: #007bff;
 }
 
 .clear-button-container {
@@ -98,24 +134,36 @@ h1, h2, h3 {
 }
 
 .scatterplot-container {
-  width: 55%; /* Make scatter plot smaller */
+  width: 100%; /* Make scatter plot smaller */
   height: 100%;
   position: relative;
 }
 
 .bar-graphs-container {
-  width: 50%; /* Make bar graphs bigger */
-  height: 80%; /* Adjust height to center vertically */
+  width: 100%; /* Make bar graphs bigger */
+  height: 100%; /* Adjust height to center vertically */
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center; /* Center horizontally */
+}
+
+.group {
+	width: 100%;
+	height: 100%;
+}
+
+.group svg {
+	width: 100%;
+	height: 100%;
 }
 
 .bar-chart-container {
   display: flex;
-  justify-content: left; /* Center horizontally */
+  flex-direction: row;
+  justify-content: center; /* Center horizontally */
   align-items: center; /* Center vertically */
+  padding-top: 1%;
   width: 100%;
   height: 100%
 }
@@ -124,7 +172,6 @@ h1, h2, h3 {
 	stroke-width: 1px;
 	stroke: black;
 	opacity: .8;
-
 }
 
 circle.mouseover {
@@ -135,8 +182,6 @@ circle.mouseover {
 
 circle.selected {
 	fill: green;
-	stroke: red;
-	stroke-width: 4px;
 	opacity: 5;
 }
 
