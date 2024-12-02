@@ -21,6 +21,47 @@ h1, h2, h3 {
   height: 100%;
 }
 
+/* Style for selected marks (table rows) */
+tr.selected {
+  background-color: pink;
+}
+/* Pretty table layout */
+table {
+	font-size: 14px;
+	border-collapse: separate;
+	/* vertical | horizontal */
+	border-spacing: 0 0;
+	text-align: right;
+	margin: 0 auto;
+	user-select: none;
+  }
+  
+  th, td {
+	/* vertical | horizontal */
+	padding: 0 8px;
+  }
+  
+  /* Don't also do text drag selection */
+  table.text-unselectable {
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	-o-user-select: none;
+	user-select: none;
+	cursor: default;
+  }
+  /* Recreate the D3 brush style... */
+tr.mouseover {
+  background-color: #d6d6d6;
+}
+
+/* ...but add a darker selected and brushed color. */
+tr.mouseover.selected{
+  background-color: #e08fa3;
+}
+
 /* Fork on GitHub ribbon via https://codepo8.github.io/css-fork-on-github-ribbon/# */  
 #forkongithub a{
 	background:#00F;
