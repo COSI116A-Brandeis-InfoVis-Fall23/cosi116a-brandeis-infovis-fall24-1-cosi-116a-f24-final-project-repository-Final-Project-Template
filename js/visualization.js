@@ -41,16 +41,12 @@
         ("#scatterplot", data);
         */
 
-      d3.csv("data/transport_spend_as_per_gdp - transport_spend_as_per_gdp.csv").then(data => {
-        data.forEach(d => {
-          d.Year = +d.Value; 
-        });
-      
-        // Initialize the table
-        const myTable = table(); 
-        myTable("#table", data); 
+
+      d3.csv("/data/Data.csv", function(data){
+
       });
-  
+
+
        /* 
       // When the line chart selection is updated via brushing, 
       // tell the scatterplot to update it's selection (linking)
@@ -71,9 +67,7 @@
       */
   
       // When the table is updated via brushing, tell the line chart and scatterplot
-      // YOUR CODE HERE
-      tableData.selectionDispatcher().on(dispatchString, function(selectedData) {
-      });
+
     });
   
   })());
