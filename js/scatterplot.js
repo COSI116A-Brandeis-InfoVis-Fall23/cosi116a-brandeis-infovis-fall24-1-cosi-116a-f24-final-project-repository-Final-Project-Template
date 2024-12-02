@@ -183,29 +183,23 @@ function scatterplot() {
         }
         let currentHeight = 30 + (40 * currentCount); //Updates tooltip height
 
-        
-        if (currentCount < 2) {
-          currentCount = 0;
-        }
 
         tooltip
           .style("opacity", 1)
           .style("visibility", "visible")
           .style("height", currentHeight +"px")
-          .style("left", `${d3.event.pageX - containerBounds.left + 10}px`) // Adjust relative to the container
-          .style("top", `${d3.event.pageY - (containerBounds.top - (250 -( currentCount * 20)))}px`) // Adjust relative to the container
           .html(tooltipContent);  // Display the tooltip content
       })
       .on("mousemove", function () {
-
-
-
+        const mouseX = d3.event.pageX; // Mouse X position relative to the page
+        const mouseY = d3.event.pageY; // Mouse Y position relative to the page
+    
         tooltip
-          .style("opacity", 1)
-          .style("visibility", "visible")
-          .style("left", `${d3.event.pageX - containerBounds.left + 10}px`) // Adjust relative to the container
-          .style("top", `${d3.event.pageY - (containerBounds.top - (250 - (currentCount * 20)))}px`) // Adjust relative to the container
-      })
+            .style("opacity", 1)
+            .style("visibility", "visible")
+            .style("left", `${mouseX + 10}px`) // Offset tooltip slightly to the right
+            .style("top", `${mouseY - 20}px`); // Offset tooltip slightly above the mouse
+    })
       .on("mouseout", function () {
         d3.select(this).classed("mouseover", false);
         tooltip.style("opacity", 0); // Hide tooltip
