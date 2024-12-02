@@ -52,7 +52,59 @@ function inlandRailBar() {
             .attr("text-anchor", "middle")
             .attr("font-size", "16px")
             .text(countryData.country + " % of Infrastructure Spending on Rail");
+        
+        const infoGroup = chartGroup.append("g")
+            .attr("transform", `translate(${0}, ${height / 4 - 15 })`);
+    
+        infoGroup.append("circle")
+            .attr("r", 5)
+            .attr("fill", "#007BFF")
+            .attr("stroke", "black")
+            .attr("stroke-width", 1)
+            .style("cursor", "pointer");
+    
+            // Add "i" icon inside the button
+        infoGroup.append("text")
+            .attr("dy", "0.3em")
+            .attr("text-anchor", "middle")
+            .style("fill", "white")
+            .style("font-size", "7px")
+           
+            .style("font-style", "italic")
+            .text("i");
+    
+        const tooltip = d3.select("body")
+            .append("div")
+            .attr("class", "tooltip2");
 
+        infoGroup.on("mouseover", function (d) {
+            d3.select(this).classed("mouseover", true);
+            let currentCount = 0; 
+            let tooltipContent = "Inland investment includes rail, road, waterway, and air infrastructure. Both rail and inland investment are from 2021.";
+            currentCount ++;
+            let currentHeight = 30 + (40 * currentCount); //Updates tooltip height
+    
+    
+            tooltip
+              .style("opacity", 1)
+              .style("visibility", "visible")
+              .style("height", currentHeight +"px")
+              .html(tooltipContent);  // Display the tooltip content
+          })
+          .on("mousemove", function () {
+            const mouseX = d3.event.pageX; // Mouse X position relative to the page
+            const mouseY = d3.event.pageY; // Mouse Y position relative to the page
+        
+            tooltip
+                .style("opacity", 1)
+                .style("visibility", "visible")
+                .style("left", `${mouseX + 10}px`) // Offset tooltip slightly to the right
+                .style("top", `${mouseY - 20}px`); // Offset tooltip slightly above the mouse
+        })
+          .on("mouseout", function () {
+            d3.select(this).classed("mouseover", false);
+            tooltip.style("opacity", 0); // Hide tooltip
+          })
         // Title for rail section
         chartGroup.append("text")
             .attr("x", width * railPercentage / 2)
