@@ -37,6 +37,9 @@ d3.json("data/states.json", function(error, topologies) {  // (4)
     })
     .append("svg:title")
     .text(function(d) { return d.properties.STATENAM + ", "+ rates[currentYear][d.properties.STATENAM]; });
+    d3.selectAll("#max").text(getMax());
+    d3.selectAll("#min").text(getMin());
+
 });
 
 
@@ -47,8 +50,13 @@ d3.selectAll("svg").on("mouseover", (d, i, elements) =>{          //highlight st
   d3.selectAll("g path").on("mouseout", (d, i, elements) =>{
     d3.select(elements[i]).classed("mouseover", false);
   });
+  d3.selectAll("g path").on("mousedown", (d, i, elements) =>{     //linking
+    var selected = d.properties.STATENAM;
+    d3.selectAll("#state").text(selected);
+  });
 });
 //eventually need to add a on mousedown thing here for linking
+
 d3.selectAll("button").on("mousedown", (d, i, elements) =>{          //add button to confirm year
   currentYear = document.getElementById('years').value;
   svgStates.selectAll("path") 
@@ -59,6 +67,8 @@ d3.selectAll("button").on("mousedown", (d, i, elements) =>{          //add butto
   .select('title')                                                  //update title with new data
   .text(function(d) { return d.properties.STATENAM + ", "+ rates[currentYear][d.properties.STATENAM]; });
   d3.selectAll("#titleYear").text(currentYear);
+  d3.selectAll("#max").text(getMax());
+  d3.selectAll("#min").text(getMin());
 });
 
 
@@ -78,4 +88,15 @@ function getMax(){   //get range of data for color purposes
   }
 }
 return max;
+}
+function getMin(){   
+  let min = Infinity;
+  for (let i=0; i<50; i++){
+  let name = statenames[i].name;
+  let rate = rates[currentYear][name];
+  if(rate<=min && rate!="undefined"){
+    min=rate;
+  }
+}
+return min;
 }

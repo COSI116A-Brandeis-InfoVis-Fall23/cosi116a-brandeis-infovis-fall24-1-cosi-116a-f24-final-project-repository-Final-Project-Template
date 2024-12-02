@@ -48,6 +48,7 @@ let scHeartDisease = scatterplot()
     .yLabelOffset(150)
     
 scHeartDisease("#scatterplot", data);
+
 })
 
 })());
