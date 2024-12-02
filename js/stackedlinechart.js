@@ -181,7 +181,6 @@ function drawStackedLineChart(selector, data, dispatcher) {
 
     function brushed() {
         const selection = d3.event.selection;
-
         if (selection) {
             const [x0, x1] = selection;
             const selectedYears = x.domain().filter(year => {

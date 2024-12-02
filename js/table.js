@@ -60,10 +60,45 @@ function drawTable(selector, data, dispatcher) {
     // Initial rendering of the table
     updateTable(data);
 
+    // Brushing functionality
+    let isMouseDown = false;
+
+    tbody.selectAll("tr")
+        .on("mouseover", function () {
+            if (isMouseDown) {
+                d3.select(this).classed("selected", true);
+                updateSelectionFromTable();
+            }
+            d3.select(this).classed("highlighted", true);
+        })
+        .on("mouseout", function () {
+            d3.select(this).classed("highlighted", false);
+        })
+        .on("mousedown", function () {
+            isMouseDown = true;
+            d3.select(this).classed("selected", !d3.select(this).classed("selected"));
+            updateSelectionFromTable();
+        });
+
+    d3.select("body").on("mouseup", () => {
+        isMouseDown = false;
+    });
+
+    function updateSelectionFromTable() {
+        const selectedData = tbody.selectAll(".selected").data();
+        dispatcher.call("selectionUpdated", this, selectedData);
+    }
+
+
     // Listen for dispatcher updates and filter data
     dispatcher.on("selectionUpdated", selectedYears => {
         const filteredData = data.filter(d => selectedYears.includes(d.year));
         updateTable(filteredData);
+    });
+
+    // Dispatcher listener for linking
+    dispatcher.on("selectionUpdated", function (selectedData) {
+        tbody.selectAll("tr").classed("selected", d => selectedData.includes(d));
     });
 
     // Mouse and touch zoom functionality

@@ -6,7 +6,7 @@
         }
 
         const dispatcherString = "selectionUpdated"; // Dispatcher name for interaction
-
+        const dispatcher = d3.dispatch(dispatcherString); // Common dispatcher
         // Wrapper for the stacked line chart
         function stackedLineChartWrapper() {
             let xLabelText = "YEAR",
@@ -15,8 +15,7 @@
                 dispatcher = d3.dispatch(dispatcherString);
 
             function chart(selector, data) {
-                drawStackedLineChart(selector, data, dispatcher); // Use your chart function
-
+                const chart = drawStackedLineChart(selector, data, dispatcher);
                 const svg = d3.select(selector).select("svg");
                 const width = +svg.attr("width");
                 const height = +svg.attr("height");
@@ -50,7 +49,7 @@
             }
 
             chart.title = function (_) {
-                if (!arguments.length) return chartTitle;
+                if (!arguments.length) {return chartTitle;}
                 chartTitle = _;
                 return chart;
             };
@@ -92,12 +91,18 @@
             .text("Federal Spending (%) in Selected Years");
 
         // Initialize the table
-        let tableData = drawTable("#tablet", data, d3.dispatch(dispatcherString)); // Pass dispatcher
+        let table = drawTable("#tablet", data, dispatcher); // Pass dispatcher
 
-        // Connect the dispatcher for interaction
-        stackedChart.selectionDispatcher().on(dispatcherString, function (selectedYears) {
-            const filteredData = data.filter(d => selectedYears.includes(d.year));
-            tableData.updateSelection(filteredData); // Update the table with filtered data
+        dispatcher.on(dispatcherString, function (selectedData) {
+            if (selectedData.every(d => typeof d === "number")) {
+                // Selection is an array of years
+                const filteredData = data.filter(d => selectedData.includes(d.year));
+                table.updateSelection(filteredData); // Update the table
+            } else {
+                // Selection is an array of objects (rows)
+                const selectedYears = selectedData.map(d => d.year);
+                stackedChart.updateSelection(selectedYears); // Update the chart
+            }
         });
     });
 })();
