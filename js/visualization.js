@@ -77,12 +77,16 @@
           inlandInfrastructureInvestment: countryData.inlandInfrastructureInvestment
         }
       ];
-      inlandBar("#inland-bar", inlandRailData);
 
-      barGraph1.updateSelection([countryData]);
-      barGraph2.updateSelection([countryData]);
+      // Check if inlandRailData has valid data
+      if (countryData && countryData.infrastructureInvestment && countryData.inlandInfrastructureInvestment) {
+        inlandBar("#inland-bar", inlandRailData);
+        d3.select("#inland-bar").style("display", "block");
+      } else {
+        d3.select("#inland-bar").style("display", "none");
+      }
 
-      // Make sure that the necessary properties exist
+      // Make sure that the necessary properties exist for countryBarChart
       if (countryData && countryData.infrastructureInvestment && countryData.infrastructureMaintenance) {
         const countryBarData = [
           {
@@ -92,11 +96,25 @@
           }
         ];
         countryBarChart("#bar-chart", countryBarData);
-        
+        d3.select("#bar-chart").style("display", "block");
       } else {
         countryBarChart("#bar-chart");
-        console.log("Missing required data for the selected country");
+        d3.select("#bar-chart").style("display", "none");
       }
+
+      // Center the remaining bar if one is hidden and ensure the width stays the same
+      const barWidth = "50%"; // Adjust this value as needed
+      if (d3.select("#inland-bar").style("display") === "none") {
+        d3.select("#bar-chart").style("width", barWidth);
+      } else if (d3.select("#bar-chart").style("display") === "none") {
+        d3.select("#inland-bar").style("width", barWidth);
+      } else {
+        d3.select("#bar-chart").style("width", "");
+        d3.select("#inland-bar").style("width", "");
+      }
+
+      barGraph1.updateSelection([countryData]);
+      barGraph2.updateSelection([countryData]);
     });
 
     // Initialize the bar chart
@@ -117,7 +135,7 @@
       barGraphQuality.updateSelection([]);
       barGraphDensity.updateSelection([]);
       countryBarChart("#bar-chart", []);
-      inlandRailBar('#inland-bar', [])
+      inlandBar('#inland-bar', [])
     });
   });
 })();

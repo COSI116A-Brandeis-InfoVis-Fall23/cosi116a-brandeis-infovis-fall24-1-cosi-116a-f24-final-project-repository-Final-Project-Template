@@ -17,14 +17,8 @@ function countryBar() {
         // Clear previous chart elements to avoid overlap when a new country is selected
         chartGroup.selectAll("*").remove();
 
-        // If the country data is not available, display a message and return
+        // If the country data is not available, return
         if (!data || data.length === 0) {
-            chartGroup.append("text")
-                .attr("x", width / 2)
-                .attr("y", height / 2)
-                .attr("text-anchor", "middle")
-                .attr("dy", ".35em")
-                .text("No maintenance data available")
             return;
         }
 
