@@ -20,13 +20,14 @@
   <meta name="msapplication-TileColor" content="#da532c">
   <meta name="msapplication-config" content="favicons/browserconfig.xml">
   <meta name="theme-color" content="#ffffff">
+  <meta http-equiv="Content-Security-Policy" content="script-src 'self' 'unsafe-eval'">
 </head>
 
 <!-- Main page content -->
 <body>
 
   <!-- Update this with your GitHub repo URL -->
-  <span id="forkongithub"><a href="https://github.com/cosi116a-brandeis-infovis-fall23/cosi116a_project_template">Fork me on GitHub</a></span>
+  <span id="forkongithub"><a href="https://github.com/COSI116A-Brandeis-InfoVis-Fall23/cosi-116a-f24-final-project-repository-Asurazpr.git">Fork me on GitHub</a></span>
 
   <!-- Your writeup goes here -->
   <div class = "content-column">
@@ -52,8 +53,7 @@
   </div>
   
   <!-- Your visualization here -->
-  <div class="vis-holder">
-    <!-- Change viewbox to whatever you want, e.g. "0 0 1000 6000" This determines your aspect ratio and coordinate system -->    
+  <div class="vis-holder">   
     <!-- Line Chart -->
     <h2>Line Chart: Public Transport Ridership vs. COVID Cases</h2>
     <div id="lineChart"></div>        
@@ -61,10 +61,9 @@
     <!-- Bar Chart -->
     <h2>Bar Chart: Percentage of Public Transport Ridership (vs. Pre-COVID)</h2>
     <div id="barChart"></div>
-    <!-- Don't delete the closing tag! -->
-    </svg>
   </div>
-  
+
+  <div class="tooltip"></div>
   <!-- Your writeup goes here -->
   <div class = "content-column">
 
