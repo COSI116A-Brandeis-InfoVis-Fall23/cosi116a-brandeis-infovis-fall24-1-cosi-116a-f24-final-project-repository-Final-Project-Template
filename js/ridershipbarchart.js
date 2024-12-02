@@ -1,53 +1,57 @@
-// Load the CSV data
-d3.csv("data/neighborhood_ridership.csv").then(data => {
+d3.csv("data/neighborhood_ridership.csv", function (error, data) {
+    if (error) {
+        console.error("Error loading the CSV file:", error);
+        return;
+    }
+
     console.log("Data loaded:", data);
 
     // Convert gated_entries to numeric values
     data.forEach(d => {
-        d.gated_entries = +d.gated_entries;
+        d.gated_entries = +d.gated_entries; // Convert to number
     });
 
     // Set dimensions and margins for the SVG container
-    const width = 800;
-    const height = 400;
-    const margin = { top: 20, right: 30, bottom: 120, left: 120 };
+    let barWidth = 800;
+    let barHeight = 400;
+    let margin = { top: 20, right: 30, bottom: 120, left: 120 };
 
     // Create the SVG container
-    const svg = d3.select("#chart")
+    let svg = d3.select("#interactive-chart")
         .append("svg")
-        .attr("width", width + margin.left + margin.right)
-        .attr("height", height + margin.top + margin.bottom)
+        .attr("width", barWidth + margin.left + margin.right)
+        .attr("height", barHeight + margin.top + margin.bottom)
         .append("g")
         .attr("transform", `translate(${margin.left},${margin.top})`);
 
     // Set up the scales
-    const x = d3.scaleBand()
+    let x = d3.scaleBand()
         .domain(data.map(d => d.Neighborhood))
-        .range([0, width])
+        .range([0, barWidth])
         .padding(0.2);
 
-    const y = d3.scaleLinear()
+    let y = d3.scaleLinear()
         .domain([0, d3.max(data, d => d.gated_entries)])
-        .range([height, 0]);
+        .range([barHeight, 0]);
 
     // Add horizontal grid lines
     svg.append("g")
         .attr("class", "grid")
         .selectAll("line")
-        .data(y.ticks()) // Use the y-axis tick values for grid lines
+        .data(y.ticks(5)) // Adjust the number of grid lines
         .enter()
         .append("line")
-        .attr("x1", 0) // Start of the line (left edge)
-        .attr("x2", width) // End of the line (right edge)
-        .attr("y1", d => y(d)) // Vertical position for the line
-        .attr("y2", d => y(d)) // Vertical position for the line
-        .attr("stroke", "#ccc") // Light gray color
-        .attr("stroke-width", 1) // Thin stroke
-        .attr("stroke-dasharray", "4 4"); // Dashed line style
+        .attr("x1", 0)
+        .attr("x2", barWidth)
+        .attr("y1", d => y(d))
+        .attr("y2", d => y(d))
+        .attr("stroke", "#ccc")
+        .attr("stroke-width", 1)
+        .attr("stroke-dasharray", "4 4");
 
     // Add X-axis
     svg.append("g")
-        .attr("transform", `translate(0,${height})`)
+        .attr("transform", `translate(0,${barHeight})`)
         .call(d3.axisBottom(x))
         .selectAll("text")
         .attr("transform", "rotate(-45)")
@@ -64,11 +68,11 @@ d3.csv("data/neighborhood_ridership.csv").then(data => {
         .attr("x", d => x(d.Neighborhood))
         .attr("y", d => y(d.gated_entries))
         .attr("width", x.bandwidth())
-        .attr("height", d => height - y(d.gated_entries))
+        .attr("height", d => barHeight - y(d.gated_entries))
         .attr("fill", "skyblue");
 
     // Add tooltip
-    const tooltip = d3.select("body")
+    let tooltip = d3.select("body")
         .append("div")
         .attr("class", "tooltip")
         .style("position", "absolute")
@@ -84,34 +88,34 @@ d3.csv("data/neighborhood_ridership.csv").then(data => {
     svg.selectAll("rect")
         .on("mouseover", (event, d) => {
             tooltip
-                .html(`Neighborhood: <strong>${d.Neighborhood}</strong><br>Ridership: <strong>${d.gated_entries.toLocaleString()}</strong>`)
-                .style("left", (event.pageX + 10) + "px")
-                .style("top", (event.pageY - 20) + "px")
+                .html(`Neighborhood: <strong>${event.Neighborhood}</strong><br>Ridership: <strong>${event.gated_entries.toLocaleString()}</strong>`)
                 .style("display", "block");
         })
         .on("mousemove", (event) => {
-            tooltip
-                .style("left", (event.pageX + 10) + "px")
-                .style("top", (event.pageY - 20) + "px");
+            const tooltipWidth = tooltip.node().offsetWidth;
+            const tooltipHeight = tooltip.node().offsetHeight;
+            const left = Math.min(event.pageX + 10, window.innerWidth - tooltipWidth - 10);
+            const top = Math.min(event.pageY - 20, window.innerHeight - tooltipHeight - 10);
+            tooltip.style("left", `${left}px`).style("top", `${top}px`);
         })
         .on("mouseout", () => tooltip.style("display", "none"));
 
     // Add X-axis label
     svg.append("text")
         .attr("text-anchor", "middle")
-        .attr("x", width / 2)
-        .attr("y", height + 80) // Positioned lower to avoid overlap
+        .attr("x", barWidth / 2)
+        .attr("y", barHeight + 80)
         .text("Neighborhood")
-        .style("font-size", "16px") // Increased font size
+        .style("font-size", "16px")
         .style("font-weight", "bold");
 
     // Add Y-axis label
     svg.append("text")
         .attr("text-anchor", "middle")
-        .attr("transform", `rotate(-90)`) // Rotate the text for the Y-axis
-        .attr("x", -height / 2) // Center along the Y-axis
-        .attr("y", -80) // Positioned further left to avoid overlap
+        .attr("transform", `rotate(-90)`)
+        .attr("x", -barHeight / 2)
+        .attr("y", -80)
         .text("Total Ridership (in Millions)")
-        .style("font-size", "16px") // Increased font size
+        .style("font-size", "16px")
         .style("font-weight", "bold");
 });

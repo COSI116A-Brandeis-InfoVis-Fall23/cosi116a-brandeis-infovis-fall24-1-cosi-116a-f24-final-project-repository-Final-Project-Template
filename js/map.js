@@ -87,20 +87,20 @@ d3.json("data/routes.json", function (error, lineData) {
         return;
     }
     var customColors = {
-      "red": "#ff0000", // Red
-      "mattapan": "#ff0000", // Red
-      "green-d": "#33ff57", // Green
-      "green-c": "#33ff57", // green
-      "green-b": "#33ff57", // green
-      "green-e": "#33ff57", // green
-      "blue": "#3357ff", // Blue
-      "orange": "#ffa533",  // Orange
-      "sl1": "#C0C0C0", // Silver
-      "sl2": "#C0C0C0", // Silver
-      "sl3": "#C0C0C0", // Silver
-      "sl4": "#C0C0C0", // Silver
-      "sl5": "#C0C0C0" // Silver
-  };
+        "red": "#ff0000", // Red
+        "mattapan": "#ff0000", // Red
+        "green-d": "#33ff57", // Green
+        "green-c": "#33ff57", // green
+        "green-b": "#33ff57", // green
+        "green-e": "#33ff57", // green
+        "blue": "#3357ff", // Blue
+        "orange": "#ffa533",  // Orange
+        "sl1": "#C0C0C0", // Silver
+        "sl2": "#C0C0C0", // Silver
+        "sl3": "#C0C0C0", // Silver
+        "sl4": "#C0C0C0", // Silver
+        "sl5": "#C0C0C0" // Silver
+    };
     // Filter features to include only those with IDs in customColors
     var filteredFeatures = lineData.features.filter(d => customColors[d.properties.id]);
 
@@ -123,9 +123,9 @@ d3.select("#toggle-lines-button").on("click", function () {
 
 // Define the color scale for points based on the 'category' property (or another property)
 var colorScale = d3.scaleOrdinal()
-    .domain(["green", "red", "blue",'orange','silver','mattapan', "green-e",
+    .domain(["green", "red", "blue", 'orange', 'silver', 'mattapan', "green-e",
         "green-d",]) // The categories or properties you want to map
-    .range(["#33ff57", "#ff0000", "#3357ff",'#ffa533','#C0C0C0','#ff0000',"#33ff57","#33ff57"]); // Assign colors for each category
+    .range(["#33ff57", "#ff0000", "#3357ff", '#ffa533', '#C0C0C0', '#ff0000', "#33ff57", "#33ff57"]); // Assign colors for each category
 
 // Create a new group for points and set it to be hidden initially
 var gPoints = map.append("g").attr("class", "points").style("display", "none");
@@ -151,7 +151,7 @@ d3.json("data/stops.json", function (error, pointData) {
             return coords[1]; // Latitude to y position
         })
         .attr("r", 5) // Set radius of the point
-        .style("fill", function(d) {
+        .style("fill", function (d) {
             var lineType = d.properties.lines[0];
             return colorScale(lineType); // Color scale based on the 'category' property
         })
