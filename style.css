@@ -8,6 +8,25 @@ body {
 h1, h2, h3 {
 	line-height: 1.2
 }
+svg {
+	width: 100%;
+	height: 100%;
+	display: flex;
+	justify-content: center;
+  }
+#boundary path {
+	stroke-dasharray: 3 5;
+  }
+
+path {
+	fill:none;
+	stroke: black;
+	stroke-width: 0.5px;
+  }
+
+path.mouseover{
+	stroke-width: 3px;
+}
 
 /* Your text should be in a nice narrow column */
 .content-column {
@@ -76,4 +95,19 @@ h1, h2, h3 {
 		-o-transform:rotate(45deg);
 		box-shadow:4px 4px 10px rgba(0,0,0,0.8);
 	}
+
+	/* The line chart will take the left half of the screen */
+.linechart-holder {
+	flex: 0 0 50%;
+  }
+ #linechart {
+	width: 100%;
+	height: 500px;
 }
+}
+
+#figmaVisSketch{
+	width: 600px; /* Set the width of the image */
+	height: 400px;/* Set the height of the image */
+}
+
