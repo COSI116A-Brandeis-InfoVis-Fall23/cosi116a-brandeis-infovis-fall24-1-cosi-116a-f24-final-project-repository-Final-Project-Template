@@ -53,6 +53,7 @@
     
     <p>Project-long Course Project as part of COSI 116A: Information Visualization</a>, taught by <a href="https://cs.brandeis.edu/~dylan/">Prof. Dylan Cashman</a>, <a href="https://cs.brandeis.edu/">Brandeis University</a>.</p>
     
+    <br>
     
     <h1>Motivation</h1>
     
@@ -77,40 +78,51 @@
       <p>3. How does this comparison vary across states?</p>
       </p>
 
+      <br>
+
     
     <h1>Visualization</h1>    
   </div>
   <!--<div class="table-holder" id="table"></div> -->
   <!-- Your visualization here -->
   <div class="vis-holder">
-  <div class="table-holder" id="table"></div>
-    <!-- Change viewbox to whatever you want, e.g. "0 0 1000 6000" This determines your aspect ratio and coordinate system -->    
-    <!-- Delete all the sample SVG code below after the viewbox to before the closing tag. Populate this part of the SVG with D3. -->
-    <svg id="vis-svg">
-		<g id="boundary"></g>
-		<g id="states"></g>
-	</svg>
-		
-    <!-- Don't delete the closing tag! -->
-	<!--<div class="table-holder" id="table"></div> -->
+    <div class="table-holder" id="table"></div>
+      <!-- Change viewbox to whatever you want, e.g. "0 0 1000 6000" This determines your aspect ratio and coordinate system -->    
+      <!-- Delete all the sample SVG code below after the viewbox to before the closing tag. Populate this part of the SVG with D3. -->
+    <div class="map-holder" id="map">
+      <svg id="vis-svg" preserveAspectRatio="xMidYMid meet" class="marks" viewBox="0 150 1500 500">
+      <g id="boundary"></g>
+      <g id="states"></g>
+      </svg>
+    </div>
+      <!-- Don't delete the closing tag! -->
+    <!--<div class="table-holder" id="table"></div> -->
   </div>
   
+
+
   <!-- Your writeup goes here -->
   <div class = "content-column">
 
-    <h1><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>Demo Video</h1>
+    <h1><br><br><br><br><br><br><br><br><br><br><br><br><br><br>Demo Video</h1>
     
     <p>To be done after visualization is complete.</p>
     
+    <br>
+
     <!-- <video controls width="100%">
       <source src="http://www.ccs.neu.edu/home/cody/courses/shared/d3-flexible-transitions.mp4" type="video/mp4">
       <p>Your browser doesn't support HTML5 video. Here is
        a <a href="http://www.ccs.neu.edu/home/cody/courses/shared/d3-flexible-transitions.mp4">link to the video</a> instead.</p>
     </video> -->
 
+    <br>
+
     <h1>Visualization explanation</h1>
-    
+
     <p>To be done after visualization is complete.</p>
+
+    <br>
 
     <h1>Data Analysis</h1>
     <p>Our data comes from the U.S. government’s public repository of state-level spending data, 
@@ -132,6 +144,8 @@
       we feel that we created a more easily understood (but still insightful) visualization.
       </p>
 
+      <br>
+
     <h1>Task Analysis</h1>
 
     <p>Our task table holds three tasks. By order of importance, the first task is to understand 
@@ -151,6 +165,8 @@
       on, the spending choices it currently makes take on new meanings.
       </p>
 
+      <br>
+
     <h1>Design Process</h1>
     
     <p>For our final visualization, the heat map is central. The more red a state is, the 
@@ -167,11 +183,14 @@
       <br><br>More information (and photos of sketches) will be added in to this section as progress continues on our visualization.
     </p>
 
+    <br>
+
     <h1>Conclusion</h1>
 
     <p>To be done after visualization is complete.</p>
 
-    
+    <br>
+
     <h1>Acknowledgments</h1>    
     <ul>
       <li><a href="https://d3js.org/">D3: Data-Driven Documents</a> by Mike Bostock.</li>
