@@ -101,8 +101,8 @@ function createLineChart(data) {
   }
   console.log('Line Chart Data:', data);
   const margin = { top: 20, right: 80, bottom: 30, left: 70 };
-  const width = 800 - margin.left - margin.right;
-  const height = 400 - margin.top - margin.bottom;
+  const width = 600 - margin.left - margin.right;
+  const height = 300 - margin.top - margin.bottom;
 
   // Clear previous chart
   d3.select('#lineChart').selectAll('*').remove();
@@ -114,23 +114,20 @@ function createLineChart(data) {
     .append('g')
     .attr('transform', `translate(${margin.left},${margin.top})`);
 
- const x = d3.scaleTime()
-  .domain(d3.extent(data, d => d.week))
-  .range([0, width]);
+  const x = d3.scaleTime()
+    .domain(d3.extent(data, d => d.week))
+    .range([0, width]);
 
-console.log('X Scale Domain:', x.domain());
 
-const yLeft = d3.scaleLinear()
-  .domain([0, d3.max(data, d => d.totalRidership)])
-  .range([height, 0]);
+  const yLeft = d3.scaleLinear()
+    .domain([0, d3.max(data, d => d.totalRidership)])
+    .range([height, 0]);
 
-console.log('Y Left Scale Domain:', yLeft.domain());
 
-const yRight = d3.scaleLinear()
-  .domain([0, d3.max(data, d => d.covidCases)])
-  .range([height, 0]);
+  const yRight = d3.scaleLinear()
+    .domain([0, d3.max(data, d => d.covidCases)])
+    .range([height, 0]);
 
-console.log('Y Right Scale Domain:', yRight.domain());
 
 
   // Add axes
@@ -231,8 +228,8 @@ function createBarChart(data) {
     return;
   }
   console.log('Bar Chart Data:', data);
-  const margin = { top: 20, right: 50, bottom: 30, left: 50 };
-  const width = 800 - margin.left - margin.right;
+  const margin = { top: 20, right: 50, bottom: 80, left: 50 };
+  const width = 600 - margin.left - margin.right;
   const height = 300 - margin.top - margin.bottom;
 
   // Clear previous chart
@@ -278,7 +275,12 @@ function createBarChart(data) {
   // Add axes
   svg.append('g')
     .attr('transform', `translate(0,${height})`)
-    .call(d3.axisBottom(x));
+    .call(d3.axisBottom(x))
+    .selectAll('text') 
+    .style('text-anchor', 'end') 
+    .attr('dx', '-0.8em') 
+    .attr('dy', '0.15em') 
+    .attr('transform', 'rotate(-45)');
 
   svg.append('g').call(d3.axisLeft(y));
 }
