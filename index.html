@@ -5,7 +5,6 @@
 
 <head>
   <meta charset="utf-8">
-  <meta http-equiv="Content-Security-Policy" content="script-src 'self' https://unpkg.com 'unsafe-eval';">
 
   <!-- Title -->
   <title>Project Team #: Topic, COSI 116A F23</title>
@@ -25,7 +24,8 @@
   <meta http-equiv="Content-Security-Policy" content="script-src 'self' 'unsafe-eval'">
 
   <!-- Leaflet.js -->
-  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+  <link rel="stylesheet" href="lib/leaflet.css" />
+
 
 
   <style>
@@ -182,9 +182,9 @@
   <!-- Scripts at the end avoid need for dealing with async, defer, or onload event handlers -->
   <script src="lib/d3.v4/d3.v4.js"></script>
   <script src="js/visualization.js"></script>
-  <script src="js/heatmap.js"></script>
-  <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
-  <script src="https://unpkg.com/leaflet.heat"></script>
+  <script src="lib/js/heatmap.js"></script>
+  <script src="lib/leaflet.heat.js"></script>
+
 </body>
 
 </html>
