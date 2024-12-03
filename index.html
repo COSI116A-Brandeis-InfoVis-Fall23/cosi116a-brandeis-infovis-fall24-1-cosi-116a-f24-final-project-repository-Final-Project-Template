@@ -17,6 +17,22 @@
   <link rel="icon" type="image/png" sizes="16x16" href="favicons/favicon-16x16.png">
   <link rel="manifest" href="favicons/site.webmanifest">
   <link rel="shortcut icon" href="favicons/favicon.ico">
+  
+	<script src="http://d3js.org/d3.v4.min.js" charset="utf-8"></script>
+	<script src="http://d3js.org/topojson.v1.min.js"></script>
+	<style>
+  * {
+    margin: 0;
+    padding: 0;
+  }
+
+  svg {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+  }
+	</style>
+  
   <meta name="msapplication-TileColor" content="#da532c">
   <meta name="msapplication-config" content="favicons/browserconfig.xml">
   <meta name="theme-color" content="#ffffff">
@@ -50,15 +66,19 @@
     <p><em>Include the interactive visualization as part of this page. Static example follows.</em></p>
     
   </div>
-  
+  <!--<div class="table-holder" id="table"></div> -->
   <!-- Your visualization here -->
   <div class="vis-holder">
+  <div class="table-holder" id="table"></div>
     <!-- Change viewbox to whatever you want, e.g. "0 0 1000 6000" This determines your aspect ratio and coordinate system -->    
     <!-- Delete all the sample SVG code below after the viewbox to before the closing tag. Populate this part of the SVG with D3. -->
-    <svg id="vis-svg"
+    <svg id="vis-svg">
+		<g id="boundary"></g>
+		<g id="states"></g>
+	</svg>
+		
     <!-- Don't delete the closing tag! -->
-    </svg>
-	<div class="table-holder" id="table"></div>
+	<!--<div class="table-holder" id="table"></div> -->
   </div>
   
   <!-- Your writeup goes here -->
@@ -120,6 +140,10 @@
   <script src="lib/d3.v4/d3.v4.js"></script>
   <script src="js/visualization.js"></script>
   <script src="js/dod_table.js"></script>
+  <script src="js/colors.js"></script>
+  <script src="js/renderMap.js"></script>
+
+
 
 </body>
 </html>
