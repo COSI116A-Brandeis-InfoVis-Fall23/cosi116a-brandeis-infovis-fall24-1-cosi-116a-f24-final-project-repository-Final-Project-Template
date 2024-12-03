@@ -26,7 +26,10 @@ function countryBar() {
         const countryData = data[0];  // Only using the first data element as we are displaying data for a single country
         
         // Calculate the maintenance percentage
-        const maintenancePercentage = countryData.infrastructureMaintenance / countryData.infrastructureInvestment;
+        let maintenancePercentage = 0;
+        if (countryData.infrastructureMaintenance && countryData.infrastructureInvestment) {
+            maintenancePercentage = countryData.infrastructureMaintenance / countryData.infrastructureInvestment;
+        }
         const otherPercentage = 1 - maintenancePercentage;
 
         // Create the horizontal bar for maintenance (orange)
@@ -75,7 +78,7 @@ function countryBar() {
     
         const tooltip = d3.select("body")
             .append("div")
-            .attr("class", "tooltip2");
+            .attr("class", "tooltip");
 
         infoGroup.on("mouseover", function (d) {
             d3.select(this).classed("mouseover", true);

@@ -11,11 +11,6 @@ h1, h2, h3 {
 .hidden {
 	display: none;
   }
-  
-.hidden {
-	display: none;
-  }
-  
 
 /* Your text should be in a nice narrow column */
 .content-column {
@@ -99,24 +94,7 @@ h1, h2, h3 {
 	transition: opacity 0.1s ease-in-out;
 	z-index: 999999; /* Ensures it is at the front of the graph */
   }
-  .tooltip2 {
-	position: absolute;
-	padding: 5px;
-	background: rgb(88, 113, 192);
-	border: 1px solid #ccc;
-	border-radius: 5px;
-	width: 500px;
-	color: rgb(255, 255, 255);
 
-	font-size: 12px;
-	text-decoration-color: white;
-	box-shadow: 0 2px 5px rgba(0, 0, 0, .4);
-	pointer-events: none;
-	visibility: hidden;
-	opacity: 0; /* Hidden by default */
-	transition: opacity 0.1s ease-in-out;
-	z-index: 999999; /* Ensures it is at the front of the graph */
-  }
 #clear-button {
   align-items: center;
   background-color: #FFE7E7;
