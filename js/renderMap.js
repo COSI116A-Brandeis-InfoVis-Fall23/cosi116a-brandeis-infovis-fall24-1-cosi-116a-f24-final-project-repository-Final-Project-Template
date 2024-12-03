@@ -33,7 +33,7 @@ d3.json("data/states.json", function(error, topologies) {  // (4)
       return getColor(rates[currentYear][name], getMax());
     })
     .style("fill", function(d, i) { 
-      return "red";
+      return "purple";
     })
     .append("svg:title")
     .text(function(d) { return d.properties.STATENAM + ", "+ rates[currentYear][d.properties.STATENAM]; });

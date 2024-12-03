@@ -65,7 +65,9 @@
   <!-- Your visualization here -->
   <h1>United States Age Adjusted Heart Disease Rate in <span id="titleYear">1999</span></h1>
   <label for="cars">Choose a year:</label>
-
+  <div class="slidecontainer">
+    <input type="range" min="1999" max="2021" value="1999" class="slider" id="years">
+  </div>
   <select name="years" id="years">
     <option value="1999">1999</option>
     <option value="2000">2000</option>
@@ -109,7 +111,7 @@
     <h3>Heart Disease Rates</h3>
     <div style="display: flex; flex-direction: column; align-items: center;">
       <span style="margin-bottom: 2px;" id="max">High</span>
-      <div style="width: 20px; height: 300px; background: linear-gradient(to bottom, #ff0000, #ffcccc);"></div>
+      <div style="width: 20px; height: 300px; background: linear-gradient(to bottom, rgb(128, 0, 128), rgb(255, 255, 255));"></div>
       <span style="margin-top: 2px;" id="min">Low</span>
     </div>
   </div>
