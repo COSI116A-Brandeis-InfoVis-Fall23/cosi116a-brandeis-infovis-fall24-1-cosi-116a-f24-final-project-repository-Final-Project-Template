@@ -2,7 +2,7 @@ var svgStates = d3.select("svg #states"),
     svgBoundary = d3.select("svg #boundary"),
     states = {},
     // currentYear = 2021;   //this will change based on year selected
-    currentYear = document.getElementById('years').value;
+    currentYear = 1999;
 
 var width = window.innerWidth, // (1)
   height = window.innerHeight;
@@ -11,6 +11,9 @@ var projection = d3.geoAlbersUsa()
 
 var path = d3.geoPath()
     .projection(projection);  // (3)
+
+var max = -Infinity;
+var min = Infinity;
 
 d3.json("data/usa.json", function(error, boundary) {
  svgBoundary.selectAll("path")
@@ -23,6 +26,8 @@ d3.json("data/usa.json", function(error, boundary) {
 
 d3.json("data/states.json", function(error, topologies) {  // (4)
   var state = topojson.feature(topologies[12], topologies[12].objects.stdin);  // (5)
+  getMax();
+  getMin();
   svgStates.selectAll("path")  
       .data(state.features)
       .enter()
@@ -30,31 +35,28 @@ d3.json("data/states.json", function(error, topologies) {  // (4)
     .attr("d", path)
     .style('fill-opacity', function(d, i){
       var name = d.properties.STATENAM.replace(" Territory", "");
-      return getColor(rates[currentYear][name], getMax());
+      return getColor(rates[currentYear][name], max);
     })
     .style("fill", function(d, i) { 
-      return "red";
+      return "purple";
     })
     .append("svg:title")
     .text(function(d) { return d.properties.STATENAM + ", "+ rates[currentYear][d.properties.STATENAM]; });
+    d3.selectAll("#max").text(max);
+    d3.selectAll("#min").text(min);
+
 });
 
 
 d3.selectAll("svg").on("mouseover", (d, i, elements) =>{          //highlight states on mouseover - add brushing later
-  d3.selectAll("g path").on("mouseover", (d, i, elements) =>{
-    d3.select(elements[i]).classed("mouseover", true);
-  });
-  d3.selectAll("g path").on("mouseout", (d, i, elements) =>{
-    d3.select(elements[i]).classed("mouseover", false);
-  });
 });
-//eventually need to add a on mousedown thing here for linking
-d3.selectAll("button").on("mousedown", (d, i, elements) =>{          //add button to confirm year
-  currentYear = document.getElementById('years').value;
+
+d3.select("#slider").on("change", function(d) {          //add button to confirm year
+  currentYear = this.value;
   svgStates.selectAll("path") 
   .style('fill-opacity', function(d, i){                            //rerender state color and details
     var name = d.properties.STATENAM.replace(" Territory", "");
-    return getColor(rates[currentYear][name], getMax());
+    return getColor(rates[currentYear][name], max);
   })
   .select('title')                                                  //update title with new data
   .text(function(d) { return d.properties.STATENAM + ", "+ rates[currentYear][d.properties.STATENAM]; });
@@ -69,13 +71,26 @@ function getColor(rate, max) {
 }
 
 function getMax(){   //get range of data for color purposes
-  let max = -Infinity;
-  for (let i=0; i<50; i++){
-  let name = statenames[i].name;
-  let rate = rates[currentYear][name];
-  if(rate>=max && rate!="undefined"){
-    max=rate;
+  for(let i=1999; i<2021; i++){
+    let currYear = rates[i];
+    for(let j=0; j<50; j++){
+      let name = statenames[j].name;
+      let rate = currYear[name];
+      if(rate>=max && rate!="undefined"){
+        max=rate;
+      }    
+    }
   }
 }
-return max;
+function getMin(){   
+  for(let i=1999; i<2021; i++){
+    let currYear = rates[i];
+    for(let j=0; j<50; j++){
+      let name = statenames[j].name;
+      let rate = currYear[name];
+      if(rate<=min && rate!="undefined"){
+        min=rate;
+      }    
+    }
+  }
 }

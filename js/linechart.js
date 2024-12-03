@@ -11,7 +11,7 @@ function linechart() {
       top: 60,
       left: 50,
       right: 30,
-      bottom: 35
+      bottom: 60,
     },
     width = 500 - margin.left - margin.right,
     height = 500 - margin.top - margin.bottom,
@@ -67,21 +67,22 @@ function linechart() {
         .attr("transform", "rotate(-65)");
         
     // X axis label
-    xAxis.append("text")        
-        .attr("class", "axisLabel")
-        // .attr("transform", "translate(" + (width - 50) + ",-10)")
-        .attr("x", width / 2) // Center the label
-        .attr("y", margin.bottom - 10) // Position below the axis
-        .style("text-anchor", "middle")
-        .text(xLabelText);
+    svg.append("text")
+        .attr("class", "x label")
+        .attr("text-anchor", "end")
+        .attr("x", width/2)
+        .attr("y", height + 50)
+        .text("Year");
 
-    // Y axis and label
-    let yAxis = svg.append("g")
-        .call(d3.axisLeft(yScale))
-      .append("text")
-        .attr("class", "axisLabel")
-        .attr("transform", "translate(" + yLabelOffsetPx + ", -12)")
-        .text(yLabelText);
+    //Y axis label
+    svg.append("text")
+      .attr("class", "y label")
+      .attr("text-anchor", "end")
+      .attr("x", -margin.top) // Move the label left
+      .attr("y", -margin.left + 20) // Move to the left of the linechrt
+      .attr("dy", ".75em")
+      .attr("transform", "rotate(-90)")
+      .text("Age Adjusted Heart Disease Death Rate");
 
     // Add the line
     svg.append("path")
@@ -113,6 +114,8 @@ function linechart() {
     // svg.call(brush);
       
     // Highlight points when brushed
+
+    
     function brush(g) {
       const brush = d3.brush()
         .on("start brush", highlight)

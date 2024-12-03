@@ -29,7 +29,7 @@
 
   <script src="js/renderMap.js"></script>
   <script src="js/linechart.js"></script> 
-  <script src="js/visualization.js"></script>
+  <script src="js/scatterplot.js"></script> 
 </head>
 
 <!-- Main page content -->
@@ -51,9 +51,10 @@
     <h1>Motivation</h1>
     
     <p><em>Summary of user needs and motivating questions.</em></p>
-    
-    <p><em>Expectation: There is a clear focus, and a developed explanation of the problem, and a reasonable response is proposed.</em></p>
-
+    <!-- <p><em>Expectation: There is a clear focus, and a developed explanation of the problem, and a reasonable response is proposed.</em></p> -->
+    <p>The United States is currently facing a health crisis, marked by alarmingly high rates of cardiovascular disease, limited access to mental health resources, and a healthcare system that ranks poorly compared to other wealthy nations.  The purpose of our project is to analyze health data in the United States across time and states, aiming to uncover patterns and trends that may enhance our understanding of this issue.  We intend to do this by narrowing our scope to exploring heart disease, the leading cause of death in the United States.  To do so, we will analyze the age adjusted heart disease death rate per state from 1999-2022.  We will also be plotting our heart disease data against life expectancy and COVID-19 death rates per state to see if there are any interesting patterns or trends across data sets.  Our visualization will provide  insight on how location and time period have impacted the livelihood of Americans.  
+      Originally, our target audience was health professionals, but through our research process we came to the conclusion that our visualization can lend itself to both the general public and health experts. To accomplish this, we strive to make an easily understandable, yet detailed and informative visualization.  Our visualization aims to help Americans reflect on their own health as well as provide insight on the evolving landscape of heart disease in the United States to health professionals.  Experts in the field may be able to better understand who is most at risk as well as use their knowledge to connect the dots on the causes of the changes seen overtime.
+      </p>
     
     <h1>Visualization</h1>
     
@@ -64,33 +65,12 @@
   <!-- Your visualization here -->
   <h1>United States Age Adjusted Heart Disease Rate in <span id="titleYear">1999</span></h1>
   <label for="cars">Choose a year:</label>
-
-  <select name="years" id="years">
-    <option value="1999">1999</option>
-    <option value="2000">2000</option>
-    <option value="2001">2001</option>
-    <option value="2002">2002</option>
-    <option value="2003">2003</option>
-    <option value="2004">2004</option>
-    <option value="2005">2005</option>
-    <option value="2006">2006</option>
-    <option value="2007">2007</option>
-    <option value="2008">2008</option>
-    <option value="2009">2009</option>
-    <option value="2010">2010</option>
-    <option value="2011">2011</option>
-    <option value="2012">2012</option>
-    <option value="2013">2013</option>
-    <option value="2014">2014</option>
-    <option value="2015">2015</option>
-    <option value="2016">2016</option>
-    <option value="2017">2017</option>
-    <option value="2018">2018</option>
-    <option value="2019">2019</option>
-    <option value="2020">2020</option>
-    <option value="2021">2021</option>
-  </select>
-  <button id ="submit" type="button">Go!</button>
+  <div class="slidecontainer">
+    <label for="slider" style="display: inline-block; width: 50px;">1999</label>
+    <input type="range" min="1999" max="2021" value="1999" class="slider" id="slider" style="width: 500px; display: inline-block;">
+    <label for="slider" style="display: inline-block; width: 50px; text-align: right;">2021</label>
+  </div>
+  
   <!-- Wrap the map and legend in a flex container -->
 <div class="vis-container" style="display: flex; align-items: center; justify-content: center; gap: 10px;">
   <!-- Map section -->
@@ -106,15 +86,18 @@
   <div class="legend-holder" style="text-align: center; border: 1px solid #000; padding: 1px; border-radius: 1px;">
     <h3>Heart Disease Rates</h3>
     <div style="display: flex; flex-direction: column; align-items: center;">
-      <span style="margin-bottom: 2px;">High</span>
-      <div style="width: 20px; height: 300px; background: linear-gradient(to bottom, #ff0000, #ffcccc);"></div>
-      <span style="margin-top: 2px;">Low</span>
+      <span style="margin-bottom: 2px;" id="max">High</span>
+      <div style="width: 20px; height: 300px; background: linear-gradient(to bottom, rgb(128, 0, 128), rgb(255, 255, 255));"></div>
+      <span style="margin-top: 2px;" id="min">Low</span>
     </div>
   </div>
 </div>
 
-<h2>Age Adjustead Heart Disease Death Rate for <span id="state">State</span> in <span id="titleYear">1999</span></h2>
+<h2>Age Adjusted Heart Disease Death Rate for <span id="state">State</span> in <span id="titleYear">1999</span></h2>
 <div class="linechart-holder" id="linechart"></div>
+
+<h2>Life Expectancy on Age Adjusted Heart Disease Death Rate per State in <span id="titleYear">1999</span></h2>
+<div class="scatterplot-holder" id="scatterplot"></div>
 
   <!-- Your writeup goes here -->
   <div class = "content-column">
@@ -134,15 +117,19 @@
     <p><em>Final visualization screenshots (PNG images), design justifications, UI walk-through, and linked presentation slides.</em></p>
 
     <h1>Data Analysis</h1>
-    <p><em>Summary of data, data types, and data preprocessing.</em></p>
-
-    <p><em>Expectation: Data sources match the problem statement and are appropriate. These descriptions should be very explicit so someone could read your page and properly reproduce your results.</em></p>
-
+    <!-- <p><em>Summary of data, data types, and data preprocessing.</em></p>
+    <p><em>Expectation: Data sources match the problem statement and are appropriate. These descriptions should be very explicit so someone could read your page and properly reproduce your results.</em></p> -->
+    <p>Originally, our group was planning to explore a dataset on the ten leading causes of death by state, from 1999-2017.  Our intention was to examine trends both overtime and geographically until 2022 to gain insights on the impact of COVID-19.  We also wanted to relate this to the percentage of state residents with access to affordable healthcare through interaction with an additional visualization.  Ultimately we were unable to find state data for ten leading causes of death from 2018 onwards. 
+      During peer review, we were also given consistent feedback that narrowing our focus would make our visualization more effective.  In order to accommodate missing data and our feedback, we pivoted to focus on only heart disease, the leading cause of death across the United States.  This helps us ensure that our visualizations all compliment one another and still fulfills our primary domain task, “What do you consider the most prominent healthcare issues in the United States? Is that different now versus 50 years ago?”
+      We are using three datasets for out final visualization. Our primary data set contains the Age Adjusted Heart Disease Death Rate per state from 1999-2022 in JSON format, obtained by the CDC.  Our second data set contains the life expectancy per state in 1999-2022, obtained from **.  Our final dataset contains the COVID-19 Age Adjusted Death Rate per state from 2020-2022, also obtained from the CDC.  For each data set, we manipulated the data so that each year is an object that has key-value pairs connecting each state to its respective datapoint.
+      </p>
     <h1>Task Analysis</h1>
-
+<!-- 
     <p><em>Summary of task table.</em></p>
-
-    <p><em>Expectation: Clearly describes domain tasks, processes, goals and abstract tasks for domain problems.</em></p>
+    <p><em>Expectation: Clearly describes domain tasks, processes, goals and abstract tasks for domain problems.</em></p> -->
+    <p> Based on our interview responses, we identified six potential domain tasks.  Our final visualization successfully answers our #1 ranked domain task, “What do you consider the most prominent healthcare issues in the United States? Is that different now versus 50 years ago?”  As a group, we decided that heart disease should be considered one of the most prominent healthcare issues in the United States as it has been the leading cause of death for decades. The low-level tasks associated with this domain task are Identify and Compare, which we fulfill through user interactivity. The user can easily compare states across time as well as different regions of the United States to one another.  At the middle level, our visualization satisfies the Lookup task where users already know both what they’re looking for and where it is- in other words, both the target and location are known. Users can look up the data for a specific state at a specific year through the drop down menu and details on demand in our map.  On a high-level, the purpose of this domain task is to Derive and Discover.  New data is derived through our scatter plot which plots the relationship between life expectancy, COVID-19 Age Adjusted Death Rate, and Heart Disease Adjusted Death Rate.  Additionally, the user can discover insight about the data by hovering over marks and using interaction to view the data through different visual encodings.  In this way, users can use our visualization to find new knowledge that was not previously known to them.  Our visualization is meant to be easily digestible to a wide range of users with a variety of medical experience.
+      Our visualization begins to answer our 5th ranked domain task, “Has COVID-19 generated outliers in public health?” in specific relation to heart disease. If given more time, we would have like to further explore COVID-19 and its effect on public health with more depth.
+    </p>
 
     <h1>Design Process</h1>
     
@@ -151,13 +138,16 @@
     <p><em>Expectation: Evidence of iterative improvement.
     Logical discussion of design choices grounded in theory from course.
     Discusses feedback from usability testing.</em></p>
+    <img id="figmaVisSketch" src="images/FigmaVisSketch.png" alt="Figma Vis Sketch">
+
 
 
     <h1>Conclusion</h1>
-
-    <p><em>Short summary of work completed and areas for improvement/future-work.</em></p>
-    
-    <p><em>Expectation: Meaningfully wraps up project and has good future directions.</em></p>
+    <!-- <p><em>Short summary of work completed and areas for improvement/future-work.</em></p>
+    <p><em>Expectation: Meaningfully wraps up project and has good future directions.</em></p> -->
+   <p>Our group was able to successfully create three different visualizations that use both geographic and temporal data, all linked to one another. We synthesized our own JSON data sets by manipulating multiple data sets from reliable sources such as the CDC.  We implemented details on demand for the marks of all three visualizations, giving the user the necessary contextual information to understand our data in full. 
+    If given the opportunity in the future, our group intends to look further into COVID-19 data and find a way to integrate it into our current visualization.  A potential way to measure the  effectiveness of our visualization in the future is to observe our target users after deployment in a field study. An area that we could have improved upon was ensuring that we were not missing any data before finalizing our design idea.  We had to heavily revise our final visualization in comparison to our formal sketch on Figma.  Also, our code could have been more organized and clear with the addition of comments.
+    </p>
 
     
     <h1>Acknowledgments</h1>
@@ -167,6 +157,8 @@
     <ul>
       <li><a href="https://d3js.org/">D3: Data-Driven Documents</a> by Mike Bostock.</li>
       <li><a href="https://codepo8.github.io/css-fork-on-github-ribbon/#">Pure CSS responsive "Fork me on GitHub" ribbon</a> by Chris Heilmann.</li>
+      <li> COSI 116A F24 Assignment 4—Brushing and Linking in D3</li>
+      <li> ChatGBT as coding resource</li>
     </ul>
     
   </div>
@@ -174,6 +166,7 @@
   <!-- Scripts at the end avoid need for dealing with async, defer, or onload event handlers -->
   <script src="js/renderMap.js"></script>
   <script src="js/linechart.js"></script>
+  <script src="js/scatterplot.js"></script> 
   <script src="lib/d3.v4/d3.v4.js"></script>
   <script src="js/visualization.js"></script>
 
