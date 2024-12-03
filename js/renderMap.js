@@ -12,6 +12,9 @@ var projection = d3.geoAlbersUsa()
 var path = d3.geoPath()
     .projection(projection);  // (3)
 
+var max = -Infinity;
+var min = Infinity;
+
 d3.json("data/usa.json", function(error, boundary) {
  svgBoundary.selectAll("path")
      .data(boundary.features)
@@ -23,6 +26,8 @@ d3.json("data/usa.json", function(error, boundary) {
 
 d3.json("data/states.json", function(error, topologies) {  // (4)
   var state = topojson.feature(topologies[12], topologies[12].objects.stdin);  // (5)
+  getMax();
+  getMin();
   svgStates.selectAll("path")  
       .data(state.features)
       .enter()
@@ -30,15 +35,15 @@ d3.json("data/states.json", function(error, topologies) {  // (4)
     .attr("d", path)
     .style('fill-opacity', function(d, i){
       var name = d.properties.STATENAM.replace(" Territory", "");
-      return getColor(rates[currentYear][name], getMax());
+      return getColor(rates[currentYear][name], max);
     })
     .style("fill", function(d, i) { 
       return "purple";
     })
     .append("svg:title")
     .text(function(d) { return d.properties.STATENAM + ", "+ rates[currentYear][d.properties.STATENAM]; });
-    d3.selectAll("#max").text(getMax());
-    d3.selectAll("#min").text(getMin());
+    d3.selectAll("#max").text(max);
+    d3.selectAll("#min").text(min);
 
 });
 
@@ -62,13 +67,11 @@ d3.selectAll("button").on("mousedown", (d, i, elements) =>{          //add butto
   svgStates.selectAll("path") 
   .style('fill-opacity', function(d, i){                            //rerender state color and details
     var name = d.properties.STATENAM.replace(" Territory", "");
-    return getColor(rates[currentYear][name], getMax());
+    return getColor(rates[currentYear][name], max);
   })
   .select('title')                                                  //update title with new data
   .text(function(d) { return d.properties.STATENAM + ", "+ rates[currentYear][d.properties.STATENAM]; });
   d3.selectAll("#titleYear").text(currentYear);
-  d3.selectAll("#max").text(getMax());
-  d3.selectAll("#min").text(getMin());
 });
 
 
@@ -79,24 +82,26 @@ function getColor(rate, max) {
 }
 
 function getMax(){   //get range of data for color purposes
-  let max = -Infinity;
-  for (let i=0; i<50; i++){
-  let name = statenames[i].name;
-  let rate = rates[currentYear][name];
-  if(rate>=max && rate!="undefined"){
-    max=rate;
+  for(let i=1999; i<2021; i++){
+    let currYear = rates[i];
+    for(let j=0; j<50; j++){
+      let name = statenames[j].name;
+      let rate = currYear[name];
+      if(rate>=max && rate!="undefined"){
+        max=rate;
+      }    
+    }
   }
-}
-return max;
 }
 function getMin(){   
-  let min = Infinity;
-  for (let i=0; i<50; i++){
-  let name = statenames[i].name;
-  let rate = rates[currentYear][name];
-  if(rate<=min && rate!="undefined"){
-    min=rate;
+  for(let i=1999; i<2021; i++){
+    let currYear = rates[i];
+    for(let j=0; j<50; j++){
+      let name = statenames[j].name;
+      let rate = currYear[name];
+      if(rate<=min && rate!="undefined"){
+        min=rate;
+      }    
+    }
   }
-}
-return min;
 }
