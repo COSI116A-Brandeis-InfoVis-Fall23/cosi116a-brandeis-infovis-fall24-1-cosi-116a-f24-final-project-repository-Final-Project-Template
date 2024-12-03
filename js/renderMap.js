@@ -2,7 +2,7 @@ var svgStates = d3.select("svg #states"),
     svgBoundary = d3.select("svg #boundary"),
     states = {},
     // currentYear = 2021;   //this will change based on year selected
-    currentYear = document.getElementById('years').value;
+    currentYear = 1999;
 
 var width = window.innerWidth, // (1)
   height = window.innerHeight;
@@ -51,8 +51,8 @@ d3.json("data/states.json", function(error, topologies) {  // (4)
 d3.selectAll("svg").on("mouseover", (d, i, elements) =>{          //highlight states on mouseover - add brushing later
 });
 
-d3.selectAll("button").on("mousedown", (d, i, elements) =>{          //add button to confirm year
-  currentYear = document.getElementById('years').value;
+d3.select("#slider").on("change", function(d) {          //add button to confirm year
+  currentYear = this.value;
   svgStates.selectAll("path") 
   .style('fill-opacity', function(d, i){                            //rerender state color and details
     var name = d.properties.STATENAM.replace(" Territory", "");
