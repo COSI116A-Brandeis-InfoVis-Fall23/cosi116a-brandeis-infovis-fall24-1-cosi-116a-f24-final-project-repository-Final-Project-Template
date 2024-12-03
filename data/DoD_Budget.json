@@ -1,202 +1,257 @@
 [
   {
     "State": "Alabama",
-    "DoD Budget RAW": 0
+    "DoD Spending in State": "114,870,737,582",
+    "DoD % of State Total": "98.8%"
   },
   {
     "State": "Alaska",
-    "DoD Budget RAW": 0
+    "DoD Spending in State": "2,728,138,010",
+    "DoD % of State Total": "45.9%"
   },
   {
     "State": "Arizona",
-    "DoD Budget RAW": 0
+    "DoD Spending in State": "85,209,669,278",
+    "DoD % of State Total": "97.3%"
   },
   {
     "State": "Arkansas",
-    "DoD Budget RAW": 0
+    "DoD Spending in State": "404,702,136",
+    "DoD % of State Total": "18.6%"
   },
   {
     "State": "California",
-    "DoD Budget RAW": "124,928,957,973"
+    "DoD Spending in State": "124,928,957,973",
+    "DoD % of State Total": "88.9%"
   },
   {
     "State": "Colorado",
-    "DoD Budget RAW": 0
+    "DoD Spending in State": "49,449,270,626",
+    "DoD % of State Total": "93.9%"
   },
   {
     "State": "Connecticut",
-    "DoD Budget RAW": 0
+    "DoD Spending in State": "61,657,092,318",
+    "DoD % of State Total": "98.8%"
   },
   {
     "State": "Delaware",
-    "DoD Budget RAW": 0
+    "DoD Spending in State": "141,190,784",
+    "DoD % of State Total": "54.9%"
   },
   {
     "State": "Florida",
-    "DoD Budget RAW": 0
+    "DoD Spending in State": "15,787,420,103",
+    "DoD % of State Total": "11.6%"
   },
   {
     "State": "Georgia",
-    "DoD Budget RAW": 0
+    "DoD Spending in State": "3,955,730,901",
+    "DoD % of State Total": "21.7%"
   },
   {
     "State": "Hawaii",
-    "DoD Budget RAW": 0
+    "DoD Spending in State": "2,799,214,196",
+    "DoD % of State Total": "94.1%"
   },
   {
     "State": "Idaho",
-    "DoD Budget RAW": 0
+    "DoD Spending in State": "193,225,308",
+    "DoD % of State Total": "<1%"
   },
   {
     "State": "Illinois",
-    "DoD Budget RAW": 0
+    "DoD Spending in State": "5,552,002,125",
+    "DoD % of State Total": "51.1%"
   },
   {
     "State": "Indiana",
-    "DoD Budget RAW": 5391645521
+    "DoD Spending in State": "5,391,645,521",
+    "DoD % of State Total": "33.9%"
   },
   {
     "State": "Iowa",
-    "DoD Budget RAW": 1298463685
+    "DoD Spending in State": "1,298,463,685",
+    "DoD % of State Total": "88.1%"
   },
   {
     "State": "Kansas",
-    "DoD Budget RAW": 5391645521
+    "DoD Spending in State": "5,391,645,521",
+    "DoD % of State Total": "33.9%"
   },
   {
     "State": "Kentucky",
-    "DoD Budget RAW": 11890402881
+    "DoD Spending in State": "11,890,402,881",
+    "DoD % of State Total": "97.3%"
   },
   {
     "State": "Louisiana",
-    "DoD Budget RAW": 4821137651
+    "DoD Spending in State": "4,821,137,651",
+    "DoD % of State Total": "83.3%"
   },
   {
     "State": "Maine",
-    "DoD Budget RAW": 4820460260
+    "DoD Spending in State": "4,820,460,260",
+    "DoD % of State Total": "99.5%"
   },
   {
     "State": "Maryland",
-    "DoD Budget RAW": 76330876552
+    "DoD Spending in State": "76,330,876,552",
+    "DoD % of State Total": "47.9%"
   },
   {
     "State": "Massachusetts",
-    "DoD Budget RAW": 32585158977
+    "DoD Spending in State": "32,585,158,977",
+    "DoD % of State Total": "71.9%"
   },
   {
     "State": "Michigan",
-    "DoD Budget RAW": 3981923531
+    "DoD Spending in State": "3,981,923,531",
+    "DoD % of State Total": "79.7%"
   },
   {
     "State": "Minnesota",
-    "DoD Budget RAW": 809325776
+    "DoD Spending in State": "809,325,776",
+    "DoD % of State Total": "54.3%"
   },
   {
     "State": "Mississippi",
-    "DoD Budget RAW": 15488312587
+    "DoD Spending in State": "15,488,312,587",
+    "DoD % of State Total": "99.6%"
   },
   {
     "State": "Missouri",
-    "DoD Budget RAW": 16748472003
+    "DoD Spending in State": "16,748,472,003",
+    "DoD % of State Total": "26.8%"
   },
   {
     "State": "Montana",
-    "DoD Budget RAW": 241287202
+    "DoD Spending in State": "241,287,202",
+    "DoD % of State Total": "8.3%"
   },
   {
     "State": "Nebraska",
-    "DoD Budget RAW": 949882254
+    "DoD Spending in State": "949,882,254",
+    "DoD % of State Total": "65.4%"
   },
   {
     "State": "Nevada",
-    "DoD Budget RAW": 23207569385
+    "DoD Spending in State": "23,207,569,385",
+    "DoD % of State Total": "99.7%"
   },
   {
     "State": "New Hampshire",
-    "DoD Budget RAW": 670775292
+    "DoD Spending in State": "670,775,292",
+    "DoD % of State Total": "66.3%"
   },
   {
     "State": "New Jersey",
-    "DoD Budget RAW": 31825628888
+    "DoD Spending in State": "31,825,628,888",
+    "DoD % of State Total": "78.4%"
   },
   {
     "State": "New Mexico",
-    "DoD Budget RAW": 5017124851
+    "DoD Spending in State": "5,017,124,851",
+    "DoD % of State Total": "<1%"
   },
   {
     "State": "New York",
-    "DoD Budget RAW": 7718438483
+    "DoD Spending in State": "7,718,438,483",
+    "DoD % of State Total": "50.8%"
   },
   {
     "State": "North Carolina",
-    "DoD Budget RAW": 8395853636
+    "DoD Spending in State": "8,395,853,636",
+    "DoD % of State Total": "60.3%"
   },
   {
     "State": "North Dakota",
-    "DoD Budget RAW": 624483837
+    "DoD Spending in State": "624,483,837",
+    "DoD % of State Total": "5.3%"
   },
   {
     "State": "Ohio",
-    "DoD Budget RAW": 6490989044
+    "DoD Spending in State": "6,490,989,044",
+    "DoD % of State Total": "76.8%"
   },
   {
     "State": "Oklahoma",
-    "DoD Budget RAW": 14538222638
+    "DoD Spending in State": "14,538,222,638",
+    "DoD % of State Total": "90.6%"
   },
   {
     "State": "Oregon",
-    "DoD Budget RAW": 3077494418
+    "DoD Spending in State": "3,077,494,418",
+    "DoD % of State Total": "60.2%"
   },
   {
     "State": "Pennsylvania",
-    "DoD Budget RAW": 103000874988
+    "DoD Spending in State": "103,000,874,988",
+    "DoD % of State Total": "60.2%"
   },
   {
     "State": "Rhode Island",
-    "DoD Budget RAW": "1,278,874,376"
+    "DoD Spending in State": "1,278,874,376",
+    "DoD % of State Total": "54.7%"
   },
   {
     "State": "South Carolina",
-    "DoD Budget RAW": "8,653,081,731"
+    "DoD Spending in State": "8,653,081,731",
+    "DoD % of State Total": "47.1%"
   },
   {
     "State": "South Dakota",
-    "DoD Budget RAW": "55,982,301"
+    "DoD Spending in State": "55,982,301",
+    "DoD % of State Total": "6.6%"
   },
   {
     "State": "Tennessee",
-    "DoD Budget RAW": "3,313,104,443"
+    "DoD Spending in State": "3,313,104,443",
+    "DoD % of State Total": "<1%"
   },
   {
     "State": "Texas",
-    "DoD Budget RAW": 81915701020
+    "DoD Spending in State": "81,915,701,020",
+    "DoD % of State Total": "63.9%"
   },
   {
     "State": "Utah",
-    "DoD Budget RAW": "2,291,158,682"
+    "DoD Spending in State": "2,291,158,682",
+    "DoD % of State Total": "88.4%"
   },
   {
     "State": "Vermont",
-    "DoD Budget RAW": "84,760,005"
+    "DoD Spending in State": "84,760,005",
+    "DoD % of State Total": "29.9%"
   },
   {
     "State": "Virginia",
-    "DoD Budget RAW": "142,097,920,344"
+    "DoD Spending in State": "142,097,920,344",
+    "DoD % of State Total": "62.1%"
   },
   {
     "State": "Washington",
-    "DoD Budget RAW": "45,897,241,049"
+    "DoD Spending in State": "45,897,241,049",
+    "DoD % of State Total": "96.3%"
+  },
+  {
+    "State": "Washington D.C.",
+    "DoD Spending in State": "35,242,582,333",
+    "DoD % of State Total": "79.1%"
   },
   {
     "State": "West Virginia",
-    "DoD Budget RAW": "755,270,133"
+    "DoD Spending in State": "755,270,133",
+    "DoD % of State Total": "67.5%"
   },
   {
     "State": "Wisconsin",
-    "DoD Budget RAW": "151,299,955,835"
+    "DoD Spending in State": "151,299,955,835",
+    "DoD % of State Total": "92.2%"
   },
   {
     "State": "Wyoming",
-    "DoD Budget RAW": "95,151,698"
+    "DoD Spending in State": "95,151,698",
+    "DoD % of State Total": "6.4%"
   }
 ]
