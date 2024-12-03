@@ -52,7 +52,7 @@ VIZ.requiresData([
   var tip = d3.tip()
     .attr('class', 'd3-tip pick2')
     .offset([-10, 0])
-    .html(function (d) { return VIZ.fixStationName(d.name); });
+    .html(function (d) { console.log(VIZ.fixStationName(d.name)); return VIZ.fixStationName(d.name); });
   var mapGlyphSvg = d3.select('.section-pick-two .map').append('svg').call(tip);
   var details = d3.select('.section-pick-two .details');
   var $tip = $(".d3-tip.pick2");
@@ -96,7 +96,7 @@ VIZ.requiresData([
         console.warn(`Node ${i} has invalid voronoi:`, node.voronoi);
       }
     });
-    
+
 
     console.log('Voronoi Polygons:', network);
 
@@ -110,6 +110,7 @@ VIZ.requiresData([
       .enter()
       .append('line')
       .attr('class', function (d) { return 'connect ' + d.source.id + '-' + d.target.id; })
+      .merge(connections)
       .attr('x1', function (d) { return d.source.pos[0]; })
       .attr('y1', function (d) { return d.source.pos[1]; })
       .attr('x2', function (d) { return d.target.pos[0]; })
@@ -138,6 +139,7 @@ VIZ.requiresData([
         } else {
           d3.select(this).classed('hover', true);
         }
+        console.log(d);
         showTip(d);
       })
       .on('mouseout', function (d) {
@@ -162,7 +164,7 @@ VIZ.requiresData([
       .attr('r', 5);
 
     function showTip(d) {
-      tip.show(d);
+      tip.show(d, d3.select(d.circle).node());
       $tip.removeClass('out');
       var $circle = $(d.circle);
       var offset = $circle.offset();
@@ -215,9 +217,13 @@ VIZ.requiresData([
       VIZ.requiresData(['json!data/upick2-weekday-rollup-' + draggingFrom.id + '.json']);
       d3.select(this).select('circle').classed('start', true);
       arrow.attr('transform', 'scale(0)');
-      var stations = _.unique(_.flatten(paths.filter(function (d) {
-        return d.indexOf(draggingFrom.id) >= 0;
-      }))).map(function (d) { return idToNode[d]; });
+      var stations = [...new Set(
+        paths
+          .filter(function (d) {
+            return d.includes(draggingFrom.id);
+          })
+          .flat()
+      )].map(function (d) { return idToNode[d]; });
 
       // when you start dragging, immediately draw voronoi polygons around each valid
       // destination point so the path ends at the point that is closest to the cursor
@@ -527,7 +533,7 @@ VIZ.requiresData([
       bottomUnder
         .datum(percentileBandData)
         .transition()
-        .attr("d", d3.svg.area()
+        .attr("d", d3.area()
           .x(function (d) { return x(d[0]); })
           .interpolate('basis')
           .defined(defined)
@@ -536,7 +542,7 @@ VIZ.requiresData([
       topUnder
         .datum(percentileBandData)
         .transition()
-        .attr("d", d3.svg.area()
+        .attr("d", d3.area()
           .x(function (d) { return x(d[0]); })
           .interpolate('basis')
           .defined(defined)
@@ -618,12 +624,10 @@ VIZ.requiresData([
         .on('touchstart', handleHover)
         .on('touchmove', handleHover);
 
-      function handleHover() {
-        var xPos = d3.mouse(scatterplotContainer.node())[0] - margin.left;
+      function handleHover(event) {
+        var xPos = d3.pointer(event, scatterplotContainer.node())[0] - margin.left;
         highlightHour(x.invert(xPos));
-        if (d3.event) {
-          d3.event.preventDefault();
-        }
+        event.preventDefault();
       }
 
       var paragraph = d3.select('.pick-two .key');
@@ -761,7 +765,7 @@ VIZ.requiresData([
 
   function area(num, startIdx, endIdx, neg) {
     var mult = neg ? -1 : 1;
-    return d3.svg.area()
+    return d3.area()
       .x(function (d) { return x(d[0]); })
       .interpolate('basis')
       .defined(defined)
@@ -771,7 +775,7 @@ VIZ.requiresData([
 
   function line(num, idx, neg) {
     var mult = neg ? -1 : 1;
-    return d3.svg.line()
+    return d3.line()
       .x(function (d) { return x(d[0]); })
       .interpolate('basis')
       .defined(defined)
@@ -779,6 +783,6 @@ VIZ.requiresData([
   }
 
   function round(input) {
-    return input.map(d3.round);
+    return input.map(Math.round);
   }
 });
