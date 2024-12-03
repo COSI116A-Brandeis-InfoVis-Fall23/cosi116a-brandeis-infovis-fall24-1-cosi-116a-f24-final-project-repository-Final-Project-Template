@@ -128,12 +128,24 @@ function renderSankey(data) {
                 if (sourceColor) {
                     const transparentColor = d3.color(sourceColor);
                     // Set the links to be the same color as the nodes but more transparent so overlapping links are visible.
-                    transparentColor.opacity = 0.5; 
+                    transparentColor.opacity = 1; 
                     return transparentColor;
                 }
             }
         })
-        .style("opacity", 0.7);
+        .style("opacity", 0.7)
+        .on('mouseover', function (event, d) {
+            hovering = d
+            console.log(d)
+            d3.select(this)
+              .style('opacity', 1)
+          })
+          // Listen to the "mouseout" event, and reset the value of "hovering" and color
+          .on('mouseout', function (event, d) {
+            hovering = 'None'
+            d3.select(this)
+              .style('opacity', 0.7)
+          })
 
     // Draws the nodes
     svg
