@@ -5,7 +5,8 @@ This template will help you get started with your project. Please look through a
 
 ## The GitHub Pages Website
 
-Make sure you publish your project to github pages, and put the URL here: 
+Make sure you publish your project to github pages, and put the URL here: https://github.com/COSI116A-Brandeis-InfoVis-Fall23/cosi-116a-f24-final-project-repository-Serenella20
+
 
 ### Github Pages
 
@@ -85,4 +86,6 @@ Make sure to check these aspects of your work, which are important for every sub
 * Your visualization works as required:
     * Styles are consistent across views.
     * None of the visualizations change size or move on the screen as you interact with them.
+
+    
     
