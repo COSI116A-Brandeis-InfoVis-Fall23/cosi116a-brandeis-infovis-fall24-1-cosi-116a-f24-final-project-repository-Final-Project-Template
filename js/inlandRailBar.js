@@ -75,7 +75,7 @@ function inlandRailBar() {
     
         const tooltip = d3.select("body")
             .append("div")
-            .attr("class", "tooltip2");
+            .attr("class", "tooltip");
 
         infoGroup.on("mouseover", function (d) {
             d3.select(this).classed("mouseover", true);
