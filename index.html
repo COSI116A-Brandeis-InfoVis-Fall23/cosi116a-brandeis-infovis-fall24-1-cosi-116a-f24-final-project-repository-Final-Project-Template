@@ -40,12 +40,13 @@
     
     
     <h1>Motivation</h1>
+    <p>Boston MBTA (Massachusetts Bay Transportation Authority) is the public transportation system in the Boston area, encompassing buses, subways, and trains. The subway system, commonly referred to as "the T," serves as a vital mode of commute 
+      for many residents and visitors but is notorious for frequent delays and slow service. This project is motivated by the need to address user frustrations with the system by analyzing delays at each station across different lines to understand 
+      the extent of disruptions. A key focus is identifying the primary causes of these delays, such as maintenance issues, technical failures, or other disruptions, by examining the most common alerts. Additionally, this project aims to help users by 
+      providing insights into the busiest travel times at specific stations, enabling them to avoid overcrowding. By offering predictions about potential delays based on historical trends and real-time data, commuters can make more informed decisions 
+      about whether to use the subway or alternative transit options. This project seeks to enhance the commuting experience by equipping users with actionable information to plan their journeys more efficiently.</p>
     
-    <p><em>Summary of user needs and motivating questions.</em></p>
-    
-    <p><em>Expectation: There is a clear focus, and a developed explanation of the problem, and a reasonable response is proposed.</em></p>
-
-    
+  
     <h1>Visualization</h1>
     
     <p><em>Include the interactive visualization as part of this page. Static example follows.</em></p>
@@ -149,24 +150,48 @@
     <h1>Task Analysis</h1>
 
     <p><em>Summary of task table.</em></p>
-
-    <p><em>Expectation: Clearly describes domain tasks, processes, goals and abstract tasks for domain problems.</em></p>
-
+    <h3>Domain Tasks</h3>
+    <ul>
+        <li>Delay Analysis: Provide detailed information on average delay times at each station, categorized by subway line, with the ability to display the most common types of alerts (e.g., maintenance, technical issues).</li>
+        <li>Peak Time Identification: Help users identify peak hours for specific stations and lines, along with the average number of riders during those times, enabling them to plan their journeys more effectively.</li>
+        <li>Real-Time Interaction: Enable users to interact with a subway map by hovering over or selecting stations to view key data such as average delay times, most frequent alerts, and ridership statistics.</li>
+        <li>Alternative Transit Insights: Assist users in determining when to consider alternative travel methods based on the severity and frequency of delays.</li>
+    </ul>
+    <h3>Processes</h3>
+    <ul>
+        <li>Users interact with a visual map of the subway lines and stations to retrieve historical data.</li>
+        <li>The system aggregates and displays data in an accessible format like pop-ups or adjacent tables.</li>
+        <li>Users can toggle between weekday and weekend data to customize their experience based on the day of travel.</li>
+    </ul>
+    
+    <h3>Goals</h3>
+    <ul>
+        <li>Provide actionable insights that enable users to make informed travel decisions to help them reduce time spent waiting 
+          for delayed trains. Also offers clear, concise visualizations to enhance usability , and addressed the variability in travel 
+          patterns between weekdays and weekends.</li>
+    </ul>
+    
+    
     <h1>Design Process</h1>
     
+    <p> Our visualization utilizes a map to represent the MBTA subway lines, with each line color-coded according to its official MBTA color scheme (e.g., Red Line, Orange Line), ensuring an intuitive and familiar design for users.
+       The map is linked to a detailed table that uses a heatmap-style color gradient to display passenger flow and delays, where darker colors indicate higher passenger volume or more significant delays.This dual-layered approach allows 
+       users to visually interpret patterns in subway usage and delays with ease. Initially, the map design featured uniform dot sizes for all stations, with detailed passenger flow and delay data only accessible through the linked table.
+       However, after peer reviews and usability testing, we made significant enhancements to the map. In the updated version, stations are represented with variable-sized dots, where larger dots indicate busier stations with higher delays. 
+       This improvement integrates key insights directly into the map, enabling users to understand subway congestion and delays at a glance without needing to cross-reference the table. These design choices are grounded in visualization theory, 
+       leveraging color and size as intuitive indicators of magnitude, and demonstrate iterative improvement based on user feedback to create a more effective and user-friendly tool. </p>
     <p><em>Sketches and design choices to justify final visualization.</em></p>
-
-    <p><em>Expectation: Evidence of iterative improvement.
-    Logical discussion of design choices grounded in theory from course.
-    Discusses feedback from usability testing.</em></p>
 
 
     <h1>Conclusion</h1>
 
-    <p><em>Short summary of work completed and areas for improvement/future-work.</em></p>
-    
-    <p><em>Expectation: Meaningfully wraps up project and has good future directions.</em></p>
-
+    <p>The impact of this project lies in its ability to provide commuters with a powerful tool for navigating the using the MBTA subway system. By offering gathered data into delays, station crowding, and peak travel times, this tool empowers 
+      users to make informed decisions about their transit options, reducing frustration and saving time. The color-coded map, linked table, and dynamic visualizations create a cohesive interface that simplifies complex data for everyday users. 
+      Potential future usage of this tool extends beyond individual commuters to benefit urban planners and MBTA operators. The data can highlight patterns of congestion and inform infrastructure investments or schedule adjustments. 
+      Policymakers can leverage these to advocate for targeted funding or improvements in underperforming stations. MBTA operators can use the analytics to identify frequent delay causes and optimize operations to improve efficiency and reliability. 
+      Essentically, the tool could help users anticipate delays and crowding based on historical trends, while expanding to include data from other transit modes like buses and commuter rail. A mobile-friendly version could make the tool even more accessible,
+      providing on-the-go insights to commuters. This project addresses existing gaps in transit transparency but also has the potential to enhance how public transportation data is used for long-term system optimization and commuter satisfaction.
+    </p>
     
     <h1>Acknowledgments</h1>
 
