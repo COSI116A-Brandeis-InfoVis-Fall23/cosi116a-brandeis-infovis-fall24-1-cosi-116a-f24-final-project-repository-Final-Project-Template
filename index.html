@@ -2,15 +2,16 @@
 <html lang="en">
 
 <!-- Metadata -->
+
 <head>
   <meta charset="utf-8">
-  
+
   <!-- Title -->
   <title>Project Team #: Topic, COSI 116A F23</title>
-  
+
   <!-- CSS Styling -->
   <link rel="stylesheet" href="style.css">
- 
+
   <!-- Favicons -->
   <link rel="apple-touch-icon" sizes="180x180" href="favicons/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="favicons/favicon-32x32.png">
@@ -21,106 +22,252 @@
   <meta name="msapplication-config" content="favicons/browserconfig.xml">
   <meta name="theme-color" content="#ffffff">
   <meta http-equiv="Content-Security-Policy" content="script-src 'self' 'unsafe-eval'">
+
+  <!-- Leaflet.js -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+  <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+  <script src="https://unpkg.com/leaflet.heat"></script>
+
+  <style>
+    #map {
+      height: 600px;
+      width: 100%;
+    }
+
+    .borough {
+      color: #333;
+      weight: 1;
+      fillOpacity: 0.4;
+    }
+
+    .line {
+      color: blue;
+      weight: 2;
+      opacity: 0.8;
+    }
+
+    .station-node {
+      background-color: orange;
+      border-radius: 50%;
+      cursor: pointer;
+    }
+
+    .tooltip {
+      font-size: 12px;
+      background: white;
+      padding: 5px;
+      border: 1px solid #ddd;
+      border-radius: 3px;
+    }
+  </style>
+
 </head>
 
 <!-- Main page content -->
+
 <body>
 
   <!-- Update this with your GitHub repo URL -->
-  <span id="forkongithub"><a href="https://github.com/COSI116A-Brandeis-InfoVis-Fall23/cosi-116a-f24-final-project-repository-Asurazpr.git">Fork me on GitHub</a></span>
+  <span id="forkongithub"><a
+      href="https://github.com/COSI116A-Brandeis-InfoVis-Fall23/cosi-116a-f24-final-project-repository-Asurazpr.git">Fork
+      me on GitHub</a></span>
 
   <!-- Your writeup goes here -->
-  <div class = "content-column">
-  
-    <h1>Project Team 18: Public Transportation, COSI 116A F24</h1>
-    
-    <p><strong>Jason Chen</strong>, <strong>Capo Wang</strong>, <strong>Tri Phan</strong>, <strong>Isaac Zygmuntowicz</strong></p>
-    
-    <p>Project-long Course Project as part of COSI 116A: Information Visualization</a>, taught by <a href="https://cs.brandeis.edu/~dylan/">Prof. Dylan Cashman</a>, <a href="https://cs.brandeis.edu/">Brandeis University</a>.</p>
-    
-    
-    <h1>Motivation</h1>
-    
-    <p><em>Summary of user needs and motivating questions.</em></p>
-    
-    <p><em>Expectation: There is a clear focus, and a developed explanation of the problem, and a reasonable response is proposed.</em></p>
+  <div class="content-column">
 
-    
+    <h1>Project Team 18: Public Transportation, COSI 116A F24</h1>
+
+    <p><strong>Jason Chen</strong>, <strong>Capo Wang</strong>, <strong>Tri Phan</strong>, <strong>Isaac
+        Zygmuntowicz</strong></p>
+
+    <p>Project-long Course Project as part of COSI 116A: Information Visualization</a>, taught by <a
+        href="https://cs.brandeis.edu/~dylan/">Prof. Dylan Cashman</a>, <a href="https://cs.brandeis.edu/">Brandeis
+        University</a>.</p>
+
+
+    <h1>Motivation</h1>
+
+    <p><em>Summary of user needs and motivating questions.</em></p>
+
+    <p><em>Expectation: There is a clear focus, and a developed explanation of the problem, and a reasonable response is
+        proposed.</em></p>
+
+
     <h1>Visualization</h1>
-    
+
     <p><em>Include the interactive visualization as part of this page. Static example follows.</em></p>
-    
+
   </div>
-  
+
   <!-- Your visualization here -->
-  <div class="vis-holder">   
+  <div class="vis-holder">
     <!-- Line Chart -->
     <h2>Line Chart: Public Transport Ridership vs. COVID Cases</h2>
-    <div id="lineChart"></div>        
+    <div id="lineChart"></div>
 
     <!-- Bar Chart -->
     <h2>Bar Chart: Percentage of Public Transport Ridership (vs. Pre-COVID)</h2>
     <div id="barChart"></div>
+
+    <!-- Heat Map -->
+    <div id="map"></div>
+
+    <script>
+      const map = L.map("map").setView([40.7128, -74.0060], 13);
+
+      //basemap
+      L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
+        attribution: "&copy; OpenStreetMap contributors",
+      }).addTo(map);
+
+      // Load Borough Boundaries GeoJSON
+      fetch("js/geo/new-york-city-boroughs.geojson")
+        .then((response) => response.json())
+        .then((boroughData) => {
+          L.geoJSON(boroughData, {
+            style: {
+              color: "#333",
+              weight: 1,
+              fillColor: "#e0e0e0",
+              fillOpacity: 0.4,
+            },
+            interactive: false,
+          }).addTo(map);
+        });
+
+      // Load Subway Lines GeoJSON
+      fetch("js/geo/subway-lines.geojson")
+        .then((response) => response.json())
+        .then((lineData) => {
+          L.geoJSON(lineData, {
+            style: {
+              color: "blue",
+              weight: 2,
+              opacity: 0.8,
+            },
+            interactive: false,
+          }).addTo(map);
+        });
+
+      // Load Subway Stations GeoJSON and Create Heatmap + Hoverable Nodes
+      fetch("js/geo/geocoded1.geojson")
+        .then((response) => response.json())
+        .then((stationData) => {
+          const heatPoints = stationData.features.map((station) => [
+            station.geometry.coordinates[1], // Latitude
+            station.geometry.coordinates[0], // Longitude
+            station.properties.Traffic / 5000, // Normalize traffic for intensity
+          ]);
+
+          L.heatLayer(heatPoints, {
+            radius: 25,
+            blur: 25,
+            maxZoom: 17,
+            opacity: 0.5, // Lower opacity for heatmap
+          }).addTo(map);
+
+          // Add hoverable nodes for each station
+          stationData.features.forEach((station) => {
+            const lat = station.geometry.coordinates[1];
+            const lng = station.geometry.coordinates[0];
+            const stationID = station.properties.StationID || "Unknown";
+            const controlArea = station.properties.ControlArea || "Unknown";
+            const traffic = station.properties.Traffic || 0;
+
+            // Add a circle marker
+            const marker = L.circleMarker([lat, lng], {
+              radius: 2,
+              color: "orange",
+              fillColor: "orange",
+              fillOpacity: 0.9,
+            }).addTo(map);
+
+            // Add a tooltip on hover
+            marker.bindTooltip(
+              `<strong>StationID:</strong> ${stationID}<br>
+               <strong>Control Area:</strong> ${controlArea}<br>
+               <strong>Traffic:</strong> ${traffic}`,
+              {
+                permanent: false,
+                direction: "top",
+                className: "tooltip",
+              }
+            );
+
+            marker.on("click", () => {
+              alert(`StationID: ${stationID}\nControl Area: ${controlArea}\nTraffic: ${traffic}`);
+            });
+          });
+        });
+    </script>
   </div>
 
   <div class="tooltip"></div>
   <!-- Your writeup goes here -->
-  <div class = "content-column">
+  <div class="content-column">
 
     <h1>Demo Video</h1>
-    
-    <p><em>Embedded MP4 demo video using the HTML5 &lt;video&gt; tag. For example, this screen recording Prof. Cody Dunne made of Mike Bostock's flexible transitions in D3 slide:</em></p>
-    
+
+    <p><em>Embedded MP4 demo video using the HTML5 &lt;video&gt; tag. For example, this screen recording Prof. Cody
+        Dunne made of Mike Bostock's flexible transitions in D3 slide:</em></p>
+
     <video controls width="100%">
       <source src="http://www.ccs.neu.edu/home/cody/courses/shared/d3-flexible-transitions.mp4" type="video/mp4">
       <p>Your browser doesn't support HTML5 video. Here is
-       a <a href="http://www.ccs.neu.edu/home/cody/courses/shared/d3-flexible-transitions.mp4">link to the video</a> instead.</p>
+        a <a href="http://www.ccs.neu.edu/home/cody/courses/shared/d3-flexible-transitions.mp4">link to the video</a>
+        instead.</p>
     </video>
 
     <h1>Visualization explanation</h1>
-    
-    <p><em>Final visualization screenshots (PNG images), design justifications, UI walk-through, and linked presentation slides.</em></p>
+
+    <p><em>Final visualization screenshots (PNG images), design justifications, UI walk-through, and linked presentation
+        slides.</em></p>
 
     <h1>Data Analysis</h1>
     <p><em>Summary of data, data types, and data preprocessing.</em></p>
 
-    <p><em>Expectation: Data sources match the problem statement and are appropriate. These descriptions should be very explicit so someone could read your page and properly reproduce your results.</em></p>
+    <p><em>Expectation: Data sources match the problem statement and are appropriate. These descriptions should be very
+        explicit so someone could read your page and properly reproduce your results.</em></p>
 
     <h1>Task Analysis</h1>
 
     <p><em>Summary of task table.</em></p>
 
-    <p><em>Expectation: Clearly describes domain tasks, processes, goals and abstract tasks for domain problems.</em></p>
+    <p><em>Expectation: Clearly describes domain tasks, processes, goals and abstract tasks for domain problems.</em>
+    </p>
 
     <h1>Design Process</h1>
-    
+
     <p><em>Sketches and design choices to justify final visualization.</em></p>
 
     <p><em>Expectation: Evidence of iterative improvement.
-    Logical discussion of design choices grounded in theory from course.
-    Discusses feedback from usability testing.</em></p>
+        Logical discussion of design choices grounded in theory from course.
+        Discusses feedback from usability testing.</em></p>
 
 
     <h1>Conclusion</h1>
 
     <p><em>Short summary of work completed and areas for improvement/future-work.</em></p>
-    
+
     <p><em>Expectation: Meaningfully wraps up project and has good future directions.</em></p>
 
-    
+
     <h1>Acknowledgments</h1>
 
-    <p><em>List here where any code, packages/libraries, text, images, designs, etc. that you leverage come from.</em></p>
-    
+    <p><em>List here where any code, packages/libraries, text, images, designs, etc. that you leverage come from.</em>
+    </p>
+
     <ul>
       <li><a href="https://d3js.org/">D3: Data-Driven Documents</a> by Mike Bostock.</li>
-      <li><a href="https://codepo8.github.io/css-fork-on-github-ribbon/#">Pure CSS responsive "Fork me on GitHub" ribbon</a> by Chris Heilmann.</li>
+      <li><a href="https://codepo8.github.io/css-fork-on-github-ribbon/#">Pure CSS responsive "Fork me on GitHub"
+          ribbon</a> by Chris Heilmann.</li>
     </ul>
-    
+
   </div>
-  
+
   <!-- Scripts at the end avoid need for dealing with async, defer, or onload event handlers -->
   <script src="lib/d3.v4/d3.v4.js"></script>
   <script src="js/visualization.js"></script>
 </body>
+
 </html>
