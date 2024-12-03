@@ -1,7 +1,7 @@
 var svgStates = d3.select("svg #states"),
     svgBoundary = d3.select("svg #boundary"),
     states = {},
-    startYear = 1790,
+    startYear = 1910,
     currentYear = startYear;
 
 var width = window.innerWidth, // (1)
@@ -22,7 +22,7 @@ var path = d3.geoPath()
 
 d3.json("data/states.json", function(error, topologies) {  // (4)
 
-  var state = topojson.feature(topologies[0], topologies[0].objects.stdin);  // (5)
+  var state = topojson.feature(topologies[12], topologies[12].objects.stdin);  // (5)
 
   svgStates.selectAll("path")  
   .data(state.features)

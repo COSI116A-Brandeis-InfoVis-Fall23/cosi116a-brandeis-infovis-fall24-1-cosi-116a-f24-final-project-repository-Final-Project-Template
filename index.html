@@ -6,7 +6,7 @@
   <meta charset="utf-8">
   
   <!-- Title -->
-  <title>Project Team #: Topic, COSI 116A F23</title>
+  <title>Project Team 5: Topic, COSI 116A F24</title>
   
   <!-- CSS Styling -->
   <link rel="stylesheet" href="style.css">
@@ -47,18 +47,35 @@
   <!-- Your writeup goes here -->
   <div class = "content-column">
   
-    <h1>Project Team #: Topic, COSI 116A F23</h1>
+    <h1>Project Team 5: Topic, COSI 116A F24</h1>
     
-    <p><strong>Student One</strong>, <strong>Student Two</strong>, <strong>Student Three</strong></p>
+    <p><strong>Cooper Gottfried</strong>, <strong>Dean Carey</strong>, <strong>Garret Rieden</strong>, <strong>Adam Rieden</strong></p>
     
     <p>Project-long Course Project as part of COSI 116A: Information Visualization</a>, taught by <a href="https://cs.brandeis.edu/~dylan/">Prof. Dylan Cashman</a>, <a href="https://cs.brandeis.edu/">Brandeis University</a>.</p>
     
     
     <h1>Motivation</h1>
     
-    <p><em>Summary of user needs and motivating questions.</em></p>
-    
-    <p><em>Expectation: There is a clear focus, and a developed explanation of the problem, and a reasonable response is proposed.</em></p>
+    <p>Initially, we were motivated to understand the scope and scale of government financial waste. 
+      During our initial research, we came across public-facing examples of government spending that 
+      we considered wasteful (i.e; <a href="https://www.farmlinkproject.org/stories-and-features/cheese-caves-and-food-surpluses-why-the-u-s-government-currently-stores-1-4-billion-lbs-of-cheese">government cheese caves</a>), and wanted to dig deeper into the anatomy 
+      of government spending nationwide. To provide a basis for interesting analysis, we chose to break 
+      spending down in two major ways: by state and by department. After exploring available resources, 
+      we found that the Department of Defense is, in nearly every U.S. state, one of the top spenders. 
+      Given that the Department of Defense is often responsible for a significant portion of budgetary 
+      waste (i.e; <a href="https://www.cnn.com/2022/04/27/politics/afghan-weapons-left-behind/index.html">leaving equipment behind after operations</a>), we chose to focus our visualization on 
+      how much spending the Department of Defense is responsible for by state. Our data provides 
+      interesting insights into the spending priorities of the U.S. government, and should spark 
+      meaningful discussions about the massive military spending that has become routine in America. 
+      By showing the dollar amount spent by the military, and the percentage of a state’s total 
+      spending that takes up, we aim to provide a complete picture of the Department of Defense’s 
+      impact on the U.S.’s budget.<br><br>
+      </p><p>
+      Motivating questions:
+      <p>1. Where does the U.S. government spend the majority of its money?</p>
+      <p>2. How does military spending compare to other major categories of spending?</p>
+      <p>3. How does this comparison vary across states?</p>
+      </p>
 
     
     <h1>Visualization</h1>
@@ -84,54 +101,85 @@
   <!-- Your writeup goes here -->
   <div class = "content-column">
 
-    <h1>Demo Video</h1>
+    <h1><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>Demo Video</h1>
     
-    <p><em>Embedded MP4 demo video using the HTML5 &lt;video&gt; tag. For example, this screen recording Prof. Cody Dunne made of Mike Bostock's flexible transitions in D3 slide:</em></p>
+    <p>To be done after visualization is complete.</p>
     
-    <video controls width="100%">
+    <!-- <video controls width="100%">
       <source src="http://www.ccs.neu.edu/home/cody/courses/shared/d3-flexible-transitions.mp4" type="video/mp4">
       <p>Your browser doesn't support HTML5 video. Here is
        a <a href="http://www.ccs.neu.edu/home/cody/courses/shared/d3-flexible-transitions.mp4">link to the video</a> instead.</p>
-    </video>
+    </video> -->
 
     <h1>Visualization explanation</h1>
     
-    <p><em>Final visualization screenshots (PNG images), design justifications, UI walk-through, and linked presentation slides.</em></p>
+    <p>To be done after visualization is complete.</p>
 
     <h1>Data Analysis</h1>
-    <p><em>Summary of data, data types, and data preprocessing.</em></p>
-
-    <p><em>Expectation: Data sources match the problem statement and are appropriate. These descriptions should be very explicit so someone could read your page and properly reproduce your results.</em></p>
+    <p>Our data comes from the U.S. government’s public repository of state-level spending data, 
+      at <a href="https://www.usaspending.gov/state">https://www.usaspending.gov/state</a>. 
+      For each state, we filtered the data to be from January 1st, 2023 to December 31st, 2023. 
+      Some states still had too many records to download, so we filtered the data to
+      only include transactions over $250. We feel that both of these filters 
+      ensure that our data is a representative sample of government spending over the course, 
+      addressing data availability concerns without compromising on data validity. Once the 
+      data was downloaded, we extracted the total outlayed amount for the Department of Defense 
+      and the other three departments that spent the most in that state. This allowed us to create 
+      a representative sample of the state’s total spending, as there was typically a large drop 
+      off after the first few highest-spending departments. This process was repeated for each state, 
+      and provided us with all the data we would need to complete our visualization. We put the total 
+      outlayed amount for each state into Tableau to create the bar graphs necessary for our tooltips, 
+      used the DoD’s spending to color in our heatmap, and used all of the data to create our table.
+      <br><br>We chose not to include the spending data for every department that operated within each state. 
+      By narrowing our focus to only the Department of Defense and the other top three departments, 
+      we feel that we created a more easily understood (but still insightful) visualization.
+      </p>
 
     <h1>Task Analysis</h1>
 
-    <p><em>Summary of task table.</em></p>
-
-    <p><em>Expectation: Clearly describes domain tasks, processes, goals and abstract tasks for domain problems.</em></p>
+    <p>Our task table holds three tasks. By order of importance, the first task is to understand 
+      how much money the government wastes per category. To categorize the government’s waste, we 
+      broke spending down by department on a state level. We feel that, wherever the most spending 
+      is within a state, the most waste also likely resides. So, in order to make insights into how 
+      much money is being wasted by different government departments, we must first understand how 
+      much they’re actually spending. This task’s key goals are to compare, lookup, and present 
+      data. The second most important task is seeing categories of government spending. This is 
+      completed during the pursuit of the aforementioned goal. To understand government waste, 
+      we must first understand government spending. The goals of this task are to summarize, 
+      explore, and discover data. Our third most important goal is to see what problems the 
+      wasted money could address. This is addressed in our conclusion. The goal of this task is 
+      to identify, browse, and discover the data. <br><br>While the first two tasks are essential to the 
+      visualization itself, the third task is especially important to its interpretation. By 
+      gaining an understanding of what the U.S. government could alternatively spend its budget 
+      on, the spending choices it currently makes take on new meanings.
+      </p>
 
     <h1>Design Process</h1>
     
-    <p><em>Sketches and design choices to justify final visualization.</em></p>
-
-    <p><em>Expectation: Evidence of iterative improvement.
-    Logical discussion of design choices grounded in theory from course.
-    Discusses feedback from usability testing.</em></p>
-
+    <p>For our final visualization, the heat map is central. The more red a state is, the 
+      higher the amount the Department of Defense spent in that state. We’ll have two view 
+      present: one that shows the dollar amount spent by the Department of Defense in that 
+      state, and one showing the percentage of total spending within the state that is 
+      attributed to the Department of Defense. Combined, these will provide an accurate 
+      picture of the Department’s spending nationwide. We’re using the color red to emphasize 
+      the violent nature of many Department of Defense operations, and the gravity of the amount that they are spending.
+      When a state is moused over, a tooltip will pop up, containing a blue bar graph 
+      showing more information about the spending within the state. The corresponding 
+      row in the table will also light up in blue. We chose to use blue to contrast with 
+      the red of the heat map, drawing attention to the small details that we’re making available.
+      <br><br>More information (and photos of sketches) will be added in to this section as progress continues on our visualization.
+    </p>
 
     <h1>Conclusion</h1>
 
-    <p><em>Short summary of work completed and areas for improvement/future-work.</em></p>
-    
-    <p><em>Expectation: Meaningfully wraps up project and has good future directions.</em></p>
+    <p>To be done after visualization is complete.</p>
 
     
-    <h1>Acknowledgments</h1>
-
-    <p><em>List here where any code, packages/libraries, text, images, designs, etc. that you leverage come from.</em></p>
-    
+    <h1>Acknowledgments</h1>    
     <ul>
       <li><a href="https://d3js.org/">D3: Data-Driven Documents</a> by Mike Bostock.</li>
       <li><a href="https://codepo8.github.io/css-fork-on-github-ribbon/#">Pure CSS responsive "Fork me on GitHub" ribbon</a> by Chris Heilmann.</li>
+      <li>More to be added</li>
     </ul>
     
   </div>
