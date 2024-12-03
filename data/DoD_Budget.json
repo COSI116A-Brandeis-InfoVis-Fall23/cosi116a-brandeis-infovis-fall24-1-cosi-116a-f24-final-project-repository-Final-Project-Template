@@ -40,6 +40,11 @@
     "DoD % of State Total": "54.9%"
   },
   {
+    "State": "District of Columbia",
+    "DoD Spending in State": "35,242,582,333",
+    "DoD % of State Total": "79.1%"
+  },
+  {
     "State": "Florida",
     "DoD Spending in State": "15,787,420,103",
     "DoD % of State Total": "11.6%"
@@ -233,11 +238,6 @@
     "State": "Washington",
     "DoD Spending in State": "45,897,241,049",
     "DoD % of State Total": "96.3%"
-  },
-  {
-    "State": "Washington D.C.",
-    "DoD Spending in State": "35,242,582,333",
-    "DoD % of State Total": "79.1%"
   },
   {
     "State": "West Virginia",
