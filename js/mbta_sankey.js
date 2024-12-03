@@ -100,6 +100,17 @@ function renderSankey(data) {
     });
     */
 
+    let tooltip = d3.select("body")
+    .append("div")
+    .style("position", "absolute")
+    .style("z-index", "20")
+    .style("visibility", "hidden")
+    .style("color", "white")
+    .style("background-color", "black")
+    .style("border-radius", "5px")
+    .style("padding", "5px")
+    .text("a simple tooltip");
+
 
     // Define custom colors for nodes 
     // Used the same color scheme as the line chart 
@@ -128,12 +139,40 @@ function renderSankey(data) {
                 if (sourceColor) {
                     const transparentColor = d3.color(sourceColor);
                     // Set the links to be the same color as the nodes but more transparent so overlapping links are visible.
-                    transparentColor.opacity = 0.5; 
+                    // transparentColor.opacity = 0.5; 
                     return transparentColor;
                 }
             }
         })
-        .style("opacity", 0.7);
+        .style("opacity", 0.5)
+        .on('mouseover', function (event, d) {
+            hovering = d
+            console.log(d)
+            const milesInMillions = (d.value / 1e6).toFixed(1); 
+                const tooltipMiles =  `${milesInMillions}M`; 
+            d3.select(this)
+              .style('opacity', 1)
+              tooltip.text("Miles traveled: "+ tooltipMiles
+                
+              ) 
+              .append("html").text("Fuel Source: "+ d.source.name)
+              .append("html").text("Mode: "+d.target.name)
+              tooltip.style("visibility", "visible");
+              
+          })
+          .on("mousemove", function(){
+            console.log(event.pageY-40)
+            tooltip.style("top", (event.pageY-100)+"px")
+                          .style("left",(event.pageX-100)+"px")
+          })
+          // Listen to the "mouseout" event, and reset the value of "hovering" and color
+          .on('mouseout', function (event, d) {
+            hovering = 'None'
+            d3.select(this)
+              .style('opacity', 0.5)
+              tooltip.style("visibility", "hidden");
+          })
+          
 
     // Draws the nodes
     svg
