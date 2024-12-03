@@ -89,4 +89,46 @@ d3.json("data/Fuel_and_Energy_cleaned.json").then((data) => {
       })
       .style("font-size", "12px")
       .text(([fuelType]) => fuelType);
+
+  // Details on Demand
+
+  let dimensions = {
+    width: 1000,
+    height: 500,
+    margins: 50,
+  };
+
+
+  const container = svg
+    .append("g")
+    .attr(
+        "transform",
+        `translate(${dimensions.margins}, ${dimensions.margins})`
+    )
+    .append("path")
+    .datum(nestedData)
+    .attr("d", line)
+    .attr("fill", "none")
+    .attr("stroke", "#30475e")
+    .attr("stroke-width",2)
+    .on('touchmouse mousemove', function(event){
+        const mouse = d3.pointer(event, this)
+        console.log(mouse)
+    })
+    .on('mouseleave', function(event){
+
+    });
+
+    const tooltip = d3.select("#tooltip")
+    const tooltipDot = container
+        .append("circle")
+        .attr("r",5)
+        .attr("fill", "#fc8781")
+        .attr("smoke", "black")
+        .attr("stroke-width",2)
+        .style("opacity",0)
+        .style('pointer-events','none');
+
+   
+
 });

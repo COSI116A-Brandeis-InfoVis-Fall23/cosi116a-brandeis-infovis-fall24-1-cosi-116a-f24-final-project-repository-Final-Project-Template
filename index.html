@@ -40,7 +40,12 @@
     
     <h1>Motivation</h1>
     
-    <p><em>Summary of user needs and motivating questions.</em></p>
+    <p>The users we are catering to are the MBTA officials and others who would like these 
+      visualizations in order to determine where the most fuel is being used, what type and how 
+      much. From this, the MBTA should be able to determine figures like environmental impact, 
+      costs, etc. The goal of these visualizations is to present both an overview of trends over 
+      the years, as well as provide details on demand. It will be presented neutrally, yet still 
+      “tell a story,” in order to best visualize where fuel has gone within the MBTA. </p>
     
     <p><em>Expectation: There is a clear focus, and a developed explanation of the problem, and a reasonable response is proposed.</em></p>
 
@@ -50,6 +55,7 @@
     <p><em>Include the interactive visualization as part of this page. Static example follows.</em></p>
     
     <div id="linechart"></div>
+    <div id="tooltip"></div>
     <div id="sankey-diagram"></div>
 
   
@@ -78,22 +84,96 @@
 
     <h1>Visualization explanation</h1>
     
-    <p><em>Final visualization screenshots (PNG images), design justifications, UI walk-through, and linked presentation slides.</em></p>
+    
+    </p>
+      From the beginning, our visualizations were focused on accuracy and readability. 
+      Because our focus was not to convince anyone of a certain point, or make a 
+      particular statement, we didn't need to cater to any sort of emotion or mission statement. 
+      Rather, we ensure our graphs simply tell the story of where fuel has gone within the
+      MBTA in the time period specified.
+    </p>
+    <p>
+      Specifically, our use of our two chosen visualizations, 
+      the line graph and the parallel diagram, were chosen because we determined '
+      them to be very well suited for the portrayal of general trends. If used in a
+       business setting, we feel our graphs would be able to give immediate and clear 
+       impressions of questions like: "What is the most used fuel?" or "What fuel source 
+       fuels the most types of transport?" It was also with this in mind we chose 
+       bright, identifiable colors. 
+      </p>
+      <p><em>Final visualization screenshots (PNG images), design justifications, UI walk-through, and linked presentation slides.</em></p>
 
     <h1>Data Analysis</h1>
     <p><em>Summary of data, data types, and data preprocessing.</em></p>
 
-    <p><em>Expectation: Data sources match the problem statement and are appropriate. These descriptions should be very explicit so someone could read your page and properly reproduce your results.</em></p>
+    
+    <p>Our data comes from a dataset titled: Fuel and Energy, a publicly available 
+      dataset from which we pulled our numbers about Year, Fuel Source, 
+      Miles Traveled, and Mode of Travel. There were other categories, but we did 
+      not use them due to them not fitting into our focus or finding them unclear.
+       We cleaned the data by removing empty cells and transferring the data into a
+        CSV file, then a json file.
+      </p>
+      <p><em>Expectation: Data sources match the problem statement and are appropriate. These descriptions should be very explicit so someone could read your page and properly reproduce your results.</em></p>
 
     <h1>Task Analysis</h1>
 
     <p><em>Summary of task table.</em></p>
+
+    <p>Our tasks shifted as our focus narrowed down into our current topic and \
+      found we were limited by a lack of appropriate datasets. There are a few 
+      however, we prioritized:</p>
+    
+      <ol>
+        <li>Analyzing annual trends in energy consumption and emissions.
+          As mentioned previously, we were sorely disappointed by the lack of 
+          available data of this type. However, we were definitely able to satisfy 
+          the part of the task where we aimed to analyze trends in energy consumption, 
+          expanding on that by what energy was consumed, where it went, and how many 
+          miles were derived from it. </li>
+        <li>
+          Comparing each mode of transportation's miles traveled over instances of time.
+          We were able to get this data from the Miles Traveled category of our dataset. 
+          The logic being that it allowed for conclusions to be made about what the “best” 
+          or most “efficient” fuel source was. If more fuel was dedicated to a service 
+          that didn’t travel as much as another, that could be considered a source of 
+          inquiry.
+        </li>
+        <li>
+          Viewing trains by fuel type or line.
+          The categories of Fuel Source and Mode allow us to summarize these aspects. 
+          Different types of fuel fuel different modes of transportation found within 
+          the MBTA. And, as seen by our parallel diagram, some overlap, while some don't.
+           Our visualizations lend to a quick analysis of these clearly separated and 
+           labeled categories.
+        </li>
+      </ol>
 
     <p><em>Expectation: Clearly describes domain tasks, processes, goals and abstract tasks for domain problems.</em></p>
 
     <h1>Design Process</h1>
     
     <p><em>Sketches and design choices to justify final visualization.</em></p>
+
+    <p>
+      Our designs stemmed from rough drafts drawn by Ben Lichter. We found them easy 
+      to understand and the best at making the most of categorical clarity. 
+      His marks and channels benefited the data most by using size to quickly create 
+      immediate visible differences between amounts and distinct color that didn’t 
+      communicate anything outside of simply categorizing fuel types. From there, we 
+      made a rough draft of our visual, adding the necessary categories in PowerPoint, 
+      to see if it held up with our demands. It was from this second rough draft 
+      that we determined how brushing and linking would function, how to filter the 
+      two graphs, and how the user would select the graph to receive data on demand. 
+    </p>
+    <p>
+      One specific difference we made was to slightly lower the transparency of the 
+      lines in the parallel diagram. In the one drawn by Ben, we didn’t consider how 
+      the graph would look when colors overlapped to travel from fuel source to mode 
+      of transportation. We came up with the idea to slightly lower the opacity of 
+      the lines. That way, certain lines would be followable even when they overlapped, 
+      and if made solid when selected, added a visual indicator of selection.
+    </p>
 
     <p><em>Expectation: Evidence of iterative improvement.
     Logical discussion of design choices grounded in theory from course.
