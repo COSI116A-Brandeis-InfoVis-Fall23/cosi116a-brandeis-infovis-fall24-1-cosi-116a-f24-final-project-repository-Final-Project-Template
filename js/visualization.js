@@ -16,7 +16,7 @@
     // a div id selector to put our table in; and the data to use.
     let tableData = table()
       .selectionDispatcher(d3.dispatch(dispatchString))
-      ("#table", data);
+      ("#table", data); 
 
 
     // When the table is updated via brushing, tell the line chart and scatterplot
