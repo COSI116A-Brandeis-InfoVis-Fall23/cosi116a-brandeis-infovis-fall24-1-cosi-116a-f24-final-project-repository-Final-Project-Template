@@ -79,16 +79,14 @@ function countryBar() {
 
         infoGroup.on("mouseover", function (d) {
             d3.select(this).classed("mouseover", true);
-            let currentCount = 0; 
             let tooltipContent = "Rail investment proportion put into maintenence in 2021.";
-            currentCount ++;
-            let currentHeight = 30 + (40 * currentCount); //Updates tooltip height
     
     
             tooltip
               .style("opacity", 1)
               .style("visibility", "visible")
-              .style("height", currentHeight +"px")
+              .style("height", "36px")
+              .style("width", "170px")
               .html(tooltipContent);  // Display the tooltip content
           })
           .on("mousemove", function () {

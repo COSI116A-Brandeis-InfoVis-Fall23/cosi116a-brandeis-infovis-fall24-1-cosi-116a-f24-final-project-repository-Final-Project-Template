@@ -79,16 +79,15 @@ function inlandRailBar() {
 
         infoGroup.on("mouseover", function (d) {
             d3.select(this).classed("mouseover", true);
-            let currentCount = 0; 
             let tooltipContent = "Inland investment includes rail, road, waterway, and air infrastructure. Both rail and inland investment are from 2021.";
-            currentCount ++;
-            let currentHeight = 30 + (40 * currentCount); //Updates tooltip height
+
     
     
             tooltip
               .style("opacity", 1)
               .style("visibility", "visible")
-              .style("height", currentHeight +"px")
+              .style("height", "36px")
+              .style("width", "350px")
               .html(tooltipContent);  // Display the tooltip content
           })
           .on("mousemove", function () {
