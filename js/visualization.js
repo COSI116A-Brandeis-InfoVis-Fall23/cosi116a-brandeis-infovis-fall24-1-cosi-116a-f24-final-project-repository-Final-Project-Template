@@ -58,7 +58,35 @@ let scHeartDisease = scatterplot()
     .yLabelOffset(150)
     
 scHeartDisease("#scatterplot", scatterData);
-
+d3.selectAll("svg").on("mouseover", (d, i, elements) =>{          //for linking
+  d3.selectAll("g path").on("mouseover", (d, i, elements) =>{     //shade states on mosueover
+    d3.select(elements[i]).classed("mouseover", true);
+  });
+  d3.selectAll("g path").on("mouseout", (d, i, elements) =>{
+    d3.select(elements[i]).classed("mouseover", false);
+  });
+  d3.selectAll("g path").on("mousedown", (d, i, elements) =>{     //linking when click state
+    var selected = d.properties.STATENAM;
+    console.log(selected);
+    let data = years.map(year => {            //make new data for selected state
+      return { 
+          year: year, 
+          value: rates[year][selected] 
+      };
+    });
+    d3.select("#linechart svg").remove();     //delete old linechart
+    let lcHeartDiseaseNew = linechart()
+    .x(d => d.year)
+    // .xLabel("Year")
+    .y(d => d.value)
+    // .yLabel("Age-Adjusted Heart Disease Death Rate")
+    .yLabelOffset(40)
+  lcHeartDiseaseNew("#linechart", data);      //create new linechart with the enw data
+  //scatterplot linking goes here
+  d3.selectAll("#state").text(selected);
+  });
+});
 })
+
 
 })());

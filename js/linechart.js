@@ -114,6 +114,8 @@ function linechart() {
     // svg.call(brush);
       
     // Highlight points when brushed
+
+    
     function brush(g) {
       const brush = d3.brush()
         .on("start brush", highlight)

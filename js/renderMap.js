@@ -49,18 +49,7 @@ d3.json("data/states.json", function(error, topologies) {  // (4)
 
 
 d3.selectAll("svg").on("mouseover", (d, i, elements) =>{          //highlight states on mouseover - add brushing later
-  d3.selectAll("g path").on("mouseover", (d, i, elements) =>{
-    d3.select(elements[i]).classed("mouseover", true);
-  });
-  d3.selectAll("g path").on("mouseout", (d, i, elements) =>{
-    d3.select(elements[i]).classed("mouseover", false);
-  });
-  d3.selectAll("g path").on("mousedown", (d, i, elements) =>{     //linking
-    var selected = d.properties.STATENAM;
-    d3.selectAll("#state").text(selected);
-  });
 });
-//eventually need to add a on mousedown thing here for linking
 
 d3.selectAll("button").on("mousedown", (d, i, elements) =>{          //add button to confirm year
   currentYear = document.getElementById('years').value;
