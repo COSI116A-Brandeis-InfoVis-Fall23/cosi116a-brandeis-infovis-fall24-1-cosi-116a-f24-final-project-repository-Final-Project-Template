@@ -50,6 +50,7 @@ h1, h2, h3 {
 .bar-graph {
 	width: 100%; 
 	height: 100%; 
+	display: block;
 }
 
 .bar-button-container button {

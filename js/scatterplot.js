@@ -270,7 +270,7 @@ function scatterplot() {
         labels
           .attr("x", (d, i) => data[i].x)
           .attr("y", (d, i) => data[i].y);
-
+        
         lines
           .attr("x1", (d, i) => X(d))
           .attr("y1", (d, i) => Y(d))
@@ -285,7 +285,8 @@ function scatterplot() {
       function appendLegend(svg, data, sizeScale){
         let legend = svg.append("g")
           .attr("class", "legend")
-          .attr("transform",  "translate(" + (width + margin.right - 100) + ",30)");
+          .attr("transform",  "translate(" + (width + margin.right - 100) + ",30)")
+          .style("pointer-events", "none");
         
         legend.append("text")
           .attr("x", -70)
@@ -323,9 +324,20 @@ function scatterplot() {
               .style("font-size", "12px")
               .style("fill", "black")
               .text(function(d) {
-                // Format population as millions and append "mill"
+                // Format population as millions
                 return `${d3.format(".0f")(d[0] / 1000000)} - ${d3.format(".0f")(d[1] / 1000000)}`;
             });
+          
+          //Add border to legend
+          const bbox = legend.node().getBBox();
+          legend.insert("rect", ":first-child")
+             .attr("x", bbox.x - 10) // Add padding
+             .attr("y", bbox.y - 10)
+             .attr("width", bbox.width + 20)
+             .attr("height", bbox.height + 20)
+             .attr("fill", "lightgray") // Background color
+             .attr("stroke", "black") // Border color
+             .attr("stroke-width", 2);
       }
 
 
@@ -354,7 +366,7 @@ function scatterplot() {
       if (selectedCountry !== null) {
         const selectedData = data.find(d => d.country === selectedCountry);
         const xPos = xScale(xValue(selectedData));
-
+        
         // Show the bar and position it based on the selected country's x value
         bar.transition()
           .duration(200)
@@ -370,7 +382,6 @@ function scatterplot() {
 
     // Initial update of the bar (it will be hidden if no country is selected)
     updateBar();
-
     return chart;
   }
 

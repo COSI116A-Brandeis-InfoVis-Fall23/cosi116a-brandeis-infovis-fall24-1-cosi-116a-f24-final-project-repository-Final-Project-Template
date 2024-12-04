@@ -31,7 +31,7 @@ function countryBarGraphs() {
         const xScale = d3.scaleLinear()
             .domain([0, d3.max(data, xValue)])
             .range([0, width]);
-
+    
         // Create axes
         chartGroup.append("g")
             .attr("transform", `translate(0, ${height})`)

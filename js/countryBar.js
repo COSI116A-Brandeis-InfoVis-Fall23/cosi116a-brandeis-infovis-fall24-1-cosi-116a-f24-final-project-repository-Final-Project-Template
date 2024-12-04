@@ -26,9 +26,9 @@ function countryBar() {
         const countryData = data[0];  // Only using the first data element as we are displaying data for a single country
         
         // Calculate the maintenance percentage
-        const maintenancePercentage = countryData.infrastructureMaintenance / countryData.infrastructureInvestment;
+        const maintenancePercentage = countryData.infrastructureMaintenance  / countryData.infrastructureInvestment;
         const otherPercentage = 1 - maintenancePercentage;
-
+        
         // Create the horizontal bar for maintenance (orange)
         chartGroup.append("rect")
             .attr("x", 0)
