@@ -223,7 +223,7 @@ function scatterplot() {
       d3.forceSimulation(data)
       .force("x", d3.forceX(d => X(d)).strength(1))
       .force("y", d3.forceY(d => Y(d)).strength(1))
-      .force("collide", d3.forceCollide(32)) // Adjust the radius as needed
+      .force("collide", d3.forceCollide(36)) // Adjust the radius as needed
       .on("tick", () => {
         labels
           .attr("x", (d, i) => data[i].x)
