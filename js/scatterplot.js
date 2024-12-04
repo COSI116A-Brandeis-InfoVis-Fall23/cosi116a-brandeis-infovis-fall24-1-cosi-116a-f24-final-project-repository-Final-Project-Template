@@ -69,13 +69,11 @@ function scatterplot() {
         ]);
 
       ourBrush = brush;
-      console.log(ourBrush);
 
       g.call(brush);
 
       // Highlight the selected circles
       function highlight() {
-        console.log("Here")
         if (d3.event.selection === null) return;
         const [
           [x0, y0],
@@ -225,7 +223,7 @@ function scatterplot() {
       d3.forceSimulation(data)
       .force("x", d3.forceX(d => X(d)).strength(1))
       .force("y", d3.forceY(d => Y(d)).strength(1))
-      .force("collide", d3.forceCollide(36)) // Adjust the radius as needed
+      .force("collide", d3.forceCollide(32)) // Adjust the radius as needed
       .on("tick", () => {
         labels
           .attr("x", (d, i) => data[i].x)
@@ -401,14 +399,11 @@ function scatterplot() {
     return chart;
   };
 
-  // Given selected data from another visualization 
-  // select the relevant elements here (linking)
+
   // Given selected data from another visualization 
   // select the relevant elements here (linking)
   chart.updateSelection = function (selectedData) {
     if (!arguments.length) return;
-
-    // Select an element if its datum was selected
 
     // Select an element if its datum was selected
     selectableElements.classed("selected", d => {
