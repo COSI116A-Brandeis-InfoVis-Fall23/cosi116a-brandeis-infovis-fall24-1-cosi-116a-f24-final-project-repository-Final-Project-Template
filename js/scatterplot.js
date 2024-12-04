@@ -335,7 +335,7 @@ function scatterplot() {
              .attr("y", bbox.y - 10)
              .attr("width", bbox.width + 20)
              .attr("height", bbox.height + 20)
-             .attr("fill", "lightgray") // Background color
+             //.attr("fill", "lightgray") // Background color
              .attr("stroke", "black") // Border color
              .attr("stroke-width", 2);
       }
