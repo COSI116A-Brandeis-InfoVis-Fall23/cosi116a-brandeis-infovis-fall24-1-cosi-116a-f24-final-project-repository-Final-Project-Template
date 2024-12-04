@@ -105,21 +105,14 @@
         </div>
 
         <!--Access Measures-->
-        <div class="group group3 hidden">
-          
-            
-          <svg id="bar-graph-access" class="bar-graph" width="100%" height="100%"></svg>
-          
-          
-        
-          
+        <div class="group group3 hidden fill_space">
           <svg id="bar-graph-access" class="bar-graph" width="100%" height="100%"></svg>
         </div>
       </div>
     </div>
     <div class="bar-chart-container">
-      <svg id="bar-chart" width="70%" height="100%"></svg>
-      <svg id="inland-bar" width="70%" height="100%"></svg>
+      <svg id="bar-chart"></svg>
+      <svg id="inland-bar"></svg>
     </div>
   </div>
  
@@ -158,13 +151,29 @@
     <p><em>Finally, the highest level tasks include Discover and Present, and these focus on how the visualization is being used. These tasks enable the users to to consume and discover new knowledge and uncover patterns. Our visualization's primary goal is for users to utilize these tasks to gain insight into infrastructure investment across different countries.</em></p>
 
     <h1>Design Process</h1>
-    
-    <p><em>Sketches and design choices to justify final visualization.</em></p>
+    <!--<p><em>Sketches and design choices to justify final visualization.</em></p>-->
 
+    <p><em>We adopted the ICE-T methodology—"Insight, Confidence, Essence, and Time"—to guide the design of various components (Amar, R.A., Eagan, J.R., & Stasko, J.T., pp. 3-4). This approach emphasizes the following:</em></p>
+
+    <ul>
+      <li><em>Supporting both intentional and incidental insights through visualization.</em></li>
+      <p><em>Our visualizations are designed to support both intentional and incidental insights. The scatterplot allows users to intentionally explore correlations between infrastructure investment and rail usage, while the bar charts provide incidental insights by highlighting differences in quality, access, and density across countries.</em></p>
+
+      <li><em>Facilitating faster and more efficient understanding of data for searching and browsing.</em></li>
+      <p><em>We facilitate faster and more efficient understanding of data by allowing users to interact with the scatterplot and bar charts. Users can brush over the scatterplot to select multiple countries or click on individual points to view detailed information. The bar charts dynamically update to reflect the selected countries, making it easy to search and compare for specific data points.</em></p>
+
+      <li><em>Communicating the dataset's essence, focusing on overview and context.</em></li>
+      <p><em>Our visualizations communicate the dataset's essence by providing an overview of key metrics such as infrastructure investment, rail usage, quality, access, and density. The scatterplot offers a high-level view of the data, while the bar charts provide context by breaking down the data into more specific categories.</em></p>
+
+      <li><em>Enhancing user confidence in understanding the dataset by addressing the quality of the data and the visualization.</em></li>
+      <p><em>We enhance user confidence by ensuring that our visualizations are clear and easy to understand with included sources. The use of tooltips and labels helps users interpret the data accurately. Additionally, we address the quality of the data by providing detailed hard number information about each data point, including maintenance, infrastructure investment, and population.</em></p>
+    </ul>
+
+    <!-- 
     <p><em>Expectation: Evidence of iterative improvement.
     Logical discussion of design choices grounded in theory from course.
     Discusses feedback from usability testing.</em></p>
-
+    -->
 
     <h1>Conclusion</h1>
 
@@ -184,6 +193,7 @@
       <li>Brehmer, Matthew, and Tamara Munzner. “A multi-level typology of abstract visualization tasks.” IEEE Transactions on Visualization and Computer Graphics, vol. 19, no. 12, Dec. 2013, pp. 2376–2385, https://doi.org/10.1109/tvcg.2013.124. </li>
       <li>Amar, R.A., Eagan, J.R., & Stasko, J.T. “Low-level components of analytic activity in information visualization”, IEEE Symposium on Information Visualization, 2005. INFOVIS 2005, 111-117.</li>
       <li>B. Shneiderman, "The eyes have it: a task by data type taxonomy for information visualizations,"        Proceedings 1996 IEEE Symposium on Visual Languages, Boulder, CO, USA, 1996, pp. 336-343, doi: 10.1109/VL.1996.545307.</li>
+      <li>Wall, Emily, et al. A Heuristic Approach to Value-Driven Evaluation Of ..., 2018, pp. 2-3, faculty.cc.gatech.edu/~john.stasko/papers/infovis18-icet.pdf. </li>
     </ul>
     
   </div>
