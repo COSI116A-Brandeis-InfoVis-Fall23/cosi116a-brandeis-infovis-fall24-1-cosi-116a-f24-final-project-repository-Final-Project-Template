@@ -65,6 +65,23 @@ function countryBarGraphs() {
                 const selectedData = chartGroup.selectAll(".bar.selected").data();
                 dispatcher.call("selectionUpdated", this, selectedData);
 
+            })
+            .on("mouseover", function() {
+                const isSelected = d3.select(this).classed("selected");
+                d3.select(this)
+                    .attr("stroke", "red")
+                    .attr("stroke-width", 1);
+                if (!isSelected) {
+                    d3.select(this).attr("fill", "pink");
+                };
+            })
+            .on("mouseout", function() {
+                const isSelected = d3.select(this).classed("selected");
+                d3.select(this)
+                    .attr("stroke", "none");
+                if (!isSelected) {
+                    d3.select(this).attr("fill", "steelblue");
+                };
             });
 
         // Add x-axis label
