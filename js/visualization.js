@@ -15,7 +15,7 @@
   ];
 
   d3.json("data/heartratesALL.json", (rates) => {
-  console.log(rates);
+  // console.log(rates);
 
   // Extract the years 
   let years = Object.keys(rates); // ['1999', '2000', ...]
@@ -25,16 +25,18 @@
         value: rates[year]["Alabama"] // Heart disease death rate for Alabama
     };
   });
-console.log(data);
-
-const scatterData = Object.entries(rates["1999"]).map(([state, value], index) => ({
+// console.log(data);
+d3.json("data/lifeExpectancy.json", (expectancy) => {
+let scatterData = Object.entries(rates["1999"]).map(([state, value], index) => ({
   state,
   x: value, // The numerical value for x-axis
-  y: Math.random() * 10 //random val, placeholder
+  y: expectancy['1999'][state] //random val, placeholder
 }));
-
-console.log("test")
+console.log(data);
 console.log(scatterData);
+// });
+// console.log("test")
+// console.log(scatterData);
 
 
 // Create and render the line chart
@@ -58,7 +60,12 @@ let scHeartDisease = scatterplot()
     .yLabelOffset(150)
     
 scHeartDisease("#scatterplot", scatterData);
-d3.selectAll("svg").on("mouseover", (d, i, elements) =>{          //for linking
+
+
+
+
+//for linking map to linechart
+d3.selectAll("svg").on("mouseover", (d, i, elements) =>{          
   d3.selectAll("g path").on("mouseover", (d, i, elements) =>{     //shade states on mosueover
     d3.select(elements[i]).classed("mouseover", true);
   });
@@ -86,7 +93,37 @@ d3.selectAll("svg").on("mouseover", (d, i, elements) =>{          //for linking
   d3.selectAll("#state").text(selected);
   });
 });
-})
+
+
+//for linking map to scatterplot on year change
+d3.select("#slider").on("change", function(d) {                   
+  currentYear = this.value;                                       //recolor map on update
+  svgStates.selectAll("path") 
+  .style('fill-opacity', function(d, i){                            //rerender state color and details
+    var name = d.properties.STATENAM.replace(" Territory", "");
+    return getColor(rates[currentYear][name], max);
+  })
+  .select('title')                                                  //update title with new data
+  .text(function(d) { return d.properties.STATENAM + ", "+ rates[currentYear][d.properties.STATENAM]; });
+  d3.select("#scatterplot svg").remove();     //delete old scatterplot
+
+  let scatterData = Object.entries(rates[this.value]).map(([state, value], index) => ({
+    state,
+    x: value, // The numerical value for x-axis
+    y: expectancy[this.value][state] //random val, placeholder
+  }));
+  let scHeartDiseaseNew = scatterplot()
+  .x(d => d.x)
+  .y(d => d.y) //this needs to change to the other data set. currently its using the same data for x and y axis
+  .yLabelOffset(150)
+  
+scHeartDiseaseNew("#scatterplot", scatterData);
+d3.selectAll("#titleYear").text(currentYear);
+
+});
+
+});
+});
 
 
 })());

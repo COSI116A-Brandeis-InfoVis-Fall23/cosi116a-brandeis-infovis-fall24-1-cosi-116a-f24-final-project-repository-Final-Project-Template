@@ -104,49 +104,49 @@ function scatterplot() {
       
       selectableElements = points;
       
-      svg.call(brush);
+      // svg.call(brush);
   
-      // Highlight points when brushed
-      function brush(g) {
-        const brush = d3.brush() // Create a 2D interactive brush
-          .on("start brush", highlight) // When the brush starts/continues do...
-          .on("end", brushEnd) // When the brush ends do...
-          .extent([
-            [-margin.left, -margin.bottom],
-            [width + margin.right, height + margin.top]
-          ]);
+      // // Highlight points when brushed
+      // function brush(g) {
+      //   const brush = d3.brush() // Create a 2D interactive brush
+      //     .on("start brush", highlight) // When the brush starts/continues do...
+      //     .on("end", brushEnd) // When the brush ends do...
+      //     .extent([
+      //       [-margin.left, -margin.bottom],
+      //       [width + margin.right, height + margin.top]
+      //     ]);
           
-        ourBrush = brush;
+      //   ourBrush = brush;
   
-        g.call(brush); // Adds the brush to this element
+      //   g.call(brush); // Adds the brush to this element
   
-        // Highlight the selected circles
-        function highlight() {
-          if (d3.event.selection === null) return;
-          const [
-            [x0, y0],
-            [x1, y1]
-          ] = d3.event.selection;
+      //   // Highlight the selected circles
+      //   function highlight() {
+      //     if (d3.event.selection === null) return;
+      //     const [
+      //       [x0, y0],
+      //       [x1, y1]
+      //     ] = d3.event.selection;
   
-          // If within the bounds of the brush, select it
-          points.classed("selected", d =>
-            x0 <= X(d) && X(d) <= x1 && y0 <= Y(d) && Y(d) <= y1
-          );
+      //     // If within the bounds of the brush, select it
+      //     points.classed("selected", d =>
+      //       x0 <= X(d) && X(d) <= x1 && y0 <= Y(d) && Y(d) <= y1
+      //     );
   
-          // Get the name of our dispatcher's event
-          let dispatchString = Object.getOwnPropertyNames(dispatcher._)[0];
+      //     // Get the name of our dispatcher's event
+      //     let dispatchString = Object.getOwnPropertyNames(dispatcher._)[0];
   
-          // Let other charts know about our selection
-          dispatcher.call(dispatchString, this, svg.selectAll(".selected").data());
-        }
+      //     // Let other charts know about our selection
+      //     dispatcher.call(dispatchString, this, svg.selectAll(".selected").data());
+      //   }
         
-        function brushEnd(){
-          // We don't want infinite recursion
-          if(d3.event.sourceEvent.type!="end"){
-            d3.select(this).call(brush.move, null);
-          }         
-        }
-      }
+      //   function brushEnd(){
+      //     // We don't want infinite recursion
+      //     if(d3.event.sourceEvent.type!="end"){
+      //       d3.select(this).call(brush.move, null);
+      //     }         
+      //   }
+      // }
   
       return chart;
     }

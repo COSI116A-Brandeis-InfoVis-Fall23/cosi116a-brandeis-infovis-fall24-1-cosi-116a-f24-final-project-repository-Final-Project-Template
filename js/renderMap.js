@@ -48,10 +48,9 @@ d3.json("data/states.json", function(error, topologies) {  // (4)
 });
 
 
-d3.selectAll("svg").on("mouseover", (d, i, elements) =>{          //highlight states on mouseover - add brushing later
-});
 
-d3.select("#slider").on("change", function(d) {          //add button to confirm year
+
+d3.select("#slider").on("change", function(d) {          //add slider to confirm year
   currentYear = this.value;
   svgStates.selectAll("path") 
   .style('fill-opacity', function(d, i){                            //rerender state color and details
