@@ -29,6 +29,8 @@ function linechart() {
   // Create the chart by adding an svg to the div with the id 
   // specified by the selector using the given data
   function chart(selector, data) {
+  const tooltip = d3.select("#tooltip");
+
     let svg = d3.select(selector)
       .append("svg")
         .attr("preserveAspectRatio", "xMidYMid meet")
@@ -94,21 +96,34 @@ function linechart() {
           .y(Y)
         );
 
-    // Add the points
-    let points = svg.append("g")
-      .selectAll(".linePoint")
-        .data(data);
-    
-    // points.exit().remove();
-          
-    points = points.enter()
-      .append("circle")
+      let points = svg.append("g")
+        .selectAll(".linePoint")
+        .data(data);  // Data binding
+      
+  
+      points = points.enter()
+        .append("circle")
         .attr("class", "point linePoint")
-      .merge(points)
-        .attr("cx", X)
-        .attr("cy", Y)        
-        .attr("r",3);
-        
+        .merge(points)
+          .attr("cx", X)   // Position on x-axis
+          .attr("cy", Y)   // Position on y-axis
+          .attr("r", 4)
+        .on("mouseover", (event, d) => {
+          console.log(d);  // This should now print the object, like { year: '1999', value: 302.97 }
+          tooltip
+            .style("visibility", "visible")
+            .text(`Year: ${d.year}, Value: ${d.value}`);
+        })
+        .on("mousemove", (event) => {
+          tooltip
+            .style("top", (event.pageY - 100) + "px")
+            .style("left", (event.pageX + 100) + "px");
+        })
+        .on("mouseout", () => {
+          tooltip.style("visibility", "hidden");
+        });
+
+
     // selectableElements = points;
 
     // svg.call(brush);
@@ -159,13 +174,20 @@ function linechart() {
   }
 
   // The x-accessor from the datum
-  function X(d) {
-    return xScale(xValue(d));
-  }
+  // function X(d) {
+  //   return xScale(xValue(d));
+  // }
 
   // The y-accessor from the datum
+  // function Y(d) {
+  //   return yScale(yValue(d));
+  // }
+  function X(d) {
+    return xScale(d.year);  // Correctly access the 'year' for X position
+  }
+  
   function Y(d) {
-    return yScale(yValue(d));
+    return yScale(d.value);  // Correctly access the 'value' for Y position
   }
 
   chart.margin = function (_) {
