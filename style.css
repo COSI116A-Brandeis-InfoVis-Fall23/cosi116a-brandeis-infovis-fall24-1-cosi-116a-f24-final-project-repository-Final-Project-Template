@@ -71,6 +71,17 @@ h2 {
 }
 
 
+/* Default style for marks and channels used */
+.point {
+  fill: steelblue;
+}
+
+
+/* Style for selected marks (circles) */
+circle.selected {
+  fill: red;
+}
+
 .tooltip {
   position: absolute;
   visibility: hidden;
