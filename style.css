@@ -107,6 +107,9 @@ tr.selected {
 td.selected {
     background-color: #cce5ff; /* Highlight color for selected cells */
 }
+tr.clicked {
+	background-color: brown; /* Clicked color*/
+}
 
 .legend-item.selected rect {
     stroke: black;
