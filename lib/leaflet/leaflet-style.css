@@ -1,0 +1,33 @@
+/* leaflet-style.css */
+
+#map {
+    height: 600px;
+    width: 100%;
+  }
+  
+  .borough {
+    color: #333;
+    weight: 1;
+    fillOpacity: 0.4;
+  }
+  
+  .line {
+    color: blue;
+    weight: 2;
+    opacity: 0.8;
+  }
+  
+  .station-node {
+    background-color: orange;
+    border-radius: 50%;
+    cursor: pointer;
+  }
+  
+  .tooltip {
+    font-size: 12px;
+    background: white;
+    padding: 5px;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+  }
+  

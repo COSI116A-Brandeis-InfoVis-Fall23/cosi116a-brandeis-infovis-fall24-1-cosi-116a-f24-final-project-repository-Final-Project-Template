@@ -1,86 +1,77 @@
-const map = L.map("map").setView([40.7128, -74.0060], 13);
+document.addEventListener("DOMContentLoaded", function () {
+  const map = L.map("map").setView([40.7128, -74.0060], 13);
 
-//basemap
-L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
-  attribution: "&copy; OpenStreetMap contributors",
-}).addTo(map);
+  // Add basemap
+  L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
+    attribution: "&copy; OpenStreetMap contributors",
+  }).addTo(map);
 
-// Load Borough Boundaries GeoJSON
-fetch("lib/geo/new-york-city-boroughs.geojson")
-  .then((response) => response.json())
-  .then((boroughData) => {
-    L.geoJSON(boroughData, {
-      style: {
-        color: "#333",
-        weight: 1,
-        fillColor: "#e0e0e0",
-        fillOpacity: 0.4,
-      },
-      interactive: false,
-    }).addTo(map);
-  });
+  // Add borough boundaries
+  fetch("lib/geo/new-york-city-boroughs.geojson")
+    .then((response) => response.json())
+    .then((boroughData) => {
+      L.geoJSON(boroughData, {
+        style: {
+          color: "#333",
+          weight: 1,
+          fillColor: "#e0e0e0",
+          fillOpacity: 0.4,
+          className: "leaflet-borough",
+        },
+      }).addTo(map);
+    });
 
-// Load Subway Lines GeoJSON
-fetch("lib/geo/subway-lines.geojson")
-  .then((response) => response.json())
-  .then((lineData) => {
-    L.geoJSON(lineData, {
-      style: {
-        color: "blue",
-        weight: 2,
-        opacity: 0.8,
-      },
-      interactive: false,
-    }).addTo(map);
-  });
+  // Add subway lines
+  fetch("lib/geo/subway-lines.geojson")
+    .then((response) => response.json())
+    .then((lineData) => {
+      L.geoJSON(lineData, {
+        style: {
+          color: "blue",
+          weight: 1.5,
+          opacity: 0.7,
+          className: "leaflet-line",
+        },
+      }).addTo(map);
+    });
 
-// Load Subway Stations GeoJSON and Create Heatmap + Hoverable Nodes
-fetch("lib/geo/geocoded1.geojson")
-  .then((response) => response.json())
-  .then((stationData) => {
-    const heatPoints = stationData.features.map((station) => [
-      station.geometry.coordinates[1], // Latitude
-      station.geometry.coordinates[0], // Longitude
-      station.properties.Traffic / 5000, // Normalize traffic for intensity
-    ]);
+  // Add heatmap and stations
+  fetch("lib/geo/geocoded1.geojson")
+    .then((response) => response.json())
+    .then((stationData) => {
+      const heatPoints = stationData.features.map((station) => [
+        station.geometry.coordinates[1],
+        station.geometry.coordinates[0],
+        station.properties.Traffic / 5000,
+      ]);
 
-    L.heatLayer(heatPoints, {
-      radius: 25,
-      blur: 25,
-      maxZoom: 17,
-      opacity: 0.5, // Lower opacity for heatmap
-    }).addTo(map);
-
-    // Add hoverable nodes for each station
-    stationData.features.forEach((station) => {
-      const lat = station.geometry.coordinates[1];
-      const lng = station.geometry.coordinates[0];
-      const stationID = station.properties.StationID || "Unknown";
-      const controlArea = station.properties.ControlArea || "Unknown";
-      const traffic = station.properties.Traffic || 0;
-
-      // Add a circle marker
-      const marker = L.circleMarker([lat, lng], {
-        radius: 2,
-        color: "orange",
-        fillColor: "orange",
-        fillOpacity: 0.9,
+      // Add heatmap layer
+      L.heatLayer(heatPoints, {
+        radius: 20,
+        blur: 20,
+        maxZoom: 15,
+        opacity: 0.4,
       }).addTo(map);
 
-      // Add a tooltip on hover
-      marker.bindTooltip(
-        `<strong>StationID:</strong> ${stationID}<br>
-         <strong>Control Area:</strong> ${controlArea}<br>
-         <strong>Traffic:</strong> ${traffic}`,
-        {
-          permanent: false,
-          direction: "top",
-          className: "tooltip",
-        }
-      );
+      // Add station markers
+      stationData.features.forEach((station) => {
+        const { coordinates } = station.geometry;
+        const { StationID, ControlArea, Traffic } = station.properties;
 
-      marker.on("click", () => {
-        alert(`StationID: ${stationID}\nControl Area: ${controlArea}\nTraffic: ${traffic}`);
+        const marker = L.circleMarker([coordinates[1], coordinates[0]], {
+          radius: 4,
+          color: "orange",
+          fillColor: "orange",
+          fillOpacity: 0.8,
+          className: "leaflet-station-node",
+        }).addTo(map);
+
+        marker.bindTooltip(
+          `<strong>StationID:</strong> ${StationID}<br>
+           <strong>Control Area:</strong> ${ControlArea}<br>
+           <strong>Traffic:</strong> ${Traffic}`,
+          { direction: "top" }
+        );
       });
     });
-  });
+});

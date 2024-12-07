@@ -24,42 +24,11 @@
   <meta http-equiv="Content-Security-Policy" content="script-src 'self' 'unsafe-eval'">
 
   <!-- Leaflet.js -->
-  <link rel="stylesheet" href="lib/leaflet/leaflet.css" />
+  <link rel="stylesheet" href="lib/leaflet/leaflet.css" >
+  <link rel="stylesheet" href="lib/leaflet/leaflet-style.css">
 
 
 
-  <style>
-    #map {
-      height: 600px;
-      width: 100%;
-    }
-
-    .borough {
-      color: #333;
-      weight: 1;
-      fillOpacity: 0.4;
-    }
-
-    .line {
-      color: blue;
-      weight: 2;
-      opacity: 0.8;
-    }
-
-    .station-node {
-      background-color: orange;
-      border-radius: 50%;
-      cursor: pointer;
-    }
-
-    .tooltip {
-      font-size: 12px;
-      background: white;
-      padding: 5px;
-      border: 1px solid #ddd;
-      border-radius: 3px;
-    }
-  </style>
 
 </head>
 
@@ -92,7 +61,12 @@
     <p><em>Expectation: There is a clear focus, and a developed explanation of the problem, and a reasonable response is
         proposed.</em></p>
 
-    <p>After the global catastrophic public health crisis, the economic activities and people’s living habits have drastically shifted. One of the most affected parts is public transportation due to the social distancing practice many cities and countries implemented during the pandemic. This visualization utilizes the data of New York state’s public transportation data from the beginning of 2020 till today, and is dedicated to all the government public transportation offices to demonstrate the impact of COVID-19 alongside with the shift in people’s habits in the usage of public transportation. </p>
+    <p>After the global catastrophic public health crisis, the economic activities and people’s living habits have
+      drastically shifted. One of the most affected parts is public transportation due to the social distancing practice
+      many cities and countries implemented during the pandemic. This visualization utilizes the data of New York
+      state’s public transportation data from the beginning of 2020 till today, and is dedicated to all the government
+      public transportation offices to demonstrate the impact of COVID-19 alongside with the shift in people’s habits in
+      the usage of public transportation. </p>
 
     <h1>Visualization</h1>
 
@@ -150,9 +124,15 @@
 
     <p><em>Expectation: Data sources match the problem statement and are appropriate. These descriptions should be very
         explicit so someone could read your page and properly reproduce your results.</em></p>
-    
-    <p>The data for the heatmap came from two sources. Subway ridership true for subway ridership from July of 2020 onward and Turnstile data for early 2020, for turnstile data that was converted into ridership data. This was done by subtracting the minimum entry value from the minimum of the previous day for each unit, ignoring negative values. Then, station names were converted to be consistent with the naming convention for the later data, and the two datasets were appended in excel.
-	The data for the general ridership used in the bar and line chart came from https://data.ny.gov/Transportation/MTA-Daily-Ridership-Data-Beginning-2020/vxuj-8kew and required, no extra processing was necessary. </p>
+
+    <p>The data for the heatmap came from two sources. Subway ridership true for subway ridership from July of 2020
+      onward and Turnstile data for early 2020, for turnstile data that was converted into ridership data. This was done
+      by subtracting the minimum entry value from the minimum of the previous day for each unit, ignoring negative
+      values. Then, station names were converted to be consistent with the naming convention for the later data, and the
+      two datasets were appended in excel.
+      The data for the general ridership used in the bar and line chart came from
+      https://data.ny.gov/Transportation/MTA-Daily-Ridership-Data-Beginning-2020/vxuj-8kew and required, no extra
+      processing was necessary. </p>
 
     <h1>Task Analysis</h1>
 
@@ -169,7 +149,26 @@
         Logical discussion of design choices grounded in theory from course.
         Discusses feedback from usability testing.</em></p>
 
-    <p>Our final visualization consists of three graphs which include a line chart, a bar chart, and a heat map. The initial dataset has data of different types of public transportation ridership in New York state daily from the beginning of 2020 till today. It provides two types of data which include the ridership number and the percentage of the current ridership compared to pre-COVID ridership. In order to better demonstrate the data in the dataset, we decide to make a line chart to show the trend of changing in ridership for public transportation; however, because the dominance of subway ridership in the dataset, if we put all different types of ridership data in line chart, some of the types of ridership will be almost unrecognizable. Therefore, we use the sum of all riderships for different types of public transportation. Hence, to show the different types of public transportation’s recovery and how much is affected by the COVID, we decided to add a bar chart to show the percentage of the current ridership compared to pre-COVID data. After we are finished with the main dataset, we decided that because we are making correlations between public transportation and COVID, we should add another line in the line chart demonstrating the current COVID cases in New York state to compare these two data for better observations. In addition, we want to show the shift in the interest in the usage of public transportation within New York city. In order to complete this task to show which part of the city still sticks to the habit of using public transportation after the COVID and which part chooses to use other ways of transportation, we make a heat map of New York city’s subway ridership by station. The choice of subway is due to the fact that although the usage of subway ridership declined dramatically after COVID hit, the total ridership of subway is still much larger than other types of public transportation combined together. In addition, the subway line also makes a very good looking visualization and can clearly demonstrate the different parts of the city in the usage of public transportation. </p>
+    <p>Our final visualization consists of three graphs which include a line chart, a bar chart, and a heat map. The
+      initial dataset has data of different types of public transportation ridership in New York state daily from the
+      beginning of 2020 till today. It provides two types of data which include the ridership number and the percentage
+      of the current ridership compared to pre-COVID ridership. In order to better demonstrate the data in the dataset,
+      we decide to make a line chart to show the trend of changing in ridership for public transportation; however,
+      because the dominance of subway ridership in the dataset, if we put all different types of ridership data in line
+      chart, some of the types of ridership will be almost unrecognizable. Therefore, we use the sum of all riderships
+      for different types of public transportation. Hence, to show the different types of public transportation’s
+      recovery and how much is affected by the COVID, we decided to add a bar chart to show the percentage of the
+      current ridership compared to pre-COVID data. After we are finished with the main dataset, we decided that because
+      we are making correlations between public transportation and COVID, we should add another line in the line chart
+      demonstrating the current COVID cases in New York state to compare these two data for better observations. In
+      addition, we want to show the shift in the interest in the usage of public transportation within New York city. In
+      order to complete this task to show which part of the city still sticks to the habit of using public
+      transportation after the COVID and which part chooses to use other ways of transportation, we make a heat map of
+      New York city’s subway ridership by station. The choice of subway is due to the fact that although the usage of
+      subway ridership declined dramatically after COVID hit, the total ridership of subway is still much larger than
+      other types of public transportation combined together. In addition, the subway line also makes a very good
+      looking visualization and can clearly demonstrate the different parts of the city in the usage of public
+      transportation. </p>
 
     <h1>Conclusion</h1>
 
