@@ -10,7 +10,7 @@ const categories = [
 ];
 
 let mergedData; // Declare globally
-const dispatch = d3.dispatch('selectionUpdated'); // Shared event dispatcher
+const dispatch = d3.dispatch('lineChartUpdate', 'barChartUpdate'); // Shared event dispatcher
 const barColorScale = d3.scaleOrdinal(d3.schemeCategory10); // Bar color scale
 
 // Load data
@@ -93,6 +93,48 @@ function processAndVisualize(ridershipData, covidData) {
   createLineChart(mergedData);
   createBarChart(defaultBarData);
 }
+
+
+
+dispatch.on('barChartUpdate', function (selectedData) {
+    console.log('Bar clicked:', selectedData);
+
+    // Filter line chart for the clicked category
+    const filteredData = mergedData.map(d => ({
+      week: d.week,
+      totalRidership: d[selectedData],
+      covidCases: d.covidCases,
+    }));
+
+    createLineChart(filteredData);
+});
+
+
+
+
+
+dispatch.on('lineChartUpdate', function (selectedData) {
+    console.log('Filtered data from brushing:', selectedData);
+
+    // Update bar chart with brushed data
+    createBarChart(
+      categories.map(cat => ({
+        category: cat,
+        avgPct: d3.mean(selectedData, d => {
+          const categoryData = d.avgPct.find(p => p.category === cat);
+          return categoryData ? categoryData.avgPct : 0;
+        }),
+      }))
+    );
+});
+
+
+
+
+
+
+
+
 
 
 

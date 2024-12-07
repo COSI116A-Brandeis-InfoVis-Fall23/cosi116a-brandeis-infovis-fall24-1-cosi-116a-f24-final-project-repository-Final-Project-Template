@@ -133,7 +133,7 @@ function createLineChart(data) {
         */
         
         points.classed("selected", d =>
-          x0 <= x(d.week) && x(d.week) <= x1
+          x0 <= x(d.week) && x(d.week) <= x1 && y0 <= yLeft(d.totalRidership) && yLeft(d.totalRidership) <= y1
         );
    
           
@@ -149,7 +149,21 @@ function createLineChart(data) {
         // We don't want infinite recursion
         if(d3.event.sourceEvent.type!="end"){
           d3.select(this).call(brush.move, null);
+          
+          
+          
+          let filteredData = svg.selectAll(".selected").data();
+          if (filteredData.length == 0) {
+            filteredData =  svg.selectAll(".point").data();
+          }
+          
+          console.log('Brushed Data:', filteredData);
+
+          dispatch.call('lineChartUpdate', null, filteredData); // Dispatch brushed data
         }         
+        
+        
+        
       }
     }
 
@@ -225,35 +239,6 @@ function hideTooltip() {
 
 
 
-dispatch.on('selectionUpdated', function (selectedData) {
-  if (Array.isArray(selectedData)) {
-    console.log('Filtered data from brushing:', selectedData);
-
-    // Update bar chart with brushed data
-    createBarChart(
-      categories.map(cat => ({
-        category: cat,
-        avgPct: d3.mean(selectedData, d => {
-          const categoryData = d.avgPct.find(p => p.category === cat);
-          return categoryData ? categoryData.avgPct : 0;
-        }),
-      }))
-    );
-  } else if (typeof selectedData === 'string') {
-    console.log('Bar clicked:', selectedData);
-
-    // Filter line chart for the clicked category
-    const filteredData = mergedData.map(d => ({
-      week: d.week,
-      totalRidership: d[selectedData],
-      covidCases: d.covidCases,
-    }));
-
-    createLineChart(filteredData);
-  } else {
-    console.log('Point clicked or hovered:', selectedData);
-  }
-});
 
 
 
