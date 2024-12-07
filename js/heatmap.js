@@ -6,7 +6,7 @@ L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
 }).addTo(map);
 
 // Load Borough Boundaries GeoJSON
-fetch("js/geo/new-york-city-boroughs.geojson")
+fetch("lib/geo/new-york-city-boroughs.geojson")
   .then((response) => response.json())
   .then((boroughData) => {
     L.geoJSON(boroughData, {
@@ -21,7 +21,7 @@ fetch("js/geo/new-york-city-boroughs.geojson")
   });
 
 // Load Subway Lines GeoJSON
-fetch("js/geo/subway-lines.geojson")
+fetch("lib/geo/subway-lines.geojson")
   .then((response) => response.json())
   .then((lineData) => {
     L.geoJSON(lineData, {
@@ -35,7 +35,7 @@ fetch("js/geo/subway-lines.geojson")
   });
 
 // Load Subway Stations GeoJSON and Create Heatmap + Hoverable Nodes
-fetch("js/geo/geocoded1.geojson")
+fetch("lib/geo/geocoded1.geojson")
   .then((response) => response.json())
   .then((stationData) => {
     const heatPoints = stationData.features.map((station) => [
