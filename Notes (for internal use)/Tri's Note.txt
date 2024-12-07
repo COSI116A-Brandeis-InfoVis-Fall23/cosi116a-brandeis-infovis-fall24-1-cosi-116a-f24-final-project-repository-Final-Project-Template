@@ -1,0 +1,11 @@
+Todo:
+
+Fix layers (done)
+Adapt new station data into geojson (in progress)
+Implement interactions:
+    details on demand
+    brushing integration with line/bar chart
+    timeline meter
+Finish writeup
+Fix sleep schedule
+Become free (in progress)
