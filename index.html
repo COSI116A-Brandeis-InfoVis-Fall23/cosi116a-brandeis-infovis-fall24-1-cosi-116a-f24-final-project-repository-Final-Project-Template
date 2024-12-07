@@ -2,15 +2,16 @@
 <html lang="en">
 
 <!-- Metadata -->
+
 <head>
   <meta charset="utf-8">
-  
+
   <!-- Title -->
   <title>Project Team #: Topic, COSI 116A F23</title>
-  
+
   <!-- CSS Styling -->
   <link rel="stylesheet" href="style.css">
- 
+
   <!-- Favicons -->
   <link rel="apple-touch-icon" sizes="180x180" href="favicons/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="favicons/favicon-32x32.png">
@@ -23,130 +24,141 @@
 </head>
 
 <!-- Main page content -->
+
 <body>
 
   <!-- Update this with your GitHub repo URL -->
-  <span id="forkongithub"><a href="https://github.com/COSI116A-Brandeis-InfoVis-Fall23/cosi-116a-f24-final-project-repository-bshen0831">Fork me on GitHub</a></span>
+  <span id="forkongithub"><a
+      href="https://github.com/COSI116A-Brandeis-InfoVis-Fall23/cosi-116a-f24-final-project-repository-bshen0831">Fork
+      me on GitHub</a></span>
 
   <!-- Your writeup goes here -->
-  <div class = "content-column">
-    
+  <div class="content-column">
+
     <h1>Project Team 14: Topic, COSI 116A Fall 2024</h1>
-    
-    <p><strong>Lewen Sun</strong>, <strong>Brian Shen</strong>, <strong>Jonghyeon Lee</strong>, <strong>Ajibola Falade</strong></p>
-    
-    <p>Project-long Course Project as part of COSI 116A: Information Visualization</a>, taught by <a href="https://cs.brandeis.edu/~dylan/">Prof. Dylan Cashman</a>, <a href="https://cs.brandeis.edu/">Brandeis University</a>.</p>
-   <div class="iframe-container">
-    <iframe class="responsive-iframe"
-    src="https://docs.google.com/document/d/e/2PACX-1vTWQ-Ip32klxC_JUikI-YOkYWXyIaBu_59uCeQuowt8MmjIuV9uUqRogLzFPpbHDqHgkDPEbTxny6PI/pub?embedded=true">
 
-    </iframe>
-  </div>
+    <p><strong>Lewen Sun</strong>, <strong>Brian Shen</strong>, <strong>Jonghyeon Lee</strong>, <strong>Ajibola
+        Falade</strong></p>
+
+    <p>Project-long Course Project as part of COSI 116A: Information Visualization</a>, taught by <a
+        href="https://cs.brandeis.edu/~dylan/">Prof. Dylan Cashman</a>, <a href="https://cs.brandeis.edu/">Brandeis
+        University</a>.</p>
+    <div class="iframe-container">
+      <iframe class="responsive-iframe"
+        src="https://docs.google.com/document/d/e/2PACX-1vTWQ-Ip32klxC_JUikI-YOkYWXyIaBu_59uCeQuowt8MmjIuV9uUqRogLzFPpbHDqHgkDPEbTxny6PI/pub?embedded=true">
+
+      </iframe>
+    </div>
     <h1>Motivation</h1>
-    
+
     <p><em>Summary of user needs and motivating questions.</em></p>
-    
-    <p><em>Expectation: There is a clear focus, and a developed explanation of the problem, and a reasonable response is proposed.</em></p>
 
-    
+    <p><em>Expectation: There is a clear focus, and a developed explanation of the problem, and a reasonable response is
+        proposed.</em></p>
+
+
     <h1>Visualization</h1>
-    
+
     <p><em>Include the interactive visualization as part of this page. Static example follows.</em></p>
-    
+
   </div>
-  
+
   <!-- Your visualization here -->
-   <div id="button-container">
-    <button id="toggle-points-button">Show/Hide Points</button>
-    <button id="toggle-lines-button">Show/Hide Lines</button>
-   </div>
-  
-  <div id = map-container>
-    
-
-    <div id="map-header" >
-       Selected Neighborhoods</div>
-    <div  id="selected-neighborhoods" >
-None
+  <div id="vis-container">
+    <div id=map-container>
+      <div id="button-container">
+        <button id="toggle-points-button">Show/Hide Points</button>
+        <button id="toggle-lines-button">Show/Hide Lines</button>
+      </div>
+      <div id="map-header">
+        Selected Neighborhoods</div>
+      <div id="selected-neighborhoods">
+        None
+      </div>
+      <svg id="map"></svg>
+    </div>
+    <div id="stacked-container">
+      <div id="controls">
+        Select Regions:
+      </div>
+      <div id="stacked-bar-chart"></div>
+    </div>
   </div>
-  <svg id="map"></svg>
-  </div>
 
-  <!-- JHL Below -->
-  <div id="controls">
-    <h3>Select Regions:</h3>
-  </div>
-  <div id="chart"></div>
-  <!-- JHL Above -->
-
-  <!-- NEW: Interactive Bar Chart -->
-<div id="interactive-chart-container">
-  <div id="interactive-chart"></div> <!-- New container for the chart -->
-</div>
+  <div id="ridership-chart"></div>
 
   <!-- Your writeup goes here -->
-  <div class = "content-column">
+  <div class="content-column">
 
     <h1>Demo Video</h1>
-    
-    <p><em>Embedded MP4 demo video using the HTML5 &lt;video&gt; tag. For example, this screen recording Prof. Cody Dunne made of Mike Bostock's flexible transitions in D3 slide:</em></p>
-    
+
+    <p><em>Embedded MP4 demo video using the HTML5 &lt;video&gt; tag. For example, this screen recording Prof. Cody
+        Dunne made of Mike Bostock's flexible transitions in D3 slide:</em></p>
+
     <video controls width="100%">
       <source src="http://www.ccs.neu.edu/home/cody/courses/shared/d3-flexible-transitions.mp4" type="video/mp4">
       <p>Your browser doesn't support HTML5 video. Here is
-       a <a href="http://www.ccs.neu.edu/home/cody/courses/shared/d3-flexible-transitions.mp4">link to the video</a> instead.</p>
+        a <a href="http://www.ccs.neu.edu/home/cody/courses/shared/d3-flexible-transitions.mp4">link to the video</a>
+        instead.</p>
     </video>
 
     <h1>Visualization explanation</h1>
-    
-    <p><em>Final visualization screenshots (PNG images), design justifications, UI walk-through, and linked presentation slides.</em></p>
+
+    <p><em>Final visualization screenshots (PNG images), design justifications, UI walk-through, and linked presentation
+        slides.</em></p>
 
     <h1>Data Analysis</h1>
     <p><em>Summary of data, data types, and data preprocessing.</em></p>
 
-    <p><em>Expectation: Data sources match the problem statement and are appropriate. These descriptions should be very explicit so someone could read your page and properly reproduce your results.</em></p>
+    <p><em>Expectation: Data sources match the problem statement and are appropriate. These descriptions should be very
+        explicit so someone could read your page and properly reproduce your results.</em></p>
 
     <h1>Task Analysis</h1>
 
     <p><em>Summary of task table.</em></p>
 
-    <p><em>Expectation: Clearly describes domain tasks, processes, goals and abstract tasks for domain problems.</em></p>
+    <p><em>Expectation: Clearly describes domain tasks, processes, goals and abstract tasks for domain problems.</em>
+    </p>
     <p><em>Our first task was to show </em></p>
     <h1>Design Process</h1>
-    
+
     <p><em>Sketches and design choices to justify final visualization.</em></p>
 
     <p><em>Expectation: Evidence of iterative improvement.
-    Logical discussion of design choices grounded in theory from course.
-    Discusses feedback from usability testing.</em></p>
+        Logical discussion of design choices grounded in theory from course.
+        Discusses feedback from usability testing.</em></p>
 
 
     <h1>Conclusion</h1>
 
     <p><em>Short summary of work completed and areas for improvement/future-work.</em></p>
-    
+
     <p><em>Expectation: Meaningfully wraps up project and has good future directions.</em></p>
 
-    
+
     <h1>Acknowledgments</h1>
 
-    <p><em>List here where any code, packages/libraries, text, images, designs, etc. that you leverage come from.</em></p>
-    
+    <p><em>List here where any code, packages/libraries, text, images, designs, etc. that you leverage come from.</em>
+    </p>
+
     <ul>
       <li><a href="https://d3js.org/">D3: Data-Driven Documents</a> by Mike Bostock.</li>
-      <li><a href="https://codepo8.github.io/css-fork-on-github-ribbon/#">Pure CSS responsive "Fork me on GitHub" ribbon</a> by Chris Heilmann.</li>
+      <li><a href="https://codepo8.github.io/css-fork-on-github-ribbon/#">Pure CSS responsive "Fork me on GitHub"
+          ribbon</a> by Chris Heilmann.</li>
       <li> <a href="https://github.com/singingwolfboy/MBTA-GeoJSON">MBTA Line and Stops json data</a> </li>
-      <li> <a href="https://github.com/dj/boston/blob/master/data/boston-neighborhoods.json"> Boston neighbohood json data</a> </li>
+      <li> <a href="https://github.com/dj/boston/blob/master/data/boston-neighborhoods.json"> Boston neighbohood json
+          data</a> </li>
       <li>ChatGPT and Copilot for coding assistance</li>
       <li><a href="https://pandas.pydata.org/">Pandas python library</a></li>
     </ul>
-    
+
   </div>
-  
+
   <!-- Scripts at the end avoid need for dealing with async, defer, or onload event handlers -->
   <script src="lib/d3.v4/d3.v4.js"></script>
   <script src="js/map.js"></script>
   <script src="js/stackedbarchart.js"></script>
   <script src="js/ridershipbarchart.js"></script>
 </body>
+
 </html>

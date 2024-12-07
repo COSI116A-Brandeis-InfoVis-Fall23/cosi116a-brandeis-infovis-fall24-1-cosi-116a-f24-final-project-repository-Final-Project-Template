@@ -13,7 +13,7 @@ d3.csv("data/neighborhood_ridership.csv", function(data) {
     const margin = { top: 20, right: 30, bottom: 120, left: 120 };
 
     // Create the SVG container
-    const svg = d3.select("#chart")
+    const svg = d3.select("#ridership-chart")
         .append("svg")
         .attr("width", width + margin.left + margin.right)
         .attr("height", height + margin.top + margin.bottom)

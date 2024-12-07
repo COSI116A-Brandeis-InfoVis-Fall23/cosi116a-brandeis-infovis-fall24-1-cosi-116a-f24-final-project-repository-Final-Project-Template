@@ -8,17 +8,16 @@ var width = +map.attr("width"),
 // Append <g> elements for neighborhoods and LineString
 var gNeighborhoods = map.append("g").attr("class", "neighborhoods");
 
-
 // Set up the projection and path generator
 var projection = d3.geoMercator()
-    .scale(100000)
-    .center([-70.975, 42.29])
+    .scale(130000)
+    .center([-71.05, 42.33])
     .translate([width / 2, height / 2 - 100]);
 
 var path = d3.geoPath().projection(projection);
 
 // Load and render GeoJSON data for neighborhoods
-d3.json("data/bostonV2.json", function (error, data) {
+d3.json("data/updated_bostonV2.json", function (error, data) {
     if (error) {
         console.error("Error loading GeoJSON:", error);
         return;
