@@ -25,8 +25,32 @@ function drawStackedLineChart(selector, data, dispatcher) {
     keys.forEach((key, index) => {
         keyMapping[trimmedKeys[index]] = key;
     });
-
-    const color = d3.scaleOrdinal(d3.schemeCategory20).domain(trimmedKeys);
+    const customColors = [
+        "#DB697A", // Color 1
+        "#EE8575", // Color 2
+        "#FBB482", // Color 3
+        "#CDEBB8", // Color 4
+        "#9CD7BC", // Color 5
+        "#867BB9", // Color 6
+        "#6BAED6", // Color 7
+        "#FED976", // Color 8
+        "#FFFFCC", // Color 9
+        "#F7AC53", // Color 10
+        "#CC80B3", // Color 11
+        "#D98880", // Color 12
+        "#F0B27A", // Color 13
+        "#C39BD3", // Color 14
+        "#7DCEA0", // Color 15
+        "#F5CBA7", // Color 16
+        "#85C1E9", // Color 17
+        "#E8DAEF", // Color 18
+        "#F9E79F", // Color 19
+        "#EAEDED"  // Color 20
+      ];
+      
+      const color = d3.scaleOrdinal(customColors).domain(trimmedKeys);
+      
+   // const color = d3.scaleOrdinal(d3.schemeCategory20).domain(trimmedKeys);
     const stackedData = d3.stack().keys(keys)(data);
 
     const x = d3.scaleBand()

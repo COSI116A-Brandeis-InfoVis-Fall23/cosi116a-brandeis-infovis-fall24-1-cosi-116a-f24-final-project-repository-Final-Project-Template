@@ -82,7 +82,7 @@
 
         // Initialize the stacked line chart
         let stackedChart = stackedLineChartWrapper()
-            .xLabel("YEAR")
+            .xLabel("Year")
             .yLabel("Federal Expenditure (% of Total)")
             .title("Percentage of Federal Spending Categories from 1964 to 2017")
             .selectionDispatcher(chartDispatcher)
