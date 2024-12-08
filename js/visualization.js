@@ -5,17 +5,22 @@
             return;
         }
 
-        const dispatcherString = "selectionUpdated"; // Dispatcher name for interaction
-        const dispatcher = d3.dispatch(dispatcherString); // Common dispatcher
+        const dispatcherString = "selectionUpdated"; // For brush selection
+        const highlightDispatcherString = "categoryHighlighted"; // For highlighting categories
+
+        // Create a dispatcher handling both events
+        let chartDispatcher = d3.dispatch(dispatcherString, highlightDispatcherString);
+
         // Wrapper for the stacked line chart
         function stackedLineChartWrapper() {
             let xLabelText = "YEAR",
                 yLabelText = "Federal Expenditure (% of Total)",
                 chartTitle = "Percentage of Federal Spending Categories from 1964 to 2017",
-                dispatcher = d3.dispatch(dispatcherString);
+                dispatcher = chartDispatcher; // Use shared dispatcher
 
             function chart(selector, data) {
-                const chart = drawStackedLineChart(selector, data, dispatcher);
+                drawStackedLineChart(selector, data, dispatcher);
+
                 const svg = d3.select(selector).select("svg");
                 const width = +svg.attr("width");
                 const height = +svg.attr("height");
@@ -49,7 +54,7 @@
             }
 
             chart.title = function (_) {
-                if (!arguments.length) {return chartTitle;}
+                if (!arguments.length) return chartTitle;
                 chartTitle = _;
                 return chart;
             };
@@ -77,10 +82,10 @@
 
         // Initialize the stacked line chart
         let stackedChart = stackedLineChartWrapper()
-            .xLabel("YEAR")
+            .xLabel("Year")
             .yLabel("Federal Expenditure (% of Total)")
             .title("Percentage of Federal Spending Categories from 1964 to 2017")
-            .selectionDispatcher(dispatcher) // Keep dispatcher
+            .selectionDispatcher(chartDispatcher)
             ("#stacked-linechart", data);
 
         // Add a title to the table
@@ -90,19 +95,13 @@
             .style("text-align", "center")
             .text("Federal Spending (%) in Selected Years");
 
-        // Initialize the table
-        let table = drawTable("#tablet", data, dispatcher); // Pass dispatcher
+        // Initialize the table with the shared dispatcher
+        let tableData = drawTable("#tablet", data, chartDispatcher);
 
-        // visualization.js
-        dispatcher.on(dispatcherString, function (selection) {
-            const selectedYears = selection.selectedYears || [];
-            const selectedCategories = selection.selectedCategories || [];
-        
-            // Update the stacked chart
-            stackedChart.updateSelection(selection);
-        
-            // Update the table
-            table.updateSelection(selection);
+        // Connect the dispatcher for selection updates
+        chartDispatcher.on(dispatcherString, function (selectedYears) {
+            const filteredData = data.filter(d => selectedYears.includes(d.year));
+            tableData.updateSelection(filteredData);
         });
     });
 })();

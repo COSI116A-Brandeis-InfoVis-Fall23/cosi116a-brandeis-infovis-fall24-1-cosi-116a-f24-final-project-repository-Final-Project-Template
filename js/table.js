@@ -1,11 +1,10 @@
 function drawTable(selector, data, dispatcher) {
-    // Remove any existing table to prevent duplicates
     d3.select(selector).selectAll(".table-container").remove();
 
     const container = d3.select(selector)
         .append("div")
         .attr("class", "table-container")
-        .style("overflow", "auto") // Allow scrolling for large tables
+        .style("overflow", "auto") 
         .style("transform-origin", "center top") // For zooming
         .style("transform", "scale(1)"); // Default zoom level
 
@@ -35,90 +34,89 @@ function drawTable(selector, data, dispatcher) {
 
     // Function to update table rows based on filtered data
     function updateTable(filteredData) {
-        // Bind data to table rows
         const rows = tbody.selectAll("tr")
-            .data(filteredData, d => d.year); // Use `year` as the unique identifier for rows
+            .data(filteredData, d => d.year);
 
-        // Remove old rows
         rows.exit().remove();
 
-        // Append new rows
-        const rowsEnter = rows.enter()
-            .append("tr");
+        const rowsEnter = rows.enter().append("tr");
 
-        // Append cells to rows
         rowsEnter.selectAll("td")
-        .data(d => headers.map(key => ({ key: key, value: d[key] })))
-        .enter()
-        .append("td")
-        .attr("data-category", d => d.key)
-        .text(d => (typeof d.value === "number" ? d.value.toFixed(2) : d.value));
+            .data(d => headers.map(key => d[key]))
+            .enter()
+            .append("td")
+            .text(d => (typeof d === "number" ? d.toFixed(2) : d))
+            .on("click", function(d, i) {
+                const categoryKey = headers[i];
+                // Only trigger highlight if it's not the 'Year' column
+                if (categoryKey.toLowerCase() !== "year") {
+                    dispatcher.call("categoryHighlighted", this, categoryKey);
+                }
+            });
 
-
-        // Update rows with new data
         rowsEnter.merge(rows);
     }
 
     // Initial rendering of the table
     updateTable(data);
 
-    // Brushing functionality
-    let isMouseDown = false;
-
-    tbody.selectAll("tr")
-        .on("mouseover", function () {
-            if (isMouseDown) {
-                d3.select(this).classed("selected", true);
-                updateSelectionFromTable();
-            }
-            d3.select(this).classed("highlighted", true);
-        })
-        .on("mouseout", function () {
-            d3.select(this).classed("highlighted", false);
-        })
-        .on("mousedown", function () {
-            isMouseDown = true;
-            d3.select(this).classed("selected", !d3.select(this).classed("selected"));
-            updateSelectionFromTable();
-        });
-
-    d3.select("body").on("mouseup", () => {
-        isMouseDown = false;
+    // Listen for selection updates and filter data
+    dispatcher.on("selectionUpdated", selectedYears => {
+        const filteredData = data.filter(d => selectedYears.includes(d.year));
+        updateTable(filteredData);
     });
 
-    function updateSelectionFromTable() {
-        const selectedData = tbody.selectAll(".selected").data();
-        dispatcher.call("selectionUpdated", this, selectedData);
+    // Zooming and panning functionality
+    let zoomLevel = 1;
+    const zoomStep = 0.1;
+    const maxZoom = 2;
+    const minZoom = 0.5;
+
+    function adjustZoom(delta) {
+        zoomLevel = Math.min(maxZoom, Math.max(minZoom, zoomLevel + delta));
+        container.style("transform", `scale(${zoomLevel})`);
     }
-    dispatcher.on("selectionUpdated.table", function (selection) {
-        const selectedYears = selection.selectedYears || [];
-        const selectedCategories = selection.selectedCategories || [];
-    
-        // Update row highlighting based on selected years
-        tbody.selectAll("tr").classed("selected", d => selectedYears.includes(d.year));
-    
-        // Update cell highlighting based on selected categories
-        tbody.selectAll("tr").selectAll("td")
-            .classed("selected", function(d, i) {
-                const category = headers[i];
-                return selectedCategories.includes(category);
-            });
+
+    // Mouse wheel zoom
+    container.on("wheel", function() {
+        d3.event.preventDefault();
+        const delta = d3.event.deltaY < 0 ? zoomStep : -zoomStep;
+        adjustZoom(delta);
+    });
+
+    // Touch gesture zoom (pinch zoom)
+    let initialPinchDistance = null;
+
+    container.on("touchstart", function() {
+        if (d3.event.touches.length === 2) {
+            const touch1 = d3.event.touches[0];
+            const touch2 = d3.event.touches[1];
+            initialPinchDistance = Math.hypot(
+                touch2.clientX - touch1.clientX,
+                touch2.clientY - touch1.clientY
+            );
+        }
+    });
+
+    container.on("touchmove", function() {
+        if (d3.event.touches.length === 2 && initialPinchDistance) {
+            const touch1 = d3.event.touches[0];
+            const touch2 = d3.event.touches[1];
+            const currentPinchDistance = Math.hypot(
+                touch2.clientX - touch1.clientX,
+                touch2.clientY - touch1.clientY
+            );
+            const delta = (currentPinchDistance - initialPinchDistance) * 0.001;
+            adjustZoom(delta);
+            initialPinchDistance = currentPinchDistance;
+        }
+    });
+
+    container.on("touchend", function() {
+        initialPinchDistance = null;
     });
 
     return {
-        updateSelection: function(selection) {
-            const selectedYears = selection.selectedYears || [];
-            const selectedCategories = selection.selectedCategories || [];
-    
-            // Update row highlighting
-            tbody.selectAll("tr").classed("selected", d => selectedYears.includes(d.year));
-    
-            // Update cell highlighting
-            tbody.selectAll("tr").selectAll("td")
-                .classed("selected", function(d, i) {
-                    const category = headers[i];
-                    return selectedCategories.includes(category);
-                });
-        }
+        updateSelection: updateTable
     };
 }

@@ -2,10 +2,9 @@ function drawStackedLineChart(selector, data, dispatcher) {
     const margin = { top: 40, right: 450, bottom: 30, left: 70 },
         width = (window.innerWidth * 0.8) - margin.left - margin.right,
         height = 500 - margin.top - margin.bottom;
-    let selectedCategories = [];
+
     let svg = d3.select(selector).select("svg");
     if (svg.empty()) {
-        // Create the SVG element if it doesn't exist
         svg = d3.select(selector)
             .append("svg")
             .attr("width", width + margin.left + margin.right)
@@ -26,8 +25,32 @@ function drawStackedLineChart(selector, data, dispatcher) {
     keys.forEach((key, index) => {
         keyMapping[trimmedKeys[index]] = key;
     });
-
-    const color = d3.scaleOrdinal(d3.schemeCategory20).domain(trimmedKeys);
+    const customColors = [
+        "#DB697A", // Color 1
+        "#EE8575", // Color 2
+        "#FBB482", // Color 3
+        "#CDEBB8", // Color 4
+        "#9CD7BC", // Color 5
+        "#867BB9", // Color 6
+        "#6BAED6", // Color 7
+        "#FED976", // Color 8
+        "#FFFFCC", // Color 9
+        "#F7AC53", // Color 10
+        "#CC80B3", // Color 11
+        "#D98880", // Color 12
+        "#F0B27A", // Color 13
+        "#C39BD3", // Color 14
+        "#7DCEA0", // Color 15
+        "#F5CBA7", // Color 16
+        "#85C1E9", // Color 17
+        "#E8DAEF", // Color 18
+        "#F9E79F", // Color 19
+        "#EAEDED"  // Color 20
+      ];
+      
+      const color = d3.scaleOrdinal(customColors).domain(trimmedKeys);
+      
+   // const color = d3.scaleOrdinal(d3.schemeCategory20).domain(trimmedKeys);
     const stackedData = d3.stack().keys(keys)(data);
 
     const x = d3.scaleBand()
@@ -49,12 +72,16 @@ function drawStackedLineChart(selector, data, dispatcher) {
     svg.selectAll(".layer")
         .data(stackedData)
         .enter().append("path")
-        .attr("class", d => `layer ${d.key.trim()}`)
+        .attr("class", d => {
+            // Convert category key to a safe CSS class name by replacing spaces with underscores
+            const safeKey = d.key.trim().replace(/\s+/g, '_');
+            return `layer ${safeKey}`;
+        })
         .attr("d", area)
         .style("fill", d => color(d.key.trim()))
         .style("opacity", 1);
 
-    // Add legend for categories
+    // Add legend
     const legend = svg.append("g")
         .attr("class", "legend")
         .attr("transform", `translate(${width + 20}, 0)`);
@@ -77,21 +104,7 @@ function drawStackedLineChart(selector, data, dispatcher) {
                 .attr("y", 9)
                 .attr("dy", ".35em")
                 .text(d);
-
-            legendItem.on("click", function() {
-            const category = d;
-            // Toggle category selection
-            if (selectedCategories.includes(category)) {
-                selectedCategories = selectedCategories.filter(c => c !== category);
-            } else {
-                selectedCategories.push(category);
-            }
-            // Update legend item appearance
-            d3.select(this).classed("selected", selectedCategories.includes(category));
-            // Dispatch selection with both selected years and categories
-            dispatcher.call("selectionUpdated", this, { selectedYears: [], selectedCategories: selectedCategories });
         });
-    });
 
     // Axes
     svg.append("g")
@@ -105,7 +118,7 @@ function drawStackedLineChart(selector, data, dispatcher) {
     svg.append("g")
         .call(d3.axisLeft(y));
 
-    // Tooltip setup
+    // Tooltip
     const tooltip = d3.select("body").append("div")
         .attr("class", "tooltip")
         .style("position", "absolute")
@@ -125,7 +138,6 @@ function drawStackedLineChart(selector, data, dispatcher) {
         .attr("class", "brush")
         .call(brush);
 
-    // Attach mousemove and mouseout to the brush overlay
     brushGroup.selectAll(".overlay")
         .on("mousemove", mousemove)
         .on("mouseout", mouseout);
@@ -135,7 +147,7 @@ function drawStackedLineChart(selector, data, dispatcher) {
         const mouseX = mouse[0];
         const mouseY = mouse[1];
 
-        // Find the closest year based on mouseX
+        // Find the closest year
         const closestYear = x.domain().reduce((prev, curr) => {
             const prevDiff = Math.abs(x(prev) + x.bandwidth() / 2 - mouseX);
             const currDiff = Math.abs(x(curr) + x.bandwidth() / 2 - mouseX);
@@ -146,17 +158,12 @@ function drawStackedLineChart(selector, data, dispatcher) {
             const index = data.findIndex(entry => entry.year == closestYear);
             const dataForYear = data[index];
 
-            // Get the stacked values for each layer at the current index
             const layersAtPoint = stackedData.map(layer => ({
                 key: layer.key,
                 y0: layer[index][0],
                 y1: layer[index][1],
-            }));
+            })).reverse();
 
-            // Reverse the layers to match the visual stacking order
-            layersAtPoint.reverse();
-
-            // Determine which layer the mouse is over based on mouseY
             let category;
             for (let i = 0; i < layersAtPoint.length; i++) {
                 const layer = layersAtPoint[i];
@@ -165,7 +172,7 @@ function drawStackedLineChart(selector, data, dispatcher) {
 
                 if (mouseY >= Math.min(y0, y1) && mouseY <= Math.max(y0, y1)) {
                     const trimmedKey = layer.key.trim();
-                    category = keyMapping[trimmedKey]; // Get the original key from the mapping
+                    category = keyMapping[trimmedKey];
                     break;
                 }
             }
@@ -173,7 +180,6 @@ function drawStackedLineChart(selector, data, dispatcher) {
             if (category) {
                 const value = dataForYear[category];
                 if (value !== undefined) {
-                    // Display the tooltip
                     tooltip.html(`
                         <strong>Category:</strong> ${category.trim()}<br>
                         <strong>Year:</strong> ${closestYear}<br>
@@ -195,6 +201,7 @@ function drawStackedLineChart(selector, data, dispatcher) {
 
     function brushed() {
         const selection = d3.event.selection;
+
         if (selection) {
             const [x0, x1] = selection;
             const selectedYears = x.domain().filter(year => {
@@ -202,31 +209,39 @@ function drawStackedLineChart(selector, data, dispatcher) {
                 return position >= x0 && position <= x1;
             });
 
-            // Update dispatcher with selected years
-            dispatcher.call("selectionUpdated", this, { selectedYears: selectedYears, selectedCategories: selectedCategories });
-
+            dispatcher.call("selectionUpdated", this, selectedYears);
         } else {
-            // Clear selection
-            dispatcher.call("selectionUpdated", this, { selectedYears: [], selectedCategories: selectedCategories });
+            dispatcher.call("selectionUpdated", this, []);
         }
     }
 
-    function updateSelection(selection) {
-        // Highlight the selected years
-        const selectedYears = selection.selectedYears || [];
-        const selectedCategories = selection.selectedCategories || [];
-        svg.selectAll(".layer")
-        .style("opacity", function(d) {
-            const category = d.key.trim();
-            if (selectedCategories.length === 0) {
-                return 1;
-            } else {
-                return selectedCategories.includes(category) ? 1 : 0.2;
-            }
-        });
-    }
+    // Highlighting logic
+    let currentlyHighlighted = null;
+    dispatcher.on("categoryHighlighted", function (categoryKey) {
+        // Convert category key to match class names used in layers
+        const trimmedCategory = categoryKey.trim().replace(/\s+/g, '_');
 
-    return {
-        updateSelection: updateSelection
-    };
+        if (currentlyHighlighted === trimmedCategory) {
+            // If the user clicked the same category again, reset highlight
+            currentlyHighlighted = null;
+            svg.selectAll(".layer")
+                .transition()
+                .duration(200)
+                .style("opacity", 1.0);
+        } else {
+            currentlyHighlighted = trimmedCategory;
+
+            // De-highlight all layers
+            svg.selectAll(".layer")
+                .transition()
+                .duration(200)
+                .style("opacity", 0.3);
+
+            // Highlight the selected category
+            svg.selectAll(`.layer.${trimmedCategory}`)
+                .transition()
+                .duration(200)
+                .style("opacity", 1.0);
+        }
+    });
 }

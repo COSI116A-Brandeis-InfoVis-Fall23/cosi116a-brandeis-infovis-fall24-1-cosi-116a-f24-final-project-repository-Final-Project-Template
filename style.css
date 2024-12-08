@@ -1,117 +1,189 @@
-/* General formatting */
+/* body style */
 body {
-	padding: 0 10px;
-	font: 11px/1.5 -apple-system, BlinkMacSystemFont, "avenir next",avenir, "Segoe UI", "lucida grande", "helvetica neue", helvetica, "Fira Sans",roboto, noto, "Droid Sans", cantarell, oxygen, ubuntu, "franklin gothic medium", "century gothic", "Liberation Sans",
-	sans-serif;
-}
-
-h1, h2, h3 {
-	line-height: 1.2
-}
-
-/* Your text should be in a nice narrow column */
-.content-column {
-	max-width: 650px;
-	margin: 40px auto;
-}
-
-/* But your visualization should be full-width and full-height */
-.vis-holder {
-  width: 100%;
-  height: 100%;
-}
-
-/* Fork on GitHub ribbon via https://codepo8.github.io/css-fork-on-github-ribbon/# */  
-#forkongithub a{
-	background:#00F;
-	color:#fff;
-	text-decoration:none;
-	font-family:arial,sans-serif;
-	text-align:center;
-	font-weight:bold;
-	padding:5px 40px;
-	font-size:1rem;
-	line-height:1.4rem;
-	position:relative;
-	transition:0.5s;
-}
-#forkongithub a:hover{
-	background:#118;
-	color:#fff;
-}
-#forkongithub a::before,#forkongithub a::after{
-	content:"";
-	width:100%;
-	display:block;
-	position:absolute;
-	top:1px;
-	left:0;
-	height:1px;
-	background:#fff;
-}
-#forkongithub a::after{
-	bottom:1px;
-	top:auto;
-}
-@media screen and (min-width:1000px){
-	#forkongithub{
-		position:fixed;
-		display:block;
-		top:0;
-		right:0;
-		width:200px;
-		overflow:hidden;
-		height:200px;
-		z-index:9999;
+	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+	line-height: 1.6;
+	color: #333;
+	margin: 0;
+	padding: 0;
+	background-color: #f5f7fa;
+  }
+  body {
+	  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
 	}
-	#forkongithub a{
-		width:200px;
-		position:absolute;
-		top:60px;
-		right:-60px;
-		transform:rotate(45deg);
-		-webkit-transform:rotate(45deg);
-		-ms-transform:rotate(45deg);
-		-moz-transform:rotate(45deg);
-		-o-transform:rotate(45deg);
-		box-shadow:4px 4px 10px rgba(0,0,0,0.8);
+  /* column setting */
+  .content-column {
+	max-width: 1200px;
+	margin: 0 auto;
+	padding: 2rem;
+	background-color: white;
+	box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+	border-radius: 8px;
+	margin-top: 2rem;
+	margin-bottom: 2rem;
+  }
+  
+  /* title setting */
+  h1 {
+	color: #2c3e50;
+	border-bottom: 2px solid #3498db;
+	padding-bottom: 0.5rem;
+	margin-top: 2rem;
+  }
+  
+  /* visualization holder setting */
+  .vis-holder {
+	background: white;
+	padding: 2rem;
+	border-radius: 8px;
+	box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+	margin: 2rem auto;
+	/* max-width: 1200px; */
+  }
+  
+  /* table setting */
+  .table-holder {
+	margin-top: 2rem;
+	overflow-x: auto;
+  }
+  
+  table {
+	width: 100%;
+	border-collapse: collapse;
+	background: white;
+	border-radius: 8px;
+	overflow: hidden;
+  }
+  
+  th {
+	background: #3498db;
+	color: white;
+	padding: 1rem;
+	text-align: left;
+  }
+  
+  td {
+	padding: 1rem;
+	border-bottom: 1px solid #eee;
+  }
+  
+  tr:hover {
+	background-color: #f8f9fa;
+  }
+  
+  /* stackedlinechart setting */
+  .linechart-holder {
+	margin-bottom: 2rem;
+  }
+  
+  /* link setting */
+  a {
+	color: #3498db;
+	text-decoration: none;
+	transition: color 0.3s;
+  }
+  
+  a:hover {
+	color: #2980b9;
+  }
+  
+  /* GitHub forkme setting */
+  #forkongithub a {
+	background: #3498db;
+	color: white;
+	padding: 0.5rem 2rem;
+	position: fixed;
+	top: 0;
+	right: 0;
+	transform: rotate(45deg) translateX(3rem) translateY(-1rem);
+	box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+  }
+  
+  /* fork setting */
+  @media (max-width: 768px) {
+	.content-column {
+	  padding: 1rem;
+	  margin: 1rem;
 	}
-}
-
-.my-table {
-    border-collapse: collapse;
-    width: 100%;
-    margin: 20px 0;
-}
-
-.my-table th, .my-table td {
-    border: 1px solid #0e0e0e;
-    padding: 8px;
-    text-align: center;
-}
-
-.my-table th {
-    background-color: #f4f4f4;
-    font-weight: bold;
-}
-
-#stacked-linechart {
-    width: 100%;
-    height: 500px;
-}
-
-tr.selected {
-    background-color: #ffff99; /* Highlight color for selected rows */
-}
-
-td.selected {
-    background-color: #cce5ff; /* Highlight color for selected cells */
-}
-tr.clicked {
-	background-color: brown; /* Clicked color*/
-}
-
-.legend-item.selected rect {
-    stroke: black;
-    stroke-width: 2px;
-}
+	
+	.vis-holder {
+	  padding: 1rem;
+	  margin: 1rem;
+	}
+	
+	#forkongithub {
+	  display: none;
+	}
+  }
+  
+  /* image setting */
+  img {
+	max-width: 100%;
+	height: auto;
+	border-radius: 8px;
+	margin: 1rem 0;
+	box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  }
+  
+  /* demo video setting */
+  video {
+	border-radius: 8px;
+	box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  }
+  
+  /* emphasize text setting */
+  em {
+	color: #555;
+	font-style: normal;
+  }
+  
+  ul {
+	padding-left: 2rem;
+  }
+  
+  li {
+	margin-bottom: 0.5rem;
+  }
+  
+  /* table holder setting */
+  .table-holder table {
+	width: 100%;
+	border-collapse: collapse;
+	margin: 20px 0;
+	font-size: 14px;
+	box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  }
+  
+  /* table setting */
+  .table-holder th {
+	background-color: #f8f9fa;
+	padding: 12px;
+	text-align: left;
+	font-weight: 600;
+	color: #333;
+	border-bottom: 2px solid #dee2e6;
+  }
+  
+  /* cell setting */
+  .table-holder td {
+	padding: 12px;
+	border-bottom: 1px solid #dee2e6;
+  }
+  
+  /* color on table setting */
+  .table-holder tr:nth-child(even) {
+	background-color: #f8f9fa;
+  }
+  
+  /* mouse hover setting */
+  .table-holder tr:hover {
+	background-color: #e9ecef;
+	transition: background-color 0.2s ease;
+  }
+  
+  /* table setting */
+  @media screen and (max-width: 600px) {
+	.table-holder {
+	  overflow-x: auto;
+	}
+  }
+  
