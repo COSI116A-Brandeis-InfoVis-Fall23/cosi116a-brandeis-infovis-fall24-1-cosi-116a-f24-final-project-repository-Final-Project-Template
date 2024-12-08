@@ -6,28 +6,42 @@ document.addEventListener("DOMContentLoaded", function () {
     attribution: "&copy; OpenStreetMap contributors",
   }).addTo(map);
 
+  let heatLayer; // Reference to the heatmap layer
+  let parsedData = []; // Parsed data from CSV
 
-  let heatLayer;
-  let parsedData = [];
+  // Time sliders and display elements
+  const timeSliderStart = document.getElementById("time-slider-start");
+  const timeSliderEnd = document.getElementById("time-slider-end");
+  const selectedStartDate = document.getElementById("selected-start-date");
+  const selectedEndDate = document.getElementById("selected-end-date");
+  const weekDates = []; // Array to store the unique week dates
 
+  // Function to update the heatmap
+  const updateHeatmap = (startIndex, endIndex) => {
+    const startWeek = weekDates[startIndex];
+    const endWeek = weekDates[endIndex];
+    selectedStartDate.textContent = startWeek;
+    selectedEndDate.textContent = endWeek;
 
-  // Initialize the time slider
-  const timeSlider = document.getElementById("time-slider");
-  const selectedDate = document.getElementById("selected-date");
-  const startDate = new Date(2019, 11, 28); // 12/28/2019
+    // Filter and aggregate data for the selected period
+    const heatPoints = [];
+    const aggregatedTraffic = {};
 
-  // Function to update heatmap
-  const updateHeatmap = (weekIndex) => {
-    const currentDate = new Date(startDate);
-    currentDate.setDate(currentDate.getDate() + weekIndex * 7);
+    parsedData.forEach((row) => {
+      if (row.Week >= startWeek && row.Week <= endWeek) {
+        const key = `${row.Latitude},${row.Longitude}`;
+        if (!aggregatedTraffic[key]) {
+          aggregatedTraffic[key] = 0;
+        }
+        aggregatedTraffic[key] += row.Traffic;
+      }
+    });
 
-    // Display the current date
-    selectedDate.textContent = currentDate.toISOString().split("T")[0];
-
-    // Filter data for the current week
-    const heatPoints = parsedData
-      .filter((row) => row.WeekIndex === weekIndex)
-      .map((row) => [row.Latitude, row.Longitude, row.Traffic / 5000]);
+    // Convert aggregated data into heatmap points
+    for (const key in aggregatedTraffic) {
+      const [lat, lng] = key.split(",").map(parseFloat);
+      heatPoints.push([lat, lng, aggregatedTraffic[key] / 5000]);
+    }
 
     // Remove the previous heatmap layer
     if (heatLayer) map.removeLayer(heatLayer);
@@ -41,8 +55,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }).addTo(map);
   };
 
-
-  // Add borough boundaries
+  // Load borough boundaries
   fetch("lib/geo/new-york-city-boroughs.geojson")
     .then((response) => response.json())
     .then((boroughData) => {
@@ -52,12 +65,11 @@ document.addEventListener("DOMContentLoaded", function () {
           weight: 1,
           fillColor: "#e0e0e0",
           fillOpacity: 0.4,
-          className: "leaflet-borough",
         },
       }).addTo(map);
     });
 
-  // Add subway lines
+  // Load subway lines
   fetch("lib/geo/subway-lines.geojson")
     .then((response) => response.json())
     .then((lineData) => {
@@ -66,13 +78,12 @@ document.addEventListener("DOMContentLoaded", function () {
           color: "blue",
           weight: 1.5,
           opacity: 0.7,
-          className: "leaflet-line",
         },
       }).addTo(map);
     });
 
-  // Load CSV data
-  Papa.parse("lib/geo/Subway_ridership_true_final.csv", {
+  // Load and parse the CSV data
+  Papa.parse("data/Subway_ridership_true_final.csv", {
     download: true,
     header: true,
     skipEmptyLines: true,
@@ -84,15 +95,60 @@ document.addEventListener("DOMContentLoaded", function () {
         Latitude: parseFloat(row.Latitude),
         Longitude: parseFloat(row.Longitude),
         Traffic: parseFloat(row.Traffic),
-        WeekIndex: Math.floor((new Date(row.Date) - startDate) / (7 * 24 * 60 * 60 * 1000)), // Calculate week index
+        Week: row.Week,
       }));
 
-      // Initialize heatmap with the first week
-      updateHeatmap(0);
+      // Extract unique week dates
+      weekDates.push(...new Set(parsedData.map((row) => row.Week)));
+      weekDates.sort(); // Sort dates chronologically
 
-      // Add event listener to the slider
-      timeSlider.addEventListener("input", (e) => {
-        updateHeatmap(parseInt(e.target.value, 10));
+      // Initialize slider attributes
+      const maxIndex = weekDates.length - 1;
+      timeSliderStart.max = maxIndex;
+      timeSliderEnd.max = maxIndex;
+      timeSliderStart.value = 0;
+      timeSliderEnd.value = maxIndex;
+      selectedStartDate.textContent = weekDates[0];
+      selectedEndDate.textContent = weekDates[maxIndex];
+
+      // Initialize heatmap with the full range
+      updateHeatmap(0, maxIndex);
+
+      // Add event listeners to the sliders
+      timeSliderStart.addEventListener("input", () => {
+        const startIndex = parseInt(timeSliderStart.value, 10);
+        const endIndex = Math.max(startIndex, parseInt(timeSliderEnd.value, 10));
+        timeSliderEnd.value = endIndex; // Prevent overlap
+        updateHeatmap(startIndex, endIndex);
+      });
+
+      timeSliderEnd.addEventListener("input", () => {
+        const endIndex = parseInt(timeSliderEnd.value, 10);
+        const startIndex = Math.min(parseInt(timeSliderStart.value, 10), endIndex);
+        timeSliderStart.value = startIndex; // Prevent overlap
+        updateHeatmap(startIndex, endIndex);
+      });
+
+      // Add station markers
+      parsedData.forEach((row) => {
+        const marker = L.circleMarker([row.Latitude, row.Longitude], {
+          radius: 6,
+          color: "orange",
+          fillColor: "orange",
+          fillOpacity: 0.9,
+        }).addTo(map);
+
+        marker.bindTooltip(
+          `<strong>StationID:</strong> ${row.StationID}<br>
+           <strong>Control Area:</strong> ${row.ControlArea}<br>
+           <strong>Line Name:</strong> ${row.LineName}<br>
+           <strong>Traffic:</strong> ${row.Traffic}`,
+          { direction: "top" }
+        );
+
+        marker.on("click", () => {
+          alert(`StationID: ${row.StationID}\nControl Area: ${row.ControlArea}\nLine Name: ${row.LineName}\nTraffic: ${row.Traffic}`);
+        });
       });
     },
     error: (err) => {
