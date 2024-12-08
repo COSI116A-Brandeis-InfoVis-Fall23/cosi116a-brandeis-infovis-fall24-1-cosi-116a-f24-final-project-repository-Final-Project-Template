@@ -36,7 +36,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
   // Add heatmap and stations
-  Papa.parse("lib/geo/Subway_ridership_true_final.csv", {
+  Papa.parse("data/Subway_ridership_true_final.csv", {
     download: true,
     header: true, // Automatically use the headers as keys
     skipEmptyLines: true, // Ignore empty rows
