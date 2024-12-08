@@ -39,11 +39,39 @@ document.addEventListener("DOMContentLoaded", function () {
   fetch("data/Subway_ridership_true_final.csv")
     .then((response) => response.text())
     .then((csvData) => {
-      // Parse the CSV
       const rows = csvData.split("\n").slice(1); // Skip the header row
-      const heatPoints = rows.map((row) => {
+
+      const heatPoints = [];
+      rows.forEach((row) => {
         const [stationID, controlArea, lineName, latitude, longitude, traffic] = row.split(",");
-        return [parseFloat(latitude), parseFloat(longitude), parseFloat(traffic) / 5000];
+        if (!latitude || !longitude || !traffic) return; // Skip invalid rows
+
+        const lat = parseFloat(latitude);
+        const lng = parseFloat(longitude);
+        const trafficValue = parseFloat(traffic);
+
+        // Add heatmap point
+        heatPoints.push([lat, lng, trafficValue / 5000]); // Normalize traffic
+
+        // Add interactive station marker
+        const marker = L.circleMarker([lat, lng], {
+          radius: 6,
+          color: "orange",
+          fillColor: "orange",
+          fillOpacity: 0.9,
+        }).addTo(map);
+
+        marker.bindTooltip(
+          `<strong>StationID:</strong> ${stationID}<br>
+           <strong>Control Area:</strong> ${controlArea}<br>
+           <strong>Line Name:</strong> ${lineName}<br>
+           <strong>Traffic:</strong> ${trafficValue}`,
+          { direction: "top" }
+        );
+
+        marker.on("click", () => {
+          alert(`StationID: ${stationID}\nControl Area: ${controlArea}\nLine Name: ${lineName}\nTraffic: ${trafficValue}`);
+        });
       });
 
       // Add heatmap layer
