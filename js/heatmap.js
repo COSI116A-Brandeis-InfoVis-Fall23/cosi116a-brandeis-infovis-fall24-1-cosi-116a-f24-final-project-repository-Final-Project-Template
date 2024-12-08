@@ -36,7 +36,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
   // Add heatmap and stations
-  fetch("lib/geo/Subway_ridership_true_final.csv")
+  fetch("data/Subway_ridership_true_final.csv")
     .then((response) => response.text())
     .then((csvData) => {
       // Parse the CSV
