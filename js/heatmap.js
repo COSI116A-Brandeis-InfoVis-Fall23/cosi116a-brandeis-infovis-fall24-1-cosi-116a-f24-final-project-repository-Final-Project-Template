@@ -6,6 +6,42 @@ document.addEventListener("DOMContentLoaded", function () {
     attribution: "&copy; OpenStreetMap contributors",
   }).addTo(map);
 
+
+  let heatLayer;
+  let parsedData = [];
+
+
+  // Initialize the time slider
+  const timeSlider = document.getElementById("time-slider");
+  const selectedDate = document.getElementById("selected-date");
+  const startDate = new Date(2019, 11, 28); // 12/28/2019
+
+  // Function to update heatmap
+  const updateHeatmap = (weekIndex) => {
+    const currentDate = new Date(startDate);
+    currentDate.setDate(currentDate.getDate() + weekIndex * 7);
+
+    // Display the current date
+    selectedDate.textContent = currentDate.toISOString().split("T")[0];
+
+    // Filter data for the current week
+    const heatPoints = parsedData
+      .filter((row) => row.WeekIndex === weekIndex)
+      .map((row) => [row.Latitude, row.Longitude, row.Traffic / 5000]);
+
+    // Remove the previous heatmap layer
+    if (heatLayer) map.removeLayer(heatLayer);
+
+    // Add a new heatmap layer
+    heatLayer = L.heatLayer(heatPoints, {
+      radius: 20,
+      blur: 20,
+      maxZoom: 15,
+      opacity: 0.4,
+    }).addTo(map);
+  };
+
+
   // Add borough boundaries
   fetch("lib/geo/new-york-city-boroughs.geojson")
     .then((response) => response.json())
@@ -35,51 +71,29 @@ document.addEventListener("DOMContentLoaded", function () {
       }).addTo(map);
     });
 
-  // Add heatmap and stations
-  Papa.parse("data/Subway_ridership_true_final.csv", {
+  // Load CSV data
+  Papa.parse("lib/geo/Subway_ridership_true_final.csv", {
     download: true,
-    header: true, // Automatically use the headers as keys
-    skipEmptyLines: true, // Ignore empty rows
+    header: true,
+    skipEmptyLines: true,
     complete: (results) => {
-      const heatPoints = [];
-      results.data.forEach((row) => {
-        const lat = parseFloat(row.Latitude);
-        const lng = parseFloat(row.Longitude);
-        const traffic = parseFloat(row.Traffic);
+      parsedData = results.data.map((row) => ({
+        StationID: row.StationID,
+        ControlArea: row.ControlArea,
+        LineName: row.LineName,
+        Latitude: parseFloat(row.Latitude),
+        Longitude: parseFloat(row.Longitude),
+        Traffic: parseFloat(row.Traffic),
+        WeekIndex: Math.floor((new Date(row.Date) - startDate) / (7 * 24 * 60 * 60 * 1000)), // Calculate week index
+      }));
 
-        if (!lat || !lng || !traffic) return; // Skip invalid rows
+      // Initialize heatmap with the first week
+      updateHeatmap(0);
 
-        // Add heatmap point
-        heatPoints.push([lat, lng, traffic / 5000]);
-
-        // Add interactive station marker
-        const marker = L.circleMarker([lat, lng], {
-          radius: 6,
-          color: "orange",
-          fillColor: "orange",
-          fillOpacity: 0.9,
-        }).addTo(map);
-
-        marker.bindTooltip(
-          `<strong>StationID:</strong> ${row.StationID}<br>
-           <strong>Control Area:</strong> ${row.ControlArea}<br>
-           <strong>Line Name:</strong> ${row.LineName}<br>
-           <strong>Traffic:</strong> ${traffic}`,
-          { direction: "top" }
-        );
-
-        marker.on("click", () => {
-          alert(`StationID: ${row.StationID}\nControl Area: ${row.ControlArea}\nLine Name: ${row.LineName}\nTraffic: ${traffic}`);
-        });
+      // Add event listener to the slider
+      timeSlider.addEventListener("input", (e) => {
+        updateHeatmap(parseInt(e.target.value, 10));
       });
-
-      // Add heatmap layer
-      L.heatLayer(heatPoints, {
-        radius: 20,
-        blur: 20,
-        maxZoom: 15,
-        opacity: 0.4,
-      }).addTo(map);
     },
     error: (err) => {
       console.error("Error loading CSV:", err);

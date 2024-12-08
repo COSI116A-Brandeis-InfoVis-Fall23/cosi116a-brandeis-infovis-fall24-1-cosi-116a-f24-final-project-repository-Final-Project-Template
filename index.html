@@ -24,7 +24,7 @@
   <meta http-equiv="Content-Security-Policy" content="script-src 'self' 'unsafe-eval'">
 
   <!-- Leaflet.js -->
-  <link rel="stylesheet" href="lib/leaflet/leaflet.css" >
+  <link rel="stylesheet" href="lib/leaflet/leaflet.css">
   <link rel="stylesheet" href="lib/leaflet/leaflet-style.css">
 
 
@@ -74,8 +74,19 @@
 
   </div>
 
+
+  <!-- Time Scale Slider (placeholder) -->  
+  <div id="time-slider-container">
+    <label for="time-slider">Select Date:</label>
+    <input type="range" id="time-slider" min="0" max="251" step="1">
+    <span id="selected-date"></span>
+  </div>
+
   <!-- Your visualization here -->
   <div class="vis-holder">
+
+
+
     <!-- Heat Map -->
     <div id="map-container">
       <h2>Heat Map</h2>
