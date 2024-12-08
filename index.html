@@ -27,8 +27,8 @@
   <link rel="stylesheet" href="lib/leaflet/leaflet.css">
   <link rel="stylesheet" href="lib/leaflet/leaflet-style.css">
 
-
-
+  <!-- slider -->
+  <link rel="stylesheet" href="lib/noUISlider/nouislider.min.css">
 
 </head>
 
@@ -77,9 +77,8 @@
 
   <!-- Time Scale Slider (placeholder) -->
   <div id="time-slider-container">
-    <label for="start-slider">Start Week:</label>
-    <input type="range" id="time-slider-start" min="0" max="251" step="1">
-    <input type="range" id="time-slider-end" min="0" max="251" step="1">
+    <label for="time-slider">Select Date Range:</label>
+    <div id="time-slider"></div>
 
     <div>
       <span id="selected-start-date"></span> to <span id="selected-end-date"></span>
@@ -214,6 +213,7 @@
   <script src="lib/leaflet/leaflet-heat.js"></script>
   <script src="js/heatmap.js"></script>
   <script src="lib/papaparse/papaparse.min.js"></script>
+  <script src="lib/noUISlider/nouislider.min.js"></script>
 </body>
 
 </html>

@@ -102,53 +102,23 @@ document.addEventListener("DOMContentLoaded", function () {
       weekDates.push(...new Set(parsedData.map((row) => row.Week)));
       weekDates.sort(); // Sort dates chronologically
 
-      // Initialize slider attributes
-      const maxIndex = weekDates.length - 1;
-      timeSliderStart.max = maxIndex;
-      timeSliderEnd.max = maxIndex;
-      timeSliderStart.value = 0;
-      timeSliderEnd.value = maxIndex;
-      selectedStartDate.textContent = weekDates[0];
-      selectedEndDate.textContent = weekDates[maxIndex];
+      // Update slider with weekDates
+      timeSlider.noUiSlider.updateOptions({
+        range: {
+          min: 0,
+          max: weekDates.length - 1,
+        },
+        start: [0, weekDates.length - 1],
+      });
 
       // Initialize heatmap with the full range
-      updateHeatmap(0, maxIndex);
+      updateHeatmap(0, weekDates.length - 1);
 
-      // Add event listeners to the sliders
-      timeSliderStart.addEventListener("input", () => {
-        const startIndex = parseInt(timeSliderStart.value, 10);
-        const endIndex = Math.max(startIndex, parseInt(timeSliderEnd.value, 10));
-        timeSliderEnd.value = endIndex; // Prevent overlap
+      // Add slider update event
+      timeSlider.noUiSlider.on("update", (values) => {
+        const startIndex = parseInt(values[0], 10);
+        const endIndex = parseInt(values[1], 10);
         updateHeatmap(startIndex, endIndex);
-      });
-
-      timeSliderEnd.addEventListener("input", () => {
-        const endIndex = parseInt(timeSliderEnd.value, 10);
-        const startIndex = Math.min(parseInt(timeSliderStart.value, 10), endIndex);
-        timeSliderStart.value = startIndex; // Prevent overlap
-        updateHeatmap(startIndex, endIndex);
-      });
-
-      // Add station markers
-      parsedData.forEach((row) => {
-        const marker = L.circleMarker([row.Latitude, row.Longitude], {
-          radius: 6,
-          color: "orange",
-          fillColor: "orange",
-          fillOpacity: 0.9,
-        }).addTo(map);
-
-        marker.bindTooltip(
-          `<strong>StationID:</strong> ${row.StationID}<br>
-           <strong>Control Area:</strong> ${row.ControlArea}<br>
-           <strong>Line Name:</strong> ${row.LineName}<br>
-           <strong>Traffic:</strong> ${row.Traffic}`,
-          { direction: "top" }
-        );
-
-        marker.on("click", () => {
-          alert(`StationID: ${row.StationID}\nControl Area: ${row.ControlArea}\nLine Name: ${row.LineName}\nTraffic: ${row.Traffic}`);
-        });
       });
     },
     error: (err) => {
