@@ -1,7 +1,7 @@
 Todo:
 
 Fix layers (done)
-Adapt new station data into geojson (in progress)
+Adapt new station data into geojson (Rejected) //shit
 Implement interactions:
     details on demand
     brushing integration with line/bar chart
