@@ -36,22 +36,21 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
   // Add heatmap and stations
-  fetch("data/Subway_ridership_true_final.csv")
-    .then((response) => response.text())
-    .then((csvData) => {
-      const rows = csvData.split("\n").slice(1); // Skip the header row
-
+  Papa.parse("lib/geo/Subway_ridership_true_final.csv", {
+    download: true,
+    header: true, // Automatically use the headers as keys
+    skipEmptyLines: true, // Ignore empty rows
+    complete: (results) => {
       const heatPoints = [];
-      rows.forEach((row) => {
-        const [stationID, controlArea, lineName, latitude, longitude, traffic] = row.split(",");
-        if (!latitude || !longitude || !traffic) return; // Skip invalid rows
+      results.data.forEach((row) => {
+        const lat = parseFloat(row.Latitude);
+        const lng = parseFloat(row.Longitude);
+        const traffic = parseFloat(row.Traffic);
 
-        const lat = parseFloat(latitude);
-        const lng = parseFloat(longitude);
-        const trafficValue = parseFloat(traffic);
+        if (!lat || !lng || !traffic) return; // Skip invalid rows
 
         // Add heatmap point
-        heatPoints.push([lat, lng, trafficValue / 5000]); // Normalize traffic
+        heatPoints.push([lat, lng, traffic / 5000]);
 
         // Add interactive station marker
         const marker = L.circleMarker([lat, lng], {
@@ -62,15 +61,15 @@ document.addEventListener("DOMContentLoaded", function () {
         }).addTo(map);
 
         marker.bindTooltip(
-          `<strong>StationID:</strong> ${stationID}<br>
-           <strong>Control Area:</strong> ${controlArea}<br>
-           <strong>Line Name:</strong> ${lineName}<br>
-           <strong>Traffic:</strong> ${trafficValue}`,
+          `<strong>StationID:</strong> ${row.StationID}<br>
+           <strong>Control Area:</strong> ${row.ControlArea}<br>
+           <strong>Line Name:</strong> ${row.LineName}<br>
+           <strong>Traffic:</strong> ${traffic}`,
           { direction: "top" }
         );
 
         marker.on("click", () => {
-          alert(`StationID: ${stationID}\nControl Area: ${controlArea}\nLine Name: ${lineName}\nTraffic: ${trafficValue}`);
+          alert(`StationID: ${row.StationID}\nControl Area: ${row.ControlArea}\nLine Name: ${row.LineName}\nTraffic: ${traffic}`);
         });
       });
 
@@ -81,5 +80,9 @@ document.addEventListener("DOMContentLoaded", function () {
         maxZoom: 15,
         opacity: 0.4,
       }).addTo(map);
-    });
+    },
+    error: (err) => {
+      console.error("Error loading CSV:", err);
+    },
+  });
 });
