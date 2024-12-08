@@ -36,14 +36,15 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
   // Add heatmap and stations
-  fetch("lib/geo/geocoded1.geojson")
-    .then((response) => response.json())
-    .then((stationData) => {
-      const heatPoints = stationData.features.map((station) => [
-        station.geometry.coordinates[1],
-        station.geometry.coordinates[0],
-        station.properties.Traffic / 5000,
-      ]);
+  fetch("lib/geo/Subway_ridership_true_final.csv")
+    .then((response) => response.text())
+    .then((csvData) => {
+      // Parse the CSV
+      const rows = csvData.split("\n").slice(1); // Skip the header row
+      const heatPoints = rows.map((row) => {
+        const [stationID, controlArea, lineName, latitude, longitude, traffic] = row.split(",");
+        return [parseFloat(latitude), parseFloat(longitude), parseFloat(traffic) / 5000];
+      });
 
       // Add heatmap layer
       L.heatLayer(heatPoints, {
@@ -52,26 +53,5 @@ document.addEventListener("DOMContentLoaded", function () {
         maxZoom: 15,
         opacity: 0.4,
       }).addTo(map);
-
-      // Add station markers
-      stationData.features.forEach((station) => {
-        const { coordinates } = station.geometry;
-        const { StationID, ControlArea, Traffic } = station.properties;
-
-        const marker = L.circleMarker([coordinates[1], coordinates[0]], {
-          radius: 4,
-          color: "orange",
-          fillColor: "orange",
-          fillOpacity: 0.8,
-          className: "leaflet-station-node",
-        }).addTo(map);
-
-        marker.bindTooltip(
-          `<strong>StationID:</strong> ${StationID}<br>
-           <strong>Control Area:</strong> ${ControlArea}<br>
-           <strong>Traffic:</strong> ${Traffic}`,
-          { direction: "top" }
-        );
-      });
     });
 });
