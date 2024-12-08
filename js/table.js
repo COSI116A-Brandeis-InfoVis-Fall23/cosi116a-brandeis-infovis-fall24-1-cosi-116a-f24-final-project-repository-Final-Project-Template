@@ -1,11 +1,10 @@
 function drawTable(selector, data, dispatcher) {
-    // Remove any existing table to prevent duplicates
     d3.select(selector).selectAll(".table-container").remove();
 
     const container = d3.select(selector)
         .append("div")
         .attr("class", "table-container")
-        .style("overflow", "auto") // Allow scrolling for large tables
+        .style("overflow", "auto") 
         .style("transform-origin", "center top") // For zooming
         .style("transform", "scale(1)"); // Default zoom level
 
@@ -35,64 +34,63 @@ function drawTable(selector, data, dispatcher) {
 
     // Function to update table rows based on filtered data
     function updateTable(filteredData) {
-        // Bind data to table rows
         const rows = tbody.selectAll("tr")
-            .data(filteredData, d => d.year); // Use `year` as the unique identifier for rows
+            .data(filteredData, d => d.year);
 
-        // Remove old rows
         rows.exit().remove();
 
-        // Append new rows
-        const rowsEnter = rows.enter()
-            .append("tr");
+        const rowsEnter = rows.enter().append("tr");
 
-        // Append cells to rows
         rowsEnter.selectAll("td")
             .data(d => headers.map(key => d[key]))
             .enter()
             .append("td")
-            .text(d => (typeof d === "number" ? d.toFixed(2) : d));
+            .text(d => (typeof d === "number" ? d.toFixed(2) : d))
+            .on("click", function(d, i) {
+                const categoryKey = headers[i];
+                // Only trigger highlight if it's not the 'Year' column
+                if (categoryKey.toLowerCase() !== "year") {
+                    dispatcher.call("categoryHighlighted", this, categoryKey);
+                }
+            });
 
-        // Update rows with new data
         rowsEnter.merge(rows);
     }
 
     // Initial rendering of the table
     updateTable(data);
 
-    // Listen for dispatcher updates and filter data
+    // Listen for selection updates and filter data
     dispatcher.on("selectionUpdated", selectedYears => {
         const filteredData = data.filter(d => selectedYears.includes(d.year));
         updateTable(filteredData);
     });
 
-    // Mouse and touch zoom functionality
+    // Zooming and panning functionality
     let zoomLevel = 1;
     const zoomStep = 0.1;
-    const maxZoom = 2; // Maximum zoom level
-    const minZoom = 0.5; // Minimum zoom level
+    const maxZoom = 2;
+    const minZoom = 0.5;
 
     function adjustZoom(delta) {
-        // Adjust zoom level within the limits
         zoomLevel = Math.min(maxZoom, Math.max(minZoom, zoomLevel + delta));
         container.style("transform", `scale(${zoomLevel})`);
     }
 
     // Mouse wheel zoom
-    container.on("wheel", event => {
-        event.preventDefault(); // Prevent default scroll behavior
-        const delta = event.deltaY < 0 ? zoomStep : -zoomStep; // Zoom in or out
+    container.on("wheel", function() {
+        d3.event.preventDefault();
+        const delta = d3.event.deltaY < 0 ? zoomStep : -zoomStep;
         adjustZoom(delta);
     });
 
     // Touch gesture zoom (pinch zoom)
     let initialPinchDistance = null;
 
-    container.on("touchstart", event => {
-        if (event.touches.length === 2) {
-            // Two-finger touch for pinch zoom
-            const touch1 = event.touches[0];
-            const touch2 = event.touches[1];
+    container.on("touchstart", function() {
+        if (d3.event.touches.length === 2) {
+            const touch1 = d3.event.touches[0];
+            const touch2 = d3.event.touches[1];
             initialPinchDistance = Math.hypot(
                 touch2.clientX - touch1.clientX,
                 touch2.clientY - touch1.clientY
@@ -100,29 +98,25 @@ function drawTable(selector, data, dispatcher) {
         }
     });
 
-    container.on("touchmove", event => {
-        if (event.touches.length === 2 && initialPinchDistance) {
-            // Two-finger touch movement
-            const touch1 = event.touches[0];
-            const touch2 = event.touches[1];
+    container.on("touchmove", function() {
+        if (d3.event.touches.length === 2 && initialPinchDistance) {
+            const touch1 = d3.event.touches[0];
+            const touch2 = d3.event.touches[1];
             const currentPinchDistance = Math.hypot(
                 touch2.clientX - touch1.clientX,
                 touch2.clientY - touch1.clientY
             );
-
-            // Calculate zoom delta based on pinch movement
-            const delta = (currentPinchDistance - initialPinchDistance) * 0.001; // Adjust sensitivity
+            const delta = (currentPinchDistance - initialPinchDistance) * 0.001;
             adjustZoom(delta);
-            initialPinchDistance = currentPinchDistance; // Update the distance
+            initialPinchDistance = currentPinchDistance;
         }
     });
 
-    container.on("touchend", () => {
-        // Reset initial pinch distance when fingers are lifted
+    container.on("touchend", function() {
         initialPinchDistance = null;
     });
 
     return {
-        updateSelection: updateTable // Expose for external use
+        updateSelection: updateTable
     };
 }

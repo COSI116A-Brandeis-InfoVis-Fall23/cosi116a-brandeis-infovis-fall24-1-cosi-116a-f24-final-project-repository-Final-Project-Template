@@ -5,7 +5,6 @@ function drawStackedLineChart(selector, data, dispatcher) {
 
     let svg = d3.select(selector).select("svg");
     if (svg.empty()) {
-        // Create the SVG element if it doesn't exist
         svg = d3.select(selector)
             .append("svg")
             .attr("width", width + margin.left + margin.right)
@@ -49,12 +48,16 @@ function drawStackedLineChart(selector, data, dispatcher) {
     svg.selectAll(".layer")
         .data(stackedData)
         .enter().append("path")
-        .attr("class", d => `layer ${d.key.trim()}`)
+        .attr("class", d => {
+            // Convert category key to a safe CSS class name by replacing spaces with underscores
+            const safeKey = d.key.trim().replace(/\s+/g, '_');
+            return `layer ${safeKey}`;
+        })
         .attr("d", area)
         .style("fill", d => color(d.key.trim()))
         .style("opacity", 1);
 
-    // Add legend for categories
+    // Add legend
     const legend = svg.append("g")
         .attr("class", "legend")
         .attr("transform", `translate(${width + 20}, 0)`);
@@ -91,7 +94,7 @@ function drawStackedLineChart(selector, data, dispatcher) {
     svg.append("g")
         .call(d3.axisLeft(y));
 
-    // Tooltip setup
+    // Tooltip
     const tooltip = d3.select("body").append("div")
         .attr("class", "tooltip")
         .style("position", "absolute")
@@ -111,7 +114,6 @@ function drawStackedLineChart(selector, data, dispatcher) {
         .attr("class", "brush")
         .call(brush);
 
-    // Attach mousemove and mouseout to the brush overlay
     brushGroup.selectAll(".overlay")
         .on("mousemove", mousemove)
         .on("mouseout", mouseout);
@@ -121,7 +123,7 @@ function drawStackedLineChart(selector, data, dispatcher) {
         const mouseX = mouse[0];
         const mouseY = mouse[1];
 
-        // Find the closest year based on mouseX
+        // Find the closest year
         const closestYear = x.domain().reduce((prev, curr) => {
             const prevDiff = Math.abs(x(prev) + x.bandwidth() / 2 - mouseX);
             const currDiff = Math.abs(x(curr) + x.bandwidth() / 2 - mouseX);
@@ -132,17 +134,12 @@ function drawStackedLineChart(selector, data, dispatcher) {
             const index = data.findIndex(entry => entry.year == closestYear);
             const dataForYear = data[index];
 
-            // Get the stacked values for each layer at the current index
             const layersAtPoint = stackedData.map(layer => ({
                 key: layer.key,
                 y0: layer[index][0],
                 y1: layer[index][1],
-            }));
+            })).reverse();
 
-            // Reverse the layers to match the visual stacking order
-            layersAtPoint.reverse();
-
-            // Determine which layer the mouse is over based on mouseY
             let category;
             for (let i = 0; i < layersAtPoint.length; i++) {
                 const layer = layersAtPoint[i];
@@ -151,7 +148,7 @@ function drawStackedLineChart(selector, data, dispatcher) {
 
                 if (mouseY >= Math.min(y0, y1) && mouseY <= Math.max(y0, y1)) {
                     const trimmedKey = layer.key.trim();
-                    category = keyMapping[trimmedKey]; // Get the original key from the mapping
+                    category = keyMapping[trimmedKey];
                     break;
                 }
             }
@@ -159,7 +156,6 @@ function drawStackedLineChart(selector, data, dispatcher) {
             if (category) {
                 const value = dataForYear[category];
                 if (value !== undefined) {
-                    // Display the tooltip
                     tooltip.html(`
                         <strong>Category:</strong> ${category.trim()}<br>
                         <strong>Year:</strong> ${closestYear}<br>
@@ -189,11 +185,39 @@ function drawStackedLineChart(selector, data, dispatcher) {
                 return position >= x0 && position <= x1;
             });
 
-            // Update dispatcher with selected years
             dispatcher.call("selectionUpdated", this, selectedYears);
         } else {
-            // Clear selection
             dispatcher.call("selectionUpdated", this, []);
         }
     }
+
+    // Highlighting logic
+    let currentlyHighlighted = null;
+    dispatcher.on("categoryHighlighted", function (categoryKey) {
+        // Convert category key to match class names used in layers
+        const trimmedCategory = categoryKey.trim().replace(/\s+/g, '_');
+
+        if (currentlyHighlighted === trimmedCategory) {
+            // If the user clicked the same category again, reset highlight
+            currentlyHighlighted = null;
+            svg.selectAll(".layer")
+                .transition()
+                .duration(200)
+                .style("opacity", 1.0);
+        } else {
+            currentlyHighlighted = trimmedCategory;
+
+            // De-highlight all layers
+            svg.selectAll(".layer")
+                .transition()
+                .duration(200)
+                .style("opacity", 0.3);
+
+            // Highlight the selected category
+            svg.selectAll(`.layer.${trimmedCategory}`)
+                .transition()
+                .duration(200)
+                .style("opacity", 1.0);
+        }
+    });
 }

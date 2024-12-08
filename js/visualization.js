@@ -5,17 +5,21 @@
             return;
         }
 
-        const dispatcherString = "selectionUpdated"; // Dispatcher name for interaction
+        const dispatcherString = "selectionUpdated"; // For brush selection
+        const highlightDispatcherString = "categoryHighlighted"; // For highlighting categories
+
+        // Create a dispatcher handling both events
+        let chartDispatcher = d3.dispatch(dispatcherString, highlightDispatcherString);
 
         // Wrapper for the stacked line chart
         function stackedLineChartWrapper() {
             let xLabelText = "YEAR",
                 yLabelText = "Federal Expenditure (% of Total)",
                 chartTitle = "Percentage of Federal Spending Categories from 1964 to 2017",
-                dispatcher = d3.dispatch(dispatcherString);
+                dispatcher = chartDispatcher; // Use shared dispatcher
 
             function chart(selector, data) {
-                drawStackedLineChart(selector, data, dispatcher); // Use your chart function
+                drawStackedLineChart(selector, data, dispatcher);
 
                 const svg = d3.select(selector).select("svg");
                 const width = +svg.attr("width");
@@ -81,7 +85,7 @@
             .xLabel("YEAR")
             .yLabel("Federal Expenditure (% of Total)")
             .title("Percentage of Federal Spending Categories from 1964 to 2017")
-            .selectionDispatcher(d3.dispatch(dispatcherString)) // Keep dispatcher
+            .selectionDispatcher(chartDispatcher)
             ("#stacked-linechart", data);
 
         // Add a title to the table
@@ -91,13 +95,13 @@
             .style("text-align", "center")
             .text("Federal Spending (%) in Selected Years");
 
-        // Initialize the table
-        let tableData = drawTable("#tablet", data, d3.dispatch(dispatcherString)); // Pass dispatcher
+        // Initialize the table with the shared dispatcher
+        let tableData = drawTable("#tablet", data, chartDispatcher);
 
-        // Connect the dispatcher for interaction
-        stackedChart.selectionDispatcher().on(dispatcherString, function (selectedYears) {
+        // Connect the dispatcher for selection updates
+        chartDispatcher.on(dispatcherString, function (selectedYears) {
             const filteredData = data.filter(d => selectedYears.includes(d.year));
-            tableData.updateSelection(filteredData); // Update the table with filtered data
+            tableData.updateSelection(filteredData);
         });
     });
 })();
