@@ -2,6 +2,7 @@ Todo:
 
 Fix layers (done)
 Adapt new station data into geojson (Rejected) //shit
+Change heat layer of heatmap to use csv instead (in progress)
 Implement interactions:
     details on demand
     brushing integration with line/bar chart
