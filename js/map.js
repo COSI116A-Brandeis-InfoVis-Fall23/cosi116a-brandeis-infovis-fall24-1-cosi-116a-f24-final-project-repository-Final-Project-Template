@@ -66,14 +66,40 @@ d3.json("data/updated_bostonV2.json", function (error, data) {
             selectedNeighborhoods.length ? selectedNeighborhoods.join(", ") : "None"
         );
     }
-
+    
     function brushEnd() {
         var selection = d3.event.selection;
-
+    
         if (!selection) {
             gNeighborhoods.selectAll(".neighborhood").classed("highlighted", false);
             d3.select("#selected-neighborhoods").text("None");
+    
+            // Dispatch event with no selected regions
+            document.dispatchEvent(new CustomEvent("regionSelected", { detail: [] }));
+            return;
         }
+    
+        var selectedNeighborhoods = [];
+    
+        gNeighborhoods.selectAll(".neighborhood").classed("highlighted", function (d) {
+            var centroid = path.centroid(d);
+            var [cx, cy] = centroid;
+    
+            var isSelected = cx >= selection[0][0] && cx <= selection[1][0] && cy >= selection[0][1] && cy <= selection[1][1];
+    
+            if (isSelected && d.properties && d.properties.name) {
+                selectedNeighborhoods.push(d.properties.name);
+            }
+    
+            return isSelected;
+        });
+    
+        d3.select("#selected-neighborhoods").text(
+            selectedNeighborhoods.length ? selectedNeighborhoods.join(", ") : "None"
+        );
+    
+        // Dispatch custom event with selected regions
+        document.dispatchEvent(new CustomEvent("regionSelected", { detail: selectedNeighborhoods }));
     }
 });
 
