@@ -38,26 +38,44 @@ function drawTable(selector, data, dispatcher) {
     function updateTable(filteredData) {
         const rows = tbody.selectAll("tr")
             .data(filteredData, d => d.year);
-
+    
         rows.exit().remove();
-
+    
         const rowsEnter = rows.enter().append("tr");
-
+    
         rowsEnter.selectAll("td")
             .data(d => headers.map(key => d[key]))
             .enter()
             .append("td")
-            .text(d => (typeof d === "number" ? d.toFixed(2) : d))
-            .on("click", function(d, i) {
-                const categoryKey = headers[i];
-                // Only trigger highlight if it's not the 'Year' column
-                if (categoryKey.toLowerCase() !== "year") {
-                    dispatcher.call("categoryHighlighted", this, categoryKey);
-                }
-            });
-
+            .text(d => (typeof d === "number" ? d.toFixed(2) : d));
+    
+        // Merge rows for updates
         rowsEnter.merge(rows);
+    
+        // Remove event listeners from data cells to prevent interaction
+        tbody.selectAll("td").on("click", null);
+    
+        // Add column highlighting logic to headers only
+        thead.selectAll("th")
+            .data(headers)
+            .on("click", function(_, i) {
+                const categoryKey = headers[i];
+    
+                // Skip the 'Year' column
+                if (categoryKey.toLowerCase() === "year") return;
+    
+                // Remove 'clicked' class from all columns
+                table.selectAll("td, th").classed("clicked", false);
+    
+                // Add 'clicked' class to the clicked column and its header
+                table.selectAll(`td:nth-child(${i + 1}), th:nth-child(${i + 1})`)
+                    .classed("clicked", true);
+    
+                // Trigger brushing interaction for the chart
+                dispatcher.call("categoryHighlighted", this, categoryKey);
+            });
     }
+    
 
     // Initial rendering of the table
     updateTable(data);

@@ -210,5 +210,8 @@ body {
 .table-container::-webkit-scrollbar-thumb:hover {
     background: #555; /* Thumb color on hover */
 }
-
+.clicked {
+    background-color: #d4f210; /* Light blue color for the clicked column */
+    color: #000; /* Optional: change text color for better readability */
+}
   
