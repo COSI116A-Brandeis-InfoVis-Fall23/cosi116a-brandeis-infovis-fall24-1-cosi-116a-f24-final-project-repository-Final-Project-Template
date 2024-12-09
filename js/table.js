@@ -5,6 +5,8 @@ function drawTable(selector, data, dispatcher) {
         .append("div")
         .attr("class", "table-container")
         .style("overflow", "auto") 
+        .style("overflow-y", "hidden") // Prevent vertical scrolling
+        .style("white-space", "nowrap") // Prevent wrapping of content
         .style("transform-origin", "center top") // For zooming
         .style("transform", "scale(1)"); // Default zoom level
 
