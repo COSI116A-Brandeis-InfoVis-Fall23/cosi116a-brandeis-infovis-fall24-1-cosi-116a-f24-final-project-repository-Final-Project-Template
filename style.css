@@ -41,16 +41,26 @@ path.mouseover{
   flex-wrap: wrap;
 }
 
-.vis-svg{
-	display:flex;
-	flex:1;
-	flex-wrap: wrap;
-	flex-grow: 4;
-	resize: 'horizontal';
-    overflow: 'hidden';
-    width: '1000px';
-    height: 'auto';
+.vis-container {
+	width: 100%;  /* Make the container take full width */
+	max-width: 800px; /* Optional: limit max width of map */
+	height: 600px; /* Set a fixed height to keep the map's aspect ratio */
+	overflow: hidden; /* Prevent SVG from overflowing */
 }
+
+.flex-container {
+	display: flex;
+	justify-content: space-between;
+	gap: 20px;
+	flex-wrap: wrap; /* Ensures the map and legend wrap on small screens */
+}  
+
+.vis-svg {
+	width: 100%;  /* Make SVG responsive to container width */
+	height: 100%; /* Keep the height consistent with the width to maintain aspect ratio */
+	object-fit: contain; /* Ensures that the entire SVG fits without being cut off */
+}
+  
 
 .map-legend-container{
 	width:100%;
@@ -60,10 +70,8 @@ path.mouseover{
 	justify-content: space-evenly;
 
 }
-.legend-holder{
-	display:flex;
-	flex-direction: column;
-	justify-content: flex-end;
+.legend-holder {
+	width: 200px; /* Fixed width for the legend */
 }
 
 /* The line chart will take the left half of the screen */
