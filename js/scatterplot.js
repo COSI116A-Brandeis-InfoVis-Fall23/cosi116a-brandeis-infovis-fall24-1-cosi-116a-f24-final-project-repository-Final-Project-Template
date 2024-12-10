@@ -93,14 +93,15 @@ function scatterplot() {
           .data(data);
   
       points.exit().remove();
-  
+      // console.log(data);
       points = points.enter()
         .append("circle")
           .attr("class", "point scatterPoint")
         .merge(points)
           .attr("cx", X)
           .attr("cy", Y)
-          .attr("r", 5);
+          .attr("r", 5)
+          .append("svg:title").text(data[0].state)
       
       selectableElements = points;
       
@@ -120,25 +121,25 @@ function scatterplot() {
   
       //   g.call(brush); // Adds the brush to this element
   
-      //   // Highlight the selected circles
-      //   function highlight() {
-      //     if (d3.event.selection === null) return;
-      //     const [
-      //       [x0, y0],
-      //       [x1, y1]
-      //     ] = d3.event.selection;
+        // Highlight the selected circles
+        function highlight() {
+          if (d3.event.selection === null) return;
+          const [
+            [x0, y0],
+            [x1, y1]
+          ] = d3.event.selection;
   
-      //     // If within the bounds of the brush, select it
-      //     points.classed("selected", d =>
-      //       x0 <= X(d) && X(d) <= x1 && y0 <= Y(d) && Y(d) <= y1
-      //     );
+          // If within the bounds of the brush, select it
+          points.classed("selected", d =>
+            x0 <= X(d) && X(d) <= x1 && y0 <= Y(d) && Y(d) <= y1
+          );
   
-      //     // Get the name of our dispatcher's event
-      //     let dispatchString = Object.getOwnPropertyNames(dispatcher._)[0];
+          // Get the name of our dispatcher's event
+          let dispatchString = Object.getOwnPropertyNames(dispatcher._)[0];
   
-      //     // Let other charts know about our selection
-      //     dispatcher.call(dispatchString, this, svg.selectAll(".selected").data());
-      //   }
+          // Let other charts know about our selection
+          dispatcher.call(dispatchString, this, svg.selectAll(".selected").data());
+        }
         
       //   function brushEnd(){
       //     // We don't want infinite recursion
@@ -159,6 +160,11 @@ function scatterplot() {
     // The y-accessor from the datum
     function Y(d) {
       return yScale(yValue(d));
+    }
+
+    function getD(d){
+      console.log(d);
+      return d.name;
     }
   
     chart.margin = function (_) {

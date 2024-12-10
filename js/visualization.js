@@ -32,8 +32,7 @@ let scatterData = Object.entries(rates["1999"]).map(([state, value], index) => (
   x: value, // The numerical value for x-axis
   y: expectancy['1999'][state] //random val, placeholder
 }));
-console.log(data);
-console.log(scatterData);
+
 // });
 // console.log("test")
 // console.log(scatterData);

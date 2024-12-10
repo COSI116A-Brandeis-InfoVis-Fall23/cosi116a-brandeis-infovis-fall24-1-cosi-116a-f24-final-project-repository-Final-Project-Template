@@ -2,7 +2,7 @@
 
 // Initialize a line chart. Modeled after Mike Bostock's
 // Reusable Chart framework https://bost.ocks.org/mike/chart/
-document.getElementById("state").textContent = "Georgia"; //Georgia as a placeholder
+// document.getElementById("state").textContent = "Georgia"; //Georgia as a placeholder
 function linechart() {
 
   // Based on Mike Bostock's margin convention
@@ -100,28 +100,33 @@ function linechart() {
         .selectAll(".linePoint")
         .data(data);  // Data binding
       
-  
+      console.log(data);
+      let i=0;
       points = points.enter()
         .append("circle")
         .attr("class", "point linePoint")
         .merge(points)
           .attr("cx", X)   // Position on x-axis
           .attr("cy", Y)   // Position on y-axis
-          .attr("r", 4)
-        .on("mouseover", (event, d) => {
-          console.log(d.attributes);  // This should now print the object, like { year: '1999', value: 302.97 }
-          tooltip
-            .style("visibility", "visible")
-            .text(`Year: ${d.year}, Value: ${d.value}`);
-        })
-        .on("mousemove", (event) => {
-          tooltip
-            .style("top", (event.pageY - 100) + "px")
-            .style("left", (event.pageX + 100) + "px");
-        })
-        .on("mouseout", () => {
-          tooltip.style("visibility", "hidden");
-        });
+          .attr("r", 6)
+          .append("svg:title").text(getVal);
+
+
+
+        // .on("mouseover", (event, d) => {
+        //   console.log(d);  // This should now print the object, like { year: '1999', value: 302.97 }
+        //   tooltip
+        //     .style("visibility", "visible")
+        //     .text(`Year: ${d.year}, Value: ${d.value}`);
+        // })
+        // .on("mousemove", (event) => {
+        //   tooltip
+        //     .style("top", (event.pageY - 100) + "px")
+        //     .style("left", (event.pageX + 100) + "px");
+        // })
+        // .on("mouseout", () => {
+        //   tooltip.style("visibility", "hidden");
+        // });
 
 
     // selectableElements = points;
@@ -188,6 +193,10 @@ function linechart() {
   
   function Y(d) {
     return yScale(d.value);  // Correctly access the 'value' for Y position
+  }
+
+  function getVal(d){
+    return d.value;
   }
 
   chart.margin = function (_) {
