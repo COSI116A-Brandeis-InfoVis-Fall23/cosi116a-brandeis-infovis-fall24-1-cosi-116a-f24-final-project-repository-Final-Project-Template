@@ -243,35 +243,42 @@ circle.selected {
   
 .carousel-control-prev,
 .carousel-control-next {
-	position: absolute;
-	top: 50%;
-	transform: translateY(-50%);
-	background-color: rgba(0, 0, 0, 0.5);
-	border: none;
-	color: white;
-	padding: 10px;
-	cursor: pointer;
-	transition: background-color 0.3s, transform 0.3s;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.7); 
+    border-radius: 50%;
+    padding: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s, opacity 0.3s;
+    opacity: 0.7; 
 }
   
 .carousel-control-prev:hover,
 .carousel-control-next:hover {
-	background-color: rgba(0, 0, 0, 0.7);
+    background-color: rgba(0, 0, 0, 0.9); 
+    opacity: 1; 
 }
 
 .carousel-control-prev:active,
 .carousel-control-next:active {
-	transform: translateY(-50%) scale(0.95);
+    transform: translateY(-50%) scale(0.90);
 }
 
 .carousel-control-prev {
-	left: 10px;
+    left: 10px;
 }
 
 .carousel-control-next {
-	right: 10px;
+    right: 10px;
 }
 
+.carousel-arrow {
+    width: 20px;
+    height: 20px;
+    display: block;
+}
+  
 .carousel-indicators {
 	display: flex;
 	justify-content: center;
@@ -292,7 +299,7 @@ circle.selected {
 	background-color: rgba(0, 0, 0, 0.9);
 	transform: scale(1.2);
 }
-  
+
 /* Fork on GitHub ribbon via https://codepo8.github.io/css-fork-on-github-ribbon/# */  
 #forkongithub a{
 	background:#00F;
