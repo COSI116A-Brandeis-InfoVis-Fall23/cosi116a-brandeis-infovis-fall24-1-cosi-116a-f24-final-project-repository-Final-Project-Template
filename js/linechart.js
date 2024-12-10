@@ -101,7 +101,6 @@ function linechart() {
         .data(data);  // Data binding
       
       console.log(data);
-      let i=0;
       points = points.enter()
         .append("circle")
         .attr("class", "point linePoint")
@@ -109,6 +108,7 @@ function linechart() {
           .attr("cx", X)   // Position on x-axis
           .attr("cy", Y)   // Position on y-axis
           .attr("r", 6)
+          .attr('year', getYear)
           .append("svg:title").text(getVal);
 
 
@@ -197,6 +197,9 @@ function linechart() {
 
   function getVal(d){
     return d.value;
+  }
+  function getYear(d){
+    return d.year;
   }
 
   chart.margin = function (_) {

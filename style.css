@@ -26,6 +26,17 @@ path.mouseover{
 	stroke-width: 3px;
 }
 
+/* Style for selected marks (circles) */
+circle.selected {
+	fill: purple;
+	opacity: 5;
+  }
+/* Style for permanemtly selected marks (circles) */
+circle.permaselected {
+	fill: blue;
+	opacity: 5;
+  }
+
 /* Your text should be in a nice narrow column */
 .content-column {
 	max-width: 650px;

@@ -93,7 +93,7 @@ function scatterplot() {
           .data(data);
   
       points.exit().remove();
-      // console.log(data);
+      console.log(data);
       points = points.enter()
         .append("circle")
           .attr("class", "point scatterPoint")
@@ -101,7 +101,8 @@ function scatterplot() {
           .attr("cx", X)
           .attr("cy", Y)
           .attr("r", 5)
-          .append("svg:title").text(data[0].state)
+          .attr("state", getState)
+          .append("svg:title").text(getD);
       
       selectableElements = points;
       
@@ -162,9 +163,12 @@ function scatterplot() {
       return yScale(yValue(d));
     }
 
+    function getState(d){
+      return d.state;
+    }
+
     function getD(d){
-      console.log(d);
-      return d.name;
+      return d.state + ", x= " + d.x + ", y=" + d.y
     }
   
     chart.margin = function (_) {

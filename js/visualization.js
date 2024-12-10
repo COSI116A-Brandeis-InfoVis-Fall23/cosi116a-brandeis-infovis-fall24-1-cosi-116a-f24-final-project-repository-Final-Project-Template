@@ -48,6 +48,13 @@ let lcHeartDisease = linechart()
 
 lcHeartDisease("#linechart", data);
 
+//highlight starting year
+d3.selectAll("circle")
+.filter(function() {
+  return d3.select(this).attr("year") == 1999; // link to scatterplot
+})
+.classed("selected", true);
+
     // Create a scatterplot given x and y attributes, labels, offsets; 
     // a dispatcher (d3-dispatch) for selection events; 
     // a div id selector to put our svg in; and the data to use.
@@ -63,13 +70,25 @@ scHeartDisease("#scatterplot", scatterData);
 
 
 
-//for linking map to linechart
+//on mosuedown, highlight point on scatterplot and change linechart
 d3.selectAll("svg").on("mouseover", (d, i, elements) =>{          
   d3.selectAll("g path").on("mouseover", (d, i, elements) =>{     //shade states on mosueover
     d3.select(elements[i]).classed("mouseover", true);
+    var selected = d.properties.STATENAM;
+    d3.selectAll("circle")
+    .filter(function() {
+      return d3.select(this).attr("state") == selected; // link to scatterplot
+    })
+    .classed("selected", true);
   });
   d3.selectAll("g path").on("mouseout", (d, i, elements) =>{
     d3.select(elements[i]).classed("mouseover", false);
+    var selected = d.properties.STATENAM;
+    d3.selectAll("circle")
+    .filter(function() {
+      return d3.select(this).attr("state") == selected; // link to scatterplot
+    })
+    .classed("selected", false);
   });
   d3.selectAll("g path").on("mousedown", (d, i, elements) =>{     //linking when click state
     var selected = d.properties.STATENAM;
@@ -80,23 +99,42 @@ d3.selectAll("svg").on("mouseover", (d, i, elements) =>{
           value: rates[year][selected] 
       };
     });
+
     d3.select("#linechart svg").remove();     //delete old linechart
+
     let lcHeartDiseaseNew = linechart()
     .x(d => d.year)
     // .xLabel("Year")
     .y(d => d.value)
     // .yLabel("Age-Adjusted Heart Disease Death Rate")
     .yLabelOffset(40)
-  lcHeartDiseaseNew("#linechart", data);      //create new linechart with the enw data
-  //scatterplot linking goes here
-  d3.selectAll("#state").text(selected);
+
+  lcHeartDiseaseNew("#linechart", data);      //create new linechart with the new data
+  d3.selectAll("circle")                                          //highlight new year
+    .filter(function() {
+      return d3.select(this).attr("year") == currentYear; // rehighlight year
+    })
+    .classed("selected", true);
+
+    d3.selectAll("circle")                                          //highlight new year
+    .filter(function() {
+      return d3.select(this).attr("state") == selected; // rehighlight year
+    })
+    .classed("permaselected", true);
   });
+  
 });
 
 
-//for linking map to scatterplot on year change
+//on year change, highlight linechart and change scatterplot
 d3.select("#slider").on("change", function(d) {                   
+  d3.selectAll("circle").classed("selected", false);
   currentYear = this.value;                                       //recolor map on update
+  d3.selectAll("circle")                                          //highlight new year
+    .filter(function() {
+    return d3.select(this).attr("year") == currentYear; // link to scatterplot
+  })
+.classed("selected", true);
   svgStates.selectAll("path") 
   .style('fill-opacity', function(d, i){                            //rerender state color and details
     var name = d.properties.STATENAM.replace(" Territory", "");
