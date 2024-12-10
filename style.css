@@ -45,7 +45,7 @@ path.mouseover{
 	width: 100%;  /* Make the container take full width */
 	max-width: 800px; /* Optional: limit max width of map */
 	height: 600px; /* Set a fixed height to keep the map's aspect ratio */
-	overflow: hidden; /* Prevent SVG from overflowing */
+	overflow: visible; /* Prevent SVG from overflowing */
 }
 
 .flex-container {
