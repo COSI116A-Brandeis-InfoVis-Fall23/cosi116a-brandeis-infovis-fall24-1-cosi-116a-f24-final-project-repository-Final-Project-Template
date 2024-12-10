@@ -45,7 +45,7 @@ h2 {
 #map {
   grid-column: 1; 
   grid-row: 1 / span 2; 
-  width: 100%; 
+  width: 30%; 
   height: 100%; 
 }
 
@@ -151,24 +151,24 @@ circle.selected {
 	}
 }
 /*Slider Style*/
-#time-slider-container {
+/**#time-slider-container {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
 	margin: 40px auto; /* Increase margin for spacing */
-	text-align: center;
+/*	text-align: center;
   }
   
   #time-slider {
 	width: 100%; /* Make the slider wider */
-	margin: 100px 0; /* Add space between slider and text */
-  }
+/*	margin: 100px 0; /* Add space between slider and text */
+/*  }
   
   #selected-start-date,
   #selected-end-date {
 	font-size: 16px;
 	font-weight: bold;
 	margin-top: 5px;
-  }
+  }*/
   

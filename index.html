@@ -76,7 +76,7 @@
 
 
   <!-- Time Scale Slider (placeholder) -->
-  <div id="time-slider-container">
+  <!--<div id="time-slider-container">
     <label for="time-slider">Select Date Range:</label>
     <br><br> 
     <div id="time-slider"></div>
@@ -85,7 +85,13 @@
       <span id="selected-start-date">Start Date</span> to 
       <span id="selected-end-date">End Date</span>
     </div>
-  </div>
+  </div>-->
+
+
+  <label for="week-selector">Select Date:</label>
+  <select id="week-selector"></select>
+
+
 
   <!-- Your visualization here -->
   <div class="vis-holder">
@@ -211,11 +217,17 @@
   <script src="js/visualization.js"></script>
   <script src="js/linechart.js"></script>
   <script src="js/barchart.js"></script>
-  <script src="lib/leaflet/leaflet.js"></script>
-  <script src="lib/leaflet/leaflet-heat.js"></script>
   <script src="js/heatmap.js"></script>
+  <script src="lib/leaflet/heatmap.min.js"></script>
+  <script src="lib/leaflet/leaflet.js"></script>
+  <script src="lib/leaflet/leaflet-heatmap.js"></script>
+
+
+
+  <!--
   <script src="lib/papaparse/papaparse.min.js"></script>
   <script src="lib/noUISlider/nouislider.min.js"></script>
+-->
 </body>
 
 </html>

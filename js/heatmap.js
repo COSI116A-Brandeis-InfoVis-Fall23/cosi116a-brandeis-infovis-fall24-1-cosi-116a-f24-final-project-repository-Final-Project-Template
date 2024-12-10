@@ -6,58 +6,26 @@ document.addEventListener("DOMContentLoaded", function () {
     attribution: "&copy; OpenStreetMap contributors",
   }).addTo(map);
 
-  let heatLayer;
-  let parsedData = [];
-  const weekDates = [];
-  const timeSlider = document.getElementById("time-slider");
-
-  // Initialize noUiSlider
-  noUiSlider.create(timeSlider, {
-    start: [0, 251],
-    connect: true,
-    range: {
-      min: 0,
-      max: 251,
-    },
-    step: 1,
-    tooltips: [true, true],
-    format: {
-      to: (value) => Math.round(value),
-      from: (value) => parseInt(value, 10),
-    },
-  });
-
-  const updateHeatmap = (startIndex, endIndex) => {
-    const startWeek = weekDates[startIndex];
-    const endWeek = weekDates[endIndex];
-    document.getElementById("selected-start-date").textContent = startWeek;
-    document.getElementById("selected-end-date").textContent = endWeek;
-
-    const heatPoints = [];
-    const aggregatedTraffic = {};
-
-    parsedData.forEach((row) => {
-      if (row.Week >= startWeek && row.Week <= endWeek) {
-        const key = `${row.Latitude},${row.Longitude}`;
-        if (!aggregatedTraffic[key]) aggregatedTraffic[key] = 0;
-        aggregatedTraffic[key] += row.Traffic;
-      }
-    });
-
-    for (const key in aggregatedTraffic) {
-      const [lat, lng] = key.split(",").map(parseFloat);
-      heatPoints.push([lat, lng, aggregatedTraffic[key] / 5000]);
-    }
-
-    if (heatLayer) map.removeLayer(heatLayer);
-    heatLayer = L.heatLayer(heatPoints, { radius: 20, blur: 20, maxZoom: 15, opacity: 0.4 }).addTo(map);
+  let boroughLayer, subwayLinesLayer;
+  // Heatmap configuration
+  const heatmapConfig = {
+    radius: 20,
+    maxOpacity: 0.6,
+    scaleRadius: true,
+    useLocalExtrema: false,
+    latField: "lat",
+    lngField: "lng",
+    valueField: "value",
   };
+
+  // Initialize the heatmap layer
+  const heatmapLayer = new HeatmapOverlay(heatmapConfig).addTo(map);
 
   // Load borough boundaries
   fetch("lib/geo/new-york-city-boroughs.geojson")
     .then((response) => response.json())
     .then((boroughData) => {
-      L.geoJSON(boroughData, {
+      boroughLayer = L.geoJSON(boroughData, {
         style: {
           color: "#333",
           weight: 1,
@@ -71,7 +39,7 @@ document.addEventListener("DOMContentLoaded", function () {
   fetch("lib/geo/subway-lines.geojson")
     .then((response) => response.json())
     .then((lineData) => {
-      L.geoJSON(lineData, {
+      subwayLinesLayer = L.geoJSON(lineData, {
         style: {
           color: "blue",
           weight: 1.5,
@@ -80,48 +48,43 @@ document.addEventListener("DOMContentLoaded", function () {
       }).addTo(map);
     });
 
-  // Load and parse the CSV data
-  Papa.parse("data/Subway_ridership_true_final.csv", {
-    download: true,
-    header: true,
-    skipEmptyLines: true,
-    complete: (results) => {
-      parsedData = results.data.map((row) => ({
-        StationID: row.StationID,
-        ControlArea: row.ControlArea,
-        LineName: row.LineName,
-        Latitude: parseFloat(row.Latitude),
-        Longitude: parseFloat(row.Longitude),
-        Traffic: parseFloat(row.Traffic),
-        Week: row.Week,
-      }));
+  // Load weekly ridership data
+  fetch("data/Subway_ridership_weekly.geojson")
+    .then((response) => response.json())
+    .then((data) => {
+      // Hardcoded date for debugging
+      const hardcodedDate = "02/03/2020";
 
-      weekDates.push(...new Set(parsedData.map((row) => row.Week)));
-      weekDates.sort();
+      // Filter data for the hardcoded date
+      const filteredData = data.features.filter(
+        (feature) => feature.properties.Time === hardcodedDate
+      );
 
-      timeSlider.noUiSlider.updateOptions({
-        range: { min: 0, max: weekDates.length - 1 },
-        start: [0, weekDates.length - 1],
-        tooltips: [
-          {
-            to: (value) => weekDates[Math.round(value)],
-            from: () => "",
-          },
-          {
-            to: (value) => weekDates[Math.round(value)],
-            from: () => "",
-          },
-        ],
-      });
+      // Debug: Log filtered data
+      console.log("Filtered Data:", filteredData);
 
-      updateHeatmap(0, weekDates.length - 1);
+      // Prepare heatmap data
+      const heatmapData = {
+        max: Math.max(...filteredData.map((f) => f.properties.Ridership)),
+        data: filteredData.map((feature) => ({
+          lat: feature.geometry.coordinates[1], // Latitude
+          lng: feature.geometry.coordinates[0], // Longitude
+          value: feature.properties.Ridership,
+        })),
+      };
 
-      timeSlider.noUiSlider.on("update", (values) => {
-        const startIndex = parseInt(values[0], 10);
-        const endIndex = parseInt(values[1], 10);
-        updateHeatmap(startIndex, endIndex);
-      });
-    },
-    error: (err) => console.error("Error loading CSV:", err),
-  });
+      // Debug: Log heatmap data
+      console.log("Heatmap Data:", heatmapData);
+
+      // Set heatmap data
+      heatmapLayer.setData(heatmapData);
+
+      heatmapLayer.addTo(map);
+
+      // Ensure heatmap is on top
+      heatmapLayer._heatmap._renderer.canvas.style.zIndex = 999;
+    })
+    .catch((error) => {
+      console.error("Error loading or processing data:", error);
+    });
 });
