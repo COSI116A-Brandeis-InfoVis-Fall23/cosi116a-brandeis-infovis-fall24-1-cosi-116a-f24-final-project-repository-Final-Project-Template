@@ -11,8 +11,6 @@ h1, h2, h3 {
 svg {
 	width: 100%;
 	height: 100%;
-	display: flex;
-	justify-content: center;
   }
 #boundary path {
 	stroke-dasharray: 3 5;
@@ -38,7 +36,49 @@ path.mouseover{
 .vis-holder {
   width: 100%;
   height: 100%;
+  display:flex;
+  flex:1;
+  flex-wrap: wrap;
 }
+
+.vis-svg{
+	display:flex;
+	flex:1;
+	flex-wrap: wrap;
+	flex-grow: 4;
+	resize: 'horizontal';
+    overflow: 'hidden';
+    width: '1000px';
+    height: 'auto';
+}
+
+.map-legend-container{
+	width:100%;
+	height:100%;
+	display:flex;
+	flex-wrap: wrap;
+	justify-content: space-evenly;
+
+}
+.legend-holder{
+	display:flex;
+	flex-direction: column;
+	justify-content: flex-end;
+}
+
+/* The line chart will take the left half of the screen */
+.linechart-holder {
+	display:flex;
+	flex: 0 0 50%;
+	flex-wrap: wrap
+  }
+  
+  /* The scatterplot will take the right half of the screen */
+  .scatterplot-holder {
+	display:flex;
+	flex: 1;  
+	flex-wrap: wrap
+  }
 
 /* Fork on GitHub ribbon via https://codepo8.github.io/css-fork-on-github-ribbon/# */  
 #forkongithub a{
@@ -97,20 +137,13 @@ path.mouseover{
 	}
 
 
-  /* Changes where the scatterplot is posititoned on the screen*/
-.scatterplot-holder {
-	flex: 0 0 50%;  
-  }
+
 
  #scatterplot {
 	width: 100%;
 	height: 500px;
 }
 
-/* Changes where the line chhart is posititoned on the screen*/
-.linechart-holder {
-	flex: 0 0 50%;
-	  }
 
  #linechart {
 	width: 100%;

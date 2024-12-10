@@ -109,7 +109,7 @@ function linechart() {
           .attr("cy", Y)   // Position on y-axis
           .attr("r", 4)
         .on("mouseover", (event, d) => {
-          console.log(d);  // This should now print the object, like { year: '1999', value: 302.97 }
+          console.log(d.attributes);  // This should now print the object, like { year: '1999', value: 302.97 }
           tooltip
             .style("visibility", "visible")
             .text(`Year: ${d.year}, Value: ${d.value}`);
