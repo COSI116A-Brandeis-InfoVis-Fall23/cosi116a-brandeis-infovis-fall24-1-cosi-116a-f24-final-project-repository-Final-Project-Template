@@ -71,7 +71,8 @@ path.mouseover{
 
 }
 .legend-holder {
-	width: 200px; /* Fixed width for the legend */
+	width: 180px; /* Fixed width for the legend */
+	background:#fff;
 }
 
 /* The line chart will take the left half of the screen */
