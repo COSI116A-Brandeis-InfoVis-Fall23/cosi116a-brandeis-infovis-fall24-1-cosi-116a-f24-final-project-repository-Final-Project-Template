@@ -68,7 +68,7 @@ function scatterplot() {
         .attr("text-anchor", "end")
         .attr("x", width)
         .attr("y", height + 50)
-        .text("Age-Adjusted Heart Disease Death Rate per State in 1999");
+        .text("Age-Adjusted Heart Disease Death Rate per State in "+currentYear);
 
     //Y axis label
     svg.append("text")
@@ -78,7 +78,7 @@ function scatterplot() {
       .attr("y", -margin.left + 20) // Move to the left of the linechrt
       .attr("dy", ".75em")
       .attr("transform", "rotate(-90)")
-      .text("Life Expectancy per State in 1999");
+      .text("Life Expectancy per State in"+currentYear);
         
     //   let yAxis = svg.append("g")
     //       .call(d3.axisLeft(yScale))

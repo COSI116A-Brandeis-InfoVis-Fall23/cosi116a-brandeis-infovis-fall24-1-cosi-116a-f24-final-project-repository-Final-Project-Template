@@ -50,7 +50,7 @@ d3.json("data/states.json", function(error, topologies) {  // (4)
 
 
 
-d3.select("#slider").on("change", function(d) {          //add slider to confirm year
+d3.select("#slider").on("input", function(d) {          //add slider to confirm year
   currentYear = this.value;
   svgStates.selectAll("path") 
   .style('fill-opacity', function(d, i){                            //rerender state color and details
