@@ -6,53 +6,51 @@ document.addEventListener("DOMContentLoaded", function () {
     attribution: "&copy; OpenStreetMap contributors",
   }).addTo(map);
 
-  let heatLayer; // Reference to the heatmap layer
-  let parsedData = []; // Parsed data from CSV
+  let heatLayer;
+  let parsedData = [];
+  const weekDates = [];
+  const timeSlider = document.getElementById("time-slider");
 
-  // Time sliders and display elements
-  const timeSliderStart = document.getElementById("time-slider-start");
-  const timeSliderEnd = document.getElementById("time-slider-end");
-  const selectedStartDate = document.getElementById("selected-start-date");
-  const selectedEndDate = document.getElementById("selected-end-date");
-  const weekDates = []; // Array to store the unique week dates
+  // Initialize noUiSlider
+  noUiSlider.create(timeSlider, {
+    start: [0, 251],
+    connect: true,
+    range: {
+      min: 0,
+      max: 251,
+    },
+    step: 1,
+    tooltips: [true, true],
+    format: {
+      to: (value) => Math.round(value),
+      from: (value) => parseInt(value, 10),
+    },
+  });
 
-  // Function to update the heatmap
   const updateHeatmap = (startIndex, endIndex) => {
     const startWeek = weekDates[startIndex];
     const endWeek = weekDates[endIndex];
-    selectedStartDate.textContent = startWeek;
-    selectedEndDate.textContent = endWeek;
+    document.getElementById("selected-start-date").textContent = startWeek;
+    document.getElementById("selected-end-date").textContent = endWeek;
 
-    // Filter and aggregate data for the selected period
     const heatPoints = [];
     const aggregatedTraffic = {};
 
     parsedData.forEach((row) => {
       if (row.Week >= startWeek && row.Week <= endWeek) {
         const key = `${row.Latitude},${row.Longitude}`;
-        if (!aggregatedTraffic[key]) {
-          aggregatedTraffic[key] = 0;
-        }
+        if (!aggregatedTraffic[key]) aggregatedTraffic[key] = 0;
         aggregatedTraffic[key] += row.Traffic;
       }
     });
 
-    // Convert aggregated data into heatmap points
     for (const key in aggregatedTraffic) {
       const [lat, lng] = key.split(",").map(parseFloat);
       heatPoints.push([lat, lng, aggregatedTraffic[key] / 5000]);
     }
 
-    // Remove the previous heatmap layer
     if (heatLayer) map.removeLayer(heatLayer);
-
-    // Add a new heatmap layer
-    heatLayer = L.heatLayer(heatPoints, {
-      radius: 20,
-      blur: 20,
-      maxZoom: 15,
-      opacity: 0.4,
-    }).addTo(map);
+    heatLayer = L.heatLayer(heatPoints, { radius: 20, blur: 20, maxZoom: 15, opacity: 0.4 }).addTo(map);
   };
 
   // Load borough boundaries
@@ -98,31 +96,32 @@ document.addEventListener("DOMContentLoaded", function () {
         Week: row.Week,
       }));
 
-      // Extract unique week dates
       weekDates.push(...new Set(parsedData.map((row) => row.Week)));
-      weekDates.sort(); // Sort dates chronologically
+      weekDates.sort();
 
-      // Update slider with weekDates
       timeSlider.noUiSlider.updateOptions({
-        range: {
-          min: 0,
-          max: weekDates.length - 1,
-        },
+        range: { min: 0, max: weekDates.length - 1 },
         start: [0, weekDates.length - 1],
+        tooltips: [
+          {
+            to: (value) => weekDates[Math.round(value)],
+            from: () => "",
+          },
+          {
+            to: (value) => weekDates[Math.round(value)],
+            from: () => "",
+          },
+        ],
       });
 
-      // Initialize heatmap with the full range
       updateHeatmap(0, weekDates.length - 1);
 
-      // Add slider update event
       timeSlider.noUiSlider.on("update", (values) => {
         const startIndex = parseInt(values[0], 10);
         const endIndex = parseInt(values[1], 10);
         updateHeatmap(startIndex, endIndex);
       });
     },
-    error: (err) => {
-      console.error("Error loading CSV:", err);
-    },
+    error: (err) => console.error("Error loading CSV:", err),
   });
 });
