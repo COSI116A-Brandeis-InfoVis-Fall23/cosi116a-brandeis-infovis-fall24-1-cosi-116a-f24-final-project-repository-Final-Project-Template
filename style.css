@@ -213,8 +213,86 @@ circle.selected {
 	align-items: flex-start;
 }
 
+.carousel {
+	position: relative;
+	width: 100%;
+	max-width: 600px;
+	margin: auto;
+	overflow: hidden;
+	border-radius: 10px;
+	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.6);
+	padding: 20px;
+}
   
+.carousel-inner {
+    display: flex;
+    transition: transform 0.5s ease;
+ 
+}
+  
+.carousel-item {
+	min-width: 100%;
+	box-sizing: border-box;
+}
+  
+.carousel img {
+	width: 100%;
+	display: block;
+	border-radius: 10px;
+}
+  
+.carousel-control-prev,
+.carousel-control-next {
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	background-color: rgba(0, 0, 0, 0.5);
+	border: none;
+	color: white;
+	padding: 10px;
+	cursor: pointer;
+	transition: background-color 0.3s, transform 0.3s;
+}
+  
+.carousel-control-prev:hover,
+.carousel-control-next:hover {
+	background-color: rgba(0, 0, 0, 0.7);
+}
 
+.carousel-control-prev:active,
+.carousel-control-next:active {
+	transform: translateY(-50%) scale(0.95);
+}
+
+.carousel-control-prev {
+	left: 10px;
+}
+
+.carousel-control-next {
+	right: 10px;
+}
+
+.carousel-indicators {
+	display: flex;
+	justify-content: center;
+	margin-top: 10px;
+}
+  
+.carousel-indicators .dot {
+	height: 10px;
+	width: 10px;
+	margin: 0 5px;
+	background-color: rgba(0, 0, 0, 0.5);
+	border-radius: 50%;
+	display: inline-block;
+	transition: background-color 0.3s, transform 0.3s;
+}
+
+.carousel-indicators .dot.active {
+	background-color: rgba(0, 0, 0, 0.9);
+	transform: scale(1.2);
+}
+  
 /* Fork on GitHub ribbon via https://codepo8.github.io/css-fork-on-github-ribbon/# */  
 #forkongithub a{
 	background:#00F;

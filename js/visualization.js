@@ -139,3 +139,44 @@
     });
   });
 })();
+
+document.addEventListener('DOMContentLoaded', function() {
+  function initializeCarousel(carouselId) {
+    const carousel = document.querySelector(`#${carouselId} .carousel-inner`);
+    const items = document.querySelectorAll(`#${carouselId} .carousel-item`);
+    const prevButton = document.querySelector(`#${carouselId} .carousel-control-prev`);
+    const nextButton = document.querySelector(`#${carouselId} .carousel-control-next`);
+    const dots = document.querySelectorAll(`#${carouselId} .dot`);
+    let currentIndex = 0;
+
+    function updateCarousel() {
+      const offset = -currentIndex * 100;
+      carousel.style.transform = `translateX(${offset}%)`;
+      dots.forEach((dot, index) => {
+        dot.classList.toggle('active', index === currentIndex);
+      });
+    }
+
+    prevButton.addEventListener('click', function(event) {
+      event.preventDefault();
+      currentIndex = (currentIndex > 0) ? currentIndex - 1 : items.length - 1;
+      updateCarousel();
+    });
+
+    nextButton.addEventListener('click', function(event) {
+      event.preventDefault();
+      currentIndex = (currentIndex < items.length - 1) ? currentIndex + 1 : 0;
+      updateCarousel();
+    });
+
+    dots.forEach((dot, index) => {
+      dot.addEventListener('click', function() {
+        currentIndex = index;
+        updateCarousel();
+      });
+    });
+  }
+
+  initializeCarousel('carouselFigma');
+  initializeCarousel('carouselSketch');
+});
