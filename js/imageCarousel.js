@@ -53,10 +53,12 @@ function openFullscreen(carouselId) {
     fullscreenPanel.style.display = 'flex';
     document.body.classList.add('no-scroll'); 
 
+    const isSmallScreen = window.matchMedia("(max-width: 1350px)").matches;
+
     if (carousel.src.includes('figma')) {
-        fullscreenImage.style.width = '60%';
+        fullscreenImage.style.width = isSmallScreen ? '90%' : '60%';
     } else if (carousel.src.includes('sketch')) {
-        fullscreenImage.style.width = '37%';
+        fullscreenImage.style.width = isSmallScreen ? '70%' : '35%';
     } 
 }
 

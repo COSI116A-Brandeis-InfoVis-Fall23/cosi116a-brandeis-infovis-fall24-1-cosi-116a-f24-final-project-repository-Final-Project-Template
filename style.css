@@ -402,7 +402,7 @@ circle.selected {
 	bottom:1px;
 	top:auto;
 }
-@media screen and (min-width:1000px){
+@media screen and (min-width:1350px){
 	#forkongithub{
 		position:fixed;
 		display:block;
