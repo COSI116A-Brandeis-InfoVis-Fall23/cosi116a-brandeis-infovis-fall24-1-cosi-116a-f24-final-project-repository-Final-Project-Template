@@ -1,0 +1,997 @@
+station_name,month,gated_entries,route_or_line,year,station
+Airport,April,157973,Blue Line,2023,East_Boston
+Airport,August,285603,Blue Line,2023,East_Boston
+Airport,December,159399,Blue Line,2023,East_Boston
+Airport,February,133327,Blue Line,2023,East_Boston
+Airport,January,151772,Blue Line,2023,East_Boston
+Airport,July,260666,Blue Line,2023,East_Boston
+Airport,June,214959,Blue Line,2023,East_Boston
+Airport,March,163063,Blue Line,2023,East_Boston
+Airport,May,178937,Blue Line,2023,East_Boston
+Airport,November,179744,Blue Line,2023,East_Boston
+Airport,October,202543,Blue Line,2023,East_Boston
+Airport,September,186919,Blue Line,2023,East_Boston
+Alewife,April,101458,Red Line,2023,North_Cambridge
+Alewife,August,131551,Red Line,2023,North_Cambridge
+Alewife,December,105286,Red Line,2023,North_Cambridge
+Alewife,February,14102,Red Line,2023,North_Cambridge
+Alewife,January,111970,Red Line,2023,North_Cambridge
+Alewife,July,150827,Red Line,2023,North_Cambridge
+Alewife,June,130847,Red Line,2023,North_Cambridge
+Alewife,March,17310,Red Line,2023,North_Cambridge
+Alewife,May,121794,Red Line,2023,North_Cambridge
+Alewife,November,105354,Red Line,2023,North_Cambridge
+Alewife,October,120851,Red Line,2023,North_Cambridge
+Alewife,September,145340,Red Line,2023,North_Cambridge
+Andrew,April,77650,Red Line,2023,South_Boston
+Andrew,August,88763,Red Line,2023,South_Boston
+Andrew,December,73282,Red Line,2023,South_Boston
+Andrew,February,78505,Red Line,2023,South_Boston
+Andrew,January,81610,Red Line,2023,South_Boston
+Andrew,July,84110,Red Line,2023,South_Boston
+Andrew,June,87151,Red Line,2023,South_Boston
+Andrew,March,87017,Red Line,2023,South_Boston
+Andrew,May,80232,Red Line,2023,South_Boston
+Andrew,November,76219,Red Line,2023,South_Boston
+Andrew,October,81198,Red Line,2023,South_Boston
+Andrew,September,80526,Red Line,2023,South_Boston
+Aquarium,April,82054,Blue Line,2023,Downtown
+Aquarium,August,148728,Blue Line,2023,Downtown
+Aquarium,December,83589,Blue Line,2023,Downtown
+Aquarium,February,60430,Blue Line,2023,Downtown
+Aquarium,January,50237,Blue Line,2023,Downtown
+Aquarium,July,160219,Blue Line,2023,Downtown
+Aquarium,June,131879,Blue Line,2023,Downtown
+Aquarium,March,81095,Blue Line,2023,Downtown
+Aquarium,May,96193,Blue Line,2023,Downtown
+Aquarium,November,84686,Blue Line,2023,Downtown
+Aquarium,October,91160,Blue Line,2023,Downtown
+Aquarium,September,92326,Blue Line,2023,Downtown
+Arlington,April,113691,Green Line,2023,Back_Bay
+Arlington,August,93630,Green Line,2023,Back_Bay
+Arlington,December,59276,Green Line,2023,Back_Bay
+Arlington,February,80299,Green Line,2023,Back_Bay
+Arlington,January,85082,Green Line,2023,Back_Bay
+Arlington,July,94206,Green Line,2023,Back_Bay
+Arlington,June,102149,Green Line,2023,Back_Bay
+Arlington,March,95418,Green Line,2023,Back_Bay
+Arlington,May,107591,Green Line,2023,Back_Bay
+Arlington,November,78527,Green Line,2023,Back_Bay
+Arlington,October,98630,Green Line,2023,Back_Bay
+Arlington,September,93839,Green Line,2023,Back_Bay
+Ashmont,April,100038,Red Line,2023,Dorchester
+Ashmont,August,103790,Red Line,2023,Dorchester
+Ashmont,December,90609,Red Line,2023,Dorchester
+Ashmont,February,100452,Red Line,2023,Dorchester
+Ashmont,January,104687,Red Line,2023,Dorchester
+Ashmont,July,98463,Red Line,2023,Dorchester
+Ashmont,June,104253,Red Line,2023,Dorchester
+Ashmont,March,113765,Red Line,2023,Dorchester
+Ashmont,May,103077,Red Line,2023,Dorchester
+Ashmont,November,93935,Red Line,2023,Dorchester
+Ashmont,October,48265,Red Line,2023,Dorchester
+Ashmont,September,100134,Red Line,2023,Dorchester
+Assembly,April,66740,Orange Line,2023,Assembly_Square
+Assembly,August,80972,Orange Line,2023,Assembly_Square
+Assembly,December,74303,Orange Line,2023,Assembly_Square
+Assembly,February,53302,Orange Line,2023,Assembly_Square
+Assembly,January,59189,Orange Line,2023,Assembly_Square
+Assembly,July,65048,Orange Line,2023,Assembly_Square
+Assembly,June,77028,Orange Line,2023,Assembly_Square
+Assembly,March,63587,Orange Line,2023,Assembly_Square
+Assembly,May,69551,Orange Line,2023,Assembly_Square
+Assembly,November,74310,Orange Line,2023,Assembly_Square
+Assembly,October,86144,Orange Line,2023,Assembly_Square
+Assembly,September,78245,Orange Line,2023,Assembly_Square
+Back Bay,April,168375,Orange Line,2023,Back_Bay
+Back Bay,August,197526,Orange Line,2023,Back_Bay
+Back Bay,December,160118,Orange Line,2023,Back_Bay
+Back Bay,February,143208,Orange Line,2023,Back_Bay
+Back Bay,January,159368,Orange Line,2023,Back_Bay
+Back Bay,July,187193,Orange Line,2023,Back_Bay
+Back Bay,June,182470,Orange Line,2023,Back_Bay
+Back Bay,March,176448,Orange Line,2023,Back_Bay
+Back Bay,May,176747,Orange Line,2023,Back_Bay
+Back Bay,November,170444,Orange Line,2023,Back_Bay
+Back Bay,October,238675,Orange Line,2023,Back_Bay
+Back Bay,September,203329,Orange Line,2023,Back_Bay
+Ball Square,April,25470.83299,Green Line,2023,Somerville
+Ball Square,August,15741.66634,Green Line,2023,Somerville
+Ball Square,December,11229.16637,Green Line,2023,Somerville
+Ball Square,February,21712.49968,Green Line,2023,Somerville
+Ball Square,January,26841.66631,Green Line,2023,Somerville
+Ball Square,July,17316.66633,Green Line,2023,Somerville
+Ball Square,June,13958.33308,Green Line,2023,Somerville
+Ball Square,March,26683.33299,Green Line,2023,Somerville
+Ball Square,May,23829.16629,Green Line,2023,Somerville
+Ball Square,November,13999.99968,Green Line,2023,Somerville
+Ball Square,October,15470.83299,Green Line,2023,Somerville
+Ball Square,September,15437.49964,Green Line,2023,Somerville
+Beachmont,April,64893,Blue Line,2023,Beachmont
+Beachmont,August,91949,Blue Line,2023,Beachmont
+Beachmont,December,66807,Blue Line,2023,Beachmont
+Beachmont,February,58287,Blue Line,2023,Beachmont
+Beachmont,January,63782,Blue Line,2023,Beachmont
+Beachmont,July,82800,Blue Line,2023,Beachmont
+Beachmont,June,83930,Blue Line,2023,Beachmont
+Beachmont,March,69601,Blue Line,2023,Beachmont
+Beachmont,May,75473,Blue Line,2023,Beachmont
+Beachmont,November,72218,Blue Line,2023,Beachmont
+Beachmont,October,81158,Blue Line,2023,Beachmont
+Beachmont,September,75645,Blue Line,2023,Beachmont
+Bowdoin,April,36979,Blue Line,2023,Beacon_Hill
+Bowdoin,August,61150,Blue Line,2023,Beacon_Hill
+Bowdoin,December,36904,Blue Line,2023,Beacon_Hill
+Bowdoin,February,33924,Blue Line,2023,Beacon_Hill
+Bowdoin,January,36754,Blue Line,2023,Beacon_Hill
+Bowdoin,July,56982,Blue Line,2023,Beacon_Hill
+Bowdoin,June,48314,Blue Line,2023,Beacon_Hill
+Bowdoin,March,41045,Blue Line,2023,Beacon_Hill
+Bowdoin,May,40996,Blue Line,2023,Beacon_Hill
+Bowdoin,November,41351,Blue Line,2023,Beacon_Hill
+Bowdoin,October,44374,Blue Line,2023,Beacon_Hill
+Bowdoin,September,43997,Blue Line,2023,Beacon_Hill
+Boylston,April,130679,Green Line,2023,Downtown
+Boylston,August,106549,Green Line,2023,Downtown
+Boylston,December,45114,Green Line,2023,Downtown
+Boylston,February,106714,Green Line,2023,Downtown
+Boylston,January,103720,Green Line,2023,Downtown
+Boylston,July,94118,Green Line,2023,Downtown
+Boylston,June,96868,Green Line,2023,Downtown
+Boylston,March,121424,Green Line,2023,Downtown
+Boylston,May,114485,Green Line,2023,Downtown
+Boylston,November,99404,Green Line,2023,Downtown
+Boylston,October,122053,Green Line,2023,Downtown
+Boylston,September,122292,Green Line,2023,Downtown
+Braintree,April,38759,Red Line,2023,Braintree
+Braintree,August,35120,Red Line,2023,Braintree
+Braintree,December,40167,Red Line,2023,Braintree
+Braintree,February,46634,Red Line,2023,Braintree
+Braintree,January,51700,Red Line,2023,Braintree
+Braintree,July,37044,Red Line,2023,Braintree
+Braintree,June,40502,Red Line,2023,Braintree
+Braintree,March,49278,Red Line,2023,Braintree
+Braintree,May,37299,Red Line,2023,Braintree
+Braintree,November,41473,Red Line,2023,Braintree
+Braintree,October,44731,Red Line,2023,Braintree
+Braintree,September,37767,Red Line,2023,Braintree
+Broadway,April,74710,Red Line,2023,South_Boston
+Broadway,August,86048,Red Line,2023,South_Boston
+Broadway,December,73367,Red Line,2023,South_Boston
+Broadway,February,78064,Red Line,2023,South_Boston
+Broadway,January,82755,Red Line,2023,South_Boston
+Broadway,July,82519,Red Line,2023,South_Boston
+Broadway,June,85044,Red Line,2023,South_Boston
+Broadway,March,87018,Red Line,2023,South_Boston
+Broadway,May,76765,Red Line,2023,South_Boston
+Broadway,November,76610,Red Line,2023,South_Boston
+Broadway,October,84524,Red Line,2023,South_Boston
+Broadway,September,81492,Red Line,2023,South_Boston
+Central,April,207163,Red Line,2023,Central_Square
+Central,August,202243,Red Line,2023,Central_Square
+Central,December,180622,Red Line,2023,Central_Square
+Central,February,187450,Red Line,2023,Central_Square
+Central,January,211876,Red Line,2023,Central_Square
+Central,July,205637,Red Line,2023,Central_Square
+Central,June,185703,Red Line,2023,Central_Square
+Central,March,208380,Red Line,2023,Central_Square
+Central,May,218986,Red Line,2023,Central_Square
+Central,November,187766,Red Line,2023,Central_Square
+Central,October,220603,Red Line,2023,Central_Square
+Central,September,207632,Red Line,2023,Central_Square
+Charles/MGH,April,139662,Red Line,2023,West_End
+Charles/MGH,August,158294,Red Line,2023,West_End
+Charles/MGH,December,87913,Red Line,2023,West_End
+Charles/MGH,February,115859,Red Line,2023,West_End
+Charles/MGH,January,124467,Red Line,2023,West_End
+Charles/MGH,July,156724,Red Line,2023,West_End
+Charles/MGH,June,164814,Red Line,2023,West_End
+Charles/MGH,March,143359,Red Line,2023,West_End
+Charles/MGH,May,163093,Red Line,2023,West_End
+Charles/MGH,November,96025,Red Line,2023,West_End
+Charles/MGH,October,132582,Red Line,2023,West_End
+Charles/MGH,September,145808,Red Line,2023,West_End
+Chinatown,April,72870,Orange Line,2023,Chinatown
+Chinatown,August,88825,Orange Line,2023,Chinatown
+Chinatown,December,87886,Orange Line,2023,Chinatown
+Chinatown,February,62711,Orange Line,2023,Chinatown
+Chinatown,January,68652,Orange Line,2023,Chinatown
+Chinatown,July,82437,Orange Line,2023,Chinatown
+Chinatown,June,85124,Orange Line,2023,Chinatown
+Chinatown,March,80177,Orange Line,2023,Chinatown
+Chinatown,May,83588,Orange Line,2023,Chinatown
+Chinatown,November,88337,Orange Line,2023,Chinatown
+Chinatown,October,96720,Orange Line,2023,Chinatown
+Chinatown,September,92451,Orange Line,2023,Chinatown
+Community College,April,50138,Orange Line,2023,Charlestown
+Community College,August,49479,Orange Line,2023,Charlestown
+Community College,December,50790,Orange Line,2023,Charlestown
+Community College,February,46162,Orange Line,2023,Charlestown
+Community College,January,44324,Orange Line,2023,Charlestown
+Community College,July,43724,Orange Line,2023,Charlestown
+Community College,June,47055,Orange Line,2023,Charlestown
+Community College,March,52645,Orange Line,2023,Charlestown
+Community College,May,50283,Orange Line,2023,Charlestown
+Community College,November,60073,Orange Line,2023,Charlestown
+Community College,October,75756,Orange Line,2023,Charlestown
+Community College,September,68961,Orange Line,2023,Charlestown
+Copley,April,224616,Green Line,2023,Back_Bay
+Copley,August,213270,Green Line,2023,Back_Bay
+Copley,December,152843,Green Line,2023,Back_Bay
+Copley,February,184839,Green Line,2023,Back_Bay
+Copley,January,203633,Green Line,2023,Back_Bay
+Copley,July,209467,Green Line,2023,Back_Bay
+Copley,June,217476,Green Line,2023,Back_Bay
+Copley,March,214668,Green Line,2023,Back_Bay
+Copley,May,230023,Green Line,2023,Back_Bay
+Copley,November,188976,Green Line,2023,Back_Bay
+Copley,October,228655,Green Line,2023,Back_Bay
+Copley,September,224549,Green Line,2023,Back_Bay
+Courthouse,April,40509,Silver Line,2023,South_Boston
+Courthouse,August,40120,Silver Line,2023,South_Boston
+Courthouse,December,45497,Silver Line,2023,South_Boston
+Courthouse,February,37899,Silver Line,2023,South_Boston
+Courthouse,January,42370,Silver Line,2023,South_Boston
+Courthouse,July,44332,Silver Line,2023,South_Boston
+Courthouse,June,47524,Silver Line,2023,South_Boston
+Courthouse,March,43885,Silver Line,2023,South_Boston
+Courthouse,May,42662,Silver Line,2023,South_Boston
+Courthouse,November,49068,Silver Line,2023,South_Boston
+Courthouse,October,42565,Silver Line,2023,South_Boston
+Courthouse,September,41712,Silver Line,2023,South_Boston
+Davis,April,111021,Red Line,2023,Davis_Square
+Davis,August,115789,Red Line,2023,Davis_Square
+Davis,December,92638,Red Line,2023,Davis_Square
+Davis,February,113741,Red Line,2023,Davis_Square
+Davis,January,115154,Red Line,2023,Davis_Square
+Davis,July,108032,Red Line,2023,Davis_Square
+Davis,June,118578,Red Line,2023,Davis_Square
+Davis,March,120665,Red Line,2023,Davis_Square
+Davis,May,118085,Red Line,2023,Davis_Square
+Davis,November,97364,Red Line,2023,Davis_Square
+Davis,October,118312,Red Line,2023,Davis_Square
+Davis,September,113727,Red Line,2023,Davis_Square
+Downtown Crossing,April,245580,Orange Line,2023,Downtown
+Downtown Crossing,August,281329,Orange Line,2023,Downtown
+Downtown Crossing,December,271223,Orange Line,2023,Downtown
+Downtown Crossing,February,220333,Orange Line,2023,Downtown
+Downtown Crossing,January,232638,Orange Line,2023,Downtown
+Downtown Crossing,July,270920,Orange Line,2023,Downtown
+Downtown Crossing,June,287593,Orange Line,2023,Downtown
+Downtown Crossing,March,267674,Orange Line,2023,Downtown
+Downtown Crossing,May,283979,Orange Line,2023,Downtown
+Downtown Crossing,November,271190,Orange Line,2023,Downtown
+Downtown Crossing,October,290202,Orange Line,2023,Downtown
+Downtown Crossing,September,274793,Orange Line,2023,Downtown
+East Somerville,April,8870.833032,Green Line,2023,Somerville
+East Somerville,August,6599.999694,Green Line,2023,Somerville
+East Somerville,December,4658.333082,Green Line,2023,Somerville
+East Somerville,February,7020.833056,Green Line,2023,Somerville
+East Somerville,January,9179.166357,Green Line,2023,Somerville
+East Somerville,July,6720.833063,Green Line,2023,Somerville
+East Somerville,June,5399.999778,Green Line,2023,Somerville
+East Somerville,March,8837.499683,Green Line,2023,Somerville
+East Somerville,May,9733.333012,Green Line,2023,Somerville
+East Somerville,November,6691.666379,Green Line,2023,Somerville
+East Somerville,October,9541.666363,Green Line,2023,Somerville
+East Somerville,September,8954.166372,Green Line,2023,Somerville
+Fields Corner,April,63388,Red Line,2023,Dorchester
+Fields Corner,August,65386,Red Line,2023,Dorchester
+Fields Corner,December,57707,Red Line,2023,Dorchester
+Fields Corner,February,61945,Red Line,2023,Dorchester
+Fields Corner,January,65708,Red Line,2023,Dorchester
+Fields Corner,July,63374,Red Line,2023,Dorchester
+Fields Corner,June,65710,Red Line,2023,Dorchester
+Fields Corner,March,69731,Red Line,2023,Dorchester
+Fields Corner,May,64026,Red Line,2023,Dorchester
+Fields Corner,November,61114,Red Line,2023,Dorchester
+Fields Corner,October,30227,Red Line,2023,Dorchester
+Fields Corner,September,63948,Red Line,2023,Dorchester
+Forest Hills,April,148825,Orange Line,2023,Jamaica_Plain
+Forest Hills,August,156388,Orange Line,2023,Jamaica_Plain
+Forest Hills,December,149668,Orange Line,2023,Jamaica_Plain
+Forest Hills,February,132170,Orange Line,2023,Jamaica_Plain
+Forest Hills,January,145331,Orange Line,2023,Jamaica_Plain
+Forest Hills,July,148924,Orange Line,2023,Jamaica_Plain
+Forest Hills,June,153690,Orange Line,2023,Jamaica_Plain
+Forest Hills,March,163074,Orange Line,2023,Jamaica_Plain
+Forest Hills,May,165745,Orange Line,2023,Jamaica_Plain
+Forest Hills,November,168031,Orange Line,2023,Jamaica_Plain
+Forest Hills,October,186765,Orange Line,2023,Jamaica_Plain
+Forest Hills,September,161965,Orange Line,2023,Jamaica_Plain
+Gilman Square,April,23441.66633,Green Line,2023,Somerville
+Gilman Square,August,27945.83296,Green Line,2023,Somerville
+Gilman Square,December,21337.49967,Green Line,2023,Somerville
+Gilman Square,February,22487.49968,Green Line,2023,Somerville
+Gilman Square,January,28766.66629,Green Line,2023,Somerville
+Gilman Square,July,29329.16631,Green Line,2023,Somerville
+Gilman Square,June,15495.83305,Green Line,2023,Somerville
+Gilman Square,March,25404.1663,Green Line,2023,Somerville
+Gilman Square,May,20229.1663,Green Line,2023,Somerville
+Gilman Square,November,25612.49965,Green Line,2023,Somerville
+Gilman Square,October,21887.49963,Green Line,2023,Somerville
+Gilman Square,September,21674.99965,Green Line,2023,Somerville
+Government Center,April,141154,Blue Line,2023,Downtown
+Government Center,August,184176,Blue Line,2023,Downtown
+Government Center,December,124997,Blue Line,2023,Downtown
+Government Center,February,116698,Blue Line,2023,Downtown
+Government Center,January,127889,Blue Line,2023,Downtown
+Government Center,July,116013,Blue Line,2023,Downtown
+Government Center,June,194451,Blue Line,2023,Downtown
+Government Center,March,147872,Blue Line,2023,Downtown
+Government Center,May,157794,Blue Line,2023,Downtown
+Government Center,November,137840,Blue Line,2023,Downtown
+Government Center,October,103817,Blue Line,2023,Downtown
+Government Center,September,90907,Blue Line,2023,Downtown
+Green Street,April,40465,Orange Line,2023,Jamaica_Plain
+Green Street,August,43877,Orange Line,2023,Jamaica_Plain
+Green Street,December,41322,Orange Line,2023,Jamaica_Plain
+Green Street,February,36160,Orange Line,2023,Jamaica_Plain
+Green Street,January,40234,Orange Line,2023,Jamaica_Plain
+Green Street,July,40970,Orange Line,2023,Jamaica_Plain
+Green Street,June,41543,Orange Line,2023,Jamaica_Plain
+Green Street,March,44323,Orange Line,2023,Jamaica_Plain
+Green Street,May,43425,Orange Line,2023,Jamaica_Plain
+Green Street,November,46921,Orange Line,2023,Jamaica_Plain
+Green Street,October,51450,Orange Line,2023,Jamaica_Plain
+Green Street,September,46291,Orange Line,2023,Jamaica_Plain
+Harvard,April,255656,Red Line,2023,Harvard_Square
+Harvard,August,260246,Red Line,2023,Harvard_Square
+Harvard,December,213258,Red Line,2023,Harvard_Square
+Harvard,February,215596,Red Line,2023,Harvard_Square
+Harvard,January,229689,Red Line,2023,Harvard_Square
+Harvard,July,250066,Red Line,2023,Harvard_Square
+Harvard,June,257129,Red Line,2023,Harvard_Square
+Harvard,March,234884,Red Line,2023,Harvard_Square
+Harvard,May,293000,Red Line,2023,Harvard_Square
+Harvard,November,227345,Red Line,2023,Harvard_Square
+Harvard,October,287762,Red Line,2023,Harvard_Square
+Harvard,September,268284,Red Line,2023,Harvard_Square
+Haymarket,April,145391,Green Line,2023,Downtown
+Haymarket,August,105351,Green Line,2023,Downtown
+Haymarket,December,49342,Green Line,2023,Downtown
+Haymarket,February,106370,Green Line,2023,Downtown
+Haymarket,January,109686,Green Line,2023,Downtown
+Haymarket,July,141204,Green Line,2023,Downtown
+Haymarket,June,77150,Green Line,2023,Downtown
+Haymarket,March,156678,Green Line,2023,Downtown
+Haymarket,May,154575,Green Line,2023,Downtown
+Haymarket,November,121256,Green Line,2023,Downtown
+Haymarket,October,91913,Green Line,2023,Downtown
+Haymarket,September,89726,Green Line,2023,Downtown
+Hynes Convention Center,April,165803,Green Line,2023,Back_Bay
+Hynes Convention Center,August,135984,Green Line,2023,Back_Bay
+Hynes Convention Center,December,94041,Green Line,2023,Back_Bay
+Hynes Convention Center,February,133856,Green Line,2023,Back_Bay
+Hynes Convention Center,January,130830,Green Line,2023,Back_Bay
+Hynes Convention Center,July,124769,Green Line,2023,Back_Bay
+Hynes Convention Center,June,134181,Green Line,2023,Back_Bay
+Hynes Convention Center,March,151454,Green Line,2023,Back_Bay
+Hynes Convention Center,May,150067,Green Line,2023,Back_Bay
+Hynes Convention Center,November,134756,Green Line,2023,Back_Bay
+Hynes Convention Center,October,161611,Green Line,2023,Back_Bay
+Hynes Convention Center,September,160756,Green Line,2023,Back_Bay
+JFK/UMass,April,100707,Red Line,2023,Dorchester
+JFK/UMass,August,89958,Red Line,2023,Dorchester
+JFK/UMass,December,87129,Red Line,2023,Dorchester
+JFK/UMass,February,96454,Red Line,2023,Dorchester
+JFK/UMass,January,89903,Red Line,2023,Dorchester
+JFK/UMass,July,83059,Red Line,2023,Dorchester
+JFK/UMass,June,88975,Red Line,2023,Dorchester
+JFK/UMass,March,114894,Red Line,2023,Dorchester
+JFK/UMass,May,95427,Red Line,2023,Dorchester
+JFK/UMass,November,110941,Red Line,2023,Dorchester
+JFK/UMass,October,81213,Red Line,2023,Dorchester
+JFK/UMass,September,125348,Red Line,2023,Dorchester
+Jackson Square,April,57571,Orange Line,2023,Jamaica_Plain
+Jackson Square,August,78319,Orange Line,2023,Jamaica_Plain
+Jackson Square,December,74061,Orange Line,2023,Jamaica_Plain
+Jackson Square,February,50832,Orange Line,2023,Jamaica_Plain
+Jackson Square,January,57092,Orange Line,2023,Jamaica_Plain
+Jackson Square,July,74862,Orange Line,2023,Jamaica_Plain
+Jackson Square,June,77267,Orange Line,2023,Jamaica_Plain
+Jackson Square,March,58939,Orange Line,2023,Jamaica_Plain
+Jackson Square,May,60459,Orange Line,2023,Jamaica_Plain
+Jackson Square,November,81825,Orange Line,2023,Jamaica_Plain
+Jackson Square,October,91320,Orange Line,2023,Jamaica_Plain
+Jackson Square,September,80639,Orange Line,2023,Jamaica_Plain
+Kendall/MIT,April,193610,Red Line,2023,Kendall_Square
+Kendall/MIT,August,222159,Red Line,2023,Kendall_Square
+Kendall/MIT,December,163702,Red Line,2023,Kendall_Square
+Kendall/MIT,February,202207,Red Line,2023,Kendall_Square
+Kendall/MIT,January,197550,Red Line,2023,Kendall_Square
+Kendall/MIT,July,216171,Red Line,2023,Kendall_Square
+Kendall/MIT,June,220649,Red Line,2023,Kendall_Square
+Kendall/MIT,March,213239,Red Line,2023,Kendall_Square
+Kendall/MIT,May,217890,Red Line,2023,Kendall_Square
+Kendall/MIT,November,209877,Red Line,2023,Kendall_Square
+Kendall/MIT,October,229786,Red Line,2023,Kendall_Square
+Kendall/MIT,September,196290,Red Line,2023,Kendall_Square
+Kenmore,April,171540,Green Line,2023,Fenway_Kenmore
+Kenmore,August,167134,Green Line,2023,Fenway_Kenmore
+Kenmore,December,87190,Green Line,2023,Fenway_Kenmore
+Kenmore,February,102173,Green Line,2023,Fenway_Kenmore
+Kenmore,January,109724,Green Line,2023,Fenway_Kenmore
+Kenmore,July,186604,Green Line,2023,Fenway_Kenmore
+Kenmore,June,160956,Green Line,2023,Fenway_Kenmore
+Kenmore,March,122073,Green Line,2023,Fenway_Kenmore
+Kenmore,May,156128,Green Line,2023,Fenway_Kenmore
+Kenmore,November,93250,Green Line,2023,Fenway_Kenmore
+Kenmore,October,120282,Green Line,2023,Fenway_Kenmore
+Kenmore,September,166873,Green Line,2023,Fenway_Kenmore
+Lechmere,April,60316.66629,Green Line,2023,Lechmere_Square
+Lechmere,August,31658.33294,Green Line,2023,Lechmere_Square
+Lechmere,December,21716.66631,Green Line,2023,Lechmere_Square
+Lechmere,February,40929.16632,Green Line,2023,Lechmere_Square
+Lechmere,January,45495.83295,Green Line,2023,Lechmere_Square
+Lechmere,July,37637.4996,Green Line,2023,Lechmere_Square
+Lechmere,June,43145.83302,Green Line,2023,Lechmere_Square
+Lechmere,March,61662.49959,Green Line,2023,Lechmere_Square
+Lechmere,May,68908.33293,Green Line,2023,Lechmere_Square
+Lechmere,November,26970.83295,Green Line,2023,Lechmere_Square
+Lechmere,October,28116.66628,Green Line,2023,Lechmere_Square
+Lechmere,September,29083.33296,Green Line,2023,Lechmere_Square
+Magoun Square,April,21291.66634,Green Line,2023,Somerville
+Magoun Square,August,13729.16636,Green Line,2023,Somerville
+Magoun Square,December,9666.666373,Green Line,2023,Somerville
+Magoun Square,February,18945.83303,Green Line,2023,Somerville
+Magoun Square,January,22033.33301,Green Line,2023,Somerville
+Magoun Square,July,16399.99969,Green Line,2023,Somerville
+Magoun Square,June,11995.83311,Green Line,2023,Somerville
+Magoun Square,March,20791.66634,Green Line,2023,Somerville
+Magoun Square,May,19479.16635,Green Line,2023,Somerville
+Magoun Square,November,12899.99971,Green Line,2023,Somerville
+Magoun Square,October,14287.49968,Green Line,2023,Somerville
+Magoun Square,September,13045.83304,Green Line,2023,Somerville
+Malden Center,April,131504,Orange Line,2023,Malden
+Malden Center,August,146822,Orange Line,2023,Malden
+Malden Center,December,135998,Orange Line,2023,Malden
+Malden Center,February,117904,Orange Line,2023,Malden
+Malden Center,January,126665,Orange Line,2023,Malden
+Malden Center,July,140515,Orange Line,2023,Malden
+Malden Center,June,141182,Orange Line,2023,Malden
+Malden Center,March,139915,Orange Line,2023,Malden
+Malden Center,May,147393,Orange Line,2023,Malden
+Malden Center,November,141262,Orange Line,2023,Malden
+Malden Center,October,167768,Orange Line,2023,Malden
+Malden Center,September,159515,Orange Line,2023,Malden
+Massachusetts Avenue,April,71811,Orange Line,2023,Fenway_Kenmore
+Massachusetts Avenue,August,79960,Orange Line,2023,Fenway_Kenmore
+Massachusetts Avenue,December,79826,Orange Line,2023,Fenway_Kenmore
+Massachusetts Avenue,February,61348,Orange Line,2023,Fenway_Kenmore
+Massachusetts Avenue,January,66660,Orange Line,2023,Fenway_Kenmore
+Massachusetts Avenue,July,72385,Orange Line,2023,Fenway_Kenmore
+Massachusetts Avenue,June,71615,Orange Line,2023,Fenway_Kenmore
+Massachusetts Avenue,March,75490,Orange Line,2023,Fenway_Kenmore
+Massachusetts Avenue,May,74839,Orange Line,2023,Fenway_Kenmore
+Massachusetts Avenue,November,87655,Orange Line,2023,Fenway_Kenmore
+Massachusetts Avenue,October,94687,Orange Line,2023,Fenway_Kenmore
+Massachusetts Avenue,September,84501,Orange Line,2023,Fenway_Kenmore
+Mattapan Line,April,75317.75884,Mattapan Line,2023,Mattapan
+Mattapan Line,August,75241.72678,Mattapan Line,2023,Mattapan
+Mattapan Line,December,67289.47079,Mattapan Line,2023,Mattapan
+Mattapan Line,February,75883.39092,Mattapan Line,2023,Mattapan
+Mattapan Line,January,78723.07084,Mattapan Line,2023,Mattapan
+Mattapan Line,July,71641.72678,Mattapan Line,2023,Mattapan
+Mattapan Line,June,76741.63083,Mattapan Line,2023,Mattapan
+Mattapan Line,March,87234.0468,Mattapan Line,2023,Mattapan
+Mattapan Line,May,77375.23087,Mattapan Line,2023,Mattapan
+Mattapan Line,November,69845.75882,Mattapan Line,2023,Mattapan
+Mattapan Line,October,35898.62348,Mattapan Line,2023,Mattapan
+Mattapan Line,September,74688.76685,Mattapan Line,2023,Mattapan
+Maverick,April,219208,Blue Line,2023,East_Boston
+Maverick,April,219208,Blue Line,2023,East_Boston
+Maverick,April,219208,Blue Line,2023,East_Boston
+Maverick,April,219208,Blue Line,2023,East_Boston
+Maverick,August,304151,Blue Line,2023,East_Boston
+Maverick,August,304151,Blue Line,2023,East_Boston
+Maverick,August,304151,Blue Line,2023,East_Boston
+Maverick,August,304151,Blue Line,2023,East_Boston
+Maverick,December,219529,Blue Line,2023,East_Boston
+Maverick,December,219529,Blue Line,2023,East_Boston
+Maverick,December,219529,Blue Line,2023,East_Boston
+Maverick,December,219529,Blue Line,2023,East_Boston
+Maverick,February,200809,Blue Line,2023,East_Boston
+Maverick,February,200809,Blue Line,2023,East_Boston
+Maverick,February,200809,Blue Line,2023,East_Boston
+Maverick,February,200809,Blue Line,2023,East_Boston
+Maverick,January,208816,Blue Line,2023,East_Boston
+Maverick,January,208816,Blue Line,2023,East_Boston
+Maverick,January,208816,Blue Line,2023,East_Boston
+Maverick,January,208816,Blue Line,2023,East_Boston
+Maverick,July,288212,Blue Line,2023,East_Boston
+Maverick,July,288212,Blue Line,2023,East_Boston
+Maverick,July,288212,Blue Line,2023,East_Boston
+Maverick,July,288212,Blue Line,2023,East_Boston
+Maverick,June,264984,Blue Line,2023,East_Boston
+Maverick,June,264984,Blue Line,2023,East_Boston
+Maverick,June,264984,Blue Line,2023,East_Boston
+Maverick,June,264984,Blue Line,2023,East_Boston
+Maverick,March,229314,Blue Line,2023,East_Boston
+Maverick,March,229314,Blue Line,2023,East_Boston
+Maverick,March,229314,Blue Line,2023,East_Boston
+Maverick,March,229314,Blue Line,2023,East_Boston
+Maverick,May,243133,Blue Line,2023,East_Boston
+Maverick,May,243133,Blue Line,2023,East_Boston
+Maverick,May,243133,Blue Line,2023,East_Boston
+Maverick,May,243133,Blue Line,2023,East_Boston
+Maverick,November,234988,Blue Line,2023,East_Boston
+Maverick,November,234988,Blue Line,2023,East_Boston
+Maverick,November,234988,Blue Line,2023,East_Boston
+Maverick,November,234988,Blue Line,2023,East_Boston
+Maverick,October,260406,Blue Line,2023,East_Boston
+Maverick,October,260406,Blue Line,2023,East_Boston
+Maverick,October,260406,Blue Line,2023,East_Boston
+Maverick,October,260406,Blue Line,2023,East_Boston
+Maverick,September,247036,Blue Line,2023,East_Boston
+Maverick,September,247036,Blue Line,2023,East_Boston
+Maverick,September,247036,Blue Line,2023,East_Boston
+Maverick,September,247036,Blue Line,2023,East_Boston
+Medford/Tufts,April,16820.83304,Green Line,2023,Medford
+Medford/Tufts,August,32183.33298,Green Line,2023,Medford
+Medford/Tufts,December,19499.99966,Green Line,2023,Medford
+Medford/Tufts,February,16633.33303,Green Line,2023,Medford
+Medford/Tufts,January,19708.33303,Green Line,2023,Medford
+Medford/Tufts,July,29395.833,Green Line,2023,Medford
+Medford/Tufts,June,12783.33308,Green Line,2023,Medford
+Medford/Tufts,March,18229.16634,Green Line,2023,Medford
+Medford/Tufts,May,18995.83298,Green Line,2023,Medford
+Medford/Tufts,November,28741.66631,Green Line,2023,Medford
+Medford/Tufts,October,31512.49962,Green Line,2023,Medford
+Medford/Tufts,September,27995.83301,Green Line,2023,Medford
+North Quincy,April,60583,Red Line,2023,North_Quincy
+North Quincy,August,59183,Red Line,2023,North_Quincy
+North Quincy,December,58974,Red Line,2023,North_Quincy
+North Quincy,February,62443,Red Line,2023,North_Quincy
+North Quincy,January,64573,Red Line,2023,North_Quincy
+North Quincy,July,64134,Red Line,2023,North_Quincy
+North Quincy,June,65356,Red Line,2023,North_Quincy
+North Quincy,March,70892,Red Line,2023,North_Quincy
+North Quincy,May,62758,Red Line,2023,North_Quincy
+North Quincy,November,64635,Red Line,2023,North_Quincy
+North Quincy,October,71227,Red Line,2023,North_Quincy
+North Quincy,September,61598,Red Line,2023,North_Quincy
+North Station,April,248408,Green Line,2023,West_End
+North Station,August,283244,Green Line,2023,West_End
+North Station,December,273664,Green Line,2023,West_End
+North Station,February,244295,Green Line,2023,West_End
+North Station,January,254643,Green Line,2023,West_End
+North Station,July,257681,Green Line,2023,West_End
+North Station,June,157519,Green Line,2023,West_End
+North Station,March,284959,Green Line,2023,West_End
+North Station,May,271922,Green Line,2023,West_End
+North Station,November,293618,Green Line,2023,West_End
+North Station,October,214285,Green Line,2023,West_End
+North Station,September,151994,Green Line,2023,West_End
+Oak Grove,April,77424,Orange Line,2023,Malden
+Oak Grove,August,89026,Orange Line,2023,Malden
+Oak Grove,December,79468,Orange Line,2023,Malden
+Oak Grove,February,65226,Orange Line,2023,Malden
+Oak Grove,January,71069,Orange Line,2023,Malden
+Oak Grove,July,81347,Orange Line,2023,Malden
+Oak Grove,June,86531,Orange Line,2023,Malden
+Oak Grove,March,80724,Orange Line,2023,Malden
+Oak Grove,May,86124,Orange Line,2023,Malden
+Oak Grove,November,84182,Orange Line,2023,Malden
+Oak Grove,October,105297,Orange Line,2023,Malden
+Oak Grove,September,93098,Orange Line,2023,Malden
+Orient Heights,April,86348,Blue Line,2023,East_Boston
+Orient Heights,April,86348,Blue Line,2023,East_Boston
+Orient Heights,April,86348,Blue Line,2023,East_Boston
+Orient Heights,April,86348,Blue Line,2023,East_Boston
+Orient Heights,August,116315,Blue Line,2023,East_Boston
+Orient Heights,August,116315,Blue Line,2023,East_Boston
+Orient Heights,August,116315,Blue Line,2023,East_Boston
+Orient Heights,August,116315,Blue Line,2023,East_Boston
+Orient Heights,December,85298,Blue Line,2023,East_Boston
+Orient Heights,December,85298,Blue Line,2023,East_Boston
+Orient Heights,December,85298,Blue Line,2023,East_Boston
+Orient Heights,December,85298,Blue Line,2023,East_Boston
+Orient Heights,February,71777,Blue Line,2023,East_Boston
+Orient Heights,February,71777,Blue Line,2023,East_Boston
+Orient Heights,February,71777,Blue Line,2023,East_Boston
+Orient Heights,February,71777,Blue Line,2023,East_Boston
+Orient Heights,January,82699,Blue Line,2023,East_Boston
+Orient Heights,January,82699,Blue Line,2023,East_Boston
+Orient Heights,January,82699,Blue Line,2023,East_Boston
+Orient Heights,January,82699,Blue Line,2023,East_Boston
+Orient Heights,July,96286,Blue Line,2023,East_Boston
+Orient Heights,July,96286,Blue Line,2023,East_Boston
+Orient Heights,July,96286,Blue Line,2023,East_Boston
+Orient Heights,July,96286,Blue Line,2023,East_Boston
+Orient Heights,June,111960,Blue Line,2023,East_Boston
+Orient Heights,June,111960,Blue Line,2023,East_Boston
+Orient Heights,June,111960,Blue Line,2023,East_Boston
+Orient Heights,June,111960,Blue Line,2023,East_Boston
+Orient Heights,March,82739,Blue Line,2023,East_Boston
+Orient Heights,March,82739,Blue Line,2023,East_Boston
+Orient Heights,March,82739,Blue Line,2023,East_Boston
+Orient Heights,March,82739,Blue Line,2023,East_Boston
+Orient Heights,May,100028,Blue Line,2023,East_Boston
+Orient Heights,May,100028,Blue Line,2023,East_Boston
+Orient Heights,May,100028,Blue Line,2023,East_Boston
+Orient Heights,May,100028,Blue Line,2023,East_Boston
+Orient Heights,November,92033,Blue Line,2023,East_Boston
+Orient Heights,November,92033,Blue Line,2023,East_Boston
+Orient Heights,November,92033,Blue Line,2023,East_Boston
+Orient Heights,November,92033,Blue Line,2023,East_Boston
+Orient Heights,October,104934,Blue Line,2023,East_Boston
+Orient Heights,October,104934,Blue Line,2023,East_Boston
+Orient Heights,October,104934,Blue Line,2023,East_Boston
+Orient Heights,October,104934,Blue Line,2023,East_Boston
+Orient Heights,September,98271,Blue Line,2023,East_Boston
+Orient Heights,September,98271,Blue Line,2023,East_Boston
+Orient Heights,September,98271,Blue Line,2023,East_Boston
+Orient Heights,September,98271,Blue Line,2023,East_Boston
+Park Street,April,244998,Green Line,2023,Downtown
+Park Street,August,245634,Green Line,2023,Downtown
+Park Street,December,190247,Green Line,2023,Downtown
+Park Street,February,201127,Green Line,2023,Downtown
+Park Street,January,209688,Green Line,2023,Downtown
+Park Street,July,238443,Green Line,2023,Downtown
+Park Street,June,261361,Green Line,2023,Downtown
+Park Street,March,233359,Green Line,2023,Downtown
+Park Street,May,236013,Green Line,2023,Downtown
+Park Street,November,200195,Green Line,2023,Downtown
+Park Street,October,254953,Green Line,2023,Downtown
+Park Street,September,245834,Green Line,2023,Downtown
+Porter,April,101368,Red Line,2023,Porter_Square
+Porter,August,98674,Red Line,2023,Porter_Square
+Porter,December,84968,Red Line,2023,Porter_Square
+Porter,February,99831,Red Line,2023,Porter_Square
+Porter,January,103777,Red Line,2023,Porter_Square
+Porter,July,94285,Red Line,2023,Porter_Square
+Porter,June,106017,Red Line,2023,Porter_Square
+Porter,March,110469,Red Line,2023,Porter_Square
+Porter,May,108529,Red Line,2023,Porter_Square
+Porter,November,89396,Red Line,2023,Porter_Square
+Porter,October,102723,Red Line,2023,Porter_Square
+Porter,September,100304,Red Line,2023,Porter_Square
+Prudential,April,77106,Green Line,2023,Back_Bay
+Prudential,August,57918,Green Line,2023,Back_Bay
+Prudential,December,45406,Green Line,2023,Back_Bay
+Prudential,February,66924,Green Line,2023,Back_Bay
+Prudential,January,71749,Green Line,2023,Back_Bay
+Prudential,July,60948,Green Line,2023,Back_Bay
+Prudential,June,56628,Green Line,2023,Back_Bay
+Prudential,March,69027,Green Line,2023,Back_Bay
+Prudential,May,60029,Green Line,2023,Back_Bay
+Prudential,November,57349,Green Line,2023,Back_Bay
+Prudential,October,59713,Green Line,2023,Back_Bay
+Prudential,September,43156,Green Line,2023,Back_Bay
+Quincy Adams,April,33119,Red Line,2023,South_Quincy
+Quincy Adams,August,32035,Red Line,2023,South_Quincy
+Quincy Adams,December,30025,Red Line,2023,South_Quincy
+Quincy Adams,February,33820,Red Line,2023,South_Quincy
+Quincy Adams,January,37447,Red Line,2023,South_Quincy
+Quincy Adams,July,33982,Red Line,2023,South_Quincy
+Quincy Adams,June,35787,Red Line,2023,South_Quincy
+Quincy Adams,March,38417,Red Line,2023,South_Quincy
+Quincy Adams,May,31980,Red Line,2023,South_Quincy
+Quincy Adams,November,32981,Red Line,2023,South_Quincy
+Quincy Adams,October,37094,Red Line,2023,South_Quincy
+Quincy Adams,September,31955,Red Line,2023,South_Quincy
+Quincy Center,April,62908,Red Line,2023,Quincy_Center
+Quincy Center,August,52387,Red Line,2023,Quincy_Center
+Quincy Center,December,69495,Red Line,2023,Quincy_Center
+Quincy Center,February,80545,Red Line,2023,Quincy_Center
+Quincy Center,January,86451,Red Line,2023,Quincy_Center
+Quincy Center,July,71513,Red Line,2023,Quincy_Center
+Quincy Center,June,64121,Red Line,2023,Quincy_Center
+Quincy Center,March,82187,Red Line,2023,Quincy_Center
+Quincy Center,May,59537,Red Line,2023,Quincy_Center
+Quincy Center,November,73394,Red Line,2023,Quincy_Center
+Quincy Center,October,77865,Red Line,2023,Quincy_Center
+Quincy Center,September,72961,Red Line,2023,Quincy_Center
+Revere Beach,April,66112,Blue Line,2023,Revere
+Revere Beach,August,103690,Blue Line,2023,Revere
+Revere Beach,December,67176,Blue Line,2023,Revere
+Revere Beach,February,59362,Blue Line,2023,Revere
+Revere Beach,January,64086,Blue Line,2023,Revere
+Revere Beach,July,105406,Blue Line,2023,Revere
+Revere Beach,June,87578,Blue Line,2023,Revere
+Revere Beach,March,69798,Blue Line,2023,Revere
+Revere Beach,May,78810,Blue Line,2023,Revere
+Revere Beach,November,71039,Blue Line,2023,Revere
+Revere Beach,October,77795,Blue Line,2023,Revere
+Revere Beach,September,75836,Blue Line,2023,Revere
+Riverside,April,28216,Green Line,2023,Auburndale
+Riverside,August,37007,Green Line,2023,Auburndale
+Riverside,December,11483,Green Line,2023,Auburndale
+Riverside,February,15251,Green Line,2023,Auburndale
+Riverside,January,16210,Green Line,2023,Auburndale
+Riverside,July,29229,Green Line,2023,Auburndale
+Riverside,June,30964,Green Line,2023,Auburndale
+Riverside,March,18764,Green Line,2023,Auburndale
+Riverside,May,25743,Green Line,2023,Auburndale
+Riverside,November,21074,Green Line,2023,Auburndale
+Riverside,October,23256,Green Line,2023,Auburndale
+Riverside,September,29084,Green Line,2023,Auburndale
+Roxbury Crossing,April,59862,Orange Line,2023,Roxbury
+Roxbury Crossing,August,61525,Orange Line,2023,Roxbury
+Roxbury Crossing,December,67097,Orange Line,2023,Roxbury
+Roxbury Crossing,February,55212,Orange Line,2023,Roxbury
+Roxbury Crossing,January,59776,Orange Line,2023,Roxbury
+Roxbury Crossing,July,59107,Orange Line,2023,Roxbury
+Roxbury Crossing,June,63169,Orange Line,2023,Roxbury
+Roxbury Crossing,March,68087,Orange Line,2023,Roxbury
+Roxbury Crossing,May,66211,Orange Line,2023,Roxbury
+Roxbury Crossing,November,76265,Orange Line,2023,Roxbury
+Roxbury Crossing,October,83031,Orange Line,2023,Roxbury
+Roxbury Crossing,September,72885,Orange Line,2023,Roxbury
+Ruggles,April,96530,Orange Line,2023,Roxbury
+Ruggles,August,86798,Orange Line,2023,Roxbury
+Ruggles,December,97838,Orange Line,2023,Roxbury
+Ruggles,February,123732,Orange Line,2023,Roxbury
+Ruggles,January,130768,Orange Line,2023,Roxbury
+Ruggles,July,86717,Orange Line,2023,Roxbury
+Ruggles,June,90945,Orange Line,2023,Roxbury
+Ruggles,March,117093,Orange Line,2023,Roxbury
+Ruggles,May,94072,Orange Line,2023,Roxbury
+Ruggles,November,121926,Orange Line,2023,Roxbury
+Ruggles,October,133805,Orange Line,2023,Roxbury
+Ruggles,September,118243,Orange Line,2023,Roxbury
+Savin Hill,April,17841,Red Line,2023,Dorchester
+Savin Hill,August,28495,Red Line,2023,Dorchester
+Savin Hill,December,25596,Red Line,2023,Dorchester
+Savin Hill,February,16492,Red Line,2023,Dorchester
+Savin Hill,January,22068,Red Line,2023,Dorchester
+Savin Hill,July,28670,Red Line,2023,Dorchester
+Savin Hill,June,18944,Red Line,2023,Dorchester
+Savin Hill,March,19783,Red Line,2023,Dorchester
+Savin Hill,May,18663,Red Line,2023,Dorchester
+Savin Hill,November,26925,Red Line,2023,Dorchester
+Savin Hill,October,14560,Red Line,2023,Dorchester
+Savin Hill,September,27039,Red Line,2023,Dorchester
+Science Park,April,20086,Green Line,2023,West_End
+Science Park,August,23537,Green Line,2023,West_End
+Science Park,December,15593,Green Line,2023,West_End
+Science Park,February,14029,Green Line,2023,West_End
+Science Park,January,14088,Green Line,2023,West_End
+Science Park,July,24738,Green Line,2023,West_End
+Science Park,June,14394,Green Line,2023,West_End
+Science Park,March,16539,Green Line,2023,West_End
+Science Park,May,18533,Green Line,2023,West_End
+Science Park,November,17880,Green Line,2023,West_End
+Science Park,October,17443,Green Line,2023,West_End
+Science Park,September,16772,Green Line,2023,West_End
+Shawmut,April,26928,Red Line,2023,Dorchester
+Shawmut,August,28764,Red Line,2023,Dorchester
+Shawmut,December,25051,Red Line,2023,Dorchester
+Shawmut,February,27773,Red Line,2023,Dorchester
+Shawmut,January,30120,Red Line,2023,Dorchester
+Shawmut,July,26895,Red Line,2023,Dorchester
+Shawmut,June,28965,Red Line,2023,Dorchester
+Shawmut,March,32027,Red Line,2023,Dorchester
+Shawmut,May,28354,Red Line,2023,Dorchester
+Shawmut,November,26441,Red Line,2023,Dorchester
+Shawmut,October,14277,Red Line,2023,Dorchester
+Shawmut,September,29071,Red Line,2023,Dorchester
+South Station,April,236843,Red Line,2023,Downtown
+South Station,August,301990,Red Line,2023,Downtown
+South Station,December,249389,Red Line,2023,Downtown
+South Station,February,228590,Red Line,2023,Downtown
+South Station,January,251011,Red Line,2023,Downtown
+South Station,July,282676,Red Line,2023,Downtown
+South Station,June,294063,Red Line,2023,Downtown
+South Station,March,260547,Red Line,2023,Downtown
+South Station,May,277953,Red Line,2023,Downtown
+South Station,November,262034,Red Line,2023,Downtown
+South Station,October,292841,Red Line,2023,Downtown
+South Station,September,275902,Red Line,2023,Downtown
+State Street,April,171825,Blue Line,2023,Downtown
+State Street,August,271945,Blue Line,2023,Downtown
+State Street,December,193719,Blue Line,2023,Downtown
+State Street,February,150713,Blue Line,2023,Downtown
+State Street,January,166718,Blue Line,2023,Downtown
+State Street,July,224369,Blue Line,2023,Downtown
+State Street,June,242764,Blue Line,2023,Downtown
+State Street,March,190037,Blue Line,2023,Downtown
+State Street,May,192753,Blue Line,2023,Downtown
+State Street,November,199187,Blue Line,2023,Downtown
+State Street,October,224372,Blue Line,2023,Downtown
+State Street,September,195625,Blue Line,2023,Downtown
+Stony Brook,April,46767,Orange Line,2023,Jamaica_Plain
+Stony Brook,August,50913,Orange Line,2023,Jamaica_Plain
+Stony Brook,December,48358,Orange Line,2023,Jamaica_Plain
+Stony Brook,February,41795,Orange Line,2023,Jamaica_Plain
+Stony Brook,January,45665,Orange Line,2023,Jamaica_Plain
+Stony Brook,July,48109,Orange Line,2023,Jamaica_Plain
+Stony Brook,June,48478,Orange Line,2023,Jamaica_Plain
+Stony Brook,March,48660,Orange Line,2023,Jamaica_Plain
+Stony Brook,May,51022,Orange Line,2023,Jamaica_Plain
+Stony Brook,November,54129,Orange Line,2023,Jamaica_Plain
+Stony Brook,October,59806,Orange Line,2023,Jamaica_Plain
+Stony Brook,September,54553,Orange Line,2023,Jamaica_Plain
+Suffolk Downs,April,13663,Blue Line,2023,East_Boston
+Suffolk Downs,April,13663,Blue Line,2023,East_Boston
+Suffolk Downs,April,13663,Blue Line,2023,East_Boston
+Suffolk Downs,April,13663,Blue Line,2023,East_Boston
+Suffolk Downs,August,19507,Blue Line,2023,East_Boston
+Suffolk Downs,August,19507,Blue Line,2023,East_Boston
+Suffolk Downs,August,19507,Blue Line,2023,East_Boston
+Suffolk Downs,August,19507,Blue Line,2023,East_Boston
+Suffolk Downs,December,13146,Blue Line,2023,East_Boston
+Suffolk Downs,December,13146,Blue Line,2023,East_Boston
+Suffolk Downs,December,13146,Blue Line,2023,East_Boston
+Suffolk Downs,December,13146,Blue Line,2023,East_Boston
+Suffolk Downs,February,12479,Blue Line,2023,East_Boston
+Suffolk Downs,February,12479,Blue Line,2023,East_Boston
+Suffolk Downs,February,12479,Blue Line,2023,East_Boston
+Suffolk Downs,February,12479,Blue Line,2023,East_Boston
+Suffolk Downs,January,12840,Blue Line,2023,East_Boston
+Suffolk Downs,January,12840,Blue Line,2023,East_Boston
+Suffolk Downs,January,12840,Blue Line,2023,East_Boston
+Suffolk Downs,January,12840,Blue Line,2023,East_Boston
+Suffolk Downs,July,18743,Blue Line,2023,East_Boston
+Suffolk Downs,July,18743,Blue Line,2023,East_Boston
+Suffolk Downs,July,18743,Blue Line,2023,East_Boston
+Suffolk Downs,July,18743,Blue Line,2023,East_Boston
+Suffolk Downs,June,21586,Blue Line,2023,East_Boston
+Suffolk Downs,June,21586,Blue Line,2023,East_Boston
+Suffolk Downs,June,21586,Blue Line,2023,East_Boston
+Suffolk Downs,June,21586,Blue Line,2023,East_Boston
+Suffolk Downs,March,14308,Blue Line,2023,East_Boston
+Suffolk Downs,March,14308,Blue Line,2023,East_Boston
+Suffolk Downs,March,14308,Blue Line,2023,East_Boston
+Suffolk Downs,March,14308,Blue Line,2023,East_Boston
+Suffolk Downs,May,15891,Blue Line,2023,East_Boston
+Suffolk Downs,May,15891,Blue Line,2023,East_Boston
+Suffolk Downs,May,15891,Blue Line,2023,East_Boston
+Suffolk Downs,May,15891,Blue Line,2023,East_Boston
+Suffolk Downs,November,14859,Blue Line,2023,East_Boston
+Suffolk Downs,November,14859,Blue Line,2023,East_Boston
+Suffolk Downs,November,14859,Blue Line,2023,East_Boston
+Suffolk Downs,November,14859,Blue Line,2023,East_Boston
+Suffolk Downs,October,16176,Blue Line,2023,East_Boston
+Suffolk Downs,October,16176,Blue Line,2023,East_Boston
+Suffolk Downs,October,16176,Blue Line,2023,East_Boston
+Suffolk Downs,October,16176,Blue Line,2023,East_Boston
+Suffolk Downs,September,16683,Blue Line,2023,East_Boston
+Suffolk Downs,September,16683,Blue Line,2023,East_Boston
+Suffolk Downs,September,16683,Blue Line,2023,East_Boston
+Suffolk Downs,September,16683,Blue Line,2023,East_Boston
+Sullivan Square,April,106057,Orange Line,2023,Charlestown
+Sullivan Square,August,105737,Orange Line,2023,Charlestown
+Sullivan Square,December,110233,Orange Line,2023,Charlestown
+Sullivan Square,February,94471,Orange Line,2023,Charlestown
+Sullivan Square,January,103360,Orange Line,2023,Charlestown
+Sullivan Square,July,107643,Orange Line,2023,Charlestown
+Sullivan Square,June,115554,Orange Line,2023,Charlestown
+Sullivan Square,March,113756,Orange Line,2023,Charlestown
+Sullivan Square,May,114782,Orange Line,2023,Charlestown
+Sullivan Square,November,109259,Orange Line,2023,Charlestown
+Sullivan Square,October,123188,Orange Line,2023,Charlestown
+Sullivan Square,September,103676,Orange Line,2023,Charlestown
+Symphony,April,33117,Green Line,2023,Fenway_Kenmore
+Symphony,August,23331,Green Line,2023,Fenway_Kenmore
+Symphony,December,17566,Green Line,2023,Fenway_Kenmore
+Symphony,February,26480,Green Line,2023,Fenway_Kenmore
+Symphony,January,29518,Green Line,2023,Fenway_Kenmore
+Symphony,July,25350,Green Line,2023,Fenway_Kenmore
+Symphony,June,26927,Green Line,2023,Fenway_Kenmore
+Symphony,March,31186,Green Line,2023,Fenway_Kenmore
+Symphony,May,29448,Green Line,2023,Fenway_Kenmore
+Symphony,November,24306,Green Line,2023,Fenway_Kenmore
+Symphony,October,27584,Green Line,2023,Fenway_Kenmore
+Symphony,September,27632,Green Line,2023,Fenway_Kenmore
+Tufts Medical Center,April,74761,Orange Line,2023,Chinatown
+Tufts Medical Center,August,88978,Orange Line,2023,Chinatown
+Tufts Medical Center,December,88740,Orange Line,2023,Chinatown
+Tufts Medical Center,February,71631,Orange Line,2023,Chinatown
+Tufts Medical Center,January,78756,Orange Line,2023,Chinatown
+Tufts Medical Center,July,82617,Orange Line,2023,Chinatown
+Tufts Medical Center,June,85053,Orange Line,2023,Chinatown
+Tufts Medical Center,March,88318,Orange Line,2023,Chinatown
+Tufts Medical Center,May,86280,Orange Line,2023,Chinatown
+Tufts Medical Center,November,96820,Orange Line,2023,Chinatown
+Tufts Medical Center,October,102498,Orange Line,2023,Chinatown
+Tufts Medical Center,September,92964,Orange Line,2023,Chinatown
+Union Square,April,52466.66631,Green Line,2023,Union_Square
+Union Square,August,28308.33294,Green Line,2023,Union_Square
+Union Square,December,18466.66635,Green Line,2023,Union_Square
+Union Square,February,28949.99968,Green Line,2023,Union_Square
+Union Square,January,35995.83295,Green Line,2023,Union_Square
+Union Square,July,38066.66631,Green Line,2023,Union_Square
+Union Square,June,39704.16639,Green Line,2023,Union_Square
+Union Square,March,50749.99965,Green Line,2023,Union_Square
+Union Square,May,52562.49963,Green Line,2023,Union_Square
+Union Square,November,24749.99968,Green Line,2023,Union_Square
+Union Square,October,19470.8331,Green Line,2023,Union_Square
+Union Square,September,16629.16647,Green Line,2023,Union_Square
+Wellington,April,74591,Orange Line,2023,Medford
+Wellington,August,91025,Orange Line,2023,Medford
+Wellington,December,85007,Orange Line,2023,Medford
+Wellington,February,56576,Orange Line,2023,Medford
+Wellington,January,75699,Orange Line,2023,Medford
+Wellington,July,80049,Orange Line,2023,Medford
+Wellington,June,78525,Orange Line,2023,Medford
+Wellington,March,80015,Orange Line,2023,Medford
+Wellington,May,80365,Orange Line,2023,Medford
+Wellington,November,88588,Orange Line,2023,Medford
+Wellington,October,96736,Orange Line,2023,Medford
+Wellington,September,88707,Orange Line,2023,Medford
+Wollaston,April,41481,Red Line,2023,Wollaston
+Wollaston,August,36576,Red Line,2023,Wollaston
+Wollaston,December,39418,Red Line,2023,Wollaston
+Wollaston,February,43973,Red Line,2023,Wollaston
+Wollaston,January,40129,Red Line,2023,Wollaston
+Wollaston,July,37075,Red Line,2023,Wollaston
+Wollaston,June,36684,Red Line,2023,Wollaston
+Wollaston,March,48971,Red Line,2023,Wollaston
+Wollaston,May,39488,Red Line,2023,Wollaston
+Wollaston,November,41923,Red Line,2023,Wollaston
+Wollaston,October,46709,Red Line,2023,Wollaston
+Wollaston,September,42931,Red Line,2023,Wollaston
+Wonderland,April,110875,Blue Line,2023,Revere
+Wonderland,August,127881,Blue Line,2023,Revere
+Wonderland,December,110957,Blue Line,2023,Revere
+Wonderland,February,96178,Blue Line,2023,Revere
+Wonderland,January,87279,Blue Line,2023,Revere
+Wonderland,July,125379,Blue Line,2023,Revere
+Wonderland,June,143451,Blue Line,2023,Revere
+Wonderland,March,119592,Blue Line,2023,Revere
+Wonderland,May,127766,Blue Line,2023,Revere
+Wonderland,November,119131,Blue Line,2023,Revere
+Wonderland,October,127728,Blue Line,2023,Revere
+Wonderland,September,125047,Blue Line,2023,Revere
+Wood Island,April,39380,Blue Line,2023,East_Boston
+Wood Island,April,39380,Blue Line,2023,East_Boston
+Wood Island,April,39380,Blue Line,2023,East_Boston
+Wood Island,April,39380,Blue Line,2023,East_Boston
+Wood Island,August,56546,Blue Line,2023,East_Boston
+Wood Island,August,56546,Blue Line,2023,East_Boston
+Wood Island,August,56546,Blue Line,2023,East_Boston
+Wood Island,August,56546,Blue Line,2023,East_Boston
+Wood Island,December,39725,Blue Line,2023,East_Boston
+Wood Island,December,39725,Blue Line,2023,East_Boston
+Wood Island,December,39725,Blue Line,2023,East_Boston
+Wood Island,December,39725,Blue Line,2023,East_Boston
+Wood Island,February,33597,Blue Line,2023,East_Boston
+Wood Island,February,33597,Blue Line,2023,East_Boston
+Wood Island,February,33597,Blue Line,2023,East_Boston
+Wood Island,February,33597,Blue Line,2023,East_Boston
+Wood Island,January,38131,Blue Line,2023,East_Boston
+Wood Island,January,38131,Blue Line,2023,East_Boston
+Wood Island,January,38131,Blue Line,2023,East_Boston
+Wood Island,January,38131,Blue Line,2023,East_Boston
+Wood Island,July,42389,Blue Line,2023,East_Boston
+Wood Island,July,42389,Blue Line,2023,East_Boston
+Wood Island,July,42389,Blue Line,2023,East_Boston
+Wood Island,July,42389,Blue Line,2023,East_Boston
+Wood Island,June,49620,Blue Line,2023,East_Boston
+Wood Island,June,49620,Blue Line,2023,East_Boston
+Wood Island,June,49620,Blue Line,2023,East_Boston
+Wood Island,June,49620,Blue Line,2023,East_Boston
+Wood Island,March,40858,Blue Line,2023,East_Boston
+Wood Island,March,40858,Blue Line,2023,East_Boston
+Wood Island,March,40858,Blue Line,2023,East_Boston
+Wood Island,March,40858,Blue Line,2023,East_Boston
+Wood Island,May,45054,Blue Line,2023,East_Boston
+Wood Island,May,45054,Blue Line,2023,East_Boston
+Wood Island,May,45054,Blue Line,2023,East_Boston
+Wood Island,May,45054,Blue Line,2023,East_Boston
+Wood Island,November,43474,Blue Line,2023,East_Boston
+Wood Island,November,43474,Blue Line,2023,East_Boston
+Wood Island,November,43474,Blue Line,2023,East_Boston
+Wood Island,November,43474,Blue Line,2023,East_Boston
+Wood Island,October,47513,Blue Line,2023,East_Boston
+Wood Island,October,47513,Blue Line,2023,East_Boston
+Wood Island,October,47513,Blue Line,2023,East_Boston
+Wood Island,October,47513,Blue Line,2023,East_Boston
+Wood Island,September,46802,Blue Line,2023,East_Boston
+Wood Island,September,46802,Blue Line,2023,East_Boston
+Wood Island,September,46802,Blue Line,2023,East_Boston
+Wood Island,September,46802,Blue Line,2023,East_Boston
+World Trade Center,April,25431,Silver Line,2023,South_Boston
+World Trade Center,August,28652,Silver Line,2023,South_Boston
+World Trade Center,December,22643,Silver Line,2023,South_Boston
+World Trade Center,February,20370,Silver Line,2023,South_Boston
+World Trade Center,January,22769,Silver Line,2023,South_Boston
+World Trade Center,July,30670,Silver Line,2023,South_Boston
+World Trade Center,June,29485,Silver Line,2023,South_Boston
+World Trade Center,March,29834,Silver Line,2023,South_Boston
+World Trade Center,May,26056,Silver Line,2023,South_Boston
+World Trade Center,November,26339,Silver Line,2023,South_Boston
+World Trade Center,October,29282,Silver Line,2023,South_Boston
+World Trade Center,September,29100,Silver Line,2023,South_Boston
