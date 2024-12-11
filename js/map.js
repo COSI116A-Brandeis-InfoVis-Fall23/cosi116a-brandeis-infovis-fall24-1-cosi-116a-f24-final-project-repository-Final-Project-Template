@@ -17,11 +17,13 @@ var projection = d3.geoMercator()
 var path = d3.geoPath().projection(projection);
 
 // Load and render GeoJSON data for neighborhoods
-d3.json("data/updated_bostonV2.json", function (error, data) {
+d3.json("data/updated geojson/updated_bostonV2_with_data.json", function (error, data) {
     if (error) {
         console.error("Error loading GeoJSON:", error);
         return;
     }
+     // List of neighborhoods to grey out
+    var greyedOutNeighborhoods = ["Leather District","Bay Village","Longwood Medical Area","Harbor Islands","Roslindale","West Roxbury","Hyde Park","South Boston Waterfront","North End"]; // Replace with actual names
     gNeighborhoods.selectAll(".neighborhood")
         .data(data.features)
         .enter()
@@ -29,7 +31,15 @@ d3.json("data/updated_bostonV2.json", function (error, data) {
         .attr("class", "neighborhood")
         .attr("d", path)
         .style("stroke", "#000") // Optional: Add a border color
-        .style("stroke-width", 0.5); // Optional: Set border thickness
+        .style("stroke-width", 0.5) // Optional: Set border thickness
+        .style("fill", function (d) {
+            // Grey out specified neighborhoods
+            return greyedOutNeighborhoods.includes(d.properties.name) ? "#d3d3d3" : "#ffffff"; // Default color
+        })
+        .classed("unselectable", function (d) {
+            // Add a class for unselectable neighborhoods
+            return greyedOutNeighborhoods.includes(d.properties.name);
+        });
 
     // Add brush functionality (unchanged)
     var brush = d3.brush()
@@ -41,37 +51,55 @@ d3.json("data/updated_bostonV2.json", function (error, data) {
         .attr("class", "brush")
         .call(brush);
 
-    function brushed() {
+       // Brush functionality (updated)
+       function brushed() {
         var selection = d3.event.selection;
         if (!selection) return;
-
+    
         var [[x0, y0], [x1, y1]] = selection;
-
+    
         var selectedNeighborhoods = [];
-
+    
         gNeighborhoods.selectAll(".neighborhood").classed("highlighted", function (d) {
+            // Skip greyed-out neighborhoods
+            if (greyedOutNeighborhoods.includes(d.properties.name)) {
+                return false;
+            }
+    
             var centroid = path.centroid(d);
             var [cx, cy] = centroid;
-
+    
             var isSelected = cx >= x0 && cx <= x1 && cy >= y0 && cy <= y1;
-
+    
             if (isSelected && d.properties && d.properties.name) {
                 selectedNeighborhoods.push(d.properties.name);
             }
-
+    
+            // Apply style for selected neighborhoods
+            d3.select(this).style("fill", isSelected ? "#ff6347" : "#ffffff"); // Highlight in yellow or reset to default
+    
             return isSelected;
         });
-
+    
+        // Update text display with selected neighborhoods
         d3.select("#selected-neighborhoods").text(
             selectedNeighborhoods.length ? selectedNeighborhoods.join(", ") : "None"
         );
     }
     
+
     function brushEnd() {
         var selection = d3.event.selection;
     
         if (!selection) {
-            gNeighborhoods.selectAll(".neighborhood").classed("highlighted", false);
+            // Reset all neighborhoods if no brush selection
+            gNeighborhoods.selectAll(".neighborhood")
+                .classed("highlighted", false)
+                .style("fill", function (d) {
+                    // Restore fill color based on whether the neighborhood is greyed out
+                    return greyedOutNeighborhoods.includes(d.properties.name) ? "#d3d3d3" : "#ffffff";
+                });
+    
             d3.select("#selected-neighborhoods").text("None");
     
             // Dispatch event with no selected regions
@@ -82,6 +110,10 @@ d3.json("data/updated_bostonV2.json", function (error, data) {
         var selectedNeighborhoods = [];
     
         gNeighborhoods.selectAll(".neighborhood").classed("highlighted", function (d) {
+            if (greyedOutNeighborhoods.includes(d.properties.name)) {
+                return false;
+            }
+    
             var centroid = path.centroid(d);
             var [cx, cy] = centroid;
     
@@ -90,6 +122,9 @@ d3.json("data/updated_bostonV2.json", function (error, data) {
             if (isSelected && d.properties && d.properties.name) {
                 selectedNeighborhoods.push(d.properties.name);
             }
+    
+            // Apply styles based on selection
+            d3.select(this).style("fill", isSelected ? "#ff6347" : "#ffffff");
     
             return isSelected;
         });
@@ -101,7 +136,18 @@ d3.json("data/updated_bostonV2.json", function (error, data) {
         // Dispatch custom event with selected regions
         document.dispatchEvent(new CustomEvent("regionSelected", { detail: selectedNeighborhoods }));
     }
+    
+
+    var brush = d3.brush()
+        .extent([[0, 0], [width, height]])
+        .on("brush", brushed)
+        .on("end", brushEnd);
+
+    map.append("g")
+        .attr("class", "brush")
+        .call(brush);
 });
+
 
 var gLineString = map.append("g").attr("class", "lines");
 // https://github.com/singingwolfboy/MBTA-GeoJSON source of json data for stops and lines
