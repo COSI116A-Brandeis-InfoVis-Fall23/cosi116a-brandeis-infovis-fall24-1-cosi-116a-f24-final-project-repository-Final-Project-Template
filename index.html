@@ -156,6 +156,7 @@
       <a class="carousel-control-next" href="#carouselFigma" role="button" data-slide="next">
         <img src="icons/right-arrow.png" alt="Next" class="carousel-arrow">
       </a>
+      <button class="fullscreen-btn" onclick="openFullscreen('carouselFigma')">⛶</button>
       <div class="carousel-indicators">
         <span class="dot active" data-slide-to="0"></span>
         <span class="dot" data-slide-to="1"></span>
@@ -169,13 +170,13 @@
     <div id="carouselSketch" class="carousel">
       <div class="carousel-inner">
         <div class="carousel-item active">
-          <img src="images/design_prototype_1.jpg" alt="Design Prototype 1">
+          <img src="images/sketch_prototype_1.jpg" alt="Sketch Prototype 1">
         </div>
         <div class="carousel-item">
-          <img src="images/design_prototype_2.jpg" alt="Design Prototype 2">
+          <img src="images/sketch_prototype_2.jpg" alt="Sketch Prototype 2">
         </div>
         <div class="carousel-item">
-          <img src="images/design_prototype_3.jpg" alt="Design Prototype 3">
+          <img src="images/sketch_prototype_3.jpg" alt="Sketch Prototype 3">
         </div>
       </div>
       <a class="carousel-control-prev" href="#carouselSketch" role="button" data-slide="prev">
@@ -184,12 +185,19 @@
       <a class="carousel-control-next" href="#carouselSketch" role="button" data-slide="next">
         <img src="icons/right-arrow.png" alt="Next" class="carousel-arrow">
       </a>
+      <button class="fullscreen-btn" onclick="openFullscreen('carouselSketch')">⛶</button>
       <div class="carousel-indicators">
         <span class="dot active" data-slide-to="0"></span>
         <span class="dot" data-slide-to="1"></span>
         <span class="dot" data-slide-to="2"></span>
       </div>
     </div>
+
+    <div id="fullscreenPanel" class="fullscreen-panel">
+      <span class="close-btn" onclick="closeFullscreen()">&#x2716;</span>
+      <img id="fullscreenImage" src="" alt="Fullscreen Image">
+    </div>
+    <br/>
 
     <h1>Data Analysis</h1>
     <p><em>This visualization aims to determine if countries were spending money effectively on their rail systems. To begin, effective spending was measured by the usage of the system in 2022 after investment in rail infrastructure during 2021. Why spend money on something if it is not utilized by citizens of a country? </em></p>
@@ -261,6 +269,7 @@
   <script src="js/countryBar.js"></script>
   <script src="js/inlandRailBar.js"></script>
   <script src="js/countryBarGraphs.js"></script>
+  <script src="js/imageCarousel.js"></script>
   <script src="js/toggleGroups.js"></script>
   <script src="js/visualization.js"></script>
 </body>
