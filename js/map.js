@@ -23,7 +23,7 @@ d3.json("data/updated geojson/updated_bostonV2_with_data.json", function (error,
         return;
     }
      // List of neighborhoods to grey out
-    var greyedOutNeighborhoods = ["Leather District","Bay Village","Longwood Medical Area","Harbor Islands","Roslindale","West Roxbury","Hyde Park","South Boston Waterfront","North End"]; // Replace with actual names
+    var greyedOutNeighborhoods = ["Leather District","Bay Village","Longwood Medical Area","Harbor Islands","Roslindale","West Roxbury","Hyde Park","North End"]; // Replace with actual names
     gNeighborhoods.selectAll(".neighborhood")
         .data(data.features)
         .enter()
@@ -201,7 +201,7 @@ var colorScale = d3.scaleOrdinal()
 // Create a new group for points and set it to be hidden initially
 var gPoints = map.append("g").attr("class", "points").style("display", "none");
 
-d3.json("data/stops.json", function (error, pointData) {
+d3.json("data/stops clean.json", function (error, pointData) {
     if (error) {
         console.error("Error loading point data:", error);
         return;
