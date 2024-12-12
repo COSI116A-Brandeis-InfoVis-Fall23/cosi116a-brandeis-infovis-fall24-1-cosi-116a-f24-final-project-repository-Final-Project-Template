@@ -19,11 +19,12 @@
       ("#table", data); 
 
 
-    // When the table is updated via brushing, tell the line chart and scatterplot
+    // When the table is updated via brushing, tell the heatmap to update
 	tableData.selectionDispatcher().on(dispatchString, function(selectedData) {
 		//map.updateSelection(selectedData);
 		
 	});
+    // When heatmap is updated via brushing, tell the table to update
 	//map.selectionDispatcher().on(dispatchString, function(selectedData) {
 	//	tableData.updateSelection(selectedData);
 		
