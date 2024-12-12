@@ -1,4 +1,4 @@
-function createLineChart(data) {
+function createLineChart(data, category = 'None') {
   if (!data || data.length === 0) {
     console.error('Line Chart: No data available to render.');
     return;
@@ -7,6 +7,7 @@ function createLineChart(data) {
   const margin = { top: 20, right: 80, bottom: 30, left: 70 };
   const width = 600 - margin.left - margin.right;
   const height = 300 - margin.top - margin.bottom;
+  const ptRadius = 3
 
   // Clear previous chart
   d3.select('#lineChart').selectAll('*').remove();
@@ -73,9 +74,25 @@ function createLineChart(data) {
     .attr('stroke', 'orange')
     .attr('stroke-width', 2)
     .attr('d', covidLine);
+    
+    
+  // Append category line
+  if (category != "None") {
+   const catLine = d3.line()
+    .x(d => x(d.week))
+    .y(d => yLeft(d.totalCat.filter(item => item.category === category[0])[0].totRide));
+  
+  svg.append('path')
+    .datum(data)
+  /*  .classed(category, true)*/
+    .attr('fill', 'none')
+/*    .attr('stroke', 'orange')*/
+    .attr('stroke', d => barColorScale(category))
+    .attr('stroke-width', 2)
+    .attr('fill', 'none')
+    .attr('d', catLine);
 
-
-
+  }
 
 
   let points = svg.append("g")
@@ -90,12 +107,45 @@ function createLineChart(data) {
       .merge(points)
         .attr('cx', d => x(d.week))
         .attr('cy', d => yLeft(d.totalRidership))
-        .attr('r', 3);
-       /* .attr('fill', 'steelblue');*/
+        .attr('r', ptRadius)
+        .on('mouseover', mOver)
+        .on('mouseout', mOut);
     
-    selectableElements = points;
-    svg.call(brush);
+    
+  function mOver(){
+    showTooltip(event, `Week: ${d3.timeFormat('%B %d, %Y')(this.week)}<br>Total Ridership: ${d3.format(',')(this.totalRidership)}`);
+  }
+    
+  function mOut(){
+    hideTooltip()
+  }  
+    
+  selectableElements = points;
+    
+  svg.call(brush);
 
+
+
+   /* 
+  // Only turn on bush when mouse is down
+  let mouse = false
+  document.addEventListener("mousedown", mousedown);
+  document.addEventListener("mouseup", mouseup);
+ 
+  // make mouse flag true and reset highlights
+  function mousedown(event){
+    mouse = true
+  
+ 
+  }
+ 
+ 
+  //deactivate mouse flag
+  function mouseup(event){
+    mouse = false
+    
+  }   */
+    
     
 // Highlight points when brushed
     function brush(g) {
@@ -119,30 +169,12 @@ function createLineChart(data) {
           [x1, y1]
         ] = d3.event.selection;
         
-        // selection.map(x.invert); // Map pixel values to the time domain
-        
-        /*const [
-          [x0, y0],
-          [x1, y1]
-        ] = d3.event.selection;*/
-
-        // If within the bounds of the brush, select it
-/*        points.attr('fill', 'red', d =>
-          x0 <= x(d.__data__.week) && x(d.__data__.week) <= x1
-          );
-        */
+     
         
         points.classed("selected", d =>
-          x0 <= x(d.week) && x(d.week) <= x1 && y0 <= yLeft(d.totalRidership) && yLeft(d.totalRidership) <= y1
+          x0 <= x(d.week)+ptRadius && x(d.week)-ptRadius <= x1 && y0 <= yLeft(d.totalRidership)+ptRadius && yLeft(d.totalRidership)-ptRadius <= y1
         );
    
-          
-/*
-        // Get the name of our dispatcher's event
-        let dispatchString = Object.getOwnPropertyNames(dispatcher._)[0];
-
-        // Let other charts know about our selection
-        dispatcher.call(dispatchString, this, svg.selectAll(".selected").data());*/
       }
       
       function brushEnd(){
@@ -161,8 +193,6 @@ function createLineChart(data) {
 
           dispatch.call('lineChartUpdate', null, filteredData); // Dispatch brushed data
         }         
-        
-        
         
       }
     }
@@ -223,6 +253,8 @@ svg.append('g')
   
   
 }
+
+
 
 
 function showTooltip(event, content) {

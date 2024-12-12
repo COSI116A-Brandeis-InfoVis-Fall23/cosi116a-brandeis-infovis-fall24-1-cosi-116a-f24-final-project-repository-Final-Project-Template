@@ -103,18 +103,8 @@ function processAndVisualize(ridershipData, covidData) {
 
 dispatch.on('barChartUpdate', function (selectedData) {
     console.log('Bar clicked:', selectedData);
-
-    // Filter line chart for the clicked category
-    const filteredData = mergedData.map(d => ({
-      week: d.week,
-      totalRidership: d[selectedData],
-      covidCases: d.covidCases,
-    }));
-
-    createLineChart(filteredData);
+    createLineChart(mergedData, selectedData);
 });
-
-
 
 
 

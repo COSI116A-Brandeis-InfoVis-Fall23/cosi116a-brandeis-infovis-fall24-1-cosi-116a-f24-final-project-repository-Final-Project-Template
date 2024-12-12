@@ -38,10 +38,10 @@ function createBarChart(data) {
     .attr('y', d => y(d.avgPct))
     .attr('height', d => height - y(d.avgPct))
     .attr('fill', d => barColorScale(d.category))
-    .on('click', (event, d) => {
+    .on('click', (d, event) => {
   if (d && d.category) {
     console.log('Bar clicked:', d.category);
-    dispatch.call('selectionUpdated', null, [d.category]); // Pass the selected category
+    dispatch.call('barChartUpdate', null, [d.category]); // Pass the selected category
   } else {
     console.error('Bar clicked: Data is undefined or missing category.');
   }
@@ -72,38 +72,6 @@ function showTooltip(event, content) {
 function hideTooltip() {
   d3.select('.tooltip').style('visibility', 'hidden');
 }
-
-
-
-dispatch.on('selectionUpdated', function (selectedData) {
-  if (Array.isArray(selectedData)) {
-    console.log('Filtered data from brushing:', selectedData);
-
-    // Update bar chart with brushed data
-    createBarChart(
-      categories.map(cat => ({
-        category: cat,
-        avgPct: d3.mean(selectedData, d => {
-          const categoryData = d.avgPct.find(p => p.category === cat);
-          return categoryData ? categoryData.avgPct : 0;
-        }),
-      }))
-    );
-  } else if (typeof selectedData === 'string') {
-    console.log('Bar clicked:', selectedData);
-
-    // Filter line chart for the clicked category
-    const filteredData = mergedData.map(d => ({
-      week: d.week,
-      totalRidership: d[selectedData],
-      covidCases: d.covidCases,
-    }));
-
-    createLineChart(filteredData);
-  } else {
-    console.log('Point clicked or hovered:', selectedData);
-  }
-});
 
 
 
