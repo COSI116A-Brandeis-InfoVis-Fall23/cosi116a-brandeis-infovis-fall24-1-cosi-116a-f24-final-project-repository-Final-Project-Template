@@ -21,8 +21,8 @@ d3.csv('data/MTA_Daily_Ridership_Data__Beginning_2020_20241109.csv', function (d
     Buses: +d['Buses: Total Estimated Ridership'],
     LIRR: +d['LIRR: Total Estimated Ridership'],
     MetroNorth: +d['Metro-North: Total Estimated Ridership'],
-    AccessARide: +d['Access-A-Ride: Total Estimated Ridership'],
-    BridgesAndTunnels: +d['Bridges and Tunnels: Total Estimated Ridership'],
+    AccessARide: +d['Access-A-Ride: Total Scheduled Trips'],
+    BridgesAndTunnels: +d['Bridges and Tunnels: Total Traffic'],
     StatenIslandRailway: +d['Staten Island Railway: Total Estimated Ridership'],
     SubwaysPct: +d['Subways: % of Comparable Pre-Pandemic Day'],
     BusesPct: +d['Buses: % of Comparable Pre-Pandemic Day'],
@@ -62,6 +62,11 @@ function processAndVisualize(ridershipData, covidData) {
         category: cat,
         avgPct: d3.mean(values, d => d[`${cat}Pct`]),
       })),
+      totalCat: categories.map(cat => ({
+        category: cat,
+        totRide: d3.sum(values, d => d[cat]),
+      })),
+      
     }))
     .entries(ridershipData)
     .map(d => ({ week: new Date(d.key), ...d.value }));
