@@ -9,7 +9,7 @@ function linechart() {
   // https://bl.ocks.org/mbostock/3019563
   let margin = {
       top: 60,
-      left: 50,
+      left: 60,
       right: 30,
       bottom: 60,
     },
@@ -51,8 +51,9 @@ function linechart() {
 
     yScale
       .domain([
-        d3.min(data, d => yValue(d)),
-        d3.max(data, d => yValue(d))
+        // d3.min(data, d => yValue(d)),
+        110,
+        350
       ])
       .rangeRound([height, 0]);
 
@@ -60,14 +61,18 @@ function linechart() {
     let xAxis = svg.append("g")
         .attr("transform", "translate(0," + (height) + ")")
         .call(d3.axisBottom(xScale));
-        
+    
     // Put X axis tick labels at an angle
     xAxis.selectAll("text") 
-        .style("text-anchor", "end")
-        .attr("dx", "-.8em")
-        .attr("dy", ".15em")
-        .attr("transform", "rotate(-65)");
-        
+      .style("text-anchor", "end")
+      .attr("dx", "-.8em")
+      .attr("dy", ".15em")
+      .attr("transform", "rotate(-65)");
+
+    //Y axis 
+    let yAxis = svg.append("g")
+      .call(d3.axisLeft(yScale));
+    
     // X axis label
     svg.append("text")
         .attr("class", "x label")
@@ -81,7 +86,7 @@ function linechart() {
       .attr("class", "y label")
       .attr("text-anchor", "end")
       .attr("x", -margin.top) // Move the label left
-      .attr("y", -margin.left + 20) // Move to the left of the linechrt
+      .attr("y", -margin.left) // Move to the left of the linechrt
       .attr("dy", ".75em")
       .attr("transform", "rotate(-90)")
       .text("Age Adjusted Heart Disease Death Rate");

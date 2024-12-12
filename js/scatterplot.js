@@ -40,22 +40,37 @@ function scatterplot() {
       //Define scales
       xScale
         .domain([
-          d3.min(data, d => xValue(d)),
-          d3.max(data, d => xValue(d))
+          110,
+          350
         ])
         .rangeRound([0, width]);
   
       yScale
         .domain([
-          d3.min(data, d => yValue(d)),
-          d3.max(data, d => yValue(d))
+          70,
+          84
         ])
         .rangeRound([height, 0]);
   
-      let xAxis = svg.append("g")
-          .attr("transform", "translate(0," + (height) + ")")
-          .call(d3.axisBottom(xScale));
+      
+      //creates Y axis
+      let yAxis = svg.append("g")
+          .call(d3.axisLeft(yScale));
+      
+      svg.append("text")
+      .attr("class", "y label")
+      .attr("text-anchor", "end")
+      .attr("x", -margin.top) // Moves the label horizontally
+      .attr("y", -margin.left) // Moves the label vertically
+      .attr("dy", ".75em")
+      .attr("transform", "rotate(-90)")
+      .text("Life Expectancy per State in " + currentYear);
           
+    
+      //creates X axis
+    let xAxis = svg.append("g")
+        .attr("transform", "translate(0," + (height) + ")")
+        .call(d3.axisBottom(xScale));
 
     // X axis label
     svg.append("text")
@@ -65,17 +80,6 @@ function scatterplot() {
         .attr("y", height + 50)
         .text("Age-Adjusted Heart Disease Death Rate per State in "+currentYear);
 
-    //Y axis label
-    svg.append("text")
-      .attr("class", "y label")
-      .attr("text-anchor", "end")
-      .attr("x", -margin.top) // Move the label left
-      .attr("y", -margin.left + 20) // Move to the left of the linechrt
-      .attr("dy", ".75em")
-      .attr("transform", "rotate(-90)")
-      .text("Life Expectancy per State in "+currentYear);
-        
-  
       // Add the points
       let points = svg.append("g")
         .selectAll(".scatterPoint")
