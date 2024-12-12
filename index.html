@@ -81,15 +81,23 @@
       <br>
 
      
-    <h1>Visualization</h1>    
+    <h1>Visualization</h1> 
+ 
   </div>
+
   <!--<div class="table-holder" id="table"></div> -->
   <!-- Your visualization here -->
   <div class="vis-holder">
     <div class="table-holder" id="table"></div>
       <!-- Change viewbox to whatever you want, e.g. "0 0 1000 6000" This determines your aspect ratio and coordinate system -->    
       <!-- Delete all the sample SVG code below after the viewbox to before the closing tag. Populate this part of the SVG with D3. -->
-    <div class="map-holder" id="map">
+    
+      <!-- Button to toggle colors -->
+      <div style="text-align: center; margin: 20px;">
+        <button type="toggleColors" style="padding: 10px 20px; font-size: 16px;">Toggle Colors</button>
+      </div>
+      
+      <div class="map-holder" id="map">
       <svg id="vis-svg" preserveAspectRatio="xMidYMid meet" class="marks" viewBox="0 150 1500 500">
       
         <g id="boundary"></g>

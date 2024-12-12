@@ -21,29 +21,8 @@ var path = d3.geoPath()
        })
 
 //added for switching colors
-var useStateColors = true; // Toggle variable to determine which colors to use (true = colors_state, false = colors_total)
+// var useStateColors = true; // Toggle variable to determine which colors to use (true = colors_state, false = colors_total)
 
-function updateMapColors() {
-    svgStates.selectAll("path")
-        .transition() // Optional: Add a transition effect
-        // .fullcheesewheel(png)
-        // .delete(fullcheesewheel)
-        // .halfcheesewheel(png)
-        .duration(500)
-        .style("fill", function(d, i) {
-            var name = d.properties.STATENAM.replace(" Territory", "");
-            useStateColors = !useStateColors;
-            return !useStateColors ? colors_state[name] : colors_tot[name];
-        }
-      );
-}
-
-//added for button
-// Attach the click event to the button
-d3.select("#toggleColors").on("click", function() {
-  useStateColors = !useStateColors; // Toggle between true and false
-  updateMapColors(); // Update the map colors
-});
 
 d3.json("data/states.json", function(error, topologies) {  // (4)
 
@@ -56,12 +35,28 @@ d3.json("data/states.json", function(error, topologies) {  // (4)
   .style("fill", function(d, i) { 
   console.log("d is ", d)
   var name = d.properties.STATENAM.replace(" Territory", ""); 
-  return colors_state[name]; // Colors for the state total. Must be changed to color_total for new view
+  return colors_state[name]; // Colors for the state. Must be changed to color_total for new view
 })
 .append("svg:title")
+.append("svg:data")
 .text(function(d) { return d.properties.STATENAM; });
+// updateMapColors();
+// // Update map colors
+// function updateMapColors() {
+//   svgStates.selectAll("path")
+//     .transition() // Add a smooth transition
+//     .duration(500) // Transition duration in milliseconds
+//     .style("fill", function(d) {
+//       var name = d.properties.STATENAM.replace(" Territory", "");
+//       return useStateColors ? colors_state[name] : colors_total[name];
+//     });
+// }
+// // Button click event listener
+// d3.select("#toggleColors").on("click", function() {
+//   useStateColors = !useStateColors; // Toggle the color state
+//   updateMapColors(); // Refresh the map colors
+// });
 
-updateMapColors(); //New line, possibly delete
 
 // create a tooltip
 var tooltip = d3.select("#my_dataviz")
@@ -77,25 +72,19 @@ var tooltip = d3.select("#my_dataviz")
 // Three function that change the tooltip when user hover / move / leave a cell
 var mouseover = function(d) {
 tooltip
-  .style("opacity", 1)
-d3.select(this)
-  .style("stroke", "black")
-  .style("opacity", 1)
-}
-var mousemove = function(d) {
-tooltip
-  .html("The exact value of<br>this cell is: " + d.value)
-  .style("left", (d3.mouse(this)[0]+70) + "px")
+  .html("State: " + d.state + "<br>The exact value of<br>this cell is: " + d.value)
+  .style("left", (d3.mouse(this)[0] + 70) + "px")
   .style("top", (d3.mouse(this)[1]) + "px")
-}
-var mouseleave = function(d) {
-tooltip
-  .style("opacity", 0)
-d3.select(this)
-  .style("stroke", "none")
-  .style("opacity", 0.8)
+  .style("opacity", 1);
 }
 
+var mouseleave = function(d) {
+  tooltip
+    .style("opacity", 0);
+  d3.select(this)
+    .style("stroke", "none")
+    .style("opacity", 0.8);
+}
   // add the squares
   svg.selectAll()
     .data(data, function(d) {return d.group+':'+d.variable;})
@@ -112,7 +101,6 @@ d3.select(this)
       .style("stroke", "none")
       .style("opacity", 0.8)
     .on("mouseover", mouseover)
-    .on("mousemove", mousemove)
     .on("mouseleave", mouseleave)
 
 });
