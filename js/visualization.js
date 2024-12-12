@@ -151,11 +151,12 @@ d3.select("#slider").on("change", function(d) {
   }));
   let scHeartDiseaseNew = scatterplot()
   .x(d => d.x)
-  .y(d => d.y) //this needs to change to the other data set. currently its using the same data for x and y axis
+  .y(d => d.y) 
   .yLabelOffset(150)
   
 scHeartDiseaseNew("#scatterplot", scatterData);
 d3.selectAll("#titleYear").text(currentYear);
+
 
 });
 

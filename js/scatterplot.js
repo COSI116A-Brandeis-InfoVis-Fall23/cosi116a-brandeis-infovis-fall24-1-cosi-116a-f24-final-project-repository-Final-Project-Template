@@ -56,11 +56,6 @@ function scatterplot() {
           .attr("transform", "translate(0," + (height) + ")")
           .call(d3.axisBottom(xScale));
           
-    //   // X axis label
-    //   xAxis.append("text")        
-    //       .attr("class", "axisLabel")
-    //       .attr("transform", "translate(" + (width - 50) + ",-10)")
-    //       .text(xLabelText);
 
     // X axis label
     svg.append("text")
@@ -78,14 +73,8 @@ function scatterplot() {
       .attr("y", -margin.left + 20) // Move to the left of the linechrt
       .attr("dy", ".75em")
       .attr("transform", "rotate(-90)")
-      .text("Life Expectancy per State in"+currentYear);
+      .text("Life Expectancy per State in "+currentYear);
         
-    //   let yAxis = svg.append("g")
-    //       .call(d3.axisLeft(yScale))
-    //     .append("text")
-    //       .attr("class", "axisLabel")
-    //       .attr("transform", "translate(" + yLabelOffsetPx + ", -12)")
-    //       .text(yLabelText);
   
       // Add the points
       let points = svg.append("g")
@@ -107,20 +96,20 @@ function scatterplot() {
       selectableElements = points;
       
       // svg.call(brush);
-  
-      // // Highlight points when brushed
-      // function brush(g) {
-      //   const brush = d3.brush() // Create a 2D interactive brush
-      //     .on("start brush", highlight) // When the brush starts/continues do...
-      //     .on("end", brushEnd) // When the brush ends do...
-      //     .extent([
-      //       [-margin.left, -margin.bottom],
-      //       [width + margin.right, height + margin.top]
-      //     ]);
+
+      // Highlight points when brushed
+      function brush(g) {
+        const brush = d3.brush() // Create a 2D interactive brush
+          .on("start brush", highlight) // When the brush starts/continues do...
+          .on("end", brushEnd) // When the brush ends do...
+          .extent([
+            [-margin.left, -margin.bottom],
+            [width + margin.right, height + margin.top]
+          ]);
           
-      //   ourBrush = brush;
+        ourBrush = brush;
   
-      //   g.call(brush); // Adds the brush to this element
+        g.call(brush); // Adds the brush to this element
   
         // Highlight the selected circles
         function highlight() {
@@ -142,13 +131,36 @@ function scatterplot() {
           dispatcher.call(dispatchString, this, svg.selectAll(".selected").data());
         }
         
-      //   function brushEnd(){
-      //     // We don't want infinite recursion
-      //     if(d3.event.sourceEvent.type!="end"){
-      //       d3.select(this).call(brush.move, null);
-      //     }         
-      //   }
-      // }
+        function brushEnd(){
+          // We don't want infinite recursion
+          if(d3.event.sourceEvent.type!="end"){
+            d3.select(this).call(brush.move, null);
+          }         
+        }
+      }
+      /*
+        // Highlight the selected circles
+        function highlight() {
+          if (d3.event.selection === null) return;
+          const [
+            [x0, y0],
+            [x1, y1]
+          ] = d3.event.selection;
+  
+          // If within the bounds of the brush, select it
+          points.classed("selected", d =>
+            x0 <= X(d) && X(d) <= x1 && y0 <= Y(d) && Y(d) <= y1
+          );
+  
+          // Get the name of our dispatcher's event
+          let dispatchString = Object.getOwnPropertyNames(dispatcher._)[0];
+  
+          // Let other charts know about our selection
+          dispatcher.call(dispatchString, this, svg.selectAll(".selected").data());
+        }   
+          */
+        
+  
   
       return chart;
     }
