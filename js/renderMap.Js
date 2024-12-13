@@ -61,12 +61,12 @@ d3.json("data/states.json", function(error, topologies) {  // (4)
 
 
 // create a tooltip 
-var tooltip = d3.select("body")
+var tooltip = d3.select("#map")
   .append("div")
   .style("opacity", 0)
   .attr("class", "tooltip")
   .style("position", "absolute")
-  .style("background-color", "white")
+  .style("background-color", "blue")
   .style("border", "solid")
   .style("border-width", "2px")
   .style("border-radius", "5px")

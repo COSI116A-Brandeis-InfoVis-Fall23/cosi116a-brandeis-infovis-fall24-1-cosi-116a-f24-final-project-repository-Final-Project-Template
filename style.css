@@ -20,14 +20,14 @@ path {
 .row {
 	display: flex;
 }
-  
+
 .column {
 	float: left;
 	padding: 25px;
 }
 
 .left {
-	width: 34%;
+	width: 33%;
 }
   
   .right {
