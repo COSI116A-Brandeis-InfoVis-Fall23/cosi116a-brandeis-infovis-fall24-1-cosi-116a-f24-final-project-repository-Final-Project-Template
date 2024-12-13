@@ -10,10 +10,10 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // Heatmap configuration
   const heatmapConfig = {
-    radius: 25, 
+    radius: 20,
     maxOpacity: 0.6,
     scaleRadius: false,
-    useLocalExtrema: true,
+    useLocalExtrema: false,
     latField: "lat",
     lngField: "lng",
     valueField: "value",
@@ -60,49 +60,60 @@ document.addEventListener("DOMContentLoaded", function () {
   fetch("data/Subway_ridership_weekly.geojson")
     .then((response) => response.json())
     .then((data) => {
-      const hardcodedDate = "02/03/2020";
+      const startDate = new Date("02/03/2020");
+      const endDate = new Date("02/22/2021");
 
       // Filter data for the specified date
-      const filteredData = data.features.filter(
-        (feature) => feature.properties.Time === hardcodedDate
-      );
+      const filteredData = data.features.filter((feature) => {
+        const featureDate = new Date(feature.properties.Time);
+        return featureDate >= startDate && featureDate <= endDate;
+      });
 
       if (filteredData.length === 0) {
         console.error("No data available for the specified date.");
         return;
       }
 
-      // Normalize values to a maximum scale of 100000
-      const MAX_SCALE = 1000000;
+      // Aggregate ridership for each location
+      const locationMap = new Map();
 
-      const normalizedHeatmapData = {
-        max: 1.0,
-        data: filteredData.map((feature) => {
-          const rawValue = feature.properties.Ridership;
-          const scaledValue = Math.min(rawValue / MAX_SCALE, 1.0);
+      filteredData.forEach((feature) => {
+        const coordsKey = `${feature.geometry.coordinates[1]},${feature.geometry.coordinates[0]}`;
+        const ridership = feature.properties.Ridership;
 
-          // Debug: Log each station's scaled value
-          /*console.log("Station Data:", {
-            lat: feature.geometry.coordinates[1],
-            lng: feature.geometry.coordinates[0],
-            rawValue,
-            scaledValue,
-          });*/
+        if (locationMap.has(coordsKey)) {
+          locationMap.set(coordsKey, locationMap.get(coordsKey) + ridership);
+        } else {
+          locationMap.set(coordsKey, ridership);
+        }
+      });
+
+      // Calculate dynamic max scaling
+      const maxRidership = Math.max(...Array.from(locationMap.values()));
+
+      // Prepare heatmap data
+      const heatmapData = {
+        max: maxRidership, // Use the maximum value dynamically
+        data: Array.from(locationMap.entries()).map(([coords, value]) => {
+          const [lat, lng] = coords.split(",").map(Number);
+
+          // Debugging
+          console.log("Location Data:", { lat, lng, value });
 
           return {
-            lat: feature.geometry.coordinates[1], // Latitude
-            lng: feature.geometry.coordinates[0], // Longitude
-            value: scaledValue, // Scaled value
+            lat,
+            lng,
+            value, // Raw value; scaled dynamically by the heatmap plugin
           };
         }),
       };
 
-      // Debug: Log the entire normalized heatmap data
-      console.log("Normalized Heatmap Data:", normalizedHeatmapData);
+      // Debug: Log the final heatmap data
+      console.log("Heatmap Data for Date Range:", heatmapData);
 
       // Set data to the heatmap layer
       try {
-        heatmapLayer.setData(normalizedHeatmapData); // No redraw needed
+        heatmapLayer.setData(heatmapData);
       } catch (error) {
         console.error("Error setting heatmap data:", error);
       }
@@ -115,4 +126,5 @@ document.addEventListener("DOMContentLoaded", function () {
     .catch((error) => {
       console.error("Error loading or processing data:", error);
     });
+
 });
