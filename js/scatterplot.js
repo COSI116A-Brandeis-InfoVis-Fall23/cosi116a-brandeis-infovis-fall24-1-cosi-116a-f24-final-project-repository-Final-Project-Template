@@ -23,6 +23,12 @@ function scatterplot() {
       .append("div")
       .attr("class", "tooltip");
 
+    const tooltip2 = d3.select("body")
+      .append("div")
+      .attr("class", "tooltip");
+    
+    
+
     let svg = d3.select(selector)
       .append("svg")
       .attr("preserveAspectRatio", "xMidYMid meet")
@@ -57,7 +63,57 @@ function scatterplot() {
       .style("text-anchor", "middle")
       .text(yLabelText);
 
+    //Create info bubble icon
+    const infoGroup = svg.append("g")
+      .attr("transform", `translate(${-40}, ${-50})`);
 
+    infoGroup.append("circle")
+        .attr("r", 9)
+        .attr("fill", "#007BFF")
+        .attr("stroke", "black")
+        .attr("stroke-width", 1)
+        .style("cursor", "pointer");
+
+        // Add "i" icon inside the button
+    infoGroup.append("text")
+        .attr("dy", "0.3em")
+        .attr("text-anchor", "middle")
+        .style("fill", "white")
+        .style("font-size", "12px")
+       
+        .style("font-style", "italic")
+        .text("i");
+      
+    infoGroup.on("mouseover", function (d) {
+        d3.select(this).classed("mouseover", true);
+        let tooltipContentInfo = "Rail usage per capita in 2021 vs rail infrastructure investment in 2022 per country. Investment is measured in euros, and usage is measured in total passengers on rail by country, proportioned to the country's population.";
+
+  
+  
+        tooltip2
+          .style("opacity", 1)
+          .style("visibility", "visible")
+          .style("height", "80px")
+          .style("width", "350px")
+          .html(tooltipContentInfo);  // Display the tooltip content
+        })
+        .on("mousemove", function () {
+          const mouseX = d3.event.pageX; // Mouse X position relative to the page
+          const mouseY = d3.event.pageY; // Mouse Y position relative to the page
+      
+          tooltip2
+              .style("opacity", 1)
+              .style("visibility", "visible")
+              .style("left", `${mouseX + 10}px`) // Offset tooltip slightly to the right
+              .style("top", `${mouseY - 20}px`); // Offset tooltip slightly above the mouse
+      })
+        .on("mouseout", function () {
+          d3.select(this).classed("mouseover", false);
+          tooltip2.style("opacity", 0); // Hide tooltip
+        });
+    
+    
+      
     // Highlight points when brushed
     function brush(g) {
        brush = d3.brush()

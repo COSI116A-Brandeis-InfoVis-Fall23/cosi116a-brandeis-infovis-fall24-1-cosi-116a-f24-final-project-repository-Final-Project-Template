@@ -97,7 +97,7 @@ function countryBarGraphs() {
         .attr("transform", `translate(${0}, ${height + margin.bottom - 15})`);
 
         infoGroup.append("circle")
-        .attr("r", 10)
+        .attr("r", 9)
         .attr("fill", "#007BFF")
         .attr("stroke", "black")
         .attr("stroke-width", 1)
@@ -108,7 +108,7 @@ function countryBarGraphs() {
         .attr("dy", "0.3em")
         .attr("text-anchor", "middle")
         .style("fill", "white")
-        .style("font-size", "15px")
+        .style("font-size", "12px")
        
         .style("font-style", "italic")
         .text("i");
