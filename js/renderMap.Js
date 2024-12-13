@@ -20,42 +20,44 @@ var path = d3.geoPath()
             
        })
 
-//added for switching colors
-// var useStateColors = true; // Toggle variable to determine which colors to use (true = colors_state, false = colors_total)
+var useStateColors = true; // Toggle variable to determine which colors to use (true = colors_state, false = colors_total)
 
 
 d3.json("data/states.json", function(error, topologies) {  // (4)
+  if (error) throw error;
 
   var state = topojson.feature(topologies[12], topologies[12].objects.stdin);  // (5)
-  svgStates.selectAll("path")  
-  .data(state.features)
-  .enter()
-  .append("path")
-  .attr("d", path)
-  .style("fill", function(d, i) { 
-  console.log("d is ", d)
-  var name = d.properties.STATENAM.replace(" Territory", ""); 
-  return colors_state[name]; // Colors for the state. Must be changed to color_total for new view
-})
-.append("svg:title")
-.append("svg:data")
-.text(function(d) { return d.properties.STATENAM; });
-// updateMapColors();
-// // Update map colors
-// function updateMapColors() {
-//   svgStates.selectAll("path")
-//     .transition() // Add a smooth transition
-//     .duration(500) // Transition duration in milliseconds
-//     .style("fill", function(d) {
-//       var name = d.properties.STATENAM.replace(" Territory", "");
-//       return useStateColors ? colors_state[name] : colors_total[name];
-//     });
-// }
-// // Button click event listener
-// d3.select("#toggleColors").on("click", function() {
-//   useStateColors = !useStateColors; // Toggle the color state
-//   updateMapColors(); // Refresh the map colors
-// });
+
+  // Render the states
+  svgStates.selectAll("path")
+    .data(state.features)
+    .enter()
+    .append("path")
+    .attr("d", path)
+    .style("fill", function(d) {
+      var name = d.properties.STATENAM.replace(" Territory", "");
+      return useStateColors ? colors_state[name] : colors_total[name];
+    })
+    .append("svg:title")
+    .text(function(d) { return d.properties.STATENAM; });
+
+  // Update map colors
+  function updateMapColors() {
+    svgStates.selectAll("path")
+      .transition() // Add a smooth transition
+      .duration(500) // Transition duration in milliseconds
+      .style("fill", function(d) {
+        var name = d.properties.STATENAM.replace(" Territory", "");
+        return useStateColors ? colors_state[name] : colors_total[name];
+      });
+  }
+  // Button click event listener
+  d3.select("#toggleColors").on("click", function() {
+    useStateColors = !useStateColors; // Toggle the color state
+    updateMapColors(); // Refresh the map colors
+  
+});
+
 
 
 // create a tooltip

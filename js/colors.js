@@ -1,4 +1,4 @@
-var colors = {
+var colors_state = {
   "Alabama": "#8c0303",
   "Alaska": "#e37373",
   "Arizona": "#8e0606",
@@ -52,7 +52,7 @@ var colors = {
   "Wyoming": "#fbecec",
 }
 
-var colors = {
+var colors_total = {
   "Alabama": "#a5520e",
   "Alaska": "#f8c998",
   "Arizona": "#ba6418",
@@ -100,7 +100,7 @@ var colors = {
   "Utah": "#fad2a9",
   "Vermont": "#fffffe",
   "Virginia": "#924205",
-  "Washington": "d57b24",
+  "Washington": "#d57b24",
   "West Virginia": "#fef1e5",
   "Wisconsin": "#8b3c02",
   "Wyoming": "#fffffe",

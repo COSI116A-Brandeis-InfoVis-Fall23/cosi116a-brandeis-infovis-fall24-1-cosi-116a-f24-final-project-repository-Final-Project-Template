@@ -6,7 +6,7 @@
   <meta charset="utf-8">
   
   <!-- Title -->
-  <title>Project Team 5: Topic, COSI 116A F24</title>
+  <title>Project Team 5: U.S. DoD Spending, COSI 116A F24</title>
   
   <!-- CSS Styling -->
   <link rel="stylesheet" href="style.css">
@@ -47,9 +47,9 @@
   <!-- Your writeup goes here -->
   <div class = "content-column">
   
-    <h1>Project Team 5: Topic, COSI 116A F24</h1>
+    <h1>Project Team 5: U.S. DoD Spending, COSI 116A F24</h1>
     
-    <p><strong>Cooper Gottfried</strong>, <strong>Dean Carey</strong>, <strong>Garret Rieden</strong>, <strong>Adam Rieden</strong></p>
+    <p><strong>Cooper Gottfried</strong>, <strong>Dean Carey</strong>, <strong>Adam Rieden</strong>, <strong>Garret Rieden</strong></p>
     
     <p>Project-long Course Project as part of COSI 116A: Information Visualization</a>, taught by <a href="https://cs.brandeis.edu/~dylan/">Prof. Dylan Cashman</a>, <a href="https://cs.brandeis.edu/">Brandeis University</a>.</p>
     
@@ -87,27 +87,38 @@
 
   <!--<div class="table-holder" id="table"></div> -->
   <!-- Your visualization here -->
-  <div class="vis-holder">
-    <div class="table-holder" id="table"></div>
-      <!-- Change viewbox to whatever you want, e.g. "0 0 1000 6000" This determines your aspect ratio and coordinate system -->    
-      <!-- Delete all the sample SVG code below after the viewbox to before the closing tag. Populate this part of the SVG with D3. -->
-    
-      <!-- Button to toggle colors -->
-      <div style="text-align: center; margin: 20px;">
-        <button type="toggleColors" style="padding: 10px 20px; font-size: 16px;">Toggle Colors</button>
+    <div class="row">
+      <div class="column" style="background-color: #aaa;"">    
+        <div class="vis-holder">
+
+          <div class="table-holder" id="table"></div>
+        </div>
       </div>
-      
-      <div class="map-holder" id="map">
-      <svg id="vis-svg" preserveAspectRatio="xMidYMid meet" class="marks" viewBox="0 150 1500 500">
-      
-        <g id="boundary"></g>
-        <g id="states"></g>
-    
-     </svg>
-    </div>
+      <div class="column" style="background-color: #850505;">
+        <div class="vis-holder">
+
+          <!-- Change viewbox to whatever you want, e.g. "0 0 1000 6000" This determines your aspect ratio and coordinate system -->    
+          <!-- Delete all the sample SVG code below after the viewbox to before the closing tag. Populate this part of the SVG with D3. -->
+          
+          <!-- Button to toggle colors -->
+          <div style="text-align: center; margin: 20px;">
+            <button id="toggleColors" style="padding: 10px 20px; font-size: 16px;">Toggle Colors</button>
+          </div>
+          
+          <div class="map-holder" id="map">
+            <svg id="vis-svg" preserveAspectRatio="xMidYMid meet" class="marks" viewBox="0 150 1500 500">
+            
+              <g id="boundary"></g>
+              <g id="states"></g>
+          
+            </svg>
+          </div>
+        </div>
+      </div>
+
       <!-- Don't delete the closing tag! -->
     <!--<div class="table-holder" id="table"></div> -->
-  </div>
+    </div>
   
 
 
@@ -220,7 +231,7 @@
   <script src="js/dod_table.js"></script>
   <script src="js/colors.js"></script>
   <script src="js/renderMap.js"></script>
-  <script src="path/to/colorbrewer.js"></script>
+  <script src="lib/colorbrewer.js"></script>
 
 
 </body>
