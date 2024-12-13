@@ -6,7 +6,7 @@
     // Initialize scatterplot
     const scatter = scatterplot()
       .x(d => d.infrastructureInvestment)
-      .xLabel("Transportation Investment (USD)")
+      .xLabel("Transportation Investment (EUROS)")
       .y(d => d.railUsageTotalPassengers2022 / d.population)
       .yLabel("Rail Passengers per Capita")
       .yLabelOffset(150)
