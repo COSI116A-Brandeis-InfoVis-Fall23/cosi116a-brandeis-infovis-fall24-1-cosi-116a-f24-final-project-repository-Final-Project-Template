@@ -106,12 +106,13 @@ function scatterplot() {
       .attr("class", "legend")
       .attr("transform", `translate(${width - 100}, 20)`);
 
+    //data for the legend
     let legendData = [
-        { color: "red", label: "Permanently Selected State" },
-        { color: "purple", label: "Hovering Over State" }
+        { color: "red", stroke: "red", label: "Permanently Selected State" },
+        { color: "black", stroke: "red", label: "Hovering Over State" }
       ];
     
-    // Add legend items
+    // Add legend item
     legend.selectAll(".legend-item")
       .data(legendData)
       .enter()
@@ -119,13 +120,15 @@ function scatterplot() {
       .attr("class", "legend-item")
       .attr("transform", (d, i) => `translate(0, ${i * 20})`) // Space out items vertically
       .each(function(d) {
-        // Add color indicators (rectangles or circles)
+        //adds colors to the legend
         d3.select(this)
           .append("circle")
           .attr("cx", 0)
           .attr("cy", 0)
           .attr("r", 6) 
-          .style("fill", d.color);
+          .style("fill", d.color)
+          .style("stroke",d.stroke)
+          .style("stroke-width", 2);
          // Add labels
         d3.select(this)
           .append("text")

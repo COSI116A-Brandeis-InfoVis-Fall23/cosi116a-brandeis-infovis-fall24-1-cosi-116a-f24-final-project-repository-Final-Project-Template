@@ -27,8 +27,10 @@ path.mouseover{
 }
 
 /* Style for selected marks (circles) */
-circle.selected {
-	fill:  rgb(191, 26, 191);
+.scatterPoint.selected{
+	stroke: red;
+	fill: black;
+	stroke-width: 2;
 	opacity: 5;
   }
 /* Style for permanemtly selected marks (circles) */
