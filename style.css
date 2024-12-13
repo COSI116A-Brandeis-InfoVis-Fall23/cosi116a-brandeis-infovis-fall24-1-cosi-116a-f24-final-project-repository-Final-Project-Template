@@ -28,12 +28,12 @@ path.mouseover{
 
 /* Style for selected marks (circles) */
 circle.selected {
-	fill: purple;
+	fill:  rgb(191, 26, 191);
 	opacity: 5;
   }
 /* Style for permanemtly selected marks (circles) */
 circle.permaselected {
-	fill: blue;
+	fill: red;
 	opacity: 5;
   }
 

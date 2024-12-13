@@ -12,7 +12,7 @@ function scatterplot() {
         right: 30,
         bottom: 60
       },
-      width = 500 - margin.left - margin.right,
+      width = 600 - margin.left - margin.right,
       height = 500 - margin.top - margin.bottom,
       xValue = d => d[0],
       yValue = d => d[1],
@@ -93,11 +93,49 @@ function scatterplot() {
         .merge(points)
           .attr("cx", X)
           .attr("cy", Y)
-          .attr("r", 5)
+          .attr("r", 6)
           .attr("state", getState)
-          .append("svg:title").text(getD);
+          .attr("opacity", 0.5) //make the points semi-transparent to prevent occlusion
+          
+      points.append("svg:title").text(getD);
       
       selectableElements = points;
+
+    //create a legend
+    let legend = svg.append("g")
+      .attr("class", "legend")
+      .attr("transform", `translate(${width - 100}, 20)`);
+
+    let legendData = [
+        { color: "red", label: "Permanently Selected State" },
+        { color: "purple", label: "Hovering Over State" }
+      ];
+    
+    // Add legend items
+    legend.selectAll(".legend-item")
+      .data(legendData)
+      .enter()
+      .append("g")
+      .attr("class", "legend-item")
+      .attr("transform", (d, i) => `translate(0, ${i * 20})`) // Space out items vertically
+      .each(function(d) {
+        // Add color indicators (rectangles or circles)
+        d3.select(this)
+          .append("circle")
+          .attr("cx", 0)
+          .attr("cy", 0)
+          .attr("r", 6) 
+          .style("fill", d.color);
+         // Add labels
+        d3.select(this)
+          .append("text")
+          .attr("x", 10) 
+          .attr("y", 5) 
+          .text(d.label)
+          // .style("font-size", "12px")
+          .attr("alignment-baseline", "middle");
+});
+
       
       // svg.call(brush);
 
