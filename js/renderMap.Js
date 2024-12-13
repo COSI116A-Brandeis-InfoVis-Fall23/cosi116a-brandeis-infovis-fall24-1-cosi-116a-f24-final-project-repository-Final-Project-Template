@@ -38,8 +38,8 @@ d3.json("data/states.json", function(error, topologies) {  // (4)
       var name = d.properties.STATENAM.replace(" Territory", "");
       return useStateColors ? colors_state[name] : colors_total[name];
     })
-    .append("svg:title")
-    .text(function(d) { return d.properties.STATENAM; });
+    // .append("svg:title")
+    // .text(function(d) { return d.properties.STATENAM; });
 
   // Update map colors
   function updateMapColors() {
@@ -60,26 +60,35 @@ d3.json("data/states.json", function(error, topologies) {  // (4)
 
 
 
-// create a tooltip
-var tooltip = d3.select("#my_dataviz")
-.append("div")
-.style("opacity", 0)
-.attr("class", "tooltip")
-.style("background-color", "white")
-.style("border", "solid")
-.style("border-width", "2px")
-.style("border-radius", "5px")
-.style("padding", "5px")
+// create a tooltip 
+var tooltip = d3.select("body")
+  .append("div")
+  .style("opacity", 0)
+  .attr("class", "tooltip")
+  .style("position", "absolute")
+  .style("background-color", "white")
+  .style("border", "solid")
+  .style("border-width", "2px")
+  .style("border-radius", "5px")
+  .style("padding", "5px");
 
 // Three function that change the tooltip when user hover / move / leave a cell
 var mouseover = function(d) {
-tooltip
-  .html("State: " + d.state + "<br>The exact value of<br>this cell is: " + d.value)
-  .style("left", (d3.mouse(this)[0] + 70) + "px")
-  .style("top", (d3.mouse(this)[1]) + "px")
-  .style("opacity", 1);
+  tooltip
+    .html("State: " + d.properties.STATENAM)
+    .style("left", (d3.event.pageX + 10) + "px")
+    .style("top", (d3.event.pageY + 10) + "px")
+    .style("opacity", 1);
+  d3.select(this)
+    .style("stroke", "black")
+    .style("stroke-width", 2)
+    .style("opacity", 1);
 }
-
+var mousemove = function(d) {
+  tooltip
+    .style("left", (d3.event.pageX + 10) + "px")
+    .style("top", (d3.event.pageY + 10) + "px");
+}
 var mouseleave = function(d) {
   tooltip
     .style("opacity", 0);
@@ -87,22 +96,38 @@ var mouseleave = function(d) {
     .style("stroke", "none")
     .style("opacity", 0.8);
 }
-  // add the squares
-  svg.selectAll()
-    .data(data, function(d) {return d.group+':'+d.variable;})
+d3.json("data/states.json", function(error, topologies) {
+  var state = topojson.feature(topologies[12], topologies[12].objects.stdin);
+
+  svgStates.selectAll("path")
+    .data(state.features)
     .enter()
-    .append("rect")
-      .attr("x", function(d) { return x(d.group) })
-      .attr("y", function(d) { return y(d.variable) })
-      .attr("rx", 4)
-      .attr("ry", 4)
-      .attr("width", x.bandwidth() )
-      .attr("height", y.bandwidth() )
-      .style("fill", function(d) { return myColor(d.value)} )
-      .style("stroke-width", 4)
-      .style("stroke", "none")
-      .style("opacity", 0.8)
+    .append("path")
+    .attr("d", path)
+    // .style("fill", function(d) {
+    //   var name = d.properties.STATENAM.replace(" Territory", "");
+    //   return colors_state[name];
+    // })
     .on("mouseover", mouseover)
-    .on("mouseleave", mouseleave)
+    .on("mousemove", mousemove)
+    .on("mouseleave", mouseleave);
+  // // add the squares
+  // svg.selectAll()
+  //   .data(data, function(d) {return d.group+':'+d.variable;})
+  //   .enter()
+  //   .append("rect")
+  //     .attr("x", function(d) { return x(d.group) })
+  //     .attr("y", function(d) { return y(d.variable) })
+  //     .attr("rx", 4)
+  //     .attr("ry", 4)
+  //     .attr("width", x.bandwidth() )
+  //     .attr("height", y.bandwidth() )
+  //     .style("fill", function(d) { return myColor(d.value)} )
+  //     .style("stroke-width", 4)
+  //     .style("stroke", "none")
+  //     .style("opacity", 0.8)
+  //   .on("mouseover", mouseover)
+  //   .on("mouseleave", mouseleave)
 
 });
+})

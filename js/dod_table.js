@@ -47,7 +47,6 @@ function table() {
 		.enter()
 		.append("td")
 		.text(d => d);
-
 	
     // HINT for brushing on the table: keep track of whether the mouse is down or up, 
     // and when the mouse is down, keep track of any rows that have been mouseover'd
@@ -103,6 +102,8 @@ function table() {
 
     return chart;
   }
+
+
 
   // Gets or sets the dispatcher we use for selection events
   chart.selectionDispatcher = function (_) {

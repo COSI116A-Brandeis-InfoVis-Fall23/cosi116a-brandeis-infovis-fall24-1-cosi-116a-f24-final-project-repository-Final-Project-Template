@@ -19,12 +19,27 @@ path {
 
 .row {
 	display: flex;
-  }
+}
   
 .column {
-	flex: 50%;
-	padding: 10px;
-  }
+	float: left;
+	padding: 25px;
+}
+
+.left {
+	width: 34%;
+}
+  
+  .right {
+	width: 66%;
+}
+
+/* Clear floats after the columns */
+.row:after {
+	content: "";
+	display: table;
+	clear: both;
+}
 
 /* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
 @media screen and (max-width: 600px) {
@@ -38,18 +53,11 @@ path {
 	max-width: 650px;
 	margin: 40px auto;
 }
-/* #BUTTON
-#toggleColors {
-	padding: 10px 20px;
-	font-size: 16px;
-	margin: 20px auto;
-	display: block;
-	text-align: center;
-  } */
+
 
 /* Style for selected marks (table rows) */
 tr.selected {
-  background-color: pink;
+  background-color: lightseagreen;
 }
 /* Pretty table layout */
 table {

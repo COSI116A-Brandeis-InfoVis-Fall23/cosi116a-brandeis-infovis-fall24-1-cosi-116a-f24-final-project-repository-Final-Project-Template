@@ -62,7 +62,7 @@
       we considered wasteful (i.e; <a href="https://www.farmlinkproject.org/stories-and-features/cheese-caves-and-food-surpluses-why-the-u-s-government-currently-stores-1-4-billion-lbs-of-cheese">government cheese caves</a>), and wanted to dig deeper into the anatomy 
       of government spending nationwide. To provide a basis for interesting analysis, we chose to break 
       spending down in two major ways: by state and by department. After exploring available resources, 
-      we found that the Department of Defense is, in nearly every U.S. state, one of the top spenders. 
+      we found that the Department of Defense (DoD) is, in nearly every U.S. state, one of the top spenders. 
       Given that the Department of Defense is often responsible for a significant portion of budgetary 
       waste (i.e; <a href="https://www.cnn.com/2022/04/27/politics/afghan-weapons-left-behind/index.html">leaving equipment behind after operations</a>), we chose to focus our visualization on 
       how much spending the Department of Defense is responsible for by state. Our data provides 
@@ -88,13 +88,13 @@
   <!--<div class="table-holder" id="table"></div> -->
   <!-- Your visualization here -->
     <div class="row">
-      <div class="column" style="background-color: #aaa;"">    
+      <div class="column left" style="background-color: #fff;">    
         <div class="vis-holder">
-
           <div class="table-holder" id="table"></div>
         </div>
       </div>
-      <div class="column" style="background-color: #850505;">
+      
+      <div class="column right" style="background-color: #fff;">
         <div class="vis-holder">
 
           <!-- Change viewbox to whatever you want, e.g. "0 0 1000 6000" This determines your aspect ratio and coordinate system -->    
@@ -106,13 +106,14 @@
           </div>
           
           <div class="map-holder" id="map">
-            <svg id="vis-svg" preserveAspectRatio="xMidYMid meet" class="marks" viewBox="0 150 1500 500">
+            <svg id="vis-svg" preserveAspectRatio="xMidYMid meet" class="marks" viewBox="0 0 1000 600">
             
               <g id="boundary"></g>
               <g id="states"></g>
           
             </svg>
           </div>
+ 
         </div>
       </div>
 
@@ -125,7 +126,7 @@
   <!-- Your writeup goes here -->
   <div class = "content-column">
 
-    <h1><br><br><br><br><br><br><br><br><br><br><br><br><br><br>Demo Video</h1>
+    <h1>Demo Video</h1>
     
     <p>To be done after visualization is complete.</p>
     
@@ -141,7 +142,21 @@
 
     <h1>Visualization explanation</h1>
 
-    <p>To be done after visualization is complete.</p>
+    <p>There’s a few different components of our UI we’d like to talk about. First is the 
+      brushing/linking between the table and the map. When an element is selected on one of 
+      these, it becomes selected on the other. This is to provide more detailed information, 
+      organized in a different fashion, about each state. It also allows users to understand 
+      what the colors on this map actually mean. The legend on our map also aids users in understanding what they’re looking at.
+      <br><br>Users may also use the “toggle colors” button to switch between a view of states organized by DoD% of state budget 
+      (red) and the state’s DoD spending as a % of national DoD spending (gold). We find that these are both interesting data 
+      points to consider, so we wanted to give our users the opportunity to swap fluidly between them.  
+      <br><br>Each of these views, DoD % of state budget and state % of total DoD spending, had their colors
+      chosen deliberately. We didn’t choose to use opposing colors (red and blue, for example),
+      because we didn’t want to portray that more DoD spending is necessarily a bad thing. Instead,
+      we chose to use high contrast colors (red and gold) so that the more highly-saturated colors
+      stand out against the near-white ones. Additionally, red and gold as a color pair don’t carry
+      much inherent political meaning within the United States, so any accidental bias from our viewer can be avoided.
+      </p>
 
     <br>
 
@@ -201,14 +216,33 @@
       showing more information about the spending within the state. The corresponding 
       row in the table will also light up in blue. We chose to use blue to contrast with 
       the red of the heat map, drawing attention to the small details that we’re making available.
-      <br><br>More information (and photos of sketches) will be added in to this section as progress continues on our visualization.
+      <br><br>
+      We've also added a second heat map, the gold one that can be seen when colors are toggled, to show the
+      percentage of the DoD's total, national spending that happened in each state. We iterated on the colors, and the 
+      transitions between them many times, and eventually settled on the slow transition between the two maps,
+      and the use of another white-to-high-contrast-color gradient for the same reasons we mentioned above.
     </p>
 
     <br>
 
     <h1>Conclusion</h1>
 
-    <p>To be done after visualization is complete.</p>
+    <p>Overall, we’re quite happy with how this project went. There were some difficulties with the heatmap, and 
+      with overall formatting on the website, but we worked out the problems as we went on. We’re pleased with 
+      the results we were able to show, happy about the overall quality of our visualization, and satisfied with 
+      our work this semester. We feel that we accurately portrayed DoD spending, and showed the sheer scale of it on 
+      a national level. While this has been done before, we feel that breaking it down by state was a somewhat novel approach.
+      <br><br>We do, however, acknowledge that there’s certainly more to be done. In an ideal world, we would have been 
+      able to investigate individual DoD contractors and possibly even display data on a county level instead of 
+      a state level. By investigating individual DoD contractors, we think we would have found interesting patterns 
+      about U.S. government spending, waste, and maybe even corruption. By breaking data down to the county level, 
+      we may have been able to show even more interesting nationwide patterns. Still, though, we feel that 
+      this visualization showcases our abilities, and our findings, quite well.
+      <br><br>For future work, we would love to summarize what problems DoD spending could otherwise address. 
+      Overall, the DoD spent $1,325,974,585,251 in 2023. That is a shocking high amount of money, and 
+      it could be used to provide universal healthcare, solve homelessness, or otherwise address any 
+      number of national problems. This is an ongoing, and well-publicized, topic that could be a full research project on its own.
+      </p>
 
     <br>
 
@@ -220,7 +254,11 @@
       <li><a href="https://d3-graph-gallery.com/heatmap">D3 Graph Library</a></li>
       <li>COSI 116A In-Class Maps Assignment</li>
       <li>COSI 116A HW4</li>
-      <li>More to be added</li>
+      <li><a href="https://d3-graph-gallery.com/heatmap">W3 School's Button Guide</a></li>
+      <li><a href="https://observablehq.com/@chrisdaly/usa-county-heat-map">Chris Daly's County Heat Map</a></li>
+      <li><a href="https://www.w3schools.com/howto/howto_css_two_columns.asp">W3 School's 2 Column CSS</a></li>
+      <li><a href="https://d3-geomap.github.io/map/choropleth/world/">Ramiro Gómez' Chloropleth World Map</a></li>
+
     </ul>
     
   </div>
