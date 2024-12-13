@@ -108,8 +108,8 @@ function scatterplot() {
 
     //data for the legend
     let legendData = [
-        { color: "red", stroke: "red", label: "Permanently Selected State" },
-        { color: "black", stroke: "red", label: "Hovering Over State" }
+        { color: "red", stroke: "red", label: "Selected" },
+        { color: "blue", stroke: "blue", label: "Hovering Over" }
       ];
     
     // Add legend item
@@ -140,7 +140,7 @@ function scatterplot() {
 });
 
       
-      // svg.call(brush);
+      svg.call(brush);
 
       // Highlight points when brushed
       function brush(g) {
@@ -155,6 +155,7 @@ function scatterplot() {
         ourBrush = brush;
   
         g.call(brush); // Adds the brush to this element
+
   
         // Highlight the selected circles
         function highlight() {
@@ -165,21 +166,29 @@ function scatterplot() {
           ] = d3.event.selection;
   
           // If within the bounds of the brush, select it
-          points.classed("selected", d =>
+          points.classed("permaselected", d =>
             x0 <= X(d) && X(d) <= x1 && y0 <= Y(d) && Y(d) <= y1
           );
-  
-          // Get the name of our dispatcher's event
-          let dispatchString = Object.getOwnPropertyNames(dispatcher._)[0];
-  
-          // Let other charts know about our selection
-          dispatcher.call(dispatchString, this, svg.selectAll(".selected").data());
+
+
+
         }
         
         function brushEnd(){
+          d3.selectAll("path").classed("selected", false);          //reset previously selected elements from scatterplot linking
           // We don't want infinite recursion
           if(d3.event.sourceEvent.type!="end"){
             d3.select(this).call(brush.move, null);
+
+            for (let i=0; i<50; i++){                                //link brushing with map
+              let point = points._groups[0][i];
+              if (point.getAttribute("class")=="point scatterPoint permaselected"){
+                let pointState = point.getAttribute("state");
+                d3.selectAll("path").filter(function() {
+                  return d3.select(this).attr("state") == pointState; // link to scatterplot
+                }).classed("selected", true);
+              }
+            }
           }         
         }
       }

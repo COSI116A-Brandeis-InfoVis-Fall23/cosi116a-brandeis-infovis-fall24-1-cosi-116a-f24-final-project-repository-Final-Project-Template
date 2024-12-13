@@ -26,10 +26,30 @@ path.mouseover{
 	stroke-width: 3px;
 }
 
+path.selected{
+	stroke:red;
+	stroke-width: 3px;
+}
+
+
+.linePoint.selected{
+	fill:red;
+	stroke-width: 2;
+}
+
+.scatterPoint{
+	fill:black;
+	opacity:5;
+}
+
+text{
+	fill:black;
+}
+
 /* Style for selected marks (circles) */
 .scatterPoint.selected{
-	stroke: red;
-	fill: black;
+	stroke: blue;
+	fill: blue;
 	stroke-width: 2;
 	opacity: 5;
   }

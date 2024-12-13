@@ -33,8 +33,11 @@ d3.json("data/states.json", function(error, topologies) {  // (4)
       .enter()
     .append("path")
     .attr("d", path)
+    .attr("state", function(d, i){
+      return d.properties.STATENAM;
+    })
     .style('fill-opacity', function(d, i){
-      var name = d.properties.STATENAM.replace(" Territory", "");
+      var name = d.properties.STATENAM;
       return getColor(rates[currentYear][name], max);
     })
     .style("fill", function(d, i) { 
