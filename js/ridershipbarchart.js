@@ -7,7 +7,7 @@ d3.csv("data/neighborhood_ridership.csv", function(data) {
         d.gated_entries = +d.gated_entries;
     });
 
-    // Set dimensions and margins for the SVG container
+    // Set up chart dimensions and margins
     const width = 800;
     const height = 400;
     const margin = { top: 20, right: 30, bottom: 120, left: 120 };
@@ -34,16 +34,16 @@ d3.csv("data/neighborhood_ridership.csv", function(data) {
     svg.append("g")
         .attr("class", "grid")
         .selectAll("line")
-        .data(y.ticks()) // Use the y-axis tick values for grid lines
+        .data(y.ticks())
         .enter()
         .append("line")
-        .attr("x1", 0) // Start of the line (left edge)
-        .attr("x2", width) // End of the line (right edge)
-        .attr("y1", d => y(d)) // Vertical position for the line
-        .attr("y2", d => y(d)) // Vertical position for the line
-        .attr("stroke", "#ccc") // Light gray color
-        .attr("stroke-width", 1) // Thin stroke
-        .attr("stroke-dasharray", "4 4"); // Dashed line style
+        .attr("x1", 0)
+        .attr("x2", width)
+        .attr("y1", d => y(d))
+        .attr("y2", d => y(d))
+        .attr("stroke", "#ccc")
+        .attr("stroke-width", 1)
+        .attr("stroke-dasharray", "4 4");
 
     // Add X-axis
     svg.append("g")
@@ -55,17 +55,6 @@ d3.csv("data/neighborhood_ridership.csv", function(data) {
 
     // Add Y-axis
     svg.append("g").call(d3.axisLeft(y));
-
-    // Add bars to the bar chart
-    svg.selectAll("rect")
-        .data(data)
-        .enter()
-        .append("rect")
-        .attr("x", d => x(d.Neighborhood))
-        .attr("y", d => y(d.gated_entries))
-        .attr("width", x.bandwidth())
-        .attr("height", d => height - y(d.gated_entries))
-        .attr("fill", "skyblue");
 
     // Tooltip setup
     const tooltip = d3.select("body")
@@ -81,19 +70,30 @@ d3.csv("data/neighborhood_ridership.csv", function(data) {
         .style("display", "none")
         .style("pointer-events", "none");
 
-    // Add interactivity
+    // Add bars to the bar chart
     svg.selectAll("rect")
+        .data(data)
+        .enter()
+        .append("rect")
+        .attr("x", d => x(d.Neighborhood))
+        .attr("y", d => d.gated_entries === 0 ? height : y(d.gated_entries))  // Handle 0 ridership data differently
+        .attr("width", x.bandwidth())
+        .attr("height", d => d.gated_entries === 0 ? 5 : height - y(d.gated_entries))  // Mini bar for 0 ridership
+        .attr("fill", d => d.gated_entries === 0 ? "#B0B0B0" : "skyblue")  // Darker grey for missing data
+
+        // Add interactivity
         .on("mouseover", function(d) {
             tooltip
-                .html(`Neighborhood: <strong>${d.Neighborhood}</strong><br>Ridership: <strong>${d.gated_entries.toLocaleString()}</strong>`)
-                .style("left", `${d3.event.pageX + 10}px`)
-                .style("top", `${d3.event.pageY - 20}px`)
+                .html(d.gated_entries === 0 ? `<strong>${d.Neighborhood}</strong><br>No ridership data available` 
+                        : `<strong>${d.Neighborhood}</strong><br>Ridership: <strong>${d.gated_entries.toLocaleString()}</strong>`)
+                .style("left", (d3.event.pageX + 10) + "px")
+                .style("top", (d3.event.pageY - 20) + "px")
                 .style("display", "block");
         })
         .on("mousemove", function() {
             tooltip
-                .style("left", `${d3.event.pageX + 10}px`)
-                .style("top", `${d3.event.pageY - 20}px`);
+                .style("left", (d3.event.pageX + 10) + "px")
+                .style("top", (d3.event.pageY - 20) + "px");
         })
         .on("mouseout", function() {
             tooltip.style("display", "none");
@@ -103,18 +103,18 @@ d3.csv("data/neighborhood_ridership.csv", function(data) {
     svg.append("text")
         .attr("text-anchor", "middle")
         .attr("x", width / 2)
-        .attr("y", height + 80) // Positioned lower to avoid overlap
+        .attr("y", height + 80)
         .text("Neighborhood")
-        .style("font-size", "16px") // Increased font size
+        .style("font-size", "16px")
         .style("font-weight", "bold");
 
     // Add Y-axis label
     svg.append("text")
         .attr("text-anchor", "middle")
-        .attr("transform", `rotate(-90)`) // Rotate the text for the Y-axis
-        .attr("x", -height / 2) // Center along the Y-axis
-        .attr("y", -80) // Positioned further left to avoid overlap
+        .attr("transform", `rotate(-90)`)
+        .attr("x", -height / 2)
+        .attr("y", -80)
         .text("Total Ridership (in Millions)")
-        .style("font-size", "16px") // Increased font size
+        .style("font-size", "16px")
         .style("font-weight", "bold");
 });
