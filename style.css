@@ -11,7 +11,22 @@ h1, h2, h3 {
 #boundary path {
   stroke-dasharray: 3 5;
 }
-
+#popup {
+	position: absolute;
+	background: white;
+	border: 1px solid #ccc;
+	border-radius: 5px;
+	padding: 10px;
+	max-width: 200px; /* Optional: limit the popup width */
+	box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+	display: none; /* Hidden by default */
+	z-index: 1000;
+  }
+  
+  #popup img {
+	width: 100%; /* Scale image to fit the popup */
+	border-radius: 3px; /* Optional: rounded image corners */
+  }
 path {
   fill: none;
   stroke: black;
