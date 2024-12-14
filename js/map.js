@@ -23,7 +23,9 @@ d3.json("data/updated geojson/updated_bostonV2_with_data.json", function (error,
         return;
     }
      // List of neighborhoods to grey out
-    var greyedOutNeighborhoods = ["Leather District","Bay Village","Longwood Medical Area","Harbor Islands","Roslindale","West Roxbury","Hyde Park","North End"]; // Replace with actual names
+    var greyedOutNeighborhoods = ["Leather District","Bay Village","Longwood Medical Area","Harbor Islands"
+        ,"Roslindale","West Roxbury","Hyde Park","North End","Mission Hill",
+        "South Boston Waterfront","Mattapan","Allston","Brighton","South End"]; 
     gNeighborhoods.selectAll(".neighborhood")
         .data(data.features)
         .enter()
