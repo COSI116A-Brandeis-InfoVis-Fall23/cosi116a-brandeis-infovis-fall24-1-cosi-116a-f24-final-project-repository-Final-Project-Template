@@ -17,7 +17,7 @@ var projection = d3.geoMercator()
 var path = d3.geoPath().projection(projection);
 
 // Load and render GeoJSON data for neighborhoods
-d3.json("data/updated geojson/updated_bostonV2_with_data.json", function (error, data) {
+d3.json("data/bostonV2.json", function (error, data) {
     if (error) {
         console.error("Error loading GeoJSON:", error);
         return;

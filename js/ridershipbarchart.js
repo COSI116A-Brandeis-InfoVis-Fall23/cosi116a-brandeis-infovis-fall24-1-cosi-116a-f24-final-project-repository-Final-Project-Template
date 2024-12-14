@@ -85,7 +85,7 @@ d3.csv("data/neighborhood_ridership.csv", function(data) {
         .on("mouseover", function(d) {
             tooltip
                 .html(d.gated_entries === 0 ? `<strong>${d.Neighborhood}</strong><br>No ridership data available` 
-                        : `<strong>${d.Neighborhood}</strong><br>Ridership: <strong>${d.gated_entries.toLocaleString()}</strong>`)
+                        : `<strong>${d.Neighborhood}</strong><br>Gated Entries: <strong>${d.gated_entries.toLocaleString()}</strong>`)
                 .style("left", (d3.event.pageX + 10) + "px")
                 .style("top", (d3.event.pageY - 20) + "px")
                 .style("display", "block");
@@ -114,7 +114,7 @@ d3.csv("data/neighborhood_ridership.csv", function(data) {
         .attr("transform", `rotate(-90)`)
         .attr("x", -height / 2)
         .attr("y", -80)
-        .text("Total Ridership (in Millions)")
+        .text("Total Gated Entries (in Millions)")
         .style("font-size", "16px")
         .style("font-weight", "bold");
 });
