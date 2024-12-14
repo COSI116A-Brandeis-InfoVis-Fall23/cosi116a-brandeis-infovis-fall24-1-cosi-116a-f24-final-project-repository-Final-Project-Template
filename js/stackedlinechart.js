@@ -217,31 +217,37 @@ function drawStackedLineChart(selector, data, dispatcher) {
 
     // Highlighting logic
     let currentlyHighlighted = null;
+
     dispatcher.on("categoryHighlighted", function (categoryKey) {
         // Convert category key to match class names used in layers
         const trimmedCategory = categoryKey.trim().replace(/\s+/g, '_');
-
+    
         if (currentlyHighlighted === trimmedCategory) {
             // If the user clicked the same category again, reset highlight
             currentlyHighlighted = null;
+    
+            // Remove the highlight class and reset all layers
             svg.selectAll(".layer")
+                .classed("highlightedCategory", false) // Remove the class
                 .transition()
                 .duration(200)
-                .style("opacity", 1.0);
+                .style("opacity", 1.0); // Reset opacity
         } else {
             currentlyHighlighted = trimmedCategory;
-
-            // De-highlight all layers
+    
+            // De-highlight all layers by reducing opacity
             svg.selectAll(".layer")
+                .classed("highlightedCategory", false) // Remove the class from all layers
                 .transition()
                 .duration(200)
-                .style("opacity", 0.3);
-
-            // Highlight the selected category
+                .style("opacity", 0.3); // Dim other layers
+    
+            // Highlight the selected category by adding the class
             svg.selectAll(`.layer.${trimmedCategory}`)
+                .classed("highlightedCategory", true) // Add the highlight class
                 .transition()
                 .duration(200)
-                .style("opacity", 1.0);
+                .style("opacity", 1.0); // Ensure the layer is fully visible
         }
     });
 }

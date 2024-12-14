@@ -214,4 +214,9 @@ body {
     background-color: #d4f210; /* Light blue color for the clicked column */
     color: #000; /* Optional: change text color for better readability */
 }
-  
+.highlightedCategory {
+    fill: black !important; /* Set the fill color to black */
+    opacity: 1.0 !important; /* Ensure the opacity is fully visible */
+    stroke: black; /* Optional: Add an outline/stroke for emphasis */
+    stroke-width: 2; /* Optional: Adjust stroke thickness */
+}
