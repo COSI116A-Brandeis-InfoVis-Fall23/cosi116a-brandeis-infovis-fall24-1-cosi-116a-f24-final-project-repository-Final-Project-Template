@@ -69,6 +69,9 @@ function showTooltip(event, content) {
     .html(content);
 }
 
+
+
+
 function hideTooltip() {
   d3.select('.tooltip').style('visibility', 'hidden');
 }
