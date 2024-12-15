@@ -27,7 +27,7 @@ document.addEventListener("DOMContentLoaded", function () {
     },
   };
 
-  
+
   // Initialize the heatmap layer
   const heatmapLayer = new HeatmapOverlay(heatmapConfig).addTo(map);
 
