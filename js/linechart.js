@@ -107,80 +107,105 @@ function createLineChart(data, category = 'None') {
       .merge(points)
         .attr('cx', d => x(d.week))
         .attr('cy', d => yLeft(d.totalRidership))
-        .attr('r', ptRadius)
-        .on('mouseover', mOver)
-        .on('mouseout', mOut);
-    
-    
-  function mOver(){
-    showTooltip(event, `Week: ${d3.timeFormat('%B %d, %Y')(this.week)}<br>Total Ridership: ${d3.format(',')(this.totalRidership)}`);
-  }
-    
-  function mOut(){
-    hideTooltip()
-  }  
+        .attr('r', ptRadius);
     
   selectableElements = points;
+  
     
   svg.call(brush);
-
-
-
-   /* 
-  // Only turn on bush when mouse is down
-  let mouse = false
-  document.addEventListener("mousedown", mousedown);
-  document.addEventListener("mouseup", mouseup);
- 
-  // make mouse flag true and reset highlights
-  function mousedown(event){
-    mouse = true
-  
- 
-  }
- 
- 
-  //deactivate mouse flag
-  function mouseup(event){
-    mouse = false
-    
-  }   */
-    
     
 // Highlight points when brushed
     function brush(g) {
-      const brush = d3.brush() // Create a 2D interactive brush
+      const brush = d3.brushX() // Create a 2D interactive brush'
         .on("start brush", highlight) // When the brush starts/continues do...
         .on("end", brushEnd) // When the brush ends do...
-        .extent([
+        .extent([[0, 0], [width, height]]);
+        
+        
+        
+        
+       /* .extent([
           [-margin.left, -margin.bottom],
           [width + margin.right, height + margin.top]
-        ]);
+        ]);*/
         
       ourBrush = brush;
 
+
       g.call(brush); // Adds the brush to this element
+      
+      
+      let single = false
+      let selection = undefined
+      
+
 
       // Highlight the selected circles
       function highlight() {
         if (d3.event.selection === null) return;
-        const [
-          [x0, y0],
-          [x1, y1]
-        ] = d3.event.selection;
+          hideTooltip()
         
-     
         
+        const [x0, x1] = d3.event.selection;
+        
+   /*       const [
+            [x0, y0],
+            [x1, y1]
+          ] = d3.event.selection;*/
+        
+     /*
         points.classed("selected", d =>
           x0 <= x(d.week)+ptRadius && x(d.week)-ptRadius <= x1 && y0 <= yLeft(d.totalRidership)+ptRadius && yLeft(d.totalRidership)-ptRadius <= y1
         );
-   
+        
+        if ((x0 - x1 == 0) && (y0 - y1 == 0)) {
+          selection = svg.select(".selected")
+        } else {
+          selection = svg.selectAll(".selected")
+        }
+         single = (selection.data().length == 1)
+         */
+         
+         
+         
+         
+         points.classed("selected", d =>
+          x0 <= x(d.week) && x(d.week) <= x1
+        );
+        
+        
+        
+        if (x0 - x1 == 0){
+          let pos = d3.mouse(this);  
+          
+          points.classed("selected", d =>
+          pos[0] <= x(d.week)+ptRadius && x(d.week)-ptRadius <= pos[0] && pos[1] <= yLeft(d.totalRidership)+ptRadius && yLeft(d.totalRidership)-ptRadius <= pos[1]
+          );
+          
+          selection = svg.select(".selected")
+          single = (selection.data().length == 1)
+        }
+    
+    
       }
       
       function brushEnd(){
         // We don't want infinite recursion
         if(d3.event.sourceEvent.type!="end"){
           d3.select(this).call(brush.move, null);
+          thisBrush = svg._groups[0][0].__brush
+          d3.select(thisBrush).remove()
+          
+  
+          if (single){
+            d = selection.data()[0]
+            showTooltip(event, `Week: ${d3.timeFormat('%B %d, %Y')(d.week)}<br>Total Ridership: ${d3.format(',')(d.totalRidership)}`);
+            
+            
+            svg.selectAll(".selected")
+              .classed("selected", false)
+            selection.classed("selected", true)
+          }
           
           
           
@@ -191,8 +216,9 @@ function createLineChart(data, category = 'None') {
           
           console.log('Brushed Data:', filteredData);
 
-          dispatch.call('lineChartUpdate', null, filteredData); // Dispatch brushed data
-        }         
+          dispatch.call('lineChartUpdate', null, filteredData); // Dispatch brushed dat
+          
+        }
         
       }
     }
