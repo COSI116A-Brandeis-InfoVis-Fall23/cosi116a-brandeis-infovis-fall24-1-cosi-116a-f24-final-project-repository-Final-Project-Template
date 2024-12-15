@@ -53,8 +53,7 @@ d3.json("data/states.json", function(error, topologies) {  // (4)
     .html(`
       <strong>${name}</strong><br>
       <img src="images/${name}.png" alt="${name}" style="max-width: 100px; display: block; margin: 10px 0;">
-      <em>Additional info here...</em>
-    `);
+      `);
 })
 .on("mouseout", function () {
   // Hide the popup when the mouse leaves
