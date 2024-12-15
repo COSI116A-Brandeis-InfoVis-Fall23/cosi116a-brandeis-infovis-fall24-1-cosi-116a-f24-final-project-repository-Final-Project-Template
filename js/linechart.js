@@ -7,7 +7,7 @@ function createLineChart(data, category = 'None') {
   const margin = { top: 20, right: 80, bottom: 30, left: 70 };
   const width = 600 - margin.left - margin.right;
   const height = 300 - margin.top - margin.bottom;
-  const ptRadius = 3
+  const ptRadius = 2.5
 
   // Clear previous chart
   d3.select('#lineChart').selectAll('*').remove();
@@ -59,7 +59,7 @@ function createLineChart(data, category = 'None') {
     .attr("cx",width-150)
     .attr("cy",10)
     .attr("r", 5)
-    .style("fill", "black");
+    .style("fill", "#DAA520");
   svg.append("text")
     .attr("x", width-140)
     .attr("y", 10)
@@ -94,21 +94,6 @@ function createLineChart(data, category = 'None') {
     .attr("fill", "black")
     .attr("alignment-baseline","middle");
   }
-    
-    
-    /*
-  svg.append("circle")
-    .attr("cx",200)
-    .attr("cy",160)
-    .attr("r", 6).style("fill", "#404080");
-  
-  svg.append("text")
-    .attr("x", 220)
-    .attr("y", 160)
-    .text("variable B")
-    .style("font-size", "15px")
-    .attr("alignment-baseline","middle");*/
-  
 
 
 
@@ -132,7 +117,7 @@ function createLineChart(data, category = 'None') {
   svg.append('path')
     .datum(data)
     .attr('fill', 'none')
-    .attr('stroke', 'black')
+    .attr('stroke', '#DAA520')
     .attr('stroke-width', 2)
     .attr('d', ridershipLine);
 
@@ -140,7 +125,7 @@ function createLineChart(data, category = 'None') {
   svg.append('path')
     .datum(data)
     .attr('fill', 'none')
-    .attr('stroke', 'orange')
+    .attr('stroke', 'black')
     .attr('stroke-width', 2)
     .attr('d', covidLine);
     
