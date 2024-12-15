@@ -154,7 +154,7 @@ d3.json("data/updated geojson/updated_bostonV2_with_data.json", function (error,
 var gLineString = map.append("g").attr("class", "lines");
 // https://github.com/singingwolfboy/MBTA-GeoJSON source of json data for stops and lines
 // Load and render GeoJSON data for LineString
-d3.json("data/routes.json", function (error, lineData) {
+d3.json("data/routes clean.json", function (error, lineData) {
     if (error) {
         console.error("Error loading LineString GeoJSON:", error);
         return;

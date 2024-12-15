@@ -95,26 +95,6 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -71.047514,
-          42.352724
-        ]
-      },
-      "type": "Feature",
-      "properties": {
-        "area": "boston",
-        "lines": [
-          "silver",
-          "sl2",
-          "sl1"
-        ],
-        "id": "courthouse",
-        "name": "Courthouse"
-      }
-    },
-    {
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
           -71.099787,
           42.322893
         ]
@@ -749,26 +729,6 @@
         ],
         "id": "science-park",
         "name": "Science Park"
-      }
-    },
-    {
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -71.04206,
-          42.349098
-        ]
-      },
-      "type": "Feature",
-      "properties": {
-        "area": "boston",
-        "lines": [
-          "silver",
-          "sl2",
-          "sl1"
-        ],
-        "id": "world-trade-center",
-        "name": "World Trade Center"
       }
     },
     {
