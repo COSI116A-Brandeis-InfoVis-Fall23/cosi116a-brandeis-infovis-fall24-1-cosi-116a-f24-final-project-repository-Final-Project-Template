@@ -39,7 +39,8 @@ path.selected{
 
 .scatterPoint{
 	fill:black;
-	opacity:5;
+	opacity:0.5;
+
 }
 
 text{

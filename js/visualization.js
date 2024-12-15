@@ -33,10 +33,6 @@ let scatterData = Object.entries(rates["1999"]).map(([state, value], index) => (
   y: expectancy['1999'][state] //random val, placeholder
 }));
 
-// });
-// console.log("test")
-// console.log(scatterData);
-
 
 // Create and render the line chart
 let lcHeartDisease = linechart()
@@ -60,17 +56,14 @@ d3.selectAll("circle")
     // a div id selector to put our svg in; and the data to use.
 let scHeartDisease = scatterplot()
     .x(d => d.x)
-    // .xLabel("Age-Adjusted Heart Disease Death Rate in 1999")
-    .y(d => d.y) //this needs to change to the other data set. currently its using the same data for x and y axis
-    // .yLabel("Life Expectancy per State in 1999")
+    .y(d => d.y) 
     .yLabelOffset(150)
     
 scHeartDisease("#scatterplot", scatterData);
 
 
 
-
-//on mosuedown, highlight point on scatterplot and change linechart
+//on mousedown, highlight point on scatterplot and change linechart
 d3.selectAll("svg").on("mouseover", (d, i, elements) =>{          
   d3.selectAll("g path").on("mouseover", (d, i, elements) =>{     //shade states on mosueover
     d3.select(elements[i]).classed("mouseover", true);
