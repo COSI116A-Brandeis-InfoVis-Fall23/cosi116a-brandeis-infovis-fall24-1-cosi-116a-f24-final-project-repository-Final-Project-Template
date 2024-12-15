@@ -11,7 +11,7 @@ document.addEventListener("DOMContentLoaded", function () {
   // Heatmap configuration
   const heatmapConfig = {
     radius: 20,
-    maxOpacity: 0.6,
+    maxOpacity: 0.9,
     scaleRadius: false,
     useLocalExtrema: false,
     latField: "lat",
