@@ -1,34 +1,24 @@
-// Immediately Invoked Function Expression to limit access to our 
-// variables and prevent 
 ((() => {
-
-  // Load the data from a json file (you can make these using
-  // JSON.stringify(YOUR_OBJECT), just remove the surrounding "")
   d3.json("data/DoD_Budget.json", (data) => {
-
-    // General event type for selections, used by d3-dispatch
-    // https://github.com/d3/d3-dispatch
     const dispatchString = "selectionUpdated";
 
-
-    // Create a table given the following: 
-    // a dispatcher (d3-dispatch) for selection events; 
-    // a div id selector to put our table in; and the data to use.
+    // Create the table and heatmap instances
     let tableData = table()
       .selectionDispatcher(d3.dispatch(dispatchString))
-      ("#table", data); 
+      ("#table", data);
 
+    let heatmapData = map()
+      .selectionDispatcher(d3.dispatch(dispatchString))
+      ("#map", data);
 
-    // When the table is updated via brushing, tell the heatmap to update
-	tableData.selectionDispatcher().on(dispatchString, function(selectedData) {
-		//map.updateSelection(selectedData);
-		
-	});
-    // When heatmap is updated via brushing, tell the table to update
-	//map.selectionDispatcher().on(dispatchString, function(selectedData) {
-	//	tableData.updateSelection(selectedData);
-		
-	//});
-});
+    // When the table is updated via brushing, update the heatmap
+    tableData.selectionDispatcher().on(dispatchString, function(selectedData) {
+    //  heatmapData.updateSelection(selectedData.map(d => d.State)); // Ensure proper mapping
+    });
 
-})());
+    // When the heatmap is updated via brushing, update the table
+    heatmapData.selectionDispatcher().on(dispatchString, function(selectedData) {
+      tableData.updateSelection(selectedData);
+    });
+  });
+}))();
