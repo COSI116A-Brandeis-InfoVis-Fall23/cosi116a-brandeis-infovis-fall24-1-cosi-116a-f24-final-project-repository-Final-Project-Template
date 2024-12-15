@@ -193,8 +193,14 @@ circle.permaselected {
 	height: 500px;
 }
 
+/* This styles the screenshots of our final visualization */
+#finalVisMap, #finalVisLineChart, #finalVisScatterPlot{
+	width: 700px;
+	height: 400 px;
+	padding: 20px;
+}
 
-#figmaVisSketch, #handSketches { /* styles the Figma image*/
+#figmaVisSketch, #handSketches{ /* styles the Figma image*/
 	width: 100%; /* Set the width of the image */
 	height: 500px;/* Set the height of the image */
 }
@@ -238,3 +244,5 @@ circle.permaselected {
 		font-size: 12px;
 		text-align: center;
 	  }
+
+
