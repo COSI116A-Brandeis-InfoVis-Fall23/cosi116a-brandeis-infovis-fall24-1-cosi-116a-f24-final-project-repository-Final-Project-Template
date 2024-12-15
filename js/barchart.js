@@ -62,10 +62,11 @@ svg.append("rect")
     dispatch.call('barChartUpdate', null, "None"); // Pass the selected category
 });
 svg.append('text')
-    .attr("x", 10)
+    .attr("x", 35)
     .attr("y", -9)
     .text("RESET")
-    .style("font-size", "15px")
+    .style("font-size", "14px")
+    .style('text-anchor', 'middle')
     .attr("fill", "white")
     .attr("alignment-baseline","middle")
     .on('click', (d, event) => {
@@ -77,7 +78,7 @@ svg.append('text')
 
 
 
-  // Add axes
+  // Add axis
   svg.append('g')
     .attr('transform', `translate(0,${height})`)
     .call(d3.axisBottom(x))
