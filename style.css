@@ -71,7 +71,9 @@ path {
 	max-width: 650px;
 	margin: 40px auto;
 }
-
+map.state.selected{
+	fill : lightseagreen;
+}
 
 /* Style for selected marks (table rows) */
 tr.selected {

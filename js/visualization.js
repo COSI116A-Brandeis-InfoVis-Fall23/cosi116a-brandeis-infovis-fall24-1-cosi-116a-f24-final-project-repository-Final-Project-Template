@@ -1,6 +1,6 @@
 ((() => {
   d3.json("data/DoD_Budget.json", (data) => {
-    const dispatchString = "selectionUpdated";
+    var dispatchString = "selectionUpdated";
 
     // Create the table and heatmap instances
     let tableData = table()
@@ -13,7 +13,8 @@
 
     // When the table is updated via brushing, update the heatmap
     tableData.selectionDispatcher().on(dispatchString, function(selectedData) {
-    //  heatmapData.updateSelection(selectedData.map(d => d.State)); // Ensure proper mapping
+    // heatmapData.updateSelection(selectedData.map(d => d.State)); // Ensure proper mapping
+      heatmapData.updateSelection(selectedData);
     });
 
     // When the heatmap is updated via brushing, update the table

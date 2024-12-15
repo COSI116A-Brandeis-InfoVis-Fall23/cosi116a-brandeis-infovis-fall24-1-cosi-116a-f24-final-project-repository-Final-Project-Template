@@ -33,8 +33,9 @@ function map() {
         // Load and render states
         d3.json("data/states.json", function(error, topologies) {
             var state = topojson.feature(topologies[12], topologies[12].objects.stdin);
+            // console.log(state)
 
-            svgStates.selectAll("path")
+            var statepaths = svgStates.selectAll("path")
                 .data(state.features)
                 .enter()
                 .append("path")
@@ -42,12 +43,21 @@ function map() {
                 .style("fill", function (d) {
                     var name = d.properties.STATENAM.replace(" Territory", "");
                     return colors_state[name];
+
                 })
                 .on("mouseover", (event, d) => handleMouseOver(event, d, path, state))
                 .on("mouseout", handleMouseOut)
-                .append("title")
+                .on("click", handleClick(statepaths))
+
+                statepaths.append("title")
                 .text(d => d.properties.STATENAM);
+                // console.log(statepaths)
         });
+
+        function handleClick(statepaths){
+            d3.select(statepaths.select("path"))
+                .style("fill", "blue");
+            }
 
         // Update map colors dynamically
         function updateMapColors() {
@@ -69,8 +79,8 @@ function map() {
         // Event handlers for mouse interactions
         function handleMouseOver(event, d, path, state) {
 			var name = state.features[d].properties.STATENAM.replace(" Territory", ""); // OMG SO IMPORTANT
-
             var centroid = path.centroid(d);
+            // console.log(name);
 
             d3.select("#popup")
                 .style("display", "block")
@@ -81,6 +91,7 @@ function map() {
                     <img src="images/${name}.png" alt="${name}" style="max-width: 100px; display: block; margin: 10px 0;">
                     <em>Additional info here...</em>
                 `);
+          
         }
 
         function handleMouseOut() {
