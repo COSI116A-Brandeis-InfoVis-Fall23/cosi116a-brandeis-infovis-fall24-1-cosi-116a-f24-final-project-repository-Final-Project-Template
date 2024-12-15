@@ -22,9 +22,7 @@ function linechart() {
     yLabelOffsetPx = 0,
     xScale = d3.scalePoint(),
     yScale = d3.scaleLinear();
-    // ourBrush = null,
-    // selectableElements = d3.select(null),
-    // dispatcher;
+
 
   // Create the chart by adding an svg to the div with the id 
   // specified by the selector using the given data
@@ -45,9 +43,6 @@ function linechart() {
       .domain(d3.map(data, xValue).keys())
       .rangeRound([0, width]);
 
-    // let xScale = d3.scalePoint()
-    //     .domain(d3.range(1999, 2023)) // Creates an array of years from 1999 to 2022
-    //     .rangeRound([0, width]);
 
     yScale
       .domain([
@@ -116,29 +111,77 @@ function linechart() {
           .attr('year', getYear)
           .append("svg:title").text(getVal);
 
+    //create a legend
+    let legend = svg.append("g")
+      .attr("class", "legend")
+      .attr("transform", `translate(${width - 100}, 50)`);
 
+    //data for the legend
+    let legendData = [
+        {id: "state"},
+        { color: "red", stroke: "red", label: "Current Year on Map" }
+      ];
 
-        // .on("mouseover", (event, d) => {
-        //   console.log(d);  // This should now print the object, like { year: '1999', value: 302.97 }
-        //   tooltip
-        //     .style("visibility", "visible")
-        //     .text(`Year: ${d.year}, Value: ${d.value}`);
-        // })
-        // .on("mousemove", (event) => {
-        //   tooltip
-        //     .style("top", (event.pageY - 100) + "px")
-        //     .style("left", (event.pageX + 100) + "px");
-        // })
-        // .on("mouseout", () => {
-        //   tooltip.style("visibility", "hidden");
-        // });
+   // Add legend items
+  legend.selectAll(".legend-item")
+  .data(legendData)
+  .enter()
+  .append("g")
+  .attr("class", "legend-item")
+  .attr("transform", (d, i) => `translate(0, ${i * 20})`) 
+  .each(function (d) {
+    if (d.id === "state") { //function to display the state name and updated it when user clicks
+      d3.select(this)
+        .append("text")
+        .attr("x", 10) 
+        .attr("y", 5) 
+        .text(() => "Current State: " + document.getElementById("state").textContent) // gets state from HTML
+    } else { //create red circle legend item
+      d3.select(this)
+        .append("circle")
+        .attr("cx", 0)
+        .attr("cy", 0)
+        .attr("r", 6)
+        .style("fill", d.color)
+        .style("stroke", d.stroke)
+        .style("stroke-width", 2);
 
-
-    // selectableElements = points;
-
-    // svg.call(brush);
-      
-    // Highlight points when brushed
+      // Add label for the red legend item
+      d3.select(this)
+        .append("text")
+        .attr("x", 10) 
+        .attr("y", 5) 
+        .text(d.label)
+        .attr("alignment-baseline", "middle");
+    }
+  });
+    
+//     // Add legend item
+//     legend.selectAll(".legend-item")
+//       .data(legendData)
+//       .enter()
+//       .append("g")
+//       .attr("class", "legend-item")
+//       .attr("transform", (d, i) => `translate(0, ${i * 20})`) // Space out items vertically
+//       .each(function(d) {
+//         //adds colors to the legend
+//         d3.select(this)
+//           .append("circle")
+//           .attr("cx", 0)
+//           .attr("cy", 0)
+//           .attr("r", 6) 
+//           .style("fill", d.color)
+//           .style("stroke",d.stroke)
+//           .style("stroke-width", 2);
+//          // Add labels
+//         d3.select(this)
+//           .append("text")
+//           .attr("x", 10) 
+//           .attr("y", 5) 
+//           .text(d.id)
+//           .text(d.label)
+//           .attr("alignment-baseline", "middle");
+// });
 
     
     function brush(g) {

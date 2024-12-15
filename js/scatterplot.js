@@ -104,7 +104,7 @@ function scatterplot() {
     //create a legend
     let legend = svg.append("g")
       .attr("class", "legend")
-      .attr("transform", `translate(${width - 100}, 20)`);
+      .attr("transform", `translate(${width - 100}, 50)`);
 
     //data for the legend
     let legendData = [
