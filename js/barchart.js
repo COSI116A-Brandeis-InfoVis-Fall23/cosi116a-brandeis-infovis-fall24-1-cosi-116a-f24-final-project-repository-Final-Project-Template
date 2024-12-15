@@ -85,7 +85,8 @@ svg.append('text')
     .style('text-anchor', 'end') 
     .attr('dx', '-0.8em') 
     .attr('dy', '0.15em') 
-    .attr('transform', 'rotate(-45)');
+    .attr('transform', 'rotate(-45)')
+    .text(d => d.replace(/([a-z])([A-Z])/g, '$1 $2')); 
 
   svg.append('g').call(d3.axisLeft(y));
 }
