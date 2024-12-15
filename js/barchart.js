@@ -88,7 +88,26 @@ svg.append('text')
     .attr('transform', 'rotate(-45)');
 
   svg.append('g').call(d3.axisLeft(y));
+  
+  
+  
+  // adding axis label
+
+svg.append('text')
+  .attr('class', 'y-axis-label')
+  .attr('transform', 'rotate(-90)')
+  .attr('y', -30)
+  .attr('x', -height / 2) 
+  .style('text-anchor', 'middle')
+  .style('font-size', '14px')
+  .attr('fill', 'black')
+  .text('% of Pre-covid ridership');
+  
 }
+
+
+
+
 
 function showTooltip(event, content) {
   d3.select('.tooltip')

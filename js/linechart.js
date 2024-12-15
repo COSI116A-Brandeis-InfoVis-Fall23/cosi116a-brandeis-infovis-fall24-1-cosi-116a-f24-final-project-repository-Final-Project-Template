@@ -4,7 +4,7 @@ function createLineChart(data, category = 'None') {
     return;
   }
   console.log('Line Chart Data:', data);
-  const margin = { top: 20, right: 80, bottom: 30, left: 70 };
+  const margin = { top: 20, right: 90, bottom: 30, left: 90 };
   const width = 600 - margin.left - margin.right;
   const height = 300 - margin.top - margin.bottom;
   const ptRadius = 2.5
@@ -41,6 +41,7 @@ function createLineChart(data, category = 'None') {
     .attr('transform', `translate(0,${height})`)
     .call(d3.axisBottom(x).ticks(6));
 
+
   svg.append('g')
     .attr('class', 'y-axis-left')
     .call(d3.axisLeft(yLeft));
@@ -50,6 +51,27 @@ function createLineChart(data, category = 'None') {
     .attr('transform', `translate(${width},0)`)
     .call(d3.axisRight(yRight));
 
+//Y Axis Labels
+svg.append('text')
+  .attr('class', 'y-axis-label')
+  .attr('transform', 'rotate(-90)')
+  .attr('y', -70)
+  .attr('x', -height / 2) 
+  .style('text-anchor', 'middle')
+  .style('font-size', '14px')
+  .attr('fill', 'black')
+  .text('Weekly Transit Use');
+
+
+svg.append('text')
+  .attr('class', 'y-axis-label')
+  .attr('transform', 'rotate(90)') 
+  .attr('y', -(width +60) ) 
+  .attr('x', height/2) 
+  .style('text-anchor', 'middle')
+  .style('font-size', '14px')
+  .attr('fill', 'black')
+  .text('New Covid Cases');
 
 
 /*https://d3-graph-gallery.com/graph/custom_legend.html*/
@@ -63,7 +85,7 @@ function createLineChart(data, category = 'None') {
   svg.append("text")
     .attr("x", width-140)
     .attr("y", 10)
-    .text("Total Ridership")
+    .text("Total Usage")
     .style("font-size", "13px")
     .attr("fill", "black")
     .attr("alignment-baseline","middle");
@@ -201,27 +223,7 @@ function createLineChart(data, category = 'None') {
         
         
         const [x0, x1] = d3.event.selection;
-        
-   /*       const [
-            [x0, y0],
-            [x1, y1]
-          ] = d3.event.selection;*/
-        
-     /*
-        points.classed("selected", d =>
-          x0 <= x(d.week)+ptRadius && x(d.week)-ptRadius <= x1 && y0 <= yLeft(d.totalRidership)+ptRadius && yLeft(d.totalRidership)-ptRadius <= y1
-        );
-        
-        if ((x0 - x1 == 0) && (y0 - y1 == 0)) {
-          selection = svg.select(".selected")
-        } else {
-          selection = svg.selectAll(".selected")
-        }
-         single = (selection.data().length == 1)
-         */
-         
-         
-         
+  
          
          points.classed("selected", d =>
           x0 <= x(d.week) && x(d.week) <= x1
@@ -262,7 +264,6 @@ function createLineChart(data, category = 'None') {
           }
           
           
-          
           let filteredData = svg.selectAll(".selected").data();
           if (filteredData.length == 0) {
             filteredData =  svg.selectAll(".point").data();
@@ -276,62 +277,6 @@ function createLineChart(data, category = 'None') {
         
       }
     }
-
-  
-
-
-  /*
-  svg.selectAll('.point')
-    .data(data)
-    .enter()
-    .append('circle')
-    .attr('class', 'point')
-    .attr('cx', d => x(d.week))
-    .attr('cy', d => yLeft(d.totalRidership))
-    .attr('r', 3)
-    .attr('fill', 'steelblue')
-    .on('mouseover', (event, d) => {
-      if (d) {
-        showTooltip(event, `Week: ${d3.timeFormat('%B %d, %Y')(d.week)}<br>Total Ridership: ${d3.format(',')(d.totalRidership)}`);
-      } else {
-        console.error('Mouseover: Data is undefined.');
-      }
-    })
-    .on('click', (event, d) => {
-      if (d) {
-        console.log('Point clicked:', d);
-        dispatch.call('selectionUpdated', null, [d]);
-      } else {
-        console.error('Point clicked: Data is undefined.');
-      }
-    });*/
-
-/*
-const brush = d3.brushX()
-  .extent([[0, 0], [width, height]])
-  .on('end', function (event) {
-    const selection = event.selection;
-    if (!selection) {
-      console.warn('Brush cleared. Resetting line chart.');
-      dispatch.call('selectionUpdated', null, mergedData); // Reset to full data
-      return;
-    }
-
-    const [x0, x1] = selection.map(x.invert); // Map pixel values to the time domain
-    const filteredData = mergedData.filter(d => d.week >= x0 && d.week <= x1);
-    console.log('Brushed Data:', filteredData);
-
-    dispatch.call('selectionUpdated', null, filteredData); // Dispatch brushed data
-  });
-
-svg.append('g')
-  .attr('class', 'brush')
-  .call(brush);*/
-  
-  
-  
-  
-  
 }
 
 
