@@ -17,14 +17,14 @@ document.addEventListener("DOMContentLoaded", function () {
     latField: "lat",
     lngField: "lng",
     valueField: "value",
-    gradient: {
-      0.0: "blue",
-      0.2: "cyan",
-      0.4: "lime",
-      0.6: "yellow",
-      0.8: "orange",
-      1.0: "red"
-    },
+    // gradient: {
+    //   0.0: "blue",
+    //   0.2: "cyan",
+    //   0.4: "lime",
+    //   0.6: "yellow",
+    //   0.8: "orange",
+    //   1.0: "red"
+    // },
   };
 
 
