@@ -179,7 +179,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
             // Create tooltips
             const marker = L.circleMarker([lat, lng], {
-              radius: 3,
+              radius: 2.5,
               color: "black",
               weight: 1,
               fillColor: "white",
