@@ -132,6 +132,8 @@ function renderSankey(data) {
         })
         .on('mouseover', function (event, d) {
             // Show tooltip and highlight link.
+            //check if link should be highlighted
+            if(selectedFuelTypes.includes(d.source.name) || selectedFuelTypes.length === 0){
             const milesInMillions = (d.value / 1e6).toFixed(1);
             const tooltipMiles = `${milesInMillions}M`;
             d3.select(this).style('opacity', 1);
@@ -140,19 +142,20 @@ function renderSankey(data) {
                  <strong>Fuel Source:</strong> ${d.source.name}<br>
                  <strong>Mode:</strong> ${d.target.name}`
             ).style("visibility", "visible");
-        })
+        }})
         .on("mousemove", function(event) {
             tooltip.style("top", `${event.pageY - 100}px`)
                    .style("left", `${event.pageX - 100}px`);
         })
         .on('mouseout', function (event, d) {
             // Reset opacity based on brushing selection.
+            if(selectedFuelTypes.includes(d.source.name) || selectedFuelTypes.length === 0){
             const opacity = (window.currentBrushSelection.length > 0) ?
                 (window.currentBrushSelection.includes(d.source.name) ? 1 : 0.2) :
                 0.5;
             d3.select(this).style('opacity', opacity);
             tooltip.style("visibility", "hidden");
-        });
+        }});
           
 
     // Draws the nodes.
@@ -172,17 +175,19 @@ function renderSankey(data) {
         return (window.currentBrushSelection.length > 0) ?
          (window.currentBrushSelection.includes(d.name) ? 1 : 0.2) :1;})
         .on('mouseover', function (event, d) {
+            if(selectedFuelTypes.includes(d.name) || selectedFuelTypes.length === 0){
             d3.select(this).style('opacity', 1);
             tooltip.html(`<strong>Node:</strong> ${d.name}`)
-          .style("visibility", "visible");})
+          .style("visibility", "visible");}})
         .on("mousemove", function(event) {
             tooltip.style("top", `${event.pageY - 100}px`)
            .style("left", `${event.pageX - 100}px`);})
         .on('mouseout', function (event, d) {
+            if(selectedFuelTypes.includes(d.name) || selectedFuelTypes.length === 0){
           const opacity = (window.currentBrushSelection.length > 0) ?
            (window.currentBrushSelection.includes(d.name) ? 1 : 0.2) : 1;
              d3.select(this).style('opacity', opacity);
-             tooltip.style("visibility", "hidden");});
+             tooltip.style("visibility", "hidden");}});
         
     // Adds the labels on the right and left side.
     svg
