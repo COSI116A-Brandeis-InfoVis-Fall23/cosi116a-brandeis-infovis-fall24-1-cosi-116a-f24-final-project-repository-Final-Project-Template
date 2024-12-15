@@ -31,10 +31,10 @@ function map() {
         });
 
         // Load and render states
+        var svgStates = svg.append("g").attr("id", "states");
+
         d3.json("data/states.json", function(error, topologies) {
             var state = topojson.feature(topologies[12], topologies[12].objects.stdin);
-
-
             var statepaths = svgStates.selectAll("path")
                 .data(state.features)
                 .enter()
@@ -42,16 +42,15 @@ function map() {
                 .attr("d", path)
                 .style("fill", function (d) {
                     var name = d.properties.STATENAM.replace(" Territory", "");
-                    // console.log(name)
                     return colors_state[name];
 
                 })
                 .on("mouseover", (event, d) => handleMouseOver(event, d, path, state))
                 .on("mouseout", handleMouseOut)
                 .on("click", function (event, d) {
-                    const stateName = d3.select(this).select("title").text().replace(" Territory", ""); // Access the title tag
+                    var stateName = d3.select(this).select("title").text().replace(" Territory", ""); // Access the title tag
                     console.log("Clicked state:", stateName); // Debugging log
-                
+
                     d3.select(this)
                         .style("fill", "#0000FF"); // Highlight the state in blue
                 
@@ -71,8 +70,6 @@ function map() {
             var name = state.features[d].properties.STATENAM.replace(" Territory", ""); // OMG SO IMPORTANT
             var centroid = path.centroid(d);
             // state.features.forEach((feature, index) => {
-            //     console.log(`Feature ${index}:`, feature);
-            //     console.log("Properties:", feature.properties);
             // });
             
             // handleMouseClick(event, d, state);
@@ -83,7 +80,6 @@ function map() {
                 .html(`
                     <strong>${name}</strong><br>
                     <img src="images/${name}.png" alt="${name}" style="max-width: 100px; display: block; margin: 10px 0;">
-                    <em>Additional info here...</em>
                 `);
             
            
@@ -92,17 +88,12 @@ function map() {
 
         function handleMouseClick(event, d){
             
-            // console.log("Clicked state:", d.properties.STATENAM);
-
             // d3.select(event.currentTarget)
             //     .style("fill", () => {
             //         var name = d.properties.STATENAM.replace(" Territory", "");
-            //         console.log("Highlight color for", name, ":", colors_highlight[name]);
             //         return colors_highlight[name] || "#0000ff"; // Default blue for testing
             //     });
             
-            var style = d.path.style;
-            console.log(style);
             
             // svgStates.selectAll("path")
             // .data(state.features)
@@ -111,7 +102,6 @@ function map() {
             // .attr("d", path)
             // .style("fill", function (d) {
             //     var name = d.properties.STATENAM.replace(" Territory", "");
-            //     // console.log(name)
             //     return colors_highlight[name];
             // });
             
@@ -191,8 +181,20 @@ function map() {
     // Links selected data to the map (if integrating with other components)
     chart.updateSelection = function (selectedData) {
         if (!arguments.length) return;
+        if (selectedData === undefined || selectedData == null || selectedData.length == 0) {
+            return;
+        }
+        else {
+            for (let i = 0; i < selectedData.length; i++) {
+                if (selectedData[i] != undefined && selectedData[i] != null){
+                    console.log("Selected state:", selectedData[i].State); // Debugging log
+                    d3.select(selectedData[i].State).style("fill", "#0000FF"); // Highlight the state in blue
 
+                }
+            }
+    }
         d3.selectAll(".state").classed("selected", d => selectedData.includes(d.properties.STATENAM.replace(" Territory", "")));
+
     };
 
     return chart;

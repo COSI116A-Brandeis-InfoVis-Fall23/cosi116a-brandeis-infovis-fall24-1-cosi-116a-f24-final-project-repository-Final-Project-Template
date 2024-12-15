@@ -1,13 +1,15 @@
 /* global D3 */
 
+var rows;
+
 function table() {
 
   // Based on Mike Bostock's margin convention
   // https://bl.ocks.org/mbostock/3019563
    
-    let ourBrush = null,
-    selectableElements = d3.select(null),
-    dispatcher;
+	let ourBrush = null,
+		selectableElements = d3.select(null),
+		dispatcher;
   
 	
   // Create the chart by adding an svg to the div with the id 
@@ -37,7 +39,7 @@ function table() {
 	let tbody = table.append("tbody");
 
 	// Append a <tr> for each item in data, then append <td> cells within each <tr>
-	let rows = tbody.selectAll("tr")
+	rows = tbody.selectAll("tr")
 		.data(data)
 		.enter()
 		.append("tr");
@@ -52,7 +54,7 @@ function table() {
     // and when the mouse is down, keep track of any rows that have been mouseover'd
 	
 	let isMouseDown = false;
-
+	
 	d3.selectAll("tr")
 	.on("mousedown", function () {
 		//Clears all rows of being selected
@@ -60,12 +62,12 @@ function table() {
 		
 		//Instantiates a dispatch string, and dispatches that all rows are no longer selected
 		let dispatchString = Object.getOwnPropertyNames(dispatcher._)[0];
+
 		dispatcher.call(dispatchString, this, d3.select("tr").data());
-
-
+		
 		//Sets the row clicked to selected
 		d3.select(this).classed("selected", true);
-		
+		console.log("yup:",this)
 		//Dispatches the row that it was selected
 		dispatcher.call(dispatchString, this, d3.selectAll(".selected").data());
 		
@@ -77,8 +79,7 @@ function table() {
 	.on("mouseover", function () {
 		if (isMouseDown) {
 			//If the mouse is down and is on the row, make it selected
-			d3.select(this).classed("selected", true);
-			
+			d3.select(this).classed("selected", true);			
 			//Instantiates the dispatch string, and dispatches all rows selected
 			let dispatchString = Object.getOwnPropertyNames(dispatcher._)[0];
 			dispatcher.call(dispatchString, this, d3.selectAll(".selected").data());
@@ -86,7 +87,7 @@ function table() {
 		else{
 			//If mouse is up and goes over a selected row, make the background color red
 			if (d3.select(this).classed("selected")){
-				d3.select(this).style("background-color", "red")
+				d3.select(this).style("background-color", "blue")
 			}
 			//If mouse is up and goes over a unselected row, make the background color gray
 			else{
@@ -116,11 +117,28 @@ function table() {
   // select the relevant elements here (linking)
   chart.updateSelection = function (selectedData) {
     if (!arguments.length) return;
-
     // Select an element if its datum was selected
     d3.selectAll('tr').classed("selected", d => {
-	return selectedData.includes(d)
-    });
+		if (selectedData === undefined || selectedData == null || selectedData.length == 0) {
+            return;
+        }
+        else {
+            for (let i = 0; i < selectedData.length; i++) {
+                if (selectedData[i] != undefined && selectedData[i] != null){
+                    console.log("Selected state:", selectedData[i].State); // Debugging log
+					for (let j = 0; j < rows._groups[0].length; j++){
+						if (rows._groups[0][j].__data__.State == selectedData[i]){
+							d3.select(rows._groups[0][j].__data__).classed("selected", true) //highlight the row in the table
+						}
+
+						
+                }
+			}
+            }
+    }
+	d3.selectAll('tr').classed("selected", d => {
+		return selectedData.includes(d)
+	  });    });
   };
   
 	

@@ -4,20 +4,19 @@
 
     // Create the table and heatmap instances
     let tableData = table()
-      .selectionDispatcher(d3.dispatch(dispatchString))
-      ("#table", data);
+    .selectionDispatcher(d3.dispatch(dispatchString))
+    ("#table", data);
 
     let heatmapData = map()
       .selectionDispatcher(d3.dispatch(dispatchString))
       ("#map", data);
 
-    tableData.selectionDispatcher().on(dispatchString, function (selectedData) {
-      // console.log("Selected table data:", ); // Debugging log
-    
-      // Map table rows to state names and update the heatmap
-      heatmapData.updateSelection(selectedData.map(d => d?.State)); 
-  });
-  
+  tableData.selectionDispatcher().on(dispatchString, function (selectedData) {
+    console.log("Selected table data:", selectedData); // Debugging log
+    // Map table rows to state names and update the heatmap
+    heatmapData.updateSelection(selectedData); 
+});
+
   heatmapData.selectionDispatcher().on(dispatchString, function (selectedData) {
       console.log("Selected map data:", selectedData); // Debugging log
       // Update the table based on state selection
