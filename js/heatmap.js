@@ -102,7 +102,7 @@ document.addEventListener("DOMContentLoaded", function () {
           return;
         }
 
-        // Aggregate ridership for each location
+        // Aggregate ridership and associate with features
         const locationMap = new Map();
 
         filteredData.forEach((feature) => {
@@ -110,20 +110,41 @@ document.addEventListener("DOMContentLoaded", function () {
           const ridership = feature.properties.Ridership;
 
           if (locationMap.has(coordsKey)) {
-            locationMap.set(coordsKey, locationMap.get(coordsKey) + ridership);
+            const existing = locationMap.get(coordsKey);
+            existing.value += ridership;
           } else {
-            locationMap.set(coordsKey, ridership);
+            locationMap.set(coordsKey, {
+              value: ridership,
+              feature, // Store the feature object for tooltips
+            });
           }
         });
 
         // Calculate dynamic max scaling
-        const maxRidership = Math.max(...Array.from(locationMap.values()));
+        const maxRidership = Math.max(...Array.from(locationMap.values()).map((entry) => entry.value));
 
         // Prepare heatmap data
+        const tooltipLayer = L.layerGroup().addTo(map);
         const heatmapData = {
           max: maxRidership,
-          data: Array.from(locationMap.entries()).map(([coords, value]) => {
+          data: Array.from(locationMap.entries()).map(([coords, { value, feature }]) => {
             const [lat, lng] = coords.split(",").map(Number);
+
+            // Create tooltips
+            const marker = L.circleMarker([lat, lng], {
+              radius: 3,
+              color: "black",
+              weight: 1,
+              fillColor: "white",
+              fillOpacity: 0.7,
+            })
+              .bindTooltip(
+                `<strong>Station:</strong> ${feature.properties.Station || "Unknown"}<br>` +
+                `<strong>Total Ridership:</strong> ${value}`,
+                { permanent: false, direction: "top" }
+              )
+              .addTo(tooltipLayer);
+
             return { lat, lng, value };
           }),
         };
@@ -131,6 +152,7 @@ document.addEventListener("DOMContentLoaded", function () {
         // Update the heatmap
         heatmapLayer.setData(heatmapData);
       };
+
 
       // Add event listeners
       startDateSelect.addEventListener("change", updateHeatmap);
