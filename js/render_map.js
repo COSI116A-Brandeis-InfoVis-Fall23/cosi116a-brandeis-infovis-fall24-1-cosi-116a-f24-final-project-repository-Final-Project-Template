@@ -30,6 +30,11 @@ function map() {
                 .attr("d", path)
         });
 
+
+        let isMouseDown = false;
+
+        let selectedStates = new Set();
+
         // Load and render states
         d3.json("data/states.json", function(error, topologies) {
             var state = topojson.feature(topologies[12], topologies[12].objects.stdin);
@@ -46,51 +51,98 @@ function map() {
                     return colors_state[name];
 
                 })
-                .on("mouseover", (event, d) => handleMouseOver(event, d, path, state))
+                // .on("mouseover", (event, d) => handleMouseOver(event, d, path, state))
                 .on("mouseout", handleMouseOut)
-                .on("click", function (event, d) {
-                    const stateName = d3.select(this).select("title").text().replace(" Territory", ""); // Access the title tag
-                    console.log("Clicked state:", stateName); // Debugging log
+                .on("click", handleStateClick)
+                // .on("mousedown", handleMouseDown)
+                // .on("mouseup", handleMouseUp)
+                // .on("mouseover", handleMouseOver)
                 
-                    d3.select(this)
-                        .style("fill", "#0000FF"); // Highlight the state in blue
-                
-                    // Dispatch the state name
-                    let dispatchString = Object.getOwnPropertyNames(dispatcher._)[0];
-                    dispatcher.call(dispatchString, this, [stateName]);                    
-                });
-                statepaths.append("title")
-                .text(d => d.properties.STATENAM);
+                statepaths.append("title").text(d => d.properties.STATENAM);
 
             
-                
         });
+        // function handleMouseDown(event, d) {
+        //     d3.selectAll(this).classed("selected", false);
 
-        // Event handlers for mouse interactions
-        function handleMouseOver(event, d, path, state) {
-            var name = state.features[d].properties.STATENAM.replace(" Territory", ""); // OMG SO IMPORTANT
-            var centroid = path.centroid(d);
-            // state.features.forEach((feature, index) => {
-            //     console.log(`Feature ${index}:`, feature);
-            //     console.log("Properties:", feature.properties);
-            // });
+        //     var stateName = d3.select(this).select("title").text().replace(" Territory", ""); // Access the title tag
+
+        //     let dispatchString = Object.getOwnPropertyNames(dispatcher._)[0];
+
+        //     dispatcher.call(dispatchString, this, [stateName]);
+
+
+        //     d3.select(this).classed("selected", true);
+        //     dispatcher.call(dispatchString, this, [stateName]);
+
+        //     isMouseDown = true;
+        // }
+
+        // function handleMouseUp(event, d) {
+        //     isMouseDown = false;
+        // }
+
+        // function handleMouseOver(event, d) {
+        //     if (isMouseDown){
+                
+        //         d3.select(this).classed("selected", true);
+
+        //         var stateName = d3.select(this).select("title").text().replace(" Territory", ""); // Access the title tag
+
+        //         selectedStates.add(stateName);
+                
+
+        //         // let dispatchString = Object.getOwnPropertyNames(dispatcher._)[0];
+
+        //         // dispatcher.call(dispatchString, this, Array.from(selectedStates));
+
+        //     }
+        //     let dispatchString = Object.getOwnPropertyNames(dispatcher._)[0];
+
+        //     dispatcher.call(dispatchString, this, Array.from(selectedStates));
+
+
+        // }
+
+       
+
+        function handleStateClick(event, d) {
+            var stateName = d3.select(this).select("title").text().replace(" Territory", ""); // Access the title tag
+            // console.log("Clicked state:", stateName); // Debugging log
+            d3.select(this).style("fill", "#0000FF"); // Highlight the state in blue
+        
+            // Dispatch the state name
+            let dispatchString = Object.getOwnPropertyNames(dispatcher._)[0];
+            dispatcher.call(dispatchString, this, [stateName]);
+        }
+
+
+
+        // // Event handlers for mouse interactions
+        // function handleMouseOver(event, d, path, state) {
+        //     var name = state.features[d].properties.STATENAM.replace(" Territory", ""); // OMG SO IMPORTANT
+        //     var centroid = path.centroid(d);
+        //     // state.features.forEach((feature, index) => {
+        //     //     console.log(`Feature ${index}:`, feature);
+        //     //     console.log("Properties:", feature.properties);
+        //     // });
             
-            // handleMouseClick(event, d, state);
-            d3.select("#popup")
-                .style("display", "block")
-                .style("left", `${centroid[0]}px`)
-                .style("top", `${centroid[1] - 60}px`)
-                .html(`
-                    <strong>${name}</strong><br>
-                    <img src="images/${name}.png" alt="${name}" style="max-width: 100px; display: block; margin: 10px 0;">
-                    <em>Additional info here...</em>
-                `);
+        //     // handleMouseClick(event, d, state);
+        //     d3.select("#popup")
+        //         .style("display", "block")
+        //         .style("left", `${centroid[0]}px`)
+        //         .style("top", `${centroid[1] - 60}px`)
+        //         .html(`
+        //             <strong>${name}</strong><br>
+        //             <img src="images/${name}.png" alt="${name}" style="max-width: 100px; display: block; margin: 10px 0;">
+        //             <em>Additional info here...</em>
+        //         `);
             
            
-        }
+        // }
         
 
-        function handleMouseClick(event, d){
+        // function handleMouseClick(event, d){
             
             // console.log("Clicked state:", d.properties.STATENAM);
 
@@ -101,8 +153,7 @@ function map() {
             //         return colors_highlight[name] || "#0000ff"; // Default blue for testing
             //     });
             
-            var style = d.path.style;
-            console.log(style);
+            
             
             // svgStates.selectAll("path")
             // .data(state.features)
@@ -153,7 +204,7 @@ function map() {
                 
             // }
         
-            }
+            // }
 
         // Update map colors dynamically
         function updateMapColors() {
@@ -191,8 +242,8 @@ function map() {
     // Links selected data to the map (if integrating with other components)
     chart.updateSelection = function (selectedData) {
         if (!arguments.length) return;
-
-        d3.selectAll(".state").classed("selected", d => selectedData.includes(d.properties.STATENAM.replace(" Territory", "")));
+        
+        // d3.selectAll(".state").classed("selected", d => selectedData.includes(d.properties.STATENAM.replace(" Territory", "")));
     };
 
     return chart;

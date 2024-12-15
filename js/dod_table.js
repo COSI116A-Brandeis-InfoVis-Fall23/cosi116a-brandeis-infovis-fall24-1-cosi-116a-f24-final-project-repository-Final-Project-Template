@@ -17,40 +17,36 @@ function table() {
       .append("table")
 		.classed("my-table", true);
 
-    // Here, we grab the labels of the first item in the dataset
-    //  and store them as the headers of the table.
+	// Append a <thead> to the table and a <tr> to the thead
     let tableHeaders = Object.keys(data[0]);
 	
-    // You should append these headers to the <table> element as <th> objects inside
-    // a <th>
-    // See https://developer.mozilla.org/en-US/docs/Web/HTML/Element/table
+    
 	
     let tr = table.append('thead').append('tr')
     tr.selectAll('th').data(tableHeaders).enter().append('th').text((d) => d);
-	
-    // Then, you add a row for each row of the data.  Within each row, you
-    // add a cell for each piece of data in the row.
-    // HINTS: For each piece of data, you should add a table row.
-    // Then, for each table row, you add a table cell.  You can do this with
-    // two different calls to enter() and data(), or with two different loops.
-	
+
 	let tbody = table.append("tbody");
 
-	// Append a <tr> for each item in data, then append <td> cells within each <tr>
+	// Append a <tr> for each item in data
 	let rows = tbody.selectAll("tr")
 		.data(data)
 		.enter()
-		.append("tr");
-		
+		.append("tr")
+		.attr("id", function(d){ //VERY IMPORTANT: This is how we can select the row by the state name
+			return d.State;
+		});
+		 
+
+	
+	
+
+	// Append <td> cells to each <tr>
 	rows.selectAll("td")
 		.data(d => Object.values(d))  // Use the values of each data object
 		.enter()
 		.append("td")
-		.text(d => d);
-	
-    // HINT for brushing on the table: keep track of whether the mouse is down or up, 
-    // and when the mouse is down, keep track of any rows that have been mouseover'd
-	
+		.text(d => d)
+    
 	let isMouseDown = false;
 
 	d3.selectAll("tr")
@@ -61,13 +57,14 @@ function table() {
 		//Instantiates a dispatch string, and dispatches that all rows are no longer selected
 		let dispatchString = Object.getOwnPropertyNames(dispatcher._)[0];
 		dispatcher.call(dispatchString, this, d3.select("tr").data());
-
+		
 
 		//Sets the row clicked to selected
 		d3.select(this).classed("selected", true);
-		
+
 		//Dispatches the row that it was selected
 		dispatcher.call(dispatchString, this, d3.selectAll(".selected").data());
+
 		
 		isMouseDown = true;
 	})
@@ -78,10 +75,11 @@ function table() {
 		if (isMouseDown) {
 			//If the mouse is down and is on the row, make it selected
 			d3.select(this).classed("selected", true);
-			
+
 			//Instantiates the dispatch string, and dispatches all rows selected
 			let dispatchString = Object.getOwnPropertyNames(dispatcher._)[0];
 			dispatcher.call(dispatchString, this, d3.selectAll(".selected").data());
+
 		}
 		else{
 			//If mouse is up and goes over a selected row, make the background color red
@@ -117,12 +115,18 @@ function table() {
   chart.updateSelection = function (selectedData) {
     if (!arguments.length) return;
 
-    // Select an element if its datum was selected
-    d3.selectAll('tr').classed("selected", d => {
-	return selectedData.includes(d)
+      // Select all table rows
+	  d3.selectAll('tr').classed("selected", function () {
+        // Get the id of the current row
+        let rowId = d3.select(this).attr('id');
+
+        // Check if the row's id matches the selectedData (state name)
+        return rowId === selectedData;
     });
-  };
-  
+	
+
+}
+		
 	
 	
   return chart;
