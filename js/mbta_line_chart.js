@@ -122,19 +122,16 @@ d3.json("data/Fuel_and_Energy_cleaned.json").then((data) => {
                             window.selectedFuelTypes.length === 0 ||
                                 window.selectedFuelTypes.includes(fuelType)
                                 ? 1
-                                : 0.05
+                                : 0.25
                         );
 
-                    // const linesprint = svg.selectAll(".line")
-                    // console.log(linesprint)
-                    // circles = svg.selectAll(".point")
-                    // console.log(linesprint)
+                    
                     svg.selectAll(".point")
                         .style("opacity", function (d) {
                             return window.selectedFuelTypes.length === 0 ||
                                 window.selectedFuelTypes.includes(d.FuelType)
                                 ? 1
-                                : 0.01
+                                : 0.1
                         }
                         );
                     // Updates the Sankey diagram 
@@ -148,18 +145,19 @@ d3.json("data/Fuel_and_Energy_cleaned.json").then((data) => {
                 .attr("stroke-width", 2)
                 .attr("d", line(values));
 
+            //adds points to each data point
             for (const element of nestedData) {
                 svg.selectAll(".circle")
                     .data(element[1])
                     .enter()
                     .append("circle")
                     .attr("class", "point")
-                    // .style("opacity", 0.05)
                     .attr("cx", function (d) { return xScale(d.Year) })
                     .attr("cy", function (d) { return yScale(d.Miles) })
                     .attr("r", 3)
                     .on('mouseover', function (event, d) {
-                        // Show tooltip
+                        // check if tooltip should appear and shows tooltip
+                        if(selectedFuelTypes.includes(d.FuelType) || selectedFuelTypes.length === 0){
                         const milesInMillions = (d.Miles / 1e6).toFixed(1);
                         const tooltipMiles = `${milesInMillions}M`;
                         tooltip.html(
@@ -167,7 +165,7 @@ d3.json("data/Fuel_and_Energy_cleaned.json").then((data) => {
                                                 <strong>Miles Traveled:</strong> ${tooltipMiles}<br>
                                                  <strong>Fuel Source:</strong> ${d.FuelType}`
                         ).style("visibility", "visible");
-                    })
+                    }})
                     .on("mousemove", function (event) {
                         tooltip.style("top", `${event.pageY - 100}px`)
                             .style("left", `${event.pageX - 100}px`);
@@ -180,122 +178,6 @@ d3.json("data/Fuel_and_Energy_cleaned.json").then((data) => {
 
 
         });
-
-    // Add the points
-
-    // point generator
-    // const point = d3.circle()
-    // .x((d) => xScale(d.Year))
-    // .y((d) => yScale(d.Miles));
-
-    // let points = svg.selectAll(".point")
-    // .data(aggregatedData)
-    //     .enter()
-    //     .append("g")
-    //     .x((d) => xScale(d.Year))
-    //     .y((d) => yScale(d.Miles)); 
-    //     // .attr("class", "circle")
-    //     // .each(function ([fuelType, values]) {
-    //     const group = d3.select(this);
-
-
-    // svg.selectAll("pointcircles")
-    // .data(aggregatedData)
-    // .enter()
-    // .append("circle")
-    //   .attr("fill", "red")
-    //   .attr("stroke", "none")
-    //   .attr("cx", function(d) { return x(d.date) })
-    //   .attr("cy", function(d) { return y(d.value) })
-    //   .attr("r", 3)
-
-    // console.log(data)
-    // console.log(aggregatedData)
-    // console.log(nestedData)
-
-
-    // console.log(nestedData)
-
-
-
-    // for (const element of nestedData) {
-    //     svg.selectAll(".circle")
-    //         .data(element[1])
-    //         .enter()
-    //         .append("circle")
-    //         .attr("cx", function(d){return xScale(d.Year)})
-    //         .attr("cy", function(d){return yScale(d.Miles)})
-    //         .attr("r",3)
-    //         .on('mouseover', function (event, d) {
-    //             // console.log(d)
-    //             // Show tooltip
-    //             const milesInMillions = (d.Miles / 1e6).toFixed(1);
-    //             const tooltipMiles = `${milesInMillions}M`;
-    //             tooltip.html(
-    //                 `<strong>Year:</strong> ${d.Year}<br>
-    //                                 <strong>Miles Traveled:</strong> ${tooltipMiles}<br>
-    //                                  <strong>Fuel Source:</strong> ${d.FuelType}`
-    //             ).style("visibility", "visible");
-    //         })
-    //         .on("mousemove", function (event) {
-    //             tooltip.style("top", `${event.pageY - 100}px`)
-    //                 .style("left", `${event.pageX - 100}px`);
-    //         })
-    //         .on('mouseout', function (event, d) {
-    //             tooltip.style("visibility", "hidden");
-    //         });
-    // }
-
-
-
-
-
-
-    //     svg.selectAll(".point")
-    //     .data(nestedData)
-    //     .enter()
-    //     .append("g") 
-    //     .attr("class", "point")
-    //     .each(function ([fuelType, values]) {
-    //         const group = d3.select(this);
-    //         console.log(values)
-    //         group.append("circle")
-    //             .attr("class", "circle")
-    //             .attr("fill", colorScale(fuelType))
-    //             .attr("stroke", "none")
-    //             // .attr("cx", )
-    //             // .attr("cx", function(d) { return x(xScale(d.Year)) })
-    //             // .attr("cy", function(d) { return y(yScale(d.Miles)) })
-    //             .attr("r", 3)
-    //             // .attr("Year", values[])
-    //             .on('mouseover', function (event, d) {
-    //                 console.log(this)
-    //                 // Show tooltip and highlight link.
-    //                 const milesInMillions = (values.Miles / 1e6).toFixed(1);
-    //                 const tooltipMiles = `${milesInMillions}M`;
-    //                 d3.select(this).style('opacity', 1);
-    //                 tooltip.html(
-    //                     `<strong>Year:</strong> ${values.year}<br>
-    //                     <strong>Miles Traveled:</strong> ${tooltipMiles}<br>
-    //                      <strong>Fuel Source:</strong> ${values.FuelType}`
-    //                 ).style("visibility", "visible");
-    //             })
-    //             .on("mousemove", function(event) {
-    //                 tooltip.style("top", `${event.pageY - 100}px`)
-    //                        .style("left", `${event.pageX - 100}px`);
-    //             })
-    //             .on('mouseout', function (event, d) {
-    //                 // Reset opacity based on brushing selection.
-    //                 const opacity = (window.currentBrushSelection.length > 0) ?
-    //                     (window.currentBrushSelection.includes(d.source.name) ? 1 : 0.2) :
-    //                     0.5;
-    //                 d3.select(this).style('opacity', opacity);
-    //                 tooltip.style("visibility", "hidden");
-    //             });
-
-
-
-    // });
 
 
     // Creates legend
