@@ -15,26 +15,25 @@ h3 {
 
 /* Your text should be in a nice narrow column */
 .content-column {
-	max-width: 650px;
+	max-width: 900px;
 	margin: 40px auto;
 }
 /* Set a container with a responsive aspect ratio */
 .iframe-container {
 	position: relative;
-	width: 100%;
-	/* Full width of the parent element */
-	max-width: 800px;
-	/* Optional: set a max width */
-	height: 0;
+	width: 100%; /* Full width of the parent element */
+	/* max-width: 800px; Optional: set a max width */
+	height: 650px;
 	padding-bottom: 75%;
 	/* Aspect ratio: 4:3 (adjust as needed) */
-	overflow: hidden;
+	overflow: auto;
 	border: #ccc 1px solid;
 	border-radius: 5px;
 	margin: 0 auto;
 	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 	background-color: #f9f9f9;
 	margin-bottom: 20px;
+
 }
 
 /* Style the iframe to fit the container */
@@ -44,8 +43,10 @@ h3 {
 	left: 0;
 	width: 100%;
 	height: 100%;
-	border: none;
-	/* Removes iframe border */
+	border: none; /* Removes iframe border */
+	transform: scale(1.3); 
+    transform-origin: 25% 30%; /* Zoom from the top-left corner */
+	
 }
 
 #vis-container {
