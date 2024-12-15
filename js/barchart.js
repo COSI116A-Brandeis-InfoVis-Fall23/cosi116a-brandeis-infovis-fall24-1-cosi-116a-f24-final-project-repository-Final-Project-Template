@@ -48,6 +48,35 @@ function createBarChart(data) {
 });
 
 
+
+
+//Add reset button
+svg.append("rect")
+  .attr('x', 0)
+  .attr('y', -20)
+  .attr('width', 70)
+  .attr('height', 20)
+  .attr('fill', 'black')
+  .on('click', (d, event) => {
+    console.log('reset');
+    dispatch.call('barChartUpdate', null, "None"); // Pass the selected category
+});
+svg.append('text')
+    .attr("x", 10)
+    .attr("y", -9)
+    .text("RESET")
+    .style("font-size", "15px")
+    .attr("fill", "white")
+    .attr("alignment-baseline","middle")
+    .on('click', (d, event) => {
+    console.log('reset');
+    dispatch.call('barChartUpdate', null, "None"); // Pass the selected category
+});
+
+
+
+
+
   // Add axes
   svg.append('g')
     .attr('transform', `translate(0,${height})`)
@@ -68,6 +97,9 @@ function showTooltip(event, content) {
     .style('left', `${event.pageX + 10}px`)
     .html(content);
 }
+
+
+
 
 function hideTooltip() {
   d3.select('.tooltip').style('visibility', 'hidden');
