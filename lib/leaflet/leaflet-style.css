@@ -1,0 +1,54 @@
+/* leaflet-style.css */
+
+#map {
+    height: 600px;
+    width: 100%;
+  }
+  
+  .borough {
+    color: #333;
+    weight: 1;
+    fillOpacity: 0.4;
+  }
+  
+  .line {
+    color: blue;
+    weight: 2;
+    opacity: 0.8;
+  }
+  
+  .station-node {
+    background-color: orange;
+    border-radius: 50%;
+    cursor: pointer;
+  }
+  
+  .tooltip {
+    font-size: 12px;
+    background: white;
+    padding: 5px;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+  }
+  
+
+  #time-slider-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 20px auto; /* Add spacing above and below */
+    text-align: center;
+  }
+  
+  #time-slider {
+    width: 50%; /* Adjust slider width as needed */
+    margin: 10px 0;
+  }
+  
+  #selected-date {
+    font-size: 16px;
+    font-weight: bold;
+    margin-top: 10px;
+  }
+  
