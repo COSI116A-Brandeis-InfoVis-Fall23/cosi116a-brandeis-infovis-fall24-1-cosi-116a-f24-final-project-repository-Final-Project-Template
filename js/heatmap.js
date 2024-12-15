@@ -109,9 +109,9 @@ document.addEventListener("DOMContentLoaded", function () {
         }
 
         const date = new Date(inputDate);
-        if (isNaN(date)) return null; // Invalid date
+        if (isNaN(date)) return null; // Catch
 
-        // Find nearest date in the dataset
+        // Find nearest date in dataset
         const nearestDate = uniqueDates.reduce((prev, curr) => {
           return Math.abs(curr - date) < Math.abs(prev - date) ? curr : prev;
         }, uniqueDates[0]);
@@ -120,7 +120,7 @@ document.addEventListener("DOMContentLoaded", function () {
       };
 
 
-      // Updates the legend to show start and end date
+      // Updates legend to show start and end date
       const updateLegend = () => {
         const formattedStart = selectedStartDate.toISOString().split("T")[0];
         const formattedEnd = selectedEndDate.toISOString().split("T")[0];
@@ -133,7 +133,7 @@ document.addEventListener("DOMContentLoaded", function () {
         const startDate = selectedStartDate || minDate;
         const endDate = selectedEndDate || maxDate;
 
-        // Filter data for the selected date range
+        // Filter data for selected date range
         const filteredData = data.features.filter((feature) => {
           const featureDate = new Date(feature.properties.Time);
           return featureDate >= startDate && featureDate <= endDate;
@@ -158,7 +158,7 @@ document.addEventListener("DOMContentLoaded", function () {
           } else {
             locationMap.set(coordsKey, {
               value: ridership,
-              feature, // Store the feature object for tooltips
+              feature, // Store feature object for tooltips
             });
           }
         });
@@ -196,7 +196,7 @@ document.addEventListener("DOMContentLoaded", function () {
           }),
         };
 
-        // Update the heatmap
+        // Update heatmap
         heatmapLayer.setData(heatmapData);
         updateLegend();
       };
@@ -214,11 +214,11 @@ document.addEventListener("DOMContentLoaded", function () {
             return;
           }
 
-          // Update the selected date range
+          // Update selected date range
           selectedStartDate = parsedStartDate;
           selectedEndDate = parsedEndDate;
 
-          // Refresh the heatmap
+          // Refresh heatmap
           updateHeatmap();
         } catch (error) {
           console.error("Error updating date range:", error);
