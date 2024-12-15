@@ -162,9 +162,26 @@ document.addEventListener("DOMContentLoaded", function () {
 
       // Public function to update date range and refresh heatmap
       window.updateDateRange = (newStartDate, newEndDate) => {
-        selectedStartDate = newStartDate ? new Date(newStartDate) : minDate;
-        selectedEndDate = newEndDate ? new Date(newEndDate) : maxDate;
-        updateHeatmap();
+        try {
+          // Parse the MM/DD/YYYY date strings
+          const parsedStartDate = newStartDate ? new Date(newStartDate) : minDate;
+          const parsedEndDate = newEndDate ? new Date(newEndDate) : maxDate;
+
+          // Validate parsed dates
+          if (isNaN(parsedStartDate) || isNaN(parsedEndDate)) {
+            console.error("Invalid date format. Use MM/DD/YYYY.");
+            return;
+          }
+
+          // Update the selected date range
+          selectedStartDate = parsedStartDate;
+          selectedEndDate = parsedEndDate;
+
+          // Refresh the heatmap
+          updateHeatmap();
+        } catch (error) {
+          console.error("Error updating date range:", error);
+        }
       };
 
       // Initial heatmap update
