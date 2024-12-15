@@ -34,7 +34,6 @@ function map() {
         d3.json("data/states.json", function(error, topologies) {
             var state = topojson.feature(topologies[12], topologies[12].objects.stdin);
 
-            // console.log(state)
 
             var statepaths = svgStates.selectAll("path")
                 .data(state.features)
@@ -43,16 +42,27 @@ function map() {
                 .attr("d", path)
                 .style("fill", function (d) {
                     var name = d.properties.STATENAM.replace(" Territory", "");
+                    // console.log(name)
                     return colors_state[name];
 
                 })
                 .on("mouseover", (event, d) => handleMouseOver(event, d, path, state))
                 .on("mouseout", handleMouseOut)
-                .on("click", (event, d) => handleMouseClick(event , d, state))
+                .on("click", function (event, d) {
+                    const stateName = d3.select(this).select("title").text().replace(" Territory", ""); // Access the title tag
+                    console.log("Clicked state:", stateName); // Debugging log
+                
+                    d3.select(this)
+                        .style("fill", "#0000FF"); // Highlight the state in blue
+                
+                    // Dispatch the state name
+                    let dispatchString = Object.getOwnPropertyNames(dispatcher._)[0];
+                    dispatcher.call(dispatchString, this, [stateName]);                    
+                });
                 statepaths.append("title")
                 .text(d => d.properties.STATENAM);
-                // console.log(statepaths)
 
+            
                 
         });
 
@@ -60,7 +70,11 @@ function map() {
         function handleMouseOver(event, d, path, state) {
             var name = state.features[d].properties.STATENAM.replace(" Territory", ""); // OMG SO IMPORTANT
             var centroid = path.centroid(d);
-            // console.log(name);
+            // state.features.forEach((feature, index) => {
+            //     console.log(`Feature ${index}:`, feature);
+            //     console.log("Properties:", feature.properties);
+            // });
+            
             // handleMouseClick(event, d, state);
             d3.select("#popup")
                 .style("display", "block")
@@ -72,41 +86,72 @@ function map() {
                     <em>Additional info here...</em>
                 `);
             
+           
         }
-
-        function handleMouseClick(event, d, state){
-            var name = state.features[d].properties.STATENAM.replace(" Territory", ""); // OMG SO IMPORTANT
-
-            // Select the popup element
-            var popup = d3.select("#popup");
         
-            // Check if the popup is already enlarged
-            var isLarge = popup.classed("large");
+
+        function handleMouseClick(event, d){
+            
+            // console.log("Clicked state:", d.properties.STATENAM);
+
+            // d3.select(event.currentTarget)
+            //     .style("fill", () => {
+            //         var name = d.properties.STATENAM.replace(" Territory", "");
+            //         console.log("Highlight color for", name, ":", colors_highlight[name]);
+            //         return colors_highlight[name] || "#0000ff"; // Default blue for testing
+            //     });
+            
+            var style = d.path.style;
+            console.log(style);
+            
+            // svgStates.selectAll("path")
+            // .data(state.features)
+            // .enter()
+            // .append("path")
+            // .attr("d", path)
+            // .style("fill", function (d) {
+            //     var name = d.properties.STATENAM.replace(" Territory", "");
+            //     // console.log(name)
+            //     return colors_highlight[name];
+            // });
+            
         
-            // Toggle the size
-            if (isLarge) {
-                // Shrink the popup
-                popup
-                .classed("large", false)
-                .style("transform", "scale(1)") // Reset size
-                .style("z-index", 1000) // Reset z-index
-                .html(`
-                    <strong>${name}</strong><br>
-                    <img src="images/${name}.png" alt="${name}" style="max-width: 100px; display: block; margin: 10px 0;">
-                    <p>Basic information about ${name}...</p>
-                `);
-            } else {
-                // Enlarge the popup
-                popup
-                .classed("large", true)
-                .style("transform", "scale(1.5)") // Enlarge size
-                .style("z-index", 2000) // Bring to front
-                .html(`
-                    <strong>${name}</strong><br>
-                    <img src="images/${name}.png" alt="${name}" style="max-width: 200px; display: block; margin: 10px 0;">
-                    <p>Additional detailed information about ${name}...</p>
-                `);
-            }
+            // var singleState = state.features.filter(d => d.properties.STATENAM === name)[0];
+
+            // d3.select("#singleState")
+            // .style("fill", "blue")
+            // // Select the popup element
+            // var popup = d3.select("#popup");
+        
+            // // Check if the popup is already enlarged
+            // var isLarge = popup.classed("large");
+        
+            // // Toggle the size
+            // if (isLarge) {
+            //     // Shrink the popup
+            //     popup
+            //     .classed("large", false)
+            //     .style("transform", "scale(1)") // Reset size
+            //     .style("z-index", 1000) // Reset z-index
+            //     .html(`
+            //         <strong>${name}</strong><br>
+            //         <img src="images/${name}.png" alt="${name}" style="max-width: 100px; display: block; margin: 10px 0;">
+            //         <p>Basic information about ${name}...</p>
+            //     `);
+
+            // } else {
+            //     // Enlarge the popup
+            //     popup
+            //     .classed("large", true)
+            //     .style("transform", "scale(1.5)") // Enlarge size
+            //     .style("z-index", 2000) // Bring to front
+            //     .html(`
+            //         <strong>${name}</strong><br>
+            //         <img src="images/${name}.png" alt="${name}" style="max-width: 200px; display: block; margin: 10px 0;">
+            //         <p>Additional detailed information about ${name}...</p>
+            //     `);
+                
+            // }
         
             }
 
@@ -147,7 +192,7 @@ function map() {
     chart.updateSelection = function (selectedData) {
         if (!arguments.length) return;
 
-        d3.selectAll(".state").classed("selected", d => selectedData.includes(d.properties.STATENAM));
+        d3.selectAll(".state").classed("selected", d => selectedData.includes(d.properties.STATENAM.replace(" Territory", "")));
     };
 
     return chart;

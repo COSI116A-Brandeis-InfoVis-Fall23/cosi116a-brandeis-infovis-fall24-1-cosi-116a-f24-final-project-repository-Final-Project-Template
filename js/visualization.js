@@ -11,15 +11,17 @@
       .selectionDispatcher(d3.dispatch(dispatchString))
       ("#map", data);
 
-    // When the table is updated via brushing, update the heatmap
-    tableData.selectionDispatcher().on(dispatchString, function(selectedData) {
-    // heatmapData.updateSelection(selectedData.map(d => d.State)); // Ensure proper mapping
-      heatmapData.updateSelection(selectedData);
-    });
-
-    // When the heatmap is updated via brushing, update the table
-    heatmapData.selectionDispatcher().on(dispatchString, function(selectedData) {
+    tableData.selectionDispatcher().on(dispatchString, function (selectedData) {
+      // console.log("Selected table data:", ); // Debugging log
+    
+      // Map table rows to state names and update the heatmap
+      heatmapData.updateSelection(selectedData.map(d => d?.State)); 
+  });
+  
+  heatmapData.selectionDispatcher().on(dispatchString, function (selectedData) {
+      console.log("Selected map data:", selectedData); // Debugging log
+      // Update the table based on state selection
       tableData.updateSelection(selectedData);
-    });
+  });
   });
 }))();
