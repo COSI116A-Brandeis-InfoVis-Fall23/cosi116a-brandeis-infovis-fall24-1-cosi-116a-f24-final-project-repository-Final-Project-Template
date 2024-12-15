@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,92 +9,144 @@
   <!-- Link to external CSS for map styling -->
   <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
- <!-- Update this with your GitHub repo URL -->
- <span id="forkongithub"><a href="https://github.com/COSI116A-Brandeis-InfoVis-Fall23/cosi-116a-f24-final-project-repository-team20">Fork me on GitHub</a></span>
+  <!-- Update this with your GitHub repo URL -->
+  <span id="forkongithub"><a
+      href="https://github.com/COSI116A-Brandeis-InfoVis-Fall23/cosi-116a-f24-final-project-repository-team20">Fork me
+      on GitHub</a></span>
 
- <!-- Your writeup goes here -->
- <div class = "content-column">
- 
-   <h1>Project Team 20: Housing Equality, COSI 116A F24</h1>
-   
-   <p><strong>Ruixue Gou</strong>, <strong>Yenyi Lee</strong>, <strong>Chupei Yan</strong></p>
-   
-   <p>Project-long Course Project as part of COSI 116A: Information Visualization</a>, taught by <a href="https://cs.brandeis.edu/~dylan/">Prof. Dylan Cashman</a>, <a href="https://cs.brandeis.edu/">Brandeis University</a>.</p>
-   
-   
-   <h1>Motivation</h1>
-   
-   <p><em>Summary of user needs and motivating questions.</em></p>
-   
-   <p><em>Expectation: There is a clear focus, and a developed explanation of the problem, and a reasonable response is proposed.</em></p>
+  <!-- Your writeup goes here -->
+  <div class="content-column">
 
-    
-  <h1>About the Visualization</h1>
-  
-  <p>This choropleth map visualizes housing costs and income across U.S. states from 2015 to 2023. 
-     The color intensity represents the selected metric's value, with darker shades indicating higher values.</p>
-  
-  <h2>Interactive Features</h2>
-  <ul>
-    <li>Use the year selector to view data from different years (2015-2023)</li>
-    <li>Switch between different metrics:
-      <ul>
-        <li>Monthly Owner Costs (Mortgage payments and related expenses)</li>
-        <li>Monthly Rent (Median gross rent)</li>
-        <li>Annual Income (Median household income)</li>
-      </ul>
-    </li>
-    <li>Hover over any state to see detailed information including the selected metric</li>
-    <li>Reference the legend to understand the value ranges and distribution</li>
-  </ul>
- </div>
+    <h1>Project Team 20: Housing Equality, COSI 116A F24</h1>
+
+    <p><strong>Ruixue Gou</strong>, <strong>Yenyi Lee</strong>, <strong>Chupei Yan</strong></p>
+
+    <p>Project-long Course Project as part of COSI 116A: Information Visualization</a>, taught by <a
+        href="https://cs.brandeis.edu/~dylan/">Prof. Dylan Cashman</a>, <a href="https://cs.brandeis.edu/">Brandeis
+        University</a>.</p>
 
 
-   <!-- Dropdown Controls -->
-   <div id="controls">
-    <!-- Cost Burden Dropdown -->
-    <label for="costBurden">Cost Burden:</label>
-    <select id="costBurden">
-      <option value="income">Income</option>
-      <option value="rent">Rent</option>
-      <option value="mortgage">Mortgage</option>
-    </select>
+    <h1>Motivation</h1>
 
-    <!-- Year Dropdown -->
-    <label for="yearSelect">Year:</label>
-    <select id="yearSelect">
-      <option value="2015">2015</option>
-      <option value="2016">2016</option>
-      <option value="2017">2017</option>
-      <option value="2018">2018</option>
-      <option value="2019" >2019</option>
-      <option value="2021">2021</option>
-      <option value="2022">2022</option>
-      <option value="2023" selected>2023</option>
+    <p>
+      Housing affordability has become a critical issue in the United States, impacting millions of individuals and
+      shaping the economic and social fabric of communities. As the cost of living rises and housing prices surge,
+      understanding the disparity between renting and owning a home is essential for addressing housing inequality and
+      informing policy decisions. Our project stems from a desire to explore the trends and disparities in housing
+      affordability across regions, helping stakeholders make data-driven decisions.
+    </p>
 
-    </select>
+    <p>
+      To develop this visualization, we identified the needs of several key user groups:
+    </p>
+    <ul>
+      <li><strong>Policymakers:</strong> They require clear, reliable data to craft housing policies aimed at improving
+        affordability and reducing economic inequality. Understanding trends in rent-to-income and mortgage-to-income
+        ratios can help prioritize regions requiring intervention.</li>
+      <li><strong>Real estate professionals:</strong> They need insights into regional disparities and temporal trends
+        to guide investments and market analyses.</li>
+      <li><strong>Prospective homeowners and renters:</strong> This group seeks actionable information to evaluate the
+        financial implications of renting versus owning a home in different states.</li>
+    </ul>
+
+    <p>
+      By addressing these needs, our visualization aims to answer motivating questions such as:
+    </p>
+    <ul>
+      <li>How have rent and mortgage burdens evolved over time across the United States?</li>
+      <li>Which states or regions are experiencing the highest housing burdens?</li>
+      <li>How do housing burdens correlate with median income levels?</li>
+      <li>Are there discernible patterns or trends that can guide housing affordability initiatives?</li>
+    </ul>
+
+    <p>
+      This focus aligns with the broader goal of highlighting housing inequality and empowering stakeholders to explore
+      trends interactively and derive meaningful insights.
+    </p>
+
+
+    <h1>About the Visualization</h1>
+
+    <p>This choropleth map visualizes housing costs and income across U.S. states from 2015 to 2023.
+      The color intensity represents the selected metric's value, with darker shades indicating higher values.</p>
+
+    <h2>Interactive Features</h2>
+    <ul>
+      <li>Use the year selector to view data from different years (2015-2023)</li>
+      <li>Switch between different metrics:
+        <ul>
+          <li>Monthly Owner Costs (Mortgage payments and related expenses)</li>
+          <li>Monthly Rent (Median gross rent)</li>
+          <li>Annual Income (Median household income)</li>
+        </ul>
+      </li>
+      <li>Hover over any state to see detailed information including the selected metric</li>
+      <li>Reference the legend to understand the value ranges and distribution</li>
+    </ul>
   </div>
 
-  
-    <!-- Tooltip for Map -->
-    <div id="tooltip" class="tooltip" style="opacity: 0;"></div>
+
+  <!-- Dropdown Controls -->
+  <div id="controls"></div>
+  <!-- Cost Burden Dropdown -->
+  <label for="costBurden">Cost Burden:</label>
+  <select id="costBurden">
+    <option value="income">Income</option>
+    <option value="rent" selected>Rent</option>
+    <option value="mortgage">Mortgage</option>
+  </select>
+
+  <!-- Year Dropdown -->
+  <label for="yearSelect">Year:</label>
+  <select id="yearSelect">
+    <option value="2015">2015</option>
+    <option value="2016">2016</option>
+    <option value="2017">2017</option>
+    <option value="2018">2018</option>
+    <option value="2019">2019</option>
+    <option value="2021">2021</option>
+    <option value="2022">2022</option>
+    <option value="2023" selected>2023</option>
+
+  </select>
+  </div>
+
+
+  <!-- Tooltip for Map -->
+  <div id="tooltip" class="tooltip" style="opacity: 0;"></div>
   <!-- Map Section -->
   <div id="map-container">
     <svg width="960" height="600"></svg>
   </div>
 
+  <div id="ranking-table-container">
+    <h3>Top 3 and Bottom 3 Cities</h3>
+    <table id="ranking-table">
+      <thead>
+        <tr>
+          <th>Rank</th>
+          <th>City</th>
+          <th>Value</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- Rows will be dynamically added here -->
+      </tbody>
+    </table>
+  </div>
+  </div>
+
   <div id="charts-container">
     <div class="chart-section" id="bar-chart-section">
-        <h2>Bar Chart: Mortgage, Rent & Income</h2>
-        <div id="bar-chart"></div>
+      <div id="bar-chart"></div>
     </div>
     <div class="chart-section" id="line-chart-section">
-        <h2>Line Chart: Mortgage, Rent & Income</h2>
-        <div id="line-chart"></div>
+      <div id="line-chart"></div>
     </div>
-</div>
-  
+  </div>
+
 
   <!-- Include D3.js for data-driven documents -->
   <script src="https://d3js.org/d3.v4.min.js"></script>
@@ -108,81 +161,177 @@
     var path = d3.geoPath();
 
     // Load the US map data from a TopoJSON file
-    d3.json("https://d3js.org/us-10m.v1.json", function(error, us) {
+    d3.json("https://d3js.org/us-10m.v1.json", function (error, us) {
       if (error) throw error;
 
       // Append a group element for the states
       svg.append("g")
-          .attr("class", "states")
+        .attr("class", "states")
         .selectAll("path")
         .data(topojson.feature(us, us.objects.states).features) // Extract GeoJSON features
         .enter().append("path")
-          .attr("d", path); // Draw each state
+        .attr("d", path); // Draw each state
 
       // Append a path element for the state borders
       svg.append("path")
-          .attr("class", "state-borders")
-          .attr("d", path(topojson.mesh(us, us.objects.states, function(a, b) { return a !== b; }))); // Draw borders
+        .attr("class", "state-borders")
+        .attr("d", path(topojson.mesh(us, us.objects.states, function (a, b) { return a !== b; }))); // Draw borders
     });
   </script>
 
-<!-- Continue with rest of content -->
-<div class="content-column">
-  <h1>Demo Video</h1>
-  
-  <p><em>Embedded MP4 demo video using the HTML5 &lt;video&gt; tag.</em></p>
 
-  <div class="video-container">
-    <video controls width="600">
-        <source src="http://www.ccs.neu.edu/home/cody/courses/shared/d3-flexible-transitions.mp4" type="video/mp4">
-        <p>Your browser doesn't support HTML5 video. Here is
-         a <a href="http://www.ccs.neu.edu/home/cody/courses/shared/d3-flexible-transitions.mp4">link to the video</a> instead.</p>
-    </video>
+
+  <!-- Continue with rest of content -->
+  <div class="content-column">
+    <h1>Demo Video</h1>
+    <div class="video-container">
+      <iframe width="600" height="400" src="https://www.youtube.com/embed/gP9XMEPbFTc" frameborder="0" allowfullscreen></iframe>
+    </div>
+
+
+
+
+    <h1>Data Analysis</h1>
+
+    <p>The analysis examines trends in median monthly owner costs (mortgage), median gross rent, and median income
+      across U.S. states from 2015 to 2023, excluding 2020. Data was sourced from the American Community Survey (ACS)
+      1-Year Estimates using the U.S. Census Bureau API. Variables of interest include median monthly owner costs
+      (DP04_0101E), median gross rent (DP04_0134E), and median income (DP03_0062E). Data preprocessing involved fetching
+      data for each year and variable, transforming API responses into pandas DataFrames, renaming columns for clarity,
+      merging datasets by state, and adding a "Year" column to track trends. Duplicate or unnecessary columns were
+      removed, and all years' data was combined into a single dataset for analysis. Additionally, we calculated the
+      percentage of rent-to-income and mortgage-to-income to evaluate housing affordability trends.
+    </p>
+
+    <h1>Task Analysis</h1>
+
+    <p>The tasks are categorized into data preparation, visual encodings, interactions, and project page design, all
+      aimed at developing an interactive visualization to analyze housing affordability trends.</p>
+
+    <p><strong>Data preparation</strong> involves researching and identifying relevant data sources, such as Census.gov,
+      extracting raw data on income, rent, and mortgage statistics, and performing cleaning and preprocessing to ensure
+      consistency and usability in subsequent analyses. This step ensures the data is accurate, relevant, and
+      well-structured for visualization tasks.</p>
+
+    <p><strong>Visual encodings</strong> focus on creating intuitive and informative representations of the data.
+      Dropdown menus will allow users to select cost burden types (rent, mortgage, or income) and specific years,
+      dynamically updating the visualizations based on user inputs. Choropleth maps will display state polygons with
+      shading that reflects cost burden levels, providing an immediate visual representation of regional differences.
+      Bar and line charts will complement these maps, offering historical trends and comparative insights, with detailed
+      axes, legends, and marks to clarify the data.</p>
+
+    <p><strong>Interactions</strong> enhance the usability of the visualizations by enabling tooltips that reveal exact
+      data values on hover, zooming and panning features for map exploration, and brushing on bar charts to select and
+      highlight specific time ranges. These features ensure users can explore the data interactively and gain deeper
+      insights into housing affordability patterns.</p>
+
+    <p>Finally, <strong>project page design</strong> will provide an accessible entry point for users, introducing the
+      project’s objectives, significance, and the methodology behind the analysis. Together, these tasks aim to create
+      an engaging, informative, and user-friendly platform for understanding housing affordability challenges across the
+      United States.</p>
+
+
+
+    <h1>Design Process</h1>
+
+    <h2>Initial Sketches and Iterative Development</h2>
+    <p>
+      Our design process began with rough sketches to conceptualize the layout and interaction features. The initial
+      design included a static choropleth map to visualize regional disparities in housing costs, accompanied by bar and
+      line charts to show temporal trends. These sketches helped us define key components, such as dropdown filters for
+      selecting cost burden types and years, and interactive tooltips to display state-specific details.
+    </p>
+
+    <h2>Iterative Improvements</h2>
+    <ol>
+      <li>
+        <strong>Dropdown Interaction:</strong> Early feedback revealed that users wanted more control over data
+        exploration. We added dropdown menus for year and metric selection, enabling dynamic updates to the
+        visualizations.
+      </li>
+      <li>
+        <strong>Choropleth Map:</strong> Initially, the map's color gradient lacked clarity for users. We improved
+        interpretability by using colorblind-friendly palettes and providing a well-labeled legend.
+      </li>
+      <li>
+        <strong>Tooltips:</strong> Our first implementation of tooltips was static and cluttered. We refined the
+        tooltips to display only the most relevant information, improving usability and aesthetics.
+      </li>
+      <li>
+        <strong>Bar and Line Charts:</strong> The charts underwent significant enhancements, including clearer axis
+        labels, legends, and marks. Interactivity was added through brushing, allowing users to highlight specific time
+        ranges.
+      </li>
+      <li>
+        <strong>Ranking Table:</strong> To further enhance the user experience and provide actionable insights, we added
+        a new feature: a ranking table displayed on the right side of the interface. This table dynamically updates
+        based on the selected year and metric (mortgage, rent, or income) from the dropdown menus.
+      </li>
+    </ol>
+
+    <h2>Data Preparation and Integration</h2>
+    <p>
+      To ensure the map and charts correctly displayed housing trends, we carefully integrated datasets from the
+      American Community Survey (ACS) via the U.S. Census Bureau API. This process involved several key steps:
+    </p>
+    <ol>
+      <li>
+        <strong>Data Collection:</strong> We fetched data for the relevant metrics (median monthly owner costs, median
+        gross rent, and median income) for each year from 2015 to 2023, excluding 2020.
+      </li>
+      <li>
+        <strong>Data Cleaning:</strong> We transformed API responses into structured pandas DataFrames, ensuring
+        consistency in column names, handling missing values, and standardizing state identifiers.
+      </li>
+      <li>
+        <strong>Data Merging:</strong> The datasets for each year and metric were merged based on state names, creating
+        a comprehensive dataset with columns for state, year, and each metric. This allowed for seamless integration
+        across visualizations.
+      </li>
+      <li>
+        <strong>Derived Metrics:</strong> To evaluate housing affordability trends, we calculated additional metrics
+        such as rent-to-income and mortgage-to-income ratios. These derived metrics provided deeper insights into
+        regional disparities.
+      </li>
+      <li>
+        <strong>Combined Dataset:</strong> All preprocessed data was combined into a single dataset, allowing the
+        choropleth map and charts to dynamically update based on user-selected filters.
+      </li>
+    </ol>
+
+    <p>
+      This rigorous data preparation ensured the accuracy and usability of the visualizations, aligning with our goal of
+      creating an intuitive and informative platform for exploring housing affordability.
+    </p>
+
+
+    <h1>Conclusion</h1>
+
+    <p>Through this interactive visualization, we successfully analyzed and presented housing cost burdens in the United States from 2015 to 2023. By integrating data on rent, mortgage, and income, we highlighted regional and temporal trends in housing affordability. Key features like the choropleth map, bar and line charts, and ranking table provided users with an intuitive and dynamic exploration tool.</p>
+    
+    <p>One major finding from our analysis is the relative stability of housing cost burdens at the national level. Mortgage burdens have consistently hovered around 30%, while rent burdens remained around 19-20%. However, deeper exploration at the regional level could uncover areas where disparities are more pronounced, pointing to potential policy interventions.</p>
+    
+    <p>Looking ahead, there are areas for improvement and future work. Incorporating additional metrics, such as housing supply, cost of living, and demographic factors, could provide a more comprehensive picture of housing inequality. Enhancing interactivity, such as adding state-specific time trends or drill-down features, would further enrich the user experience. Finally, expanding the scope to include localized data at the city or county level could uncover more granular insights.</p>
+    
+    <p>In conclusion, this project serves as a valuable tool for policymakers, real estate professionals, and individuals to better understand housing affordability challenges. It provides a foundation for future research and development, with the potential to inform data-driven decision-making and promote housing equality.</p>
+    
+
+    <h1>Acknowledgments</h1>
+
+    <p><em>List here where any code, packages/libraries, text, images, designs, etc. that you leverage come from.</em>
+    </p>
+
+    <ul>
+      <li><a href="https://d3js.org/">D3: Data-Driven Documents</a> by Mike Bostock.</li>
+      <li><a href="https://codepo8.github.io/css-fork-on-github-ribbon/#">Pure CSS responsive "Fork me on GitHub"
+          ribbon</a> by Chris Heilmann.</li>
+    </ul>
+
   </div>
-
-
-
-  <h1>Data Analysis</h1>
-  <p><em>Summary of data, data types, and data preprocessing.</em></p>
-
-  <p><em>Expectation: Data sources match the problem statement and are appropriate. These descriptions should be very explicit so someone could read your page and properly reproduce your results.</em></p>
-
-  <h1>Task Analysis</h1>
-
-  <p><em>Summary of task table.</em></p>
-
-  <p><em>Expectation: Clearly describes domain tasks, processes, goals and abstract tasks for domain problems.</em></p>
-
-  <h1>Design Process</h1>
-  
-  <p><em>Sketches and design choices to justify final visualization.</em></p>
-
-  <p><em>Expectation: Evidence of iterative improvement.
-  Logical discussion of design choices grounded in theory from course.
-  Discusses feedback from usability testing.</em></p>
-
-
-  <h1>Conclusion</h1>
-
-  <p><em>Short summary of work completed and areas for improvement/future-work.</em></p>
-  
-  <p><em>Expectation: Meaningfully wraps up project and has good future directions.</em></p>
-
-  
-  <h1>Acknowledgments</h1>
-
-  <p><em>List here where any code, packages/libraries, text, images, designs, etc. that you leverage come from.</em></p>
-  
-  <ul>
-    <li><a href="https://d3js.org/">D3: Data-Driven Documents</a> by Mike Bostock.</li>
-    <li><a href="https://codepo8.github.io/css-fork-on-github-ribbon/#">Pure CSS responsive "Fork me on GitHub" ribbon</a> by Chris Heilmann.</li>
-  </ul>
-  
-</div>
-<script src="https://d3js.org/d3.v4.min.js"></script>
-<script src="https://d3js.org/d3-queue.v3.min.js"></script>
-<script src="https://d3js.org/topojson.v2.min.js"></script>
-<script src="js/visualization.js"></script>
+  <script src="https://d3js.org/d3.v4.min.js"></script>
+  <script src="https://d3js.org/d3-queue.v3.min.js"></script>
+  <script src="https://d3js.org/topojson.v2.min.js"></script>
+  <script src="js/visualization.js"></script>
 </body>
-</html>
 
+</html>

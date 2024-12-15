@@ -1,10 +1,10 @@
 /* General Body Styling */
 body {
   font-family: Arial, sans-serif;
-  background-color: #2e3b4e;
-  color: white;
+  background-color: rgba(242,232,223,255);
   margin: 0;
   padding: 40px 20px;
+  font-size: 18px;
 }
 
 /* Main content container */
@@ -74,12 +74,15 @@ svg.map {
 
 /* Video */
 .video-container {
-  max-width: 600px;
-  margin: 40px auto 0;
+  max-width: 100%;
+  margin: 20px auto 0;
+  display: flex;
+  justify-content: center;
 }
 
-.video-container video {
-  width: 100%;
+.video-container iframe {
+  width: 60%;
+  height: 600px;
 }
 
 @media screen and (max-width: 1200px) {
@@ -285,4 +288,61 @@ a:hover {
 
 .legend {
     pointer-events: none;  /* Prevent legend from interfering with brush */
+}
+
+
+/* Ranking Table Section */
+#ranking-table-container {
+  max-width: 800px;
+  margin: 30px auto;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  padding: 20px;
+}
+
+#ranking-table-container h3 {
+  margin: 0 0 15px;
+  font-size: 18px;
+  color: #2e3b4e;
+  text-align: center;
+}
+
+#ranking-table-container table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+#ranking-table-container th,
+#ranking-table-container td {
+  padding: 10px 12px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+#ranking-table-container th {
+  background-color: #f8f9fa;
+  color: #333;
+  font-weight: bold;
+}
+
+#ranking-table-container td {
+  font-size: 14px;
+  color: #2e3b4e;
+}
+
+#ranking-table-container tr:hover {
+  background-color: #f1f1f1;
+}
+
+#ranking-table-container .positive {
+  color: #28a745;
+  /* Green for positive comparison */
+  font-weight: bold;
+}
+
+#ranking-table-container .negative {
+  color: #dc3545;
+  /* Red for negative comparison */
+  font-weight: bold;
 }
