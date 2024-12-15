@@ -28,8 +28,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // Initialize the heatmap layer
   const heatmapLayer = new HeatmapOverlay(heatmapConfig).addTo(map);
-  const startDateSelect = document.getElementById("start-date");
-  const endDateSelect = document.getElementById("end-date");
+
+  let tooltipLayer = L.layerGroup().addTo(map);
 
   // Load borough boundaries
   fetch("lib/geo/new-york-city-boroughs.geojson")
@@ -66,29 +66,32 @@ document.addEventListener("DOMContentLoaded", function () {
       const uniqueDates = [...new Set(data.features.map((f) => f.properties.Time))]
         .map((date) => new Date(date)) // Convert to Date objects for sorting
         .sort((a, b) => a - b) // Sort in ascending order
-        .map((date) => date.toISOString().split("T")[0]); // Convert back to strings (e.g., "2020-02-03")
+      // .map((date) => date.toISOString().split("T")[0]); // Convert back to strings (e.g., "2020-02-03")
+
+      const minDate = uniqueDates[0];
+      const maxDate = uniqueDates[uniqueDates.length - 1];
 
       // Populate dropdowns
-      uniqueDates.forEach((date) => {
-        const startOption = document.createElement("option");
-        startOption.value = date;
-        startOption.textContent = date;
-        startDateSelect.appendChild(startOption);
+      // uniqueDates.forEach((date) => {
+      //   const startOption = document.createElement("option");
+      //   startOption.value = date;
+      //   startOption.textContent = date;
+      //   startDateSelect.appendChild(startOption);
 
-        const endOption = document.createElement("option");
-        endOption.value = date;
-        endOption.textContent = date;
-        endDateSelect.appendChild(endOption);
-      });
+      //   const endOption = document.createElement("option");
+      //   endOption.value = date;
+      //   endOption.textContent = date;
+      //   endDateSelect.appendChild(endOption);
+      // });
 
       // Set default values
-      startDateSelect.value = uniqueDates[0];
-      endDateSelect.value = uniqueDates[uniqueDates.length - 1];
+      let selectedStartDate = minDate;
+      let selectedEndDate = maxDate;
 
       // Update heatmap when dates change
       const updateHeatmap = () => {
-        const startDate = new Date(startDateSelect.value);
-        const endDate = new Date(endDateSelect.value);
+        const startDate = selectedStartDate || minDate;
+        const endDate = selectedEndDate || maxDate;
 
         // Filter data for the selected date range
         const filteredData = data.features.filter((feature) => {
@@ -123,8 +126,12 @@ document.addEventListener("DOMContentLoaded", function () {
         // Calculate dynamic max scaling
         const maxRidership = Math.max(...Array.from(locationMap.values()).map((entry) => entry.value));
 
+
+        // Clear existing tooltip layer
+        tooltipLayer.clearLayers();
+
+
         // Prepare heatmap data
-        const tooltipLayer = L.layerGroup().addTo(map);
         const heatmapData = {
           max: maxRidership,
           data: Array.from(locationMap.entries()).map(([coords, { value, feature }]) => {
@@ -153,10 +160,12 @@ document.addEventListener("DOMContentLoaded", function () {
         heatmapLayer.setData(heatmapData);
       };
 
-
-      // Add event listeners
-      startDateSelect.addEventListener("change", updateHeatmap);
-      endDateSelect.addEventListener("change", updateHeatmap);
+      // Public function to update date range and refresh heatmap
+      window.updateDateRange = (newStartDate, newEndDate) => {
+        selectedStartDate = newStartDate ? new Date(newStartDate) : minDate;
+        selectedEndDate = newEndDate ? new Date(newEndDate) : maxDate;
+        updateHeatmap();
+      };
 
       // Initial heatmap update
       updateHeatmap();
