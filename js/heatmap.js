@@ -102,7 +102,7 @@ document.addEventListener("DOMContentLoaded", function () {
       // Default to nearest date if input is not exact
       const findNearestDate = (inputDate) => {
 
-        if (!inputDate || isNaN(date)) {
+        if (!inputDate || isNaN(inputDate)) {
           console.error(`Invalid input date: ${inputDate}`);
           return null;
         }

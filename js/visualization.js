@@ -121,7 +121,16 @@ dispatch.on('lineChartUpdate', function (selectedData) {
         }),
       }))
     );
+    
+    // update heatmap with new date range
+    let firstDate = selectedData[0].week;
+    let lastDate = selectedData[selectedData.length-1].week;
+    
+    window.updateDateRange(firstDate, lastDate);
+    
+    
 });
+
 
 
 

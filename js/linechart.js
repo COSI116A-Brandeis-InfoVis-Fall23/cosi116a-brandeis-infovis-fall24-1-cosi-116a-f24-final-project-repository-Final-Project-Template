@@ -25,7 +25,7 @@ function createLineChart(data, category = 'None') {
 
 
   const yLeft = d3.scaleLinear()
-    .domain([0, d3.max(data, d => d.totalRidership)])
+    .domain([0, d3.max(data, d => d.totalRidership) + 5000000] )
     .range([height, 0]);
 
 
@@ -49,6 +49,75 @@ function createLineChart(data, category = 'None') {
     .attr('class', 'y-axis-right')
     .attr('transform', `translate(${width},0)`)
     .call(d3.axisRight(yRight));
+
+
+
+/*https://d3-graph-gallery.com/graph/custom_legend.html*/
+  
+  // Add legend
+  svg.append("circle")
+    .attr("cx",width-150)
+    .attr("cy",10)
+    .attr("r", 5)
+    .style("fill", "black");
+  svg.append("text")
+    .attr("x", width-140)
+    .attr("y", 10)
+    .text("Total Ridership")
+    .style("font-size", "13px")
+    .attr("fill", "black")
+    .attr("alignment-baseline","middle");
+  svg.append("circle")
+    .attr("cx",width-150)
+    .attr("cy",30)
+    .attr("r", 5)
+    .style("fill", "black");
+  svg.append("text")
+    .attr("x", width-140)
+    .attr("y", 30)
+    .text("New Covid Cases")
+    .style("font-size", "13px")
+    .attr("fill", "black")
+    .attr("alignment-baseline","middle");
+  
+  if (category != "None") {
+    svg.append("circle")
+    .attr("cx",width-150)
+    .attr("cy",50)
+    .attr("r", 5)
+    .style("fill", barColorScale(category));
+  svg.append("text")
+    .attr("x", width-140)
+    .attr("y", 50)
+    .text(category)
+    .style("font-size", "13px")
+    .attr("fill", "black")
+    .attr("alignment-baseline","middle");
+  }
+    
+    
+    /*
+  svg.append("circle")
+    .attr("cx",200)
+    .attr("cy",160)
+    .attr("r", 6).style("fill", "#404080");
+  
+  svg.append("text")
+    .attr("x", 220)
+    .attr("y", 160)
+    .text("variable B")
+    .style("font-size", "15px")
+    .attr("alignment-baseline","middle");*/
+  
+
+
+
+
+
+
+
+
+
 
   // Define line generators
   const ridershipLine = d3.line()
