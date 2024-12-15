@@ -4,8 +4,8 @@
 
     // Create the table and heatmap instances
     let tableData = table()
-      .selectionDispatcher(d3.dispatch(dispatchString))
-      ("#table", data);
+    .selectionDispatcher(d3.dispatch(dispatchString))
+    ("#table", data);
 
     let heatmapData = map()
       .selectionDispatcher(d3.dispatch(dispatchString))

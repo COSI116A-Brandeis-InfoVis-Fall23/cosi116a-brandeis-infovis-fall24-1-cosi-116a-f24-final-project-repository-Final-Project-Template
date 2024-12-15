@@ -4,8 +4,6 @@ function heatmap() {
   const colorScale = d3.scaleQuantize()
     .domain([0, d3.max(Object.values(data))]) // Adjust domain based on your dataset
     .range(d3.schemeReds[5]); // Adjust range based on your dataset
- 
-
 
       var map = d3.choropleth()
       .geofile('/d3-geomap/topojson/countries/USA.json')

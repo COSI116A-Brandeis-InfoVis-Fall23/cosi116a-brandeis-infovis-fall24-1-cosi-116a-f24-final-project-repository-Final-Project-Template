@@ -1,13 +1,15 @@
 /* global D3 */
 
+var rows;
+
 function table() {
 
   // Based on Mike Bostock's margin convention
   // https://bl.ocks.org/mbostock/3019563
    
-    let ourBrush = null,
-    selectableElements = d3.select(null),
-    dispatcher;
+	let ourBrush = null,
+		selectableElements = d3.select(null),
+		dispatcher;
   
 	
   // Create the chart by adding an svg to the div with the id 
@@ -48,7 +50,7 @@ function table() {
 		.text(d => d)
     
 	let isMouseDown = false;
-
+	
 	d3.selectAll("tr")
 	.on("mousedown", function () {
 		//Clears all rows of being selected
@@ -56,6 +58,7 @@ function table() {
 		
 		//Instantiates a dispatch string, and dispatches that all rows are no longer selected
 		let dispatchString = Object.getOwnPropertyNames(dispatcher._)[0];
+
 		dispatcher.call(dispatchString, this, d3.select("tr").data());
 		
 
@@ -84,7 +87,7 @@ function table() {
 		else{
 			//If mouse is up and goes over a selected row, make the background color red
 			if (d3.select(this).classed("selected")){
-				d3.select(this).style("background-color", "red")
+				d3.select(this).style("background-color", "blue")
 			}
 			//If mouse is up and goes over a unselected row, make the background color gray
 			else{

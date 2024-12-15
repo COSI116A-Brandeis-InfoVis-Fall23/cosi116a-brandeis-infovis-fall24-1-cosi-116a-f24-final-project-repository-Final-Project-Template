@@ -36,10 +36,10 @@ function map() {
         let selectedStates = new Set();
 
         // Load and render states
+        var svgStates = svg.append("g").attr("id", "states");
+
         d3.json("data/states.json", function(error, topologies) {
             var state = topojson.feature(topologies[12], topologies[12].objects.stdin);
-
-
             var statepaths = svgStates.selectAll("path")
                 .data(state.features)
                 .enter()
@@ -47,7 +47,6 @@ function map() {
                 .attr("d", path)
                 .style("fill", function (d) {
                     var name = d.properties.STATENAM.replace(" Territory", "");
-                    // console.log(name)
                     return colors_state[name];
 
                 })
@@ -144,12 +143,9 @@ function map() {
 
         // function handleMouseClick(event, d){
             
-            // console.log("Clicked state:", d.properties.STATENAM);
-
             // d3.select(event.currentTarget)
             //     .style("fill", () => {
             //         var name = d.properties.STATENAM.replace(" Territory", "");
-            //         console.log("Highlight color for", name, ":", colors_highlight[name]);
             //         return colors_highlight[name] || "#0000ff"; // Default blue for testing
             //     });
             
@@ -162,7 +158,6 @@ function map() {
             // .attr("d", path)
             // .style("fill", function (d) {
             //     var name = d.properties.STATENAM.replace(" Territory", "");
-            //     // console.log(name)
             //     return colors_highlight[name];
             // });
             
