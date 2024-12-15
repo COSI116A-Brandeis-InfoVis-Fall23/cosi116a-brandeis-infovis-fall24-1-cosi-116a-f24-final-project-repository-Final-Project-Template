@@ -18,11 +18,12 @@ document.addEventListener("DOMContentLoaded", function () {
     lngField: "lng",
     valueField: "value",
     gradient: {
-      0.1: "blue",
-      0.3: "green",
-      0.5: "yellow",
-      0.7: "orange",
-      1.0: "red", // Gradual intensity for normalized values
+      0.0: "blue",
+      0.2: "cyan",
+      0.4: "lime",
+      0.6: "yellow",
+      0.8: "orange",
+      1.0: "red"
     },
   };
 
