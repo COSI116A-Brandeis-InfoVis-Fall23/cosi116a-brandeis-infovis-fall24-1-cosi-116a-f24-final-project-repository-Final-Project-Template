@@ -63,7 +63,7 @@ function createLineChart(data, category = 'None') {
   svg.append('path')
     .datum(data)
     .attr('fill', 'none')
-    .attr('stroke', 'steelblue')
+    .attr('stroke', 'black')
     .attr('stroke-width', 2)
     .attr('d', ridershipLine);
 
