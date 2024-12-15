@@ -26,8 +26,18 @@ document.addEventListener("DOMContentLoaded", function () {
     },
   };
 
+  
   // Initialize the heatmap layer
   const heatmapLayer = new HeatmapOverlay(heatmapConfig).addTo(map);
+
+  // Legend for the current date range
+  const legend = L.control({ position: "bottomright" });
+  legend.onAdd = function () {
+    const div = L.DomUtil.create("div", "legend");
+    div.innerHTML = `<strong>Current date range:</strong> Not set`;
+    return div;
+  };
+  legend.addTo(map);
 
   let tooltipLayer = L.layerGroup().addTo(map);
 
@@ -87,6 +97,35 @@ document.addEventListener("DOMContentLoaded", function () {
       // Set default values
       let selectedStartDate = minDate;
       let selectedEndDate = maxDate;
+
+
+      // Default to nearest date if input is not exact
+      const findNearestDate = (inputDate) => {
+
+        if (!inputDate || isNaN(date)) {
+          console.error(`Invalid input date: ${inputDate}`);
+          return null;
+        }
+
+        const date = new Date(inputDate);
+        if (isNaN(date)) return null; // Invalid date
+
+        // Find nearest date in the dataset
+        const nearestDate = uniqueDates.reduce((prev, curr) => {
+          return Math.abs(curr - date) < Math.abs(prev - date) ? curr : prev;
+        }, uniqueDates[0]);
+
+        return nearestDate;
+      };
+
+
+      // Updates the legend to show start and end date
+      const updateLegend = () => {
+        const formattedStart = selectedStartDate.toISOString().split("T")[0];
+        const formattedEnd = selectedEndDate.toISOString().split("T")[0];
+        const legendDiv = document.querySelector(".legend");
+        legendDiv.innerHTML = `<strong>Current date range:</strong> ${formattedStart} to ${formattedEnd}`;
+      };
 
       // Update heatmap when dates change
       const updateHeatmap = () => {
@@ -158,14 +197,15 @@ document.addEventListener("DOMContentLoaded", function () {
 
         // Update the heatmap
         heatmapLayer.setData(heatmapData);
+        updateLegend();
       };
 
       // Public function to update date range and refresh heatmap
       window.updateDateRange = (newStartDate, newEndDate) => {
         try {
           // Parse the MM/DD/YYYY date strings
-          const parsedStartDate = newStartDate ? new Date(newStartDate) : minDate;
-          const parsedEndDate = newEndDate ? new Date(newEndDate) : maxDate;
+          const parsedStartDate = newStartDate ? findNearestDate(newStartDate) : minDate;
+          const parsedEndDate = newEndDate ? findNearestDate(newEndDate) : maxDate;
 
           // Validate parsed dates
           if (isNaN(parsedStartDate) || isNaN(parsedEndDate)) {

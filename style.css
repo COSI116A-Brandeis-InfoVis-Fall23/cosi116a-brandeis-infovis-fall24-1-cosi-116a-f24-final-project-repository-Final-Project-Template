@@ -1,22 +1,26 @@
 /* General formatting */
 body {
 	padding: 0 10px;
-	font: 18px/1.5 -apple-system, BlinkMacSystemFont, "avenir next",avenir, "Segoe UI", "lucida grande", "helvetica neue", helvetica, "Fira Sans",roboto, noto, "Droid Sans", cantarell, oxygen, ubuntu, "franklin gothic medium", "century gothic", "Liberation Sans",
-	sans-serif;
-  	margin: 0;
-  	padding: 0;
-  	display: flex;
-  	flex-direction: column;
-  	align-items: center; /* Centers content horizontally */
-  	justify-content: center; 
+	font: 18px/1.5 -apple-system, BlinkMacSystemFont, "avenir next", avenir, "Segoe UI", "lucida grande", "helvetica neue", helvetica, "Fira Sans", roboto, noto, "Droid Sans", cantarell, oxygen, ubuntu, "franklin gothic medium", "century gothic", "Liberation Sans",
+		sans-serif;
+	margin: 0;
+	padding: 0;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	/* Centers content horizontally */
+	justify-content: center;
 }
 
-h1, h2, h3 {
+h1,
+h2,
+h3 {
 	line-height: 1.2
 }
 
 h2 {
-  text-align: center; /* Centers the header text */
+	text-align: center;
+	/* Centers the header text */
 }
 
 /* Your text should be in a nice narrow column */
@@ -27,129 +31,136 @@ h2 {
 
 /* But your visualization should be full-width and full-height */
 .vis-holder {
-  display: flex;
-  grid-template-columns: 2fr 3fr; 
-  grid-template-rows: 1fr 1fr;
-  gap: 20px; 
-  width: 100%; 
-  height: auto; 
-  padding: 20px; 
-  box-sizing: border-box;
+	display: flex;
+	grid-template-columns: 2fr 3fr;
+	grid-template-rows: 1fr 1fr;
+	gap: 20px;
+	width: 100%;
+	height: auto;
+	padding: 20px;
+	box-sizing: border-box;
 }
 
 #map-container {
-  flex: 1;
-  max-width: 48%; 
+	flex: 1;
+	max-width: 48%;
 }
 
 #map {
-  grid-column: 1; 
-  grid-row: 1 / span 2; 
-  width: 30%; 
-  height: 100%; 
+	grid-column: 1;
+	grid-row: 1 / span 2;
+	width: 30%;
+	height: 100%;
 }
 
 .right-visualizations {
-  display: flex;
-  flex-direction: column;
-  flex: 1;
-  gap: 20px;
-  max-width: 48%; 
+	display: flex;
+	flex-direction: column;
+	flex: 1;
+	gap: 20px;
+	max-width: 48%;
 }
 
 #lineChart {
-  grid-row: 1; 
+	grid-row: 1;
 }
 
 #barChart {
-  grid-row: 2; 
+	grid-row: 2;
 }
 
 .vis-holder svg {
-  display: block;
-  margin: auto;
+	display: block;
+	margin: auto;
 }
 
 
 /* Default style for marks and channels used */
 .point {
-  fill: steelblue;
+	fill: steelblue;
 }
 
 
 /* Style for selected marks (circles) */
 circle.selected {
-  fill: red;
+	fill: red;
 }
 
 .tooltip {
-  position: absolute;
-  visibility: hidden;
-  background: white;
-  border: 1px solid #ccc;
-  padding: 5px;
-  border-radius: 5px;
-  font-size: 12px;
-  pointer-events: none;
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+	position: absolute;
+	visibility: hidden;
+	background: white;
+	border: 1px solid #ccc;
+	padding: 5px;
+	border-radius: 5px;
+	font-size: 12px;
+	pointer-events: none;
+	box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-/* Fork on GitHub ribbon via https://codepo8.github.io/css-fork-on-github-ribbon/# */  
-#forkongithub a{
-	background:#00F;
-	color:#fff;
-	text-decoration:none;
-	font-family:arial,sans-serif;
-	text-align:center;
-	font-weight:bold;
-	padding:5px 40px;
-	font-size:1rem;
-	line-height:1.4rem;
-	position:relative;
-	transition:0.5s;
+/* Fork on GitHub ribbon via https://codepo8.github.io/css-fork-on-github-ribbon/# */
+#forkongithub a {
+	background: #00F;
+	color: #fff;
+	text-decoration: none;
+	font-family: arial, sans-serif;
+	text-align: center;
+	font-weight: bold;
+	padding: 5px 40px;
+	font-size: 1rem;
+	line-height: 1.4rem;
+	position: relative;
+	transition: 0.5s;
 }
-#forkongithub a:hover{
-	background:#118;
-	color:#fff;
+
+#forkongithub a:hover {
+	background: #118;
+	color: #fff;
 }
-#forkongithub a::before,#forkongithub a::after{
-	content:"";
-	width:100%;
-	display:block;
-	position:absolute;
-	top:1px;
-	left:0;
-	height:1px;
-	background:#fff;
+
+#forkongithub a::before,
+#forkongithub a::after {
+	content: "";
+	width: 100%;
+	display: block;
+	position: absolute;
+	top: 1px;
+	left: 0;
+	height: 1px;
+	background: #fff;
 }
-#forkongithub a::after{
-	bottom:1px;
-	top:auto;
+
+#forkongithub a::after {
+	bottom: 1px;
+	top: auto;
 }
-@media screen and (min-width:1000px){
-	#forkongithub{
-		position:fixed;
-		display:block;
-		top:0;
-		right:0;
-		width:200px;
-		overflow:hidden;
-		height:200px;
-		z-index:9999;
+
+@media screen and (min-width:1000px) {
+	#forkongithub {
+		position: fixed;
+		display: block;
+		top: 0;
+		right: 0;
+		width: 200px;
+		overflow: hidden;
+		height: 200px;
+		z-index: 9999;
 	}
-	#forkongithub a{
-		width:200px;
-		position:absolute;
-		top:60px;
-		right:-60px;
-		transform:rotate(45deg);
-		-webkit-transform:rotate(45deg);
-		-ms-transform:rotate(45deg);
-		-moz-transform:rotate(45deg);
-		-o-transform:rotate(45deg);
-		box-shadow:4px 4px 10px rgba(0,0,0,0.8);
+
+	#forkongithub a {
+		width: 200px;
+		position: absolute;
+		top: 60px;
+		right: -60px;
+		transform: rotate(45deg);
+		-webkit-transform: rotate(45deg);
+		-ms-transform: rotate(45deg);
+		-moz-transform: rotate(45deg);
+		-o-transform: rotate(45deg);
+		box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.8);
 	}
 }
+
 /*Slider Style*/
 /**#time-slider-container {
 	display: flex;
@@ -171,4 +182,21 @@ circle.selected {
 	font-weight: bold;
 	margin-top: 5px;
   }*/
-  
+
+
+/* Legend styling */
+/* .legend {
+	background-color: rgba(255, 255, 255, 0.8);
+
+	border: 1px solid #ccc;
+
+	border-radius: 5px;
+
+	padding: 10px;
+
+	font-size: 14px;
+
+	line-height: 1.5;
+	max-width: 250px;
+
+} */
