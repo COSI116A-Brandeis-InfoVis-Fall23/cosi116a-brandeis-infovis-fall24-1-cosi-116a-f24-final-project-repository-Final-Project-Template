@@ -73,7 +73,6 @@ scHeartDisease("#scatterplot", scatterData);
 //on mosuedown, highlight point on scatterplot and change linechart
 d3.selectAll("svg").on("mouseover", (d, i, elements) =>{          
   d3.selectAll("g path").on("mouseover", (d, i, elements) =>{     //shade states on mosueover
-    d3.selectAll("path").classed("selected", false);          //reset previously selected elements from scatterplot linking
     d3.select(elements[i]).classed("mouseover", true);
     var selected = d.properties.STATENAM;
     d3.selectAll("circle")
@@ -111,7 +110,10 @@ d3.selectAll("svg").on("mouseover", (d, i, elements) =>{
     .yLabelOffset(40)
 
   lcHeartDiseaseNew("#linechart", data);      //create new linechart with the new data
-  d3.selectAll("circle").classed("permaselected", false); ///reset selection
+
+  d3.select("#state").text(selected);     //replace old state name
+  d3.select("#legendState").text(selected);     //replace old state name
+
   d3.selectAll("circle")                                          //highlight new year
     .filter(function() {
       return d3.select(this).attr("year") == currentYear; // rehighlight year
@@ -131,6 +133,7 @@ d3.selectAll("svg").on("mouseover", (d, i, elements) =>{
 //on year change, highlight linechart and change scatterplot
 d3.select("#slider").on("change", function(d) {                   
   d3.selectAll("circle").classed("selected", false);
+  d3.selectAll("path").classed("selected", false);          //reset previously selected elements from scatterplot linking
   currentYear = this.value;                                       //recolor map on update
   d3.selectAll("circle")                                          //highlight new year
     .filter(function() {
