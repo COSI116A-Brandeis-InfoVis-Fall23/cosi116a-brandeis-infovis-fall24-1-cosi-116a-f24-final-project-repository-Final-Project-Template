@@ -1,0 +1,9005 @@
+{
+   "type": "FeatureCollection",
+   "features": [
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -74.164581,40.5446 ]
+    },
+    "properties": {
+    "StationID":"R470",
+    "ControlArea":"X002",
+    "Traffic":16
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -74.155533,40.738879 ]
+    },
+    "properties": {
+    "StationID":"R544",
+    "ControlArea":"PTH02",
+    "Traffic":263
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -74.074824,40.636948 ]
+    },
+    "properties": {
+    "StationID":"R165",
+    "ControlArea":"S102",
+    "Traffic":2563
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -74.073622,40.643738 ]
+    },
+    "properties": {
+    "StationID":"R070",
+    "ControlArea":"S101",
+    "Traffic":4658
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -74.073622,40.643738 ]
+    },
+    "properties": {
+    "StationID":"R070",
+    "ControlArea":"S101A",
+    "Traffic":3604
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -74.063915,40.732102 ]
+    },
+    "properties": {
+    "StationID":"R552",
+    "ControlArea":"PTH03",
+    "Traffic":8803
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -74.042616,40.719876 ]
+    },
+    "properties": {
+    "StationID":"R551",
+    "ControlArea":"PTH04",
+    "Traffic":9047
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -74.033024,40.716737 ]
+    },
+    "properties": {
+    "StationID":"R543",
+    "ControlArea":"PTH05",
+    "Traffic":5952
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -74.030964,40.616624 ]
+    },
+    "properties": {
+    "StationID":"R216",
+    "ControlArea":"C027",
+    "Traffic":8611
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -74.030964,40.616624 ]
+    },
+    "properties": {
+    "StationID":"R216",
+    "ControlArea":"C028",
+    "Traffic":9572
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -74.028368,40.622715 ]
+    },
+    "properties": {
+    "StationID":"R215",
+    "ControlArea":"C025",
+    "Traffic":6223
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -74.028368,40.622715 ]
+    },
+    "properties": {
+    "StationID":"R215",
+    "ControlArea":"C026",
+    "Traffic":8779
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -74.025514,40.629702 ]
+    },
+    "properties": {
+    "StationID":"R214",
+    "ControlArea":"C024",
+    "Traffic":5004
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -74.023411,40.634945 ]
+    },
+    "properties": {
+    "StationID":"R213",
+    "ControlArea":"C023",
+    "Traffic":3798
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -74.017972,40.641426 ]
+    },
+    "properties": {
+    "StationID":"R212",
+    "ControlArea":"C021",
+    "Traffic":4720
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -74.017972,40.641426 ]
+    },
+    "properties": {
+    "StationID":"R212",
+    "ControlArea":"C022",
+    "Traffic":5129
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -74.014099,40.704782 ]
+    },
+    "properties": {
+    "StationID":"R041",
+    "ControlArea":"R201",
+    "Traffic":1070
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -74.014099,40.704782 ]
+    },
+    "properties": {
+    "StationID":"R041",
+    "ControlArea":"R200A",
+    "Traffic":1504
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -74.014099,40.704782 ]
+    },
+    "properties": {
+    "StationID":"R042",
+    "ControlArea":"R202",
+    "Traffic":1248
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -74.014034,40.644959 ]
+    },
+    "properties": {
+    "StationID":"R233",
+    "ControlArea":"C020",
+    "Traffic":2506
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -74.013691,40.70784 ]
+    },
+    "properties": {
+    "StationID":"R304",
+    "ControlArea":"R103",
+    "Traffic":5748
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -74.013691,40.70784 ]
+    },
+    "properties": {
+    "StationID":"R304",
+    "ControlArea":"R102",
+    "Traffic":5387
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -74.013391,40.707222 ]
+    },
+    "properties": {
+    "StationID":"R227",
+    "ControlArea":"A055",
+    "Traffic":2772
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -74.013391,40.707222 ]
+    },
+    "properties": {
+    "StationID":"R227",
+    "ControlArea":"A054",
+    "Traffic":5534
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -74.013273,40.704591 ]
+    },
+    "properties": {
+    "StationID":"R076",
+    "ControlArea":"MCC07",
+    "Traffic":1047
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -74.011867,40.707466 ]
+    },
+    "properties": {
+    "StationID":"R043",
+    "ControlArea":"R203",
+    "Traffic":7491
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -74.011867,40.707466 ]
+    },
+    "properties": {
+    "StationID":"R043",
+    "ControlArea":"R203A",
+    "Traffic":9640
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -74.011867,40.707466 ]
+    },
+    "properties": {
+    "StationID":"R043",
+    "ControlArea":"R204",
+    "Traffic":5326
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -74.011867,40.707466 ]
+    },
+    "properties": {
+    "StationID":"R043",
+    "ControlArea":"R204A",
+    "Traffic":77
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -74.011717,40.635011 ]
+    },
+    "properties": {
+    "StationID":"R390",
+    "ControlArea":"D002",
+    "Traffic":6374
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -74.011324,40.710454 ]
+    },
+    "properties": {
+    "StationID":"R305",
+    "ControlArea":"R107",
+    "Traffic":8560
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -74.011324,40.710454 ]
+    },
+    "properties": {
+    "StationID":"R305",
+    "ControlArea":"R106",
+    "Traffic":45
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -74.011324,40.710454 ]
+    },
+    "properties": {
+    "StationID":"R305",
+    "ControlArea":"R108",
+    "Traffic":2012
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -74.011324,40.710454 ]
+    },
+    "properties": {
+    "StationID":"R305",
+    "ControlArea":"R109",
+    "Traffic":1602
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -74.011052,40.710662 ]
+    },
+    "properties": {
+    "StationID":"R088",
+    "ControlArea":"A050",
+    "Traffic":4105
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -74.011052,40.710662 ]
+    },
+    "properties": {
+    "StationID":"R088",
+    "ControlArea":"A052",
+    "Traffic":3599
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -74.011052,40.710662 ]
+    },
+    "properties": {
+    "StationID":"R088",
+    "ControlArea":"A051",
+    "Traffic":2881
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -74.011052,40.710662 ]
+    },
+    "properties": {
+    "StationID":"R088",
+    "ControlArea":"A053",
+    "Traffic":1007
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -74.011052,40.706539 ]
+    },
+    "properties": {
+    "StationID":"R125",
+    "ControlArea":"A083",
+    "Traffic":5065
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -74.011052,40.706539 ]
+    },
+    "properties": {
+    "StationID":"R125",
+    "ControlArea":"A084",
+    "Traffic":7007
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -74.011052,40.706539 ]
+    },
+    "properties": {
+    "StationID":"R125",
+    "ControlArea":"A085",
+    "Traffic":1035
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -74.010708,40.711638 ]
+    },
+    "properties": {
+    "StationID":"R540",
+    "ControlArea":"PTH08",
+    "Traffic":1287
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -74.010708,40.711638 ]
+    },
+    "properties": {
+    "StationID":"R540",
+    "ControlArea":"PTH21",
+    "Traffic":5226
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -74.010086,40.648866 ]
+    },
+    "properties": {
+    "StationID":"R232",
+    "ControlArea":"C019",
+    "Traffic":2380
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -74.009807,40.712557 ]
+    },
+    "properties": {
+    "StationID":"R029",
+    "ControlArea":"N094",
+    "Traffic":255
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -74.009335,40.715436 ]
+    },
+    "properties": {
+    "StationID":"R030",
+    "ControlArea":"R116",
+    "Traffic":244
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -74.009056,40.706864 ]
+    },
+    "properties": {
+    "StationID":"R027",
+    "ControlArea":"R111",
+    "Traffic":3903
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -74.009056,40.706864 ]
+    },
+    "properties": {
+    "StationID":"R027",
+    "ControlArea":"R110",
+    "Traffic":7545
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -74.009056,40.706864 ]
+    },
+    "properties": {
+    "StationID":"R027",
+    "ControlArea":"R112",
+    "Traffic":1739
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -74.009056,40.706864 ]
+    },
+    "properties": {
+    "StationID":"R027",
+    "ControlArea":"R112A",
+    "Traffic":3522
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -74.008777,40.713061 ]
+    },
+    "properties": {
+    "StationID":"R029",
+    "ControlArea":"R115",
+    "Traffic":1623
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -74.008563,40.71433 ]
+    },
+    "properties": {
+    "StationID":"R029",
+    "ControlArea":"N091",
+    "Traffic":947
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -74.008563,40.71433 ]
+    },
+    "properties": {
+    "StationID":"R029",
+    "ControlArea":"N092",
+    "Traffic":1449
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -74.007983,40.709938 ]
+    },
+    "properties": {
+    "StationID":"R002",
+    "ControlArea":"A077",
+    "Traffic":8148
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -74.007983,40.709938 ]
+    },
+    "properties": {
+    "StationID":"R002",
+    "ControlArea":"A081",
+    "Traffic":405
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -74.007983,40.709938 ]
+    },
+    "properties": {
+    "StationID":"R002",
+    "ControlArea":"A082",
+    "Traffic":6700
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -74.007983,40.709938 ]
+    },
+    "properties": {
+    "StationID":"R014",
+    "ControlArea":"N095",
+    "Traffic":3683
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -74.007983,40.709938 ]
+    },
+    "properties": {
+    "StationID":"R014",
+    "ControlArea":"R205",
+    "Traffic":9897
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -74.007983,40.709938 ]
+    },
+    "properties": {
+    "StationID":"R014",
+    "ControlArea":"R206",
+    "Traffic":701
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -74.007983,40.709938 ]
+    },
+    "properties": {
+    "StationID":"R014",
+    "ControlArea":"R208",
+    "Traffic":2858
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -74.007983,40.709938 ]
+    },
+    "properties": {
+    "StationID":"R014",
+    "ControlArea":"R205A",
+    "Traffic":2655
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -74.007983,40.709938 ]
+    },
+    "properties": {
+    "StationID":"R028",
+    "ControlArea":"R113A",
+    "Traffic":5693
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -74.007983,40.709938 ]
+    },
+    "properties": {
+    "StationID":"R028",
+    "ControlArea":"R113",
+    "Traffic":1683
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -74.007983,40.709938 ]
+    },
+    "properties": {
+    "StationID":"R028",
+    "ControlArea":"R114",
+    "Traffic":1375
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -74.007232,40.713086 ]
+    },
+    "properties": {
+    "StationID":"R087",
+    "ControlArea":"A047",
+    "Traffic":6987
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -74.006953,40.719323 ]
+    },
+    "properties": {
+    "StationID":"R343",
+    "ControlArea":"R117",
+    "Traffic":5483
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -74.006953,40.719323 ]
+    },
+    "properties": {
+    "StationID":"R343",
+    "ControlArea":"R118",
+    "Traffic":2908
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -74.006267,40.722819 ]
+    },
+    "properties": {
+    "StationID":"R320",
+    "ControlArea":"R119",
+    "Traffic":4471
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -74.006267,40.722819 ]
+    },
+    "properties": {
+    "StationID":"R320",
+    "ControlArea":"R120",
+    "Traffic":3048
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -74.005387,40.631428 ]
+    },
+    "properties": {
+    "StationID":"R391",
+    "ControlArea":"D003",
+    "Traffic":1120
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -74.005387,40.631428 ]
+    },
+    "properties": {
+    "StationID":"R391",
+    "ControlArea":"D004",
+    "Traffic":3017
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -74.005344,40.728202 ]
+    },
+    "properties": {
+    "StationID":"R290",
+    "ControlArea":"R123",
+    "Traffic":318
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -74.005344,40.728202 ]
+    },
+    "properties": {
+    "StationID":"R290",
+    "ControlArea":"R121",
+    "Traffic":2664
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -74.005344,40.728202 ]
+    },
+    "properties": {
+    "StationID":"R290",
+    "ControlArea":"R122",
+    "Traffic":5043
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -74.005344,40.728202 ]
+    },
+    "properties": {
+    "StationID":"R290",
+    "ControlArea":"R124",
+    "Traffic":6013
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -74.005237,40.720852 ]
+    },
+    "properties": {
+    "StationID":"R139",
+    "ControlArea":"N089",
+    "Traffic":2758
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -74.005237,40.720852 ]
+    },
+    "properties": {
+    "StationID":"R139",
+    "ControlArea":"N090",
+    "Traffic":881
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -74.003917,40.713159 ]
+    },
+    "properties": {
+    "StationID":"R044",
+    "ControlArea":"A069",
+    "Traffic":2649
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -74.003917,40.713159 ]
+    },
+    "properties": {
+    "StationID":"R044",
+    "ControlArea":"A071",
+    "Traffic":3669
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -74.003917,40.713159 ]
+    },
+    "properties": {
+    "StationID":"R044",
+    "ControlArea":"R210",
+    "Traffic":4258
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -74.003917,40.713159 ]
+    },
+    "properties": {
+    "StationID":"R044",
+    "ControlArea":"R210A",
+    "Traffic":9636
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -74.003627,40.726202 ]
+    },
+    "properties": {
+    "StationID":"R282",
+    "ControlArea":"N086",
+    "Traffic":6739
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -74.003627,40.726202 ]
+    },
+    "properties": {
+    "StationID":"R282",
+    "ControlArea":"N087",
+    "Traffic":5539
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -74.003477,40.65515 ]
+    },
+    "properties": {
+    "StationID":"R197",
+    "ControlArea":"C018",
+    "Traffic":8938
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -74.002898,40.733405 ]
+    },
+    "properties": {
+    "StationID":"R189",
+    "ControlArea":"R125",
+    "Traffic":7353
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -74.002898,40.733405 ]
+    },
+    "properties": {
+    "StationID":"R189",
+    "ControlArea":"R126",
+    "Traffic":3864
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -74.002104,40.740388 ]
+    },
+    "properties": {
+    "StationID":"R175",
+    "ControlArea":"H001",
+    "Traffic":2202
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -74.002104,40.740388 ]
+    },
+    "properties": {
+    "StationID":"R175",
+    "ControlArea":"N078",
+    "Traffic":1467
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -74.001782,40.607958 ]
+    },
+    "properties": {
+    "StationID":"R372",
+    "ControlArea":"E012",
+    "Traffic":9075
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -74.000977,40.718697 ]
+    },
+    "properties": {
+    "StationID":"R462",
+    "ControlArea":"A043",
+    "Traffic":294
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -74.000977,40.718697 ]
+    },
+    "properties": {
+    "StationID":"R462",
+    "ControlArea":"A044",
+    "Traffic":6714
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -74.000977,40.718697 ]
+    },
+    "properties": {
+    "StationID":"R463",
+    "ControlArea":"A046",
+    "Traffic":3945
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -74.000977,40.718697 ]
+    },
+    "properties": {
+    "StationID":"R463",
+    "ControlArea":"R214",
+    "Traffic":4279
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -74.000645,40.613513 ]
+    },
+    "properties": {
+    "StationID":"R371",
+    "ControlArea":"E011",
+    "Traffic":3273
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -74.000559,40.732251 ]
+    },
+    "properties": {
+    "StationID":"R138",
+    "ControlArea":"N080",
+    "Traffic":8726
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -74.000559,40.732251 ]
+    },
+    "properties": {
+    "StationID":"R138",
+    "ControlArea":"N083",
+    "Traffic":364
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -74.000323,40.718233 ]
+    },
+    "properties": {
+    "StationID":"R118",
+    "ControlArea":"A066",
+    "Traffic":3210
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.998842,40.619588 ]
+    },
+    "properties": {
+    "StationID":"R370",
+    "ControlArea":"E009",
+    "Traffic":9434
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.998456,40.604798 ]
+    },
+    "properties": {
+    "StationID":"R373",
+    "ControlArea":"E013",
+    "Traffic":7076
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.998381,40.738007 ]
+    },
+    "properties": {
+    "StationID":"R105",
+    "ControlArea":"R127",
+    "Traffic":536
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.998381,40.738007 ]
+    },
+    "properties": {
+    "StationID":"R105",
+    "ControlArea":"R128",
+    "Traffic":243
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.998059,40.660481 ]
+    },
+    "properties": {
+    "StationID":"R278",
+    "ControlArea":"C016",
+    "Traffic":3470
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.998005,40.745924 ]
+    },
+    "properties": {
+    "StationID":"R111",
+    "ControlArea":"N076",
+    "Traffic":6345
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.998005,40.745924 ]
+    },
+    "properties": {
+    "StationID":"R111",
+    "ControlArea":"N075",
+    "Traffic":3738
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.998005,40.745924 ]
+    },
+    "properties": {
+    "StationID":"R111",
+    "ControlArea":"N077",
+    "Traffic":2369
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.997944,40.66043 ]
+    },
+    "properties": {
+    "StationID":"R455",
+    "ControlArea":"C017",
+    "Traffic":9414
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.997877,40.741096 ]
+    },
+    "properties": {
+    "StationID":"R321",
+    "ControlArea":"R129",
+    "Traffic":271
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.997877,40.741096 ]
+    },
+    "properties": {
+    "StationID":"R321",
+    "ControlArea":"R130",
+    "Traffic":8409
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.997684,40.724332 ]
+    },
+    "properties": {
+    "StationID":"R086",
+    "ControlArea":"A041",
+    "Traffic":618
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.997684,40.724332 ]
+    },
+    "properties": {
+    "StationID":"R086",
+    "ControlArea":"A042",
+    "Traffic":5515
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.997211,40.722397 ]
+    },
+    "properties": {
+    "StationID":"R322",
+    "ControlArea":"R215",
+    "Traffic":5960
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.997211,40.722397 ]
+    },
+    "properties": {
+    "StationID":"R322",
+    "ControlArea":"R216",
+    "Traffic":1365
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.9969,40.737348 ]
+    },
+    "properties": {
+    "StationID":"R163",
+    "ControlArea":"H003",
+    "Traffic":1276
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.9969,40.737348 ]
+    },
+    "properties": {
+    "StationID":"R163",
+    "ControlArea":"N512",
+    "Traffic":5326
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.9969,40.737348 ]
+    },
+    "properties": {
+    "StationID":"R163",
+    "ControlArea":"N510",
+    "Traffic":5491
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.9969,40.737348 ]
+    },
+    "properties": {
+    "StationID":"R163",
+    "ControlArea":"N511",
+    "Traffic":8609
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.9969,40.737348 ]
+    },
+    "properties": {
+    "StationID":"R163",
+    "ControlArea":"N513",
+    "Traffic":4822
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.996785,40.737434 ]
+    },
+    "properties": {
+    "StationID":"R545",
+    "ControlArea":"PTH11",
+    "Traffic":9349
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.996632,40.625419 ]
+    },
+    "properties": {
+    "StationID":"R398",
+    "ControlArea":"D005",
+    "Traffic":2596
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.996632,40.625419 ]
+    },
+    "properties": {
+    "StationID":"R398",
+    "ControlArea":"D006",
+    "Traffic":5392
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.996204,40.725297 ]
+    },
+    "properties": {
+    "StationID":"R461",
+    "ControlArea":"N519",
+    "Traffic":1926
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.996204,40.725297 ]
+    },
+    "properties": {
+    "StationID":"R461",
+    "ControlArea":"N519A",
+    "Traffic":1597
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.996139,40.673714 ]
+    },
+    "properties": {
+    "StationID":"R270",
+    "ControlArea":"N536",
+    "Traffic":3190
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.995645,40.725665 ]
+    },
+    "properties": {
+    "StationID":"R194",
+    "ControlArea":"R217A",
+    "Traffic":9450
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.995624,40.744071 ]
+    },
+    "properties": {
+    "StationID":"R190",
+    "ControlArea":"R131",
+    "Traffic":5414
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.995624,40.744071 ]
+    },
+    "properties": {
+    "StationID":"R190",
+    "ControlArea":"R132",
+    "Traffic":1644
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.995473,40.631412 ]
+    },
+    "properties": {
+    "StationID":"R247",
+    "ControlArea":"E005",
+    "Traffic":3799
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.99498,40.680231 ]
+    },
+    "properties": {
+    "StationID":"R220",
+    "ControlArea":"N535",
+    "Traffic":7998
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.99498,40.680231 ]
+    },
+    "properties": {
+    "StationID":"R220",
+    "ControlArea":"N534",
+    "Traffic":2556
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.994765,40.636232 ]
+    },
+    "properties": {
+    "StationID":"R234",
+    "ControlArea":"E004",
+    "Traffic":3130
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.994551,40.646343 ]
+    },
+    "properties": {
+    "StationID":"R368",
+    "ControlArea":"E001",
+    "Traffic":4324
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.994229,40.640872 ]
+    },
+    "properties": {
+    "StationID":"R369",
+    "ControlArea":"E003",
+    "Traffic":73
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.994164,40.718542 ]
+    },
+    "properties": {
+    "StationID":"R240",
+    "ControlArea":"N520",
+    "Traffic":5924
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.994014,40.720315 ]
+    },
+    "properties": {
+    "StationID":"R311",
+    "ControlArea":"A064",
+    "Traffic":9800
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.993821,40.601898 ]
+    },
+    "properties": {
+    "StationID":"R374",
+    "ControlArea":"E014",
+    "Traffic":7012
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.993456,40.752247 ]
+    },
+    "properties": {
+    "StationID":"R012",
+    "ControlArea":"N067",
+    "Traffic":2492
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.993456,40.752247 ]
+    },
+    "properties": {
+    "StationID":"R012",
+    "ControlArea":"N065",
+    "Traffic":404
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.993456,40.752247 ]
+    },
+    "properties": {
+    "StationID":"R012",
+    "ControlArea":"N068",
+    "Traffic":3064
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.993456,40.752247 ]
+    },
+    "properties": {
+    "StationID":"R012",
+    "ControlArea":"N070",
+    "Traffic":9445
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.993456,40.752247 ]
+    },
+    "properties": {
+    "StationID":"R012",
+    "ControlArea":"N072",
+    "Traffic":6945
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.993456,40.752247 ]
+    },
+    "properties": {
+    "StationID":"R013",
+    "ControlArea":"N071",
+    "Traffic":3285
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.993456,40.752247 ]
+    },
+    "properties": {
+    "StationID":"R013",
+    "ControlArea":"N069",
+    "Traffic":5852
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.993456,40.752247 ]
+    },
+    "properties": {
+    "StationID":"R013",
+    "ControlArea":"N073",
+    "Traffic":4645
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.99336,40.747224 ]
+    },
+    "properties": {
+    "StationID":"R272",
+    "ControlArea":"R133",
+    "Traffic":1214
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.99336,40.747224 ]
+    },
+    "properties": {
+    "StationID":"R272",
+    "ControlArea":"R134",
+    "Traffic":3007
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.992984,40.750264 ]
+    },
+    "properties": {
+    "StationID":"R293",
+    "ControlArea":"R138",
+    "Traffic":1962
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.992984,40.750264 ]
+    },
+    "properties": {
+    "StationID":"R293",
+    "ControlArea":"R142",
+    "Traffic":1651
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.992909,40.742933 ]
+    },
+    "properties": {
+    "StationID":"R542",
+    "ControlArea":"PTH12",
+    "Traffic":4970
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.992888,40.697356 ]
+    },
+    "properties": {
+    "StationID":"R224",
+    "ControlArea":"R600",
+    "Traffic":7267
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.992877,40.665405 ]
+    },
+    "properties": {
+    "StationID":"R454",
+    "ControlArea":"C015",
+    "Traffic":160
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.992856,40.665438 ]
+    },
+    "properties": {
+    "StationID":"R246",
+    "ControlArea":"C014",
+    "Traffic":2287
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.99277,40.742868 ]
+    },
+    "properties": {
+    "StationID":"R203",
+    "ControlArea":"N509",
+    "Traffic":6957
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.992727,40.742981 ]
+    },
+    "properties": {
+    "StationID":"R453",
+    "ControlArea":"N508",
+    "Traffic":839
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.992705,40.730348 ]
+    },
+    "properties": {
+    "StationID":"R085",
+    "ControlArea":"A038",
+    "Traffic":4621
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.992705,40.730348 ]
+    },
+    "properties": {
+    "StationID":"R085",
+    "ControlArea":"A039",
+    "Traffic":6027
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.991096,40.750329 ]
+    },
+    "properties": {
+    "StationID":"R031",
+    "ControlArea":"R141",
+    "Traffic":5099
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.991096,40.750329 ]
+    },
+    "properties": {
+    "StationID":"R031",
+    "ControlArea":"R135",
+    "Traffic":9526
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.991096,40.750329 ]
+    },
+    "properties": {
+    "StationID":"R031",
+    "ControlArea":"R137",
+    "Traffic":4429
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.991096,40.750329 ]
+    },
+    "properties": {
+    "StationID":"R031",
+    "ControlArea":"R139",
+    "Traffic":3498
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.991042,40.730056 ]
+    },
+    "properties": {
+    "StationID":"R160",
+    "ControlArea":"R219",
+    "Traffic":576
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.991042,40.730056 ]
+    },
+    "properties": {
+    "StationID":"R160",
+    "ControlArea":"R220",
+    "Traffic":338
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.990881,40.686154 ]
+    },
+    "properties": {
+    "StationID":"R129",
+    "ControlArea":"N532",
+    "Traffic":9040
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.990881,40.686154 ]
+    },
+    "properties": {
+    "StationID":"R129",
+    "ControlArea":"N531",
+    "Traffic":8589
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.990881,40.686154 ]
+    },
+    "properties": {
+    "StationID":"R129",
+    "ControlArea":"N533",
+    "Traffic":5842
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.990688,40.734836 ]
+    },
+    "properties": {
+    "StationID":"R170",
+    "ControlArea":"A035",
+    "Traffic":4118
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.990688,40.734836 ]
+    },
+    "properties": {
+    "StationID":"R170",
+    "ControlArea":"A033",
+    "Traffic":9633
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.990688,40.734836 ]
+    },
+    "properties": {
+    "StationID":"R170",
+    "ControlArea":"A034",
+    "Traffic":1128
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.990688,40.734836 ]
+    },
+    "properties": {
+    "StationID":"R170",
+    "ControlArea":"A036",
+    "Traffic":6326
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.990688,40.734836 ]
+    },
+    "properties": {
+    "StationID":"R170",
+    "ControlArea":"A037",
+    "Traffic":7514
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.990688,40.734836 ]
+    },
+    "properties": {
+    "StationID":"R170",
+    "ControlArea":"R221",
+    "Traffic":7482
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.990474,40.699316 ]
+    },
+    "properties": {
+    "StationID":"R252",
+    "ControlArea":"N100",
+    "Traffic":8104
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.990474,40.699316 ]
+    },
+    "properties": {
+    "StationID":"R252",
+    "ControlArea":"N101",
+    "Traffic":9548
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.990388,40.620728 ]
+    },
+    "properties": {
+    "StationID":"R392",
+    "ControlArea":"D008",
+    "Traffic":7669
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.990152,40.713647 ]
+    },
+    "properties": {
+    "StationID":"R257",
+    "ControlArea":"N529",
+    "Traffic":1323
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.990152,40.713647 ]
+    },
+    "properties": {
+    "StationID":"R257",
+    "ControlArea":"N528",
+    "Traffic":7463
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.990151,40.692404 ]
+    },
+    "properties": {
+    "StationID":"R108",
+    "ControlArea":"C001",
+    "Traffic":2167
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.990151,40.692404 ]
+    },
+    "properties": {
+    "StationID":"R108",
+    "ControlArea":"R602",
+    "Traffic":4756
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.990151,40.692404 ]
+    },
+    "properties": {
+    "StationID":"R108",
+    "ControlArea":"R601A",
+    "Traffic":7744
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.990151,40.692404 ]
+    },
+    "properties": {
+    "StationID":"R108",
+    "ControlArea":"R604",
+    "Traffic":8364
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.989873,40.723291 ]
+    },
+    "properties": {
+    "StationID":"R300",
+    "ControlArea":"N523",
+    "Traffic":434
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.989873,40.723291 ]
+    },
+    "properties": {
+    "StationID":"R300",
+    "ControlArea":"N521",
+    "Traffic":9193
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.989787,40.757303 ]
+    },
+    "properties": {
+    "StationID":"R010",
+    "ControlArea":"N062A",
+    "Traffic":4200
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.989787,40.757303 ]
+    },
+    "properties": {
+    "StationID":"R010",
+    "ControlArea":"N060",
+    "Traffic":6994
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.989787,40.757303 ]
+    },
+    "properties": {
+    "StationID":"R011",
+    "ControlArea":"N063A",
+    "Traffic":8980
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.989787,40.757303 ]
+    },
+    "properties": {
+    "StationID":"R011",
+    "ControlArea":"N062",
+    "Traffic":1987
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.989787,40.757303 ]
+    },
+    "properties": {
+    "StationID":"R011",
+    "ControlArea":"N063",
+    "Traffic":5619
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.989315,40.741006 ]
+    },
+    "properties": {
+    "StationID":"R083",
+    "ControlArea":"A031",
+    "Traffic":6883
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.989315,40.741006 ]
+    },
+    "properties": {
+    "StationID":"R083",
+    "ControlArea":"A030",
+    "Traffic":4507
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.988757,40.67032 ]
+    },
+    "properties": {
+    "StationID":"R258",
+    "ControlArea":"C012",
+    "Traffic":5752
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.988757,40.67032 ]
+    },
+    "properties": {
+    "StationID":"R258",
+    "ControlArea":"N537",
+    "Traffic":9787
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.988682,40.745574 ]
+    },
+    "properties": {
+    "StationID":"R082",
+    "ControlArea":"A029",
+    "Traffic":4149
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.988682,40.745574 ]
+    },
+    "properties": {
+    "StationID":"R082",
+    "ControlArea":"A027",
+    "Traffic":1758
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.988113,40.748931 ]
+    },
+    "properties": {
+    "StationID":"R541",
+    "ControlArea":"PTH17",
+    "Traffic":9462
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.987899,40.749533 ]
+    },
+    "properties": {
+    "StationID":"R022",
+    "ControlArea":"A022",
+    "Traffic":8184
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.987899,40.749533 ]
+    },
+    "properties": {
+    "StationID":"R023",
+    "ControlArea":"A025",
+    "Traffic":2947
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.987899,40.749533 ]
+    },
+    "properties": {
+    "StationID":"R022",
+    "ControlArea":"N506",
+    "Traffic":9147
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.987899,40.749533 ]
+    },
+    "properties": {
+    "StationID":"R022",
+    "ControlArea":"N505",
+    "Traffic":9580
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.987899,40.749533 ]
+    },
+    "properties": {
+    "StationID":"R023",
+    "ControlArea":"N507",
+    "Traffic":1653
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.987813,40.71838 ]
+    },
+    "properties": {
+    "StationID":"R142",
+    "ControlArea":"A061",
+    "Traffic":5266
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.987813,40.71838 ]
+    },
+    "properties": {
+    "StationID":"R142",
+    "ControlArea":"N525",
+    "Traffic":2894
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.987813,40.71838 ]
+    },
+    "properties": {
+    "StationID":"R142",
+    "ControlArea":"N526",
+    "Traffic":815
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.987342,40.692338 ]
+    },
+    "properties": {
+    "StationID":"R127",
+    "ControlArea":"N103",
+    "Traffic":7086
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.987342,40.692338 ]
+    },
+    "properties": {
+    "StationID":"R127",
+    "ControlArea":"N102",
+    "Traffic":4273
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.987169,40.733243 ]
+    },
+    "properties": {
+    "StationID":"R330",
+    "ControlArea":"H005",
+    "Traffic":3978
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.987169,40.733243 ]
+    },
+    "properties": {
+    "StationID":"R330",
+    "ControlArea":"H006",
+    "Traffic":8551
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.986955,40.597873 ]
+    },
+    "properties": {
+    "StationID":"R399",
+    "ControlArea":"E015",
+    "Traffic":4692
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.98689,40.699756 ]
+    },
+    "properties": {
+    "StationID":"R301",
+    "ControlArea":"N530",
+    "Traffic":8729
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.986504,40.755905 ]
+    },
+    "properties": {
+    "StationID":"R032",
+    "ControlArea":"A021",
+    "Traffic":7113
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.986504,40.755905 ]
+    },
+    "properties": {
+    "StationID":"R032",
+    "ControlArea":"R145",
+    "Traffic":8919
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.986504,40.755905 ]
+    },
+    "properties": {
+    "StationID":"R032",
+    "ControlArea":"R143",
+    "Traffic":391
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.986504,40.755905 ]
+    },
+    "properties": {
+    "StationID":"R032",
+    "ControlArea":"R146",
+    "Traffic":3856
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.986504,40.755905 ]
+    },
+    "properties": {
+    "StationID":"R033",
+    "ControlArea":"R151",
+    "Traffic":8429
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.986504,40.755905 ]
+    },
+    "properties": {
+    "StationID":"R033",
+    "ControlArea":"R148",
+    "Traffic":8159
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.986504,40.755905 ]
+    },
+    "properties": {
+    "StationID":"R033",
+    "ControlArea":"R150",
+    "Traffic":7120
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.986504,40.755905 ]
+    },
+    "properties": {
+    "StationID":"R033",
+    "ControlArea":"R153",
+    "Traffic":3990
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.986504,40.755905 ]
+    },
+    "properties": {
+    "StationID":"R033",
+    "ControlArea":"R147",
+    "Traffic":2625
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.986429,40.740088 ]
+    },
+    "properties": {
+    "StationID":"R131",
+    "ControlArea":"R227",
+    "Traffic":6630
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.986429,40.740088 ]
+    },
+    "properties": {
+    "StationID":"R131",
+    "ControlArea":"R227A",
+    "Traffic":9564
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.986429,40.740088 ]
+    },
+    "properties": {
+    "StationID":"R131",
+    "ControlArea":"R226",
+    "Traffic":9870
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.986429,40.740088 ]
+    },
+    "properties": {
+    "StationID":"R131",
+    "ControlArea":"R226A",
+    "Traffic":5154
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.985989,40.762439 ]
+    },
+    "properties": {
+    "StationID":"R188",
+    "ControlArea":"N057",
+    "Traffic":2028
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.985989,40.762439 ]
+    },
+    "properties": {
+    "StationID":"R188",
+    "ControlArea":"N056",
+    "Traffic":2063
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.985935,40.692182 ]
+    },
+    "properties": {
+    "StationID":"R089",
+    "ControlArea":"C003",
+    "Traffic":1921
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.985935,40.692182 ]
+    },
+    "properties": {
+    "StationID":"R089",
+    "ControlArea":"C004",
+    "Traffic":2196
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.985474,40.688465 ]
+    },
+    "properties": {
+    "StationID":"R217",
+    "ControlArea":"N108",
+    "Traffic":7275
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.985088,40.617373 ]
+    },
+    "properties": {
+    "StationID":"R393",
+    "ControlArea":"D009",
+    "Traffic":1183
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.985066,40.690547 ]
+    },
+    "properties": {
+    "StationID":"R225",
+    "ControlArea":"R606",
+    "Traffic":2186
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.985065,40.690545 ]
+    },
+    "properties": {
+    "StationID":"R456",
+    "ControlArea":"R605",
+    "Traffic":9680
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.984573,40.754198 ]
+    },
+    "properties": {
+    "StationID":"R021",
+    "ControlArea":"N503",
+    "Traffic":7831
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.984573,40.754198 ]
+    },
+    "properties": {
+    "StationID":"R021",
+    "ControlArea":"N502",
+    "Traffic":1301
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.984573,40.754198 ]
+    },
+    "properties": {
+    "StationID":"R021",
+    "ControlArea":"N504",
+    "Traffic":8713
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.984251,40.743095 ]
+    },
+    "properties": {
+    "StationID":"R143",
+    "ControlArea":"R228",
+    "Traffic":6499
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.984251,40.743095 ]
+    },
+    "properties": {
+    "StationID":"R143",
+    "ControlArea":"R229",
+    "Traffic":7192
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.984251,40.743095 ]
+    },
+    "properties": {
+    "StationID":"R143",
+    "ControlArea":"R230",
+    "Traffic":8407
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.984112,40.760139 ]
+    },
+    "properties": {
+    "StationID":"R081",
+    "ControlArea":"A015",
+    "Traffic":9989
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.984112,40.760139 ]
+    },
+    "properties": {
+    "StationID":"R081",
+    "ControlArea":"A013",
+    "Traffic":9705
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.984112,40.760139 ]
+    },
+    "properties": {
+    "StationID":"R081",
+    "ControlArea":"A014",
+    "Traffic":9005
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.984112,40.760139 ]
+    },
+    "properties": {
+    "StationID":"R081",
+    "ControlArea":"A016",
+    "Traffic":4877
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.983908,40.761675 ]
+    },
+    "properties": {
+    "StationID":"R116",
+    "ControlArea":"R154",
+    "Traffic":9944
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.983908,40.761675 ]
+    },
+    "properties": {
+    "StationID":"R116",
+    "ControlArea":"R155",
+    "Traffic":1906
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.983629,40.588879 ]
+    },
+    "properties": {
+    "StationID":"R400",
+    "ControlArea":"E016",
+    "Traffic":1332
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.983135,40.677302 ]
+    },
+    "properties": {
+    "StationID":"R231",
+    "ControlArea":"C010",
+    "Traffic":3587
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.983135,40.677302 ]
+    },
+    "properties": {
+    "StationID":"R231",
+    "ControlArea":"C011",
+    "Traffic":5194
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.982234,40.773424 ]
+    },
+    "properties": {
+    "StationID":"R164",
+    "ControlArea":"R160A",
+    "Traffic":510
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.982234,40.773424 ]
+    },
+    "properties": {
+    "StationID":"R164",
+    "ControlArea":"R159",
+    "Traffic":5149
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.982234,40.773424 ]
+    },
+    "properties": {
+    "StationID":"R164",
+    "ControlArea":"R160",
+    "Traffic":2097
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.982009,40.612006 ]
+    },
+    "properties": {
+    "StationID":"R394",
+    "ControlArea":"D010",
+    "Traffic":9632
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.982009,40.612006 ]
+    },
+    "properties": {
+    "StationID":"R394",
+    "ControlArea":"D011",
+    "Traffic":847
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.981966,40.753824 ]
+    },
+    "properties": {
+    "StationID":"R054",
+    "ControlArea":"R501",
+    "Traffic":2984
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.981966,40.753824 ]
+    },
+    "properties": {
+    "StationID":"R054",
+    "ControlArea":"R500",
+    "Traffic":1845
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.981912,40.778575 ]
+    },
+    "properties": {
+    "StationID":"R452",
+    "ControlArea":"R161B",
+    "Traffic":9560
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.981912,40.778575 ]
+    },
+    "properties": {
+    "StationID":"R452",
+    "ControlArea":"R161A",
+    "Traffic":3913
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.981891,40.76811 ]
+    },
+    "properties": {
+    "StationID":"R084",
+    "ControlArea":"N049",
+    "Traffic":3189
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.981891,40.76811 ]
+    },
+    "properties": {
+    "StationID":"R084",
+    "ControlArea":"N051",
+    "Traffic":9306
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.981891,40.76811 ]
+    },
+    "properties": {
+    "StationID":"R084",
+    "ControlArea":"R158",
+    "Traffic":6132
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.981848,40.690612 ]
+    },
+    "properties": {
+    "StationID":"R099",
+    "ControlArea":"C008",
+    "Traffic":8627
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.981826,40.746119 ]
+    },
+    "properties": {
+    "StationID":"R176",
+    "ControlArea":"R231",
+    "Traffic":1706
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.981826,40.746119 ]
+    },
+    "properties": {
+    "StationID":"R176",
+    "ControlArea":"R231A",
+    "Traffic":6211
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.981826,40.746119 ]
+    },
+    "properties": {
+    "StationID":"R176",
+    "ControlArea":"R232",
+    "Traffic":7533
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.981826,40.746119 ]
+    },
+    "properties": {
+    "StationID":"R176",
+    "ControlArea":"R232A",
+    "Traffic":1491
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.981719,40.730901 ]
+    },
+    "properties": {
+    "StationID":"R248",
+    "ControlArea":"H007",
+    "Traffic":8453
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.981719,40.730901 ]
+    },
+    "properties": {
+    "StationID":"R248",
+    "ControlArea":"H008",
+    "Traffic":9169
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.98159,40.762877 ]
+    },
+    "properties": {
+    "StationID":"R113",
+    "ControlArea":"N301",
+    "Traffic":3824
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.98159,40.762877 ]
+    },
+    "properties": {
+    "StationID":"R113",
+    "ControlArea":"N300",
+    "Traffic":8847
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.981311,40.758652 ]
+    },
+    "properties": {
+    "StationID":"R020",
+    "ControlArea":"N500",
+    "Traffic":7520
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.981311,40.758652 ]
+    },
+    "properties": {
+    "StationID":"R020",
+    "ControlArea":"N501",
+    "Traffic":8811
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.981311,40.758652 ]
+    },
+    "properties": {
+    "StationID":"R020",
+    "ControlArea":"N501A",
+    "Traffic":6737
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.981225,40.577423 ]
+    },
+    "properties": {
+    "StationID":"R151",
+    "ControlArea":"G001",
+    "Traffic":7549
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.981225,40.577423 ]
+    },
+    "properties": {
+    "StationID":"R151",
+    "ControlArea":"G009",
+    "Traffic":5537
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.980668,40.603967 ]
+    },
+    "properties": {
+    "StationID":"R395",
+    "ControlArea":"D012",
+    "Traffic":7484
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.980646,40.764755 ]
+    },
+    "properties": {
+    "StationID":"R080",
+    "ControlArea":"A010",
+    "Traffic":1681
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.980646,40.764755 ]
+    },
+    "properties": {
+    "StationID":"R080",
+    "ControlArea":"A011",
+    "Traffic":5223
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.980453,40.688269 ]
+    },
+    "properties": {
+    "StationID":"R056",
+    "ControlArea":"R608",
+    "Traffic":704
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.980453,40.688269 ]
+    },
+    "properties": {
+    "StationID":"R056",
+    "ControlArea":"R609",
+    "Traffic":6895
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.980324,40.666276 ]
+    },
+    "properties": {
+    "StationID":"R288",
+    "ControlArea":"N539A",
+    "Traffic":2712
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.979938,40.783872 ]
+    },
+    "properties": {
+    "StationID":"R166",
+    "ControlArea":"R162",
+    "Traffic":4631
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.979938,40.783872 ]
+    },
+    "properties": {
+    "StationID":"R166",
+    "ControlArea":"R163",
+    "Traffic":7829
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.979541,40.644039 ]
+    },
+    "properties": {
+    "StationID":"R204",
+    "ControlArea":"N546",
+    "Traffic":6786
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.979541,40.644039 ]
+    },
+    "properties": {
+    "StationID":"R204",
+    "ControlArea":"N545",
+    "Traffic":816
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.979509,40.660376 ]
+    },
+    "properties": {
+    "StationID":"R241",
+    "ControlArea":"N542",
+    "Traffic":7230
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.979509,40.660376 ]
+    },
+    "properties": {
+    "StationID":"R241",
+    "ControlArea":"N541",
+    "Traffic":297
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.979359,40.597482 ]
+    },
+    "properties": {
+    "StationID":"R396",
+    "ControlArea":"D015",
+    "Traffic":264
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.978243,40.592676 ]
+    },
+    "properties": {
+    "StationID":"R397",
+    "ControlArea":"D016",
+    "Traffic":8987
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.978179,40.63615 ]
+    },
+    "properties": {
+    "StationID":"R420",
+    "ControlArea":"N548",
+    "Traffic":8435
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.978179,40.63615 ]
+    },
+    "properties": {
+    "StationID":"R420",
+    "ControlArea":"N547",
+    "Traffic":7393
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.977449,40.763625 ]
+    },
+    "properties": {
+    "StationID":"R302",
+    "ControlArea":"N600",
+    "Traffic":4567
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.977417,40.684063 ]
+    },
+    "properties": {
+    "StationID":"R057",
+    "ControlArea":"B001",
+    "Traffic":719
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.977417,40.684063 ]
+    },
+    "properties": {
+    "StationID":"R057",
+    "ControlArea":"B002",
+    "Traffic":7865
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.977417,40.684063 ]
+    },
+    "properties": {
+    "StationID":"R057",
+    "ControlArea":"C009",
+    "Traffic":1865
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.977417,40.684063 ]
+    },
+    "properties": {
+    "StationID":"R057",
+    "ControlArea":"R610",
+    "Traffic":8006
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.977149,40.629881 ]
+    },
+    "properties": {
+    "StationID":"R242",
+    "ControlArea":"N549",
+    "Traffic":4165
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.977149,40.629881 ]
+    },
+    "properties": {
+    "StationID":"R242",
+    "ControlArea":"N550",
+    "Traffic":408
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.976945,40.751849 ]
+    },
+    "properties": {
+    "StationID":"R045",
+    "ControlArea":"R236",
+    "Traffic":8805
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.976945,40.751849 ]
+    },
+    "properties": {
+    "StationID":"R045",
+    "ControlArea":"R233",
+    "Traffic":4272
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.976945,40.751849 ]
+    },
+    "properties": {
+    "StationID":"R046",
+    "ControlArea":"R238",
+    "Traffic":1429
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.976945,40.751849 ]
+    },
+    "properties": {
+    "StationID":"R046",
+    "ControlArea":"R237",
+    "Traffic":3912
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.976945,40.751849 ]
+    },
+    "properties": {
+    "StationID":"R046",
+    "ControlArea":"R238A",
+    "Traffic":3731
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.976945,40.751849 ]
+    },
+    "properties": {
+    "StationID":"R047",
+    "ControlArea":"R240",
+    "Traffic":8068
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.976945,40.751849 ]
+    },
+    "properties": {
+    "StationID":"R047",
+    "ControlArea":"R237B",
+    "Traffic":8931
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.976945,40.751849 ]
+    },
+    "properties": {
+    "StationID":"R048",
+    "ControlArea":"R241A",
+    "Traffic":5346
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.976398,40.775545 ]
+    },
+    "properties": {
+    "StationID":"R281",
+    "ControlArea":"N046",
+    "Traffic":8607
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.97599,40.788844 ]
+    },
+    "properties": {
+    "StationID":"R167",
+    "ControlArea":"R164",
+    "Traffic":6449
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.97599,40.788844 ]
+    },
+    "properties": {
+    "StationID":"R167",
+    "ControlArea":"R165",
+    "Traffic":9038
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.97599,40.788844 ]
+    },
+    "properties": {
+    "StationID":"R167",
+    "ControlArea":"R166",
+    "Traffic":1490
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.975925,40.576152 ]
+    },
+    "properties": {
+    "StationID":"R312",
+    "ControlArea":"G011",
+    "Traffic":2571
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.975925,40.576152 ]
+    },
+    "properties": {
+    "StationID":"R312",
+    "ControlArea":"G015",
+    "Traffic":7272
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.975818,40.650722 ]
+    },
+    "properties": {
+    "StationID":"R289",
+    "ControlArea":"N543",
+    "Traffic":9881
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.975818,40.650722 ]
+    },
+    "properties": {
+    "StationID":"R289",
+    "ControlArea":"N544",
+    "Traffic":2493
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.975732,40.625305 ]
+    },
+    "properties": {
+    "StationID":"R421",
+    "ControlArea":"N551",
+    "Traffic":175
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.975453,40.620907 ]
+    },
+    "properties": {
+    "StationID":"R422",
+    "ControlArea":"N553",
+    "Traffic":1810
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.975346,40.68713 ]
+    },
+    "properties": {
+    "StationID":"R318",
+    "ControlArea":"N422",
+    "Traffic":1965
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.975196,40.760179 ]
+    },
+    "properties": {
+    "StationID":"R015",
+    "ControlArea":"N303",
+    "Traffic":2801
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.975196,40.760179 ]
+    },
+    "properties": {
+    "StationID":"R015",
+    "ControlArea":"N304",
+    "Traffic":9141
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.975132,40.680801 ]
+    },
+    "properties": {
+    "StationID":"R058",
+    "ControlArea":"R617",
+    "Traffic":4804
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.975132,40.680801 ]
+    },
+    "properties": {
+    "StationID":"R058",
+    "ControlArea":"R618",
+    "Traffic":4251
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.974531,40.580992 ]
+    },
+    "properties": {
+    "StationID":"R426",
+    "ControlArea":"N562",
+    "Traffic":6150
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.974295,40.589547 ]
+    },
+    "properties": {
+    "StationID":"R271",
+    "ControlArea":"N561",
+    "Traffic":3752
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.974166,40.615174 ]
+    },
+    "properties": {
+    "StationID":"R423",
+    "ControlArea":"N555",
+    "Traffic":240
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.974166,40.615174 ]
+    },
+    "properties": {
+    "StationID":"R423",
+    "ControlArea":"N554",
+    "Traffic":5537
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.973908,40.68617 ]
+    },
+    "properties": {
+    "StationID":"R283",
+    "ControlArea":"N110",
+    "Traffic":617
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.973372,40.764909 ]
+    },
+    "properties": {
+    "StationID":"R079",
+    "ControlArea":"A006",
+    "Traffic":3759
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.973372,40.764909 ]
+    },
+    "properties": {
+    "StationID":"R079",
+    "ControlArea":"A007",
+    "Traffic":421
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.973329,40.596065 ]
+    },
+    "properties": {
+    "StationID":"R425",
+    "ControlArea":"N559",
+    "Traffic":9721
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.972986,40.609147 ]
+    },
+    "properties": {
+    "StationID":"R424",
+    "ControlArea":"N556",
+    "Traffic":3533
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.972514,40.677172 ]
+    },
+    "properties": {
+    "StationID":"R171",
+    "ControlArea":"B004",
+    "Traffic":2126
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.972363,40.79388 ]
+    },
+    "properties": {
+    "StationID":"R168",
+    "ControlArea":"R168A",
+    "Traffic":5673
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.972363,40.79388 ]
+    },
+    "properties": {
+    "StationID":"R168",
+    "ControlArea":"R168",
+    "Traffic":489
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.972342,40.603234 ]
+    },
+    "properties": {
+    "StationID":"R130",
+    "ControlArea":"N557",
+    "Traffic":455
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.972342,40.603234 ]
+    },
+    "properties": {
+    "StationID":"R130",
+    "ControlArea":"N558",
+    "Traffic":5060
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.972149,40.781435 ]
+    },
+    "properties": {
+    "StationID":"R187",
+    "ControlArea":"N044",
+    "Traffic":3124
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.972149,40.781435 ]
+    },
+    "properties": {
+    "StationID":"R187",
+    "ControlArea":"N045",
+    "Traffic":9335
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.97187,40.757108 ]
+    },
+    "properties": {
+    "StationID":"R049",
+    "ControlArea":"R243",
+    "Traffic":2551
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.97187,40.757108 ]
+    },
+    "properties": {
+    "StationID":"R049",
+    "ControlArea":"R242",
+    "Traffic":6434
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.97187,40.757108 ]
+    },
+    "properties": {
+    "StationID":"R049",
+    "ControlArea":"R242A",
+    "Traffic":4875
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.971012,40.675219 ]
+    },
+    "properties": {
+    "StationID":"R059",
+    "ControlArea":"R619",
+    "Traffic":323
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.969102,40.75753 ]
+    },
+    "properties": {
+    "StationID":"R016",
+    "ControlArea":"N305A",
+    "Traffic":7152
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.969102,40.75753 ]
+    },
+    "properties": {
+    "StationID":"R017",
+    "ControlArea":"N306",
+    "Traffic":9753
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.969102,40.75753 ]
+    },
+    "properties": {
+    "StationID":"R017",
+    "ControlArea":"N305",
+    "Traffic":6319
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.968952,40.785822 ]
+    },
+    "properties": {
+    "StationID":"R186",
+    "ControlArea":"N043",
+    "Traffic":6631
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.968952,40.785822 ]
+    },
+    "properties": {
+    "StationID":"R186",
+    "ControlArea":"N042",
+    "Traffic":7273
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.968523,40.576298 ]
+    },
+    "properties": {
+    "StationID":"R264",
+    "ControlArea":"B032",
+    "Traffic":9183
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.968523,40.576298 ]
+    },
+    "properties": {
+    "StationID":"R264",
+    "ControlArea":"B034",
+    "Traffic":9344
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.968329,40.799354 ]
+    },
+    "properties": {
+    "StationID":"R191",
+    "ControlArea":"R170",
+    "Traffic":2551
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.967686,40.762796 ]
+    },
+    "properties": {
+    "StationID":"R050",
+    "ControlArea":"A004",
+    "Traffic":4360
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.967686,40.762796 ]
+    },
+    "properties": {
+    "StationID":"R051",
+    "ControlArea":"A002",
+    "Traffic":8838
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.967686,40.762796 ]
+    },
+    "properties": {
+    "StationID":"R050",
+    "ControlArea":"R244",
+    "Traffic":230
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.967686,40.762796 ]
+    },
+    "properties": {
+    "StationID":"R050",
+    "ControlArea":"R244A",
+    "Traffic":4668
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.967686,40.762796 ]
+    },
+    "properties": {
+    "StationID":"R051",
+    "ControlArea":"R245",
+    "Traffic":5468
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.967686,40.762796 ]
+    },
+    "properties": {
+    "StationID":"R051",
+    "ControlArea":"R245A",
+    "Traffic":9992
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.966742,40.688123 ]
+    },
+    "properties": {
+    "StationID":"R317",
+    "ControlArea":"N420B",
+    "Traffic":2848
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.966742,40.804032 ]
+    },
+    "properties": {
+    "StationID":"R192",
+    "ControlArea":"R172",
+    "Traffic":8458
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.966742,40.804032 ]
+    },
+    "properties": {
+    "StationID":"R192",
+    "ControlArea":"R171",
+    "Traffic":1937
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.966291,40.764763 ]
+    },
+    "properties": {
+    "StationID":"R319",
+    "ControlArea":"N601",
+    "Traffic":9001
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.965838,40.683263 ]
+    },
+    "properties": {
+    "StationID":"R284",
+    "ControlArea":"N111",
+    "Traffic":1949
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.965838,40.683263 ]
+    },
+    "properties": {
+    "StationID":"R284",
+    "ControlArea":"N112A",
+    "Traffic":6808
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.964682,40.791654 ]
+    },
+    "properties": {
+    "StationID":"R251",
+    "ControlArea":"N040",
+    "Traffic":277
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.964682,40.791654 ]
+    },
+    "properties": {
+    "StationID":"R251",
+    "ControlArea":"N039",
+    "Traffic":702
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.96451,40.643982 ]
+    },
+    "properties": {
+    "StationID":"R262",
+    "ControlArea":"B017",
+    "Traffic":2630
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.96436,40.672013 ]
+    },
+    "properties": {
+    "StationID":"R060",
+    "ControlArea":"R621",
+    "Traffic":125
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.964124,40.80819 ]
+    },
+    "properties": {
+    "StationID":"R159",
+    "ControlArea":"R173",
+    "Traffic":2779
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.964016,40.768143 ]
+    },
+    "properties": {
+    "StationID":"R177",
+    "ControlArea":"R246",
+    "Traffic":4815
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.964016,40.761268 ]
+    },
+    "properties": {
+    "StationID":"R468",
+    "ControlArea":"TRAM1",
+    "Traffic":2260
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.963866,40.640905 ]
+    },
+    "properties": {
+    "StationID":"R184",
+    "ControlArea":"B018",
+    "Traffic":6725
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.962836,40.650494 ]
+    },
+    "properties": {
+    "StationID":"R098",
+    "ControlArea":"B016",
+    "Traffic":2118
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.962836,40.650494 ]
+    },
+    "properties": {
+    "StationID":"R098",
+    "ControlArea":"B015",
+    "Traffic":2922
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.962793,40.635059 ]
+    },
+    "properties": {
+    "StationID":"R149",
+    "ControlArea":"B019",
+    "Traffic":5071
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.962193,40.661596 ]
+    },
+    "properties": {
+    "StationID":"R196",
+    "ControlArea":"B012",
+    "Traffic":7223
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.962193,40.661596 ]
+    },
+    "properties": {
+    "StationID":"R196",
+    "ControlArea":"B013",
+    "Traffic":9287
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.961806,40.577961 ]
+    },
+    "properties": {
+    "StationID":"R172",
+    "ControlArea":"B029",
+    "Traffic":5274
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.961806,40.577961 ]
+    },
+    "properties": {
+    "StationID":"R172",
+    "ControlArea":"B031",
+    "Traffic":6459
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.961678,40.629164 ]
+    },
+    "properties": {
+    "StationID":"R263",
+    "ControlArea":"B020",
+    "Traffic":234
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.961399,40.796105 ]
+    },
+    "properties": {
+    "StationID":"R314",
+    "ControlArea":"N037",
+    "Traffic":142
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.961227,40.655053 ]
+    },
+    "properties": {
+    "StationID":"R148",
+    "ControlArea":"B014",
+    "Traffic":6469
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.960819,40.625028 ]
+    },
+    "properties": {
+    "StationID":"R228",
+    "ControlArea":"B021",
+    "Traffic":2281
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.960025,40.688855 ]
+    },
+    "properties": {
+    "StationID":"R287",
+    "ControlArea":"N419",
+    "Traffic":2566
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.959875,40.773636 ]
+    },
+    "properties": {
+    "StationID":"R178",
+    "ControlArea":"R248",
+    "Traffic":8125
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.959875,40.773636 ]
+    },
+    "properties": {
+    "StationID":"R178",
+    "ControlArea":"R247",
+    "Traffic":7776
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.95936,40.617568 ]
+    },
+    "properties": {
+    "StationID":"R229",
+    "ControlArea":"B022",
+    "Traffic":6625
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.958759,40.670499 ]
+    },
+    "properties": {
+    "StationID":"R412",
+    "ControlArea":"B010",
+    "Traffic":8042
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.958395,40.815596 ]
+    },
+    "properties": {
+    "StationID":"R034",
+    "ControlArea":"R174",
+    "Traffic":4978
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.958201,40.800637 ]
+    },
+    "properties": {
+    "StationID":"R334",
+    "ControlArea":"N035",
+    "Traffic":6050
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.958201,40.800637 ]
+    },
+    "properties": {
+    "StationID":"R334",
+    "ControlArea":"N034",
+    "Traffic":7046
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.958051,40.670711 ]
+    },
+    "properties": {
+    "StationID":"R123",
+    "ControlArea":"R622",
+    "Traffic":5685
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.957794,40.67491 ]
+    },
+    "properties": {
+    "StationID":"R411",
+    "ControlArea":"B009",
+    "Traffic":9455
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.957772,40.608691 ]
+    },
+    "properties": {
+    "StationID":"R211",
+    "ControlArea":"B024",
+    "Traffic":7953
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.957772,40.608691 ]
+    },
+    "properties": {
+    "StationID":"R211",
+    "ControlArea":"B023",
+    "Traffic":3890
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.957772,40.608691 ]
+    },
+    "properties": {
+    "StationID":"R211",
+    "ControlArea":"B024A",
+    "Traffic":5019
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.957751,40.708377 ]
+    },
+    "properties": {
+    "StationID":"R460",
+    "ControlArea":"J002",
+    "Traffic":8893
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.957751,40.708377 ]
+    },
+    "properties": {
+    "StationID":"R460",
+    "ControlArea":"J001",
+    "Traffic":2832
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.956614,40.717241 ]
+    },
+    "properties": {
+    "StationID":"R235",
+    "ControlArea":"H009",
+    "Traffic":4090
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.956056,40.681159 ]
+    },
+    "properties": {
+    "StationID":"R297",
+    "ControlArea":"N113",
+    "Traffic":3960
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.956056,40.681159 ]
+    },
+    "properties": {
+    "StationID":"R297",
+    "ControlArea":"N114",
+    "Traffic":9301
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.955916,40.599307 ]
+    },
+    "properties": {
+    "StationID":"R150",
+    "ControlArea":"B025",
+    "Traffic":4170
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.955541,40.779485 ]
+    },
+    "properties": {
+    "StationID":"R179",
+    "ControlArea":"R250",
+    "Traffic":3666
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.955541,40.779485 ]
+    },
+    "properties": {
+    "StationID":"R179",
+    "ControlArea":"R249",
+    "Traffic":7027
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.95509,40.595234 ]
+    },
+    "properties": {
+    "StationID":"R230",
+    "ControlArea":"B026",
+    "Traffic":5532
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.954833,40.805072 ]
+    },
+    "properties": {
+    "StationID":"R333",
+    "ControlArea":"N030",
+    "Traffic":724
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.954833,40.805072 ]
+    },
+    "properties": {
+    "StationID":"R333",
+    "ControlArea":"N029",
+    "Traffic":8415
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.954425,40.731324 ]
+    },
+    "properties": {
+    "StationID":"R239",
+    "ControlArea":"N405",
+    "Traffic":8054
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.954425,40.731324 ]
+    },
+    "properties": {
+    "StationID":"R239",
+    "ControlArea":"N403",
+    "Traffic":8736
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.954167,40.58681 ]
+    },
+    "properties": {
+    "StationID":"R136",
+    "ControlArea":"B027",
+    "Traffic":8739
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.954167,40.58681 ]
+    },
+    "properties": {
+    "StationID":"R136",
+    "ControlArea":"B028",
+    "Traffic":8621
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.954006,40.7574 ]
+    },
+    "properties": {
+    "StationID":"R469",
+    "ControlArea":"TRAM2",
+    "Traffic":6692
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.953674,40.821994 ]
+    },
+    "properties": {
+    "StationID":"R169",
+    "ControlArea":"R176",
+    "Traffic":4148
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.953674,40.821994 ]
+    },
+    "properties": {
+    "StationID":"R169",
+    "ControlArea":"R175",
+    "Traffic":6739
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.953545,40.742624 ]
+    },
+    "properties": {
+    "StationID":"R276",
+    "ControlArea":"R504",
+    "Traffic":8907
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.953545,40.742624 ]
+    },
+    "properties": {
+    "StationID":"R276",
+    "ControlArea":"R503",
+    "Traffic":333
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.953545,40.742624 ]
+    },
+    "properties": {
+    "StationID":"R276",
+    "ControlArea":"R506",
+    "Traffic":4023
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.953481,40.706994 ]
+    },
+    "properties": {
+    "StationID":"R352",
+    "ControlArea":"J003",
+    "Traffic":7985
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.953459,40.689636 ]
+    },
+    "properties": {
+    "StationID":"R269",
+    "ControlArea":"N417",
+    "Traffic":1926
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.953459,40.689636 ]
+    },
+    "properties": {
+    "StationID":"R269",
+    "ControlArea":"N418",
+    "Traffic":1751
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.953266,40.759123 ]
+    },
+    "properties": {
+    "StationID":"R259",
+    "ControlArea":"N602",
+    "Traffic":7427
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.952386,40.811056 ]
+    },
+    "properties": {
+    "StationID":"R102",
+    "ControlArea":"N026",
+    "Traffic":579
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.952386,40.811056 ]
+    },
+    "properties": {
+    "StationID":"R102",
+    "ControlArea":"N025",
+    "Traffic":4381
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.951807,40.79911 ]
+    },
+    "properties": {
+    "StationID":"R323",
+    "ControlArea":"R301",
+    "Traffic":9587
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.951592,40.713875 ]
+    },
+    "properties": {
+    "StationID":"R268",
+    "ControlArea":"H012",
+    "Traffic":1335
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.951592,40.713875 ]
+    },
+    "properties": {
+    "StationID":"R268",
+    "ControlArea":"N409",
+    "Traffic":3459
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.951271,40.724608 ]
+    },
+    "properties": {
+    "StationID":"R256",
+    "ControlArea":"N408A",
+    "Traffic":2814
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.95097,40.785822 ]
+    },
+    "properties": {
+    "StationID":"R144",
+    "ControlArea":"R251",
+    "Traffic":3798
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.950648,40.667879 ]
+    },
+    "properties": {
+    "StationID":"R277",
+    "ControlArea":"R635",
+    "Traffic":1177
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.950605,40.662752 ]
+    },
+    "properties": {
+    "StationID":"R209",
+    "ControlArea":"R636",
+    "Traffic":4782
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.950455,40.669735 ]
+    },
+    "properties": {
+    "StationID":"R061",
+    "ControlArea":"R623",
+    "Traffic":4352
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.950412,40.826426 ]
+    },
+    "properties": {
+    "StationID":"R273",
+    "ControlArea":"R178",
+    "Traffic":7263
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.950412,40.826426 ]
+    },
+    "properties": {
+    "StationID":"R273",
+    "ControlArea":"R177",
+    "Traffic":4451
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.950348,40.7061 ]
+    },
+    "properties": {
+    "StationID":"R299",
+    "ControlArea":"N412",
+    "Traffic":6523
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.950326,40.68041 ]
+    },
+    "properties": {
+    "StationID":"R198",
+    "ControlArea":"N116",
+    "Traffic":6273
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.950326,40.68041 ]
+    },
+    "properties": {
+    "StationID":"R198",
+    "ControlArea":"N117",
+    "Traffic":7145
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.950284,40.700374 ]
+    },
+    "properties": {
+    "StationID":"R316",
+    "ControlArea":"N414",
+    "Traffic":7710
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.950284,40.700374 ]
+    },
+    "properties": {
+    "StationID":"R316",
+    "ControlArea":"N414A",
+    "Traffic":2653
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.950198,40.656648 ]
+    },
+    "properties": {
+    "StationID":"R451",
+    "ControlArea":"R637",
+    "Traffic":7475
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.949876,40.743973 ]
+    },
+    "properties": {
+    "StationID":"R360",
+    "ControlArea":"N401",
+    "Traffic":1166
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.949625,40.802098 ]
+    },
+    "properties": {
+    "StationID":"R324",
+    "ControlArea":"R303",
+    "Traffic":6212
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.949625,40.802098 ]
+    },
+    "properties": {
+    "StationID":"R324",
+    "ControlArea":"R302",
+    "Traffic":6862
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.949575,40.650843 ]
+    },
+    "properties": {
+    "StationID":"R109",
+    "ControlArea":"R639",
+    "Traffic":4864
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.949046,40.694568 ]
+    },
+    "properties": {
+    "StationID":"R286",
+    "ControlArea":"N415",
+    "Traffic":5108
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.949046,40.694568 ]
+    },
+    "properties": {
+    "StationID":"R286",
+    "ControlArea":"N416",
+    "Traffic":28
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.948975,40.645089 ]
+    },
+    "properties": {
+    "StationID":"R210",
+    "ControlArea":"R641",
+    "Traffic":8442
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.948889,40.74238 ]
+    },
+    "properties": {
+    "StationID":"R134",
+    "ControlArea":"R507",
+    "Traffic":9185
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.948352,40.639961 ]
+    },
+    "properties": {
+    "StationID":"R135",
+    "ControlArea":"R643",
+    "Traffic":8567
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.948352,40.639961 ]
+    },
+    "properties": {
+    "StationID":"R135",
+    "ControlArea":"R644",
+    "Traffic":9771
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.947644,40.817902 ]
+    },
+    "properties": {
+    "StationID":"R332",
+    "ControlArea":"N024",
+    "Traffic":4971
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.947644,40.817902 ]
+    },
+    "properties": {
+    "StationID":"R332",
+    "ControlArea":"N023",
+    "Traffic":3186
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.947644,40.817902 ]
+    },
+    "properties": {
+    "StationID":"R332",
+    "ControlArea":"N022",
+    "Traffic":2366
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.947642,40.632836 ]
+    },
+    "properties": {
+    "StationID":"R110",
+    "ControlArea":"R645",
+    "Traffic":3640
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.947642,40.632836 ]
+    },
+    "properties": {
+    "StationID":"R110",
+    "ControlArea":"R646",
+    "Traffic":4892
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.947642,40.632836 ]
+    },
+    "properties": {
+    "StationID":"R110",
+    "ControlArea":"R647",
+    "Traffic":2150
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.947473,40.790582 ]
+    },
+    "properties": {
+    "StationID":"R180",
+    "ControlArea":"R252",
+    "Traffic":6191
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.947387,40.703855 ]
+    },
+    "properties": {
+    "StationID":"R353",
+    "ControlArea":"J005",
+    "Traffic":9968
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.945906,40.808076 ]
+    },
+    "properties": {
+    "StationID":"R206",
+    "ControlArea":"R304",
+    "Traffic":3201
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.945906,40.808076 ]
+    },
+    "properties": {
+    "StationID":"R206",
+    "ControlArea":"R305",
+    "Traffic":7895
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.94537,40.747029 ]
+    },
+    "properties": {
+    "StationID":"R346",
+    "ControlArea":"R508",
+    "Traffic":8599
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.945112,40.747257 ]
+    },
+    "properties": {
+    "StationID":"R359",
+    "ControlArea":"N307",
+    "Traffic":5187
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.945112,40.747257 ]
+    },
+    "properties": {
+    "StationID":"R359",
+    "ControlArea":"N400",
+    "Traffic":3376
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.945112,40.747257 ]
+    },
+    "properties": {
+    "StationID":"R359",
+    "ControlArea":"N400A",
+    "Traffic":385
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.944726,40.833879 ]
+    },
+    "properties": {
+    "StationID":"R193",
+    "ControlArea":"R180",
+    "Traffic":7656
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.944726,40.833879 ]
+    },
+    "properties": {
+    "StationID":"R193",
+    "ControlArea":"R179",
+    "Traffic":4215
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.944297,40.795066 ]
+    },
+    "properties": {
+    "StationID":"R181",
+    "ControlArea":"R253",
+    "Traffic":7942
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.944297,40.795066 ]
+    },
+    "properties": {
+    "StationID":"R181",
+    "ControlArea":"R254",
+    "Traffic":7053
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.944232,40.824787 ]
+    },
+    "properties": {
+    "StationID":"R101",
+    "ControlArea":"N020",
+    "Traffic":9218
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.944232,40.824787 ]
+    },
+    "properties": {
+    "StationID":"R101",
+    "ControlArea":"N019",
+    "Traffic":6155
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.944104,40.71459 ]
+    },
+    "properties": {
+    "StationID":"R249",
+    "ControlArea":"H014",
+    "Traffic":5288
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.944104,40.71459 ]
+    },
+    "properties": {
+    "StationID":"R249",
+    "ControlArea":"H013",
+    "Traffic":9725
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.94258,40.7541 ]
+    },
+    "properties": {
+    "StationID":"R303",
+    "ControlArea":"N603",
+    "Traffic":5914
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.942173,40.669409 ]
+    },
+    "properties": {
+    "StationID":"R124",
+    "ControlArea":"R624",
+    "Traffic":2146
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.941658,40.700244 ]
+    },
+    "properties": {
+    "StationID":"R377",
+    "ControlArea":"J007",
+    "Traffic":1040
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.941593,40.798574 ]
+    },
+    "properties": {
+    "StationID":"R182",
+    "ControlArea":"R256",
+    "Traffic":5803
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.941593,40.798574 ]
+    },
+    "properties": {
+    "StationID":"R182",
+    "ControlArea":"R257",
+    "Traffic":9692
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.941486,40.830551 ]
+    },
+    "properties": {
+    "StationID":"R331",
+    "ControlArea":"N017",
+    "Traffic":2623
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.940992,40.814459 ]
+    },
+    "properties": {
+    "StationID":"R207",
+    "ControlArea":"R306",
+    "Traffic":6178
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.940992,40.814459 ]
+    },
+    "properties": {
+    "StationID":"R207",
+    "ControlArea":"R307",
+    "Traffic":6015
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.940858,40.679921 ]
+    },
+    "properties": {
+    "StationID":"R199",
+    "ControlArea":"N119",
+    "Traffic":7480
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.940858,40.679921 ]
+    },
+    "properties": {
+    "StationID":"R199",
+    "ControlArea":"N118",
+    "Traffic":1871
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.94067,40.711874 ]
+    },
+    "properties": {
+    "StationID":"R250",
+    "ControlArea":"H016",
+    "Traffic":3780
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.94067,40.711874 ]
+    },
+    "properties": {
+    "StationID":"R250",
+    "ControlArea":"H015",
+    "Traffic":3745
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.940177,40.750508 ]
+    },
+    "properties": {
+    "StationID":"R121",
+    "ControlArea":"R509",
+    "Traffic":2171
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.940091,40.840778 ]
+    },
+    "properties": {
+    "StationID":"R035",
+    "ControlArea":"N012",
+    "Traffic":6196
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.940091,40.840778 ]
+    },
+    "properties": {
+    "StationID":"R035",
+    "ControlArea":"N013",
+    "Traffic":5836
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.940091,40.840778 ]
+    },
+    "properties": {
+    "StationID":"R035",
+    "ControlArea":"R182",
+    "Traffic":7317
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.940005,40.707889 ]
+    },
+    "properties": {
+    "StationID":"R265",
+    "ControlArea":"H017",
+    "Traffic":2863
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.939898,40.835957 ]
+    },
+    "properties": {
+    "StationID":"R296",
+    "ControlArea":"N016A",
+    "Traffic":6515
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.939683,40.847369 ]
+    },
+    "properties": {
+    "StationID":"R126",
+    "ControlArea":"N010",
+    "Traffic":14
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.939683,40.847369 ]
+    },
+    "properties": {
+    "StationID":"R126",
+    "ControlArea":"N011",
+    "Traffic":1954
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.938632,40.829934 ]
+    },
+    "properties": {
+    "StationID":"R315",
+    "ControlArea":"N202",
+    "Traffic":9057
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.937967,40.851686 ]
+    },
+    "properties": {
+    "StationID":"R174",
+    "ControlArea":"N007A",
+    "Traffic":9168
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.937967,40.851686 ]
+    },
+    "properties": {
+    "StationID":"R174",
+    "ControlArea":"N009",
+    "Traffic":3729
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.937452,40.804406 ]
+    },
+    "properties": {
+    "StationID":"R132",
+    "ControlArea":"R258",
+    "Traffic":7975
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.937194,40.748948 ]
+    },
+    "properties": {
+    "StationID":"R140",
+    "ControlArea":"N309A",
+    "Traffic":5905
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.937194,40.748948 ]
+    },
+    "properties": {
+    "StationID":"R140",
+    "ControlArea":"N310",
+    "Traffic":9312
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.936443,40.823877 ]
+    },
+    "properties": {
+    "StationID":"R345",
+    "ControlArea":"R309",
+    "Traffic":8066
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.936315,40.820402 ]
+    },
+    "properties": {
+    "StationID":"R344",
+    "ControlArea":"R308",
+    "Traffic":7866
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.935692,40.697266 ]
+    },
+    "properties": {
+    "StationID":"R378",
+    "ControlArea":"J009",
+    "Traffic":8632
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.93419,40.859022 ]
+    },
+    "properties": {
+    "StationID":"R280",
+    "ControlArea":"N006A",
+    "Traffic":5536
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.933632,40.849495 ]
+    },
+    "properties": {
+    "StationID":"R260",
+    "ControlArea":"R183",
+    "Traffic":2061
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.93316,40.706148 ]
+    },
+    "properties": {
+    "StationID":"R294",
+    "ControlArea":"H019",
+    "Traffic":2565
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.932967,40.669279 ]
+    },
+    "properties": {
+    "StationID":"R062",
+    "ControlArea":"R626",
+    "Traffic":7224
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.932967,40.669279 ]
+    },
+    "properties": {
+    "StationID":"R062",
+    "ControlArea":"R625",
+    "Traffic":3377
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.93271,40.753076 ]
+    },
+    "properties": {
+    "StationID":"R090",
+    "ControlArea":"R510",
+    "Traffic":1782
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.930993,40.744558 ]
+    },
+    "properties": {
+    "StationID":"R291",
+    "ControlArea":"R516",
+    "Traffic":701
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.930993,40.744558 ]
+    },
+    "properties": {
+    "StationID":"R291",
+    "ControlArea":"R517",
+    "Traffic":7707
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.930585,40.679279 ]
+    },
+    "properties": {
+    "StationID":"R153",
+    "ControlArea":"N120",
+    "Traffic":6567
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.930585,40.679279 ]
+    },
+    "properties": {
+    "StationID":"R153",
+    "ControlArea":"N120A",
+    "Traffic":4360
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.929877,40.813208 ]
+    },
+    "properties": {
+    "StationID":"R307",
+    "ControlArea":"R259",
+    "Traffic":594
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.929384,40.855176 ]
+    },
+    "properties": {
+    "StationID":"R274",
+    "ControlArea":"R185",
+    "Traffic":9379
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.929373,40.756977 ]
+    },
+    "properties": {
+    "StationID":"R091",
+    "ControlArea":"R511",
+    "Traffic":6962
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.928826,40.693329 ]
+    },
+    "properties": {
+    "StationID":"R379",
+    "ControlArea":"J012",
+    "Traffic":3827
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.92874,40.75202 ]
+    },
+    "properties": {
+    "StationID":"R339",
+    "ControlArea":"N312",
+    "Traffic":7602
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.92874,40.75202 ]
+    },
+    "properties": {
+    "StationID":"R339",
+    "ControlArea":"N311",
+    "Traffic":6034
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.927131,40.697673 ]
+    },
+    "properties": {
+    "StationID":"R401",
+    "ControlArea":"K017",
+    "Traffic":3870
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.92698,40.865286 ]
+    },
+    "properties": {
+    "StationID":"R185",
+    "ControlArea":"N003",
+    "Traffic":3194
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.926927,40.818429 ]
+    },
+    "properties": {
+    "StationID":"R205",
+    "ControlArea":"R261",
+    "Traffic":2956
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.926927,40.818429 ]
+    },
+    "properties": {
+    "StationID":"R205",
+    "ControlArea":"R260",
+    "Traffic":960
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.926165,40.810512 ]
+    },
+    "properties": {
+    "StationID":"R445",
+    "ControlArea":"R401",
+    "Traffic":3724
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.925736,40.827888 ]
+    },
+    "properties": {
+    "StationID":"R195",
+    "ControlArea":"N203",
+    "Traffic":9890
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.925736,40.827888 ]
+    },
+    "properties": {
+    "StationID":"R195",
+    "ControlArea":"N204",
+    "Traffic":5498
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.925736,40.827888 ]
+    },
+    "properties": {
+    "StationID":"R195",
+    "ControlArea":"N205",
+    "Traffic":3914
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.925736,40.827888 ]
+    },
+    "properties": {
+    "StationID":"R195",
+    "ControlArea":"R262",
+    "Traffic":9262
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.925736,40.827888 ]
+    },
+    "properties": {
+    "StationID":"R195",
+    "ControlArea":"R262A",
+    "Traffic":5349
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.925736,40.827888 ]
+    },
+    "properties": {
+    "StationID":"R195",
+    "ControlArea":"R262B",
+    "Traffic":9754
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.925575,40.860523 ]
+    },
+    "properties": {
+    "StationID":"R036",
+    "ControlArea":"R186",
+    "Traffic":3773
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.925382,40.761959 ]
+    },
+    "properties": {
+    "StationID":"R092",
+    "ControlArea":"R512",
+    "Traffic":2772
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.923998,40.743778 ]
+    },
+    "properties": {
+    "StationID":"R261",
+    "ControlArea":"R518",
+    "Traffic":9518
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.922925,40.706636 ]
+    },
+    "properties": {
+    "StationID":"R279",
+    "ControlArea":"H022",
+    "Traffic":6036
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.922668,40.664591 ]
+    },
+    "properties": {
+    "StationID":"R063",
+    "ControlArea":"R627",
+    "Traffic":1889
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.922281,40.689652 ]
+    },
+    "properties": {
+    "StationID":"R380",
+    "ControlArea":"J013",
+    "Traffic":899
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.921423,40.766843 ]
+    },
+    "properties": {
+    "StationID":"R093",
+    "ControlArea":"R513",
+    "Traffic":2829
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.92138,40.835535 ]
+    },
+    "properties": {
+    "StationID":"R221",
+    "ControlArea":"R283",
+    "Traffic":8002
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.920801,40.678815 ]
+    },
+    "properties": {
+    "StationID":"R438",
+    "ControlArea":"N121B",
+    "Traffic":8673
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.920736,40.756864 ]
+    },
+    "properties": {
+    "StationID":"R238",
+    "ControlArea":"N315",
+    "Traffic":1708
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.920736,40.756864 ]
+    },
+    "properties": {
+    "StationID":"R238",
+    "ControlArea":"N314",
+    "Traffic":6837
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.919921,40.868045 ]
+    },
+    "properties": {
+    "StationID":"R173",
+    "ControlArea":"N002A",
+    "Traffic":6352
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.919921,40.868045 ]
+    },
+    "properties": {
+    "StationID":"R173",
+    "ControlArea":"N001",
+    "Traffic":1452
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.919685,40.698666 ]
+    },
+    "properties": {
+    "StationID":"R413",
+    "ControlArea":"K019",
+    "Traffic":4876
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.919234,40.808044 ]
+    },
+    "properties": {
+    "StationID":"R446",
+    "ControlArea":"R402",
+    "Traffic":1886
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.919234,40.808044 ]
+    },
+    "properties": {
+    "StationID":"R446",
+    "ControlArea":"R403",
+    "Traffic":2593
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.918719,40.864653 ]
+    },
+    "properties": {
+    "StationID":"R037",
+    "ControlArea":"R188",
+    "Traffic":8715
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.91844,40.703839 ]
+    },
+    "properties": {
+    "StationID":"R236",
+    "ControlArea":"H023",
+    "Traffic":9894
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.91843,40.833773 ]
+    },
+    "properties": {
+    "StationID":"R104",
+    "ControlArea":"N207",
+    "Traffic":3548
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.91843,40.833773 ]
+    },
+    "properties": {
+    "StationID":"R104",
+    "ControlArea":"N206",
+    "Traffic":948
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.918419,40.743079 ]
+    },
+    "properties": {
+    "StationID":"R223",
+    "ControlArea":"R519",
+    "Traffic":7500
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.918419,40.743079 ]
+    },
+    "properties": {
+    "StationID":"R223",
+    "ControlArea":"R520",
+    "Traffic":5196
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.917775,40.840048 ]
+    },
+    "properties": {
+    "StationID":"R243",
+    "ControlArea":"R284",
+    "Traffic":9442
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.917754,40.816132 ]
+    },
+    "properties": {
+    "StationID":"R053",
+    "ControlArea":"R311",
+    "Traffic":4242
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.917754,40.816132 ]
+    },
+    "properties": {
+    "StationID":"R053",
+    "ControlArea":"R310",
+    "Traffic":6586
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.917614,40.770426 ]
+    },
+    "properties": {
+    "StationID":"R094",
+    "ControlArea":"R514",
+    "Traffic":142
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.916337,40.68617 ]
+    },
+    "properties": {
+    "StationID":"R381",
+    "ControlArea":"J016",
+    "Traffic":8524
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.916316,40.661466 ]
+    },
+    "properties": {
+    "StationID":"R064",
+    "ControlArea":"R628",
+    "Traffic":8772
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.915329,40.869359 ]
+    },
+    "properties": {
+    "StationID":"R038",
+    "ControlArea":"R190",
+    "Traffic":8457
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.914621,40.844406 ]
+    },
+    "properties": {
+    "StationID":"R308",
+    "ControlArea":"R285",
+    "Traffic":9838
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.914471,40.805737 ]
+    },
+    "properties": {
+    "StationID":"R447",
+    "ControlArea":"R404",
+    "Traffic":5230
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.914471,40.805737 ]
+    },
+    "properties": {
+    "StationID":"R447",
+    "ControlArea":"R405",
+    "Traffic":3051
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.913355,40.839301 ]
+    },
+    "properties": {
+    "StationID":"R443",
+    "ControlArea":"N209",
+    "Traffic":7004
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.913355,40.839301 ]
+    },
+    "properties": {
+    "StationID":"R443",
+    "ControlArea":"N208",
+    "Traffic":1960
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.913333,40.756312 ]
+    },
+    "properties": {
+    "StationID":"R267",
+    "ControlArea":"N316",
+    "Traffic":1897
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.913333,40.756312 ]
+    },
+    "properties": {
+    "StationID":"R267",
+    "ControlArea":"N316A",
+    "Traffic":6396
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.913333,40.756312 ]
+    },
+    "properties": {
+    "StationID":"R267",
+    "ControlArea":"N317",
+    "Traffic":4203
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.912497,40.848635 ]
+    },
+    "properties": {
+    "StationID":"R309",
+    "ControlArea":"R286",
+    "Traffic":3962
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.912497,40.744103 ]
+    },
+    "properties": {
+    "StationID":"R327",
+    "ControlArea":"R521",
+    "Traffic":9102
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.912067,40.774984 ]
+    },
+    "properties": {
+    "StationID":"R095",
+    "ControlArea":"R515",
+    "Traffic":3451
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.911939,40.67836 ]
+    },
+    "properties": {
+    "StationID":"R439",
+    "ControlArea":"N122",
+    "Traffic":8921
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.911939,40.67836 ]
+    },
+    "properties": {
+    "StationID":"R439",
+    "ControlArea":"N123B",
+    "Traffic":1418
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.91181,40.699707 ]
+    },
+    "properties": {
+    "StationID":"R137",
+    "ControlArea":"H026",
+    "Traffic":5380
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.91181,40.699707 ]
+    },
+    "properties": {
+    "StationID":"R137",
+    "ControlArea":"H027",
+    "Traffic":6777
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.91048,40.682867 ]
+    },
+    "properties": {
+    "StationID":"R432",
+    "ControlArea":"J017",
+    "Traffic":4211
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.909879,40.874551 ]
+    },
+    "properties": {
+    "StationID":"R039",
+    "ControlArea":"R192",
+    "Traffic":233
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.908763,40.662541 ]
+    },
+    "properties": {
+    "StationID":"R065",
+    "ControlArea":"R629",
+    "Traffic":4373
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.907797,40.816505 ]
+    },
+    "properties": {
+    "StationID":"R405",
+    "ControlArea":"R312",
+    "Traffic":4685
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.907776,40.702798 ]
+    },
+    "properties": {
+    "StationID":"R402",
+    "ControlArea":"K022",
+    "Traffic":526
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.907733,40.85339 ]
+    },
+    "properties": {
+    "StationID":"R244",
+    "ControlArea":"R287",
+    "Traffic":9059
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.90769,40.808742 ]
+    },
+    "properties": {
+    "StationID":"R448",
+    "ControlArea":"R406",
+    "Traffic":2578
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.90769,40.808742 ]
+    },
+    "properties": {
+    "StationID":"R448",
+    "ControlArea":"R407",
+    "Traffic":319
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.905973,40.752898 ]
+    },
+    "properties": {
+    "StationID":"R298",
+    "ControlArea":"N318",
+    "Traffic":22
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.905973,40.752898 ]
+    },
+    "properties": {
+    "StationID":"R298",
+    "ControlArea":"N319",
+    "Traffic":3927
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.905501,40.682558 ]
+    },
+    "properties": {
+    "StationID":"R313",
+    "ControlArea":"H033",
+    "Traffic":7723
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.905244,40.850307 ]
+    },
+    "properties": {
+    "StationID":"R154",
+    "ControlArea":"N213",
+    "Traffic":757
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.905244,40.850307 ]
+    },
+    "properties": {
+    "StationID":"R154",
+    "ControlArea":"N214",
+    "Traffic":326
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.904858,40.878867 ]
+    },
+    "properties": {
+    "StationID":"R040",
+    "ControlArea":"R194",
+    "Traffic":7465
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.904139,40.678848 ]
+    },
+    "properties": {
+    "StationID":"R103",
+    "ControlArea":"N124",
+    "Traffic":1415
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.904085,40.812104 ]
+    },
+    "properties": {
+    "StationID":"R449",
+    "ControlArea":"R408",
+    "Traffic":7161
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.904085,40.812104 ]
+    },
+    "properties": {
+    "StationID":"R449",
+    "ControlArea":"R409",
+    "Traffic":5116
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.904021,40.695607 ]
+    },
+    "properties": {
+    "StationID":"R266",
+    "ControlArea":"H028",
+    "Traffic":6099
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.904021,40.695607 ]
+    },
+    "properties": {
+    "StationID":"R266",
+    "ControlArea":"H030",
+    "Traffic":3164
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.903999,40.688676 ]
+    },
+    "properties": {
+    "StationID":"R295",
+    "ControlArea":"H032",
+    "Traffic":7689
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.903828,40.858389 ]
+    },
+    "properties": {
+    "StationID":"R275",
+    "ControlArea":"R288",
+    "Traffic":3641
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.903077,40.704424 ]
+    },
+    "properties": {
+    "StationID":"R403",
+    "ControlArea":"K024",
+    "Traffic":7752
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.902969,40.745623 ]
+    },
+    "properties": {
+    "StationID":"R147",
+    "ControlArea":"R523",
+    "Traffic":3331
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.902819,40.675496 ]
+    },
+    "properties": {
+    "StationID":"R348",
+    "ControlArea":"H035",
+    "Traffic":3724
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.902454,40.663419 ]
+    },
+    "properties": {
+    "StationID":"R066",
+    "ControlArea":"R630",
+    "Traffic":6617
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.902047,40.669376 ]
+    },
+    "properties": {
+    "StationID":"R349",
+    "ControlArea":"H037",
+    "Traffic":6109
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.901832,40.64666 ]
+    },
+    "properties": {
+    "StationID":"R152",
+    "ControlArea":"H041",
+    "Traffic":3746
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.901467,40.819396 ]
+    },
+    "properties": {
+    "StationID":"R406",
+    "ControlArea":"R314",
+    "Traffic":1874
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.901467,40.819396 ]
+    },
+    "properties": {
+    "StationID":"R406",
+    "ControlArea":"R315",
+    "Traffic":1294
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.901199,40.862941 ]
+    },
+    "properties": {
+    "StationID":"R119",
+    "ControlArea":"R289",
+    "Traffic":1249
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.901034,40.862803 ]
+    },
+    "properties": {
+    "StationID":"R112",
+    "ControlArea":"N217",
+    "Traffic":6595
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.901034,40.862803 ]
+    },
+    "properties": {
+    "StationID":"R112",
+    "ControlArea":"N218",
+    "Traffic":8215
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.900759,40.884821 ]
+    },
+    "properties": {
+    "StationID":"R306",
+    "ControlArea":"R196",
+    "Traffic":3073
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.900695,40.856085 ]
+    },
+    "properties": {
+    "StationID":"R237",
+    "ControlArea":"N215",
+    "Traffic":2020
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.900444,40.663801 ]
+    },
+    "properties": {
+    "StationID":"R350",
+    "ControlArea":"H038",
+    "Traffic":641
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.899558,40.650625 ]
+    },
+    "properties": {
+    "StationID":"R376",
+    "ControlArea":"H040",
+    "Traffic":9470
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.899472,40.658748 ]
+    },
+    "properties": {
+    "StationID":"R375",
+    "ControlArea":"H039",
+    "Traffic":857
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.898871,40.677107 ]
+    },
+    "properties": {
+    "StationID":"R433",
+    "ControlArea":"J020",
+    "Traffic":4117
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.898549,40.889185 ]
+    },
+    "properties": {
+    "StationID":"R117",
+    "ControlArea":"R197",
+    "Traffic":8833
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.898485,40.749663 ]
+    },
+    "properties": {
+    "StationID":"R340",
+    "ControlArea":"N322",
+    "Traffic":2648
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.897326,40.867899 ]
+    },
+    "properties": {
+    "StationID":"R161",
+    "ControlArea":"R290",
+    "Traffic":8371
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.896747,40.822172 ]
+    },
+    "properties": {
+    "StationID":"R407",
+    "ControlArea":"R316",
+    "Traffic":8882
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.896554,40.674552 ]
+    },
+    "properties": {
+    "StationID":"R440",
+    "ControlArea":"N125",
+    "Traffic":4378
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.896403,40.746325 ]
+    },
+    "properties": {
+    "StationID":"R347",
+    "ControlArea":"R524",
+    "Traffic":2017
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.89606,40.816083 ]
+    },
+    "properties": {
+    "StationID":"R450",
+    "ControlArea":"R410",
+    "Traffic":8868
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.89606,40.816083 ]
+    },
+    "properties": {
+    "StationID":"R450",
+    "ControlArea":"R411",
+    "Traffic":3800
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.89591,40.706181 ]
+    },
+    "properties": {
+    "StationID":"R404",
+    "ControlArea":"K025",
+    "Traffic":5652
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.894258,40.664884 ]
+    },
+    "properties": {
+    "StationID":"R067",
+    "ControlArea":"R632",
+    "Traffic":1098
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.893485,40.866974 ]
+    },
+    "properties": {
+    "StationID":"R155",
+    "ControlArea":"N221",
+    "Traffic":5762
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.893485,40.866974 ]
+    },
+    "properties": {
+    "StationID":"R155",
+    "ControlArea":"N220",
+    "Traffic":5667
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.893228,40.82417 ]
+    },
+    "properties": {
+    "StationID":"R408",
+    "ControlArea":"R318",
+    "Traffic":6355
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.893228,40.82417 ]
+    },
+    "properties": {
+    "StationID":"R408",
+    "ControlArea":"R317",
+    "Traffic":8449
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.891876,40.829966 ]
+    },
+    "properties": {
+    "StationID":"R409",
+    "ControlArea":"R320",
+    "Traffic":5690
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.891876,40.829966 ]
+    },
+    "properties": {
+    "StationID":"R409",
+    "ControlArea":"R319",
+    "Traffic":3579
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.891726,40.678018 ]
+    },
+    "properties": {
+    "StationID":"R434",
+    "ControlArea":"J021",
+    "Traffic":5754
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.891361,40.746655 ]
+    },
+    "properties": {
+    "StationID":"R018",
+    "ControlArea":"N324",
+    "Traffic":7985
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.891361,40.746655 ]
+    },
+    "properties": {
+    "StationID":"R018",
+    "ControlArea":"N323",
+    "Traffic":9685
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.891361,40.746655 ]
+    },
+    "properties": {
+    "StationID":"R018",
+    "ControlArea":"R525",
+    "Traffic":7543
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.890567,40.820889 ]
+    },
+    "properties": {
+    "StationID":"R146",
+    "ControlArea":"R412",
+    "Traffic":2190
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.890438,40.672786 ]
+    },
+    "properties": {
+    "StationID":"R441",
+    "ControlArea":"N126",
+    "Traffic":740
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.890084,40.873399 ]
+    },
+    "properties": {
+    "StationID":"R183",
+    "ControlArea":"R291",
+    "Traffic":4787
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.88958,40.711353 ]
+    },
+    "properties": {
+    "StationID":"R100",
+    "ControlArea":"K026",
+    "Traffic":5912
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.889451,40.665405 ]
+    },
+    "properties": {
+    "StationID":"R068",
+    "ControlArea":"R633",
+    "Traffic":147
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.887659,40.837382 ]
+    },
+    "properties": {
+    "StationID":"R386",
+    "ControlArea":"R322",
+    "Traffic":5959
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.887659,40.837382 ]
+    },
+    "properties": {
+    "StationID":"R386",
+    "ControlArea":"R321",
+    "Traffic":8879
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.886919,40.873026 ]
+    },
+    "properties": {
+    "StationID":"R156",
+    "ControlArea":"N222",
+    "Traffic":7844
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.886919,40.873026 ]
+    },
+    "properties": {
+    "StationID":"R156",
+    "ControlArea":"N223",
+    "Traffic":1440
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.886425,40.826508 ]
+    },
+    "properties": {
+    "StationID":"R325",
+    "ControlArea":"R413",
+    "Traffic":8248
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.884687,40.679938 ]
+    },
+    "properties": {
+    "StationID":"R435",
+    "ControlArea":"J022",
+    "Traffic":1279
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.884666,40.87963 ]
+    },
+    "properties": {
+    "StationID":"R133",
+    "ControlArea":"R293",
+    "Traffic":2273
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.884087,40.666252 ]
+    },
+    "properties": {
+    "StationID":"R069",
+    "ControlArea":"R634",
+    "Traffic":7976
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.883786,40.747647 ]
+    },
+    "properties": {
+    "StationID":"R096",
+    "ControlArea":"R526",
+    "Traffic":8645
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.882005,40.742445 ]
+    },
+    "properties": {
+    "StationID":"R218",
+    "ControlArea":"N325A",
+    "Traffic":4737
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.880761,40.674161 ]
+    },
+    "properties": {
+    "StationID":"R442",
+    "ControlArea":"N127",
+    "Traffic":8153
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.880074,40.681598 ]
+    },
+    "properties": {
+    "StationID":"R436",
+    "ControlArea":"J023",
+    "Traffic":8754
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.879774,40.840097 ]
+    },
+    "properties": {
+    "StationID":"R387",
+    "ControlArea":"R323",
+    "Traffic":5038
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.879774,40.840097 ]
+    },
+    "properties": {
+    "StationID":"R387",
+    "ControlArea":"R323A",
+    "Traffic":6588
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.879559,40.828894 ]
+    },
+    "properties": {
+    "StationID":"R162",
+    "ControlArea":"R414",
+    "Traffic":1248
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.878872,40.874827 ]
+    },
+    "properties": {
+    "StationID":"R157",
+    "ControlArea":"N224",
+    "Traffic":5291
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.878872,40.874827 ]
+    },
+    "properties": {
+    "StationID":"R157",
+    "ControlArea":"N225",
+    "Traffic":1100
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.878851,40.885973 ]
+    },
+    "properties": {
+    "StationID":"R052",
+    "ControlArea":"R294",
+    "Traffic":3586
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.877242,40.736998 ]
+    },
+    "properties": {
+    "StationID":"R254",
+    "ControlArea":"N327",
+    "Traffic":6662
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.876791,40.748541 ]
+    },
+    "properties": {
+    "StationID":"R122",
+    "ControlArea":"R527",
+    "Traffic":9167
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.874559,40.829495 ]
+    },
+    "properties": {
+    "StationID":"R120",
+    "ControlArea":"R415",
+    "Traffic":3687
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.873765,40.683209 ]
+    },
+    "properties": {
+    "StationID":"R437",
+    "ControlArea":"J024",
+    "Traffic":7077
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.873551,40.841882 ]
+    },
+    "properties": {
+    "StationID":"R388",
+    "ControlArea":"R325",
+    "Traffic":521
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.872564,40.689945 ]
+    },
+    "properties": {
+    "StationID":"R003",
+    "ControlArea":"J025",
+    "Traffic":2049
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.87207,40.675382 ]
+    },
+    "properties": {
+    "StationID":"R200",
+    "ControlArea":"N128",
+    "Traffic":573
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.871189,40.774702 ]
+    },
+    "properties": {
+    "StationID":"R538",
+    "ControlArea":"LGA01",
+    "Traffic":9986
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.869452,40.749143 ]
+    },
+    "properties": {
+    "StationID":"R097",
+    "ControlArea":"R528",
+    "Traffic":76
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.869259,40.73308 ]
+    },
+    "properties": {
+    "StationID":"R201",
+    "ControlArea":"N329",
+    "Traffic":6439
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.869259,40.73308 ]
+    },
+    "properties": {
+    "StationID":"R201",
+    "ControlArea":"N329A",
+    "Traffic":3799
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.868465,40.848797 ]
+    },
+    "properties": {
+    "StationID":"R389",
+    "ControlArea":"R326",
+    "Traffic":6817
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.867623,40.8315 ]
+    },
+    "properties": {
+    "StationID":"R245",
+    "ControlArea":"R416",
+    "Traffic":4867
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.867607,40.857188 ]
+    },
+    "properties": {
+    "StationID":"R361",
+    "ControlArea":"R328",
+    "Traffic":1999
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.867607,40.857188 ]
+    },
+    "properties": {
+    "StationID":"R361",
+    "ControlArea":"R327",
+    "Traffic":6400
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.867393,40.865481 ]
+    },
+    "properties": {
+    "StationID":"R362",
+    "ControlArea":"R329",
+    "Traffic":9787
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.867135,40.69132 ]
+    },
+    "properties": {
+    "StationID":"R004",
+    "ControlArea":"J028",
+    "Traffic":5894
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.867135,40.871387 ]
+    },
+    "properties": {
+    "StationID":"R363",
+    "ControlArea":"R330",
+    "Traffic":7478
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.866341,40.877796 ]
+    },
+    "properties": {
+    "StationID":"R226",
+    "ControlArea":"R728",
+    "Traffic":8268
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.866255,40.877796 ]
+    },
+    "properties": {
+    "StationID":"R364",
+    "ControlArea":"R331",
+    "Traffic":6870
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.865376,40.677107 ]
+    },
+    "properties": {
+    "StationID":"R382",
+    "ControlArea":"N129",
+    "Traffic":8794
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.862736,40.883767 ]
+    },
+    "properties": {
+    "StationID":"R365",
+    "ControlArea":"R332",
+    "Traffic":9350
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.862672,40.749858 ]
+    },
+    "properties": {
+    "StationID":"R208",
+    "ControlArea":"R529",
+    "Traffic":5344
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.86161,40.729869 ]
+    },
+    "properties": {
+    "StationID":"R202",
+    "ControlArea":"N330B",
+    "Traffic":7203
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.86161,40.729869 ]
+    },
+    "properties": {
+    "StationID":"R202",
+    "ControlArea":"N330C",
+    "Traffic":9311
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.860977,40.854137 ]
+    },
+    "properties": {
+    "StationID":"R329",
+    "ControlArea":"R726",
+    "Traffic":9954
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.860805,40.833246 ]
+    },
+    "properties": {
+    "StationID":"R222",
+    "ControlArea":"R417",
+    "Traffic":4625
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.860505,40.887887 ]
+    },
+    "properties": {
+    "StationID":"R366",
+    "ControlArea":"R333",
+    "Traffic":6060
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.860151,40.692304 ]
+    },
+    "properties": {
+    "StationID":"R005",
+    "ControlArea":"J030",
+    "Traffic":5794
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.85896,40.679369 ]
+    },
+    "properties": {
+    "StationID":"R383",
+    "ControlArea":"N131",
+    "Traffic":155
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.85896,40.679369 ]
+    },
+    "properties": {
+    "StationID":"R383",
+    "ControlArea":"N130",
+    "Traffic":1545
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.857265,40.893386 ]
+    },
+    "properties": {
+    "StationID":"R367",
+    "ControlArea":"R334",
+    "Traffic":6079
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.855355,40.858973 ]
+    },
+    "properties": {
+    "StationID":"R430",
+    "ControlArea":"R727",
+    "Traffic":9206
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.855183,40.75176 ]
+    },
+    "properties": {
+    "StationID":"R310",
+    "ControlArea":"R530",
+    "Traffic":8178
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.854389,40.898382 ]
+    },
+    "properties": {
+    "StationID":"R444",
+    "ControlArea":"R335",
+    "Traffic":3538
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.85263,40.726462 ]
+    },
+    "properties": {
+    "StationID":"R219",
+    "ControlArea":"N331",
+    "Traffic":6392
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.85263,40.726462 ]
+    },
+    "properties": {
+    "StationID":"R219",
+    "ControlArea":"N332",
+    "Traffic":3380
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.851568,40.693866 ]
+    },
+    "properties": {
+    "StationID":"R006",
+    "ControlArea":"J031",
+    "Traffic":3137
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.851568,40.693866 ]
+    },
+    "properties": {
+    "StationID":"R006",
+    "ControlArea":"J032",
+    "Traffic":4310
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.851492,40.679857 ]
+    },
+    "properties": {
+    "StationID":"R384",
+    "ControlArea":"N133",
+    "Traffic":8996
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.851222,40.834255 ]
+    },
+    "properties": {
+    "StationID":"R106",
+    "ControlArea":"R418",
+    "Traffic":5551
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.850591,40.903085 ]
+    },
+    "properties": {
+    "StationID":"R145",
+    "ControlArea":"R336",
+    "Traffic":1607
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.846471,40.83646 ]
+    },
+    "properties": {
+    "StationID":"R326",
+    "ControlArea":"R419",
+    "Traffic":4180
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.845625,40.754622 ]
+    },
+    "properties": {
+    "StationID":"R328",
+    "ControlArea":"R532",
+    "Traffic":4890
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.845625,40.754622 ]
+    },
+    "properties": {
+    "StationID":"R328",
+    "ControlArea":"R532G",
+    "Traffic":4182
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.845625,40.754622 ]
+    },
+    "properties": {
+    "StationID":"R328",
+    "ControlArea":"R532H",
+    "Traffic":3198
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.84439,40.721681 ]
+    },
+    "properties": {
+    "StationID":"R141",
+    "ControlArea":"N333A",
+    "Traffic":5633
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.84439,40.721681 ]
+    },
+    "properties": {
+    "StationID":"R141",
+    "ControlArea":"N333",
+    "Traffic":1153
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.84439,40.721681 ]
+    },
+    "properties": {
+    "StationID":"R141",
+    "ControlArea":"N333B",
+    "Traffic":4022
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.844326,40.695184 ]
+    },
+    "properties": {
+    "StationID":"R007",
+    "ControlArea":"J034",
+    "Traffic":7216
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.843853,40.680429 ]
+    },
+    "properties": {
+    "StationID":"R385",
+    "ControlArea":"N134",
+    "Traffic":3516
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.843853,40.680429 ]
+    },
+    "properties": {
+    "StationID":"R385",
+    "ControlArea":"N135",
+    "Traffic":405
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.842952,40.839892 ]
+    },
+    "properties": {
+    "StationID":"R107",
+    "ControlArea":"R420",
+    "Traffic":6583
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.838596,40.878656 ]
+    },
+    "properties": {
+    "StationID":"R292",
+    "ControlArea":"R729",
+    "Traffic":5006
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.837631,40.681745 ]
+    },
+    "properties": {
+    "StationID":"R354",
+    "ControlArea":"N137",
+    "Traffic":7430
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.837459,40.580454 ]
+    },
+    "properties": {
+    "StationID":"R419",
+    "ControlArea":"N187",
+    "Traffic":8596
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.837223,40.718477 ]
+    },
+    "properties": {
+    "StationID":"R341",
+    "ControlArea":"N334B",
+    "Traffic":5564
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.836687,40.843635 ]
+    },
+    "properties": {
+    "StationID":"R427",
+    "ControlArea":"R421",
+    "Traffic":9144
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.836354,40.697405 ]
+    },
+    "properties": {
+    "StationID":"R008",
+    "ControlArea":"J035",
+    "Traffic":3773
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.834058,40.668234 ]
+    },
+    "properties": {
+    "StationID":"R357",
+    "ControlArea":"N181",
+    "Traffic":5730
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.834026,40.668221 ]
+    },
+    "properties": {
+    "StationID":"R464",
+    "ControlArea":"N181A",
+    "Traffic":856
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.832545,40.846817 ]
+    },
+    "properties": {
+    "StationID":"R428",
+    "ControlArea":"R422",
+    "Traffic":7783
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.832181,40.684364 ]
+    },
+    "properties": {
+    "StationID":"R355",
+    "ControlArea":"N139",
+    "Traffic":9785
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.832181,40.684364 ]
+    },
+    "properties": {
+    "StationID":"R355",
+    "ControlArea":"N138",
+    "Traffic":7127
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.830979,40.714444 ]
+    },
+    "properties": {
+    "StationID":"R158",
+    "ControlArea":"N336",
+    "Traffic":8316
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.830979,40.714444 ]
+    },
+    "properties": {
+    "StationID":"R158",
+    "ControlArea":"N335",
+    "Traffic":3961
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.83085,40.888244 ]
+    },
+    "properties": {
+    "StationID":"R431",
+    "ControlArea":"R730",
+    "Traffic":6212
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.830301,40.660476 ]
+    },
+    "properties": {
+    "StationID":"R414",
+    "ControlArea":"N182",
+    "Traffic":3818
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.830301,40.660476 ]
+    },
+    "properties": {
+    "StationID":"R414",
+    "ControlArea":"N182A",
+    "Traffic":2924
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.830301,40.660476 ]
+    },
+    "properties": {
+    "StationID":"R535",
+    "ControlArea":"JFK01",
+    "Traffic":4595
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.830301,40.660476 ]
+    },
+    "properties": {
+    "StationID":"R535",
+    "ControlArea":"JFK02",
+    "Traffic":9898
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.830056,40.759578 ]
+    },
+    "properties": {
+    "StationID":"R055",
+    "ControlArea":"R533",
+    "Traffic":9367
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.830056,40.759578 ]
+    },
+    "properties": {
+    "StationID":"R055",
+    "ControlArea":"R534",
+    "Traffic":6898
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.828382,40.700536 ]
+    },
+    "properties": {
+    "StationID":"R009",
+    "ControlArea":"J037",
+    "Traffic":5378
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.828125,40.852465 ]
+    },
+    "properties": {
+    "StationID":"R429",
+    "ControlArea":"R423",
+    "Traffic":6084
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.828082,40.852417 ]
+    },
+    "properties": {
+    "StationID":"R459",
+    "ControlArea":"OB01",
+    "Traffic":6986
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.82643,40.583542 ]
+    },
+    "properties": {
+    "StationID":"R418",
+    "ControlArea":"N186",
+    "Traffic":700
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.824713,40.685975 ]
+    },
+    "properties": {
+    "StationID":"R356",
+    "ControlArea":"N141",
+    "Traffic":7485
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.820593,40.709174 ]
+    },
+    "properties": {
+    "StationID":"R255",
+    "ControlArea":"N337",
+    "Traffic":5778
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.820143,40.585514 ]
+    },
+    "properties": {
+    "StationID":"R417",
+    "ControlArea":"N185",
+    "Traffic":3613
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.816859,40.702566 ]
+    },
+    "properties": {
+    "StationID":"R342",
+    "ControlArea":"N604",
+    "Traffic":4588
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.816068,40.608693 ]
+    },
+    "properties": {
+    "StationID":"R415",
+    "ControlArea":"N183",
+    "Traffic":4621
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.813684,40.588032 ]
+    },
+    "properties": {
+    "StationID":"R416",
+    "ControlArea":"N184",
+    "Traffic":8218
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.810562,40.705416 ]
+    },
+    "properties": {
+    "StationID":"R128",
+    "ControlArea":"N338B",
+    "Traffic":1885
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.810562,40.705416 ]
+    },
+    "properties": {
+    "StationID":"R128",
+    "ControlArea":"N338",
+    "Traffic":8951
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.807933,40.700488 ]
+    },
+    "properties": {
+    "StationID":"R024",
+    "ControlArea":"N605",
+    "Traffic":1184
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.803326,40.707564 ]
+    },
+    "properties": {
+    "StationID":"R114",
+    "ControlArea":"N339A",
+    "Traffic":2411
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.803326,40.707564 ]
+    },
+    "properties": {
+    "StationID":"R114",
+    "ControlArea":"N339",
+    "Traffic":1788
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.80111,40.702131 ]
+    },
+    "properties": {
+    "StationID":"R025",
+    "ControlArea":"N606",
+    "Traffic":8332
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.80111,40.702131 ]
+    },
+    "properties": {
+    "StationID":"R025",
+    "ControlArea":"N607",
+    "Traffic":9936
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.797011,40.590867 ]
+    },
+    "properties": {
+    "StationID":"R335",
+    "ControlArea":"N191",
+    "Traffic":4486
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.7936,40.710459 ]
+    },
+    "properties": {
+    "StationID":"R115",
+    "ControlArea":"N340",
+    "Traffic":4710
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.7936,40.710459 ]
+    },
+    "properties": {
+    "StationID":"R115",
+    "ControlArea":"N340A",
+    "Traffic":2665
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.788493,40.592334 ]
+    },
+    "properties": {
+    "StationID":"R336",
+    "ControlArea":"N192",
+    "Traffic":5887
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.783815,40.712622 ]
+    },
+    "properties": {
+    "StationID":"R019",
+    "ControlArea":"N343",
+    "Traffic":5784
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.783815,40.712622 ]
+    },
+    "properties": {
+    "StationID":"R019",
+    "ControlArea":"N342",
+    "Traffic":6214
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.782356,40.643942 ]
+    },
+    "properties": {
+    "StationID":"R536",
+    "ControlArea":"JFK03",
+    "Traffic":1684
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.782356,40.643942 ]
+    },
+    "properties": {
+    "StationID":"R537",
+    "ControlArea":"JFK04",
+    "Traffic":5831
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.776433,40.593214 ]
+    },
+    "properties": {
+    "StationID":"R337",
+    "ControlArea":"N193",
+    "Traffic":5773
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.768194,40.595381 ]
+    },
+    "properties": {
+    "StationID":"R338",
+    "ControlArea":"N194",
+    "Traffic":5189
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.76152,40.600138 ]
+    },
+    "properties": {
+    "StationID":"R358",
+    "ControlArea":"N195",
+    "Traffic":441
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.755383,40.603983 ]
+    },
+    "properties": {
+    "StationID":"R285",
+    "ControlArea":"N196",
+    "Traffic":8606
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.910136,40.845892 ]
+    },
+    "properties": {
+    "StationID":"R253",
+    "ControlArea":"N210",
+    "Traffic":459
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.910136,40.845892 ]
+    },
+    "properties": {
+    "StationID":"R253",
+    "ControlArea":"N212",
+    "Traffic":6306
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -74.012983,40.703082 ]
+    },
+    "properties": {
+    "StationID":"R001",
+    "ControlArea":"A060",
+    "Traffic":6861
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -74.012983,40.703082 ]
+    },
+    "properties": {
+    "StationID":"R001",
+    "ControlArea":"A058",
+    "Traffic":4703
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -74.012983,40.703082 ]
+    },
+    "properties": {
+    "StationID":"R001",
+    "ControlArea":"R101S",
+    "Traffic":6155
+    }
+  }
+]
+}
