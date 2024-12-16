@@ -50,7 +50,7 @@ function map() {
                     return colors_state[name];
 
                 })
-                // .on("mouseover", (event, d) => handleMouseOver(event, d, path, state))
+                .on("mouseover", (event, d) => handleMouseOver(event, d, path, state))
                 .on("mouseout", handleMouseOut)
                 .on("click", handleStateClick)
                 // .on("mousedown", handleMouseDown)
@@ -118,8 +118,7 @@ function map() {
         function highlightState(stateName) {
             svgStates.selectAll("path")
                 .style("fill", function(d) {
-                    var currentColor = useStateColors ? colors_state[d.properties.STATENAM.replace(" Territory", "")] : colors_total[d.properties.STATENAM.replace(" Territory", "")];
-                    return d.properties.STATENAM.replace(" Territory", "") === stateName ? "#0000FF" : currentColor;
+                    return d.properties.STATENAM.replace(" Territory", "") === stateName ? "#0000FF" : colors_state[d.properties.STATENAM.replace(" Territory", "")];
                 });
 
             let dispatchString = Object.getOwnPropertyNames(dispatcher._)[0];
@@ -128,89 +127,86 @@ function map() {
 
 
 
-        // // Event handlers for mouse interactions
-        // function handleMouseOver(event, d, path, state) {
-        //     var name = state.features[d].properties.STATENAM.replace(" Territory", ""); // OMG SO IMPORTANT
-        //     var centroid = path.centroid(d);
-        //     // state.features.forEach((feature, index) => {
-        //     //     console.log(`Feature ${index}:`, feature);
-        //     //     console.log("Properties:", feature.properties);
-        //     // });
+        // Event handlers for mouse interactions
+        function handleMouseOver(event, d, path, state) {
+            var name = state.features[d].properties.STATENAM.replace(" Territory", ""); // OMG SO IMPORTANT
+            var centroid = path.centroid(d);
+    
             
-        //     // handleMouseClick(event, d, state);
-        //     d3.select("#popup")
-        //         .style("display", "block")
-        //         .style("left", `${centroid[0]}px`)
-        //         .style("top", `${centroid[1] - 60}px`)
+            // handleMouseClick(event, d, state, name);
+            d3.select("#popup")
+                .style("display", "block")
+                .style("left", `${centroid[0]}px`)
+                .style("top", `${centroid[1] - 60}px`)
+                .style("transform", "scale(1.5)") // Enlarge size
+                .style("z-index", 2000) // Bring to front
+                .html(`
+                    <strong>${name}</strong><br>
+                    <img src="images/${name}.png" alt="${name}" style="max-width: 200px; display: block; margin: 10px 0;">
+                `);
+            
+           
+        }
+        
+
+        // function handleMouseClick(event, d, state, name){
+            
+        //     d3.select(event.currentTarget)
+        //         .style("fill", () => {
+        //             var name = d.properties.STATENAM.replace(" Territory", "");
+        //             return colors_highlight[name] || "#0000ff"; // Default blue for testing
+        //         });
+            
+            
+            
+        //     svgStates.selectAll("path")
+        //     .data(state.features)
+        //     .enter()
+        //     .append("path")
+        //     .attr("d", path)
+        //     .style("fill", function (d) {
+        //         var name = d.properties.STATENAM.replace(" Territory", "");
+        //         return colors_highlight[name];
+        //     });
+            
+        
+        //     var singleState = state.features.filter(d => d.properties.STATENAM === name)[0];
+
+        //     d3.select("#singleState")
+        //     .style("fill", "blue")
+        //     // Select the popup element
+        //     var popup = d3.select("#popup");
+        
+        //     // Check if the popup is already enlarged
+        //     var isLarge = popup.classed("large");
+        
+        //     // Toggle the size
+        //     if (isLarge) {
+        //         // Shrink the popup
+        //         popup
+        //         .classed("large", false)
+        //         .style("transform", "scale(1)") // Reset size
+        //         .style("z-index", 1000) // Reset z-index
         //         .html(`
         //             <strong>${name}</strong><br>
         //             <img src="images/${name}.png" alt="${name}" style="max-width: 100px; display: block; margin: 10px 0;">
-        //             <em>Additional info here...</em>
         //         `);
-            
-           
-        // }
-        
 
-        // function handleMouseClick(event, d){
-            
-            // d3.select(event.currentTarget)
-            //     .style("fill", () => {
-            //         var name = d.properties.STATENAM.replace(" Territory", "");
-            //         return colors_highlight[name] || "#0000ff"; // Default blue for testing
-            //     });
-            
-            
-            
-            // svgStates.selectAll("path")
-            // .data(state.features)
-            // .enter()
-            // .append("path")
-            // .attr("d", path)
-            // .style("fill", function (d) {
-            //     var name = d.properties.STATENAM.replace(" Territory", "");
-            //     return colors_highlight[name];
-            // });
-            
-        
-            // var singleState = state.features.filter(d => d.properties.STATENAM === name)[0];
-
-            // d3.select("#singleState")
-            // .style("fill", "blue")
-            // // Select the popup element
-            // var popup = d3.select("#popup");
-        
-            // // Check if the popup is already enlarged
-            // var isLarge = popup.classed("large");
-        
-            // // Toggle the size
-            // if (isLarge) {
-            //     // Shrink the popup
-            //     popup
-            //     .classed("large", false)
-            //     .style("transform", "scale(1)") // Reset size
-            //     .style("z-index", 1000) // Reset z-index
-            //     .html(`
-            //         <strong>${name}</strong><br>
-            //         <img src="images/${name}.png" alt="${name}" style="max-width: 100px; display: block; margin: 10px 0;">
-            //         <p>Basic information about ${name}...</p>
-            //     `);
-
-            // } else {
-            //     // Enlarge the popup
-            //     popup
-            //     .classed("large", true)
-            //     .style("transform", "scale(1.5)") // Enlarge size
-            //     .style("z-index", 2000) // Bring to front
-            //     .html(`
-            //         <strong>${name}</strong><br>
-            //         <img src="images/${name}.png" alt="${name}" style="max-width: 200px; display: block; margin: 10px 0;">
-            //         <p>Additional detailed information about ${name}...</p>
-            //     `);
+        //     } else {
+        //         // Enlarge the popup
+        //         popup
+        //         .classed("large", true)
+        //         .style("transform", "scale(1.5)") // Enlarge size
+        //         .style("z-index", 2000) // Bring to front
+        //         .html(`
+        //             <strong>${name}</strong><br>
+        //             <img src="images/${name}.png" alt="${name}" style="max-width: 200px; display: block; margin: 10px 0;">
+                    
+        //         `);
                 
-            // }
+        //     }
         
-            // }
+        //     }
 
         // Update map colors dynamically
         function updateMapColors() {
