@@ -47,12 +47,19 @@
       the years, as well as provide details on demand. It will be presented neutrally, yet still 
       “tell a story,” in order to best visualize where fuel has gone within the MBTA. </p>
     
-    <p><em>Expectation: There is a clear focus, and a developed explanation of the problem, and a reasonable response is proposed.</em></p>
+    <p>The goal of this is rooted in concern for the use of fossil fuels in the public 
+      transportation system. When pressed with a prompt in class that centered around the MBTA as a 
+      whole, we wanted for any prestable problems from a different perspective. We chose energy 
+      consumption and carbon emissions because there seemed to be little to no focus on the issue. 
+      Though this came back to bite us a little due to the lack of data on the subject, we hope that 
+      this project will serve to bring attention to what there is as much as what isn’t available. 
+      We aren’t aiming to come up with any sort of solution but rather tell the facts as they are so 
+      that the topic is able to gain more attention through any clear areas that could use improvement.</p>
 
     
     <h1>Visualization</h1>
     
-    <p><em>Include the interactive visualization as part of this page. Static example follows.</em></p>
+   
     
     <div id="linechart"></div>
     <div id="tooltip"></div>
@@ -82,25 +89,35 @@
     
     
     </p>
-      From the beginning, our visualizations were focused on accuracy and readability. 
-      Because our focus was not to convince anyone of a certain point, or make a 
-      particular statement, we didn't need to cater to any sort of emotion or mission statement. 
-      Rather, we ensure our graphs simply tell the story of where fuel has gone within the
-      MBTA in the time period specified.
+    We used our two chosen visualizations, the line graph and the parallel diagram, 
+    because we determined them to be very well suited for the portrayal of general 
+    trends. If used in a business setting, we feel our graphs would be able to give
+     immediate and clear impressions of questions like: "What is the most used fuel?"
+      or "What fuel source fuels the most types of transport?" It was also with this 
+      in mind we chose bright, identifiable colors. This logic was supported by our 
+      interview, where the line graph was specifically supported due to the data needing 
+      to show changes over time. And our class feedback, which praised its clarity 
+      though pressed the need for filtering, which we were sure to implement. 
+
     </p>
     <p>
-      Specifically, our use of our two chosen visualizations, 
-      the line graph and the parallel diagram, were chosen because we determined '
-      them to be very well suited for the portrayal of general trends. If used in a
-       business setting, we feel our graphs would be able to give immediate and clear 
-       impressions of questions like: "What is the most used fuel?" or "What fuel source 
-       fuels the most types of transport?" It was also with this in mind we chose 
-       bright, identifiable colors. 
+      The graphs themselves, if scrolled over with the mouse, allows the user to get 
+      more information on the fuel source, mode of travel and miles traveled according 
+      to the previous two categories. This applies to the dots on the line graph and 
+      all the bars on the Sankey graph. The two graphs are also connected. If a line or 
+      fuel source is selected on the line graph, the selection will be reflected in the 
+      Sankey graph. This filtering means specific fuel sources can be viewed one at a time, 
+      or in smaller groups, if further categorization is necessary.
       </p>
-      <p><em>Final visualization screenshots (PNG images), design justifications, UI walk-through, and linked presentation slides.</em></p>
+
+      <p>Screenshots and Presentation Slides:</p>
+
+      <iframe src = "https://docs.google.com/document/d/1duPo1LkzyUbZNsW7ICr9m4Cy0H4_jzHUrRmIP9_oRnE/edit?usp=sharing embedded=true"
+      width="640" height = "718" ></iframe>
+      
 
     <h1>Data Analysis</h1>
-    <p><em>Summary of data, data types, and data preprocessing.</em></p>
+    
 
     
     <p>Our data comes from a dataset titled: Fuel and Energy, a publicly available 
@@ -110,11 +127,22 @@
        We cleaned the data by removing empty cells and transferring the data into a
         CSV file, then a json file.
       </p>
-      <p><em>Expectation: Data sources match the problem statement and are appropriate. These descriptions should be very explicit so someone could read your page and properly reproduce your results.</em></p>
+      
+      <p>Looking at the visualizations we have themselves, it’s evident that the two 
+        most popular fuel sources are Diesel and Electric Propulsion. While this does 
+        at first glance indicate that the issue of carbon emissions or the over reliance 
+        on fossil fuels is not as large as previously thought, taking a closer look at both 
+        graphs, it’s not so simple. While it’s slight, the line graph makes it clear that 
+        while Electric Propulsion does rest overall above Diesel, Electric Propulsions millions 
+        of miles traveled experienced a slight decrease starting in 2018, while Diesel rose. 
+        In addition, Diesel contributed to the most Modes of Transportation, and it’d be remiss 
+        to forget that Gasoline and Compressed Natural Gasses add to the issue. So while Electric 
+        Propulsion does contribute a significant amount, our visualizations make it clear it’s 
+        not the dominant fuel source and thus, the MBTA is not as clean as it could be.
+      </p>
 
     <h1>Task Analysis</h1>
 
-    <p><em>Summary of task table.</em></p>
 
     <p>Our tasks shifted as our focus narrowed down into our current topic and \
       found we were limited by a lack of appropriate datasets. There are a few 
@@ -145,11 +173,9 @@
         </li>
       </ol>
 
-    <p><em>Expectation: Clearly describes domain tasks, processes, goals and abstract tasks for domain problems.</em></p>
 
     <h1>Design Process</h1>
-    
-    <p><em>Sketches and design choices to justify final visualization.</em></p>
+  
 
     <p>
       Our designs stemmed from rough drafts drawn by Ben Lichter. We found them easy 
@@ -160,7 +186,9 @@
       made a rough draft of our visual, adding the necessary categories in PowerPoint, 
       to see if it held up with our demands. It was from this second rough draft 
       that we determined how brushing and linking would function, how to filter the 
-      two graphs, and how the user would select the graph to receive data on demand. 
+      two graphs, and how the user would select the graph to receive data on demand.
+       Filtering was important, as it was a concern our peer feedback made sure to bring 
+       to our attention.  
     </p>
     <p>
       One specific difference we made was to slightly lower the transparency of the 
@@ -168,24 +196,41 @@
       the graph would look when colors overlapped to travel from fuel source to mode 
       of transportation. We came up with the idea to slightly lower the opacity of 
       the lines. That way, certain lines would be followable even when they overlapped, 
-      and if made solid when selected, added a visual indicator of selection.
+      and if made solid when selected, added a visual indicator of selection. Another 
+      concern expressed both by our own team and our peer feedback was that the initial 
+      color chart wasn’t very colorblind friendly, so we also revisited and refigured 
+      that aspect.
     </p>
 
-    <p><em>Expectation: Evidence of iterative improvement.
-    Logical discussion of design choices grounded in theory from course.
-    Discusses feedback from usability testing.</em></p>
+    <p>Initial Sketch and Digital Rendering:</p>
 
+    <iframe src = "https://docs.google.com/document/d/17ckhYEQ0p0qcURQ05QqDsmWIq_YS-CBJkrEEhOaaHSU/edit?usp=sharing embedded=true"
+      width="640" height = "718" ></iframe>
 
     <h1>Conclusion</h1>
 
-    <p><em>Short summary of work completed and areas for improvement/future-work.</em></p>
+    <p>In conclusion, this was a novel experience from beginning to end. Not only did we 
+      not realize how much of this data was available to the public, we also didn’t realize
+       there were so many tools available, such as D3 and Tableau, to express it. Graphs and 
+       other visualizations were things we took for granted, and were majorly unaware how much
+        science, math, and psychology went into development, though it seems a bit obvious in 
+        hindsight. Creating this website allowed us the opportunity to make a real world application,
+         and provided us with a hands on experience of the do’s and don’t of visualization creation.
+    </p>
     
-    <p><em>Expectation: Meaningfully wraps up project and has good future directions.</em></p>
+    <p>One improvement we could add include generally expanding more on the topic and combining 
+      different datasets to provide a clearer picture of the real world situation. For example, an idea 
+      we originally wanted to address is the idea of a fuel source, “efficiency.” This would be calculated 
+      by determining the ratio of fuel consumption to passenger ridership in order to determine 
+      which modes of transportation and fuel source was being used the most. Then from that data it could 
+      be determined what was most valuable in investing in or working to decrease over time. 
+
+    </p>
 
     
     <h1>Acknowledgments</h1>
 
-    <p><em>List here where any code, packages/libraries, text, images, designs, etc. that you leverage come from.</em></p>
+   
     
     <ul>
       <li><a href="https://d3js.org/">D3: Data-Driven Documents</a> by Mike Bostock.</li>
