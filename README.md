@@ -1,7 +1,5 @@
-link to site
+link to site:
 https://bshen0831.github.io/ 
-
-This project attempts to visualize the differences in demographics for MBTA riders and the population in Boston's neighborhoods. 
 
 If the visualizations are not level or are too big, zoom out until they are.
 
