@@ -46,15 +46,15 @@ path {
 
 .column {
 	float: left;
-	padding: 25px;
+	padding: 15px;
 }
 
 .left {
-	width: 67%; /* Adjusted width to move heatmap to the left */
+	width: 27%; /* Adjusted width to make the table take up half of the screen */
 }
   
   .right {
-	width: 33%; /* Adjusted width to move heatmap to the left */
+	width: 100%; /* Adjusted width to make the map take up half of the screen */
 }
 
 /* Clear floats after the columns */
@@ -86,7 +86,7 @@ tr.selected {
 }
 /* Pretty table layout */
 table {
-	font-size: 14px;
+	font-size: 12px;
 	border-collapse: separate;
 	/* vertical | horizontal */
 	border-spacing: 0 0;
