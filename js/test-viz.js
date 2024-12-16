@@ -1,54 +1,47 @@
 // Immediately Invoked Function Expression to limit access to our 
 // variables and prevent race conditions
 ((() => {
-
-    // Load the data from a json file (you can make these using
-    // JSON.stringify(YOUR_OBJECT), just remove the surrounding "")
-    d3.json("data/realData.json", (data) => {
   
-      // General event type for selections, used by d3-dispatch
-      // https://github.com/d3/d3-dispatch
-      const dispatchString = "selectionUpdated";
-      let yearSelected = "2017";
-      let allData = data;
-      let currData = allData[yearSelected];
+  const dispatchString = "selectionUpdated";
 
-      function updateYear(year) {
-        yearSelected = year;
-        currData = allData[yearSelected];
-
-        d3.select("table").remove();
-        let tableData = table()
-      .selectionDispatcher(d3.dispatch(dispatchString))
-      ("#table", currData);
-
-      }
+    
+  d3.json("data/comparisonByYear.json", function(error, data) {
+    if (error) {
+        console.error("Error loading JSON data:", error);
+        return;
+    }
 
 
+    console.log("Data loaded:", data);
+
+      // Default year to display
+      let yearSelected = "2007"; 
+      let currData = data[yearSelected];
+  
+      // Filter out entries with invalid ratings (e.g., "N/A")
+      currData = currData.filter(d => d.Rating !== "N/A");
+  
+      // Call the scatterplot function with the cleaned data
+      createScatterplot("#scatterplot", currData);
+  
       let tableData = table()
       .selectionDispatcher(d3.dispatch(dispatchString))
       ("#table", currData);
 
-      
-      let spRatingGDPComparisson = scatterplot()
-      .x(d => d.gdp)
-      .xLabel("UNEMPLOYMENT RATE")
-      .y(d => d.Rating)
-      .yLabel("MURDER RATE IN STATE PER 100000")
-      .yLabelOffset(150)
-      .selectionDispatcher(d3.dispatch(dispatchString))
-      ("#scatterplot", currData);
+      function updateYear(year) {
+        yearSelected = year;
+        let currData = data[yearSelected];
 
-/*
-      let bcData = bubbleChart()
-      .x(d => d["gdp"])
-      .xLabel("GDP Per Capita")
-      .y(d => d["Rating"])
-      .yLabel("Transportation Rating")
-      .yLabelOffset(150)
-      .selectionDispatcher(d3.dispatch(dispatchString))
-      ("#scatterplot", currData);
-      */
+        currData = currData.filter(d => d.Rating !== "N/A");
+        
+        d3.select("#scatterplot").selectAll("*").remove();
+        createScatterplot("#scatterplot", currData);
+
+        d3.select("table").remove();
+        let tableData = table()
+            .selectionDispatcher(d3.dispatch(dispatchString))
+            ("#table", currData);
+    }
 
        // Add event listeners to the buttons
       document.getElementById("2007").addEventListener("click", () => updateYear("2007"));
@@ -63,5 +56,18 @@
       document.getElementById("2016").addEventListener("click", () => updateYear("2016"));
       document.getElementById("2017").addEventListener("click", () => updateYear("2017"));
     });
-})());
-    
+
+
+    // Scatterplot creation function
+    function createScatterplot(selector, data) {
+      let spRatingGDPComparison = scatterplot()
+          .x(d => d.gdp) // Map GDP to x-axis
+          .xLabel("GDP Per Capita")
+          .y(d => +d.Rating) // Convert Rating to numeric for y-axis
+          .yLabel("Transportation Rating")
+          .yLabelOffset(150)
+          .selectionDispatcher(d3.dispatch("selectionUpdated"))
+          (selector, data);
+  }
+
+}))();
