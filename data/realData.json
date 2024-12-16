@@ -1,0 +1,7188 @@
+{
+    "2007": [
+        {
+            "Country": "Albania",
+            "Abbreviation": "ALB",
+            "Rating": 2.65,
+            "GDP Per Cap": 3595.053
+        },
+        {
+            "Country": "Algeria",
+            "Abbreviation": "DZA",
+            "Rating": 3.34,
+            "GDP Per Cap": 4208.244
+        },
+        {
+            "Country": "Argentina",
+            "Abbreviation": "ARG",
+            "Rating": 3.12,
+            "GDP Per Cap": 7315.726
+        },
+        {
+            "Country": "Armenia",
+            "Abbreviation": "ARM",
+            "Rating": 3.3,
+            "GDP Per Cap": 3079.031
+        },
+        {
+            "Country": "Australia",
+            "Abbreviation": "AUS",
+            "Rating": 5.48,
+            "GDP Per Cap": 45207.756
+        },
+        {
+            "Country": "Austria",
+            "Abbreviation": "AUT",
+            "Rating": 5.67,
+            "GDP Per Cap": 46922.558
+        },
+        {
+            "Country": "Azerbaijan",
+            "Abbreviation": "AZE",
+            "Rating": 4.32,
+            "GDP Per Cap": 3813.751
+        },
+        {
+            "Country": "Bahrain",
+            "Abbreviation": "BHR",
+            "Rating": 5.32,
+            "GDP Per Cap": 21796.838
+        },
+        {
+            "Country": "Bangladesh",
+            "Abbreviation": "BGD",
+            "Rating": 2.82,
+            "GDP Per Cap": 668.54
+        },
+        {
+            "Country": "Barbados",
+            "Abbreviation": "BRB",
+            "Rating": 5.37,
+            "GDP Per Cap": 19095.524
+        },
+        {
+            "Country": "Belgium",
+            "Abbreviation": "BEL",
+            "Rating": 6.13,
+            "GDP Per Cap": 44496.791
+        },
+        {
+            "Country": "Bolivia",
+            "Abbreviation": "BOL",
+            "Rating": 2.78,
+            "GDP Per Cap": 1383.894
+        },
+        {
+            "Country": "Botswana",
+            "Abbreviation": "BWA",
+            "Rating": 4.02,
+            "GDP Per Cap": 5371.808
+        },
+        {
+            "Country": "Brazil",
+            "Abbreviation": "BRA",
+            "Rating": 2.98,
+            "GDP Per Cap": 7374.237
+        },
+        {
+            "Country": "Bulgaria",
+            "Abbreviation": "BGR",
+            "Rating": 3.17,
+            "GDP Per Cap": 5815.474
+        },
+        {
+            "Country": "Burkina Faso",
+            "Abbreviation": "BFA",
+            "Rating": 3.23,
+            "GDP Per Cap": 516.811
+        },
+        {
+            "Country": "Burundi",
+            "Abbreviation": "BDI",
+            "Rating": 2.65,
+            "GDP Per Cap": 170.174
+        },
+        {
+            "Country": "Cameroon",
+            "Abbreviation": "CMR",
+            "Rating": 2.45,
+            "GDP Per Cap": 1277.667
+        },
+        {
+            "Country": "Canada",
+            "Abbreviation": "CAN",
+            "Rating": 5.87,
+            "GDP Per Cap": 44717.074
+        },
+        {
+            "Country": "Chile",
+            "Abbreviation": "CHL",
+            "Rating": 5.32,
+            "GDP Per Cap": 10447.116
+        },
+        {
+            "Country": "Colombia",
+            "Abbreviation": "COL",
+            "Rating": 3.36,
+            "GDP Per Cap": 4834.404
+        },
+        {
+            "Country": "Costa Rica",
+            "Abbreviation": "CRI",
+            "Rating": 2.94,
+            "GDP Per Cap": 6194.045
+        },
+        {
+            "Country": "Croatia",
+            "Abbreviation": "HRV",
+            "Rating": 4.15,
+            "GDP Per Cap": 13764.592
+        },
+        {
+            "Country": "Cyprus",
+            "Abbreviation": "CYP",
+            "Rating": 5.03,
+            "GDP Per Cap": 31774.426
+        },
+        {
+            "Country": "Denmark",
+            "Abbreviation": "DNK",
+            "Rating": 6.43,
+            "GDP Per Cap": 58786.14
+        },
+        {
+            "Country": "Dominican Republic",
+            "Abbreviation": "DOM",
+            "Rating": 4.24,
+            "GDP Per Cap": 4803.473
+        },
+        {
+            "Country": "Ecuador",
+            "Abbreviation": "ECU",
+            "Rating": 3.33,
+            "GDP Per Cap": 3533.67
+        },
+        {
+            "Country": "El Salvador",
+            "Abbreviation": "SLV",
+            "Rating": 4.69,
+            "GDP Per Cap": 2814.604
+        },
+        {
+            "Country": "Estonia",
+            "Abbreviation": "EST",
+            "Rating": 4.7,
+            "GDP Per Cap": 16765.784
+        },
+        {
+            "Country": "Ethiopia",
+            "Abbreviation": "ETH",
+            "Rating": 3.84,
+            "GDP Per Cap": 266.894
+        },
+        {
+            "Country": "Finland",
+            "Abbreviation": "FIN",
+            "Rating": 6.05,
+            "GDP Per Cap": 48586.821
+        },
+        {
+            "Country": "France",
+            "Abbreviation": "FRA",
+            "Rating": 6.33,
+            "GDP Per Cap": 42982.755
+        },
+        {
+            "Country": "Gambia, The",
+            "Abbreviation": "GMB",
+            "Rating": 4.0,
+            "GDP Per Cap": 780.379
+        },
+        {
+            "Country": "Georgia",
+            "Abbreviation": "GEO",
+            "Rating": 3.45,
+            "GDP Per Cap": 2700.417
+        },
+        {
+            "Country": "Germany",
+            "Abbreviation": "DEU",
+            "Rating": 6.6,
+            "GDP Per Cap": 43021.966
+        },
+        {
+            "Country": "Greece",
+            "Abbreviation": "GRC",
+            "Rating": 4.7,
+            "GDP Per Cap": 28899.982
+        },
+        {
+            "Country": "Guatemala",
+            "Abbreviation": "GTM",
+            "Rating": 3.99,
+            "GDP Per Cap": 2599.124
+        },
+        {
+            "Country": "Honduras",
+            "Abbreviation": "HND",
+            "Rating": 4.26,
+            "GDP Per Cap": 1572.152
+        },
+        {
+            "Country": "Hungary",
+            "Abbreviation": "HUN",
+            "Rating": 3.88,
+            "GDP Per Cap": 13926.753
+        },
+        {
+            "Country": "Iceland",
+            "Abbreviation": "ISL",
+            "Rating": 5.55,
+            "GDP Per Cap": 70375.326
+        },
+        {
+            "Country": "India",
+            "Abbreviation": "IND",
+            "Rating": 3.78,
+            "GDP Per Cap": 1022.732
+        },
+        {
+            "Country": "Indonesia",
+            "Abbreviation": "IDN",
+            "Rating": 2.99,
+            "GDP Per Cap": 2064.003
+        },
+        {
+            "Country": "Ireland",
+            "Abbreviation": "IRL",
+            "Rating": 4.29,
+            "GDP Per Cap": 60769.642
+        },
+        {
+            "Country": "Israel",
+            "Abbreviation": "ISR",
+            "Rating": 5.23,
+            "GDP Per Cap": 25738.706
+        },
+        {
+            "Country": "Italy",
+            "Abbreviation": "ITA",
+            "Rating": 3.83,
+            "GDP Per Cap": 37989.367
+        },
+        {
+            "Country": "Jamaica",
+            "Abbreviation": "JAM",
+            "Rating": 4.75,
+            "GDP Per Cap": 4829.296
+        },
+        {
+            "Country": "Japan",
+            "Abbreviation": "JPN",
+            "Rating": 5.64,
+            "GDP Per Cap": 35847.232
+        },
+        {
+            "Country": "Jordan",
+            "Abbreviation": "JOR",
+            "Rating": 4.85,
+            "GDP Per Cap": 2773.893
+        },
+        {
+            "Country": "Kazakhstan",
+            "Abbreviation": "KAZ",
+            "Rating": 3.17,
+            "GDP Per Cap": 6771.415
+        },
+        {
+            "Country": "Kenya",
+            "Abbreviation": "KEN",
+            "Rating": 3.67,
+            "GDP Per Cap": 1028.226
+        },
+        {
+            "Country": "Kuwait",
+            "Abbreviation": "KWT",
+            "Rating": 4.79,
+            "GDP Per Cap": 47539.015
+        },
+        {
+            "Country": "Kyrgyz Republic",
+            "Abbreviation": "KGZ",
+            "Rating": 2.41,
+            "GDP Per Cap": 725.487
+        },
+        {
+            "Country": "Latvia",
+            "Abbreviation": "LVA",
+            "Rating": 4.32,
+            "GDP Per Cap": 14079.584
+        },
+        {
+            "Country": "Lithuania",
+            "Abbreviation": "LTU",
+            "Rating": 4.48,
+            "GDP Per Cap": 12308.603
+        },
+        {
+            "Country": "Luxembourg",
+            "Abbreviation": "LUX",
+            "Rating": 5.46,
+            "GDP Per Cap": 108344.137
+        },
+        {
+            "Country": "Madagascar",
+            "Abbreviation": "MDG",
+            "Rating": 3.02,
+            "GDP Per Cap": 459.855
+        },
+        {
+            "Country": "Malaysia",
+            "Abbreviation": "MYS",
+            "Rating": 5.84,
+            "GDP Per Cap": 7480.893
+        },
+        {
+            "Country": "Malta",
+            "Abbreviation": "MLT",
+            "Rating": 4.48,
+            "GDP Per Cap": 19655.101
+        },
+        {
+            "Country": "Mauritius",
+            "Abbreviation": "MUS",
+            "Rating": 4.83,
+            "GDP Per Cap": 6663.186
+        },
+        {
+            "Country": "Mexico",
+            "Abbreviation": "MEX",
+            "Rating": 3.89,
+            "GDP Per Cap": 10063.621
+        },
+        {
+            "Country": "Mongolia",
+            "Abbreviation": "MNG",
+            "Rating": 2.31,
+            "GDP Per Cap": 1616.138
+        },
+        {
+            "Country": "Morocco",
+            "Abbreviation": "MAR",
+            "Rating": 4.05,
+            "GDP Per Cap": 2759.516
+        },
+        {
+            "Country": "Mozambique",
+            "Abbreviation": "MOZ",
+            "Rating": 2.7,
+            "GDP Per Cap": 498.838
+        },
+        {
+            "Country": "Namibia",
+            "Abbreviation": "NAM",
+            "Rating": 4.92,
+            "GDP Per Cap": 4354.324
+        },
+        {
+            "Country": "Nepal",
+            "Abbreviation": "NPL",
+            "Rating": 2.84,
+            "GDP Per Cap": 440.856
+        },
+        {
+            "Country": "Netherlands",
+            "Abbreviation": "NLD",
+            "Rating": 6.24,
+            "GDP Per Cap": 52182.448
+        },
+        {
+            "Country": "New Zealand",
+            "Abbreviation": "NZL",
+            "Rating": 5.16,
+            "GDP Per Cap": 31914.298
+        },
+        {
+            "Country": "Nicaragua",
+            "Abbreviation": "NIC",
+            "Rating": 2.99,
+            "GDP Per Cap": 1326.658
+        },
+        {
+            "Country": "Nigeria",
+            "Abbreviation": "NGA",
+            "Rating": 2.81,
+            "GDP Per Cap": 1791.823
+        },
+        {
+            "Country": "Norway",
+            "Abbreviation": "NOR",
+            "Rating": 5.32,
+            "GDP Per Cap": 85276.992
+        },
+        {
+            "Country": "Oman",
+            "Abbreviation": "OMN",
+            "Rating": 4.95,
+            "GDP Per Cap": 17716.421
+        },
+        {
+            "Country": "Pakistan",
+            "Abbreviation": "PAK",
+            "Rating": 3.82,
+            "GDP Per Cap": 1146.082
+        },
+        {
+            "Country": "Panama",
+            "Abbreviation": "PAN",
+            "Rating": 5.02,
+            "GDP Per Cap": 6350.183
+        },
+        {
+            "Country": "Paraguay",
+            "Abbreviation": "PRY",
+            "Rating": 2.85,
+            "GDP Per Cap": 2988.684
+        },
+        {
+            "Country": "Philippines",
+            "Abbreviation": "PHL",
+            "Rating": 3.21,
+            "GDP Per Cap": 1764.683
+        },
+        {
+            "Country": "Poland",
+            "Abbreviation": "POL",
+            "Rating": 3.13,
+            "GDP Per Cap": 11252.863
+        },
+        {
+            "Country": "Portugal",
+            "Abbreviation": "PRT",
+            "Rating": 5.33,
+            "GDP Per Cap": 22813.754
+        },
+        {
+            "Country": "Qatar",
+            "Abbreviation": "QAT",
+            "Rating": 4.8,
+            "GDP Per Cap": 65934.266
+        },
+        {
+            "Country": "Romania",
+            "Abbreviation": "ROU",
+            "Rating": 2.91,
+            "GDP Per Cap": 8273.885
+        },
+        {
+            "Country": "Russian Federation",
+            "Abbreviation": "RUS",
+            "Rating": 3.42,
+            "GDP Per Cap": 9757.472
+        },
+        {
+            "Country": "Senegal",
+            "Abbreviation": "SEN",
+            "Rating": 3.71,
+            "GDP Per Cap": 1197.551
+        },
+        {
+            "Country": "Serbia",
+            "Abbreviation": "SRB",
+            "Rating": 3.37,
+            "GDP Per Cap": 5878.873
+        },
+        {
+            "Country": "Singapore",
+            "Abbreviation": "SGP",
+            "Rating": 6.8,
+            "GDP Per Cap": 39432.895
+        },
+        {
+            "Country": "Slovak Republic",
+            "Abbreviation": "SVK",
+            "Rating": 3.88,
+            "GDP Per Cap": 14374.845
+        },
+        {
+            "Country": "Slovenia",
+            "Abbreviation": "SVN",
+            "Rating": 4.53,
+            "GDP Per Cap": 23819.362
+        },
+        {
+            "Country": "South Africa",
+            "Abbreviation": "ZAF",
+            "Rating": 5.01,
+            "GDP Per Cap": 6752.256
+        },
+        {
+            "Country": "Spain",
+            "Abbreviation": "ESP",
+            "Rating": 5.48,
+            "GDP Per Cap": 32649.222
+        },
+        {
+            "Country": "Sri Lanka",
+            "Abbreviation": "LKA",
+            "Rating": 3.89,
+            "GDP Per Cap": 1928.714
+        },
+        {
+            "Country": "Sweden",
+            "Abbreviation": "SWE",
+            "Rating": 5.86,
+            "GDP Per Cap": 53365.592
+        },
+        {
+            "Country": "Switzerland",
+            "Abbreviation": "CHE",
+            "Rating": 6.12,
+            "GDP Per Cap": 65396.963
+        },
+        {
+            "Country": "Tajikistan",
+            "Abbreviation": "TJK",
+            "Rating": 2.24,
+            "GDP Per Cap": 519.025
+        },
+        {
+            "Country": "Thailand",
+            "Abbreviation": "THA",
+            "Rating": 5.19,
+            "GDP Per Cap": 3972.98
+        },
+        {
+            "Country": "Trinidad and Tobago",
+            "Abbreviation": "TTO",
+            "Rating": 3.68,
+            "GDP Per Cap": 16765.857
+        },
+        {
+            "Country": "Tunisia",
+            "Abbreviation": "TUN",
+            "Rating": 5.02,
+            "GDP Per Cap": 3963.791
+        },
+        {
+            "Country": "Uganda",
+            "Abbreviation": "UGA",
+            "Rating": 3.28,
+            "GDP Per Cap": 634.361
+        },
+        {
+            "Country": "Ukraine",
+            "Abbreviation": "UKR",
+            "Rating": 2.89,
+            "GDP Per Cap": 3101.388
+        },
+        {
+            "Country": "United Arab Emirates",
+            "Abbreviation": "ARE",
+            "Rating": 6.18,
+            "GDP Per Cap": 41466.918
+        },
+        {
+            "Country": "United Kingdom",
+            "Abbreviation": "GBR",
+            "Rating": 5.72,
+            "GDP Per Cap": 50419.848
+        },
+        {
+            "Country": "United States",
+            "Abbreviation": "USA",
+            "Rating": 6.07,
+            "GDP Per Cap": 47943.353
+        },
+        {
+            "Country": "Uruguay",
+            "Abbreviation": "URY",
+            "Rating": 3.91,
+            "GDP Per Cap": 7622.824
+        },
+        {
+            "Country": "Vietnam",
+            "Abbreviation": "VNM",
+            "Rating": 3.09,
+            "GDP Per Cap": 1152.267
+        },
+        {
+            "Country": "Zambia",
+            "Abbreviation": "ZMB",
+            "Rating": 3.38,
+            "GDP Per Cap": 1133.672
+        },
+        {
+            "Country": "Zimbabwe",
+            "Abbreviation": "ZWE",
+            "Rating": 3.54,
+            "GDP Per Cap": 646.544
+        }
+    ],
+    "2008": [
+        {
+            "Country": "Albania",
+            "Abbreviation": "ALB",
+            "Rating": 3.05,
+            "GDP Per Cap": 4370.562
+        },
+        {
+            "Country": "Algeria",
+            "Abbreviation": "DZA",
+            "Rating": 3.29,
+            "GDP Per Cap": 5214.762
+        },
+        {
+            "Country": "Argentina",
+            "Abbreviation": "ARG",
+            "Rating": 3.09,
+            "GDP Per Cap": 9146.79
+        },
+        {
+            "Country": "Armenia",
+            "Abbreviation": "ARM",
+            "Rating": 3.37,
+            "GDP Per Cap": 3913.436
+        },
+        {
+            "Country": "Australia",
+            "Abbreviation": "AUS",
+            "Rating": 5.29,
+            "GDP Per Cap": 49198.736
+        },
+        {
+            "Country": "Austria",
+            "Abbreviation": "AUT",
+            "Rating": 5.86,
+            "GDP Per Cap": 51914.013
+        },
+        {
+            "Country": "Azerbaijan",
+            "Abbreviation": "AZE",
+            "Rating": 4.37,
+            "GDP Per Cap": 5564.444
+        },
+        {
+            "Country": "Bahrain",
+            "Abbreviation": "BHR",
+            "Rating": 5.53,
+            "GDP Per Cap": 24223.471
+        },
+        {
+            "Country": "Bangladesh",
+            "Abbreviation": "BGD",
+            "Rating": 2.93,
+            "GDP Per Cap": 760.65
+        },
+        {
+            "Country": "Barbados",
+            "Abbreviation": "BRB",
+            "Rating": 5.54,
+            "GDP Per Cap": 19477.377
+        },
+        {
+            "Country": "Belgium",
+            "Abbreviation": "BEL",
+            "Rating": 6.1,
+            "GDP Per Cap": 48493.137
+        },
+        {
+            "Country": "Bolivia",
+            "Abbreviation": "BOL",
+            "Rating": 2.73,
+            "GDP Per Cap": 1729.369
+        },
+        {
+            "Country": "Botswana",
+            "Abbreviation": "BWA",
+            "Rating": 4.14,
+            "GDP Per Cap": 5345.848
+        },
+        {
+            "Country": "Brazil",
+            "Abbreviation": "BRA",
+            "Rating": 2.9,
+            "GDP Per Cap": 8863.269
+        },
+        {
+            "Country": "Bulgaria",
+            "Abbreviation": "BGR",
+            "Rating": 3.2,
+            "GDP Per Cap": 7161.75
+        },
+        {
+            "Country": "Burkina Faso",
+            "Abbreviation": "BFA",
+            "Rating": 3.38,
+            "GDP Per Cap": 621.822
+        },
+        {
+            "Country": "Burundi",
+            "Abbreviation": "BDI",
+            "Rating": 2.92,
+            "GDP Per Cap": 195.79
+        },
+        {
+            "Country": "Cameroon",
+            "Abbreviation": "CMR",
+            "Rating": 2.73,
+            "GDP Per Cap": 1439.39
+        },
+        {
+            "Country": "Canada",
+            "Abbreviation": "CAN",
+            "Rating": 5.94,
+            "GDP Per Cap": 46773.744
+        },
+        {
+            "Country": "Chile",
+            "Abbreviation": "CHL",
+            "Rating": 5.47,
+            "GDP Per Cap": 10759.738
+        },
+        {
+            "Country": "Colombia",
+            "Abbreviation": "COL",
+            "Rating": 3.49,
+            "GDP Per Cap": 5622.109
+        },
+        {
+            "Country": "Costa Rica",
+            "Abbreviation": "CRI",
+            "Rating": 3.12,
+            "GDP Per Cap": 6993.896
+        },
+        {
+            "Country": "Croatia",
+            "Abbreviation": "HRV",
+            "Rating": 4.22,
+            "GDP Per Cap": 15896.749
+        },
+        {
+            "Country": "Cyprus",
+            "Abbreviation": "CYP",
+            "Rating": 5.45,
+            "GDP Per Cap": 36009.56
+        },
+        {
+            "Country": "Denmark",
+            "Abbreviation": "DNK",
+            "Rating": 6.34,
+            "GDP Per Cap": 64826.681
+        },
+        {
+            "Country": "Dominican Republic",
+            "Abbreviation": "DOM",
+            "Rating": 4.32,
+            "GDP Per Cap": 5194.799
+        },
+        {
+            "Country": "Ecuador",
+            "Abbreviation": "ECU",
+            "Rating": 3.26,
+            "GDP Per Cap": 4257.891
+        },
+        {
+            "Country": "El Salvador",
+            "Abbreviation": "SLV",
+            "Rating": 4.72,
+            "GDP Per Cap": 2964.17
+        },
+        {
+            "Country": "Estonia",
+            "Abbreviation": "EST",
+            "Rating": 4.86,
+            "GDP Per Cap": 18274.232
+        },
+        {
+            "Country": "Ethiopia",
+            "Abbreviation": "ETH",
+            "Rating": 3.76,
+            "GDP Per Cap": 350.57
+        },
+        {
+            "Country": "Finland",
+            "Abbreviation": "FIN",
+            "Rating": 6.21,
+            "GDP Per Cap": 53894.581
+        },
+        {
+            "Country": "France",
+            "Abbreviation": "FRA",
+            "Rating": 6.39,
+            "GDP Per Cap": 47098.882
+        },
+        {
+            "Country": "Gambia, The",
+            "Abbreviation": "GMB",
+            "Rating": 4.21,
+            "GDP Per Cap": 924.514
+        },
+        {
+            "Country": "Georgia",
+            "Abbreviation": "GEO",
+            "Rating": 3.86,
+            "GDP Per Cap": 3419.915
+        },
+        {
+            "Country": "Germany",
+            "Abbreviation": "DEU",
+            "Rating": 6.54,
+            "GDP Per Cap": 47153.994
+        },
+        {
+            "Country": "Ghana",
+            "Abbreviation": "GHA",
+            "Rating": 3.64,
+            "GDP Per Cap": 1688.077
+        },
+        {
+            "Country": "Greece",
+            "Abbreviation": "GRC",
+            "Rating": 4.66,
+            "GDP Per Cap": 32173.559
+        },
+        {
+            "Country": "Guatemala",
+            "Abbreviation": "GTM",
+            "Rating": 4.35,
+            "GDP Per Cap": 2928.945
+        },
+        {
+            "Country": "Honduras",
+            "Abbreviation": "HND",
+            "Rating": 4.43,
+            "GDP Per Cap": 1727.787
+        },
+        {
+            "Country": "Hungary",
+            "Abbreviation": "HUN",
+            "Rating": 4.01,
+            "GDP Per Cap": 15761.631
+        },
+        {
+            "Country": "Iceland",
+            "Abbreviation": "ISL",
+            "Rating": 5.62,
+            "GDP Per Cap": 57296.251
+        },
+        {
+            "Country": "India",
+            "Abbreviation": "IND",
+            "Rating": 3.67,
+            "GDP Per Cap": 993.503
+        },
+        {
+            "Country": "Indonesia",
+            "Abbreviation": "IDN",
+            "Rating": 3.31,
+            "GDP Per Cap": 2416.785
+        },
+        {
+            "Country": "Ireland",
+            "Abbreviation": "IRL",
+            "Rating": 4.26,
+            "GDP Per Cap": 60989.707
+        },
+        {
+            "Country": "Israel",
+            "Abbreviation": "ISR",
+            "Rating": 4.76,
+            "GDP Per Cap": 30278.46
+        },
+        {
+            "Country": "Italy",
+            "Abbreviation": "ITA",
+            "Rating": 3.82,
+            "GDP Per Cap": 40968.981
+        },
+        {
+            "Country": "Jamaica",
+            "Abbreviation": "JAM",
+            "Rating": 4.72,
+            "GDP Per Cap": 5134.246
+        },
+        {
+            "Country": "Japan",
+            "Abbreviation": "JPN",
+            "Rating": 5.32,
+            "GDP Per Cap": 39992.06
+        },
+        {
+            "Country": "Jordan",
+            "Abbreviation": "JOR",
+            "Rating": 4.99,
+            "GDP Per Cap": 3414.521
+        },
+        {
+            "Country": "Kazakhstan",
+            "Abbreviation": "KAZ",
+            "Rating": 3.11,
+            "GDP Per Cap": 8513.567
+        },
+        {
+            "Country": "Kenya",
+            "Abbreviation": "KEN",
+            "Rating": 3.66,
+            "GDP Per Cap": 1118.755
+        },
+        {
+            "Country": "Kuwait",
+            "Abbreviation": "KWT",
+            "Rating": 4.58,
+            "GDP Per Cap": 53059.162
+        },
+        {
+            "Country": "Kyrgyz Republic",
+            "Abbreviation": "KGZ",
+            "Rating": 2.51,
+            "GDP Per Cap": 971.678
+        },
+        {
+            "Country": "Latvia",
+            "Abbreviation": "LVA",
+            "Rating": 4.27,
+            "GDP Per Cap": 16435.21
+        },
+        {
+            "Country": "Lithuania",
+            "Abbreviation": "LTU",
+            "Rating": 4.79,
+            "GDP Per Cap": 14986.833
+        },
+        {
+            "Country": "Luxembourg",
+            "Abbreviation": "LUX",
+            "Rating": 5.39,
+            "GDP Per Cap": 121616.145
+        },
+        {
+            "Country": "Madagascar",
+            "Abbreviation": "MDG",
+            "Rating": 3.27,
+            "GDP Per Cap": 561.654
+        },
+        {
+            "Country": "Malaysia",
+            "Abbreviation": "MYS",
+            "Rating": 5.82,
+            "GDP Per Cap": 8766.175
+        },
+        {
+            "Country": "Malta",
+            "Abbreviation": "MLT",
+            "Rating": 4.69,
+            "GDP Per Cap": 22487.727
+        },
+        {
+            "Country": "Mauritius",
+            "Abbreviation": "MUS",
+            "Rating": 4.78,
+            "GDP Per Cap": 8138.17
+        },
+        {
+            "Country": "Mexico",
+            "Abbreviation": "MEX",
+            "Rating": 3.95,
+            "GDP Per Cap": 10438.499
+        },
+        {
+            "Country": "Mongolia",
+            "Abbreviation": "MNG",
+            "Rating": 2.18,
+            "GDP Per Cap": 2109.269
+        },
+        {
+            "Country": "Morocco",
+            "Abbreviation": "MAR",
+            "Rating": 4.21,
+            "GDP Per Cap": 3189.2
+        },
+        {
+            "Country": "Mozambique",
+            "Abbreviation": "MOZ",
+            "Rating": 2.79,
+            "GDP Per Cap": 579.997
+        },
+        {
+            "Country": "Namibia",
+            "Abbreviation": "NAM",
+            "Rating": 5.27,
+            "GDP Per Cap": 4180.522
+        },
+        {
+            "Country": "Nepal",
+            "Abbreviation": "NPL",
+            "Rating": 2.76,
+            "GDP Per Cap": 532.331
+        },
+        {
+            "Country": "Netherlands",
+            "Abbreviation": "NLD",
+            "Rating": 6.08,
+            "GDP Per Cap": 58383.013
+        },
+        {
+            "Country": "New Zealand",
+            "Abbreviation": "NZL",
+            "Rating": 5.13,
+            "GDP Per Cap": 31762.876
+        },
+        {
+            "Country": "Nicaragua",
+            "Abbreviation": "NIC",
+            "Rating": 2.98,
+            "GDP Per Cap": 1498.88
+        },
+        {
+            "Country": "Nigeria",
+            "Abbreviation": "NGA",
+            "Rating": 3.05,
+            "GDP Per Cap": 2197.776
+        },
+        {
+            "Country": "Norway",
+            "Abbreviation": "NOR",
+            "Rating": 5.43,
+            "GDP Per Cap": 97119.989
+        },
+        {
+            "Country": "Oman",
+            "Abbreviation": "OMN",
+            "Rating": 5.2,
+            "GDP Per Cap": 25061.257
+        },
+        {
+            "Country": "Pakistan",
+            "Abbreviation": "PAK",
+            "Rating": 3.8,
+            "GDP Per Cap": 1228.232
+        },
+        {
+            "Country": "Panama",
+            "Abbreviation": "PAN",
+            "Rating": 5.09,
+            "GDP Per Cap": 7369.186
+        },
+        {
+            "Country": "Paraguay",
+            "Abbreviation": "PRY",
+            "Rating": 2.62,
+            "GDP Per Cap": 4054.044
+        },
+        {
+            "Country": "Philippines",
+            "Abbreviation": "PHL",
+            "Rating": 3.37,
+            "GDP Per Cap": 2011.634
+        },
+        {
+            "Country": "Poland",
+            "Abbreviation": "POL",
+            "Rating": 2.74,
+            "GDP Per Cap": 13999.496
+        },
+        {
+            "Country": "Portugal",
+            "Abbreviation": "PRT",
+            "Rating": 5.3,
+            "GDP Per Cap": 24946.304
+        },
+        {
+            "Country": "Qatar",
+            "Abbreviation": "QAT",
+            "Rating": 4.91,
+            "GDP Per Cap": 72484.634
+        },
+        {
+            "Country": "Romania",
+            "Abbreviation": "ROU",
+            "Rating": 2.97,
+            "GDP Per Cap": 10446.484
+        },
+        {
+            "Country": "Russian Federation",
+            "Abbreviation": "RUS",
+            "Rating": 3.48,
+            "GDP Per Cap": 12463.807
+        },
+        {
+            "Country": "Senegal",
+            "Abbreviation": "SEN",
+            "Rating": 3.95,
+            "GDP Per Cap": 1403.795
+        },
+        {
+            "Country": "Serbia",
+            "Abbreviation": "SRB",
+            "Rating": 3.22,
+            "GDP Per Cap": 7087.453
+        },
+        {
+            "Country": "Singapore",
+            "Abbreviation": "SGP",
+            "Rating": 6.76,
+            "GDP Per Cap": 40008.577
+        },
+        {
+            "Country": "Slovak Republic",
+            "Abbreviation": "SVK",
+            "Rating": 3.63,
+            "GDP Per Cap": 18074.617
+        },
+        {
+            "Country": "Slovenia",
+            "Abbreviation": "SVN",
+            "Rating": 4.75,
+            "GDP Per Cap": 27609.896
+        },
+        {
+            "Country": "South Africa",
+            "Abbreviation": "ZAF",
+            "Rating": 5.05,
+            "GDP Per Cap": 6337.933
+        },
+        {
+            "Country": "Spain",
+            "Abbreviation": "ESP",
+            "Rating": 5.26,
+            "GDP Per Cap": 35576.848
+        },
+        {
+            "Country": "Sri Lanka",
+            "Abbreviation": "LKA",
+            "Rating": 4.3,
+            "GDP Per Cap": 2410.801
+        },
+        {
+            "Country": "Sweden",
+            "Abbreviation": "SWE",
+            "Rating": 5.81,
+            "GDP Per Cap": 55596.078
+        },
+        {
+            "Country": "Switzerland",
+            "Abbreviation": "CHE",
+            "Rating": 6.25,
+            "GDP Per Cap": 74669.867
+        },
+        {
+            "Country": "Tajikistan",
+            "Abbreviation": "TJK",
+            "Rating": 2.56,
+            "GDP Per Cap": 702.445
+        },
+        {
+            "Country": "Thailand",
+            "Abbreviation": "THA",
+            "Rating": 5.1,
+            "GDP Per Cap": 4378.4
+        },
+        {
+            "Country": "Trinidad and Tobago",
+            "Abbreviation": "TTO",
+            "Rating": 3.84,
+            "GDP Per Cap": 21448.701
+        },
+        {
+            "Country": "Tunisia",
+            "Abbreviation": "TUN",
+            "Rating": 5.15,
+            "GDP Per Cap": 4519.745
+        },
+        {
+            "Country": "Uganda",
+            "Abbreviation": "UGA",
+            "Rating": 3.18,
+            "GDP Per Cap": 784.496
+        },
+        {
+            "Country": "Ukraine",
+            "Abbreviation": "UKR",
+            "Rating": 3.07,
+            "GDP Per Cap": 3944.724
+        },
+        {
+            "Country": "United Arab Emirates",
+            "Abbreviation": "ARE",
+            "Rating": 6.28,
+            "GDP Per Cap": 39073.38
+        },
+        {
+            "Country": "United Kingdom",
+            "Abbreviation": "GBR",
+            "Rating": 5.43,
+            "GDP Per Cap": 47884.16
+        },
+        {
+            "Country": "United States",
+            "Abbreviation": "USA",
+            "Rating": 6.11,
+            "GDP Per Cap": 48470.553
+        },
+        {
+            "Country": "Uruguay",
+            "Abbreviation": "URY",
+            "Rating": 3.98,
+            "GDP Per Cap": 9857.304
+        },
+        {
+            "Country": "Vietnam",
+            "Abbreviation": "VNM",
+            "Rating": 3.11,
+            "GDP Per Cap": 1446.562
+        },
+        {
+            "Country": "Zambia",
+            "Abbreviation": "ZMB",
+            "Rating": 3.36,
+            "GDP Per Cap": 1393.78
+        },
+        {
+            "Country": "Zimbabwe",
+            "Abbreviation": "ZWE",
+            "Rating": 3.65,
+            "GDP Per Cap": 553.364
+        }
+    ],
+    "2009": [
+        {
+            "Country": "Albania",
+            "Abbreviation": "ALB",
+            "Rating": 3.07,
+            "GDP Per Cap": 4114.09
+        },
+        {
+            "Country": "Algeria",
+            "Abbreviation": "DZA",
+            "Rating": 2.97,
+            "GDP Per Cap": 4262.144
+        },
+        {
+            "Country": "Argentina",
+            "Abbreviation": "ARG",
+            "Rating": 3.08,
+            "GDP Per Cap": 8337.811
+        },
+        {
+            "Country": "Armenia",
+            "Abbreviation": "ARM",
+            "Rating": 3.23,
+            "GDP Per Cap": 2911.763
+        },
+        {
+            "Country": "Australia",
+            "Abbreviation": "AUS",
+            "Rating": 4.89,
+            "GDP Per Cap": 45772.165
+        },
+        {
+            "Country": "Austria",
+            "Abbreviation": "AUT",
+            "Rating": 5.79,
+            "GDP Per Cap": 48111.662
+        },
+        {
+            "Country": "Azerbaijan",
+            "Abbreviation": "AZE",
+            "Rating": 4.32,
+            "GDP Per Cap": 4964.696
+        },
+        {
+            "Country": "Bahrain",
+            "Abbreviation": "BHR",
+            "Rating": 5.71,
+            "GDP Per Cap": 20292.469
+        },
+        {
+            "Country": "Bangladesh",
+            "Abbreviation": "BGD",
+            "Rating": 2.9,
+            "GDP Per Cap": 841.252
+        },
+        {
+            "Country": "Barbados",
+            "Abbreviation": "BRB",
+            "Rating": 5.58,
+            "GDP Per Cap": 18183.486
+        },
+        {
+            "Country": "Belgium",
+            "Abbreviation": "BEL",
+            "Rating": 5.97,
+            "GDP Per Cap": 44892.228
+        },
+        {
+            "Country": "Bolivia",
+            "Abbreviation": "BOL",
+            "Rating": 2.58,
+            "GDP Per Cap": 1769.441
+        },
+        {
+            "Country": "Botswana",
+            "Abbreviation": "BWA",
+            "Rating": 3.96,
+            "GDP Per Cap": 4938.25
+        },
+        {
+            "Country": "Brazil",
+            "Abbreviation": "BRA",
+            "Rating": 2.82,
+            "GDP Per Cap": 8640.934
+        },
+        {
+            "Country": "Bulgaria",
+            "Abbreviation": "BGR",
+            "Rating": 3.12,
+            "GDP Per Cap": 6878.061
+        },
+        {
+            "Country": "Burkina Faso",
+            "Abbreviation": "BFA",
+            "Rating": 2.95,
+            "GDP Per Cap": 603.222
+        },
+        {
+            "Country": "Burundi",
+            "Abbreviation": "BDI",
+            "Rating": 2.96,
+            "GDP Per Cap": 208.78
+        },
+        {
+            "Country": "Cameroon",
+            "Abbreviation": "CMR",
+            "Rating": 2.6,
+            "GDP Per Cap": 1409.942
+        },
+        {
+            "Country": "Canada",
+            "Abbreviation": "CAN",
+            "Rating": 5.61,
+            "GDP Per Cap": 40989.278
+        },
+        {
+            "Country": "Chile",
+            "Abbreviation": "CHL",
+            "Rating": 4.81,
+            "GDP Per Cap": 10176.733
+        },
+        {
+            "Country": "Colombia",
+            "Abbreviation": "COL",
+            "Rating": 2.96,
+            "GDP Per Cap": 5330.795
+        },
+        {
+            "Country": "Costa Rica",
+            "Abbreviation": "CRI",
+            "Rating": 2.79,
+            "GDP Per Cap": 6879.266
+        },
+        {
+            "Country": "Croatia",
+            "Abbreviation": "HRV",
+            "Rating": 4.15,
+            "GDP Per Cap": 14408.429
+        },
+        {
+            "Country": "Cyprus",
+            "Abbreviation": "CYP",
+            "Rating": 5.49,
+            "GDP Per Cap": 32650.265
+        },
+        {
+            "Country": "Denmark",
+            "Abbreviation": "DNK",
+            "Rating": 6.02,
+            "GDP Per Cap": 58536.553
+        },
+        {
+            "Country": "Dominican Republic",
+            "Abbreviation": "DOM",
+            "Rating": 3.73,
+            "GDP Per Cap": 5151.172
+        },
+        {
+            "Country": "Ecuador",
+            "Abbreviation": "ECU",
+            "Rating": 2.93,
+            "GDP Per Cap": 4111.478
+        },
+        {
+            "Country": "El Salvador",
+            "Abbreviation": "SLV",
+            "Rating": 4.11,
+            "GDP Per Cap": 2889.68
+        },
+        {
+            "Country": "Estonia",
+            "Abbreviation": "EST",
+            "Rating": 4.56,
+            "GDP Per Cap": 14757.1
+        },
+        {
+            "Country": "Ethiopia",
+            "Abbreviation": "ETH",
+            "Rating": 3.35,
+            "GDP Per Cap": 373.199
+        },
+        {
+            "Country": "Finland",
+            "Abbreviation": "FIN",
+            "Rating": 6.13,
+            "GDP Per Cap": 47538.607
+        },
+        {
+            "Country": "France",
+            "Abbreviation": "FRA",
+            "Rating": 6.34,
+            "GDP Per Cap": 43177.991
+        },
+        {
+            "Country": "Gambia, The",
+            "Abbreviation": "GMB",
+            "Rating": 4.5,
+            "GDP Per Cap": 833.282
+        },
+        {
+            "Country": "Georgia",
+            "Abbreviation": "GEO",
+            "Rating": 3.88,
+            "GDP Per Cap": 2890.71
+        },
+        {
+            "Country": "Germany",
+            "Abbreviation": "DEU",
+            "Rating": 6.46,
+            "GDP Per Cap": 43189.389
+        },
+        {
+            "Country": "Ghana",
+            "Abbreviation": "GHA",
+            "Rating": 3.21,
+            "GDP Per Cap": 1477.649
+        },
+        {
+            "Country": "Greece",
+            "Abbreviation": "GRC",
+            "Rating": 4.15,
+            "GDP Per Cap": 29829.328
+        },
+        {
+            "Country": "Guatemala",
+            "Abbreviation": "GTM",
+            "Rating": 3.68,
+            "GDP Per Cap": 2714.018
+        },
+        {
+            "Country": "Honduras",
+            "Abbreviation": "HND",
+            "Rating": 3.69,
+            "GDP Per Cap": 1777.274
+        },
+        {
+            "Country": "Hungary",
+            "Abbreviation": "HUN",
+            "Rating": 3.96,
+            "GDP Per Cap": 13066.422
+        },
+        {
+            "Country": "Iceland",
+            "Abbreviation": "ISL",
+            "Rating": 5.86,
+            "GDP Per Cap": 41188.906
+        },
+        {
+            "Country": "India",
+            "Abbreviation": "IND",
+            "Rating": 3.96,
+            "GDP Per Cap": 1096.637
+        },
+        {
+            "Country": "Indonesia",
+            "Abbreviation": "IDN",
+            "Rating": 3.45,
+            "GDP Per Cap": 2469.384
+        },
+        {
+            "Country": "Ireland",
+            "Abbreviation": "IRL",
+            "Rating": 4.2,
+            "GDP Per Cap": 51943.659
+        },
+        {
+            "Country": "Israel",
+            "Abbreviation": "ISR",
+            "Rating": 4.42,
+            "GDP Per Cap": 28521.786
+        },
+        {
+            "Country": "Italy",
+            "Abbreviation": "ITA",
+            "Rating": 3.8,
+            "GDP Per Cap": 37143.468
+        },
+        {
+            "Country": "Jamaica",
+            "Abbreviation": "JAM",
+            "Rating": 3.91,
+            "GDP Per Cap": 4507.186
+        },
+        {
+            "Country": "Japan",
+            "Abbreviation": "JPN",
+            "Rating": 5.61,
+            "GDP Per Cap": 41469.773
+        },
+        {
+            "Country": "Jordan",
+            "Abbreviation": "JOR",
+            "Rating": 4.23,
+            "GDP Per Cap": 3618.892
+        },
+        {
+            "Country": "Kazakhstan",
+            "Abbreviation": "KAZ",
+            "Rating": 3.31,
+            "GDP Per Cap": 7165.226
+        },
+        {
+            "Country": "Kenya",
+            "Abbreviation": "KEN",
+            "Rating": 3.4,
+            "GDP Per Cap": 1123.268
+        },
+        {
+            "Country": "Kuwait",
+            "Abbreviation": "KWT",
+            "Rating": 4.66,
+            "GDP Per Cap": 38156.094
+        },
+        {
+            "Country": "Kyrgyz Republic",
+            "Abbreviation": "KGZ",
+            "Rating": 2.23,
+            "GDP Per Cap": 876.933
+        },
+        {
+            "Country": "Latvia",
+            "Abbreviation": "LVA",
+            "Rating": 4.21,
+            "GDP Per Cap": 12243.072
+        },
+        {
+            "Country": "Lithuania",
+            "Abbreviation": "LTU",
+            "Rating": 4.61,
+            "GDP Per Cap": 11851.028
+        },
+        {
+            "Country": "Luxembourg",
+            "Abbreviation": "LUX",
+            "Rating": 5.46,
+            "GDP Per Cap": 110249.419
+        },
+        {
+            "Country": "Madagascar",
+            "Abbreviation": "MDG",
+            "Rating": 2.96,
+            "GDP Per Cap": 488.901
+        },
+        {
+            "Country": "Malaysia",
+            "Abbreviation": "MYS",
+            "Rating": 5.42,
+            "GDP Per Cap": 7543.882
+        },
+        {
+            "Country": "Malta",
+            "Abbreviation": "MLT",
+            "Rating": 4.7,
+            "GDP Per Cap": 21318.804
+        },
+        {
+            "Country": "Mauritius",
+            "Abbreviation": "MUS",
+            "Rating": 4.44,
+            "GDP Per Cap": 7416.659
+        },
+        {
+            "Country": "Mexico",
+            "Abbreviation": "MEX",
+            "Rating": 3.72,
+            "GDP Per Cap": 8346.772
+        },
+        {
+            "Country": "Mongolia",
+            "Abbreviation": "MNG",
+            "Rating": 2.27,
+            "GDP Per Cap": 1687.55
+        },
+        {
+            "Country": "Morocco",
+            "Abbreviation": "MAR",
+            "Rating": 4.01,
+            "GDP Per Cap": 3162.86
+        },
+        {
+            "Country": "Mozambique",
+            "Abbreviation": "MOZ",
+            "Rating": 2.84,
+            "GDP Per Cap": 535.666
+        },
+        {
+            "Country": "Namibia",
+            "Abbreviation": "NAM",
+            "Rating": 5.1,
+            "GDP Per Cap": 4323.868
+        },
+        {
+            "Country": "Nepal",
+            "Abbreviation": "NPL",
+            "Rating": 2.42,
+            "GDP Per Cap": 542.536
+        },
+        {
+            "Country": "Netherlands",
+            "Abbreviation": "NLD",
+            "Rating": 5.99,
+            "GDP Per Cap": 53257.987
+        },
+        {
+            "Country": "New Zealand",
+            "Abbreviation": "NZL",
+            "Rating": 4.97,
+            "GDP Per Cap": 28270.425
+        },
+        {
+            "Country": "Nicaragua",
+            "Abbreviation": "NIC",
+            "Rating": 2.82,
+            "GDP Per Cap": 1438.131
+        },
+        {
+            "Country": "Nigeria",
+            "Abbreviation": "NGA",
+            "Rating": 2.76,
+            "GDP Per Cap": 1927.476
+        },
+        {
+            "Country": "Norway",
+            "Abbreviation": "NOR",
+            "Rating": 4.91,
+            "GDP Per Cap": 80115.693
+        },
+        {
+            "Country": "Oman",
+            "Abbreviation": "OMN",
+            "Rating": 5.42,
+            "GDP Per Cap": 19235.875
+        },
+        {
+            "Country": "Pakistan",
+            "Abbreviation": "PAK",
+            "Rating": 3.81,
+            "GDP Per Cap": 1108.978
+        },
+        {
+            "Country": "Panama",
+            "Abbreviation": "PAN",
+            "Rating": 4.41,
+            "GDP Per Cap": 7806.732
+        },
+        {
+            "Country": "Paraguay",
+            "Abbreviation": "PRY",
+            "Rating": 2.23,
+            "GDP Per Cap": 3623.931
+        },
+        {
+            "Country": "Philippines",
+            "Abbreviation": "PHL",
+            "Rating": 2.81,
+            "GDP Per Cap": 1923.674
+        },
+        {
+            "Country": "Poland",
+            "Abbreviation": "POL",
+            "Rating": 2.88,
+            "GDP Per Cap": 11532.283
+        },
+        {
+            "Country": "Portugal",
+            "Abbreviation": "PRT",
+            "Rating": 5.07,
+            "GDP Per Cap": 23126.066
+        },
+        {
+            "Country": "Qatar",
+            "Abbreviation": "QAT",
+            "Rating": 5.23,
+            "GDP Per Cap": 53822.909
+        },
+        {
+            "Country": "Romania",
+            "Abbreviation": "ROU",
+            "Rating": 3.0,
+            "GDP Per Cap": 8540.187
+        },
+        {
+            "Country": "Russian Federation",
+            "Abbreviation": "RUS",
+            "Rating": 3.46,
+            "GDP Per Cap": 9160.112
+        },
+        {
+            "Country": "Senegal",
+            "Abbreviation": "SEN",
+            "Rating": 3.57,
+            "GDP Per Cap": 1307.516
+        },
+        {
+            "Country": "Serbia",
+            "Abbreviation": "SRB",
+            "Rating": 2.75,
+            "GDP Per Cap": 6168.228
+        },
+        {
+            "Country": "Singapore",
+            "Abbreviation": "SGP",
+            "Rating": 6.49,
+            "GDP Per Cap": 38926.813
+        },
+        {
+            "Country": "Slovak Republic",
+            "Abbreviation": "SVK",
+            "Rating": 3.89,
+            "GDP Per Cap": 16591.492
+        },
+        {
+            "Country": "Slovenia",
+            "Abbreviation": "SVN",
+            "Rating": 4.63,
+            "GDP Per Cap": 24563.148
+        },
+        {
+            "Country": "South Africa",
+            "Abbreviation": "ZAF",
+            "Rating": 4.79,
+            "GDP Per Cap": 6538.166
+        },
+        {
+            "Country": "Spain",
+            "Abbreviation": "ESP",
+            "Rating": 5.15,
+            "GDP Per Cap": 32241.569
+        },
+        {
+            "Country": "Sri Lanka",
+            "Abbreviation": "LKA",
+            "Rating": 4.21,
+            "GDP Per Cap": 2472.242
+        },
+        {
+            "Country": "Sweden",
+            "Abbreviation": "SWE",
+            "Rating": 5.75,
+            "GDP Per Cap": 46496.896
+        },
+        {
+            "Country": "Switzerland",
+            "Abbreviation": "CHE",
+            "Rating": 6.3,
+            "GDP Per Cap": 71918.046
+        },
+        {
+            "Country": "Tajikistan",
+            "Abbreviation": "TJK",
+            "Rating": 2.87,
+            "GDP Per Cap": 666.024
+        },
+        {
+            "Country": "Thailand",
+            "Abbreviation": "THA",
+            "Rating": 4.65,
+            "GDP Per Cap": 4213.097
+        },
+        {
+            "Country": "Trinidad and Tobago",
+            "Abbreviation": "TTO",
+            "Rating": 4.4,
+            "GDP Per Cap": 14777.395
+        },
+        {
+            "Country": "Tunisia",
+            "Abbreviation": "TUN",
+            "Rating": 4.92,
+            "GDP Per Cap": 4333.153
+        },
+        {
+            "Country": "Uganda",
+            "Abbreviation": "UGA",
+            "Rating": 2.67,
+            "GDP Per Cap": 815.808
+        },
+        {
+            "Country": "Ukraine",
+            "Abbreviation": "UKR",
+            "Rating": 3.4,
+            "GDP Per Cap": 2557.279
+        },
+        {
+            "Country": "United Arab Emirates",
+            "Abbreviation": "ARE",
+            "Rating": 6.36,
+            "GDP Per Cap": 30920.369
+        },
+        {
+            "Country": "United Kingdom",
+            "Abbreviation": "GBR",
+            "Rating": 5.11,
+            "GDP Per Cap": 38892.333
+        },
+        {
+            "Country": "United States",
+            "Abbreviation": "USA",
+            "Rating": 5.6,
+            "GDP Per Cap": 47102.428
+        },
+        {
+            "Country": "Uruguay",
+            "Abbreviation": "URY",
+            "Rating": 3.6,
+            "GDP Per Cap": 10232.122
+        },
+        {
+            "Country": "Vietnam",
+            "Abbreviation": "VNM",
+            "Rating": 3.25,
+            "GDP Per Cap": 1481.442
+        },
+        {
+            "Country": "Zambia",
+            "Abbreviation": "ZMB",
+            "Rating": 2.87,
+            "GDP Per Cap": 1151.193
+        },
+        {
+            "Country": "Zimbabwe",
+            "Abbreviation": "ZWE",
+            "Rating": 3.5,
+            "GDP Per Cap": 790.335
+        }
+    ],
+    "2010": [
+        {
+            "Country": "Albania",
+            "Abbreviation": "ALB",
+            "Rating": 3.32,
+            "GDP Per Cap": 4097.833
+        },
+        {
+            "Country": "Algeria",
+            "Abbreviation": "DZA",
+            "Rating": 3.41,
+            "GDP Per Cap": 4941.493
+        },
+        {
+            "Country": "Angola",
+            "Abbreviation": "AGO",
+            "Rating": 2.31,
+            "GDP Per Cap": 4089.461
+        },
+        {
+            "Country": "Argentina",
+            "Abbreviation": "ARG",
+            "Rating": 3.17,
+            "GDP Per Cap": 10412.974
+        },
+        {
+            "Country": "Armenia",
+            "Abbreviation": "ARM",
+            "Rating": 3.24,
+            "GDP Per Cap": 3121.778
+        },
+        {
+            "Country": "Australia",
+            "Abbreviation": "AUS",
+            "Rating": 5.09,
+            "GDP Per Cap": 56587.694
+        },
+        {
+            "Country": "Austria",
+            "Abbreviation": "AUT",
+            "Rating": 5.58,
+            "GDP Per Cap": 46955.173
+        },
+        {
+            "Country": "Azerbaijan",
+            "Abbreviation": "AZE",
+            "Rating": 4.19,
+            "GDP Per Cap": 5880.509
+        },
+        {
+            "Country": "Bahrain",
+            "Abbreviation": "BHR",
+            "Rating": 5.78,
+            "GDP Per Cap": 21712.793
+        },
+        {
+            "Country": "Bangladesh",
+            "Abbreviation": "BGD",
+            "Rating": 3.08,
+            "GDP Per Cap": 935.755
+        },
+        {
+            "Country": "Barbados",
+            "Abbreviation": "BRB",
+            "Rating": 5.67,
+            "GDP Per Cap": 18376.607
+        },
+        {
+            "Country": "Belgium",
+            "Abbreviation": "BEL",
+            "Rating": 5.88,
+            "GDP Per Cap": 44448.17
+        },
+        {
+            "Country": "Bolivia",
+            "Abbreviation": "BOL",
+            "Rating": 2.76,
+            "GDP Per Cap": 1972.684
+        },
+        {
+            "Country": "Botswana",
+            "Abbreviation": "BWA",
+            "Rating": 3.96,
+            "GDP Per Cap": 6041.732
+        },
+        {
+            "Country": "Brazil",
+            "Abbreviation": "BRA",
+            "Rating": 2.95,
+            "GDP Per Cap": 11341.268
+        },
+        {
+            "Country": "Bulgaria",
+            "Abbreviation": "BGR",
+            "Rating": 3.27,
+            "GDP Per Cap": 6754.23
+        },
+        {
+            "Country": "Burkina Faso",
+            "Abbreviation": "BFA",
+            "Rating": 2.81,
+            "GDP Per Cap": 627.783
+        },
+        {
+            "Country": "Burundi",
+            "Abbreviation": "BDI",
+            "Rating": 2.98,
+            "GDP Per Cap": 231.549
+        },
+        {
+            "Country": "Cabo Verde",
+            "Abbreviation": "CPV",
+            "Rating": 3.9,
+            "GDP Per Cap": 3818.598
+        },
+        {
+            "Country": "Cameroon",
+            "Abbreviation": "CMR",
+            "Rating": 2.91,
+            "GDP Per Cap": 1353.407
+        },
+        {
+            "Country": "Canada",
+            "Abbreviation": "CAN",
+            "Rating": 5.66,
+            "GDP Per Cap": 47625.742
+        },
+        {
+            "Country": "Chile",
+            "Abbreviation": "CHL",
+            "Rating": 4.88,
+            "GDP Per Cap": 12723.064
+        },
+        {
+            "Country": "Colombia",
+            "Abbreviation": "COL",
+            "Rating": 3.0,
+            "GDP Per Cap": 6498.573
+        },
+        {
+            "Country": "Costa Rica",
+            "Abbreviation": "CRI",
+            "Rating": 2.87,
+            "GDP Per Cap": 8268.859
+        },
+        {
+            "Country": "Croatia",
+            "Abbreviation": "HRV",
+            "Rating": 4.29,
+            "GDP Per Cap": 13710.364
+        },
+        {
+            "Country": "Cyprus",
+            "Abbreviation": "CYP",
+            "Rating": 5.38,
+            "GDP Per Cap": 31521.893
+        },
+        {
+            "Country": "Denmark",
+            "Abbreviation": "DNK",
+            "Rating": 6.03,
+            "GDP Per Cap": 58240.45
+        },
+        {
+            "Country": "Dominican Republic",
+            "Abbreviation": "DOM",
+            "Rating": 3.81,
+            "GDP Per Cap": 5688.751
+        },
+        {
+            "Country": "Ecuador",
+            "Abbreviation": "ECU",
+            "Rating": 3.21,
+            "GDP Per Cap": 4578.936
+        },
+        {
+            "Country": "El Salvador",
+            "Abbreviation": "SLV",
+            "Rating": 4.11,
+            "GDP Per Cap": 3017.326
+        },
+        {
+            "Country": "Estonia",
+            "Abbreviation": "EST",
+            "Rating": 4.59,
+            "GDP Per Cap": 14697.472
+        },
+        {
+            "Country": "Eswatini",
+            "Abbreviation": "SWZ",
+            "Rating": 4.03,
+            "GDP Per Cap": 4263.91
+        },
+        {
+            "Country": "Ethiopia",
+            "Abbreviation": "ETH",
+            "Rating": 3.85,
+            "GDP Per Cap": 341.103
+        },
+        {
+            "Country": "Finland",
+            "Abbreviation": "FIN",
+            "Rating": 6.04,
+            "GDP Per Cap": 46647.994
+        },
+        {
+            "Country": "France",
+            "Abbreviation": "FRA",
+            "Rating": 6.31,
+            "GDP Per Cap": 42195.192
+        },
+        {
+            "Country": "Gambia, The",
+            "Abbreviation": "GMB",
+            "Rating": 4.74,
+            "GDP Per Cap": 860.639
+        },
+        {
+            "Country": "Georgia",
+            "Abbreviation": "GEO",
+            "Rating": 3.94,
+            "GDP Per Cap": 3269.917
+        },
+        {
+            "Country": "Germany",
+            "Abbreviation": "DEU",
+            "Rating": 6.4,
+            "GDP Per Cap": 43233.452
+        },
+        {
+            "Country": "Ghana",
+            "Abbreviation": "GHA",
+            "Rating": 3.38,
+            "GDP Per Cap": 1757.045
+        },
+        {
+            "Country": "Greece",
+            "Abbreviation": "GRC",
+            "Rating": 4.07,
+            "GDP Per Cap": 26743.4
+        },
+        {
+            "Country": "Guatemala",
+            "Abbreviation": "GTM",
+            "Rating": 3.75,
+            "GDP Per Cap": 2909.793
+        },
+        {
+            "Country": "Honduras",
+            "Abbreviation": "HND",
+            "Rating": 3.72,
+            "GDP Per Cap": 1891.159
+        },
+        {
+            "Country": "Hungary",
+            "Abbreviation": "HUN",
+            "Rating": 4.07,
+            "GDP Per Cap": 13199.056
+        },
+        {
+            "Country": "Iceland",
+            "Abbreviation": "ISL",
+            "Rating": 6.03,
+            "GDP Per Cap": 43293.021
+        },
+        {
+            "Country": "India",
+            "Abbreviation": "IND",
+            "Rating": 4.08,
+            "GDP Per Cap": 1350.634
+        },
+        {
+            "Country": "Indonesia",
+            "Abbreviation": "IDN",
+            "Rating": 3.69,
+            "GDP Per Cap": 3177.453
+        },
+        {
+            "Country": "Ireland",
+            "Abbreviation": "IRL",
+            "Rating": 4.48,
+            "GDP Per Cap": 48636.309
+        },
+        {
+            "Country": "Israel",
+            "Abbreviation": "ISR",
+            "Rating": 4.46,
+            "GDP Per Cap": 31450.574
+        },
+        {
+            "Country": "Italy",
+            "Abbreviation": "ITA",
+            "Rating": 4.01,
+            "GDP Per Cap": 35963.743
+        },
+        {
+            "Country": "Jamaica",
+            "Abbreviation": "JAM",
+            "Rating": 4.83,
+            "GDP Per Cap": 4894.369
+        },
+        {
+            "Country": "Japan",
+            "Abbreviation": "JPN",
+            "Rating": 5.63,
+            "GDP Per Cap": 45135.796
+        },
+        {
+            "Country": "Jordan",
+            "Abbreviation": "JOR",
+            "Rating": 4.11,
+            "GDP Per Cap": 3914.701
+        },
+        {
+            "Country": "Kazakhstan",
+            "Abbreviation": "KAZ",
+            "Rating": 3.42,
+            "GDP Per Cap": 9070.49
+        },
+        {
+            "Country": "Kenya",
+            "Abbreviation": "KEN",
+            "Rating": 3.68,
+            "GDP Per Cap": 1176.311
+        },
+        {
+            "Country": "Kuwait",
+            "Abbreviation": "KWT",
+            "Rating": 4.71,
+            "GDP Per Cap": 39342.103
+        },
+        {
+            "Country": "Kyrgyz Republic",
+            "Abbreviation": "KGZ",
+            "Rating": 2.47,
+            "GDP Per Cap": 884.846
+        },
+        {
+            "Country": "Latvia",
+            "Abbreviation": "LVA",
+            "Rating": 4.28,
+            "GDP Per Cap": 11316.932
+        },
+        {
+            "Country": "Lebanon",
+            "Abbreviation": "LBN",
+            "Rating": 3.54,
+            "GDP Per Cap": 7695.22
+        },
+        {
+            "Country": "Lithuania",
+            "Abbreviation": "LTU",
+            "Rating": 4.47,
+            "GDP Per Cap": 12006.511
+        },
+        {
+            "Country": "Luxembourg",
+            "Abbreviation": "LUX",
+            "Rating": 5.58,
+            "GDP Per Cap": 112049.15
+        },
+        {
+            "Country": "Madagascar",
+            "Abbreviation": "MDG",
+            "Rating": 2.94,
+            "GDP Per Cap": 492.67
+        },
+        {
+            "Country": "Malaysia",
+            "Abbreviation": "MYS",
+            "Rating": 5.45,
+            "GDP Per Cap": 9046.978
+        },
+        {
+            "Country": "Malta",
+            "Abbreviation": "MLT",
+            "Rating": 4.79,
+            "GDP Per Cap": 21989.786
+        },
+        {
+            "Country": "Mauritius",
+            "Abbreviation": "MUS",
+            "Rating": 4.55,
+            "GDP Per Cap": 8108.095
+        },
+        {
+            "Country": "Mexico",
+            "Abbreviation": "MEX",
+            "Rating": 3.69,
+            "GDP Per Cap": 9632.818
+        },
+        {
+            "Country": "Moldova",
+            "Abbreviation": "MDA",
+            "Rating": 2.62,
+            "GDP Per Cap": 2428.106
+        },
+        {
+            "Country": "Mongolia",
+            "Abbreviation": "MNG",
+            "Rating": 2.61,
+            "GDP Per Cap": 2602.373
+        },
+        {
+            "Country": "Morocco",
+            "Abbreviation": "MAR",
+            "Rating": 4.02,
+            "GDP Per Cap": 3134.698
+        },
+        {
+            "Country": "Mozambique",
+            "Abbreviation": "MOZ",
+            "Rating": 3.08,
+            "GDP Per Cap": 484.961
+        },
+        {
+            "Country": "Namibia",
+            "Abbreviation": "NAM",
+            "Rating": 5.17,
+            "GDP Per Cap": 5389.682
+        },
+        {
+            "Country": "Nepal",
+            "Abbreviation": "NPL",
+            "Rating": 2.49,
+            "GDP Per Cap": 671.998
+        },
+        {
+            "Country": "Netherlands",
+            "Abbreviation": "NLD",
+            "Rating": 6.01,
+            "GDP Per Cap": 51472.808
+        },
+        {
+            "Country": "New Zealand",
+            "Abbreviation": "NZL",
+            "Rating": 4.95,
+            "GDP Per Cap": 33393.032
+        },
+        {
+            "Country": "Nicaragua",
+            "Abbreviation": "NIC",
+            "Rating": 3.42,
+            "GDP Per Cap": 1499.067
+        },
+        {
+            "Country": "Nigeria",
+            "Abbreviation": "NGA",
+            "Rating": 2.67,
+            "GDP Per Cap": 2328.425
+        },
+        {
+            "Country": "Norway",
+            "Abbreviation": "NOR",
+            "Rating": 4.67,
+            "GDP Per Cap": 87823.805
+        },
+        {
+            "Country": "Oman",
+            "Abbreviation": "OMN",
+            "Rating": 5.66,
+            "GDP Per Cap": 21677.793
+        },
+        {
+            "Country": "Pakistan",
+            "Abbreviation": "PAK",
+            "Rating": 3.8,
+            "GDP Per Cap": 1137.985
+        },
+        {
+            "Country": "Panama",
+            "Abbreviation": "PAN",
+            "Rating": 4.75,
+            "GDP Per Cap": 8332.576
+        },
+        {
+            "Country": "Paraguay",
+            "Abbreviation": "PRY",
+            "Rating": 2.29,
+            "GDP Per Cap": 4329.69
+        },
+        {
+            "Country": "Philippines",
+            "Abbreviation": "PHL",
+            "Rating": 2.71,
+            "GDP Per Cap": 2237.157
+        },
+        {
+            "Country": "Poland",
+            "Abbreviation": "POL",
+            "Rating": 2.97,
+            "GDP Per Cap": 12510.805
+        },
+        {
+            "Country": "Portugal",
+            "Abbreviation": "PRT",
+            "Rating": 5.21,
+            "GDP Per Cap": 22539.038
+        },
+        {
+            "Country": "Qatar",
+            "Abbreviation": "QAT",
+            "Rating": 5.47,
+            "GDP Per Cap": 69796.138
+        },
+        {
+            "Country": "Romania",
+            "Abbreviation": "ROU",
+            "Rating": 2.85,
+            "GDP Per Cap": 8391.048
+        },
+        {
+            "Country": "Russian Federation",
+            "Abbreviation": "RUS",
+            "Rating": 3.51,
+            "GDP Per Cap": 11432.428
+        },
+        {
+            "Country": "Senegal",
+            "Abbreviation": "SEN",
+            "Rating": 3.62,
+            "GDP Per Cap": 1272.622
+        },
+        {
+            "Country": "Serbia",
+            "Abbreviation": "SRB",
+            "Rating": 2.56,
+            "GDP Per Cap": 5673.62
+        },
+        {
+            "Country": "Singapore",
+            "Abbreviation": "SGP",
+            "Rating": 6.52,
+            "GDP Per Cap": 47236.672
+        },
+        {
+            "Country": "Slovak Republic",
+            "Abbreviation": "SVK",
+            "Rating": 3.96,
+            "GDP Per Cap": 16925.867
+        },
+        {
+            "Country": "Slovenia",
+            "Abbreviation": "SVN",
+            "Rating": 4.54,
+            "GDP Per Cap": 23367.241
+        },
+        {
+            "Country": "South Africa",
+            "Abbreviation": "ZAF",
+            "Rating": 4.74,
+            "GDP Per Cap": 8118.173
+        },
+        {
+            "Country": "Spain",
+            "Abbreviation": "ESP",
+            "Rating": 5.63,
+            "GDP Per Cap": 30693.281
+        },
+        {
+            "Country": "Sri Lanka",
+            "Abbreviation": "LKA",
+            "Rating": 4.37,
+            "GDP Per Cap": 2894.26
+        },
+        {
+            "Country": "Sweden",
+            "Abbreviation": "SWE",
+            "Rating": 5.85,
+            "GDP Per Cap": 52333.874
+        },
+        {
+            "Country": "Switzerland",
+            "Abbreviation": "CHE",
+            "Rating": 6.24,
+            "GDP Per Cap": 76847.27
+        },
+        {
+            "Country": "Tajikistan",
+            "Abbreviation": "TJK",
+            "Rating": 2.96,
+            "GDP Per Cap": 738.287
+        },
+        {
+            "Country": "Thailand",
+            "Abbreviation": "THA",
+            "Rating": 4.76,
+            "GDP Per Cap": 5077.257
+        },
+        {
+            "Country": "Trinidad and Tobago",
+            "Abbreviation": "TTO",
+            "Rating": 4.62,
+            "GDP Per Cap": 16957.433
+        },
+        {
+            "Country": "Tunisia",
+            "Abbreviation": "TUN",
+            "Rating": 4.98,
+            "GDP Per Cap": 4343.057
+        },
+        {
+            "Country": "Uganda",
+            "Abbreviation": "UGA",
+            "Rating": 2.84,
+            "GDP Per Cap": 808.713
+        },
+        {
+            "Country": "Ukraine",
+            "Abbreviation": "UKR",
+            "Rating": 3.41,
+            "GDP Per Cap": 2982.814
+        },
+        {
+            "Country": "United Arab Emirates",
+            "Abbreviation": "ARE",
+            "Rating": 6.35,
+            "GDP Per Cap": 36324.592
+        },
+        {
+            "Country": "United Kingdom",
+            "Abbreviation": "GBR",
+            "Rating": 5.25,
+            "GDP Per Cap": 39641.869
+        },
+        {
+            "Country": "United States",
+            "Abbreviation": "USA",
+            "Rating": 5.44,
+            "GDP Per Cap": 48586.288
+        },
+        {
+            "Country": "Uruguay",
+            "Abbreviation": "URY",
+            "Rating": 3.92,
+            "GDP Per Cap": 12943.943
+        },
+        {
+            "Country": "Vietnam",
+            "Abbreviation": "VNM",
+            "Rating": 3.35,
+            "GDP Per Cap": 1628.013
+        },
+        {
+            "Country": "Zambia",
+            "Abbreviation": "ZMB",
+            "Rating": 3.03,
+            "GDP Per Cap": 1469.239
+        },
+        {
+            "Country": "Zimbabwe",
+            "Abbreviation": "ZWE",
+            "Rating": 3.56,
+            "GDP Per Cap": 975.823
+        }
+    ],
+    "2011": [
+        {
+            "Country": "Albania",
+            "Abbreviation": "ALB",
+            "Rating": 3.56,
+            "GDP Per Cap": 4439.89
+        },
+        {
+            "Country": "Algeria",
+            "Abbreviation": "DZA",
+            "Rating": 3.29,
+            "GDP Per Cap": 5946.345
+        },
+        {
+            "Country": "Angola",
+            "Abbreviation": "AGO",
+            "Rating": 2.34,
+            "GDP Per Cap": 5175.442
+        },
+        {
+            "Country": "Argentina",
+            "Abbreviation": "ARG",
+            "Rating": 3.08,
+            "GDP Per Cap": 12787.806
+        },
+        {
+            "Country": "Armenia",
+            "Abbreviation": "ARM",
+            "Rating": 3.25,
+            "GDP Per Cap": 3417.172
+        },
+        {
+            "Country": "Australia",
+            "Abbreviation": "AUS",
+            "Rating": 5.09,
+            "GDP Per Cap": 67293.136
+        },
+        {
+            "Country": "Austria",
+            "Abbreviation": "AUT",
+            "Rating": 5.55,
+            "GDP Per Cap": 51452.276
+        },
+        {
+            "Country": "Azerbaijan",
+            "Abbreviation": "AZE",
+            "Rating": 4.18,
+            "GDP Per Cap": 7238.602
+        },
+        {
+            "Country": "Bahrain",
+            "Abbreviation": "BHR",
+            "Rating": 5.95,
+            "GDP Per Cap": 25032.787
+        },
+        {
+            "Country": "Bangladesh",
+            "Abbreviation": "BGD",
+            "Rating": 3.08,
+            "GDP Per Cap": 1032.313
+        },
+        {
+            "Country": "Barbados",
+            "Abbreviation": "BRB",
+            "Rating": 5.75,
+            "GDP Per Cap": 18893.915
+        },
+        {
+            "Country": "Belgium",
+            "Abbreviation": "BEL",
+            "Rating": 5.85,
+            "GDP Per Cap": 47564.381
+        },
+        {
+            "Country": "Belize",
+            "Abbreviation": "BLZ",
+            "Rating": 3.59,
+            "GDP Per Cap": 5538.887
+        },
+        {
+            "Country": "Bolivia",
+            "Abbreviation": "BOL",
+            "Rating": 3.1,
+            "GDP Per Cap": 2368.523
+        },
+        {
+            "Country": "Botswana",
+            "Abbreviation": "BWA",
+            "Rating": 3.84,
+            "GDP Per Cap": 7080.778
+        },
+        {
+            "Country": "Brazil",
+            "Abbreviation": "BRA",
+            "Rating": 2.71,
+            "GDP Per Cap": 13326.088
+        },
+        {
+            "Country": "Bulgaria",
+            "Abbreviation": "BGR",
+            "Rating": 3.25,
+            "GDP Per Cap": 7872.225
+        },
+        {
+            "Country": "Burkina Faso",
+            "Abbreviation": "BFA",
+            "Rating": 2.77,
+            "GDP Per Cap": 727.484
+        },
+        {
+            "Country": "Burundi",
+            "Abbreviation": "BDI",
+            "Rating": 3.0,
+            "GDP Per Cap": 247.097
+        },
+        {
+            "Country": "Cabo Verde",
+            "Abbreviation": "CPV",
+            "Rating": 4.02,
+            "GDP Per Cap": 4259.084
+        },
+        {
+            "Country": "Cameroon",
+            "Abbreviation": "CMR",
+            "Rating": 2.97,
+            "GDP Per Cap": 1464.888
+        },
+        {
+            "Country": "Canada",
+            "Abbreviation": "CAN",
+            "Rating": 5.71,
+            "GDP Per Cap": 52285.815
+        },
+        {
+            "Country": "Chile",
+            "Abbreviation": "CHL",
+            "Rating": 4.68,
+            "GDP Per Cap": 14560.249
+        },
+        {
+            "Country": "Colombia",
+            "Abbreviation": "COL",
+            "Rating": 3.04,
+            "GDP Per Cap": 7518.304
+        },
+        {
+            "Country": "Costa Rica",
+            "Abbreviation": "CRI",
+            "Rating": 2.82,
+            "GDP Per Cap": 9270.571
+        },
+        {
+            "Country": "Croatia",
+            "Abbreviation": "HRV",
+            "Rating": 4.26,
+            "GDP Per Cap": 14659.284
+        },
+        {
+            "Country": "Cyprus",
+            "Abbreviation": "CYP",
+            "Rating": 5.43,
+            "GDP Per Cap": 32910.616
+        },
+        {
+            "Country": "Denmark",
+            "Abbreviation": "DNK",
+            "Rating": 6.07,
+            "GDP Per Cap": 61920.301
+        },
+        {
+            "Country": "Dominican Republic",
+            "Abbreviation": "DOM",
+            "Rating": 4.01,
+            "GDP Per Cap": 6063.35
+        },
+        {
+            "Country": "Ecuador",
+            "Abbreviation": "ECU",
+            "Rating": 3.55,
+            "GDP Per Cap": 5209.999
+        },
+        {
+            "Country": "El Salvador",
+            "Abbreviation": "SLV",
+            "Rating": 3.85,
+            "GDP Per Cap": 3305.002
+        },
+        {
+            "Country": "Estonia",
+            "Abbreviation": "EST",
+            "Rating": 4.5,
+            "GDP Per Cap": 17552.466
+        },
+        {
+            "Country": "Eswatini",
+            "Abbreviation": "SWZ",
+            "Rating": 3.95,
+            "GDP Per Cap": 4603.196
+        },
+        {
+            "Country": "Ethiopia",
+            "Abbreviation": "ETH",
+            "Rating": 3.61,
+            "GDP Per Cap": 377.694
+        },
+        {
+            "Country": "Finland",
+            "Abbreviation": "FIN",
+            "Rating": 5.94,
+            "GDP Per Cap": 51174.768
+        },
+        {
+            "Country": "France",
+            "Abbreviation": "FRA",
+            "Rating": 6.22,
+            "GDP Per Cap": 45503.206
+        },
+        {
+            "Country": "Gambia, The",
+            "Abbreviation": "GMB",
+            "Rating": 4.7,
+            "GDP Per Cap": 762.761
+        },
+        {
+            "Country": "Georgia",
+            "Abbreviation": "GEO",
+            "Rating": 4.12,
+            "GDP Per Cap": 4100.982
+        },
+        {
+            "Country": "Germany",
+            "Abbreviation": "DEU",
+            "Rating": 6.12,
+            "GDP Per Cap": 47637.891
+        },
+        {
+            "Country": "Ghana",
+            "Abbreviation": "GHA",
+            "Rating": 3.3,
+            "GDP Per Cap": 2131.746
+        },
+        {
+            "Country": "Greece",
+            "Abbreviation": "GRC",
+            "Rating": 4.02,
+            "GDP Per Cap": 25437.036
+        },
+        {
+            "Country": "Guatemala",
+            "Abbreviation": "GTM",
+            "Rating": 3.7,
+            "GDP Per Cap": 3265.46
+        },
+        {
+            "Country": "Honduras",
+            "Abbreviation": "HND",
+            "Rating": 3.59,
+            "GDP Per Cap": 2074.151
+        },
+        {
+            "Country": "Hungary",
+            "Abbreviation": "HUN",
+            "Rating": 4.09,
+            "GDP Per Cap": 14214.126
+        },
+        {
+            "Country": "Iceland",
+            "Abbreviation": "ISL",
+            "Rating": 5.93,
+            "GDP Per Cap": 48812.138
+        },
+        {
+            "Country": "India",
+            "Abbreviation": "IND",
+            "Rating": 4.12,
+            "GDP Per Cap": 1449.604
+        },
+        {
+            "Country": "Indonesia",
+            "Abbreviation": "IDN",
+            "Rating": 3.65,
+            "GDP Per Cap": 3690.097
+        },
+        {
+            "Country": "Ireland",
+            "Abbreviation": "IRL",
+            "Rating": 4.88,
+            "GDP Per Cap": 52631.463
+        },
+        {
+            "Country": "Israel",
+            "Abbreviation": "ISR",
+            "Rating": 4.38,
+            "GDP Per Cap": 34534.693
+        },
+        {
+            "Country": "Italy",
+            "Abbreviation": "ITA",
+            "Rating": 4.06,
+            "GDP Per Cap": 38475.823
+        },
+        {
+            "Country": "Jamaica",
+            "Abbreviation": "JAM",
+            "Rating": 3.96,
+            "GDP Per Cap": 5332.52
+        },
+        {
+            "Country": "Japan",
+            "Abbreviation": "JPN",
+            "Rating": 5.7,
+            "GDP Per Cap": 48760.915
+        },
+        {
+            "Country": "Jordan",
+            "Abbreviation": "JOR",
+            "Rating": 4.01,
+            "GDP Per Cap": 4152.495
+        },
+        {
+            "Country": "Kazakhstan",
+            "Abbreviation": "KAZ",
+            "Rating": 3.48,
+            "GDP Per Cap": 11633.998
+        },
+        {
+            "Country": "Kenya",
+            "Abbreviation": "KEN",
+            "Rating": 3.75,
+            "GDP Per Cap": 1178.599
+        },
+        {
+            "Country": "Kuwait",
+            "Abbreviation": "KWT",
+            "Rating": 4.53,
+            "GDP Per Cap": 47439.996
+        },
+        {
+            "Country": "Kyrgyz Republic",
+            "Abbreviation": "KGZ",
+            "Rating": 2.5,
+            "GDP Per Cap": 1131.471
+        },
+        {
+            "Country": "Latvia",
+            "Abbreviation": "LVA",
+            "Rating": 4.21,
+            "GDP Per Cap": 13371.012
+        },
+        {
+            "Country": "Lebanon",
+            "Abbreviation": "LBN",
+            "Rating": 3.4,
+            "GDP Per Cap": 7914.089
+        },
+        {
+            "Country": "Lithuania",
+            "Abbreviation": "LTU",
+            "Rating": 4.58,
+            "GDP Per Cap": 14397.447
+        },
+        {
+            "Country": "Luxembourg",
+            "Abbreviation": "LUX",
+            "Rating": 5.5,
+            "GDP Per Cap": 120526.246
+        },
+        {
+            "Country": "Madagascar",
+            "Abbreviation": "MDG",
+            "Rating": 2.75,
+            "GDP Per Cap": 553.45
+        },
+        {
+            "Country": "Malaysia",
+            "Abbreviation": "MYS",
+            "Rating": 5.62,
+            "GDP Per Cap": 10397.902
+        },
+        {
+            "Country": "Malta",
+            "Abbreviation": "MLT",
+            "Rating": 4.89,
+            "GDP Per Cap": 23585.252
+        },
+        {
+            "Country": "Mauritius",
+            "Abbreviation": "MUS",
+            "Rating": 4.66,
+            "GDP Per Cap": 9320.873
+        },
+        {
+            "Country": "Mexico",
+            "Abbreviation": "MEX",
+            "Rating": 3.91,
+            "GDP Per Cap": 10554.35
+        },
+        {
+            "Country": "Moldova",
+            "Abbreviation": "MDA",
+            "Rating": 2.61,
+            "GDP Per Cap": 2930.062
+        },
+        {
+            "Country": "Mongolia",
+            "Abbreviation": "MNG",
+            "Rating": 2.6,
+            "GDP Per Cap": 3702.359
+        },
+        {
+            "Country": "Morocco",
+            "Abbreviation": "MAR",
+            "Rating": 4.06,
+            "GDP Per Cap": 3367.347
+        },
+        {
+            "Country": "Mozambique",
+            "Abbreviation": "MOZ",
+            "Rating": 3.0,
+            "GDP Per Cap": 604.414
+        },
+        {
+            "Country": "Namibia",
+            "Abbreviation": "NAM",
+            "Rating": 4.98,
+            "GDP Per Cap": 5841.94
+        },
+        {
+            "Country": "Nepal",
+            "Abbreviation": "NPL",
+            "Rating": 2.4,
+            "GDP Per Cap": 795.314
+        },
+        {
+            "Country": "Netherlands",
+            "Abbreviation": "NLD",
+            "Rating": 6.13,
+            "GDP Per Cap": 54814.546
+        },
+        {
+            "Country": "New Zealand",
+            "Abbreviation": "NZL",
+            "Rating": 4.94,
+            "GDP Per Cap": 38061.507
+        },
+        {
+            "Country": "Nicaragua",
+            "Abbreviation": "NIC",
+            "Rating": 3.0,
+            "GDP Per Cap": 1652.096
+        },
+        {
+            "Country": "Nigeria",
+            "Abbreviation": "NGA",
+            "Rating": 2.87,
+            "GDP Per Cap": 2543.504
+        },
+        {
+            "Country": "Norway",
+            "Abbreviation": "NOR",
+            "Rating": 4.57,
+            "GDP Per Cap": 100815.931
+        },
+        {
+            "Country": "Oman",
+            "Abbreviation": "OMN",
+            "Rating": 5.77,
+            "GDP Per Cap": 23518.573
+        },
+        {
+            "Country": "Pakistan",
+            "Abbreviation": "PAK",
+            "Rating": 3.71,
+            "GDP Per Cap": 1301.736
+        },
+        {
+            "Country": "Panama",
+            "Abbreviation": "PAN",
+            "Rating": 5.05,
+            "GDP Per Cap": 9653.933
+        },
+        {
+            "Country": "Paraguay",
+            "Abbreviation": "PRY",
+            "Rating": 2.35,
+            "GDP Per Cap": 5301.834
+        },
+        {
+            "Country": "Philippines",
+            "Abbreviation": "PHL",
+            "Rating": 2.85,
+            "GDP Per Cap": 2473.249
+        },
+        {
+            "Country": "Poland",
+            "Abbreviation": "POL",
+            "Rating": 2.98,
+            "GDP Per Cap": 13776.572
+        },
+        {
+            "Country": "Portugal",
+            "Abbreviation": "PRT",
+            "Rating": 5.29,
+            "GDP Per Cap": 23213.214
+        },
+        {
+            "Country": "Qatar",
+            "Abbreviation": "QAT",
+            "Rating": 5.43,
+            "GDP Per Cap": 96827.857
+        },
+        {
+            "Country": "Romania",
+            "Abbreviation": "ROU",
+            "Rating": 2.71,
+            "GDP Per Cap": 9546.749
+        },
+        {
+            "Country": "Russian Federation",
+            "Abbreviation": "RUS",
+            "Rating": 3.52,
+            "GDP Per Cap": 14310.233
+        },
+        {
+            "Country": "Senegal",
+            "Abbreviation": "SEN",
+            "Rating": 3.46,
+            "GDP Per Cap": 1366.534
+        },
+        {
+            "Country": "Serbia",
+            "Abbreviation": "SRB",
+            "Rating": 2.46,
+            "GDP Per Cap": 6809.94
+        },
+        {
+            "Country": "Singapore",
+            "Abbreviation": "SGP",
+            "Rating": 6.46,
+            "GDP Per Cap": 53891.462
+        },
+        {
+            "Country": "Slovak Republic",
+            "Abbreviation": "SVK",
+            "Rating": 3.78,
+            "GDP Per Cap": 18526.85
+        },
+        {
+            "Country": "Slovenia",
+            "Abbreviation": "SVN",
+            "Rating": 4.36,
+            "GDP Per Cap": 24968.511
+        },
+        {
+            "Country": "South Africa",
+            "Abbreviation": "ZAF",
+            "Rating": 4.74,
+            "GDP Per Cap": 8784.648
+        },
+        {
+            "Country": "Spain",
+            "Abbreviation": "ESP",
+            "Rating": 5.83,
+            "GDP Per Cap": 31823.406
+        },
+        {
+            "Country": "Sri Lanka",
+            "Abbreviation": "LKA",
+            "Rating": 4.52,
+            "GDP Per Cap": 3320.074
+        },
+        {
+            "Country": "Sweden",
+            "Abbreviation": "SWE",
+            "Rating": 5.74,
+            "GDP Per Cap": 60165.568
+        },
+        {
+            "Country": "Switzerland",
+            "Abbreviation": "CHE",
+            "Rating": 6.24,
+            "GDP Per Cap": 90952.845
+        },
+        {
+            "Country": "Tajikistan",
+            "Abbreviation": "TJK",
+            "Rating": 3.17,
+            "GDP Per Cap": 834.52
+        },
+        {
+            "Country": "Thailand",
+            "Abbreviation": "THA",
+            "Rating": 4.52,
+            "GDP Per Cap": 5492.981
+        },
+        {
+            "Country": "Trinidad and Tobago",
+            "Abbreviation": "TTO",
+            "Rating": 4.26,
+            "GDP Per Cap": 19300.833
+        },
+        {
+            "Country": "Tunisia",
+            "Abbreviation": "TUN",
+            "Rating": 4.58,
+            "GDP Per Cap": 4471.694
+        },
+        {
+            "Country": "Uganda",
+            "Abbreviation": "UGA",
+            "Rating": 2.98,
+            "GDP Per Cap": 872.039
+        },
+        {
+            "Country": "Ukraine",
+            "Abbreviation": "UKR",
+            "Rating": 3.5,
+            "GDP Per Cap": 3587.405
+        },
+        {
+            "Country": "United Arab Emirates",
+            "Abbreviation": "ARE",
+            "Rating": 6.34,
+            "GDP Per Cap": 42986.879
+        },
+        {
+            "Country": "United Kingdom",
+            "Abbreviation": "GBR",
+            "Rating": 5.47,
+            "GDP Per Cap": 42106.64
+        },
+        {
+            "Country": "United States",
+            "Abbreviation": "USA",
+            "Rating": 5.43,
+            "GDP Per Cap": 50008.108
+        },
+        {
+            "Country": "Uruguay",
+            "Abbreviation": "URY",
+            "Rating": 3.92,
+            "GDP Per Cap": 15341.308
+        },
+        {
+            "Country": "Vietnam",
+            "Abbreviation": "VNM",
+            "Rating": 3.12,
+            "GDP Per Cap": 1949.826
+        },
+        {
+            "Country": "Zambia",
+            "Abbreviation": "ZMB",
+            "Rating": 3.29,
+            "GDP Per Cap": 1644.13
+        },
+        {
+            "Country": "Zimbabwe",
+            "Abbreviation": "ZWE",
+            "Rating": 3.52,
+            "GDP Per Cap": 1131.829
+        }
+    ],
+    "2012": [
+        {
+            "Country": "Albania",
+            "Abbreviation": "ALB",
+            "Rating": 3.49,
+            "GDP Per Cap": 4248.909
+        },
+        {
+            "Country": "Algeria",
+            "Abbreviation": "DZA",
+            "Rating": 2.88,
+            "GDP Per Cap": 6057.974
+        },
+        {
+            "Country": "Argentina",
+            "Abbreviation": "ARG",
+            "Rating": 2.99,
+            "GDP Per Cap": 13889.792
+        },
+        {
+            "Country": "Armenia",
+            "Abbreviation": "ARM",
+            "Rating": 3.49,
+            "GDP Per Cap": 3575.529
+        },
+        {
+            "Country": "Australia",
+            "Abbreviation": "AUS",
+            "Rating": 5.07,
+            "GDP Per Cap": 68489.256
+        },
+        {
+            "Country": "Austria",
+            "Abbreviation": "AUT",
+            "Rating": 5.56,
+            "GDP Per Cap": 48616.903
+        },
+        {
+            "Country": "Azerbaijan",
+            "Abbreviation": "AZE",
+            "Rating": 4.25,
+            "GDP Per Cap": 7545.553
+        },
+        {
+            "Country": "Bahrain",
+            "Abbreviation": "BHR",
+            "Rating": 5.95,
+            "GDP Per Cap": 26438.673
+        },
+        {
+            "Country": "Bangladesh",
+            "Abbreviation": "BGD",
+            "Rating": 3.0,
+            "GDP Per Cap": 1057.884
+        },
+        {
+            "Country": "Barbados",
+            "Abbreviation": "BRB",
+            "Rating": 5.68,
+            "GDP Per Cap": 18583.31
+        },
+        {
+            "Country": "Belgium",
+            "Abbreviation": "BEL",
+            "Rating": 5.79,
+            "GDP Per Cap": 44824.163
+        },
+        {
+            "Country": "Bolivia",
+            "Abbreviation": "BOL",
+            "Rating": 3.22,
+            "GDP Per Cap": 2635.933
+        },
+        {
+            "Country": "Botswana",
+            "Abbreviation": "BWA",
+            "Rating": 3.8,
+            "GDP Per Cap": 6392.987
+        },
+        {
+            "Country": "Brazil",
+            "Abbreviation": "BRA",
+            "Rating": 2.53,
+            "GDP Per Cap": 12465.45
+        },
+        {
+            "Country": "Bulgaria",
+            "Abbreviation": "BGR",
+            "Rating": 3.31,
+            "GDP Per Cap": 7453.726
+        },
+        {
+            "Country": "Burkina Faso",
+            "Abbreviation": "BFA",
+            "Rating": 2.88,
+            "GDP Per Cap": 734.438
+        },
+        {
+            "Country": "Burundi",
+            "Abbreviation": "BDI",
+            "Rating": 2.71,
+            "GDP Per Cap": 250.118
+        },
+        {
+            "Country": "Cabo Verde",
+            "Abbreviation": "CPV",
+            "Rating": 4.09,
+            "GDP Per Cap": 3958.495
+        },
+        {
+            "Country": "Cameroon",
+            "Abbreviation": "CMR",
+            "Rating": 3.16,
+            "GDP Per Cap": 1404.412
+        },
+        {
+            "Country": "Canada",
+            "Abbreviation": "CAN",
+            "Rating": 5.64,
+            "GDP Per Cap": 52745.057
+        },
+        {
+            "Country": "Chile",
+            "Abbreviation": "CHL",
+            "Rating": 4.74,
+            "GDP Per Cap": 15316.01
+        },
+        {
+            "Country": "Colombia",
+            "Abbreviation": "COL",
+            "Rating": 2.79,
+            "GDP Per Cap": 8237.293
+        },
+        {
+            "Country": "Costa Rica",
+            "Abbreviation": "CRI",
+            "Rating": 2.9,
+            "GDP Per Cap": 10107.452
+        },
+        {
+            "Country": "Croatia",
+            "Abbreviation": "HRV",
+            "Rating": 4.22,
+            "GDP Per Cap": 13459.966
+        },
+        {
+            "Country": "Cyprus",
+            "Abbreviation": "CYP",
+            "Rating": 5.33,
+            "GDP Per Cap": 29075.269
+        },
+        {
+            "Country": "Denmark",
+            "Abbreviation": "DNK",
+            "Rating": 5.57,
+            "GDP Per Cap": 58559.563
+        },
+        {
+            "Country": "Dominican Republic",
+            "Abbreviation": "DOM",
+            "Rating": 4.25,
+            "GDP Per Cap": 6274.865
+        },
+        {
+            "Country": "Ecuador",
+            "Abbreviation": "ECU",
+            "Rating": 3.74,
+            "GDP Per Cap": 5682.119
+        },
+        {
+            "Country": "El Salvador",
+            "Abbreviation": "SLV",
+            "Rating": 3.88,
+            "GDP Per Cap": 3471.047
+        },
+        {
+            "Country": "Estonia",
+            "Abbreviation": "EST",
+            "Rating": 4.43,
+            "GDP Per Cap": 17579.346
+        },
+        {
+            "Country": "Eswatini",
+            "Abbreviation": "SWZ",
+            "Rating": 3.9,
+            "GDP Per Cap": 4628.132
+        },
+        {
+            "Country": "Ethiopia",
+            "Abbreviation": "ETH",
+            "Rating": 3.54,
+            "GDP Per Cap": 510.537
+        },
+        {
+            "Country": "Finland",
+            "Abbreviation": "FIN",
+            "Rating": 6.08,
+            "GDP Per Cap": 47693.7
+        },
+        {
+            "Country": "France",
+            "Abbreviation": "FRA",
+            "Rating": 6.1,
+            "GDP Per Cap": 42361.583
+        },
+        {
+            "Country": "Gambia, The",
+            "Abbreviation": "GMB",
+            "Rating": 4.74,
+            "GDP Per Cap": 742.78
+        },
+        {
+            "Country": "Georgia",
+            "Abbreviation": "GEO",
+            "Rating": 4.23,
+            "GDP Per Cap": 4518.061
+        },
+        {
+            "Country": "Germany",
+            "Abbreviation": "DEU",
+            "Rating": 6.05,
+            "GDP Per Cap": 44763.54
+        },
+        {
+            "Country": "Ghana",
+            "Abbreviation": "GHA",
+            "Rating": 3.33,
+            "GDP Per Cap": 2197.908
+        },
+        {
+            "Country": "Greece",
+            "Abbreviation": "GRC",
+            "Rating": 4.03,
+            "GDP Per Cap": 21844.999
+        },
+        {
+            "Country": "Guatemala",
+            "Abbreviation": "GTM",
+            "Rating": 3.37,
+            "GDP Per Cap": 3375.857
+        },
+        {
+            "Country": "Honduras",
+            "Abbreviation": "HND",
+            "Rating": 3.38,
+            "GDP Per Cap": 2129.351
+        },
+        {
+            "Country": "Hungary",
+            "Abbreviation": "HUN",
+            "Rating": 3.92,
+            "GDP Per Cap": 12969.621
+        },
+        {
+            "Country": "Iceland",
+            "Abbreviation": "ISL",
+            "Rating": 5.86,
+            "GDP Per Cap": 47102.062
+        },
+        {
+            "Country": "India",
+            "Abbreviation": "IND",
+            "Rating": 4.16,
+            "GDP Per Cap": 1434.018
+        },
+        {
+            "Country": "Indonesia",
+            "Abbreviation": "IDN",
+            "Rating": 3.59,
+            "GDP Per Cap": 3739.917
+        },
+        {
+            "Country": "Ireland",
+            "Abbreviation": "IRL",
+            "Rating": 5.14,
+            "GDP Per Cap": 49386.473
+        },
+        {
+            "Country": "Israel",
+            "Abbreviation": "ISR",
+            "Rating": 4.26,
+            "GDP Per Cap": 33335.422
+        },
+        {
+            "Country": "Italy",
+            "Abbreviation": "ITA",
+            "Rating": 4.13,
+            "GDP Per Cap": 34926.415
+        },
+        {
+            "Country": "Jamaica",
+            "Abbreviation": "JAM",
+            "Rating": 3.87,
+            "GDP Per Cap": 5448.456
+        },
+        {
+            "Country": "Japan",
+            "Abbreviation": "JPN",
+            "Rating": 5.77,
+            "GDP Per Cap": 49175.035
+        },
+        {
+            "Country": "Jordan",
+            "Abbreviation": "JOR",
+            "Rating": 4.14,
+            "GDP Per Cap": 4392.657
+        },
+        {
+            "Country": "Kazakhstan",
+            "Abbreviation": "KAZ",
+            "Rating": 3.62,
+            "GDP Per Cap": 12386.701
+        },
+        {
+            "Country": "Kenya",
+            "Abbreviation": "KEN",
+            "Rating": 3.75,
+            "GDP Per Cap": 1396.22
+        },
+        {
+            "Country": "Kuwait",
+            "Abbreviation": "KWT",
+            "Rating": 4.38,
+            "GDP Per Cap": 50783.678
+        },
+        {
+            "Country": "Kyrgyz Republic",
+            "Abbreviation": "KGZ",
+            "Rating": 2.3,
+            "GDP Per Cap": 1189.517
+        },
+        {
+            "Country": "Latvia",
+            "Abbreviation": "LVA",
+            "Rating": 4.3,
+            "GDP Per Cap": 13786.588
+        },
+        {
+            "Country": "Lebanon",
+            "Abbreviation": "LBN",
+            "Rating": 3.26,
+            "GDP Per Cap": 8500.137
+        },
+        {
+            "Country": "Liberia",
+            "Abbreviation": "LBR",
+            "Rating": 3.68,
+            "GDP Per Cap": 646.662
+        },
+        {
+            "Country": "Lithuania",
+            "Abbreviation": "LTU",
+            "Rating": 4.82,
+            "GDP Per Cap": 14354.659
+        },
+        {
+            "Country": "Luxembourg",
+            "Abbreviation": "LUX",
+            "Rating": 5.59,
+            "GDP Per Cap": 113953.737
+        },
+        {
+            "Country": "Madagascar",
+            "Abbreviation": "MDG",
+            "Rating": 2.8,
+            "GDP Per Cap": 538.541
+        },
+        {
+            "Country": "Malaysia",
+            "Abbreviation": "MYS",
+            "Rating": 5.44,
+            "GDP Per Cap": 10806.823
+        },
+        {
+            "Country": "Malta",
+            "Abbreviation": "MLT",
+            "Rating": 4.9,
+            "GDP Per Cap": 23028.989
+        },
+        {
+            "Country": "Mauritius",
+            "Abbreviation": "MUS",
+            "Rating": 4.78,
+            "GDP Per Cap": 9416.335
+        },
+        {
+            "Country": "Mexico",
+            "Abbreviation": "MEX",
+            "Rating": 4.08,
+            "GDP Per Cap": 10631.077
+        },
+        {
+            "Country": "Moldova",
+            "Abbreviation": "MDA",
+            "Rating": 2.65,
+            "GDP Per Cap": 3031.129
+        },
+        {
+            "Country": "Mongolia",
+            "Abbreviation": "MNG",
+            "Rating": 2.69,
+            "GDP Per Cap": 4281.33
+        },
+        {
+            "Country": "Morocco",
+            "Abbreviation": "MAR",
+            "Rating": 4.43,
+            "GDP Per Cap": 3224.712
+        },
+        {
+            "Country": "Mozambique",
+            "Abbreviation": "MOZ",
+            "Rating": 2.92,
+            "GDP Per Cap": 671.212
+        },
+        {
+            "Country": "Namibia",
+            "Abbreviation": "NAM",
+            "Rating": 4.76,
+            "GDP Per Cap": 6009.224
+        },
+        {
+            "Country": "Nepal",
+            "Abbreviation": "NPL",
+            "Rating": 2.38,
+            "GDP Per Cap": 794.093
+        },
+        {
+            "Country": "Netherlands",
+            "Abbreviation": "NLD",
+            "Rating": 6.27,
+            "GDP Per Cap": 50580.212
+        },
+        {
+            "Country": "New Zealand",
+            "Abbreviation": "NZL",
+            "Rating": 5.04,
+            "GDP Per Cap": 39683.612
+        },
+        {
+            "Country": "Nicaragua",
+            "Abbreviation": "NIC",
+            "Rating": 3.33,
+            "GDP Per Cap": 1728.147
+        },
+        {
+            "Country": "Nigeria",
+            "Abbreviation": "NGA",
+            "Rating": 3.05,
+            "GDP Per Cap": 2756.41
+        },
+        {
+            "Country": "Norway",
+            "Abbreviation": "NOR",
+            "Rating": 4.62,
+            "GDP Per Cap": 101779.186
+        },
+        {
+            "Country": "Oman",
+            "Abbreviation": "OMN",
+            "Rating": 5.75,
+            "GDP Per Cap": 24129.012
+        },
+        {
+            "Country": "Pakistan",
+            "Abbreviation": "PAK",
+            "Rating": 3.81,
+            "GDP Per Cap": 1377.776
+        },
+        {
+            "Country": "Panama",
+            "Abbreviation": "PAN",
+            "Rating": 5.34,
+            "GDP Per Cap": 11063.257
+        },
+        {
+            "Country": "Paraguay",
+            "Abbreviation": "PRY",
+            "Rating": 2.42,
+            "GDP Per Cap": 5153.417
+        },
+        {
+            "Country": "Philippines",
+            "Abbreviation": "PHL",
+            "Rating": 3.07,
+            "GDP Per Cap": 2721.252
+        },
+        {
+            "Country": "Poland",
+            "Abbreviation": "POL",
+            "Rating": 3.08,
+            "GDP Per Cap": 13010.54
+        },
+        {
+            "Country": "Portugal",
+            "Abbreviation": "PRT",
+            "Rating": 5.38,
+            "GDP Per Cap": 20576.747
+        },
+        {
+            "Country": "Qatar",
+            "Abbreviation": "QAT",
+            "Rating": 5.42,
+            "GDP Per Cap": 101933.117
+        },
+        {
+            "Country": "Romania",
+            "Abbreviation": "ROU",
+            "Rating": 2.56,
+            "GDP Per Cap": 8919.363
+        },
+        {
+            "Country": "Russian Federation",
+            "Abbreviation": "RUS",
+            "Rating": 3.52,
+            "GDP Per Cap": 15284.673
+        },
+        {
+            "Country": "Senegal",
+            "Abbreviation": "SEN",
+            "Rating": 3.44,
+            "GDP Per Cap": 1318.614
+        },
+        {
+            "Country": "Serbia",
+            "Abbreviation": "SRB",
+            "Rating": 2.58,
+            "GDP Per Cap": 6014.914
+        },
+        {
+            "Country": "Seychelles",
+            "Abbreviation": "SYC",
+            "Rating": 4.74,
+            "GDP Per Cap": 11999.897
+        },
+        {
+            "Country": "Sierra Leone",
+            "Abbreviation": "SLE",
+            "Rating": 2.53,
+            "GDP Per Cap": 856.045
+        },
+        {
+            "Country": "Singapore",
+            "Abbreviation": "SGP",
+            "Rating": 6.45,
+            "GDP Per Cap": 55547.546
+        },
+        {
+            "Country": "Slovak Republic",
+            "Abbreviation": "SVK",
+            "Rating": 3.88,
+            "GDP Per Cap": 17519.973
+        },
+        {
+            "Country": "Slovenia",
+            "Abbreviation": "SVN",
+            "Rating": 4.46,
+            "GDP Per Cap": 22474.535
+        },
+        {
+            "Country": "South Africa",
+            "Abbreviation": "ZAF",
+            "Rating": 4.76,
+            "GDP Per Cap": 8185.718
+        },
+        {
+            "Country": "Spain",
+            "Abbreviation": "ESP",
+            "Rating": 5.85,
+            "GDP Per Cap": 28478.514
+        },
+        {
+            "Country": "Sri Lanka",
+            "Abbreviation": "LKA",
+            "Rating": 4.56,
+            "GDP Per Cap": 3446.355
+        },
+        {
+            "Country": "Sweden",
+            "Abbreviation": "SWE",
+            "Rating": 5.54,
+            "GDP Per Cap": 57529.127
+        },
+        {
+            "Country": "Switzerland",
+            "Abbreviation": "CHE",
+            "Rating": 6.2,
+            "GDP Per Cap": 86303.678
+        },
+        {
+            "Country": "Tajikistan",
+            "Abbreviation": "TJK",
+            "Rating": 3.14,
+            "GDP Per Cap": 949.648
+        },
+        {
+            "Country": "Thailand",
+            "Abbreviation": "THA",
+            "Rating": 4.47,
+            "GDP Per Cap": 5860.884
+        },
+        {
+            "Country": "Trinidad and Tobago",
+            "Abbreviation": "TTO",
+            "Rating": 4.19,
+            "GDP Per Cap": 20325.911
+        },
+        {
+            "Country": "Uganda",
+            "Abbreviation": "UGA",
+            "Rating": 2.98,
+            "GDP Per Cap": 950.574
+        },
+        {
+            "Country": "Ukraine",
+            "Abbreviation": "UKR",
+            "Rating": 3.79,
+            "GDP Per Cap": 3874.152
+        },
+        {
+            "Country": "United Arab Emirates",
+            "Abbreviation": "ARE",
+            "Rating": 6.49,
+            "GDP Per Cap": 45108.027
+        },
+        {
+            "Country": "United Kingdom",
+            "Abbreviation": "GBR",
+            "Rating": 5.6,
+            "GDP Per Cap": 42501.709
+        },
+        {
+            "Country": "United States",
+            "Abbreviation": "USA",
+            "Rating": 5.46,
+            "GDP Per Cap": 51736.738
+        },
+        {
+            "Country": "Uruguay",
+            "Abbreviation": "URY",
+            "Rating": 3.66,
+            "GDP Per Cap": 16325.41
+        },
+        {
+            "Country": "Vietnam",
+            "Abbreviation": "VNM",
+            "Rating": 3.21,
+            "GDP Per Cap": 2197.619
+        },
+        {
+            "Country": "Zambia",
+            "Abbreviation": "ZMB",
+            "Rating": 3.38,
+            "GDP Per Cap": 1729.58
+        },
+        {
+            "Country": "Zimbabwe",
+            "Abbreviation": "ZWE",
+            "Rating": 3.36,
+            "GDP Per Cap": 1310.354
+        }
+    ],
+    "2013": [
+        {
+            "Country": "Albania",
+            "Abbreviation": "ALB",
+            "Rating": 3.2,
+            "GDP Per Cap": 4415.6
+        },
+        {
+            "Country": "Algeria",
+            "Abbreviation": "DZA",
+            "Rating": 2.83,
+            "GDP Per Cap": 5997.896
+        },
+        {
+            "Country": "Angola",
+            "Abbreviation": "AGO",
+            "Rating": 2.58,
+            "GDP Per Cap": 5880.641
+        },
+        {
+            "Country": "Argentina",
+            "Abbreviation": "ARG",
+            "Rating": 3.0,
+            "GDP Per Cap": 14488.829
+        },
+        {
+            "Country": "Armenia",
+            "Abbreviation": "ARM",
+            "Rating": 3.46,
+            "GDP Per Cap": 3732.035
+        },
+        {
+            "Country": "Australia",
+            "Abbreviation": "AUS",
+            "Rating": 4.9,
+            "GDP Per Cap": 65247.836
+        },
+        {
+            "Country": "Austria",
+            "Abbreviation": "AUT",
+            "Rating": 5.39,
+            "GDP Per Cap": 50747.384
+        },
+        {
+            "Country": "Azerbaijan",
+            "Abbreviation": "AZE",
+            "Rating": 4.38,
+            "GDP Per Cap": 7926.6
+        },
+        {
+            "Country": "Bahrain",
+            "Abbreviation": "BHR",
+            "Rating": 5.62,
+            "GDP Per Cap": 26989.76
+        },
+        {
+            "Country": "Bangladesh",
+            "Abbreviation": "BGD",
+            "Rating": 3.0,
+            "GDP Per Cap": 1176.16
+        },
+        {
+            "Country": "Barbados",
+            "Abbreviation": "BRB",
+            "Rating": 5.55,
+            "GDP Per Cap": 18893.842
+        },
+        {
+            "Country": "Belgium",
+            "Abbreviation": "BEL",
+            "Rating": 5.65,
+            "GDP Per Cap": 46848.612
+        },
+        {
+            "Country": "Bhutan",
+            "Abbreviation": "BTN",
+            "Rating": 3.33,
+            "GDP Per Cap": 2842.474
+        },
+        {
+            "Country": "Bolivia",
+            "Abbreviation": "BOL",
+            "Rating": 3.03,
+            "GDP Per Cap": 2938.421
+        },
+        {
+            "Country": "Botswana",
+            "Abbreviation": "BWA",
+            "Rating": 3.67,
+            "GDP Per Cap": 6436.603
+        },
+        {
+            "Country": "Brazil",
+            "Abbreviation": "BRA",
+            "Rating": 2.63,
+            "GDP Per Cap": 12406.559
+        },
+        {
+            "Country": "Bulgaria",
+            "Abbreviation": "BGR",
+            "Rating": 3.53,
+            "GDP Per Cap": 7703.869
+        },
+        {
+            "Country": "Burkina Faso",
+            "Abbreviation": "BFA",
+            "Rating": 2.75,
+            "GDP Per Cap": 762.315
+        },
+        {
+            "Country": "Burundi",
+            "Abbreviation": "BDI",
+            "Rating": 2.84,
+            "GDP Per Cap": 255.319
+        },
+        {
+            "Country": "Cabo Verde",
+            "Abbreviation": "CPV",
+            "Rating": 3.98,
+            "GDP Per Cap": 4174.748
+        },
+        {
+            "Country": "Cameroon",
+            "Abbreviation": "CMR",
+            "Rating": 3.12,
+            "GDP Per Cap": 1527.773
+        },
+        {
+            "Country": "Canada",
+            "Abbreviation": "CAN",
+            "Rating": 5.49,
+            "GDP Per Cap": 52711.32
+        },
+        {
+            "Country": "Chile",
+            "Abbreviation": "CHL",
+            "Rating": 4.61,
+            "GDP Per Cap": 15740.391
+        },
+        {
+            "Country": "Colombia",
+            "Abbreviation": "COL",
+            "Rating": 2.88,
+            "GDP Per Cap": 8409.676
+        },
+        {
+            "Country": "Costa Rica",
+            "Abbreviation": "CRI",
+            "Rating": 3.04,
+            "GDP Per Cap": 10764.529
+        },
+        {
+            "Country": "Croatia",
+            "Abbreviation": "HRV",
+            "Rating": 4.32,
+            "GDP Per Cap": 14001.926
+        },
+        {
+            "Country": "Cyprus",
+            "Abbreviation": "CYP",
+            "Rating": 5.17,
+            "GDP Per Cap": 27671.331
+        },
+        {
+            "Country": "Denmark",
+            "Abbreviation": "DNK",
+            "Rating": 5.31,
+            "GDP Per Cap": 61512.411
+        },
+        {
+            "Country": "Dominican Republic",
+            "Abbreviation": "DOM",
+            "Rating": 4.16,
+            "GDP Per Cap": 6413.934
+        },
+        {
+            "Country": "Ecuador",
+            "Abbreviation": "ECU",
+            "Rating": 4.08,
+            "GDP Per Cap": 6144.123
+        },
+        {
+            "Country": "El Salvador",
+            "Abbreviation": "SLV",
+            "Rating": 3.95,
+            "GDP Per Cap": 3555.186
+        },
+        {
+            "Country": "Estonia",
+            "Abbreviation": "EST",
+            "Rating": 4.38,
+            "GDP Per Cap": 19310.675
+        },
+        {
+            "Country": "Eswatini",
+            "Abbreviation": "SWZ",
+            "Rating": 4.21,
+            "GDP Per Cap": 4325.841
+        },
+        {
+            "Country": "Ethiopia",
+            "Abbreviation": "ETH",
+            "Rating": 3.5,
+            "GDP Per Cap": 548.869
+        },
+        {
+            "Country": "Finland",
+            "Abbreviation": "FIN",
+            "Rating": 6.14,
+            "GDP Per Cap": 49804.351
+        },
+        {
+            "Country": "France",
+            "Abbreviation": "FRA",
+            "Rating": 6.04,
+            "GDP Per Cap": 44210.568
+        },
+        {
+            "Country": "Gambia, The",
+            "Abbreviation": "GMB",
+            "Rating": 4.51,
+            "GDP Per Cap": 700.515
+        },
+        {
+            "Country": "Georgia",
+            "Abbreviation": "GEO",
+            "Rating": 4.15,
+            "GDP Per Cap": 4710.606
+        },
+        {
+            "Country": "Germany",
+            "Abbreviation": "DEU",
+            "Rating": 5.92,
+            "GDP Per Cap": 47220.321
+        },
+        {
+            "Country": "Ghana",
+            "Abbreviation": "GHA",
+            "Rating": 3.66,
+            "GDP Per Cap": 2405.768
+        },
+        {
+            "Country": "Greece",
+            "Abbreviation": "GRC",
+            "Rating": 4.17,
+            "GDP Per Cap": 21712.064
+        },
+        {
+            "Country": "Guatemala",
+            "Abbreviation": "GTM",
+            "Rating": 3.29,
+            "GDP Per Cap": 3522.256
+        },
+        {
+            "Country": "Honduras",
+            "Abbreviation": "HND",
+            "Rating": 2.98,
+            "GDP Per Cap": 2087.834
+        },
+        {
+            "Country": "Hungary",
+            "Abbreviation": "HUN",
+            "Rating": 3.86,
+            "GDP Per Cap": 13693.038
+        },
+        {
+            "Country": "Iceland",
+            "Abbreviation": "ISL",
+            "Rating": 5.68,
+            "GDP Per Cap": 51059.38
+        },
+        {
+            "Country": "India",
+            "Abbreviation": "IND",
+            "Rating": 4.34,
+            "GDP Per Cap": 1438.057
+        },
+        {
+            "Country": "Indonesia",
+            "Abbreviation": "IDN",
+            "Rating": 3.92,
+            "GDP Per Cap": 3667.435
+        },
+        {
+            "Country": "Ireland",
+            "Abbreviation": "IRL",
+            "Rating": 5.02,
+            "GDP Per Cap": 52544.104
+        },
+        {
+            "Country": "Israel",
+            "Abbreviation": "ISR",
+            "Rating": 4.24,
+            "GDP Per Cap": 37048.694
+        },
+        {
+            "Country": "Italy",
+            "Abbreviation": "ITA",
+            "Rating": 4.31,
+            "GDP Per Cap": 35722.542
+        },
+        {
+            "Country": "Jamaica",
+            "Abbreviation": "JAM",
+            "Rating": 3.8,
+            "GDP Per Cap": 5238.147
+        },
+        {
+            "Country": "Japan",
+            "Abbreviation": "JPN",
+            "Rating": 5.84,
+            "GDP Per Cap": 40934.756
+        },
+        {
+            "Country": "Jordan",
+            "Abbreviation": "JOR",
+            "Rating": 4.21,
+            "GDP Per Cap": 4483.942
+        },
+        {
+            "Country": "Kazakhstan",
+            "Abbreviation": "KAZ",
+            "Rating": 3.5,
+            "GDP Per Cap": 13890.637
+        },
+        {
+            "Country": "Kenya",
+            "Abbreviation": "KEN",
+            "Rating": 3.85,
+            "GDP Per Cap": 1490.422
+        },
+        {
+            "Country": "Kuwait",
+            "Abbreviation": "KWT",
+            "Rating": 4.33,
+            "GDP Per Cap": 48543.741
+        },
+        {
+            "Country": "Kyrgyz Republic",
+            "Abbreviation": "KGZ",
+            "Rating": 2.35,
+            "GDP Per Cap": 1295.225
+        },
+        {
+            "Country": "Latvia",
+            "Abbreviation": "LVA",
+            "Rating": 4.42,
+            "GDP Per Cap": 14927.223
+        },
+        {
+            "Country": "Lebanon",
+            "Abbreviation": "LBN",
+            "Rating": 3.98,
+            "GDP Per Cap": 8255.236
+        },
+        {
+            "Country": "Liberia",
+            "Abbreviation": "LBR",
+            "Rating": 2.83,
+            "GDP Per Cap": 716.576
+        },
+        {
+            "Country": "Lithuania",
+            "Abbreviation": "LTU",
+            "Rating": 4.79,
+            "GDP Per Cap": 15748.605
+        },
+        {
+            "Country": "Luxembourg",
+            "Abbreviation": "LUX",
+            "Rating": 5.45,
+            "GDP Per Cap": 121422.921
+        },
+        {
+            "Country": "Madagascar",
+            "Abbreviation": "MDG",
+            "Rating": 2.94,
+            "GDP Per Cap": 560.939
+        },
+        {
+            "Country": "Malaysia",
+            "Abbreviation": "MYS",
+            "Rating": 5.35,
+            "GDP Per Cap": 10851.657
+        },
+        {
+            "Country": "Malta",
+            "Abbreviation": "MLT",
+            "Rating": 4.98,
+            "GDP Per Cap": 25554.391
+        },
+        {
+            "Country": "Mauritius",
+            "Abbreviation": "MUS",
+            "Rating": 4.83,
+            "GDP Per Cap": 9766.77
+        },
+        {
+            "Country": "Mexico",
+            "Abbreviation": "MEX",
+            "Rating": 4.11,
+            "GDP Per Cap": 11099.184
+        },
+        {
+            "Country": "Moldova",
+            "Abbreviation": "MDA",
+            "Rating": 2.6,
+            "GDP Per Cap": 3307.351
+        },
+        {
+            "Country": "Mongolia",
+            "Abbreviation": "MNG",
+            "Rating": 2.66,
+            "GDP Per Cap": 4293.834
+        },
+        {
+            "Country": "Morocco",
+            "Abbreviation": "MAR",
+            "Rating": 4.62,
+            "GDP Per Cap": 3463.601
+        },
+        {
+            "Country": "Mozambique",
+            "Abbreviation": "MOZ",
+            "Rating": 2.86,
+            "GDP Per Cap": 672.832
+        },
+        {
+            "Country": "Myanmar",
+            "Abbreviation": "MMR",
+            "Rating": 2.24,
+            "GDP Per Cap": 1175.911
+        },
+        {
+            "Country": "Namibia",
+            "Abbreviation": "NAM",
+            "Rating": 4.73,
+            "GDP Per Cap": 5472.955
+        },
+        {
+            "Country": "Nepal",
+            "Abbreviation": "NPL",
+            "Rating": 2.38,
+            "GDP Per Cap": 809.384
+        },
+        {
+            "Country": "Netherlands",
+            "Abbreviation": "NLD",
+            "Rating": 6.2,
+            "GDP Per Cap": 52680.978
+        },
+        {
+            "Country": "New Zealand",
+            "Abbreviation": "NZL",
+            "Rating": 5.04,
+            "GDP Per Cap": 42081.344
+        },
+        {
+            "Country": "Nicaragua",
+            "Abbreviation": "NIC",
+            "Rating": 3.49,
+            "GDP Per Cap": 1783.56
+        },
+        {
+            "Country": "Nigeria",
+            "Abbreviation": "NGA",
+            "Rating": 2.87,
+            "GDP Per Cap": 2998.068
+        },
+        {
+            "Country": "Norway",
+            "Abbreviation": "NOR",
+            "Rating": 4.7,
+            "GDP Per Cap": 103214.973
+        },
+        {
+            "Country": "Oman",
+            "Abbreviation": "OMN",
+            "Rating": 5.81,
+            "GDP Per Cap": 23328.489
+        },
+        {
+            "Country": "Pakistan",
+            "Abbreviation": "PAK",
+            "Rating": 3.8,
+            "GDP Per Cap": 1390.648
+        },
+        {
+            "Country": "Panama",
+            "Abbreviation": "PAN",
+            "Rating": 5.41,
+            "GDP Per Cap": 12273.18
+        },
+        {
+            "Country": "Paraguay",
+            "Abbreviation": "PRY",
+            "Rating": 2.87,
+            "GDP Per Cap": 5892.846
+        },
+        {
+            "Country": "Philippines",
+            "Abbreviation": "PHL",
+            "Rating": 3.13,
+            "GDP Per Cap": 2903.189
+        },
+        {
+            "Country": "Poland",
+            "Abbreviation": "POL",
+            "Rating": 3.3,
+            "GDP Per Cap": 13550.385
+        },
+        {
+            "Country": "Portugal",
+            "Abbreviation": "PRT",
+            "Rating": 5.4,
+            "GDP Per Cap": 21653.505
+        },
+        {
+            "Country": "Qatar",
+            "Abbreviation": "QAT",
+            "Rating": 5.4,
+            "GDP Per Cap": 99180.39
+        },
+        {
+            "Country": "Romania",
+            "Abbreviation": "ROU",
+            "Rating": 2.69,
+            "GDP Per Cap": 9481.981
+        },
+        {
+            "Country": "Russian Federation",
+            "Abbreviation": "RUS",
+            "Rating": 3.61,
+            "GDP Per Cap": 15913.302
+        },
+        {
+            "Country": "Senegal",
+            "Abbreviation": "SEN",
+            "Rating": 3.61,
+            "GDP Per Cap": 1372.686
+        },
+        {
+            "Country": "Serbia",
+            "Abbreviation": "SRB",
+            "Rating": 2.67,
+            "GDP Per Cap": 6752.796
+        },
+        {
+            "Country": "Seychelles",
+            "Abbreviation": "SYC",
+            "Rating": 4.68,
+            "GDP Per Cap": 14762.223
+        },
+        {
+            "Country": "Sierra Leone",
+            "Abbreviation": "SLE",
+            "Rating": 2.73,
+            "GDP Per Cap": 981.3
+        },
+        {
+            "Country": "Singapore",
+            "Abbreviation": "SGP",
+            "Rating": 6.34,
+            "GDP Per Cap": 56967.426
+        },
+        {
+            "Country": "Slovak Republic",
+            "Abbreviation": "SVK",
+            "Rating": 3.72,
+            "GDP Per Cap": 18284.914
+        },
+        {
+            "Country": "Slovenia",
+            "Abbreviation": "SVN",
+            "Rating": 4.44,
+            "GDP Per Cap": 23250.102
+        },
+        {
+            "Country": "South Africa",
+            "Abbreviation": "ZAF",
+            "Rating": 4.76,
+            "GDP Per Cap": 7431.908
+        },
+        {
+            "Country": "Spain",
+            "Abbreviation": "ESP",
+            "Rating": 5.91,
+            "GDP Per Cap": 29236.149
+        },
+        {
+            "Country": "Sri Lanka",
+            "Abbreviation": "LKA",
+            "Rating": 4.31,
+            "GDP Per Cap": 3737.366
+        },
+        {
+            "Country": "Sweden",
+            "Abbreviation": "SWE",
+            "Rating": 5.41,
+            "GDP Per Cap": 60563.645
+        },
+        {
+            "Country": "Switzerland",
+            "Abbreviation": "CHE",
+            "Rating": 6.02,
+            "GDP Per Cap": 87918.427
+        },
+        {
+            "Country": "Thailand",
+            "Abbreviation": "THA",
+            "Rating": 4.37,
+            "GDP Per Cap": 6168.196
+        },
+        {
+            "Country": "Trinidad and Tobago",
+            "Abbreviation": "TTO",
+            "Rating": 4.32,
+            "GDP Per Cap": 21208.309
+        },
+        {
+            "Country": "Tunisia",
+            "Abbreviation": "TUN",
+            "Rating": 3.92,
+            "GDP Per Cap": 4419.705
+        },
+        {
+            "Country": "Uganda",
+            "Abbreviation": "UGA",
+            "Rating": 2.89,
+            "GDP Per Cap": 964.833
+        },
+        {
+            "Country": "Ukraine",
+            "Abbreviation": "UKR",
+            "Rating": 3.54,
+            "GDP Per Cap": 4051.42
+        },
+        {
+            "Country": "United Arab Emirates",
+            "Abbreviation": "ARE",
+            "Rating": 6.59,
+            "GDP Per Cap": 46207.448
+        },
+        {
+            "Country": "United Kingdom",
+            "Abbreviation": "GBR",
+            "Rating": 5.4,
+            "GDP Per Cap": 43469.644
+        },
+        {
+            "Country": "United States",
+            "Abbreviation": "USA",
+            "Rating": 5.55,
+            "GDP Per Cap": 53363.904
+        },
+        {
+            "Country": "Uruguay",
+            "Abbreviation": "URY",
+            "Rating": 3.42,
+            "GDP Per Cap": 18271.525
+        },
+        {
+            "Country": "Vietnam",
+            "Abbreviation": "VNM",
+            "Rating": 3.44,
+            "GDP Per Cap": 2369.973
+        },
+        {
+            "Country": "Zambia",
+            "Abbreviation": "ZMB",
+            "Rating": 3.13,
+            "GDP Per Cap": 1840.665
+        },
+        {
+            "Country": "Zimbabwe",
+            "Abbreviation": "ZWE",
+            "Rating": 3.24,
+            "GDP Per Cap": 1421.549
+        }
+    ],
+    "2014": [
+        {
+            "Country": "Albania",
+            "Abbreviation": "ALB",
+            "Rating": 3.31,
+            "GDP Per Cap": 4584.919
+        },
+        {
+            "Country": "Algeria",
+            "Abbreviation": "DZA",
+            "Rating": 2.91,
+            "GDP Per Cap": 6108.878
+        },
+        {
+            "Country": "Angola",
+            "Abbreviation": "AGO",
+            "Rating": 2.75,
+            "GDP Per Cap": 6061.865
+        },
+        {
+            "Country": "Argentina",
+            "Abbreviation": "ARG",
+            "Rating": 3.01,
+            "GDP Per Cap": 13208.831
+        },
+        {
+            "Country": "Armenia",
+            "Abbreviation": "ARM",
+            "Rating": 3.26,
+            "GDP Per Cap": 3889.004
+        },
+        {
+            "Country": "Australia",
+            "Abbreviation": "AUS",
+            "Rating": 4.8,
+            "GDP Per Cap": 61647.05
+        },
+        {
+            "Country": "Austria",
+            "Abbreviation": "AUT",
+            "Rating": 5.33,
+            "GDP Per Cap": 51814.424
+        },
+        {
+            "Country": "Azerbaijan",
+            "Abbreviation": "AZE",
+            "Rating": 4.26,
+            "GDP Per Cap": 7938.578
+        },
+        {
+            "Country": "Bahrain",
+            "Abbreviation": "BHR",
+            "Rating": 5.43,
+            "GDP Per Cap": 26451.797
+        },
+        {
+            "Country": "Bangladesh",
+            "Abbreviation": "BGD",
+            "Rating": 2.99,
+            "GDP Per Cap": 1340.289
+        },
+        {
+            "Country": "Barbados",
+            "Abbreviation": "BRB",
+            "Rating": 5.35,
+            "GDP Per Cap": 18935.288
+        },
+        {
+            "Country": "Belgium",
+            "Abbreviation": "BEL",
+            "Rating": 5.61,
+            "GDP Per Cap": 47897.037
+        },
+        {
+            "Country": "Bhutan",
+            "Abbreviation": "BTN",
+            "Rating": 3.31,
+            "GDP Per Cap": 2760.16
+        },
+        {
+            "Country": "Bolivia",
+            "Abbreviation": "BOL",
+            "Rating": 2.78,
+            "GDP Per Cap": 3114.966
+        },
+        {
+            "Country": "Botswana",
+            "Abbreviation": "BWA",
+            "Rating": 3.38,
+            "GDP Per Cap": 6844.033
+        },
+        {
+            "Country": "Brazil",
+            "Abbreviation": "BRA",
+            "Rating": 2.65,
+            "GDP Per Cap": 12230.669
+        },
+        {
+            "Country": "Bulgaria",
+            "Abbreviation": "BGR",
+            "Rating": 3.67,
+            "GDP Per Cap": 7925.445
+        },
+        {
+            "Country": "Burkina Faso",
+            "Abbreviation": "BFA",
+            "Rating": 2.61,
+            "GDP Per Cap": 767.569
+        },
+        {
+            "Country": "Burundi",
+            "Abbreviation": "BDI",
+            "Rating": 2.88,
+            "GDP Per Cap": 273.133
+        },
+        {
+            "Country": "Cabo Verde",
+            "Abbreviation": "CPV",
+            "Rating": 3.91,
+            "GDP Per Cap": 4178.127
+        },
+        {
+            "Country": "Cameroon",
+            "Abbreviation": "CMR",
+            "Rating": 3.15,
+            "GDP Per Cap": 1604.627
+        },
+        {
+            "Country": "Canada",
+            "Abbreviation": "CAN",
+            "Rating": 5.38,
+            "GDP Per Cap": 51025.428
+        },
+        {
+            "Country": "Chile",
+            "Abbreviation": "CHL",
+            "Rating": 4.4,
+            "GDP Per Cap": 14582.85
+        },
+        {
+            "Country": "Colombia",
+            "Abbreviation": "COL",
+            "Rating": 3.0,
+            "GDP Per Cap": 8312.046
+        },
+        {
+            "Country": "Costa Rica",
+            "Abbreviation": "CRI",
+            "Rating": 3.07,
+            "GDP Per Cap": 10853.638
+        },
+        {
+            "Country": "Croatia",
+            "Abbreviation": "HRV",
+            "Rating": 4.32,
+            "GDP Per Cap": 14040.962
+        },
+        {
+            "Country": "Cyprus",
+            "Abbreviation": "CYP",
+            "Rating": 5.08,
+            "GDP Per Cap": 27076.806
+        },
+        {
+            "Country": "Denmark",
+            "Abbreviation": "DNK",
+            "Rating": 5.32,
+            "GDP Per Cap": 62700.908
+        },
+        {
+            "Country": "Dominican Republic",
+            "Abbreviation": "DOM",
+            "Rating": 4.6,
+            "GDP Per Cap": 6805.662
+        },
+        {
+            "Country": "El Salvador",
+            "Abbreviation": "SLV",
+            "Rating": 4.76,
+            "GDP Per Cap": 3638.533
+        },
+        {
+            "Country": "Estonia",
+            "Abbreviation": "EST",
+            "Rating": 4.37,
+            "GDP Per Cap": 20574.581
+        },
+        {
+            "Country": "Eswatini",
+            "Abbreviation": "SWZ",
+            "Rating": 4.09,
+            "GDP Per Cap": 4133.645
+        },
+        {
+            "Country": "Ethiopia",
+            "Abbreviation": "ETH",
+            "Rating": 3.33,
+            "GDP Per Cap": 622.592
+        },
+        {
+            "Country": "Finland",
+            "Abbreviation": "FIN",
+            "Rating": 6.08,
+            "GDP Per Cap": 50180.785
+        },
+        {
+            "Country": "France",
+            "Abbreviation": "FRA",
+            "Rating": 5.77,
+            "GDP Per Cap": 44698.808
+        },
+        {
+            "Country": "Gambia, The",
+            "Abbreviation": "GMB",
+            "Rating": 4.26,
+            "GDP Per Cap": 607.429
+        },
+        {
+            "Country": "Georgia",
+            "Abbreviation": "GEO",
+            "Rating": 4.06,
+            "GDP Per Cap": 4833.664
+        },
+        {
+            "Country": "Germany",
+            "Abbreviation": "DEU",
+            "Rating": 5.79,
+            "GDP Per Cap": 48983.25
+        },
+        {
+            "Country": "Ghana",
+            "Abbreviation": "GHA",
+            "Rating": 3.55,
+            "GDP Per Cap": 2008.586
+        },
+        {
+            "Country": "Greece",
+            "Abbreviation": "GRC",
+            "Rating": 4.27,
+            "GDP Per Cap": 21554.224
+        },
+        {
+            "Country": "Guatemala",
+            "Abbreviation": "GTM",
+            "Rating": 3.96,
+            "GDP Per Cap": 3778.493
+        },
+        {
+            "Country": "Honduras",
+            "Abbreviation": "HND",
+            "Rating": 3.78,
+            "GDP Per Cap": 2190.499
+        },
+        {
+            "Country": "Hungary",
+            "Abbreviation": "HUN",
+            "Rating": 3.98,
+            "GDP Per Cap": 14279.016
+        },
+        {
+            "Country": "Iceland",
+            "Abbreviation": "ISL",
+            "Rating": 5.52,
+            "GDP Per Cap": 55885.704
+        },
+        {
+            "Country": "India",
+            "Abbreviation": "IND",
+            "Rating": 4.08,
+            "GDP Per Cap": 1559.864
+        },
+        {
+            "Country": "Indonesia",
+            "Abbreviation": "IDN",
+            "Rating": 4.03,
+            "GDP Per Cap": 3532.669
+        },
+        {
+            "Country": "Ireland",
+            "Abbreviation": "IRL",
+            "Rating": 5.07,
+            "GDP Per Cap": 57175.016
+        },
+        {
+            "Country": "Israel",
+            "Abbreviation": "ISR",
+            "Rating": 4.08,
+            "GDP Per Cap": 38360.49
+        },
+        {
+            "Country": "Italy",
+            "Abbreviation": "ITA",
+            "Rating": 4.29,
+            "GDP Per Cap": 36022.586
+        },
+        {
+            "Country": "Jamaica",
+            "Abbreviation": "JAM",
+            "Rating": 4.51,
+            "GDP Per Cap": 5105.511
+        },
+        {
+            "Country": "Japan",
+            "Abbreviation": "JPN",
+            "Rating": 5.87,
+            "GDP Per Cap": 38522.771
+        },
+        {
+            "Country": "Jordan",
+            "Abbreviation": "JOR",
+            "Rating": 3.82,
+            "GDP Per Cap": 4261.906
+        },
+        {
+            "Country": "Kazakhstan",
+            "Abbreviation": "KAZ",
+            "Rating": 3.47,
+            "GDP Per Cap": 12807.262
+        },
+        {
+            "Country": "Kenya",
+            "Abbreviation": "KEN",
+            "Rating": 3.97,
+            "GDP Per Cap": 1613.101
+        },
+        {
+            "Country": "Kuwait",
+            "Abbreviation": "KWT",
+            "Rating": 4.1,
+            "GDP Per Cap": 43458.841
+        },
+        {
+            "Country": "Kyrgyz Republic",
+            "Abbreviation": "KGZ",
+            "Rating": 2.46,
+            "GDP Per Cap": 1292.621
+        },
+        {
+            "Country": "Latvia",
+            "Abbreviation": "LVA",
+            "Rating": 4.44,
+            "GDP Per Cap": 15685.979
+        },
+        {
+            "Country": "Lebanon",
+            "Abbreviation": "LBN",
+            "Rating": 3.8,
+            "GDP Per Cap": 7665.322
+        },
+        {
+            "Country": "Lithuania",
+            "Abbreviation": "LTU",
+            "Rating": 4.62,
+            "GDP Per Cap": 16580.198
+        },
+        {
+            "Country": "Luxembourg",
+            "Abbreviation": "LUX",
+            "Rating": 5.29,
+            "GDP Per Cap": 125200.137
+        },
+        {
+            "Country": "Madagascar",
+            "Abbreviation": "MDG",
+            "Rating": 2.81,
+            "GDP Per Cap": 548.905
+        },
+        {
+            "Country": "Malaysia",
+            "Abbreviation": "MYS",
+            "Rating": 5.49,
+            "GDP Per Cap": 11165.249
+        },
+        {
+            "Country": "Malta",
+            "Abbreviation": "MLT",
+            "Rating": 4.89,
+            "GDP Per Cap": 27690.937
+        },
+        {
+            "Country": "Mauritius",
+            "Abbreviation": "MUS",
+            "Rating": 4.93,
+            "GDP Per Cap": 10366.355
+        },
+        {
+            "Country": "Mexico",
+            "Abbreviation": "MEX",
+            "Rating": 4.01,
+            "GDP Per Cap": 11272.395
+        },
+        {
+            "Country": "Moldova",
+            "Abbreviation": "MDA",
+            "Rating": 2.72,
+            "GDP Per Cap": 3314.553
+        },
+        {
+            "Country": "Mongolia",
+            "Abbreviation": "MNG",
+            "Rating": 2.48,
+            "GDP Per Cap": 4081.015
+        },
+        {
+            "Country": "Morocco",
+            "Abbreviation": "MAR",
+            "Rating": 4.54,
+            "GDP Per Cap": 3527.712
+        },
+        {
+            "Country": "Mozambique",
+            "Abbreviation": "MOZ",
+            "Rating": 2.79,
+            "GDP Per Cap": 683.942
+        },
+        {
+            "Country": "Myanmar",
+            "Abbreviation": "MMR",
+            "Rating": 2.36,
+            "GDP Per Cap": 1244.184
+        },
+        {
+            "Country": "Namibia",
+            "Abbreviation": "NAM",
+            "Rating": 4.59,
+            "GDP Per Cap": 5449.076
+        },
+        {
+            "Country": "Nepal",
+            "Abbreviation": "NPL",
+            "Rating": 2.67,
+            "GDP Per Cap": 827.394
+        },
+        {
+            "Country": "Netherlands",
+            "Abbreviation": "NLD",
+            "Rating": 6.25,
+            "GDP Per Cap": 53584.489
+        },
+        {
+            "Country": "New Zealand",
+            "Abbreviation": "NZL",
+            "Rating": 5.09,
+            "GDP Per Cap": 44284.679
+        },
+        {
+            "Country": "Nicaragua",
+            "Abbreviation": "NIC",
+            "Rating": 3.46,
+            "GDP Per Cap": 1909.424
+        },
+        {
+            "Country": "Nigeria",
+            "Abbreviation": "NGA",
+            "Rating": 2.64,
+            "GDP Per Cap": 3222.691
+        },
+        {
+            "Country": "Norway",
+            "Abbreviation": "NOR",
+            "Rating": 4.89,
+            "GDP Per Cap": 97302.705
+        },
+        {
+            "Country": "Oman",
+            "Abbreviation": "OMN",
+            "Rating": 5.43,
+            "GDP Per Cap": 23219.693
+        },
+        {
+            "Country": "Pakistan",
+            "Abbreviation": "PAK",
+            "Rating": 3.66,
+            "GDP Per Cap": 1423.889
+        },
+        {
+            "Country": "Panama",
+            "Abbreviation": "PAN",
+            "Rating": 5.25,
+            "GDP Per Cap": 13221.567
+        },
+        {
+            "Country": "Paraguay",
+            "Abbreviation": "PRY",
+            "Rating": 2.74,
+            "GDP Per Cap": 6065.282
+        },
+        {
+            "Country": "Philippines",
+            "Abbreviation": "PHL",
+            "Rating": 3.23,
+            "GDP Per Cap": 2995.504
+        },
+        {
+            "Country": "Poland",
+            "Abbreviation": "POL",
+            "Rating": 3.62,
+            "GDP Per Cap": 14183.116
+        },
+        {
+            "Country": "Portugal",
+            "Abbreviation": "PRT",
+            "Rating": 5.47,
+            "GDP Per Cap": 22109.403
+        },
+        {
+            "Country": "Qatar",
+            "Abbreviation": "QAT",
+            "Rating": 5.47,
+            "GDP Per Cap": 93054.141
+        },
+        {
+            "Country": "Romania",
+            "Abbreviation": "ROU",
+            "Rating": 3.16,
+            "GDP Per Cap": 10025.457
+        },
+        {
+            "Country": "Russian Federation",
+            "Abbreviation": "RUS",
+            "Rating": 3.77,
+            "GDP Per Cap": 13984.474
+        },
+        {
+            "Country": "Senegal",
+            "Abbreviation": "SEN",
+            "Rating": 3.49,
+            "GDP Per Cap": 1397.017
+        },
+        {
+            "Country": "Serbia",
+            "Abbreviation": "SRB",
+            "Rating": 2.78,
+            "GDP Per Cap": 6598.935
+        },
+        {
+            "Country": "Seychelles",
+            "Abbreviation": "SYC",
+            "Rating": 4.69,
+            "GDP Per Cap": 15189.845
+        },
+        {
+            "Country": "Sierra Leone",
+            "Abbreviation": "SLE",
+            "Rating": 3.03,
+            "GDP Per Cap": 929.266
+        },
+        {
+            "Country": "Singapore",
+            "Abbreviation": "SGP",
+            "Rating": 6.51,
+            "GDP Per Cap": 57564.802
+        },
+        {
+            "Country": "Slovak Republic",
+            "Abbreviation": "SVK",
+            "Rating": 3.73,
+            "GDP Per Cap": 18734.166
+        },
+        {
+            "Country": "Slovenia",
+            "Abbreviation": "SVN",
+            "Rating": 4.42,
+            "GDP Per Cap": 24029.664
+        },
+        {
+            "Country": "South Africa",
+            "Abbreviation": "ZAF",
+            "Rating": 4.8,
+            "GDP Per Cap": 6952.314
+        },
+        {
+            "Country": "Spain",
+            "Abbreviation": "ESP",
+            "Rating": 5.93,
+            "GDP Per Cap": 29719.01
+        },
+        {
+            "Country": "Sri Lanka",
+            "Abbreviation": "LKA",
+            "Rating": 4.43,
+            "GDP Per Cap": 3969.713
+        },
+        {
+            "Country": "Sweden",
+            "Abbreviation": "SWE",
+            "Rating": 5.33,
+            "GDP Per Cap": 59270.463
+        },
+        {
+            "Country": "Switzerland",
+            "Abbreviation": "CHE",
+            "Rating": 5.89,
+            "GDP Per Cap": 89274.25
+        },
+        {
+            "Country": "Tajikistan",
+            "Abbreviation": "TJK",
+            "Rating": 3.0,
+            "GDP Per Cap": 1105.197
+        },
+        {
+            "Country": "Thailand",
+            "Abbreviation": "THA",
+            "Rating": 4.16,
+            "GDP Per Cap": 5952.033
+        },
+        {
+            "Country": "Trinidad and Tobago",
+            "Abbreviation": "TTO",
+            "Rating": 4.33,
+            "GDP Per Cap": 21799.068
+        },
+        {
+            "Country": "Tunisia",
+            "Abbreviation": "TUN",
+            "Rating": 3.75,
+            "GDP Per Cap": 4511.282
+        },
+        {
+            "Country": "Uganda",
+            "Abbreviation": "UGA",
+            "Rating": 2.67,
+            "GDP Per Cap": 1008.018
+        },
+        {
+            "Country": "Ukraine",
+            "Abbreviation": "UKR",
+            "Rating": 3.39,
+            "GDP Per Cap": 3119.576
+        },
+        {
+            "Country": "United Arab Emirates",
+            "Abbreviation": "ARE",
+            "Rating": 6.6,
+            "GDP Per Cap": 47063.628
+        },
+        {
+            "Country": "United Kingdom",
+            "Abbreviation": "GBR",
+            "Rating": 5.3,
+            "GDP Per Cap": 47468.211
+        },
+        {
+            "Country": "United States",
+            "Abbreviation": "USA",
+            "Rating": 5.58,
+            "GDP Per Cap": 55263.817
+        },
+        {
+            "Country": "Uruguay",
+            "Abbreviation": "URY",
+            "Rating": 3.38,
+            "GDP Per Cap": 18109.936
+        },
+        {
+            "Country": "Vietnam",
+            "Abbreviation": "VNM",
+            "Rating": 3.49,
+            "GDP Per Cap": 2566.854
+        },
+        {
+            "Country": "Zambia",
+            "Abbreviation": "ZMB",
+            "Rating": 2.92,
+            "GDP Per Cap": 1724.805
+        },
+        {
+            "Country": "Zimbabwe",
+            "Abbreviation": "ZWE",
+            "Rating": 3.1,
+            "GDP Per Cap": 1414.992
+        }
+    ],
+    "2015": [
+        {
+            "Country": "Albania",
+            "Abbreviation": "ALB",
+            "Rating": 3.63,
+            "GDP Per Cap": 3953.611
+        },
+        {
+            "Country": "Algeria",
+            "Abbreviation": "DZA",
+            "Rating": 2.99,
+            "GDP Per Cap": 4691.686
+        },
+        {
+            "Country": "Argentina",
+            "Abbreviation": "ARG",
+            "Rating": 3.18,
+            "GDP Per Cap": 14895.316
+        },
+        {
+            "Country": "Armenia",
+            "Abbreviation": "ARM",
+            "Rating": 3.14,
+            "GDP Per Cap": 3529.026
+        },
+        {
+            "Country": "Australia",
+            "Abbreviation": "AUS",
+            "Rating": 4.77,
+            "GDP Per Cap": 51468.795
+        },
+        {
+            "Country": "Austria",
+            "Abbreviation": "AUT",
+            "Rating": 5.2,
+            "GDP Per Cap": 44267.809
+        },
+        {
+            "Country": "Azerbaijan",
+            "Abbreviation": "AZE",
+            "Rating": 4.26,
+            "GDP Per Cap": 5524.527
+        },
+        {
+            "Country": "Bahrain",
+            "Abbreviation": "BHR",
+            "Rating": 5.26,
+            "GDP Per Cap": 23734.055
+        },
+        {
+            "Country": "Bangladesh",
+            "Abbreviation": "BGD",
+            "Rating": 3.03,
+            "GDP Per Cap": 1495.538
+        },
+        {
+            "Country": "Belgium",
+            "Abbreviation": "BEL",
+            "Rating": 5.54,
+            "GDP Per Cap": 41147.261
+        },
+        {
+            "Country": "Bhutan",
+            "Abbreviation": "BTN",
+            "Rating": 3.12,
+            "GDP Per Cap": 2980.157
+        },
+        {
+            "Country": "Bolivia",
+            "Abbreviation": "BOL",
+            "Rating": 2.69,
+            "GDP Per Cap": 3069.319
+        },
+        {
+            "Country": "Botswana",
+            "Abbreviation": "BWA",
+            "Rating": 3.33,
+            "GDP Per Cap": 5869.738
+        },
+        {
+            "Country": "Brazil",
+            "Abbreviation": "BRA",
+            "Rating": 2.75,
+            "GDP Per Cap": 8893.346
+        },
+        {
+            "Country": "Bulgaria",
+            "Abbreviation": "BGR",
+            "Rating": 3.59,
+            "GDP Per Cap": 7096.339
+        },
+        {
+            "Country": "Burundi",
+            "Abbreviation": "BDI",
+            "Rating": 2.88,
+            "GDP Per Cap": 304.243
+        },
+        {
+            "Country": "Cabo Verde",
+            "Abbreviation": "CPV",
+            "Rating": 3.76,
+            "GDP Per Cap": 3560.703
+        },
+        {
+            "Country": "Cameroon",
+            "Abbreviation": "CMR",
+            "Rating": 2.98,
+            "GDP Per Cap": 1382.65
+        },
+        {
+            "Country": "Canada",
+            "Abbreviation": "CAN",
+            "Rating": 5.31,
+            "GDP Per Cap": 43628.425
+        },
+        {
+            "Country": "Chile",
+            "Abbreviation": "CHL",
+            "Rating": 4.34,
+            "GDP Per Cap": 13494.489
+        },
+        {
+            "Country": "Colombia",
+            "Abbreviation": "COL",
+            "Rating": 2.99,
+            "GDP Per Cap": 6337.03
+        },
+        {
+            "Country": "Costa Rica",
+            "Abbreviation": "CRI",
+            "Rating": 3.11,
+            "GDP Per Cap": 11635.197
+        },
+        {
+            "Country": "Croatia",
+            "Abbreviation": "HRV",
+            "Rating": 4.24,
+            "GDP Per Cap": 12135.14
+        },
+        {
+            "Country": "Cyprus",
+            "Abbreviation": "CYP",
+            "Rating": 4.7,
+            "GDP Per Cap": 23507.588
+        },
+        {
+            "Country": "Denmark",
+            "Abbreviation": "DNK",
+            "Rating": 5.39,
+            "GDP Per Cap": 53316.984
+        },
+        {
+            "Country": "Dominican Republic",
+            "Abbreviation": "DOM",
+            "Rating": 4.53,
+            "GDP Per Cap": 7139.507
+        },
+        {
+            "Country": "Ecuador",
+            "Abbreviation": "ECU",
+            "Rating": 5.03,
+            "GDP Per Cap": 5975.078
+        },
+        {
+            "Country": "El Salvador",
+            "Abbreviation": "SLV",
+            "Rating": 4.37,
+            "GDP Per Cap": 3761.493
+        },
+        {
+            "Country": "Estonia",
+            "Abbreviation": "EST",
+            "Rating": 4.42,
+            "GDP Per Cap": 17723.954
+        },
+        {
+            "Country": "Eswatini",
+            "Abbreviation": "SWZ",
+            "Rating": 3.63,
+            "GDP Per Cap": 3766.458
+        },
+        {
+            "Country": "Ethiopia",
+            "Abbreviation": "ETH",
+            "Rating": 3.48,
+            "GDP Per Cap": 707.975
+        },
+        {
+            "Country": "Finland",
+            "Abbreviation": "FIN",
+            "Rating": 6.0,
+            "GDP Per Cap": 42625.16
+        },
+        {
+            "Country": "France",
+            "Abbreviation": "FRA",
+            "Rating": 5.75,
+            "GDP Per Cap": 37989.114
+        },
+        {
+            "Country": "Gambia, The",
+            "Abbreviation": "GMB",
+            "Rating": 4.2,
+            "GDP Per Cap": 649.511
+        },
+        {
+            "Country": "Georgia",
+            "Abbreviation": "GEO",
+            "Rating": 3.91,
+            "GDP Per Cap": 4090.214
+        },
+        {
+            "Country": "Germany",
+            "Abbreviation": "DEU",
+            "Rating": 5.71,
+            "GDP Per Cap": 41914.927
+        },
+        {
+            "Country": "Ghana",
+            "Abbreviation": "GHA",
+            "Rating": 3.2,
+            "GDP Per Cap": 1784.248
+        },
+        {
+            "Country": "Greece",
+            "Abbreviation": "GRC",
+            "Rating": 4.21,
+            "GDP Per Cap": 18023.859
+        },
+        {
+            "Country": "Guatemala",
+            "Abbreviation": "GTM",
+            "Rating": 3.86,
+            "GDP Per Cap": 3994.231
+        },
+        {
+            "Country": "Honduras",
+            "Abbreviation": "HND",
+            "Rating": 4.26,
+            "GDP Per Cap": 2286.213
+        },
+        {
+            "Country": "Hungary",
+            "Abbreviation": "HUN",
+            "Rating": 3.91,
+            "GDP Per Cap": 12700.301
+        },
+        {
+            "Country": "Iceland",
+            "Abbreviation": "ISL",
+            "Rating": 5.55,
+            "GDP Per Cap": 54228.826
+        },
+        {
+            "Country": "India",
+            "Abbreviation": "IND",
+            "Rating": 4.19,
+            "GDP Per Cap": 1590.174
+        },
+        {
+            "Country": "Indonesia",
+            "Abbreviation": "IDN",
+            "Rating": 3.87,
+            "GDP Per Cap": 3373.489
+        },
+        {
+            "Country": "Ireland",
+            "Abbreviation": "IRL",
+            "Rating": 5.1,
+            "GDP Per Cap": 64154.49
+        },
+        {
+            "Country": "Israel",
+            "Abbreviation": "ISR",
+            "Rating": 4.16,
+            "GDP Per Cap": 36227.752
+        },
+        {
+            "Country": "Italy",
+            "Abbreviation": "ITA",
+            "Rating": 4.3,
+            "GDP Per Cap": 30609.522
+        },
+        {
+            "Country": "Jamaica",
+            "Abbreviation": "JAM",
+            "Rating": 4.39,
+            "GDP Per Cap": 5204.825
+        },
+        {
+            "Country": "Japan",
+            "Abbreviation": "JPN",
+            "Rating": 5.91,
+            "GDP Per Cap": 35005.662
+        },
+        {
+            "Country": "Jordan",
+            "Abbreviation": "JOR",
+            "Rating": 3.73,
+            "GDP Per Cap": 4069.994
+        },
+        {
+            "Country": "Kazakhstan",
+            "Abbreviation": "KAZ",
+            "Rating": 3.58,
+            "GDP Per Cap": 10510.769
+        },
+        {
+            "Country": "Kenya",
+            "Abbreviation": "KEN",
+            "Rating": 3.94,
+            "GDP Per Cap": 1625.176
+        },
+        {
+            "Country": "Kuwait",
+            "Abbreviation": "KWT",
+            "Rating": 4.14,
+            "GDP Per Cap": 29195.283
+        },
+        {
+            "Country": "Kyrgyz Republic",
+            "Abbreviation": "KGZ",
+            "Rating": 2.35,
+            "GDP Per Cap": 1132.843
+        },
+        {
+            "Country": "Latvia",
+            "Abbreviation": "LVA",
+            "Rating": 4.47,
+            "GDP Per Cap": 13728.365
+        },
+        {
+            "Country": "Lebanon",
+            "Abbreviation": "LBN",
+            "Rating": 3.65,
+            "GDP Per Cap": 7802.702
+        },
+        {
+            "Country": "Liberia",
+            "Abbreviation": "LBR",
+            "Rating": 3.05,
+            "GDP Per Cap": 691.369
+        },
+        {
+            "Country": "Lithuania",
+            "Abbreviation": "LTU",
+            "Rating": 4.59,
+            "GDP Per Cap": 14262.518
+        },
+        {
+            "Country": "Luxembourg",
+            "Abbreviation": "LUX",
+            "Rating": 5.17,
+            "GDP Per Cap": 106710.273
+        },
+        {
+            "Country": "Madagascar",
+            "Abbreviation": "MDG",
+            "Rating": 2.56,
+            "GDP Per Cap": 481.807
+        },
+        {
+            "Country": "Malaysia",
+            "Abbreviation": "MYS",
+            "Rating": 5.53,
+            "GDP Per Cap": 9663.122
+        },
+        {
+            "Country": "Malta",
+            "Abbreviation": "MLT",
+            "Rating": 4.6,
+            "GDP Per Cap": 25795.214
+        },
+        {
+            "Country": "Mauritius",
+            "Abbreviation": "MUS",
+            "Rating": 4.86,
+            "GDP Per Cap": 9507.999
+        },
+        {
+            "Country": "Mexico",
+            "Abbreviation": "MEX",
+            "Rating": 4.04,
+            "GDP Per Cap": 9915.089
+        },
+        {
+            "Country": "Moldova",
+            "Abbreviation": "MDA",
+            "Rating": 2.8,
+            "GDP Per Cap": 2715.782
+        },
+        {
+            "Country": "Mongolia",
+            "Abbreviation": "MNG",
+            "Rating": 2.48,
+            "GDP Per Cap": 3800.11
+        },
+        {
+            "Country": "Morocco",
+            "Abbreviation": "MAR",
+            "Rating": 4.41,
+            "GDP Per Cap": 3235.57
+        },
+        {
+            "Country": "Mozambique",
+            "Abbreviation": "MOZ",
+            "Rating": 2.84,
+            "GDP Per Cap": 599.4
+        },
+        {
+            "Country": "Myanmar",
+            "Abbreviation": "MMR",
+            "Rating": 2.34,
+            "GDP Per Cap": 1223.742
+        },
+        {
+            "Country": "Namibia",
+            "Abbreviation": "NAM",
+            "Rating": 4.53,
+            "GDP Per Cap": 4888.059
+        },
+        {
+            "Country": "Nepal",
+            "Abbreviation": "NPL",
+            "Rating": 2.39,
+            "GDP Per Cap": 882.308
+        },
+        {
+            "Country": "Netherlands",
+            "Abbreviation": "NLD",
+            "Rating": 6.27,
+            "GDP Per Cap": 45904.668
+        },
+        {
+            "Country": "New Zealand",
+            "Abbreviation": "NZL",
+            "Rating": 4.87,
+            "GDP Per Cap": 38224.631
+        },
+        {
+            "Country": "Nicaragua",
+            "Abbreviation": "NIC",
+            "Rating": 3.32,
+            "GDP Per Cap": 2029.124
+        },
+        {
+            "Country": "Nigeria",
+            "Abbreviation": "NGA",
+            "Rating": 2.64,
+            "GDP Per Cap": 2718.586
+        },
+        {
+            "Country": "Norway",
+            "Abbreviation": "NOR",
+            "Rating": 4.82,
+            "GDP Per Cap": 74568.136
+        },
+        {
+            "Country": "Oman",
+            "Abbreviation": "OMN",
+            "Rating": 5.07,
+            "GDP Per Cap": 18924.97
+        },
+        {
+            "Country": "Pakistan",
+            "Abbreviation": "PAK",
+            "Rating": 3.7,
+            "GDP Per Cap": 1535.348
+        },
+        {
+            "Country": "Panama",
+            "Abbreviation": "PAN",
+            "Rating": 5.23,
+            "GDP Per Cap": 14102.156
+        },
+        {
+            "Country": "Paraguay",
+            "Abbreviation": "PRY",
+            "Rating": 2.65,
+            "GDP Per Cap": 5360.077
+        },
+        {
+            "Country": "Philippines",
+            "Abbreviation": "PHL",
+            "Rating": 3.1,
+            "GDP Per Cap": 3039.234
+        },
+        {
+            "Country": "Poland",
+            "Abbreviation": "POL",
+            "Rating": 3.75,
+            "GDP Per Cap": 12545.188
+        },
+        {
+            "Country": "Portugal",
+            "Abbreviation": "PRT",
+            "Rating": 5.32,
+            "GDP Per Cap": 19252.053
+        },
+        {
+            "Country": "Qatar",
+            "Abbreviation": "QAT",
+            "Rating": 5.73,
+            "GDP Per Cap": 66346.911
+        },
+        {
+            "Country": "Romania",
+            "Abbreviation": "ROU",
+            "Rating": 3.12,
+            "GDP Per Cap": 8951.736
+        },
+        {
+            "Country": "Russian Federation",
+            "Abbreviation": "RUS",
+            "Rating": 3.77,
+            "GDP Per Cap": 9231.599
+        },
+        {
+            "Country": "Senegal",
+            "Abbreviation": "SEN",
+            "Rating": 3.45,
+            "GDP Per Cap": 1219.373
+        },
+        {
+            "Country": "Serbia",
+            "Abbreviation": "SRB",
+            "Rating": 2.83,
+            "GDP Per Cap": 5588.979
+        },
+        {
+            "Country": "Seychelles",
+            "Abbreviation": "SYC",
+            "Rating": 4.69,
+            "GDP Per Cap": 15375.608
+        },
+        {
+            "Country": "Sierra Leone",
+            "Abbreviation": "SLE",
+            "Rating": 2.66,
+            "GDP Per Cap": 941.231
+        },
+        {
+            "Country": "Singapore",
+            "Abbreviation": "SGP",
+            "Rating": 6.33,
+            "GDP Per Cap": 55645.607
+        },
+        {
+            "Country": "Slovak Republic",
+            "Abbreviation": "SVK",
+            "Rating": 3.83,
+            "GDP Per Cap": 16399.966
+        },
+        {
+            "Country": "Slovenia",
+            "Abbreviation": "SVN",
+            "Rating": 4.3,
+            "GDP Per Cap": 20705.968
+        },
+        {
+            "Country": "South Africa",
+            "Abbreviation": "ZAF",
+            "Rating": 4.83,
+            "GDP Per Cap": 6222.526
+        },
+        {
+            "Country": "Spain",
+            "Abbreviation": "ESP",
+            "Rating": 5.82,
+            "GDP Per Cap": 25991.877
+        },
+        {
+            "Country": "Sri Lanka",
+            "Abbreviation": "LKA",
+            "Rating": 4.58,
+            "GDP Per Cap": 4057.742
+        },
+        {
+            "Country": "Sweden",
+            "Abbreviation": "SWE",
+            "Rating": 5.21,
+            "GDP Per Cap": 50928.576
+        },
+        {
+            "Country": "Switzerland",
+            "Abbreviation": "CHE",
+            "Rating": 5.8,
+            "GDP Per Cap": 84224.924
+        },
+        {
+            "Country": "Tajikistan",
+            "Abbreviation": "TJK",
+            "Rating": 3.3,
+            "GDP Per Cap": 919.073
+        },
+        {
+            "Country": "Thailand",
+            "Abbreviation": "THA",
+            "Rating": 4.1,
+            "GDP Per Cap": 5838.399
+        },
+        {
+            "Country": "Trinidad and Tobago",
+            "Abbreviation": "TTO",
+            "Rating": 4.21,
+            "GDP Per Cap": 19722.777
+        },
+        {
+            "Country": "Tunisia",
+            "Abbreviation": "TUN",
+            "Rating": 3.48,
+            "GDP Per Cap": 4060.695
+        },
+        {
+            "Country": "Uganda",
+            "Abbreviation": "UGA",
+            "Rating": 2.62,
+            "GDP Per Cap": 848.69
+        },
+        {
+            "Country": "Ukraine",
+            "Abbreviation": "UKR",
+            "Rating": 3.37,
+            "GDP Per Cap": 2134.773
+        },
+        {
+            "Country": "United Arab Emirates",
+            "Abbreviation": "ARE",
+            "Rating": 6.6,
+            "GDP Per Cap": 41422.602
+        },
+        {
+            "Country": "United Kingdom",
+            "Abbreviation": "GBR",
+            "Rating": 5.35,
+            "GDP Per Cap": 44978.619
+        },
+        {
+            "Country": "United States",
+            "Abbreviation": "USA",
+            "Rating": 5.67,
+            "GDP Per Cap": 57006.926
+        },
+        {
+            "Country": "Uruguay",
+            "Abbreviation": "URY",
+            "Rating": 3.23,
+            "GDP Per Cap": 16791.911
+        },
+        {
+            "Country": "Vietnam",
+            "Abbreviation": "VNM",
+            "Rating": 3.65,
+            "GDP Per Cap": 2581.907
+        },
+        {
+            "Country": "Zambia",
+            "Abbreviation": "ZMB",
+            "Rating": 2.9,
+            "GDP Per Cap": 1307.536
+        },
+        {
+            "Country": "Zimbabwe",
+            "Abbreviation": "ZWE",
+            "Rating": 3.02,
+            "GDP Per Cap": 1418.306
+        }
+    ],
+    "2016": [
+        {
+            "Country": "Albania",
+            "Abbreviation": "ALB",
+            "Rating": 3.57,
+            "GDP Per Cap": 4124.405
+        },
+        {
+            "Country": "Algeria",
+            "Abbreviation": "DZA",
+            "Rating": 3.16,
+            "GDP Per Cap": 4426.58
+        },
+        {
+            "Country": "Argentina",
+            "Abbreviation": "ARG",
+            "Rating": 3.28,
+            "GDP Per Cap": 12772.868
+        },
+        {
+            "Country": "Armenia",
+            "Abbreviation": "ARM",
+            "Rating": 3.32,
+            "GDP Per Cap": 3524.0
+        },
+        {
+            "Country": "Australia",
+            "Abbreviation": "AUS",
+            "Rating": 4.71,
+            "GDP Per Cap": 51821.355
+        },
+        {
+            "Country": "Austria",
+            "Abbreviation": "AUT",
+            "Rating": 5.14,
+            "GDP Per Cap": 45278.829
+        },
+        {
+            "Country": "Azerbaijan",
+            "Abbreviation": "AZE",
+            "Rating": 4.55,
+            "GDP Per Cap": 3897.788
+        },
+        {
+            "Country": "Bahrain",
+            "Abbreviation": "BHR",
+            "Rating": 5.03,
+            "GDP Per Cap": 23800.001
+        },
+        {
+            "Country": "Bangladesh",
+            "Abbreviation": "BGD",
+            "Rating": 3.09,
+            "GDP Per Cap": 1679.021
+        },
+        {
+            "Country": "Barbados",
+            "Abbreviation": "BRB",
+            "Rating": 4.9,
+            "GDP Per Cap": 18704.689
+        },
+        {
+            "Country": "Belgium",
+            "Abbreviation": "BEL",
+            "Rating": 5.44,
+            "GDP Per Cap": 42076.398
+        },
+        {
+            "Country": "Bhutan",
+            "Abbreviation": "BTN",
+            "Rating": 3.12,
+            "GDP Per Cap": 3071.344
+        },
+        {
+            "Country": "Bolivia",
+            "Abbreviation": "BOL",
+            "Rating": 2.79,
+            "GDP Per Cap": 3110.874
+        },
+        {
+            "Country": "Botswana",
+            "Abbreviation": "BWA",
+            "Rating": 3.6,
+            "GDP Per Cap": 6411.552
+        },
+        {
+            "Country": "Brazil",
+            "Abbreviation": "BRA",
+            "Rating": 2.92,
+            "GDP Per Cap": 8812.503
+        },
+        {
+            "Country": "Bulgaria",
+            "Abbreviation": "BGR",
+            "Rating": 3.64,
+            "GDP Per Cap": 7593.706
+        },
+        {
+            "Country": "Burundi",
+            "Abbreviation": "BDI",
+            "Rating": 2.6,
+            "GDP Per Cap": 281.062
+        },
+        {
+            "Country": "Cabo Verde",
+            "Abbreviation": "CPV",
+            "Rating": 3.75,
+            "GDP Per Cap": 3759.98
+        },
+        {
+            "Country": "Cameroon",
+            "Abbreviation": "CMR",
+            "Rating": 2.62,
+            "GDP Per Cap": 1412.866
+        },
+        {
+            "Country": "Canada",
+            "Abbreviation": "CAN",
+            "Rating": 5.33,
+            "GDP Per Cap": 42382.499
+        },
+        {
+            "Country": "Chile",
+            "Abbreviation": "CHL",
+            "Rating": 4.29,
+            "GDP Per Cap": 13722.878
+        },
+        {
+            "Country": "Colombia",
+            "Abbreviation": "COL",
+            "Rating": 3.04,
+            "GDP Per Cap": 6037.14
+        },
+        {
+            "Country": "Costa Rica",
+            "Abbreviation": "CRI",
+            "Rating": 3.08,
+            "GDP Per Cap": 11986.918
+        },
+        {
+            "Country": "Croatia",
+            "Abbreviation": "HRV",
+            "Rating": 4.24,
+            "GDP Per Cap": 12632.022
+        },
+        {
+            "Country": "Cyprus",
+            "Abbreviation": "CYP",
+            "Rating": 4.7,
+            "GDP Per Cap": 24802.599
+        },
+        {
+            "Country": "Denmark",
+            "Abbreviation": "DNK",
+            "Rating": 5.49,
+            "GDP Per Cap": 54699.182
+        },
+        {
+            "Country": "Dominican Republic",
+            "Abbreviation": "DOM",
+            "Rating": 4.57,
+            "GDP Per Cap": 7521.268
+        },
+        {
+            "Country": "Ecuador",
+            "Abbreviation": "ECU",
+            "Rating": 5.01,
+            "GDP Per Cap": 5907.928
+        },
+        {
+            "Country": "El Salvador",
+            "Abbreviation": "SLV",
+            "Rating": 3.92,
+            "GDP Per Cap": 3870.318
+        },
+        {
+            "Country": "Estonia",
+            "Abbreviation": "EST",
+            "Rating": 4.68,
+            "GDP Per Cap": 18661.231
+        },
+        {
+            "Country": "Ethiopia",
+            "Abbreviation": "ETH",
+            "Rating": 3.57,
+            "GDP Per Cap": 790.789
+        },
+        {
+            "Country": "Finland",
+            "Abbreviation": "FIN",
+            "Rating": 5.96,
+            "GDP Per Cap": 43502.557
+        },
+        {
+            "Country": "France",
+            "Abbreviation": "FRA",
+            "Rating": 5.76,
+            "GDP Per Cap": 38308.857
+        },
+        {
+            "Country": "Gambia, The",
+            "Abbreviation": "GMB",
+            "Rating": 4.03,
+            "GDP Per Cap": 683.998
+        },
+        {
+            "Country": "Georgia",
+            "Abbreviation": "GEO",
+            "Rating": 3.92,
+            "GDP Per Cap": 4142.174
+        },
+        {
+            "Country": "Germany",
+            "Abbreviation": "DEU",
+            "Rating": 5.61,
+            "GDP Per Cap": 42949.139
+        },
+        {
+            "Country": "Ghana",
+            "Abbreviation": "GHA",
+            "Rating": 3.25,
+            "GDP Per Cap": 1982.239
+        },
+        {
+            "Country": "Greece",
+            "Abbreviation": "GRC",
+            "Rating": 4.16,
+            "GDP Per Cap": 17906.1
+        },
+        {
+            "Country": "Guatemala",
+            "Abbreviation": "GTM",
+            "Rating": 3.65,
+            "GDP Per Cap": 4172.065
+        },
+        {
+            "Country": "Honduras",
+            "Abbreviation": "HND",
+            "Rating": 4.14,
+            "GDP Per Cap": 2325.495
+        },
+        {
+            "Country": "Hungary",
+            "Abbreviation": "HUN",
+            "Rating": 3.78,
+            "GDP Per Cap": 13083.4
+        },
+        {
+            "Country": "Iceland",
+            "Abbreviation": "ISL",
+            "Rating": 5.54,
+            "GDP Per Cap": 63775.711
+        },
+        {
+            "Country": "India",
+            "Abbreviation": "IND",
+            "Rating": 4.48,
+            "GDP Per Cap": 1714.28
+        },
+        {
+            "Country": "Indonesia",
+            "Abbreviation": "IDN",
+            "Rating": 4.03,
+            "GDP Per Cap": 3604.99
+        },
+        {
+            "Country": "Ireland",
+            "Abbreviation": "IRL",
+            "Rating": 4.94,
+            "GDP Per Cap": 63933.791
+        },
+        {
+            "Country": "Israel",
+            "Abbreviation": "ISR",
+            "Rating": 4.58,
+            "GDP Per Cap": 37683.096
+        },
+        {
+            "Country": "Italy",
+            "Abbreviation": "ITA",
+            "Rating": 4.41,
+            "GDP Per Cap": 31357.601
+        },
+        {
+            "Country": "Jamaica",
+            "Abbreviation": "JAM",
+            "Rating": 4.51,
+            "GDP Per Cap": 5183.462
+        },
+        {
+            "Country": "Japan",
+            "Abbreviation": "JPN",
+            "Rating": 5.92,
+            "GDP Per Cap": 39411.424
+        },
+        {
+            "Country": "Jordan",
+            "Abbreviation": "JOR",
+            "Rating": 4.17,
+            "GDP Per Cap": 4009.059
+        },
+        {
+            "Country": "Kazakhstan",
+            "Abbreviation": "KAZ",
+            "Rating": 3.6,
+            "GDP Per Cap": 7715.462
+        },
+        {
+            "Country": "Kenya",
+            "Abbreviation": "KEN",
+            "Rating": 4.02,
+            "GDP Per Cap": 1688.852
+        },
+        {
+            "Country": "Kuwait",
+            "Abbreviation": "KWT",
+            "Rating": 4.03,
+            "GDP Per Cap": 26795.706
+        },
+        {
+            "Country": "Kyrgyz Republic",
+            "Abbreviation": "KGZ",
+            "Rating": 2.31,
+            "GDP Per Cap": 1131.841
+        },
+        {
+            "Country": "Latvia",
+            "Abbreviation": "LVA",
+            "Rating": 4.38,
+            "GDP Per Cap": 14259.249
+        },
+        {
+            "Country": "Lebanon",
+            "Abbreviation": "LBN",
+            "Rating": 3.55,
+            "GDP Per Cap": 8172.768
+        },
+        {
+            "Country": "Liberia",
+            "Abbreviation": "LBR",
+            "Rating": 3.16,
+            "GDP Per Cap": 709.824
+        },
+        {
+            "Country": "Lithuania",
+            "Abbreviation": "LTU",
+            "Rating": 4.65,
+            "GDP Per Cap": 15012.141
+        },
+        {
+            "Country": "Luxembourg",
+            "Abbreviation": "LUX",
+            "Rating": 5.13,
+            "GDP Per Cap": 107948.199
+        },
+        {
+            "Country": "Madagascar",
+            "Abbreviation": "MDG",
+            "Rating": 2.62,
+            "GDP Per Cap": 489.439
+        },
+        {
+            "Country": "Malaysia",
+            "Abbreviation": "MYS",
+            "Rating": 5.42,
+            "GDP Per Cap": 9523.316
+        },
+        {
+            "Country": "Malta",
+            "Abbreviation": "MLT",
+            "Rating": 4.67,
+            "GDP Per Cap": 26691.849
+        },
+        {
+            "Country": "Mauritius",
+            "Abbreviation": "MUS",
+            "Rating": 4.54,
+            "GDP Per Cap": 9967.673
+        },
+        {
+            "Country": "Mexico",
+            "Abbreviation": "MEX",
+            "Rating": 4.05,
+            "GDP Per Cap": 8999.57
+        },
+        {
+            "Country": "Moldova",
+            "Abbreviation": "MDA",
+            "Rating": 2.81,
+            "GDP Per Cap": 2857.879
+        },
+        {
+            "Country": "Mongolia",
+            "Abbreviation": "MNG",
+            "Rating": 2.54,
+            "GDP Per Cap": 3575.095
+        },
+        {
+            "Country": "Morocco",
+            "Abbreviation": "MAR",
+            "Rating": 4.46,
+            "GDP Per Cap": 3235.218
+        },
+        {
+            "Country": "Mozambique",
+            "Abbreviation": "MOZ",
+            "Rating": 2.95,
+            "GDP Per Cap": 433.672
+        },
+        {
+            "Country": "Namibia",
+            "Abbreviation": "NAM",
+            "Rating": 4.57,
+            "GDP Per Cap": 4454.9
+        },
+        {
+            "Country": "Nepal",
+            "Abbreviation": "NPL",
+            "Rating": 2.28,
+            "GDP Per Cap": 880.225
+        },
+        {
+            "Country": "Netherlands",
+            "Abbreviation": "NLD",
+            "Rating": 6.25,
+            "GDP Per Cap": 46936.707
+        },
+        {
+            "Country": "New Zealand",
+            "Abbreviation": "NZL",
+            "Rating": 4.73,
+            "GDP Per Cap": 39415.045
+        },
+        {
+            "Country": "Nicaragua",
+            "Abbreviation": "NIC",
+            "Rating": 3.32,
+            "GDP Per Cap": 2091.463
+        },
+        {
+            "Country": "Nigeria",
+            "Abbreviation": "NGA",
+            "Rating": 2.53,
+            "GDP Per Cap": 2176.001
+        },
+        {
+            "Country": "Norway",
+            "Abbreviation": "NOR",
+            "Rating": 4.74,
+            "GDP Per Cap": 70629.25
+        },
+        {
+            "Country": "Oman",
+            "Abbreviation": "OMN",
+            "Rating": 4.94,
+            "GDP Per Cap": 17020.387
+        },
+        {
+            "Country": "Pakistan",
+            "Abbreviation": "PAK",
+            "Rating": 3.66,
+            "GDP Per Cap": 1566.625
+        },
+        {
+            "Country": "Panama",
+            "Abbreviation": "PAN",
+            "Rating": 5.32,
+            "GDP Per Cap": 14866.506
+        },
+        {
+            "Country": "Paraguay",
+            "Abbreviation": "PRY",
+            "Rating": 2.66,
+            "GDP Per Cap": 5265.061
+        },
+        {
+            "Country": "Philippines",
+            "Abbreviation": "PHL",
+            "Rating": 2.8,
+            "GDP Per Cap": 3107.646
+        },
+        {
+            "Country": "Poland",
+            "Abbreviation": "POL",
+            "Rating": 3.94,
+            "GDP Per Cap": 12369.893
+        },
+        {
+            "Country": "Portugal",
+            "Abbreviation": "PRT",
+            "Rating": 5.17,
+            "GDP Per Cap": 19986.459
+        },
+        {
+            "Country": "Qatar",
+            "Abbreviation": "QAT",
+            "Rating": 5.62,
+            "GDP Per Cap": 57965.377
+        },
+        {
+            "Country": "Romania",
+            "Abbreviation": "ROU",
+            "Rating": 3.03,
+            "GDP Per Cap": 9378.957
+        },
+        {
+            "Country": "Russian Federation",
+            "Abbreviation": "RUS",
+            "Rating": 3.91,
+            "GDP Per Cap": 8689.368
+        },
+        {
+            "Country": "Senegal",
+            "Abbreviation": "SEN",
+            "Rating": 3.67,
+            "GDP Per Cap": 1269.553
+        },
+        {
+            "Country": "Serbia",
+            "Abbreviation": "SRB",
+            "Rating": 2.94,
+            "GDP Per Cap": 5765.203
+        },
+        {
+            "Country": "Sierra Leone",
+            "Abbreviation": "SLE",
+            "Rating": 2.83,
+            "GDP Per Cap": 821.872
+        },
+        {
+            "Country": "Singapore",
+            "Abbreviation": "SGP",
+            "Rating": 6.38,
+            "GDP Per Cap": 56899.903
+        },
+        {
+            "Country": "Slovak Republic",
+            "Abbreviation": "SVK",
+            "Rating": 3.78,
+            "GDP Per Cap": 16572.743
+        },
+        {
+            "Country": "Slovenia",
+            "Abbreviation": "SVN",
+            "Rating": 4.2,
+            "GDP Per Cap": 21450.814
+        },
+        {
+            "Country": "South Africa",
+            "Abbreviation": "ZAF",
+            "Rating": 4.92,
+            "GDP Per Cap": 5721.189
+        },
+        {
+            "Country": "Spain",
+            "Abbreviation": "ESP",
+            "Rating": 5.62,
+            "GDP Per Cap": 26752.982
+        },
+        {
+            "Country": "Sri Lanka",
+            "Abbreviation": "LKA",
+            "Rating": 4.29,
+            "GDP Per Cap": 4150.367
+        },
+        {
+            "Country": "Sweden",
+            "Abbreviation": "SWE",
+            "Rating": 5.17,
+            "GDP Per Cap": 51446.757
+        },
+        {
+            "Country": "Switzerland",
+            "Abbreviation": "CHE",
+            "Rating": 5.77,
+            "GDP Per Cap": 82589.322
+        },
+        {
+            "Country": "Tajikistan",
+            "Abbreviation": "TJK",
+            "Rating": 3.54,
+            "GDP Per Cap": 800.645
+        },
+        {
+            "Country": "Thailand",
+            "Abbreviation": "THA",
+            "Rating": 3.96,
+            "GDP Per Cap": 5994.949
+        },
+        {
+            "Country": "Trinidad and Tobago",
+            "Abbreviation": "TTO",
+            "Rating": 4.05,
+            "GDP Per Cap": 17220.758
+        },
+        {
+            "Country": "Tunisia",
+            "Abbreviation": "TUN",
+            "Rating": 3.37,
+            "GDP Per Cap": 3890.127
+        },
+        {
+            "Country": "Uganda",
+            "Abbreviation": "UGA",
+            "Rating": 2.69,
+            "GDP Per Cap": 826.904
+        },
+        {
+            "Country": "Ukraine",
+            "Abbreviation": "UKR",
+            "Rating": 3.39,
+            "GDP Per Cap": 2200.851
+        },
+        {
+            "Country": "United Arab Emirates",
+            "Abbreviation": "ARE",
+            "Rating": 6.54,
+            "GDP Per Cap": 40483.337
+        },
+        {
+            "Country": "United Kingdom",
+            "Abbreviation": "GBR",
+            "Rating": 5.32,
+            "GDP Per Cap": 41114.514
+        },
+        {
+            "Country": "United States",
+            "Abbreviation": "USA",
+            "Rating": 5.63,
+            "GDP Per Cap": 58179.697
+        },
+        {
+            "Country": "Uruguay",
+            "Abbreviation": "URY",
+            "Rating": 3.42,
+            "GDP Per Cap": 16544.81
+        },
+        {
+            "Country": "Vietnam",
+            "Abbreviation": "VNM",
+            "Rating": 3.63,
+            "GDP Per Cap": 2720.168
+        },
+        {
+            "Country": "Zambia",
+            "Abbreviation": "ZMB",
+            "Rating": 2.87,
+            "GDP Per Cap": 1250.324
+        },
+        {
+            "Country": "Zimbabwe",
+            "Abbreviation": "ZWE",
+            "Rating": 3.06,
+            "GDP Per Cap": 1429.829
+        }
+    ],
+    "2017": [
+        {
+            "Country": "Albania",
+            "Abbreviation": "ALB",
+            "Rating": 3.44,
+            "GDP Per Cap": 4542.76
+        },
+        {
+            "Country": "Algeria",
+            "Abbreviation": "DZA",
+            "Rating": 3.51,
+            "GDP Per Cap": 4554.15
+        },
+        {
+            "Country": "Argentina",
+            "Abbreviation": "ARG",
+            "Rating": 3.32,
+            "GDP Per Cap": 14618.327
+        },
+        {
+            "Country": "Armenia",
+            "Abbreviation": "ARM",
+            "Rating": 3.45,
+            "GDP Per Cap": 3868.906
+        },
+        {
+            "Country": "Australia",
+            "Abbreviation": "AUS",
+            "Rating": 4.75,
+            "GDP Per Cap": 55845.011
+        },
+        {
+            "Country": "Austria",
+            "Abbreviation": "AUT",
+            "Rating": 5.07,
+            "GDP Per Cap": 47320.537
+        },
+        {
+            "Country": "Azerbaijan",
+            "Abbreviation": "AZE",
+            "Rating": 4.96,
+            "GDP Per Cap": 4217.653
+        },
+        {
+            "Country": "Bahrain",
+            "Abbreviation": "BHR",
+            "Rating": 5.03,
+            "GDP Per Cap": 24784.769
+        },
+        {
+            "Country": "Bangladesh",
+            "Abbreviation": "BGD",
+            "Rating": 3.24,
+            "GDP Per Cap": 1839.755
+        },
+        {
+            "Country": "Belgium",
+            "Abbreviation": "BEL",
+            "Rating": 5.28,
+            "GDP Per Cap": 44274.073
+        },
+        {
+            "Country": "Bhutan",
+            "Abbreviation": "BTN",
+            "Rating": 3.4,
+            "GDP Per Cap": 3344.035
+        },
+        {
+            "Country": "Botswana",
+            "Abbreviation": "BWA",
+            "Rating": 3.55,
+            "GDP Per Cap": 6705.341
+        },
+        {
+            "Country": "Brazil",
+            "Abbreviation": "BRA",
+            "Rating": 3.06,
+            "GDP Per Cap": 10055.567
+        },
+        {
+            "Country": "Bulgaria",
+            "Abbreviation": "BGR",
+            "Rating": 3.69,
+            "GDP Per Cap": 8409.665
+        },
+        {
+            "Country": "Burundi",
+            "Abbreviation": "BDI",
+            "Rating": 2.92,
+            "GDP Per Cap": 291.859
+        },
+        {
+            "Country": "Cabo Verde",
+            "Abbreviation": "CPV",
+            "Rating": 3.81,
+            "GDP Per Cap": 3965.504
+        },
+        {
+            "Country": "Cameroon",
+            "Abbreviation": "CMR",
+            "Rating": 2.7,
+            "GDP Per Cap": 1468.929
+        },
+        {
+            "Country": "Canada",
+            "Abbreviation": "CAN",
+            "Rating": 5.4,
+            "GDP Per Cap": 45192.368
+        },
+        {
+            "Country": "Chile",
+            "Abbreviation": "CHL",
+            "Rating": 4.28,
+            "GDP Per Cap": 15003.77
+        },
+        {
+            "Country": "Colombia",
+            "Abbreviation": "COL",
+            "Rating": 3.13,
+            "GDP Per Cap": 6577.28
+        },
+        {
+            "Country": "Costa Rica",
+            "Abbreviation": "CRI",
+            "Rating": 3.51,
+            "GDP Per Cap": 12185.259
+        },
+        {
+            "Country": "Croatia",
+            "Abbreviation": "HRV",
+            "Rating": 4.28,
+            "GDP Per Cap": 13648.851
+        },
+        {
+            "Country": "Cyprus",
+            "Abbreviation": "CYP",
+            "Rating": 5.07,
+            "GDP Per Cap": 26834.665
+        },
+        {
+            "Country": "Denmark",
+            "Abbreviation": "DNK",
+            "Rating": 5.46,
+            "GDP Per Cap": 57683.746
+        },
+        {
+            "Country": "Dominican Republic",
+            "Abbreviation": "DOM",
+            "Rating": 4.65,
+            "GDP Per Cap": 7874.941
+        },
+        {
+            "Country": "Ecuador",
+            "Abbreviation": "ECU",
+            "Rating": 4.95,
+            "GDP Per Cap": 6220.968
+        },
+        {
+            "Country": "El Salvador",
+            "Abbreviation": "SLV",
+            "Rating": 3.75,
+            "GDP Per Cap": 3986.02
+        },
+        {
+            "Country": "Estonia",
+            "Abbreviation": "EST",
+            "Rating": 4.89,
+            "GDP Per Cap": 20844.174
+        },
+        {
+            "Country": "Eswatini",
+            "Abbreviation": "SWZ",
+            "Rating": 3.99,
+            "GDP Per Cap": 4031.056
+        },
+        {
+            "Country": "Ethiopia",
+            "Abbreviation": "ETH",
+            "Rating": 3.27,
+            "GDP Per Cap": 822.704
+        },
+        {
+            "Country": "Finland",
+            "Abbreviation": "FIN",
+            "Rating": 5.89,
+            "GDP Per Cap": 46109.916
+        },
+        {
+            "Country": "France",
+            "Abbreviation": "FRA",
+            "Rating": 5.67,
+            "GDP Per Cap": 40036.974
+        },
+        {
+            "Country": "Gambia, The",
+            "Abbreviation": "GMB",
+            "Rating": 4.32,
+            "GDP Per Cap": 676.656
+        },
+        {
+            "Country": "Georgia",
+            "Abbreviation": "GEO",
+            "Rating": 4.0,
+            "GDP Per Cap": 4420.41
+        },
+        {
+            "Country": "Germany",
+            "Abbreviation": "DEU",
+            "Rating": 5.55,
+            "GDP Per Cap": 45510.535
+        },
+        {
+            "Country": "Ghana",
+            "Abbreviation": "GHA",
+            "Rating": 3.33,
+            "GDP Per Cap": 2086.598
+        },
+        {
+            "Country": "Greece",
+            "Abbreviation": "GRC",
+            "Rating": 4.17,
+            "GDP Per Cap": 18552.223
+        },
+        {
+            "Country": "Guatemala",
+            "Abbreviation": "GTM",
+            "Rating": 3.35,
+            "GDP Per Cap": 4452.202
+        },
+        {
+            "Country": "Honduras",
+            "Abbreviation": "HND",
+            "Rating": 4.06,
+            "GDP Per Cap": 2435.621
+        },
+        {
+            "Country": "Hungary",
+            "Abbreviation": "HUN",
+            "Rating": 3.78,
+            "GDP Per Cap": 14606.266
+        },
+        {
+            "Country": "Iceland",
+            "Abbreviation": "ISL",
+            "Rating": 5.38,
+            "GDP Per Cap": 74369.205
+        },
+        {
+            "Country": "India",
+            "Abbreviation": "IND",
+            "Rating": 4.46,
+            "GDP Per Cap": 1957.97
+        },
+        {
+            "Country": "Indonesia",
+            "Abbreviation": "IDN",
+            "Rating": 4.28,
+            "GDP Per Cap": 3885.967
+        },
+        {
+            "Country": "Ireland",
+            "Abbreviation": "IRL",
+            "Rating": 4.71,
+            "GDP Per Cap": 71869.279
+        },
+        {
+            "Country": "Israel",
+            "Abbreviation": "ISR",
+            "Rating": 4.74,
+            "GDP Per Cap": 41156.216
+        },
+        {
+            "Country": "Italy",
+            "Abbreviation": "ITA",
+            "Rating": 4.41,
+            "GDP Per Cap": 32797.298
+        },
+        {
+            "Country": "Jamaica",
+            "Abbreviation": "JAM",
+            "Rating": 4.61,
+            "GDP Per Cap": 5413.03
+        },
+        {
+            "Country": "Japan",
+            "Abbreviation": "JPN",
+            "Rating": 5.88,
+            "GDP Per Cap": 38903.298
+        },
+        {
+            "Country": "Jordan",
+            "Abbreviation": "JOR",
+            "Rating": 4.04,
+            "GDP Per Cap": 4078.871
+        },
+        {
+            "Country": "Kazakhstan",
+            "Abbreviation": "KAZ",
+            "Rating": 3.55,
+            "GDP Per Cap": 9247.587
+        },
+        {
+            "Country": "Kenya",
+            "Abbreviation": "KEN",
+            "Rating": 4.19,
+            "GDP Per Cap": 1805.398
+        },
+        {
+            "Country": "Kuwait",
+            "Abbreviation": "KWT",
+            "Rating": 3.71,
+            "GDP Per Cap": 28552.15
+        },
+        {
+            "Country": "Kyrgyz Republic",
+            "Abbreviation": "KGZ",
+            "Rating": 2.39,
+            "GDP Per Cap": 1254.51
+        },
+        {
+            "Country": "Latvia",
+            "Abbreviation": "LVA",
+            "Rating": 4.4,
+            "GDP Per Cap": 15626.275
+        },
+        {
+            "Country": "Lebanon",
+            "Abbreviation": "LBN",
+            "Rating": 3.33,
+            "GDP Per Cap": 8680.307
+        },
+        {
+            "Country": "Liberia",
+            "Abbreviation": "LBR",
+            "Rating": 3.02,
+            "GDP Per Cap": 706.239
+        },
+        {
+            "Country": "Lithuania",
+            "Abbreviation": "LTU",
+            "Rating": 4.56,
+            "GDP Per Cap": 16866.728
+        },
+        {
+            "Country": "Luxembourg",
+            "Abbreviation": "LUX",
+            "Rating": 5.12,
+            "GDP Per Cap": 111211.579
+        },
+        {
+            "Country": "Madagascar",
+            "Abbreviation": "MDG",
+            "Rating": 2.79,
+            "GDP Per Cap": 528.379
+        },
+        {
+            "Country": "Malaysia",
+            "Abbreviation": "MYS",
+            "Rating": 5.34,
+            "GDP Per Cap": 9965.123
+        },
+        {
+            "Country": "Malta",
+            "Abbreviation": "MLT",
+            "Rating": 4.72,
+            "GDP Per Cap": 30754.81
+        },
+        {
+            "Country": "Mauritius",
+            "Abbreviation": "MUS",
+            "Rating": 4.51,
+            "GDP Per Cap": 10844.145
+        },
+        {
+            "Country": "Mexico",
+            "Abbreviation": "MEX",
+            "Rating": 3.98,
+            "GDP Per Cap": 9542.783
+        },
+        {
+            "Country": "Moldova",
+            "Abbreviation": "MDA",
+            "Rating": 2.95,
+            "GDP Per Cap": 3422.643
+        },
+        {
+            "Country": "Mongolia",
+            "Abbreviation": "MNG",
+            "Rating": 2.64,
+            "GDP Per Cap": 3612.716
+        },
+        {
+            "Country": "Morocco",
+            "Abbreviation": "MAR",
+            "Rating": 4.55,
+            "GDP Per Cap": 3401.256
+        },
+        {
+            "Country": "Mozambique",
+            "Abbreviation": "MOZ",
+            "Rating": 2.99,
+            "GDP Per Cap": 463.005
+        },
+        {
+            "Country": "Namibia",
+            "Abbreviation": "NAM",
+            "Rating": 4.55,
+            "GDP Per Cap": 5210.902
+        },
+        {
+            "Country": "Nepal",
+            "Abbreviation": "NPL",
+            "Rating": 2.3,
+            "GDP Per Cap": 1027.965
+        },
+        {
+            "Country": "Netherlands",
+            "Abbreviation": "NLD",
+            "Rating": 6.32,
+            "GDP Per Cap": 49640.48
+        },
+        {
+            "Country": "New Zealand",
+            "Abbreviation": "NZL",
+            "Rating": 4.83,
+            "GDP Per Cap": 42289.966
+        },
+        {
+            "Country": "Nicaragua",
+            "Abbreviation": "NIC",
+            "Rating": 3.72,
+            "GDP Per Cap": 2147.856
+        },
+        {
+            "Country": "Nigeria",
+            "Abbreviation": "NGA",
+            "Rating": 2.44,
+            "GDP Per Cap": 1968.563
+        },
+        {
+            "Country": "Norway",
+            "Abbreviation": "NOR",
+            "Rating": 4.95,
+            "GDP Per Cap": 75940.175
+        },
+        {
+            "Country": "Oman",
+            "Abbreviation": "OMN",
+            "Rating": 4.94,
+            "GDP Per Cap": 17731.849
+        },
+        {
+            "Country": "Pakistan",
+            "Abbreviation": "PAK",
+            "Rating": 3.81,
+            "GDP Per Cap": 1653.406
+        },
+        {
+            "Country": "Panama",
+            "Abbreviation": "PAN",
+            "Rating": 5.25,
+            "GDP Per Cap": 15731.102
+        },
+        {
+            "Country": "Paraguay",
+            "Abbreviation": "PRY",
+            "Rating": 2.76,
+            "GDP Per Cap": 5608.156
+        },
+        {
+            "Country": "Philippines",
+            "Abbreviation": "PHL",
+            "Rating": 2.72,
+            "GDP Per Cap": 3153.314
+        },
+        {
+            "Country": "Poland",
+            "Abbreviation": "POL",
+            "Rating": 4.08,
+            "GDP Per Cap": 13819.834
+        },
+        {
+            "Country": "Portugal",
+            "Abbreviation": "PRT",
+            "Rating": 5.22,
+            "GDP Per Cap": 21482.834
+        },
+        {
+            "Country": "Qatar",
+            "Abbreviation": "QAT",
+            "Rating": 5.79,
+            "GDP Per Cap": 59127.513
+        },
+        {
+            "Country": "Romania",
+            "Abbreviation": "ROU",
+            "Rating": 3.22,
+            "GDP Per Cap": 10717.263
+        },
+        {
+            "Country": "Russian Federation",
+            "Abbreviation": "RUS",
+            "Rating": 4.06,
+            "GDP Per Cap": 10665.247
+        },
+        {
+            "Country": "Senegal",
+            "Abbreviation": "SEN",
+            "Rating": 3.62,
+            "GDP Per Cap": 1361.221
+        },
+        {
+            "Country": "Serbia",
+            "Abbreviation": "SRB",
+            "Rating": 3.15,
+            "GDP Per Cap": 6292.546
+        },
+        {
+            "Country": "Seychelles",
+            "Abbreviation": "SYC",
+            "Rating": 4.51,
+            "GDP Per Cap": 17738.31
+        },
+        {
+            "Country": "Sierra Leone",
+            "Abbreviation": "SLE",
+            "Rating": 3.08,
+            "GDP Per Cap": 776.064
+        },
+        {
+            "Country": "Singapore",
+            "Abbreviation": "SGP",
+            "Rating": 6.45,
+            "GDP Per Cap": 61162.097
+        },
+        {
+            "Country": "Slovak Republic",
+            "Abbreviation": "SVK",
+            "Rating": 3.73,
+            "GDP Per Cap": 17591.553
+        },
+        {
+            "Country": "Slovenia",
+            "Abbreviation": "SVN",
+            "Rating": 4.17,
+            "GDP Per Cap": 23300.425
+        },
+        {
+            "Country": "South Africa",
+            "Abbreviation": "ZAF",
+            "Rating": 4.6,
+            "GDP Per Cap": 6647.093
+        },
+        {
+            "Country": "Spain",
+            "Abbreviation": "ESP",
+            "Rating": 5.58,
+            "GDP Per Cap": 28394.717
+        },
+        {
+            "Country": "Sri Lanka",
+            "Abbreviation": "LKA",
+            "Rating": 4.02,
+            "GDP Per Cap": 4401.055
+        },
+        {
+            "Country": "Sweden",
+            "Abbreviation": "SWE",
+            "Rating": 5.33,
+            "GDP Per Cap": 52971.455
+        },
+        {
+            "Country": "Switzerland",
+            "Abbreviation": "CHE",
+            "Rating": 5.91,
+            "GDP Per Cap": 82601.498
+        },
+        {
+            "Country": "Tajikistan",
+            "Abbreviation": "TJK",
+            "Rating": 3.54,
+            "GDP Per Cap": 844.595
+        },
+        {
+            "Country": "Thailand",
+            "Abbreviation": "THA",
+            "Rating": 4.08,
+            "GDP Per Cap": 6593.517
+        },
+        {
+            "Country": "Trinidad and Tobago",
+            "Abbreviation": "TTO",
+            "Rating": 3.97,
+            "GDP Per Cap": 17369.342
+        },
+        {
+            "Country": "Tunisia",
+            "Abbreviation": "TUN",
+            "Rating": 3.44,
+            "GDP Per Cap": 3656.508
+        },
+        {
+            "Country": "Uganda",
+            "Abbreviation": "UGA",
+            "Rating": 2.67,
+            "GDP Per Cap": 838.495
+        },
+        {
+            "Country": "Ukraine",
+            "Abbreviation": "UKR",
+            "Rating": 3.46,
+            "GDP Per Cap": 2654.483
+        },
+        {
+            "Country": "United Arab Emirates",
+            "Abbreviation": "ARE",
+            "Rating": 6.4,
+            "GDP Per Cap": 41971.753
+        },
+        {
+            "Country": "United Kingdom",
+            "Abbreviation": "GBR",
+            "Rating": 5.2,
+            "GDP Per Cap": 40617.562
+        },
+        {
+            "Country": "United States",
+            "Abbreviation": "USA",
+            "Rating": 5.75,
+            "GDP Per Cap": 60292.978
+        },
+        {
+            "Country": "Uruguay",
+            "Abbreviation": "URY",
+            "Rating": 3.68,
+            "GDP Per Cap": 18626.981
+        },
+        {
+            "Country": "Vietnam",
+            "Abbreviation": "VNM",
+            "Rating": 3.44,
+            "GDP Per Cap": 2957.899
+        },
+        {
+            "Cou00try": "Zambia",
+            "Abbreviation": "ZMB",
+            "Rating": 2.86,
+            "GDP Per Cap": 1495.751
+        },
+        {
+            "Country": "Zimbabwe",
+            "Abbreviation": "ZWE",
+            "Rating": 2.94,
+            "GDP Per Cap": 1502.576
+        }
+    ]
+}

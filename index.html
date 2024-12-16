@@ -10,7 +10,7 @@
   
   <!-- CSS Styling -->
   <link rel="stylesheet" href="style.css">
- 
+
   <!-- Favicons -->
   <link rel="apple-touch-icon" sizes="180x180" href="favicons/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="favicons/favicon-32x32.png">
@@ -45,35 +45,33 @@
     <p><em>We hope that our visualization will show the relationship between the GDP of a country and its transit quality.</em></p>
 
     
-    <h1>Visualization</h1>
-    
-    <p><em>Here is our visualization:.</em></p>
-    
+    <h1>Visualization</h1>    
   </div>
-  
-
   <!-- Your visualization here -->
-  
+  <!-- Button row with years -->
+  <div class="button-row">
+    <button class="yearBtn" id="2007">2007</button>
+    <button class="yearBtn" id="2008">2008</button>
+    <button class="yearBtn" id="2009">2009</button>
+    <button class="yearBtn" id="2010">2010</button>
+    <button class="yearBtn" id="2011">2011</button>
+    <button class="yearBtn" id="2012">2012</button>
+    <button class="yearBtn" id="2013">2013</button>
+    <button class="yearBtn" id="2014">2014</button>
+    <button class="yearBtn" id="2015">2015</button>
+    <button class="yearBtn" id="2016">2016</button>
+    <button class="yearBtn" id="2017">2017</button>
+  </div>
+
   <div class="vis-holder">
     <!-- Change viewbox to whatever you want, e.g. "0 0 1000 6000" This determines your aspect ratio and coordinate system -->    
     <!-- Delete all the sample SVG code below after the viewbox to before the closing tag. Populate this part of the SVG with D3. -->
-    <p> OUR TABLE:</p> 
-  <!-- Button row with years -->
-    <div class="button-row">
-      <button class="yearBtn" id="2007">2007</button>
-      <button class="yearBtn" id="2008">2008</button>
-      <button class="yearBtn" id="2009">2009</button>
-      <button class="yearBtn" id="2010">2010</button>
-      <button class="yearBtn" id="2011">2011</button>
-      <button class="yearBtn" id="2012">2012</button>
-      <button class="yearBtn" id="2013">2013</button>
-      <button class="yearBtn" id="2014">2014</button>
-      <button class="yearBtn" id="2015">2015</button>
-      <button class="yearBtn" id="2016">2016</button>
-      <button class="yearBtn" id="2017">2017</button>
+    <div class="scatterplot-holder" id="scatterplot">
+      <p><strong>Scatterplot:</strong></p>
     </div>
-    <div class="bubblechart-holder" id="bubblechart"></div>
-    <div class="table-holder" id="table"></div>
+    <div class="table-holder" id="table">
+      <p> <strong>Our Table:</strong></p> 
+    </div>
     <!-- Don't delete the closing tag! -->
   </div>
   
@@ -87,7 +85,7 @@
     <video controls width="100%">
       <source src="http://www.ccs.neu.edu/home/cody/courses/shared/d3-flexible-transitions.mp4" type="video/mp4">
       <p>Your browser doesn't support HTML5 video. Here is
-       a <a href="http://www.ccs.neu.edu/home/cody/courses/shared/d3-flexible-transitions.mp4">link to the video</a> instead.</p>
+      <a href="http://www.ccs.neu.edu/home/cody/courses/shared/d3-flexible-transitions.mp4">link to the video</a> instead.</p>
     </video>
 
     <h1>Our visualization links a table that holds all realted data about all countries to a bubble chart showing GDP and trasportation efficiency and rating.</h1>
@@ -139,5 +137,6 @@
   <script src= "js/bubblechart.js"></script>
   <script src="js/test-viz.js"></script>
   <script src="js/table.js"></script>
+  <script src="js/scaterplot.js"></script>
 </body>
 </html>

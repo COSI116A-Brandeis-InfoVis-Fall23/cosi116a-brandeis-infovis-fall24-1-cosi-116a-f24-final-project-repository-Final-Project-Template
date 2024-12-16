@@ -52,7 +52,7 @@
       });
 
 
-       /* 
+/* 
       // When the line chart selection is updated via brushing, 
       // tell the scatterplot to update it's selection (linking)
       lcYearPoverty.selectionDispatcher().on(dispatchString, function(selectedData) {
