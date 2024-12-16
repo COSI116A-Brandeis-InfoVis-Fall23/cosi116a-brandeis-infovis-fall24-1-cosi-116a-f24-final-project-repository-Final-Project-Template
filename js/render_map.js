@@ -118,7 +118,8 @@ function map() {
         function highlightState(stateName) {
             svgStates.selectAll("path")
                 .style("fill", function(d) {
-                    return d.properties.STATENAM.replace(" Territory", "") === stateName ? "#0000FF" : colors_state[d.properties.STATENAM.replace(" Territory", "")];
+                    var currentColor = useStateColors ? colors_state[d.properties.STATENAM.replace(" Territory", "")] : colors_total[d.properties.STATENAM.replace(" Territory", "")];
+                    return d.properties.STATENAM.replace(" Territory", "") === stateName ? "#0000FF" : currentColor;
                 });
 
             let dispatchString = Object.getOwnPropertyNames(dispatcher._)[0];

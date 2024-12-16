@@ -50,11 +50,11 @@ path {
 }
 
 .left {
-	width: 33%;
+	width: 67%; /* Adjusted width to move heatmap to the left */
 }
   
   .right {
-	width: 66%;
+	width: 33%; /* Adjusted width to move heatmap to the left */
 }
 
 /* Clear floats after the columns */
