@@ -114,7 +114,7 @@ d3.csv("data/neighborhood_ridership.csv", function(data) {
         .attr("transform", `rotate(-90)`)
         .attr("x", -height / 2)
         .attr("y", -80)
-        .text("Total Gated Entries (in Millions)")
+        .text("Total Gated Entries (in Millions) (2023)")
         .style("font-size", "16px")
         .style("font-weight", "bold");
 });
