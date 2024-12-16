@@ -22,10 +22,7 @@ h3 {
 .iframe-container {
 	position: relative;
 	width: 100%; /* Full width of the parent element */
-	/* max-width: 800px; Optional: set a max width */
-	height: 650px;
-	padding-bottom: 75%;
-	/* Aspect ratio: 4:3 (adjust as needed) */
+	height: 850px;
 	overflow: auto;
 	border: #ccc 1px solid;
 	border-radius: 5px;
@@ -33,7 +30,6 @@ h3 {
 	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 	background-color: #f9f9f9;
 	margin-bottom: 20px;
-
 }
 
 /* Style the iframe to fit the container */
