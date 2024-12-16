@@ -42,7 +42,7 @@
     
     <p><em>We wanted to look at worldwide transportation data, and compare government spending with public transit quality.</em></p>
     
-    <p><em>We hope that our visualization will show the relationship between spending and transit quality</em></p>
+    <p><em>We hope that our visualization will show the relationship between the GDP of a country and its transit quality.</em></p>
 
     
     <h1>Visualization</h1>
@@ -51,14 +51,29 @@
     
   </div>
   
+
   <!-- Your visualization here -->
+  
   <div class="vis-holder">
     <!-- Change viewbox to whatever you want, e.g. "0 0 1000 6000" This determines your aspect ratio and coordinate system -->    
     <!-- Delete all the sample SVG code below after the viewbox to before the closing tag. Populate this part of the SVG with D3. -->
     <p> OUR TABLE:</p> 
+  <!-- Button row with years -->
+    <div class="button-row">
+      <button class="yearBtn" id="2007">2007</button>
+      <button class="yearBtn" id="2008">2008</button>
+      <button class="yearBtn" id="2009">2009</button>
+      <button class="yearBtn" id="2010">2010</button>
+      <button class="yearBtn" id="2011">2011</button>
+      <button class="yearBtn" id="2012">2012</button>
+      <button class="yearBtn" id="2013">2013</button>
+      <button class="yearBtn" id="2014">2014</button>
+      <button class="yearBtn" id="2015">2015</button>
+      <button class="yearBtn" id="2016">2016</button>
+      <button class="yearBtn" id="2017">2017</button>
+    </div>
     <div class="bubblechart-holder" id="bubblechart"></div>
     <div class="table-holder" id="table"></div>
-    
     <!-- Don't delete the closing tag! -->
   </div>
   
@@ -75,7 +90,7 @@
        a <a href="http://www.ccs.neu.edu/home/cody/courses/shared/d3-flexible-transitions.mp4">link to the video</a> instead.</p>
     </video>
 
-    <h1>Our visualization links a table to a bubble chart showing public transit investment and efficiency</h1>
+    <h1>Our visualization links a table that holds all realted data about all countries to a bubble chart showing GDP and trasportation efficiency and rating.</h1>
     
     <p><em>Final visualization screenshots (PNG images), design justifications, UI walk-through, and linked presentation slides.</em></p>
 
@@ -119,7 +134,10 @@
   
   <!-- Scripts at the end avoid need for dealing with async, defer, or onload event handlers -->
   <script src="lib/d3.v4/d3.v4.js"></script>
-  <script src="js/visualization.js"></script>
+  <script src="https://d3js.org/d3-scale-chromatic.v1.min.js"></script>
+  <!-- <script src="js/visualization.js"></script> -->
+  <script src= "js/bubblechart.js"></script>
+  <script src="js/test-viz.js"></script>
   <script src="js/table.js"></script>
 </body>
 </html>

@@ -17,9 +17,40 @@ h1, h2, h3 {
 
 /* But your visualization should be full-width and full-height */
 .vis-holder {
-  width: 100%;
-  height: 100%;
+	width: 100%;
+	height: 100%;
+
+	display: flex;
+	flex-direction: column;
+    align-items: center;
+    margin: 20px;
 }
+
+.table-holder {
+	flex: 0 0 50%;
+	align-items: left;
+}
+
+.bubblechart-holder {
+	flex: 1;
+}
+
+.bubbles {
+	stroke-width: 1px;
+	stroke: black;
+	opacity: .8
+}
+
+.bubbles:hover {
+	stroke: black;
+}
+
+.button-row {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
 
 /* Fork on GitHub ribbon via https://codepo8.github.io/css-fork-on-github-ribbon/# */  
 #forkongithub a{

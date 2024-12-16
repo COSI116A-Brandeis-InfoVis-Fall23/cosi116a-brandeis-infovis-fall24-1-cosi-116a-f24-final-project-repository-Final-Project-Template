@@ -1,4 +1,3 @@
-
 function table() {
 
   // Based on Mike Bostock's margin convention
@@ -7,6 +6,8 @@ function table() {
     selectableElements = d3.select(null),
     dispatcher;
 
+  
+  
   // Create the chart by adding an svg to the div with the id 
   // specified by the selector using the given data
   function chart(selector, data) {
@@ -17,7 +18,7 @@ function table() {
     // Here, we grab the labels of the first item in the dataset
     //  and store them as the headers of the table.
     let tableHeaders = Object.keys(data[0]);
-
+    
     // You should append these headers to the <table> element as <th> objects inside
     // a <th>
     // See https://developer.mozilla.org/en-US/docs/Web/HTML/Element/table
@@ -68,8 +69,6 @@ function table() {
     });
    };
 
-   console.log(chart);
-
 
     d3.selectAll("tr")
     .on("mouseover", (d, i, elements) => {
@@ -80,5 +79,3 @@ function table() {
     });
   return chart;
 }
-
-
