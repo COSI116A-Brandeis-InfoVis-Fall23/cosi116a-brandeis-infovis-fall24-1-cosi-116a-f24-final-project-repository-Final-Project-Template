@@ -59,6 +59,11 @@ function map() {
                 
                 statepaths.append("title").text(d => d.properties.STATENAM);
 
+            // Add event listener for table row selection
+            d3.selectAll("table tr").on("click", function() {
+                var stateName = d3.select(this).select("td").text().replace(" Territory", "");
+                highlightState(stateName);
+            });
             
         });
         // function handleMouseDown(event, d) {
@@ -107,10 +112,15 @@ function map() {
 
         function handleStateClick(event, d) {
             var stateName = d3.select(this).select("title").text().replace(" Territory", ""); // Access the title tag
-            // console.log("Clicked state:", stateName); // Debugging log
-            d3.select(this).style("fill", "#0000FF"); // Highlight the state in blue
-        
-            // Dispatch the state name
+            highlightState(stateName);
+        }
+
+        function highlightState(stateName) {
+            svgStates.selectAll("path")
+                .style("fill", function(d) {
+                    return d.properties.STATENAM.replace(" Territory", "") === stateName ? "#0000FF" : colors_state[d.properties.STATENAM.replace(" Territory", "")];
+                });
+
             let dispatchString = Object.getOwnPropertyNames(dispatcher._)[0];
             dispatcher.call(dispatchString, this, [stateName]);
         }
