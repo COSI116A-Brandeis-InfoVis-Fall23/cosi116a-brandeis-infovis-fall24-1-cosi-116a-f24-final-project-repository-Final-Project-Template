@@ -80,18 +80,15 @@ h3 {
 	text-align: center;
 	width:100%;
 	height:100%;
+	top: 110px;
 }
 #controls {
-	position: relative;
-	width: 50%;
-	left: 50%; /* Position the element at the middle of the container */
-	transform: translateX(-50%); /* Offset by half of the element's width */
 	display: flex;
-	text-align: center;
-	flex-wrap: wrap; /* Allows checkboxes to wrap if needed */
-	max-height: 120px; /* Set the maximum height for visible checkboxes */
-	overflow-y: auto; /* Adds a scrollbar if there are more checkboxes than the limit */
-	align-items: flex-start; /* Align items to the top */
+	justify-content: center; /* Centers horizontally */
+	align-items: center; /* Centers vertically */
+	height: 2%;
+	position: relative;
+	top: 110px;
 }
 
 #ridership-chart {
