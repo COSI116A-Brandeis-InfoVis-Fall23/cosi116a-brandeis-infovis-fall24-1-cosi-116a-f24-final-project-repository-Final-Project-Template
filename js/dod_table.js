@@ -72,11 +72,12 @@ function table() {
 		isMouseDown = true;
 	})
 	.on("mouseup", function () {
-		isMouseDown = false;
+		d3.select(this).classed("selected", false);
 	})
 	.on("mouseover", function () {
 		if (isMouseDown) {
 			//If the mouse is down and is on the row, make it selected
+			d3.selectAll("tr").classed("selected", false);
 			d3.select(this).classed("selected", true);
 
 			//Instantiates the dispatch string, and dispatches all rows selected
@@ -85,7 +86,8 @@ function table() {
 
 		}
 		else{
-			//If mouse is up and goes over a selected row, make the background color red
+			//If mouse is up and goes over a selected row, make the background color blue
+			d3.selectAll("tr").style("background-color", null);
 			if (d3.select(this).classed("selected")){
 				d3.select(this).style("background-color", "blue")
 			}
