@@ -75,5 +75,15 @@ h1, h2, h3 {
 		-moz-transform:rotate(45deg);
 		-o-transform:rotate(45deg);
 		box-shadow:4px 4px 10px rgba(0,0,0,0.8);
-	}
+	}	
 }
+#tooltip{
+	border: 1px solid #ccc;
+	position: absolute;
+	padding: 10px;
+	background-color: #fff;
+	display: none;
+	pointer-events: none;
+
+}
+/*test*/
