@@ -29,11 +29,6 @@
       .selectionDispatcher(d3.dispatch(dispatchString))
       ("#table", currData);
 
-      /*let bcData = bubbleChart()
-      .selectionDispatcher(d3.dispatch(dispatchString))
-      ("#bubble-chart", data["2007"]);
-      */
-
       
       let spRatingGDPComparisson = scatterplot()
       .x(d => d.gdp)
