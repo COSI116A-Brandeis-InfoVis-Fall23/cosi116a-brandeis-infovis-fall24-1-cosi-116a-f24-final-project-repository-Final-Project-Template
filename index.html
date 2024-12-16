@@ -58,74 +58,24 @@
     <!-- Change viewbox to whatever you want, e.g. "0 0 1000 6000" This determines your aspect ratio and coordinate system -->    
     <!-- Delete all the sample SVG code below after the viewbox to before the closing tag. Populate this part of the SVG with D3. -->
     <div class="full-width section-pick-two">
-      <div class="container">
-        <h3>
-          <a href="#your-commute" class="anchor">
-            <span class="glyphicon glyphicon-link"></span>
-          </a>
-          Your Commute
-        </h3>
-        <p>
-          How do all of these factors affect your commute? 
-          Click and drag on the
-          <a href="#" data-highlight=".map" class="hover-link pick-two-highlight">map</a>
-          from a starting station to an ending station to see a detailed breakdown of how long that trip takes at different points during a typical workday.
-          The
-          <a href="#" data-highlight=".circle.top" class="hover-link pick-two-highlight">points on top</a>
-          show all of the trip durations for a given starting time from the start to destination and the
-          <a href="#" data-highlight=".circle.bottom" class="hover-link pick-two-highlight">points on bottom</a>
-          show all of the times between when when trains leave the start station going to the destination station.
-          The time between trains is the longest you would possibly need to wait if you arrived just as the previous train was leaving.
-          The 
-          <a href="#" data-highlight=".top.range" class="hover-link pick-two-highlight">blue band</a>
-          excludes the shortest and longest 10% of all transit times, leaving behind the most-likely 80% range and the
-          <a href="#" data-highlight=".bottom.range" class="hover-link pick-two-highlight">orange band</a>
-          does the same for wait times between trains.
-          The 
-          <a href="#" data-highlight=".p50" class="hover-link pick-two-highlight">dark lines</a>
-          show the middle point where 50% of the time wait/transit times are higher and 50% of the time they are lower.
-        </p>
-      </div>
-  
       <div class="viz clearfix">
         <div class="left picker clearfix">
           <div class="map dimmable clearfix"></div>
           <div class="details dimmable clearfix"></div>
           <div class="loading clearfix"></div>
-          <div class="key dimmable clearfix">
+          <!-- <div class="key dimmable clearfix">
             <span class="hide-on-ios">Drag from a starting station to an ending station to see how long the trip takes over time in the chart.</span>
             <span class="only-ios">Click on a starting station then an ending station to see how long the trip takes over time in the chart.</span>
-          </div>
+          </div> -->
         </div>
-        <div class="right pick-two clearfix">
+        <!-- <div class="right pick-two clearfix">
           <div class="inner-viz">
           </div>
           <div class="key dimmable clearfix">
           </div>
-        </div>
-      </div>
-  
-      <div class="container">
-        <p>
-          In general, delays go up during rush hour but trains come more frequently, for example if you look at
-          <a href="#" data-start="place-sstat" data-end="place-knncl" class="click-link pick-two-choose">South Station to Kendall/MIT</a>
-          you will notice that the
-          <a href="#" data-highlight=".circle.top, .top.range" class="hover-link pick-two-highlight">transit times</a>
-          go up as the
-          <a href="#" data-highlight=".circle.bottom, .bottom.range" class="hover-link pick-two-highlight">wait times</a>
-          go down.
-          If you drag across the chart, the paragraph below will tell you that these effects roughly balance eachother out and the most-likely trip duration (half the normal time between trains plus total transit time) stays constant around 10-12 minutes.
-          It is also interesting to note that transit times on the blue line, for example
-          <a href="#" data-start="place-state" data-end="place-wondl" class="click-link pick-two-choose">State St. to Wonderland</a>
-          are much less variable than the red line.
-          Orange line trips like
-          <a href="#" data-start="place-dwnxg" data-end="place-forhl" class="click-link pick-two-choose">Downtown Crossing to Forest Hills</a>
-          are less variable in transit time - but trains come much less frequently and reliably.
-        </p>
+        </div> -->
       </div>
     </div>
-  
-  <!-- Your writeup goes here -->
   <div class = "content-column">
 
     <h1>Demo Video</h1>
