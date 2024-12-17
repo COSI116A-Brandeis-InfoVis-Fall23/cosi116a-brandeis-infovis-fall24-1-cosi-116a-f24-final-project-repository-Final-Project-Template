@@ -53,6 +53,16 @@ VIZ.requiresData([
     data.y = spider[data.id][1];
     data.delay_time = delaytimes[data.id];
     data.alert = getCaseInsensitiveKey(alerts, data.links[0].line);
+    const ridershipData = peak_time_ridership[data.id];
+    if (ridershipData) {
+      data.ridership = {
+        weekday: ridershipData.weekday || {}, // Add weekday ridership
+        weekend: ridershipData.weekend || {}  // Add weekend ridership
+      };
+    } else {
+      // If no ridership data, set to empty
+      data.ridership = { weekday: {}, weekend: {} };
+    }
     idToNode[data.id] = data;
   });
 
@@ -66,9 +76,8 @@ VIZ.requiresData([
     .attr('class', 'd3-tip pick2')
     .offset([-100, 0])
     .style("pointer-events", "none")
-    .html(function (d) { 
-      console.log(d);
-      return "Station: " + VIZ.fixStationName(d.name) + "<br> Avg. Delay Time: " + Math.round(d.delay_time.average_delay_min) + " mins<br>Most Common Alert: " + d.alert.cause.toLowerCase(); 
+    .html(function (d) {
+      return "Station: " + VIZ.fixStationName(d.name) + "<br> Avg. Delay Time: " + Math.round(d.delay_time.average_delay_min) + " mins<br>Most Common Alert: " + d.alert.cause.toLowerCase();
     });
   var mapGlyphSvg = d3.select('.section-pick-two .map').append('svg').call(tip);
   var details = d3.select('.section-pick-two .details');
@@ -136,8 +145,10 @@ VIZ.requiresData([
       .attr('x2', function (d) { return d.target.pos[0]; })
       .attr('y2', function (d) { return d.target.pos[1]; })
       .on('click', function (event, d) {
-        // When a line is clicked, call the function to display the table
-        displayLineTable(d.line); // Pass the line identifier
+        console.log("Line clicked:", d);
+        const lineId = d.source.links[0].line; // Assuming line ID is part of links
+        console.log("Line ID:", lineId);
+        displayLineTable(lineId);
       });
 
     connections
@@ -151,6 +162,14 @@ VIZ.requiresData([
       .data(network.nodes, function (d) { return d.name; })
       .enter()
       .append('g').attr('class', 'station-wrapper draggable')
+      .on('click', function (d) {
+        console.log(d);
+        // Find the first line the station belongs to
+        const lineId = d.links[0]?.line;
+        if (lineId) {
+          displayLineTable(lineId);
+        }
+      })
       .on('mouseover', function (d) {
         if (draggingFrom) {
           var path = findPath(draggingFrom.id, d.id);
@@ -250,15 +269,71 @@ VIZ.requiresData([
 
       // when you start dragging, immediately draw voronoi polygons around each valid
       // destination point so the path ends at the point that is closest to the cursor
-      _.zip(stations, voronoi(stations)).forEach(function (d) {
-        d[0].voronoi2 = d[1];
-      });
+      stations.map((station, i) => [station, voronoi(stations)[i]])
+        .forEach(function (d) {
+          d[0].voronoi2 = d[1];
+        });
+
       return mapGlyph.selectAll('.station-wrapper')
         .filter(function (d) { return !!d.voronoi2; })
         .moveToFront()
         .append('path')
         .attr('class', 'voronoi2')
         .attr('d', function (d) { return "M" + d.voronoi2.join(",") + "Z"; });
+    }
+
+    function displayLineTable(lineId) {
+      // Clear existing table content
+      d3.select("#line-table-container").html("");
+
+      // Filter nodes for the selected line
+      const lineStations = network.nodes.filter(node => {
+        return node.links.some(link => link.line === lineId);
+      });
+
+      // Create the table
+      const table = d3.select("#line-table-container")
+        .append("table")
+        .attr("class", "line-data-table");
+
+      // Add table header
+      table.append("thead").append("tr")
+        .selectAll("th")
+        .data([
+          "Station",
+          "Avg Weekday Riders",
+          "Weekday Peak Time",
+          "Riders During Weekday Peak",
+          "Avg Weekend Riders",
+          "Weekend Peak Time",
+          "Riders During Weekend Peak"
+        ])
+        .enter()
+        .append("th")
+        .text(function (d) { return d; });
+
+      // Add table body with rows
+      const tbody = table.append("tbody");
+
+      // Populate table rows
+      lineStations.forEach(function (station) {
+        const ridership = station.ridership || { weekday: {}, weekend: {} }; // Fallback for empty ridership
+
+        tbody.append("tr")
+          .selectAll("td")
+          .data([
+            VIZ.fixStationName(station.name),                  // Station Name
+            Math.round(ridership.weekday.overall_average_ons || 0), // Avg Weekday Riders
+            ridership.weekday.peak_time || "N/A",              // Weekday Peak Time
+            Math.round(ridership.weekday.peak_time_average_ons || 0), // Riders During Weekday Peak
+            Math.round(ridership.weekend.overall_average_ons || 0), // Avg Weekend Riders
+            ridership.weekend.peak_time || "N/A",              // Weekend Peak Time
+            Math.round(ridership.weekend.peak_time_average_ons || 0)  // Riders During Weekend Peak
+          ])
+          .enter()
+          .append("td")
+          .text(function (d) { return d; });
+      });
     }
 
     // line color circles
@@ -523,7 +598,11 @@ VIZ.requiresData([
       title.text(fromName + ' to ' + toName);
       subtitle.text('Trip Duration and Time Between Trains On All Weekdays');
 
-      y.domain([-Math.min(30, d3.max(_.pluck(scatterplotData, 2))), d3.max(_.pluck(scatterplotData, 1))]);
+      const yDomainMin = -Math.min(30, d3.max(scatterplotData.map(d => d[2])));
+      const yDomainMax = d3.max(scatterplotData.map(d => d[1]));
+
+      y.domain([yDomainMin, yDomainMax]);
+
 
       // remove old circles
       dataLayer.selectAll('.circle').remove();
@@ -565,7 +644,7 @@ VIZ.requiresData([
         .transition()
         .attr("d", d3.area()
           .x(function (d) { return x(d[0]); })
-          .interpolate('basis')
+          .curve(d3.curveBasis)
           .defined(defined)
           .y0(function () { return y(0); })
           .y1(function (d) { return y(-d[2][0]); }));
@@ -574,12 +653,16 @@ VIZ.requiresData([
         .transition()
         .attr("d", d3.area()
           .x(function (d) { return x(d[0]); })
-          .interpolate('basis')
+          .curve(d3.curveBasis)
           .defined(defined)
           .y0(function (d) { return y(d[1][0]); })
           .y1(function () { return y(0); }));
 
-      var lastPercentileDatapoint = _.max(percentileBandData.filter(function (d) { return d[0] <= 24; }), function (d) { return d[0]; });
+      var lastPercentileDatapoint = percentileBandData
+        .filter(function (d) { return d[0] <= 24; }) // Filter values where d[0] <= 24
+        .reduce(function (max, d) {
+          return (d[0] > max[0]) ? d : max; // Find the maximum based on d[0]
+        });
       var top = {
         bottom: y(lastPercentileDatapoint[1][0]),
         median: y(lastPercentileDatapoint[1][1]),
@@ -797,17 +880,18 @@ VIZ.requiresData([
     var mult = neg ? -1 : 1;
     return d3.area()
       .x(function (d) { return x(d[0]); })
-      .interpolate('basis')
+      .curve(d3.curveBasis) // Use curve instead of interpolate
       .defined(defined)
       .y0(function (d) { return y(mult * d[num][startIdx]); })
       .y1(function (d) { return y(mult * d[num][endIdx]); });
   }
 
+
   function line(num, idx, neg) {
     var mult = neg ? -1 : 1;
     return d3.line()
       .x(function (d) { return x(d[0]); })
-      .interpolate('basis')
+      .curve(d3.curveBasis)
       .defined(defined)
       .y(function (d) { return y(mult * d[num][idx]); });
   }
