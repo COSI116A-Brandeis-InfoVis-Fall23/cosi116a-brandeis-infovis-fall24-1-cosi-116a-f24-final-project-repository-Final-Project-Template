@@ -21,23 +21,32 @@ h1, h2, h3 {
   height: 100%;
 }
 .toolbar {
-	background-color: #333; /* Dark gray background */
-	display: flex;
+	width: 200px; /* Fixed width */
+	border: 2px solid #ccc; /* Light gray border */
+	background-color: #f9f9f9; /* Light background color */
+	border-radius: 8px; /* Rounded corners */
 	padding: 10px;
+	display: flex;
+	flex-direction: column; /* Align links in a column */
+	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+	position: fixed; /* Fix it to the left */
+	top: 20px; /* Spacing from the top */
+	left: 20px; /* Spacing from the left */
   }
   .toolbar a {
-	color: white;
-	text-decoration: none;
-	padding: 10px 15px;
-	margin-right: 10px;
-	font-size: 16px;
-	background-color: #444;
-	border-radius: 5px;
-	transition: background-color 0.3s;
+	text-decoration: none; /* Remove underline */
+	color: #333; /* Dark gray text */
+	font-size: 18px; /* Slightly larger text */
+	padding: 10px;
+	margin: 5px 0; /* Spacing between links */
+	text-align: center; /* Center text */
+	background-color: #e6e6e6; /* Light gray button background */
+	border-radius: 4px; /* Rounded button corners */
+	transition: background-color 0.3s, color 0.3s; /* Smooth hover effect */
   }
-  
   .toolbar a:hover {
-	background-color: #555;
+	background-color: #333; /* Dark background on hover */
+	color: white; /* White text on hover */
   }
  
 
