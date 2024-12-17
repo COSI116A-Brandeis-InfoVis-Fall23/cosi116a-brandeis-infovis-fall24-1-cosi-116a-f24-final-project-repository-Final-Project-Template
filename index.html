@@ -63,11 +63,16 @@
   </div>
 
   <div class="vis-holder">
-    <!-- Change viewbox to whatever you want, e.g. "0 0 1000 6000" This determines your aspect ratio and coordinate system -->    
-    <!-- Delete all the sample SVG code below after the viewbox to before the closing tag. Populate this part of the SVG with D3. -->
-    <div class="scatterplot-holder" id="scatterplot">    </div>
-    <div class="table-holder" id="table"></div>
-    <!-- Don't delete the closing tag! -->
+    <!-- Selected Year Text -->
+    <div>
+      <p class="selected-year-text">Data for the year <span id="selected-year">:</span></p>
+    </div>
+  
+    <!-- Scatterplot and Table Container -->
+    <div class="scatterplot-table-container">
+      <div class="scatterplot-holder" id="scatterplot"></div>
+      <div class="table-holder" id="table"></div>
+    </div>
   </div>
   
   <!-- Your writeup goes here -->
