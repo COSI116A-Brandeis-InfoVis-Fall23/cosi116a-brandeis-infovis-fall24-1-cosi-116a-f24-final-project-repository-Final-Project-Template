@@ -42,7 +42,7 @@ function scatterplot() {
         xScale
             .domain([
             d3.min(data, d => xValue(d)),
-            d3.max(data, d => xValue(d))
+            115000
             ])
             .rangeRound([0, width]);
 

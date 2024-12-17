@@ -93,7 +93,7 @@ table{
 	fill: #69b3a2;
 	stroke: #69b3a2;
 	stroke-width: 1.5;
-	opacity: .5;
+	opacity: .25;
 }
 
 
@@ -136,11 +136,23 @@ tr.mouseover.selected{
 	background-color: #e08fa3;
 }
 
+/*
 .button-row {
 	display: flex;
 	justify-content: center;
 	align-items: center;
 }
+*/
+
+.button-row {
+	display: flex;              /* Arrange buttons in a row */
+	flex-wrap: wrap;            /* Allow wrapping if there are too many buttons */
+	justify-content: center;    /* Center the buttons */
+	gap: 10px;                  /* Add spacing between buttons */
+	margin: 20px 0;             /* Add spacing above and below the button row */
+}
+
+
 
 
 /* Fork on GitHub ribbon via https://codepo8.github.io/css-fork-on-github-ribbon/# */  
