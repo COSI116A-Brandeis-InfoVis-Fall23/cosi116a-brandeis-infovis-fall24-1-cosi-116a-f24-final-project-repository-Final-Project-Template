@@ -1,3 +1,4 @@
+[![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-22041afd0340ce965d47ae6ef1cefeee28c7c493a6346c4f15d667ab976d596c.svg)](https://classroom.github.com/a/h8SwtrsU)
 # COSI 116A Final Project Template
 
 This template will help you get started with your project. Please look through all these materials so you know how to organize your project.
@@ -12,7 +13,7 @@ For your final project, you must render your project as a Github Page.  Github p
 
 To publish your repository, follow the instructions at https://pages.github.com/.  You'll have to go to the settings of your repository and point GitHub Pages to your master branch.  Your GitHub Pages link will be of the following format:
 
-    https://cosi116a-brandeis-infovis-fall23.github.io/graduate-team-12-mbta
+    https://cosi116a-brandeis-infovis-fall23.github.io/cosi-116a-f24-final-project-repository-Juhl123Juhl123.github.io/
 
 Note that you may have to clear your cache and reload (Ctrl+F5 on Chrome) a few times before seeing your page.
 
