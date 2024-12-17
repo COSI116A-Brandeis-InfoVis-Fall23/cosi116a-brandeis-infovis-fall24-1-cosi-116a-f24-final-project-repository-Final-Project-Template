@@ -22,10 +22,10 @@ d3.json("data/updated geojson/updated_bostonV2_with_data.json", function (error,
         console.error("Error loading GeoJSON:", error);
         return;
     }
-     // List of neighborhoods to grey out
-    var greyedOutNeighborhoods = ["Leather District","Bay Village","Longwood Medical Area","Harbor Islands"
-        ,"Roslindale","West Roxbury","Hyde Park","North End","Mission Hill",
-        "South Boston Waterfront","Mattapan","Allston","Brighton","South End"]; 
+    // List of neighborhoods to grey out
+    var greyedOutNeighborhoods = ["Leather District", "Bay Village", "Longwood Medical Area", "Harbor Islands"
+        , "Roslindale", "West Roxbury", "Hyde Park", "North End", "Mission Hill",
+        "South Boston Waterfront", "Mattapan", "Allston", "Brighton", "South End"];
     gNeighborhoods.selectAll(".neighborhood")
         .data(data.features)
         .enter()
@@ -53,46 +53,46 @@ d3.json("data/updated geojson/updated_bostonV2_with_data.json", function (error,
         .attr("class", "brush")
         .call(brush);
 
-       // Brush functionality (updated)
-       function brushed() {
+    // Brush functionality (updated)
+    function brushed() {
         var selection = d3.event.selection;
         if (!selection) return;
-    
+
         var [[x0, y0], [x1, y1]] = selection;
-    
+
         var selectedNeighborhoods = [];
-    
+
         gNeighborhoods.selectAll(".neighborhood").classed("highlighted", function (d) {
             // Skip greyed-out neighborhoods
             if (greyedOutNeighborhoods.includes(d.properties.name)) {
                 return false;
             }
-    
+
             var centroid = path.centroid(d);
             var [cx, cy] = centroid;
-    
+
             var isSelected = cx >= x0 && cx <= x1 && cy >= y0 && cy <= y1;
-    
+
             if (isSelected && d.properties && d.properties.name) {
                 selectedNeighborhoods.push(d.properties.name);
             }
-    
+
             // Apply style for selected neighborhoods
             d3.select(this).style("fill", isSelected ? "#ff6347" : "#ffffff"); // Highlight in yellow or reset to default
-    
+
             return isSelected;
         });
-    
+
         // Update text display with selected neighborhoods
         d3.select("#selected-neighborhoods").text(
             selectedNeighborhoods.length ? selectedNeighborhoods.join(", ") : "None"
         );
     }
-    
+
 
     function brushEnd() {
         var selection = d3.event.selection;
-    
+
         if (!selection) {
             // Reset all neighborhoods if no brush selection
             gNeighborhoods.selectAll(".neighborhood")
@@ -101,44 +101,44 @@ d3.json("data/updated geojson/updated_bostonV2_with_data.json", function (error,
                     // Restore fill color based on whether the neighborhood is greyed out
                     return greyedOutNeighborhoods.includes(d.properties.name) ? "#d3d3d3" : "#ffffff";
                 });
-    
+
             d3.select("#selected-neighborhoods").text("None");
-    
+
             // Dispatch event with no selected regions
             document.dispatchEvent(new CustomEvent("regionSelected", { detail: [] }));
             return;
         }
-    
+
         var selectedNeighborhoods = [];
-    
+
         gNeighborhoods.selectAll(".neighborhood").classed("highlighted", function (d) {
             if (greyedOutNeighborhoods.includes(d.properties.name)) {
                 return false;
             }
-    
+
             var centroid = path.centroid(d);
             var [cx, cy] = centroid;
-    
+
             var isSelected = cx >= selection[0][0] && cx <= selection[1][0] && cy >= selection[0][1] && cy <= selection[1][1];
-    
+
             if (isSelected && d.properties && d.properties.name) {
                 selectedNeighborhoods.push(d.properties.name);
             }
-    
+
             // Apply styles based on selection
             d3.select(this).style("fill", isSelected ? "#ff6347" : "#ffffff");
-    
+
             return isSelected;
         });
-    
+
         d3.select("#selected-neighborhoods").text(
             selectedNeighborhoods.length ? selectedNeighborhoods.join(", ") : "None"
         );
-    
+
         // Dispatch custom event with selected regions
         document.dispatchEvent(new CustomEvent("regionSelected", { detail: selectedNeighborhoods }));
     }
-    
+
 
     var brush = d3.brush()
         .extent([[0, 0], [width, height]])

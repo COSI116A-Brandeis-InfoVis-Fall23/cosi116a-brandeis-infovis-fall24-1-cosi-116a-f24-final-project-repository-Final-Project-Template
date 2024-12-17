@@ -47,19 +47,20 @@
 
     <h1>Visualization</h1>
 
-    <p><em>Click and drag over the map to highlight the neighborhoods of Boston. 
-      Highlighting neighborhoods will show the census and ridership demographics of the selected neighborhoods. 
-      A bar chart of the gated entries in each station in each neighborhood is on the bottom. 
-      The MBTA survey data is from 2023, the census data for each neighborhood is from 2015-2019, and the gated station entries data is from 2023.</em></p>
-      <p><strong> ZOOM OUT IF MAP AND STACKED BAR CHART ARE NOT LEVEL WITH EACH OTHER</strong> </p>
+    <p><em>Click and drag over the map to highlight the neighborhoods of Boston.
+        Highlighting neighborhoods will show the census and ridership demographics of the selected neighborhoods.
+        A bar chart of the gated entries in each station in each neighborhood is on the bottom.
+        The MBTA survey data is from 2023, the census data for each neighborhood is from 2015-2019, and the gated
+        station entries data is from 2023.</em></p>
+    <p><strong> ZOOM OUT IF MAP AND STACKED BAR CHART ARE NOT LEVEL WITH EACH OTHER</strong> </p>
   </div>
 
   <!-- Your visualization here -->
   <div id="vis-container">
     <div id=map-container>
       <div id="button-container">
-        <button class = button id="toggle-points-button">Show/Hide Stations</button>
-        <button class = button id="toggle-lines-button">Show/Hide Lines</button>
+        <button class=button id="toggle-points-button">Show/Hide Stations</button>
+        <button class=button id="toggle-lines-button">Show/Hide Lines</button>
       </div>
       <div id="map-header">
         Selected Neighborhoods</div>
@@ -70,8 +71,8 @@
     </div>
     <div id="stacked-container">
       <div id="controls">
-        <button class = button id="age-btn">Age</button>
-        <button class = button id="race-btn">Race</button>
+        <button class=button id="age-btn">Age</button>
+        <button class=button id="race-btn">Race</button>
       </div>
       <div id="stacked-bar-chart"></div>
     </div>
@@ -83,7 +84,7 @@
   <div class="content-column">
     <div class="iframe-container">
       <iframe class="responsive-iframe"
-      src="https://docs.google.com/document/d/e/2PACX-1vTWQ-Ip32klxC_JUikI-YOkYWXyIaBu_59uCeQuowt8MmjIuV9uUqRogLzFPpbHDqHgkDPEbTxny6PI/pub?embedded=true"></iframe>
+        src="https://docs.google.com/document/d/e/2PACX-1vTWQ-Ip32klxC_JUikI-YOkYWXyIaBu_59uCeQuowt8MmjIuV9uUqRogLzFPpbHDqHgkDPEbTxny6PI/pub?embedded=true"></iframe>
     </div>
     <h1>Demo Video</h1>
 
@@ -108,10 +109,13 @@
           data</a> </li>
       <li>ChatGPT and Copilot for coding assistance</li>
       <li><a href="https://pandas.pydata.org/">Pandas python library</a></li>
-      <li><a href="https://mbta-massdot.opendata.arcgis.com/datasets/001c177f07594e7c99f193dde32284c9_0/explore">MBTA gated station entries data</a></li>
+      <li><a href="https://mbta-massdot.opendata.arcgis.com/datasets/001c177f07594e7c99f193dde32284c9_0/explore">MBTA
+          gated station entries data</a></li>
       <li><a href="https://data.boston.gov/dataset/neighborhood-demographics">Boston neighborhood census data</a></li>
-      <li><a href="https://mbta-massdot.opendata.arcgis.com/datasets/faaf1295847e4673a03b40cef2c53df1_0/explore">MBTA survey data</a></li>
-      <li><a href="https://statisticalatlas.com/neighborhood/Massachusetts/Boston/Chinatown/Age-and-Sex">Boston Chinatown census data</a></li>
+      <li><a href="https://mbta-massdot.opendata.arcgis.com/datasets/faaf1295847e4673a03b40cef2c53df1_0/explore">MBTA
+          survey data</a></li>
+      <li><a href="https://statisticalatlas.com/neighborhood/Massachusetts/Boston/Chinatown/Age-and-Sex">Boston
+          Chinatown census data</a></li>
     </ul>
   </div>
   <!-- Scripts at the end avoid need for dealing with async, defer, or onload event handlers -->

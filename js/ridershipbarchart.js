@@ -1,5 +1,5 @@
 // Load the CSV data
-d3.csv("data/neighborhood_ridership.csv", function(data) {
+d3.csv("data/neighborhood_ridership.csv", function (data) {
     console.log("Data loaded:", data);
 
     // Convert gated_entries to numeric values
@@ -82,20 +82,20 @@ d3.csv("data/neighborhood_ridership.csv", function(data) {
         .attr("fill", d => d.gated_entries === 0 ? "#B0B0B0" : "skyblue")  // Darker grey for missing data
 
         // Add interactivity
-        .on("mouseover", function(d) {
+        .on("mouseover", function (d) {
             tooltip
-                .html(d.gated_entries === 0 ? `<strong>${d.Neighborhood}</strong><br>No ridership data available` 
-                        : `<strong>${d.Neighborhood}</strong><br>Gated Entries: <strong>${d.gated_entries.toLocaleString()}</strong>`)
+                .html(d.gated_entries === 0 ? `<strong>${d.Neighborhood}</strong><br>No ridership data available`
+                    : `<strong>${d.Neighborhood}</strong><br>Gated Entries: <strong>${d.gated_entries.toLocaleString()}</strong>`)
                 .style("left", (d3.event.pageX + 10) + "px")
                 .style("top", (d3.event.pageY - 20) + "px")
                 .style("display", "block");
         })
-        .on("mousemove", function() {
+        .on("mousemove", function () {
             tooltip
                 .style("left", (d3.event.pageX + 10) + "px")
                 .style("top", (d3.event.pageY - 20) + "px");
         })
-        .on("mouseout", function() {
+        .on("mouseout", function () {
             tooltip.style("display", "none");
         });
 
