@@ -103,7 +103,7 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 
     // Chart dimensions
-    const margin = { top: 30, right: 30, bottom: 50, left: 50 };
+    const margin = { top: 30, right: 30, bottom: 70, left: 80 };
     const width = 800 - margin.left - margin.right;
     const height = 700 - margin.top - margin.bottom;
 
@@ -165,7 +165,7 @@ document.addEventListener('DOMContentLoaded', function () {
     function aggregateData(selectedRegions, dataset) {
         if (selectedRegions.length === 0) return null;
 
-        // Filter dataset by the current series. ADDEDDDDD
+        // Filter dataset by the current series.
         const filteredData = dataset.filter(d => d.series === currentSeries);
         // Aggregate values for the selected keys
         const aggregated = keys.reduce((acc, key) => {
@@ -206,8 +206,8 @@ document.addEventListener('DOMContentLoaded', function () {
 
         if (!aggregatedCensus || !aggregatedMBTA) {
             svg.selectAll(".layer").remove();
-            xAxis.call(d3.axisBottom(xScale));
-            yAxis.call(d3.axisLeft(yScale).tickFormat(d => `${d}%`));
+            xAxis.call(d3.axisBottom(xScale)).attr("class", "x-axis");
+            yAxis.call(d3.axisLeft(yScale).tickFormat(d => `${d}%`)).attr("class", "y-axis");
             return;
         }
 
@@ -230,8 +230,8 @@ document.addEventListener('DOMContentLoaded', function () {
 
         // Update x-axis domain
         xScale.domain(["Census", "MBTA"]);
-        xAxis.call(d3.axisBottom(xScale));
-        yAxis.call(d3.axisLeft(yScale).tickFormat(d => `${d}%`));
+        xAxis.call(d3.axisBottom(xScale)).attr("class", "x-axis");
+        yAxis.call(d3.axisLeft(yScale).tickFormat(d => `${d}%`)).attr("class", "y-axis");
 
         // Bind data to layers
         const layers = svg.selectAll(".layer").data(stackedData);
@@ -318,7 +318,7 @@ document.addEventListener('DOMContentLoaded', function () {
         const legend = svg
             .append("g")
             .attr("class", "legend")
-            .attr("transform", `translate(50, ${height + 30})`); // Position the legend below the chart
+            .attr("transform", `translate(0, ${height + 40})`); // Position the legend below the chart
 
         // Bind the keys array to legend items
         const legendItems = legend
@@ -327,7 +327,7 @@ document.addEventListener('DOMContentLoaded', function () {
             .enter()
             .append("g")
             .attr("class", "legend-item")
-            .attr("transform", (d, i) => `translate(${i * 180}, 0)`); // Adjust horizontal spacing
+            .attr("transform", (d, i) => `translate(${i * 200}, 0)`); // Adjust horizontal spacing
 
         // Append color rectangles for the legend
         legendItems
@@ -344,7 +344,7 @@ document.addEventListener('DOMContentLoaded', function () {
             .attr("x", 20) // Space the text from the rectangle
             .attr("y", 12) // Align text vertically with the rectangle
             .text(d => d)
-            .style("font-size", "12px")
+            .style("font-size", "15px")
             .style("fill", "black");
     }
 

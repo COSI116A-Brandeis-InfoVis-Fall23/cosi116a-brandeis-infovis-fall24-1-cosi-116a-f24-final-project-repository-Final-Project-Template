@@ -104,9 +104,20 @@ h3 {
 .button{
 	background-color: #f9f9f9;
 	border: 1px solid #ccc;
-	margin: 0 5px;
-	width: 150px;
+	margin: 0 10px;
+	width: 300px;
 	height: 50px;
+	font-size: 18px; /* Increase text size */
+    font-weight: bold;
+	/* transition: background-color 0.3s ease; */
+}
+
+/* Grey-out effect when button is active (clicked) */
+.button:active {
+    background-color: #d3d3d3; /* Grey-out effect */
+    color: #a0a0a0; /* Optionally dim the text color */
+    border-color: #a0a0a0;
+    transition: none; /* Remove smooth transition for immediate effect */
 }
 
 #map {
@@ -242,4 +253,16 @@ svg {
 	}
 
 
+}
+
+
+/* Increase font size for x-axis and y-axis labels */
+.x-axis text {
+    font-size: 20px;
+    fill: #333; /* Optional: Text color */
+}
+
+.y-axis text {
+    font-size: 20px;
+    fill: #333; /* Optional: Text color */
 }
