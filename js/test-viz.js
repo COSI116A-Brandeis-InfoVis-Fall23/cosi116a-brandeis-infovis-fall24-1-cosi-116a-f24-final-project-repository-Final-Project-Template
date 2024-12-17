@@ -22,11 +22,20 @@
       currData = currData.filter(d => d.Rating !== "N/A");
   
       // Call the scatterplot function with the cleaned data
-      createScatterplot("#scatterplot", currData);
+      //createScatterplot("#scatterplot", currData);
   
       let tableData = table()
       .selectionDispatcher(d3.dispatch(dispatchString))
       ("#table", currData);
+
+      let spRatingGDPComparison = scatterplot()
+      .x(d => d.gdp) // Map GDP to x-axis
+      .xLabel("GDP Per Capita")
+      .y(d => +d.Rating) // Convert Rating to numeric for y-axis
+      .yLabel("Transportation Rating (0-7)")
+      .yLabelOffset(150)
+      .selectionDispatcher(d3.dispatch("selectionUpdated"))
+      ("#scatterplot", currData);
 
       function updateYear(year) {
         yearSelected = year;
@@ -35,7 +44,16 @@
         currData = currData.filter(d => d.Rating !== "N/A");
         
         d3.select("#scatterplot").selectAll("*").remove();
-        createScatterplot("#scatterplot", currData);
+        //createScatterplot("#scatterplot", currData);
+        let spRatingGDPComparison = scatterplot()
+        .x(d => d.gdp) // Map GDP to x-axis
+        .xLabel("GDP Per Capita")
+        .y(d => +d.Rating) // Convert Rating to numeric for y-axis
+        .yLabel("Transportation Rating (0-7)")
+        .yLabelOffset(150)
+        .selectionDispatcher(d3.dispatch("selectionUpdated"))
+        ("#scatterplot", currData);
+
 
         d3.select("table").remove();
         let tableData = table()
@@ -55,9 +73,9 @@
       document.getElementById("2015").addEventListener("click", () => updateYear("2015"));
       document.getElementById("2016").addEventListener("click", () => updateYear("2016"));
       document.getElementById("2017").addEventListener("click", () => updateYear("2017"));
-    });
+    
 
-
+/*
     // Scatterplot creation function
     function createScatterplot(selector, data) {
       let spRatingGDPComparison = scatterplot()
@@ -68,6 +86,20 @@
           .yLabelOffset(150)
           .selectionDispatcher(d3.dispatch("selectionUpdated"))
           (selector, data);
-  }
+  }*/
+
+
+    spRatingGDPComparison.selectionDispatcher().on(dispatchString, function(selectedData) {
+      // ADD CODE TO HAVE TABLE UPDATE ITS SELECTION AS WELL
+      tableData.updateSelection(selectedData);
+      
+    });
+
+    // When the table is updated via brushing, tell the line chart and scatterplot
+    // YOUR CODE HERE
+    tableData.selectionDispatcher().on(dispatchString, function(selectedData) {
+      spRatingGDPComparison.updateSelection(selectedData);
+    });
+  });
 
 }))();

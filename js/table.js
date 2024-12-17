@@ -42,40 +42,50 @@ function table() {
     .append("td")
     .text(e => e);
 
-    return chart;
-  }
-      d3.selectAll("tr")
-      .on("mouseover", (d, i, elements) => {
-        d3.select(elements[i]).classed("highlighted", true)
-      })
-      .on("mouseout", (d, i, elements) => {
-        d3.select(elements[i]).classed("highlighted", false)
-      });
-
-
-   chart.selectionDispatcher = function (_) {
-     if (!arguments.length) return dispatcher;
-     dispatcher = _;
-     return chart;
-   };
-
-
-   chart.updateSelection = function (selectedData) {
-    if (!arguments.length) return;
-
-     // Select an element if its datum was selected
-     d3.selectAll('tr').classed("selected", d => {
-       return selectedData.includes(d)
-    });
-   };
-
-
-    d3.selectAll("tr")
-    .on("mouseover", (d, i, elements) => {
-      d3.select(elements[i]).classed("highlighted", true)
+    let mouseDown;
+    d3.selectAll("tr").on("mouseover", (d, i, elements) => {
+      d3.select(elements[i]).classed("mouseover", true)
+      if (mouseDown) {
+        d3.select(elements[i]).classed("selected", true)
+        let dispatchString = Object.getOwnPropertyNames(dispatcher._)[0];
+        dispatcher.call(dispatchString, this, table.selectAll(".selected").data());
+      }
+    })
+    .on("mouseup", (d, i, elements) => {
+      mouseDown = false
+    })
+    .on("mousedown", (d, i, elements) => {
+      d3.selectAll(".selected").classed("selected", false)
+      mouseDown = true
+      d3.select(elements[i]).classed("selected", true)
+      let dispatchString = Object.getOwnPropertyNames(dispatcher._)[0];
+      dispatcher.call(dispatchString, this, table.selectAll(".selected").data());
     })
     .on("mouseout", (d, i, elements) => {
-      d3.select(elements[i]).classed("highlighted", false)
+      d3.select(elements[i]).classed("mouseover", false)
     });
+    
+    return chart;
+  }
+
+  // Gets or sets the dispatcher we use for selection events
+  chart.selectionDispatcher = function (_) {
+    if (!arguments.length) return dispatcher;
+    dispatcher = _;
+    return chart;
+  };
+
+  // Given selected data from another visualization 
+  // select the relevant elements here (linking)
+  chart.updateSelection = function (selectedData) {
+    if (!arguments.length) return;
+
+    d3.selectAll('tr').classed("selected", d => {
+      return selectedData.includes(d)
+    });
+
+  };
+
   return chart;
 }
+
