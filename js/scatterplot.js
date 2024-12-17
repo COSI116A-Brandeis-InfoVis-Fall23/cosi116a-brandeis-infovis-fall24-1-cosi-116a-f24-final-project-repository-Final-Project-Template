@@ -48,8 +48,8 @@ function scatterplot() {
 
         yScale
             .domain([
-            d3.min(data, d => yValue(d)),
-            d3.max(data, d => yValue(d))
+            2,
+            7
             ])
             .rangeRound([height, 0]);
 

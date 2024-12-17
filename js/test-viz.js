@@ -1,5 +1,3 @@
-// Immediately Invoked Function Expression to limit access to our 
-// variables and prevent race conditions
 ((() => {
   
   const dispatchString = "selectionUpdated";
@@ -15,14 +13,14 @@
     console.log("Data loaded:", data);
 
       // Default year to display
-      let yearSelected = "2007"; 
+      let yearSelected = "2017"; 
       let currData = data[yearSelected];
   
-      // Filter out entries with invalid ratings (e.g., "N/A")
       currData = currData.filter(d => d.Rating !== "N/A");
+
+      document.getElementById("selected-year").textContent = yearSelected;
   
-      // Call the scatterplot function with the cleaned data
-      //createScatterplot("#scatterplot", currData);
+
   
       let tableData = table()
       .selectionDispatcher(d3.dispatch(dispatchString))
@@ -68,6 +66,7 @@
           spRatingGDPComparison.updateSelection(selectedData);
         });
         
+        document.getElementById("selected-year").textContent = yearSelected;
       }
 
        // Add event listeners to the buttons
@@ -85,13 +84,9 @@
 
 
     spRatingGDPComparison.selectionDispatcher().on(dispatchString, function(selectedData) {
-      // ADD CODE TO HAVE TABLE UPDATE ITS SELECTION AS WELL
       tableData.updateSelection(selectedData);
-      
     });
 
-    // When the table is updated via brushing, tell the line chart and scatterplot
-    // YOUR CODE HERE
     tableData.selectionDispatcher().on(dispatchString, function(selectedData) {
       spRatingGDPComparison.updateSelection(selectedData);
     });
