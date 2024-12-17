@@ -39,8 +39,6 @@ VIZ.requiresData([
   "use strict";
   var idToNode = {};
   network.links.forEach(function (link) {
-    console.log("link source" + link.source);
-    console.log("link target" + link.target);
     link.source = network.nodes[link.source];
     link.target = network.nodes[link.target];
     link.source.links = link.source.links || [];
@@ -63,6 +61,7 @@ VIZ.requiresData([
       // If no ridership data, set to empty
       data.ridership = { weekday: {}, weekend: {} };
     }
+    data.line = data.links[0].line;
     idToNode[data.id] = data;
   });
 
@@ -95,7 +94,7 @@ VIZ.requiresData([
     var scale = Math.min(xScale, yScale);
     network.nodes.forEach(function (data) {
       data.pos = [
-        (data.x - xRange[0]) * scale, 
+        (data.x - xRange[0]) * scale,
         (data.y - yRange[0]) * scale
       ];
     });
@@ -125,9 +124,6 @@ VIZ.requiresData([
         console.warn(`Node ${i} has invalid voronoi:`, node.voronoi);
       }
     });
-
-
-    console.log('Voronoi Polygons:', network);
 
 
     // render an arrow to indicate what direction the path is going
@@ -163,7 +159,6 @@ VIZ.requiresData([
       .enter()
       .append('g').attr('class', 'station-wrapper draggable')
       .on('click', function (d) {
-        console.log(d);
         // Find the first line the station belongs to
         const lineId = d.links[0]?.line;
         if (lineId) {
@@ -196,11 +191,11 @@ VIZ.requiresData([
       .attr('cy', function (d) { return d.pos[1]; })
       .attr('r', 20);
     stationContainers.append('path')
-      .attr('class', 'voronoi')
+      .attr('class', function (d) { return 'voronoi'; })
       .attr('clip-path', function (d) { return 'url(#clip-' + d.id + ')'; })
       .attr('d', function (d) { return "M" + d.voronoi.join(",") + "Z"; });
     stationContainers.append('circle')
-      .attr('class', function (d) { d.circle = this; return 'station middle station-label ' + d.id; })
+      .attr('class', function (d) { d.circle = this; return 'station middle station-label ' + d.id + ' ' + d.line; })
       .attr('cx', function (d) { return d.pos[0]; })
       .attr('cy', function (d) { return d.pos[1]; })
       .attr('r', 8);
@@ -256,7 +251,7 @@ VIZ.requiresData([
       mapGlyphSvg.selectAll('.hover').classed('hover', false);
       mapGlyphSvg.selectAll('.active').classed('active', false);
       // pre-load file as they are dragging, hopefully it loads and gets cached when they finish dragging
-      VIZ.requiresData(['json!data/upick2-weekday-rollup-' + draggingFrom.id + '.json']);
+      // VIZ.requiresData(['json!data/upick2-weekday-rollup-' + draggingFrom.id + '.json']);
       d3.select(this).select('circle').classed('start', true);
       arrow.attr('transform', 'scale(0)');
       var stations = [...new Set(
@@ -351,7 +346,7 @@ VIZ.requiresData([
     dot('place-bomnl', "blue");
     dot('place-forhl', "orange");
     dot('place-ogmnl', "orange");
-    dot('place-lech' , "green");
+    dot('place-lech', "green");
     dot('place-lake', "green");
     dot('place-clmnl', "green");
     dot('place-river', "green");
@@ -386,12 +381,27 @@ VIZ.requiresData([
     var path = findPath(from, to);
     if (path) {
       details.text(VIZ.fixStationName(idToNode[from].name) + ' to ' + VIZ.fixStationName(idToNode[to].name));
+      // circles.each(function(d, i) {
+      //   console.log("Circle Data at index", i, d.id, ":", path[d.id]);
+      //   if (path[d.id]) {
+      //     d.classList.add("active");
+      //   }
+      // });
+      circles.attr("class", function(d) {
+        return path[d.id] ? d3.select(this).attr("class") + " active" : d3.select(this).attr("class");
+      });
+      
       circles.classed({
         start: function (d) { return d.id === from; },
         stop: function (d) { return d.id === to; },
         hover: false,
-        active: function (d) { return path[d.id]; }
+        active: true,
+        // active: function (d) {
+        //   console.log("Checking active for ID:", d.id, "in path:", path);
+        //   return path[d.id]; 
+        // }
       });
+
       lines.classed({
         start: function (d) { return d.source.id === from && path[d.target.id] || d.target.id === from && path[d.source.id]; },
         active: function (d) { return path[d.source.id] && path[d.target.id]; }
@@ -572,226 +582,7 @@ VIZ.requiresData([
     d3.selectAll('.section-pick-two a.anchor').attr('href', ['#your-commute', from, to].join('.'));
     idx = idx + 1;
     var myIdx = idx;
-    d3.select('.pick-two').classed('loading-data', true);
-    VIZ.requiresData([
-      'json!data/upick2-weekday-rollup-' + from + '.json'
-    ]).progress(function (percent) {
-      if (idx !== myIdx) { return; } // another request went out that supersedes this one
-      d3.selectAll(".section-pick-two .loading").text('Loading... ' + percent + '%').classed('err', false);
-    }).onerror(function () {
-      if (idx !== myIdx) { return; } // another request went out that supersedes this one
-      d3.selectAll(".section-pick-two .loading").text('Error loading data').classed('err', true);
-    }).done(function (weekdayRollup) {
-      if (idx !== myIdx) { return; } // another request went out that supersedes this one
-      d3.select('.pick-two').classed('loading-data', false);
-      d3.selectAll(".section-pick-two .loading").html('&nbsp;');
-
-      var percentileBandData = weekdayRollup[to].result;
-      var scatterplotData = weekdayRollup[to].actuals;
-      // on iOS don't show as many points to improve performance
-      if (VIZ.ios && scatterplotData.length > 1000) {
-        scatterplotData = _.sortBy(_.sample(scatterplotData, 1000), 0);
-      }
-      var fromName = VIZ.fixStationName(idToNode[from].name);
-      var toName = VIZ.fixStationName(idToNode[to].name);
-
-      title.text(fromName + ' to ' + toName);
-      subtitle.text('Trip Duration and Time Between Trains On All Weekdays');
-
-      const yDomainMin = -Math.min(30, d3.max(scatterplotData.map(d => d[2])));
-      const yDomainMax = d3.max(scatterplotData.map(d => d[1]));
-
-      y.domain([yDomainMin, yDomainMax]);
-
-
-      // remove old circles
-      dataLayer.selectAll('.circle').remove();
-
-      // fade-in new circles
-      dataLayer.selectAll('.circle.top')
-        .data(scatterplotData)
-        .enter()
-        .append('circle')
-        .attr('class', 'circle top dimmable')
-        .attr('r', 1)
-        .attr('cx', function (d) { return x(d[0]); })
-        .attr('cy', function (d) { return y(d[1]); })
-        .style('opacity', 0)
-        .transition()
-        .duration(1000)
-        .style('opacity', 0.8);
-
-      dataLayer.selectAll('.circle.bottom')
-        .data(scatterplotData)
-        .enter()
-        .append('circle')
-        .attr('class', 'circle bottom dimmable')
-        .attr('r', 1)
-        .attr('cx', function (d) { return x(d[0]); })
-        .attr('cy', function (d) { return y(-d[2]); })
-        .style('opacity', 0)
-        .transition()
-        .duration(1000)
-        .style('opacity', 0.8);
-
-      // update the colored bands
-      topRange.datum(percentileBandData).transition().attr("d", area(1, 0, 2));
-      topMedian.datum(percentileBandData).transition().attr("d", line(1, 1));
-      bottomRange.datum(percentileBandData).transition().attr("d", area(2, 0, 2, true));
-      bottomMedian.datum(percentileBandData).transition().attr("d", line(2, 1, true));
-      bottomUnder
-        .datum(percentileBandData)
-        .transition()
-        .attr("d", d3.area()
-          .x(function (d) { return x(d[0]); })
-          .curve(d3.curveBasis)
-          .defined(defined)
-          .y0(function () { return y(0); })
-          .y1(function (d) { return y(-d[2][0]); }));
-      topUnder
-        .datum(percentileBandData)
-        .transition()
-        .attr("d", d3.area()
-          .x(function (d) { return x(d[0]); })
-          .curve(d3.curveBasis)
-          .defined(defined)
-          .y0(function (d) { return y(d[1][0]); })
-          .y1(function () { return y(0); }));
-
-      var lastPercentileDatapoint = percentileBandData
-        .filter(function (d) { return d[0] <= 24; }) // Filter values where d[0] <= 24
-        .reduce(function (max, d) {
-          return (d[0] > max[0]) ? d : max; // Find the maximum based on d[0]
-        });
-      var top = {
-        bottom: y(lastPercentileDatapoint[1][0]),
-        median: y(lastPercentileDatapoint[1][1]),
-        top: Math.max(0, y(lastPercentileDatapoint[1][2])),
-      };
-      var bottom = {
-        bottom: Math.min(height - 10, y(-lastPercentileDatapoint[2][2])),
-        median: y(-lastPercentileDatapoint[2][1]),
-        top: y(-lastPercentileDatapoint[2][0]),
-      };
-
-      // update the colored band key on the right
-      sideKey
-        .transition()
-        .style('opacity', 1);
-
-      topKey
-        .transition()
-        .attr('y', top.top);
-      topKeyMedian
-        .transition()
-        .attr('y', top.median);
-      bottomKey
-        .transition()
-        .attr('y', bottom.bottom);
-      bottomKeyMedian
-        .transition()
-        .attr('y', bottom.median);
-
-      topKeyPath
-        .transition()
-        .attr('d', "M" + [
-          [width + 1, top.top],
-          [width + 4, top.top],
-          [width + 4, top.bottom],
-          [width + 1, top.bottom]
-        ].map(round).join(",") + "M" + [
-          [width + 1, top.median],
-          [width + 8, top.median]
-        ].map(round).join(","));
-
-      bottomKeyPath
-        .transition()
-        .attr('d', "M" + [
-          [width + 1, bottom.top],
-          [width + 4, bottom.top],
-          [width + 4, bottom.bottom],
-          [width + 1, bottom.bottom]
-        ].map(round).join(",") + "M" + [
-          [width + 1, bottom.median],
-          [width + 8, bottom.median]
-        ].map(round).join(","));
-
-      yAxisG.transition().call(yAxis);
-      yAxisG2.transition().call(yAxis2);
-      zeroMinutesLine.transition().call(placeMidpointLine);
-
-      // The first time this is drawn, add the vertical bar when you hover over the scatterplot
-      var highlighter = dataLayer.appendOnce('line', 'highlighter dimmable')
-        .attr('y1', 0)
-        .attr('y2', height);
-      var highlighterTime = dataLayer.appendOnce('text', 'highlighter-text dimmable');
-      highlighterTime
-        .firstTime
-        .attr('dx', 5)
-        .attr('x', '-100')
-        .attr('y', 10);
-
-      var extent = d3.scaleLinear().domain([5, 24]).range([5, 24]).clamp(true);
-      layerAboveTheData
-        .on('mousemove', handleHover)
-        .on('touchstart', handleHover)
-        .on('touchmove', handleHover);
-
-      function handleHover(event) {
-        var xPos = d3.pointer(event, scatterplotContainer.node())[0] - margin.left;
-        highlightHour(x.invert(xPos));
-        event.preventDefault();
-      }
-
-      var paragraph = d3.select('.pick-two .key');
-
-      // update the bar position and paragraph that described the data based on
-      // what time you are hovering over
-      function highlightHour(hour) {
-        lastHour = hour;
-        hour = extent(hour);
-        var xPos = x(hour);
-        highlighter.attr('x1', xPos).attr('x2', xPos);
-        var right = xPos < (width - 100);
-        function place(selection) {
-          selection
-            .attr('x', xPos)
-            .attr('text-anchor', right ? 'start' : 'end')
-            .attr('dx', right ? 5 : -5);
-        }
-        var idx = _.sortedIndex(percentileBandData, [hour], 0);
-        var before = percentileBandData[idx - 1];
-        var after = percentileBandData[idx];
-        highlighterTime.call(place);
-        var time = moment.utc(hour * 60 * 1000 * 60).format('h:mm a');
-        if (before && after) {
-          // if there's data here, describe it
-          var ratio = (hour - before[0]) / (after[0] - before[0]);
-          var combined = d3.interpolate(before, after)(ratio);
-          combined[1] = combined[1].map(function (d) { return d.toFixed(0); });
-          combined[2] = combined[2].map(function (d) { return d.toFixed(0); });
-          highlighterTime.text(time);
-          paragraph.text(
-            'At ' + time + ' trains leave every ' + combined[2][0] + ' to ' + combined[2][2] + ' minutes ' +
-            'from ' + fromName + ' going to ' + toName + '.  The trip takes between ' + combined[1][0] + ' and ' +
-            combined[1][2] + ' minutes. The shortest time from when you walk into ' + fromName + ' until you walk out of ' + toName +
-            ' is ' + (combined[1][0]) + ' minutes but it can be as long as ' + (+combined[1][2] + (+combined[2][2])).toFixed(0) +
-            ' minutes.  Usually it takes about ' + (+combined[1][1] + (+combined[2][1] / 2)).toFixed(0) + ' minutes including wait and transit time.'
-          );
-        } else {
-          // if not then say so
-          highlighterTime.text(time);
-          paragraph.text(
-            'At ' + time + ' no trains travel from ' + fromName + ' to ' + toName + '.'
-          );
-        }
-      }
-
-      // if already had a time selected, select that time again with this new data
-      if (lastHour) { highlightHour(lastHour); }
-      // if this is the first time, start by showing 5:30PM because that is when Mike rides the train
-      else { highlightHour(12 + 5.5); }
-    });
+    console.log("from: " + from + " to: " + to);
   }
 
 
@@ -804,15 +595,15 @@ VIZ.requiresData([
    * it loads data into the scatterplot from Kendall/MIT to
    * South Station
    *************************************************************/
-  var hashData = VIZ.getHashData();
-  if (hashData && idToNode[hashData[0]] && idToNode[hashData[1]]) {
-    // if stations are specified in URL, show them
-    render(hashData[0], hashData[1]);
-  } else {
-    // if no specific station pair is selected, then start by showing Kendall/MIT to South Station
-    // because that is the route that Mike rides at 5:30PM
-    render('place-knncl', 'place-sstat');
-  }
+  // var hashData = VIZ.getHashData();
+  // if (hashData && idToNode[hashData[0]] && idToNode[hashData[1]]) {
+  //   // if stations are specified in URL, show them
+  //   render(hashData[0], hashData[1]);
+  // } else {
+  //   // if no specific station pair is selected, then start by showing Kendall/MIT to South Station
+  //   // because that is the route that Mike rides at 5:30PM
+  //   render('place-knncl', 'place-sstat');
+  // }
 
   // Listen for URL hash changes and update the data if that changes after the page is loaded
   $(window).on('hashdatachange', function (evt, d) {
@@ -854,7 +645,7 @@ VIZ.requiresData([
     .on('mouseover', function () {
       // start downloading file as soon as user is thinking about clicking the link
       var start = d3.select(this).attr('data-start');
-      VIZ.requiresData(['json!data/upick2-weekday-rollup-' + start + '.json']);
+      // VIZ.requiresData(['json!data/upick2-weekday-rollup-' + start + '.json']);
     });
 
 

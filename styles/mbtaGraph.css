@@ -14,14 +14,11 @@
 .section-pick-two .viz .map circle {
   fill-opacity: 1;
 }
-.section-pick-two .viz .map circle.station.middle {
-  fill: #ccc;
-}
 .section-pick-two .viz .map circle.station.end {
   stroke-width: 1.5px;
 }
 .section-pick-two .viz .map circle.active {
-  fill: #5cb85c !important;
+  fill: #333333 !important;
 }
 .section-pick-two .viz .map .station-wrapper.hover circle {
   stroke: black !important;
@@ -196,4 +193,41 @@ a.section-pick-two .viz .picker .loading.err:hover {
 
 .line-data-table tr:nth-child(even) {
   background-color: #f9f9f9;
+}
+
+.blue {
+  fill: #2F5DA6;
+  stroke: #2F5DA6;
+  background-color: #2F5DA6 !important;
+}
+.red {
+  fill: #E12D27;
+  stroke: #E12D27;
+  background-color: #E12D27 !important;
+}
+.orange {
+  fill: #E87200;
+  stroke: #E87200;
+  background-color: #E87200 !important;
+}
+.green {
+  fill: #03C04A;
+  stroke: #03C04A;
+  background-color: #03C04A !important;
+}
+path.blue {
+  stroke: #2F5DA6;
+  fill: none;
+}
+path.red {
+  stroke: #E12D27;
+  fill: none;
+}
+path.orange {
+  stroke: #E87200;
+  fill: none;
+}
+path.green {
+  stroke: #03C04A;
+  fill: none;
 }
