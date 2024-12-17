@@ -172,3 +172,8 @@ a.section-pick-two .viz .picker .loading.err:hover {
   -webkit-transition: opacity 50ms ease;
   transition: opacity 50ms ease;
 }
+
+.d3-tip {
+  pointer-events: none; /* Prevent the tooltip from blocking mouseover */
+  z-index: 1000; /* Ensure tooltip appears above other elements */
+}
