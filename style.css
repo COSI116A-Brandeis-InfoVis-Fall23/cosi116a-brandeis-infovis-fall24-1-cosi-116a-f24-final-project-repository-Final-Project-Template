@@ -21,29 +21,25 @@ h1, h2, h3 {
   height: 100%;
 }
 .toolbar {
-	background-color: #333;
-	overflow: hidden;
-  display: flex;
-  padding: 10px;
-}
-.toolbar button {
-	background-color: #444; 
+	background-color: #333; /* Dark gray background */
+	display: flex;
+	padding: 10px;
+  }
+  .toolbar a {
 	color: white;
-	border: none;
+	text-decoration: none;
 	padding: 10px 15px;
 	margin-right: 10px;
-	text-align: center;
 	font-size: 16px;
-	cursor: pointer;
+	background-color: #444;
+	border-radius: 5px;
+	transition: background-color 0.3s;
   }
-  .toolbar button:hover {
-	background-color: #555; 
+  
+  .toolbar a:hover {
+	background-color: #555;
   }
-  body {
-	background-color: #788282; 
-	margin: 0;
-	font-family: Arial, sans-serif;
-  }
+ 
 
 /* Fork on GitHub ribbon via https://codepo8.github.io/css-fork-on-github-ribbon/# */  
 #forkongithub a{
