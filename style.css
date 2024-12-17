@@ -39,6 +39,11 @@ h1, h2, h3 {
   .toolbar button:hover {
 	background-color: #555; 
   }
+  body {
+	background-color: #f9f9f9; 
+	margin: 0;
+	font-family: Arial, sans-serif;
+  }
 
 /* Fork on GitHub ribbon via https://codepo8.github.io/css-fork-on-github-ribbon/# */  
 #forkongithub a{
