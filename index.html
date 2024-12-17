@@ -100,9 +100,20 @@
        a <a href="http://www.ccs.neu.edu/home/cody/courses/shared/d3-flexible-transitions.mp4">link to the video</a> instead.</p>
     </video>
 
-    <h1 id="about">Visualization Explanation</h1>
+    <h1 id="about">
+      <a href="https://docs.google.com/presentation/d/1XZtAAWTI19HiS-XtTDfgbpJzPr6bh5kkjW3YQEv9Jp8/edit?usp=sharing" target="_blank" rel="noopener noreferrer">Visualization Explanation</a>
+    </h1>
     
-    <p><em>Final visualization screenshots (PNG images), design justifications, UI walk-through, and linked presentation slides.</em></p>
+    <p>Our visualization is designed for "present" consumption, helping users make timely decisions about their use of the MBTA system. The MBTA graph displays the Green, Red, Orange, and Blue lines, with interactive features for deeper insights. Users can hover over a station to view average delay times and the most common alerts, providing a quick understanding of reliability and delay causes. By clicking on a line, a heatmap table appears, showing ridership levels and peak travel times across all stations. Additionally, users can drag to highlight a series of stations, allowing them to focus on specific routes for personalized insights.</p> <br>
+
+<p>The design prioritizes clarity, interactivity, and usability to help users plan their travel effectively. The hover and click interactions enable a seamless exploration of data without clutter, while the heatmap uses color intensity to highlight key trends like high ridership and peak hours. This approach not only helps users identify patterns and delays but also provides actionable insights to plan alternate routes or adjust travel times. By balancing simplicity with depth, the visualization supports smarter decision-making and improves user understanding of MBTA reliability.</p>
+      <img src="images/Screen Shot 2024-12-17 at 11.09.55 AM.png" width="500" height="auto">
+      <p>Hover over the stations to see station information, average delay time, and the most common alert/reason for delay</p><br>
+      <img src="images/Screen Shot 2024-12-17 at 11.10.25 AM.png" width="600" height="auto">
+      <p>Click on a line for a table with all the stations to show up</p>
+      <p>The table is a heatmap that corresponds to the density in ridership at each station on average</p><br>
+      <img src="images/Screen Shot 2024-12-17 at 11.11.01 AM.png" width="600" height="auto">
+      <p>Click and drag a route on an MBTA to have the stations highlighted in the table</p><br>
 
     <h1>Data Analysis</h1>
     <p>We had to develop a series of Python scripts to clean, transform, and prepare MBTA subway stop data for this visualization. First, we processed raw MBTA stop data by removing duplicates, standardizing stop names, and merging it with a station ID mapping from a secondary file containing stop distances and IDs. This step resulted in a cleaner dataset with unique stop names, line information, and station IDs, forming the foundation for further analysis.
