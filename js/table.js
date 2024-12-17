@@ -23,7 +23,7 @@ function table() {
     // See https://developer.mozilla.org/en-US/docs/Web/HTML/Element/table
 
     let tr = table.append('thead').append('tr')
-    tr.selectAll('th').data(["Country", "ABV", "Rating", "GDP", "Transportation Spending (as % of GDP)"]).enter().append('th').text((d) => d)
+    tr.selectAll('th').data(["Country", "ABV", "Rating", "GDP Per Capita", "Transportation Spending(as % of GDP)"]).enter().append('th').text((d) => d)
 
     let tbody = table.append('tbody')
     
