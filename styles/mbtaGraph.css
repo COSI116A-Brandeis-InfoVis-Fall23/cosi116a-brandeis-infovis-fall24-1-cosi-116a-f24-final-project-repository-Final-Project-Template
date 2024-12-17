@@ -173,6 +173,8 @@ a.section-pick-two .viz .picker .loading.err:hover {
 .d3-tip {
   pointer-events: none; /* Prevent the tooltip from blocking mouseover */
   z-index: 1000; /* Ensure tooltip appears above other elements */
+  fill: #FFFFFF;
+  opacity: 1 !important;
 }
 
 .line-data-table {
@@ -231,3 +233,20 @@ path.green {
   stroke: #03C04A;
   fill: none;
 }
+
+tr.active {
+  outline: 2px solid #007BFF; /* Blue outline, 2px width */
+  outline-offset: -1px;       /* Prevent outline from expanding the row size */
+}
+
+.tool-tip {
+  background-color: white; /* Solid white background */
+  opacity: 1 !important;   /* Fully opaque */
+  border: 1px solid black; /* Black border */
+  padding: 5px;            /* Add some padding */
+  border-radius: 5px;      /* Optional: rounded corners */
+  box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.2); /* Optional: subtle shadow */
+  color: black;            /* Ensure text color is black */
+  pointer-events: auto;    /* Allow interaction if needed */
+}
+

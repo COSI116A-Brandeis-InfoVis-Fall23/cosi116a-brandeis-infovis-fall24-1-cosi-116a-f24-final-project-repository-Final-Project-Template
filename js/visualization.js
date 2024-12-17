@@ -76,7 +76,7 @@ VIZ.requiresData([
     .offset([-100, 0])
     .style("pointer-events", "none")
     .html(function (d) {
-      return "Station: " + VIZ.fixStationName(d.name) + "<br> Avg. Delay Time: " + Math.round(d.delay_time.average_delay_min) + " mins<br>Most Common Alert: " + d.alert.cause.toLowerCase();
+      return "<div class='tool-tip'>Station: " + VIZ.fixStationName(d.name) + "<br> Avg. Delay Time: " + Math.round(d.delay_time.average_delay_min) + " mins<br>Most Common Alert: " + d.alert.cause.toLowerCase() + "</div>";
     });
   var mapGlyphSvg = d3.select('.section-pick-two .map').append('svg').call(tip);
   var details = d3.select('.section-pick-two .details');
@@ -245,11 +245,18 @@ VIZ.requiresData([
       /* jshint validthis:true */
       d3.select('body').classed('dragging', true);
       draggingFrom = d;
+      displayLineTable(d.line);
       draggingTo = null;
       mapGlyphSvg.selectAll('.start').classed('start', false);
       mapGlyphSvg.selectAll('.stop').classed('stop', false);
       mapGlyphSvg.selectAll('.hover').classed('hover', false);
       mapGlyphSvg.selectAll('.active').classed('active', false);
+      d3.selectAll("tr")  // Select all table rows
+        .attr("class", function () {
+          const currentClass = d3.select(this).attr("class") || ""; // Get current class or initialize to empty string
+          return currentClass.replace(/\bactive\b/g, "").trim(); // Remove 'active' class and trim extra spaces
+        });
+
       // pre-load file as they are dragging, hopefully it loads and gets cached when they finish dragging
       // VIZ.requiresData(['json!data/upick2-weekday-rollup-' + draggingFrom.id + '.json']);
       d3.select(this).select('circle').classed('start', true);
@@ -280,17 +287,17 @@ VIZ.requiresData([
     function displayLineTable(lineId) {
       // Clear existing table content
       d3.select("#line-table-container").html("");
-    
+
       // Filter nodes for the selected line
       const lineStations = network.nodes.filter(node =>
         node.links.some(link => link.line === lineId)
       );
-    
+
       if (!lineStations.length) {
         console.warn("No stations found for line:", lineId);
         return;
       }
-    
+
       // Line-specific colors
       const lineColors = {
         green: "#4CAF50", // Green Line
@@ -299,24 +306,24 @@ VIZ.requiresData([
         orange: "#FF9800" // Orange Line
       };
       const lineColor = lineColors[lineId.toLowerCase()] || "#ccc"; // Default to gray
-    
+
       // Calculate max riders for scaling color intensity
-      const maxRiders = d3.max(lineStations, d => 
-        Math.max(d.ridership?.weekday?.overall_average_ons || 0, 
-                 d.ridership?.weekend?.overall_average_ons || 0)
+      const maxRiders = d3.max(lineStations, d =>
+        Math.max(d.ridership?.weekday?.overall_average_ons || 0,
+          d.ridership?.weekend?.overall_average_ons || 0)
       );
-    
+
       const riderColor = d3.scaleLinear()
         .domain([0, maxRiders || 1]) // Avoid zero division
         .range(["#E8F5E9", lineColor]);
-    
+
       // Create the table
       const table = d3.select("#line-table-container")
         .append("table")
         .attr("class", "line-data-table")
         .style("width", "100%")
         .style("border-collapse", "collapse");
-    
+
       // Add table header
       table.append("thead").append("tr")
         .selectAll("th")
@@ -330,21 +337,23 @@ VIZ.requiresData([
         .style("padding", "8px")
         .style("background-color", "#f4f4f4")
         .text(d => d);
-    
+
       // Add table rows
       const tbody = table.append("tbody");
-    
+
       lineStations.forEach(station => {
         const ridership = station.ridership || { weekday: {}, weekend: {} };
-    
+
         const row = tbody.append("tr");
-    
+
+        row.attr("station-id", station.id);
+
         // Station Name
         row.append("td")
           .style("border", "1px solid #ddd")
           .style("padding", "8px")
           .text(VIZ.fixStationName(station.name));
-    
+
         // Avg Weekday Riders (with heatmap)
         const weekdayRiders = ridership.weekday.overall_average_ons || 0;
         row.append("td")
@@ -352,19 +361,19 @@ VIZ.requiresData([
           .style("padding", "8px")
           .style("background-color", riderColor(weekdayRiders))
           .text(Math.round(weekdayRiders));
-    
+
         // Weekday Peak Time
         row.append("td")
           .style("border", "1px solid #ddd")
           .style("padding", "8px")
           .text(ridership.weekday.peak_time || "N/A");
-    
+
         // Riders During Weekday Peak
         row.append("td")
           .style("border", "1px solid #ddd")
           .style("padding", "8px")
           .text(Math.round(ridership.weekday.peak_time_average_ons || 0));
-    
+
         // Avg Weekend Riders (with heatmap)
         const weekendRiders = ridership.weekend.overall_average_ons || 0;
         row.append("td")
@@ -372,13 +381,13 @@ VIZ.requiresData([
           .style("padding", "8px")
           .style("background-color", riderColor(weekendRiders))
           .text(Math.round(weekendRiders));
-    
+
         // Weekend Peak Time
         row.append("td")
           .style("border", "1px solid #ddd")
           .style("padding", "8px")
           .text(ridership.weekend.peak_time || "N/A");
-    
+
         // Riders During Weekend Peak
         row.append("td")
           .style("border", "1px solid #ddd")
@@ -386,7 +395,7 @@ VIZ.requiresData([
           .text(Math.round(ridership.weekend.peak_time_average_ons || 0));
       });
     }
-    
+
 
     // line color circles
     function dot(id, clazz) {
@@ -438,16 +447,24 @@ VIZ.requiresData([
     var path = findPath(from, to);
     if (path) {
       details.text(VIZ.fixStationName(idToNode[from].name) + ' to ' + VIZ.fixStationName(idToNode[to].name));
-      // circles.each(function(d, i) {
-      //   console.log("Circle Data at index", i, d.id, ":", path[d.id]);
-      //   if (path[d.id]) {
-      //     d.classList.add("active");
-      //   }
-      // });
-      circles.attr("class", function(d) {
-        return path[d.id] ? d3.select(this).attr("class") + " active" : d3.select(this).attr("class");
+      circles.attr("class", function (d) {
+        const currentClass = d3.select(this).attr("class") || ""; // Get current class or initialize as empty string
+        return path[d.id] && !currentClass.includes("active")
+          ? currentClass + " active"
+          : currentClass;
       });
-      
+
+      d3.selectAll("tr") // Select all table rows
+        .attr("class", function () {
+          const stationId = d3.select(this).attr("station-id"); // Get the station-id attribute
+          const currentClass = d3.select(this).attr("class") || ""; // Handle null class case
+          return path[stationId] && !currentClass.includes("active")
+            ? currentClass + " active"  // Add 'active' only if not already present
+            : currentClass;  // Keep existing class
+        });
+
+
+
       circles.classed({
         start: function (d) { return d.id === from; },
         stop: function (d) { return d.id === to; },
