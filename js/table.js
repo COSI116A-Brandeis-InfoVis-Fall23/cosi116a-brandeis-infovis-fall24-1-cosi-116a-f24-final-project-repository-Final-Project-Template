@@ -1,5 +1,6 @@
-function table() {
+//Table code was taken and edited from brushing and linking Hw 4
 
+function table() {
   // Based on Mike Bostock's margin convention
   // https://bl.ocks.org/mbostock/3019563
   let ourBrush = null,

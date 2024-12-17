@@ -1,3 +1,5 @@
+//Scatterplot code was taken and edited from brushing and linking Hw 4
+
 /* global D3 */
 
 // Initialize a scatterplot. Modeled after Mike Bostock's

@@ -4,7 +4,7 @@
 
     
   //d3.json("data/comparisonByYear.json", function(error, data) {
-    d3.json("data/withSpending.json", function(error, data) {
+    d3.json("data/data.json", function(error, data) {
     if (error) {
         console.error("Error loading JSON data:", error);
         return;
