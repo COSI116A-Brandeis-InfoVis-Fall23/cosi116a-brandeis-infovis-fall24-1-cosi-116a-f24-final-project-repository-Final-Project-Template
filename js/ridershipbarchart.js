@@ -1,6 +1,5 @@
 // Load the CSV data
 d3.csv("data/neighborhood_ridership.csv", function (data) {
-    console.log("Data loaded:", data);
 
     // Convert gated_entries to numeric values
     data.forEach(d => {
