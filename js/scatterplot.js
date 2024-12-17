@@ -150,10 +150,6 @@ function scatterplot() {
         return yScale(yValue(d));
     }
 
-    function R(d) {
-        return rScale()
-    }
-
     chart.margin = function (_) {
         if (!arguments.length) return margin;
         margin = _;

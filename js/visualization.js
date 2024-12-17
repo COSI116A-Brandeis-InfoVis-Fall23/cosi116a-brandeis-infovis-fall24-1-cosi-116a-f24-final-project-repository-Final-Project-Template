@@ -1,78 +1,96 @@
-// Immediately Invoked Function Expression to limit access to our 
-// variables and prevent race conditions
 ((() => {
-
-    // Load the data from a json file (you can make these using
-    // JSON.stringify(YOUR_OBJECT), just remove the surrounding "")
-    d3.json("data/test.json", (data) => {
   
-      // General event type for selections, used by d3-dispatch
-      // https://github.com/d3/d3-dispatch
-      const dispatchString = "selectionUpdated";
+  const dispatchString = "selectionUpdated";
+
+    
+  //d3.json("data/comparisonByYear.json", function(error, data) {
+    d3.json("data/withSpending.json", function(error, data) {
+    if (error) {
+        console.error("Error loading JSON data:", error);
+        return;
+    }
+
+
+    console.log("Data loaded:", data);
+
+      // Default year to display
+      let yearSelected = "2017"; 
+      let currData = data[yearSelected];
   
-      // Create a line chart given x and y attributes, labels, offsets; 
-      // a dispatcher (d3-dispatch) for selection events; 
-      // a div id selector to put our svg in; and the data to use.
-      
-      /*
-      let lcYearPoverty = linechart()
-        .x(d => d.year)
-        .xLabel("YEAR")
-        .y(d => d.poverty)
-        .yLabel("POVERTY RATE")
-        .yLabelOffset(40)
-        .selectionDispatcher(d3.dispatch(dispatchString))
-        ("#linechart", data);
-        */
+      currData = currData.filter(d => d.Rating !== "N/A");
+
+      document.getElementById("selected-year").textContent = yearSelected;
+  
 
   
-      // Create a scatterplot given x and y attributes, labels, offsets; 
-      // a dispatcher (d3-dispatch) for selection events; 
-      // a div id selector to put our svg in; and the data to use.
-      
-      /*
-      let spUnemployMurder = scatterplot()
-        .x(d => d.unemployment)
-        .xLabel("UNEMPLOYMENT RATE")
-        .y(d => d.murder)
-        .yLabel("MURDER RATE IN STATE PER 100000")
-        .yLabelOffset(150)
-        .selectionDispatcher(d3.dispatch(dispatchString))
-        ("#scatterplot", data);
-        */
+      let tableData = table()
+      .selectionDispatcher(d3.dispatch(dispatchString))
+      ("#table", currData);
 
 
-      d3.csv("/data/Data.csv", (data) => {
+      let spRatingGDPComparison = scatterplot()
+      .x(d => d.Transportation_Spending) // Map GDP to x-axis
+      .xLabel("Transportation Spending (as % of GDP)")
+      .y(d => +d.Rating) // Convert Rating to numeric for y-axis
+      .yLabel("Transportation Rating (0-7)")
+      .yLabelOffset(150)
+      .selectionDispatcher(d3.dispatch("selectionUpdated"))
+      ("#scatterplot", currData);
 
-        let tableData = table()
-        .selectionDispatcher(d3.dispatch(dispatchString))
-        ("#table", data);
+      function updateYear(year) {
+        yearSelected = year;
+        let currData = data[yearSelected];
 
-        console.log(data);
-      });
-
-
-/* 
-      // When the line chart selection is updated via brushing, 
-      // tell the scatterplot to update it's selection (linking)
-      lcYearPoverty.selectionDispatcher().on(dispatchString, function(selectedData) {
-        spUnemployMurder.updateSelection(selectedData);
-        // ADD CODE TO HAVE TABLE UPDATE ITS SELECTION AS WELL
-        tableData.updateSelection(selectedData);
-      });
-  
-      // When the scatterplot selection is updated via brushing, 
-      // tell the line chart to update it's selection (linking)
-      spUnemployMurder.selectionDispatcher().on(dispatchString, function(selectedData) {
-        lcYearPoverty.updateSelection(selectedData);
-        // ADD CODE TO HAVE TABLE UPDATE ITS SELECTION AS WELL
-        tableData.updateSelection(selectedData);
+        currData = currData.filter(d => d.Rating !== "N/A");
         
-      });
-      */
-  
-      // When the table is updated via brushing, tell the line chart and scatterplot
+        d3.select("#scatterplot").selectAll("*").remove();
 
+        let spRatingGDPComparison = scatterplot()
+        .x(d => d.Transportation_Spending) 
+        .xLabel("Transportation Spending (as % of GDP)")
+        .y(d => +d.Rating) // Convert Rating to numeric for y-axis
+        .yLabel("Transportation Rating (0-7)")
+        .yLabelOffset(150)
+        .selectionDispatcher(d3.dispatch("selectionUpdated"))
+        ("#scatterplot", currData);
+
+        d3.select("table").remove();
+        tableData = table()
+            .selectionDispatcher(d3.dispatch(dispatchString))
+            ("#table", currData);
+        
+        spRatingGDPComparison.selectionDispatcher().on(dispatchString, function(selectedData) {
+          tableData.updateSelection(selectedData);
+        });
+
+        tableData.selectionDispatcher().on(dispatchString, function(selectedData) {
+          spRatingGDPComparison.updateSelection(selectedData);
+        });
+        
+        document.getElementById("selected-year").textContent = yearSelected;
+      }
+
+       // Add event listeners to the buttons
+      document.getElementById("2007").addEventListener("click", () => updateYear("2007"));
+      document.getElementById("2008").addEventListener("click", () => updateYear("2008"));
+      document.getElementById("2009").addEventListener("click", () => updateYear("2009"));
+      document.getElementById("2010").addEventListener("click", () => updateYear("2010"));
+      document.getElementById("2011").addEventListener("click", () => updateYear("2011"));
+      document.getElementById("2012").addEventListener("click", () => updateYear("2012"));
+      document.getElementById("2013").addEventListener("click", () => updateYear("2013"));
+      document.getElementById("2014").addEventListener("click", () => updateYear("2014"));
+      document.getElementById("2015").addEventListener("click", () => updateYear("2015"));
+      document.getElementById("2016").addEventListener("click", () => updateYear("2016"));
+      document.getElementById("2017").addEventListener("click", () => updateYear("2017"));
+
+
+    spRatingGDPComparison.selectionDispatcher().on(dispatchString, function(selectedData) {
+      tableData.updateSelection(selectedData);
     });
-  
-  })());
+
+    tableData.selectionDispatcher().on(dispatchString, function(selectedData) {
+      spRatingGDPComparison.updateSelection(selectedData);
+    });
+  });
+
+}))();

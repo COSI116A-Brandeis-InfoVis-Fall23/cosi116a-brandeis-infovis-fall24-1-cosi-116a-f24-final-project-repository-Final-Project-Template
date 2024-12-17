@@ -15,8 +15,6 @@ function table() {
       .append("table")
         .classed("my-table", true);
 
-    // Here, we grab the labels of the first item in the dataset
-    //  and store them as the headers of the table.
     let tableHeaders = Object.keys(data[0]);
     
     // You should append these headers to the <table> element as <th> objects inside
@@ -24,7 +22,6 @@ function table() {
     // See https://developer.mozilla.org/en-US/docs/Web/HTML/Element/table
 
     let tr = table.append('thead').append('tr')
-    //tr.selectAll('th').data(tableHeaders).enter().append('th').text((d) => d)
     tr.selectAll('th').data(["Country", "ABV", "Rating", "GDP", "Transportation Spending (as % of GDP)"]).enter().append('th').text((d) => d)
 
     let tbody = table.append('tbody')
