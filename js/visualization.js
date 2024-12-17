@@ -22,11 +22,20 @@
 
 /* 1. Load the map and station data and do some pre-processing
  *************************************************************/
+function getCaseInsensitiveKey(obj, key) {
+  const lowerCaseKey = key.toLowerCase();
+  const foundKey = Object.keys(obj).find(k => k.toLowerCase() === lowerCaseKey);
+  return foundKey ? obj[foundKey] : undefined;
+}
+
 VIZ.requiresData([
   'json!data/station-network.json',
   'json!data/spider.json',
   'json!data/station-paths.json',
-], true).done(function (network, spider, paths) {
+  'json!data/alerts.json',
+  'json!data/delaytimes.json',
+  'json!data/peak_time_ridership.json',
+], true).done(function (network, spider, paths, alerts, delaytimes, peak_time_ridership) {
   "use strict";
   var idToNode = {};
   network.links.forEach(function (link) {
@@ -40,6 +49,8 @@ VIZ.requiresData([
   network.nodes.forEach(function (data) {
     data.x = spider[data.id][0];
     data.y = spider[data.id][1];
+    data.delay_time = delaytimes[data.id];
+    data.alert = getCaseInsensitiveKey(alerts, data.links[0].line);
     idToNode[data.id] = data;
   });
 
@@ -51,8 +62,11 @@ VIZ.requiresData([
    *************************************************************/
   var tip = d3.tip()
     .attr('class', 'd3-tip pick2')
-    .offset([-10, 0])
-    .html(function (d) { console.log(VIZ.fixStationName(d.name)); return VIZ.fixStationName(d.name); });
+    .offset([-100, 0])
+    .style("pointer-events", "none")
+    .html(function (d) { 
+      return "Station: " + VIZ.fixStationName(d.name) + "<br> Avg. Delay Time: " + Math.round(d.delay_time.average_delay_min) + " mins<br>Most Common Alert: " + d.alert.cause.toLowerCase(); 
+    });
   var mapGlyphSvg = d3.select('.section-pick-two .map').append('svg').call(tip);
   var details = d3.select('.section-pick-two .details');
   var $tip = $(".d3-tip.pick2");
@@ -114,7 +128,11 @@ VIZ.requiresData([
       .attr('x1', function (d) { return d.source.pos[0]; })
       .attr('y1', function (d) { return d.source.pos[1]; })
       .attr('x2', function (d) { return d.target.pos[0]; })
-      .attr('y2', function (d) { return d.target.pos[1]; });
+      .attr('y2', function (d) { return d.target.pos[1]; })
+      .on('click', function (event, d) {
+        // When a line is clicked, call the function to display the table
+        displayLineTable(d.line); // Pass the line identifier
+      });
 
     connections
       .attr('x1', function (d) { return d.source.pos[0]; })
@@ -139,7 +157,6 @@ VIZ.requiresData([
         } else {
           d3.select(this).classed('hover', true);
         }
-        console.log(d);
         showTip(d);
       })
       .on('mouseout', function (d) {
@@ -168,7 +185,7 @@ VIZ.requiresData([
       $tip.removeClass('out');
       var $circle = $(d.circle);
       var offset = $circle.offset();
-      tip.style('top', (offset.top - 45) + 'px');
+      tip.style('top', (offset.top - 100) + 'px');
       tip.style('left', (offset.left - $tip.width() / 2 - 5) + 'px');
     }
 
