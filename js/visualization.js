@@ -280,56 +280,113 @@ VIZ.requiresData([
     function displayLineTable(lineId) {
       // Clear existing table content
       d3.select("#line-table-container").html("");
-
+    
       // Filter nodes for the selected line
-      const lineStations = network.nodes.filter(node => {
-        return node.links.some(link => link.line === lineId);
-      });
-
+      const lineStations = network.nodes.filter(node =>
+        node.links.some(link => link.line === lineId)
+      );
+    
+      if (!lineStations.length) {
+        console.warn("No stations found for line:", lineId);
+        return;
+      }
+    
+      // Line-specific colors
+      const lineColors = {
+        green: "#4CAF50", // Green Line
+        red: "#F44336",   // Red Line
+        blue: "#2196F3",  // Blue Line
+        orange: "#FF9800" // Orange Line
+      };
+      const lineColor = lineColors[lineId.toLowerCase()] || "#ccc"; // Default to gray
+    
+      // Calculate max riders for scaling color intensity
+      const maxRiders = d3.max(lineStations, d => 
+        Math.max(d.ridership?.weekday?.overall_average_ons || 0, 
+                 d.ridership?.weekend?.overall_average_ons || 0)
+      );
+    
+      const riderColor = d3.scaleLinear()
+        .domain([0, maxRiders || 1]) // Avoid zero division
+        .range(["#E8F5E9", lineColor]);
+    
       // Create the table
       const table = d3.select("#line-table-container")
         .append("table")
-        .attr("class", "line-data-table");
-
+        .attr("class", "line-data-table")
+        .style("width", "100%")
+        .style("border-collapse", "collapse");
+    
       // Add table header
       table.append("thead").append("tr")
         .selectAll("th")
         .data([
-          "Station",
-          "Avg Weekday Riders",
-          "Weekday Peak Time",
-          "Riders During Weekday Peak",
-          "Avg Weekend Riders",
-          "Weekend Peak Time",
-          "Riders During Weekend Peak"
+          "Station Name", "Avg Weekday Riders", "Weekday Peak Time", "Riders During Weekday Peak",
+          "Avg Weekend Riders", "Weekend Peak Time", "Riders During Weekend Peak"
         ])
         .enter()
         .append("th")
-        .text(function (d) { return d; });
-
-      // Add table body with rows
+        .style("border", "1px solid #ddd")
+        .style("padding", "8px")
+        .style("background-color", "#f4f4f4")
+        .text(d => d);
+    
+      // Add table rows
       const tbody = table.append("tbody");
-
-      // Populate table rows
-      lineStations.forEach(function (station) {
-        const ridership = station.ridership || { weekday: {}, weekend: {} }; // Fallback for empty ridership
-
-        tbody.append("tr")
-          .selectAll("td")
-          .data([
-            VIZ.fixStationName(station.name),                  // Station Name
-            Math.round(ridership.weekday.overall_average_ons || 0), // Avg Weekday Riders
-            ridership.weekday.peak_time || "N/A",              // Weekday Peak Time
-            Math.round(ridership.weekday.peak_time_average_ons || 0), // Riders During Weekday Peak
-            Math.round(ridership.weekend.overall_average_ons || 0), // Avg Weekend Riders
-            ridership.weekend.peak_time || "N/A",              // Weekend Peak Time
-            Math.round(ridership.weekend.peak_time_average_ons || 0)  // Riders During Weekend Peak
-          ])
-          .enter()
-          .append("td")
-          .text(function (d) { return d; });
+    
+      lineStations.forEach(station => {
+        const ridership = station.ridership || { weekday: {}, weekend: {} };
+    
+        const row = tbody.append("tr");
+    
+        // Station Name
+        row.append("td")
+          .style("border", "1px solid #ddd")
+          .style("padding", "8px")
+          .text(VIZ.fixStationName(station.name));
+    
+        // Avg Weekday Riders (with heatmap)
+        const weekdayRiders = ridership.weekday.overall_average_ons || 0;
+        row.append("td")
+          .style("border", "1px solid #ddd")
+          .style("padding", "8px")
+          .style("background-color", riderColor(weekdayRiders))
+          .text(Math.round(weekdayRiders));
+    
+        // Weekday Peak Time
+        row.append("td")
+          .style("border", "1px solid #ddd")
+          .style("padding", "8px")
+          .text(ridership.weekday.peak_time || "N/A");
+    
+        // Riders During Weekday Peak
+        row.append("td")
+          .style("border", "1px solid #ddd")
+          .style("padding", "8px")
+          .text(Math.round(ridership.weekday.peak_time_average_ons || 0));
+    
+        // Avg Weekend Riders (with heatmap)
+        const weekendRiders = ridership.weekend.overall_average_ons || 0;
+        row.append("td")
+          .style("border", "1px solid #ddd")
+          .style("padding", "8px")
+          .style("background-color", riderColor(weekendRiders))
+          .text(Math.round(weekendRiders));
+    
+        // Weekend Peak Time
+        row.append("td")
+          .style("border", "1px solid #ddd")
+          .style("padding", "8px")
+          .text(ridership.weekend.peak_time || "N/A");
+    
+        // Riders During Weekend Peak
+        row.append("td")
+          .style("border", "1px solid #ddd")
+          .style("padding", "8px")
+          .text(Math.round(ridership.weekend.peak_time_average_ons || 0));
       });
     }
+    
 
     // line color circles
     function dot(id, clazz) {
