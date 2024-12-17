@@ -192,15 +192,12 @@ function scatterplot() {
         return chart;
     };
 
-    // Gets or sets the dispatcher we use for selection events
     chart.selectionDispatcher = function (_) {
         if (!arguments.length) return dispatcher;
         dispatcher = _;
         return chart;
     };
 
-    // Given selected data from another visualization 
-    // select the relevant elements here (linking)
     chart.updateSelection = function (selectedData) {
         if (!arguments.length) return;
 
