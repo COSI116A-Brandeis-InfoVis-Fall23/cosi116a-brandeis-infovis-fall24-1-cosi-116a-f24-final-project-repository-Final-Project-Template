@@ -7,7 +7,7 @@
   <meta charset="utf-8">
 
   <!-- Title -->
-  <title>Project Team 7: Heart Disease, COSI 116A F23</title>
+  <title>Project Team 7: Heart Disease, COSI 116A F24</title>
 
   <!-- CSS Styling -->
   <link rel="stylesheet" href="style.css">
@@ -36,16 +36,13 @@
 <!-- Main page content -->
 
 <body>
-
-  <!-- Update this with your GitHub repo URL -->
   <span id="forkongithub"><a
       href="https://github.com/COSI116A-Brandeis-InfoVis-Fall23/cosi-116a-f24-final-project-7.github.io">Fork me on
       GitHub</a></span>
 
-  <!-- Your writeup goes here -->
   <div class="content-column">
 
-    <h1>Project Team 7: Heart Disease, COSI 116A F23</h1>
+    <h1>Project Team 7: Heart Disease, COSI 116A F24</h1>
 
     <p><strong>Michael Sun</strong>, <strong>Noah Bunis</strong>, <strong>Margaret Potagal</strong>, <strong>Madison
         Sansone</strong></p>
@@ -56,29 +53,23 @@
 
     <h1>Motivation</h1>
 
-    <p><em>Summary of user needs and motivating questions.</em></p>
-    <!-- <p><em>Expectation: There is a clear focus, and a developed explanation of the problem, and a reasonable response is proposed.</em></p> -->
-
     <p> The United States is currently facing a health crisis, marked by alarmingly high rates of cardiovascular
       disease, limited access to mental health resources, and a healthcare system that ranks poorly compared to other
       wealthy nations. The purpose of our project is to analyze health data in the United States across time and states,
       aiming to uncover patterns and trends that may enhance our understanding of this issue. We intend to do this by
       narrowing our scope to exploring heart disease, the leading cause of death in the United States. To do so, we will
-      analyze the age adjusted heart disease death rate per state from 1999-2021. We will also be plotting our heart
+      analyze the age-adjusted heart disease death rate per state from 1999-2021. We will also be plotting our heart
       disease data against life expectancy and COVID-19 death rates per state to see if there are any interesting
-      patterns or trends across data sets. Our visualization will provide insight on how location and time period have
+      patterns or trends across data sets. Our visualization will provide insight into how location and time period have
       impacted the livelihood of Americans.
-      Originally, our target audience was health professionals, but through our research process we came to the
+      Originally, our target audience was health professionals, but through our research process, we came to the
       conclusion that our visualization can lend itself to both the general public and health experts. To accomplish
       this, we strive to make an easily understandable, yet detailed and informative visualization. Our visualization
       aims to help Americans reflect on their own health as well as provide insight on the evolving landscape of heart
       disease in the United States to health professionals. Experts in the field may be able to better understand who is
-      most at risk as well as use their knowledge to connect the dots on the causes of the changes seen overtime.</p>
+      most at risk as well as use their knowledge to connect the dots on the causes of the changes seen over time.</p>
 
     <h1>Visualization</h1>
-
-    <!-- <p><em>Include the interactive visualization as part of this page. Static example follows.</em></p> -->
-
   </div>
 
   <!-- Slider section -->
@@ -106,7 +97,7 @@
 
     <!-- Legend section -->
     <div class="legend-holder" style="border: 1px solid #000; padding: 1px; border-radius: 1px; text-align:center;">
-      <h3>Age Adjusted Heart Disease Death Rate</span></h3>
+      <h3>Age-Adjusted Heart Disease Death Rate</span></h3>
       <h4>(Deaths per 100,000)</h4>
       <div style="display: flex; flex-direction: column; align-items: center;">
         <span style="margin-bottom: 2px;" id="max">High</span>
@@ -130,21 +121,9 @@
     <div class="scatterplot-holder" id="scatterplot"></div>
 
   </div>
-
-  <!-- Your writeup goes here -->
   <div class="content-column">
 
     <h1>Demo Video</h1>
-
-    <!-- <p><em>Embedded MP4 demo video using the HTML5 &lt;video&gt; tag. For example, this screen recording Prof. Cody
-        Dunne made of Mike Bostock's flexible transitions in D3 slide:</em></p>
-
-    <video controls width="100%">
-      <source src="https://www.ccs.neu.edu/home/cody/courses/shared/d3-flexible-transitions.mp4" type="video/mp4">
-      <p>Your browser doesn't support HTML5 video. Here is
-        a <a href="https://www.ccs.neu.edu/home/cody/courses/shared/d3-flexible-transitions.mp4">link to the video</a>
-        instead.</p>
-    </video> -->
 
     <iframe width="560" height="315" src="https://www.youtube.com/embed/YtbS33whJlQ?si=Dhp1LaB14Q8O2BXQ"
       title="YouTube video player" frameborder="0"
@@ -155,9 +134,8 @@
         href="https://docs.google.com/presentation/d/1zSYD9_N5L8Hhi6NlbtmPBOs7nItY2M4qK2l6Lv3_bMs/edit?usp=sharing">link
         to the slides.</a></p>
 
-    <h1>Visualization explanation</h1>
+    <h1>Visualization Explanation</h1>
 
-    <!-- <p><em>Final visualization screenshots (PNG images), design justifications, UI walk-through, and linked presentation slides.</em></p> -->
     <img id="finalVisMap" src="images/finalVisMap.png" alt="Final Screenshot of our Map Visualization">
     <img id="finalVisLineChart" src="images/finalVisLineChart.png"
       alt="Final Screenshot of our LineChart Visualization">
@@ -165,48 +143,49 @@
       alt="Final Screenshot of our ScatterPlot Visualization">
 
     <p>In the view, the user sees three visualizations at once: a map of the United States, a line chart, and a
-      scatterplot. The map is our primary visualization and is the first that the user should interact with. It encodes
-      the age adjusted heart disease death rate per state from 1999-2021, and the user can dynamically update which year
+      scatter plot. The map is our primary visualization and is the first that the user should interact with. It encodes
+      the age-adjusted heart disease death rate per state from 1999-2021, and the user can dynamically update which year
       is shown using the slider bar above. The user can also interact with the visualization by hovering over and
       clicking on a specific state.</p>
-    <p> The linechart encodes one state’s heart disease death rate overtime from 1999-2021. When the user clicks on a
+    <p> The line chart encodes one state’s heart disease death rate overtime from 1999-2021. When the user clicks on a
       state, the line chart will update to display its data as a line chart. Each year is marked with a point, and the
       color red encodes the one datapoint that is currently displayed on the map.</p>
-    <p>The scatterplot encodes each state’s heart disease death rate to their life expectancy for a given year. The year
+    <p>The scatter plot encodes each state’s heart disease death rate to their life expectancy for a given year. The year
       updates as the user drags the scrollbar above the map. The marks are points, and each point represents one state.
       The user can hover over each point for details on demand as well as brush over multiple points to highlight those
-      states on the map. The scatterplot aims to derive new data by examining the relationship between life expectancy
+      states on the map. The scatter plot aims to derive new data by examining the relationship between life expectancy
       and heart disease death rate. </p>
 
     <h1>Data Analysis</h1>
 
-    <!-- <p><em>Summary of data, data types, and data preprocessing.</em></p>
-    <p><em>Expectation: Data sources match the problem statement and are appropriate. These descriptions should be very explicit so someone could read your page and properly reproduce your results.</em></p> -->
-
     <p>Originally, our group was planning to explore a dataset on the ten leading causes of death by state, from
-      1999-2017. Our intention was to examine trends both overtime and geographically until 2021 to gain insights on the
+      1999-2017. Our intention was to examine trends both overtime and geographically until 2021 to gain insight on the
       impact of COVID-19. We also wanted to relate this to the percentage of state residents with access to affordable
-      healthcare through interaction with an additional visualization. Ultimately we were unable to find state data for
+      healthcare through interaction with an additional visualization. However, we were unable to find state data for
       ten leading causes of death from 2018 onwards. </p>
-    <p>During peer review, we were also given consistent feedback that narrowing our focus would make our visualization
-      more effective. In order to accommodate missing data and our feedback, we pivoted to focus on only heart disease,
-      the leading cause of death across the United States. This helps us ensure that our visualizations all compliment
-      one another and still fulfills our primary domain task, “What do you consider the most prominent healthcare issues
+    <p>During peer review, we were given consistent feedback that narrowing our focus would make our visualization
+      more effective. In order to accommodate the missing data and our feedback, we pivoted to focusing only on heart disease,
+      the leading cause of death across the United States. This change ensures that our visualizations all compliment
+      one another while still fulfilling our primary domain task, “What do you consider the most prominent healthcare issues
       in the United States? Is that different now versus 50 years ago?”</p>
-    <p>We are using three datasets for our final visualization. Our primary data set contains the Age Adjusted Heart
+    <p>We are using two datasets for our final visualization. Our primary data set contains the Age-Adjusted Heart
       Disease Death Rate per state from 1999-2021 in JSON format, obtained by the CDC. This is measured by the number of
       deaths per 100,000 total population, and it is adjusted for differences in age-distribution and population size.
       Our second data set contains the life expectancy per state in 1999-2021 except for 2017. We were unable to find
       the data per state for 2017. To resolve this problem as best as we could, we found the national average life
-      expectancy for all of the United States and used that for each state.
-      We had also planned to use one last dataset containing the COVID-19 Age Adjusted Death Rate per state from
-      2020-2022, also obtained from the CDC. We did not have enough time to integrate this dataset into our final
-      visualization. For each data set, we manipulated the data so that each year is an object that has key-value pairs
-      connecting each state to its respective datapoint.</p>
+      expectancy for all of the United States in 2017 and applied that to each state.  We manipulated both data 
+      sets into JSON format by making each year from 1999-2021 an object that has key-value pairs for each of the fifty states.
+      This connected each state to its respective value. Here is a snippet example: 
+      "2002":{
+        "Alabama": 291.3,
+        "Alaska": 169.31,
+        "Arizona": 207.89, 
+        ...}
+      </p>
+      <p>We had also planned to use a dataset containing the COVID-19 Age-Adjusted Death Rate per state from
+        2020-2022, obtained from the CDC. We did not have enough time to integrate this dataset into our final
+        visualization.</p>
     <h1>Task Analysis</h1>
-    <!-- 
-    <p><em>Summary of task table.</em></p>
-    <p><em>Expectation: Clearly describes domain tasks, processes, goals and abstract tasks for domain problems.</em></p> -->
 
     <p>Based on our interview responses, we identified six potential domain tasks. Our final visualization successfully
       answers our #1 ranked domain task, “What do you consider the most prominent healthcare issues in the United
@@ -216,41 +195,35 @@
       user interactivity. The user can easily compare states across time as well as different regions of the United
       States to one another. At the middle level, our visualization satisfies the Lookup task where users already know
       both what they’re looking for and where it is- in other words, both the target and location are known. Users can
-      look up the data for a specific state at a specific year through the drop down menu and details on demand in our
-      map. On a high-level, the purpose of this domain task is to Derive and Discover. New data is derived through our
+      look up the data for a specific state at a specific year through the drop-down menu and details on demand in our
+      map. On a high level, the purpose of this domain task is to Derive and Discover. New data is derived through our
       scatter plot which plots the relationship between life expectancy and Heart Disease Adjusted Death Rate.
       Additionally, the user can discover insight about the data by hovering over marks and using interaction to view
       the data through different visual encodings. In this way, users can use our visualization to find new knowledge
       that was not previously known to them. Our visualization is meant to be easily digestible to a wide range of users
-      with a variety of medical experience.</p>
-    <p>If given more time, we would have liked to further explore COVID-19 and its effect on public health with more
+      with a variety of medical experiences.</p>
+    <p>If given more time, we would have liked to further explore COVID-19 and its effect on public health in more
       depth. This would have helped us begin to answer our 5th ranked domain task, “Has COVID-19 generated outliers in
       public health?” in specific relation to heart disease. </p>
 
     <h1>Design Process</h1>
-    <!-- <p><em>Sketches and design choices to justify final visualization.</em></p>
-
-    <p><em>Expectation: Evidence of iterative improvement.
-    Logical discussion of design choices grounded in theory from course.
-    Discusses feedback from usability testing.</em></p> -->
-
     <img id="handSketches" src="images/handSketches.png" alt="Hand Drawn Sketches">
     <img id="figmaVisSketch" src="images/FigmaVisSketch.png" alt="Figma Vis Sketch">
 
     <p>Since our data involves both time and geographic location, we decided to use a map as our primary visual
       encoding. Maps are particularly engaging to users and the most effective way to communicate data that is
-      categorized by state. Since we are encoding age adjusted heart disease death rate, a quantitative variable over
+      categorized by state. Since we are encoding age-adjusted heart disease death rate, a quantitative variable over
       the map, we chose to use a lightness map. We chose to use this because lightness is an effective way to encode
       quantitative variables, whereas rainbow color maps are not. Originally our color map was red, but we changed it to
       purple because differences in purple are easier to perceive to the human eye, and it is more friendly to all forms
       of colorblindness. We included a legend that shows the minimum and maximum heart disease death rate value next to
       the relevant color value, which we found necessary after usability testing. We also added a scrolling bar at the
-      top of our map to simply and effectively navigate from year to year. Though this was not intended, an added bonus
+      top of our map to simply and effectively navigate from year to year. Though this was not intended, a bonus
       of the scroll bar is when dragged from beginning to end the user can see the color saturation changes on the map
-      which provides a comprehensive overview of how the number of heart disease related deaths changed overtime, almost
-      as an animation. Beneath our map, we created a line chart and a scatter plot to gather new insight on our data in
+      which provides a comprehensive overview of how the number of heart disease-related deaths changed over time, almost
+      as an animation. Beneath our map, we created a line chart and a scatter plot to gather new insight into our data from
       a different perspective. All three of our visualizations are linked to one another. </p>
-    <p>Our line chart plots a given state’s age adjusted-heart disease death rate over the entire recorded time period
+    <p>Our line chart plots a given state’s age-adjusted-heart disease death rate over the entire recorded time period
       (1999-2021). When the user clicks on a state, the line chart updates to display that state’s relevant data. Line
       charts are particularly useful when encoding when working with temporal data, and the position attribute is ranked
       most effective.
@@ -267,32 +240,28 @@
       what year and what state is focused on in the current visualization. </p>
 
     <h1>Conclusion</h1>
-    <!-- <p><em>Short summary of work completed and areas for improvement/future-work.</em></p>
-    <p><em>Expectation: Meaningfully wraps up project and has good future directions.</em></p> -->
 
     <p> Our group was able to successfully create three different visualizations that use both geographic and temporal
       data, all linked to one another. We synthesized our own JSON data sets by manipulating multiple data sets from
-      reliable sources such as the CDC. We implemented details on demand for the marks of all three visualizations,
-      giving the user the necessary contextual information to understand our data in full.
+      reliable sources such as the CDC. We implemented details on demand for the marks on the line chart and map,
+      giving the user the necessary contextual information to fully understand our data.
       If given the opportunity in the future, our group intends to look further into COVID-19 data and find a way to
       integrate it into our current visualization. A potential way to measure the effectiveness of our visualization in
-      the future is to observe our target users after deployment in a field study. An area that we could have improved
+      the future is to observe our target users after deployment in a field study.  It would be interesting to measure how user interaction 
+      changes depending on the audience targeted. An area that we could have improved
       upon was ensuring that we were not missing any data before finalizing our design idea. We had to heavily revise
-      our final visualization in comparison to our formal sketch on Figma. Also, our code could have been more organized
-      and clear with the addition of comments. </p>
+      our final visualization in comparison to our sketch on Figma. We also struggled with finding a way to integrate both brushing and
+      details on demand for our scatter plot at the same time. We have both working, but independently of one another. 
+      Lastly, we could have dedicated more time to ensuring that our code was clear through neat formatting and comments. </p>
 
 
     <h1>Acknowledgments</h1>
-
-    <p><em>List here where any code, packages/libraries, text, images, designs, etc. that you leverage come from.</em>
-    </p>
-
     <ul>
       <li><a href="https://d3js.org/">D3: Data-Driven Documents</a> by Mike Bostock.</li>
       <li><a href="https://codepo8.github.io/css-fork-on-github-ribbon/#">Pure CSS responsive "Fork me on GitHub"
           ribbon</a> by Chris Heilmann.</li>
       <li> COSI 116A F24 Assignment 4—Brushing and Linking in D3</li>
-      <li> ChatGPT as coding resource</li>
+      <li> ChatGPT for AI coding assistance</li>
     </ul>
 
   </div>

@@ -51,8 +51,6 @@ d3.json("data/states.json", function(error, topologies) {  // (4)
 });
 
 
-
-
 d3.select("#slider").on("input", function(d) {          //add slider to confirm year
   currentYear = this.value;
   svgStates.selectAll("path") 

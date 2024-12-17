@@ -69,8 +69,10 @@ function scatterplot() {
     
       //creates X axis
     let xAxis = svg.append("g")
-        .attr("transform", "translate(0," + (height) + ")")
-        .call(d3.axisBottom(xScale));
+    .attr("transform", "translate(0," + height + ")")
+    .call(d3.axisBottom(xScale)
+        .tickValues(d3.range(110, 351, 20)) //sets range for tick values and how many ticks
+        .tickFormat(d => d));
 
     // X axis label
     svg.append("text")
@@ -86,7 +88,6 @@ function scatterplot() {
           .data(data);
   
       points.exit().remove();
-      console.log(data);
       points = points.enter()
         .append("circle")
           .attr("class", "point scatterPoint")
@@ -104,7 +105,7 @@ function scatterplot() {
     //create a legend
     let legend = svg.append("g")
       .attr("class", "legend")
-      .attr("transform", `translate(${width - 100}, 50)`);
+      .attr("transform", `translate(${width - 100}, 20)`);
 
     //data for the legend
     let legendData = [
@@ -139,7 +140,6 @@ function scatterplot() {
           .attr("alignment-baseline", "middle");
 });
 
-      
       svg.call(brush);
 
       // Highlight points when brushed
@@ -169,9 +169,6 @@ function scatterplot() {
           points.classed("permaselected", d =>
             x0 <= X(d) && X(d) <= x1 && y0 <= Y(d) && Y(d) <= y1
           );
-
-
-
         }
         
         function brushEnd(){
@@ -192,30 +189,6 @@ function scatterplot() {
           }         
         }
       }
-      /*
-        // Highlight the selected circles
-        function highlight() {
-          if (d3.event.selection === null) return;
-          const [
-            [x0, y0],
-            [x1, y1]
-          ] = d3.event.selection;
-  
-          // If within the bounds of the brush, select it
-          points.classed("selected", d =>
-            x0 <= X(d) && X(d) <= x1 && y0 <= Y(d) && Y(d) <= y1
-          );
-  
-          // Get the name of our dispatcher's event
-          let dispatchString = Object.getOwnPropertyNames(dispatcher._)[0];
-  
-          // Let other charts know about our selection
-          dispatcher.call(dispatchString, this, svg.selectAll(".selected").data());
-        }   
-          */
-        
-  
-  
       return chart;
     }
   

@@ -1,21 +1,7 @@
 // Immediately Invoked Function Expression to limit access to our 
 // variables and prevent 
 ((() => {
-  console.log("Hello, world!");
-
-  //temporary line chart data "junk data"
-  const linechartData = [
-    [1999, 50],
-    [2000, 100],
-    [2005, 200],
-    [2010, 150],
-    [2015, 300],
-    [2020, 250],
-    [2022, 250],
-  ];
-
   d3.json("data/heartratesALL.json", (rates) => {
-  // console.log(rates);
 
   // Extract the years 
   let years = Object.keys(rates); // ['1999', '2000', ...]
@@ -25,7 +11,7 @@
         value: rates[year]["Alabama"] // Heart disease death rate for Alabama
     };
   });
-// console.log(data);
+
 d3.json("data/lifeExpectancy.json", (expectancy) => {
 let scatterData = Object.entries(rates["1999"]).map(([state, value], index) => ({
   state,
@@ -85,7 +71,6 @@ d3.selectAll("svg").on("mouseover", (d, i, elements) =>{
   });
   d3.selectAll("g path").on("mousedown", (d, i, elements) =>{     //linking when click state
     var selected = d.properties.STATENAM;
-    console.log(selected);
     let data = years.map(year => {            //make new data for selected state
       return { 
           year: year, 

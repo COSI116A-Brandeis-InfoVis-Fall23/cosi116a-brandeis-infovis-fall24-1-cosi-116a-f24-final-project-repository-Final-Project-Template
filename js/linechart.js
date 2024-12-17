@@ -2,7 +2,6 @@
 
 // Initialize a line chart. Modeled after Mike Bostock's
 // Reusable Chart framework https://bost.ocks.org/mike/chart/
-// document.getElementById("state").textContent = "Georgia"; //Georgia as a placeholder
 function linechart() {
 
   // Based on Mike Bostock's margin convention
@@ -39,14 +38,12 @@ function linechart() {
         .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
     //Define scales
-    xScale
-      .domain(d3.map(data, xValue).keys())
+    xScale = d3.scaleLinear()
+      .domain([1999, 2021]) 
       .rangeRound([0, width]);
-
 
     yScale
       .domain([
-        // d3.min(data, d => yValue(d)),
         110,
         350
       ])
@@ -54,8 +51,10 @@ function linechart() {
 
     // X axis
     let xAxis = svg.append("g")
-        .attr("transform", "translate(0," + (height) + ")")
-        .call(d3.axisBottom(xScale));
+      .attr("transform", `translate(0, ${height})`)
+      .call(d3.axisBottom(xScale)
+       .tickValues(d3.range(1999, 2022)) // Force all years
+        .tickFormat(d => d));
     
     // Put X axis tick labels at an angle
     xAxis.selectAll("text") 
@@ -100,7 +99,6 @@ function linechart() {
         .selectAll(".linePoint")
         .data(data);  // Data binding
       
-      console.log(data);
       points = points.enter()
         .append("circle")
         .attr("class", "point linePoint")
@@ -156,34 +154,6 @@ function linechart() {
     }
   });
     
-//     // Add legend item
-//     legend.selectAll(".legend-item")
-//       .data(legendData)
-//       .enter()
-//       .append("g")
-//       .attr("class", "legend-item")
-//       .attr("transform", (d, i) => `translate(0, ${i * 20})`) // Space out items vertically
-//       .each(function(d) {
-//         //adds colors to the legend
-//         d3.select(this)
-//           .append("circle")
-//           .attr("cx", 0)
-//           .attr("cy", 0)
-//           .attr("r", 6) 
-//           .style("fill", d.color)
-//           .style("stroke",d.stroke)
-//           .style("stroke-width", 2);
-//          // Add labels
-//         d3.select(this)
-//           .append("text")
-//           .attr("x", 10) 
-//           .attr("y", 5) 
-//           .text(d.id)
-//           .text(d.label)
-//           .attr("alignment-baseline", "middle");
-// });
-
-    
     function brush(g) {
       const brush = d3.brush()
         .on("start brush", highlight)
@@ -226,15 +196,6 @@ function linechart() {
     return chart;
   }
 
-  // The x-accessor from the datum
-  // function X(d) {
-  //   return xScale(xValue(d));
-  // }
-
-  // The y-accessor from the datum
-  // function Y(d) {
-  //   return yScale(yValue(d));
-  // }
   function X(d) {
     return xScale(d.year);  // Correctly access the 'year' for X position
   }
