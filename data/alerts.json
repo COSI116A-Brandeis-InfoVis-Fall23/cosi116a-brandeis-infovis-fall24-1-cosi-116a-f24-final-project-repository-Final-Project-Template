@@ -3,21 +3,9 @@
         "cause": "CONSTRUCTION",
         "count": 6021
     },
-    "Green-B": {
-        "cause": "CONSTRUCTION",
-        "count": 79910
-    },
-    "Green-C": {
+    "Green": {
         "cause": "TECHNICAL_PROBLEM",
         "count": 12811
-    },
-    "Green-D": {
-        "cause": "MAINTENANCE",
-        "count": 87214
-    },
-    "Green-E": {
-        "cause": "TECHNICAL_PROBLEM",
-        "count": 13225
     },
     "Mattapan": {
         "cause": "TECHNICAL_PROBLEM",
