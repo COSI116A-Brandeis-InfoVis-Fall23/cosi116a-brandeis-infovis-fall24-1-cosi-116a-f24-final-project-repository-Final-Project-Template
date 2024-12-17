@@ -39,6 +39,8 @@ VIZ.requiresData([
   "use strict";
   var idToNode = {};
   network.links.forEach(function (link) {
+    console.log("link source" + link.source);
+    console.log("link target" + link.target);
     link.source = network.nodes[link.source];
     link.target = network.nodes[link.target];
     link.source.links = link.source.links || [];
@@ -81,9 +83,9 @@ VIZ.requiresData([
   var details = d3.select('.section-pick-two .details');
   var $tip = $(".d3-tip.pick2");
   (function renderMap() {
-    var outerWidth = 300;
-    var outerHeight = 300;
-    var margin = { top: 30, right: 30, bottom: 10, left: 10 };
+    var outerWidth = 800;
+    var outerHeight = 800;
+    var margin = { top: 50, right: 50, bottom: 50, left: 50 };
     var xRange = d3.extent(network.nodes, function (d) { return d.x; });
     var yRange = d3.extent(network.nodes, function (d) { return d.y; });
     var width = outerWidth - margin.left - margin.right,
@@ -92,12 +94,15 @@ VIZ.requiresData([
     var yScale = height / (yRange[1] - yRange[0]);
     var scale = Math.min(xScale, yScale);
     network.nodes.forEach(function (data) {
-      data.pos = [data.x * scale, data.y * scale];
+      data.pos = [
+        (data.x - xRange[0]) * scale, 
+        (data.y - yRange[0]) * scale
+      ];
     });
-    var endDotRadius = 0.2 * scale;
+    var endDotRadius = 0.02 * width;
     var mapGlyph = mapGlyphSvg
-      .attr('width', scale * (xRange[1] - xRange[0]) + margin.left + margin.right)
-      .attr('height', scale * (yRange[1] - yRange[0]) + margin.top + margin.bottom)
+      .attr('viewBox', '0 0 ' + outerWidth + ' ' + outerHeight)
+      .attr('preserveAspectRatio', 'xMidYMid meet')
       .append('g', 'map-container')
       .attr('transform', 'translate(' + margin.left + ',' + margin.top + ')');
 
@@ -198,7 +203,7 @@ VIZ.requiresData([
       .attr('class', function (d) { d.circle = this; return 'station middle station-label ' + d.id; })
       .attr('cx', function (d) { return d.pos[0]; })
       .attr('cy', function (d) { return d.pos[1]; })
-      .attr('r', 5);
+      .attr('r', 8);
 
     function showTip(d) {
       tip.show(d, d3.select(d.circle).node());
@@ -337,7 +342,7 @@ VIZ.requiresData([
         .classed(clazz, true)
         .classed('end', true)
         .classed('middle', false)
-        .attr('r', Math.max(endDotRadius, 5));
+        .attr('r', Math.max(endDotRadius, 10));
     }
     dot('place-asmnl', "red");
     dot('place-alfcl', "red");
@@ -346,6 +351,13 @@ VIZ.requiresData([
     dot('place-bomnl', "blue");
     dot('place-forhl', "orange");
     dot('place-ogmnl', "orange");
+    dot('place-lech' , "green");
+    dot('place-lake', "green");
+    dot('place-clmnl', "green");
+    dot('place-river', "green");
+    dot('place-hsmnl', "green");
+
+
   }());
   var lines = mapGlyphSvg.selectAll('line');
   var circles = mapGlyphSvg.selectAll('circle');
