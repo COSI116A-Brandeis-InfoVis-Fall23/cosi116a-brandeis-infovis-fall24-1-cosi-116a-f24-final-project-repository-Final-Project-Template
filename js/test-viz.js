@@ -3,7 +3,8 @@
   const dispatchString = "selectionUpdated";
 
     
-  d3.json("data/comparisonByYear.json", function(error, data) {
+  //d3.json("data/comparisonByYear.json", function(error, data) {
+    d3.json("data/withSpending.json", function(error, data) {
     if (error) {
         console.error("Error loading JSON data:", error);
         return;
@@ -26,9 +27,10 @@
       .selectionDispatcher(d3.dispatch(dispatchString))
       ("#table", currData);
 
+
       let spRatingGDPComparison = scatterplot()
-      .x(d => d.gdp) // Map GDP to x-axis
-      .xLabel("GDP Per Capita")
+      .x(d => d.Transportation_Spending) // Map GDP to x-axis
+      .xLabel("Transportation Spending (as % of GDP)")
       .y(d => +d.Rating) // Convert Rating to numeric for y-axis
       .yLabel("Transportation Rating (0-7)")
       .yLabelOffset(150)
@@ -42,16 +44,15 @@
         currData = currData.filter(d => d.Rating !== "N/A");
         
         d3.select("#scatterplot").selectAll("*").remove();
-        //createScatterplot("#scatterplot", currData);
-        spRatingGDPComparison = scatterplot()
-        .x(d => d.gdp) // Map GDP to x-axis
-        .xLabel("GDP Per Capita")
+
+        let spRatingGDPComparison = scatterplot()
+        .x(d => d.Transportation_Spending) 
+        .xLabel("Transportation Spending (as % of GDP)")
         .y(d => +d.Rating) // Convert Rating to numeric for y-axis
         .yLabel("Transportation Rating (0-7)")
         .yLabelOffset(150)
         .selectionDispatcher(d3.dispatch("selectionUpdated"))
         ("#scatterplot", currData);
-
 
         d3.select("table").remove();
         tableData = table()

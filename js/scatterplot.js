@@ -16,11 +16,13 @@ function scatterplot() {
     height = 500 - margin.top - margin.bottom,
     xValue = d => d[0],
     yValue = d => d[1],
+    r = d => 5,
     xLabelText = "",
     yLabelText = "",
     yLabelOffsetPx = 0,
     xScale = d3.scaleLinear(),
     yScale = d3.scaleLinear(),
+    rScale,
     ourBrush = null,
     selectableElements = d3.select(null),
     dispatcher;
@@ -42,7 +44,7 @@ function scatterplot() {
         xScale
             .domain([
             d3.min(data, d => xValue(d)),
-            115000
+            4
             ])
             .rangeRound([0, width]);
 
@@ -52,6 +54,10 @@ function scatterplot() {
             7
             ])
             .rangeRound([height, 0]);
+
+        rScale = d3.scaleSqrt()
+            .domain(d3.extent(data, d => +d.GDP)) // Get the extent of the GDP values
+            .range([5, 30]); // Set range of circle radius (adjust as necessary)
 
         let xAxis = svg.append("g")
             .attr("transform", "translate(0," + (height) + ")")
@@ -83,7 +89,7 @@ function scatterplot() {
             .merge(points)
             .attr("cx", X)
             .attr("cy", Y)
-            .attr("r", 5);
+            .attr("r", d => rScale(d.GDP));
     
         selectableElements = points;
     
@@ -142,6 +148,10 @@ function scatterplot() {
     // The y-accessor from the datum
     function Y(d) {
         return yScale(yValue(d));
+    }
+
+    function R(d) {
+        return rScale()
     }
 
     chart.margin = function (_) {
