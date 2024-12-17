@@ -105,9 +105,15 @@
     <p><em>Final visualization screenshots (PNG images), design justifications, UI walk-through, and linked presentation slides.</em></p>
 
     <h1>Data Analysis</h1>
-    <p><em>Summary of data, data types, and data preprocessing.</em></p>
+    <p>We had to develop a series of Python scripts to clean, transform, and prepare MBTA subway stop data for this visualization. First, we processed raw MBTA stop data by removing duplicates, standardizing stop names, and merging it with a station ID mapping from a secondary file containing stop distances and IDs. This step resulted in a cleaner dataset with unique stop names, line information, and station IDs, forming the foundation for further analysis.
 
-    <p><em>Expectation: Data sources match the problem statement and are appropriate. These descriptions should be very explicit so someone could read your page and properly reproduce your results.</em></p>
+      To accurately map stops, we converted latitude and longitude coordinates into UTM (Universal Transverse Mercator) coordinates using the utm library. A linear transformation was then applied using scipy.optimize.curve_fit to align these UTM coordinates with an existing JSON coordinate system used for visualizing the stops. This transformation enabled us to integrate our cleaned data with the existing visualization framework quite seamlessly.
+      
+      We added in all the green line info because the MBTAVIS.github.io didn’t have it. We implemented an interactive mapping tool using Matplotlib. We overlayed the actual MBTA and had to go in about 3 times and click each individual stop on the subway map image to record the X and Y positions for each. The tool dynamically updated the dataset, saving progress after each recorded point to ensure no data was lost. Stops were processed in order, sorted by route_id and longitude to streamline the workflow.
+      
+      Finally, we generated a JSON file representing the MBTA subway network. Using the cleaned stop data, the script created nodes for each station, containing station IDs and names, and links representing connections between stops, complete with line types and corresponding colors. This structured JSON file was essential for visualizing the subway system on our website, ensuring accurate representation of the stations, routes, and connections.
+      
+      Together, these scripts completely automated the transformation of raw MBTA data into a clean, organized, and visualization-ready format!!</p>
 
     <h1>Task Analysis</h1>
     
