@@ -45,7 +45,7 @@
         
         d3.select("#scatterplot").selectAll("*").remove();
         //createScatterplot("#scatterplot", currData);
-        let spRatingGDPComparison = scatterplot()
+        spRatingGDPComparison = scatterplot()
         .x(d => d.gdp) // Map GDP to x-axis
         .xLabel("GDP Per Capita")
         .y(d => +d.Rating) // Convert Rating to numeric for y-axis
@@ -56,10 +56,19 @@
 
 
         d3.select("table").remove();
-        let tableData = table()
+        tableData = table()
             .selectionDispatcher(d3.dispatch(dispatchString))
             ("#table", currData);
-    }
+        
+        spRatingGDPComparison.selectionDispatcher().on(dispatchString, function(selectedData) {
+          tableData.updateSelection(selectedData);
+        });
+
+        tableData.selectionDispatcher().on(dispatchString, function(selectedData) {
+          spRatingGDPComparison.updateSelection(selectedData);
+        });
+        
+      }
 
        // Add event listeners to the buttons
       document.getElementById("2007").addEventListener("click", () => updateYear("2007"));
@@ -73,20 +82,6 @@
       document.getElementById("2015").addEventListener("click", () => updateYear("2015"));
       document.getElementById("2016").addEventListener("click", () => updateYear("2016"));
       document.getElementById("2017").addEventListener("click", () => updateYear("2017"));
-    
-
-/*
-    // Scatterplot creation function
-    function createScatterplot(selector, data) {
-      let spRatingGDPComparison = scatterplot()
-          .x(d => d.gdp) // Map GDP to x-axis
-          .xLabel("GDP Per Capita")
-          .y(d => +d.Rating) // Convert Rating to numeric for y-axis
-          .yLabel("Transportation Rating")
-          .yLabelOffset(150)
-          .selectionDispatcher(d3.dispatch("selectionUpdated"))
-          (selector, data);
-  }*/
 
 
     spRatingGDPComparison.selectionDispatcher().on(dispatchString, function(selectedData) {
