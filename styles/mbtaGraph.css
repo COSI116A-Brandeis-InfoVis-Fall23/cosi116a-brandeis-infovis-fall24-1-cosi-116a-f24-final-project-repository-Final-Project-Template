@@ -1,0 +1,199 @@
+/* taken from mbtaviz.github.io */
+.section-pick-two .viz {
+  text-align: center;
+  padding: 2em 0;
+}
+.section-pick-two .viz .map .connect {
+  stroke-width: 0.5px;
+  stroke: #ccc;
+}
+.section-pick-two .viz .map .active.connect {
+  stroke-width: 1.5px;
+  stroke: #5cb85c;
+}
+.section-pick-two .viz .map circle {
+  fill-opacity: 1;
+}
+.section-pick-two .viz .map circle.station.middle {
+  fill: #ccc;
+}
+.section-pick-two .viz .map circle.station.end {
+  stroke-width: 1.5px;
+}
+.section-pick-two .viz .map circle.active {
+  fill: #5cb85c !important;
+}
+.section-pick-two .viz .map .station-wrapper.hover circle {
+  stroke: black !important;
+  stroke-width: 1.5px;
+}
+.section-pick-two .viz .map .station-wrapper circle.start,
+.section-pick-two .viz .map .arrow {
+  fill: #163216 !important;
+  font-weight: bold;
+  font-size: 12px;
+}
+.section-pick-two .viz .map .voronoi,
+.section-pick-two .viz .map .voronoi2 {
+  stroke: black;
+  fill: gray;
+  opacity: 0;
+}
+.show-voronoi .section-pick-two .viz .map .voronoi2 {
+  opacity: 0.1;
+}
+.section-pick-two .viz .picker {
+  font-size: 12px;
+  max-width: 1000px;
+  text-align: left;
+}
+.section-pick-two .viz .picker .details,
+.section-pick-two .viz .picker .loading {
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 11px;
+  text-align: center;
+}
+.section-pick-two .viz .picker .loading {
+  color: #999999;
+}
+.section-pick-two .viz .picker .loading.err {
+  color: #a94442;
+}
+a.section-pick-two .viz .picker .loading.err:hover {
+  color: #843534;
+}
+.section-pick-two .viz .picker .key {
+  margin-top: 0.3em;
+  min-height: 45px;
+}
+.section-pick-two .viz .mbta,
+.section-pick-two .viz .actual {
+  stroke: none;
+}
+.section-pick-two .viz .pick-two {
+  font-size: 12px;
+  max-width: 600px;
+  text-align: left;
+}
+.section-pick-two .viz .viz,
+.section-pick-two .viz .breakout {
+  display: inline-block;
+}
+.section-pick-two .viz .mbta {
+  fill: red;
+  opacity: 0.4;
+}
+.section-pick-two .viz .actual {
+  fill: blue;
+}
+.section-pick-two .viz .area {
+  fill: gray;
+  stroke: black;
+  stroke-width: 2px;
+}
+.section-pick-two .viz .axis line,
+.section-pick-two .viz .axis path {
+  stroke: #e6e6e6;
+}
+.section-pick-two .viz line.midpoint {
+  stroke: black;
+  shape-rendering: crispEdges;
+}
+.section-pick-two .viz .axis.bold-ticks text {
+  display: none;
+}
+.section-pick-two .viz .top {
+  stroke: none;
+  fill: steelBlue;
+}
+.section-pick-two .viz .bottom {
+  stroke: none;
+  fill: orange;
+}
+.section-pick-two .viz .under {
+  opacity: 0.1;
+}
+.section-pick-two .viz .range {
+  opacity: 0.5;
+}
+.section-pick-two .viz .p50 {
+  stroke: black;
+  stroke-width: 2px;
+  fill: none;
+}
+.section-pick-two .viz .circle {
+  fill: #444;
+  opacity: 0.8;
+  stroke: none;
+}
+.section-pick-two .viz .key-marker {
+  fill: none;
+  stroke: black;
+  stroke-width: 2px;
+  shape-rendering: crispEdges;
+}
+.section-pick-two .viz .tick text {
+  text-anchor: end !important;
+}
+.section-pick-two .viz .highlighter {
+  shape-rendering: crispEdges;
+  stroke: black;
+}
+.section-pick-two .viz text.withbg {
+  filter: url(#highlight-filter);
+}
+.section-pick-two .viz .day .daylabel {
+  font-size: 10px;
+  shape-rendering: crispEdges;
+}
+.section-pick-two .viz .day .dayofmonthlabel {
+  font-size: 10px;
+  shape-rendering: crispEdges;
+}
+.section-pick-two .viz .day .axis path {
+  display: none;
+}
+.section-pick-two .viz .left,
+.section-pick-two .viz .right {
+  clear: none;
+  display: inline-block;
+  vertical-align: top;
+}
+.section-pick-two .viz.highlighting .dimmable {
+  opacity: 0.1 !important;
+}
+.section-pick-two .viz.highlighting .highlight-active {
+  opacity: 1 !important;
+}
+.section-pick-two .viz .loading-data {
+  opacity: 0.3;
+}
+.section-pick-two .viz .pick-two {
+  -webkit-transition: opacity 50ms ease;
+  transition: opacity 50ms ease;
+}
+
+.d3-tip {
+  pointer-events: none; /* Prevent the tooltip from blocking mouseover */
+  z-index: 1000; /* Ensure tooltip appears above other elements */
+}
+
+.line-data-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.line-data-table th, .line-data-table td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: center;
+}
+
+.line-data-table th {
+  background-color: #f4f4f4;
+  font-weight: bold;
+}
+
+.line-data-table tr:nth-child(even) {
+  background-color: #f9f9f9;
+}

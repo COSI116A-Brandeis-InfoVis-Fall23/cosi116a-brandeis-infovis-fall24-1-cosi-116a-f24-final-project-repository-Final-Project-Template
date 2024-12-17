@@ -1,0 +1,502 @@
+{
+    "place-alfcl": {
+        "average_delay_sec": 1083.8575208915406,
+        "average_delay_min": 18.06429201485901
+    },
+    "place-alsgr": {
+        "average_delay_sec": 556.9584209659314,
+        "average_delay_min": 9.28264034943219
+    },
+    "place-amory": {
+        "average_delay_sec": 610.8998723114621,
+        "average_delay_min": 10.181664538524368
+    },
+    "place-andrw": {
+        "average_delay_sec": 566.972199029839,
+        "average_delay_min": 9.449536650497317
+    },
+    "place-aport": {
+        "average_delay_sec": 289.5836365395735,
+        "average_delay_min": 4.8263939423262245
+    },
+    "place-aqucl": {
+        "average_delay_sec": 247.74513727350464,
+        "average_delay_min": 4.1290856212250775
+    },
+    "place-armnl": {
+        "average_delay_sec": 899.5321353196343,
+        "average_delay_min": 14.99220225532724
+    },
+    "place-asmnl": {
+        "average_delay_sec": 991.1018901701364,
+        "average_delay_min": 16.51836483616894
+    },
+    "place-astao": {
+        "average_delay_sec": 297.6131660283128,
+        "average_delay_min": 4.960219433805213
+    },
+    "place-babck": {
+        "average_delay_sec": 616.825783396708,
+        "average_delay_min": 10.280429723278466
+    },
+    "place-balsq": {
+        "average_delay_sec": 1093.8068761551267,
+        "average_delay_min": 18.230114602585445
+    },
+    "place-bbsta": {
+        "average_delay_sec": 385.79079694742074,
+        "average_delay_min": 6.429846615790345
+    },
+    "place-bckhl": {
+        "average_delay_sec": 1133.9856411093715,
+        "average_delay_min": 18.899760685156192
+    },
+    "place-bcnfd": {
+        "average_delay_sec": 874.484591179804,
+        "average_delay_min": 14.574743186330068
+    },
+    "place-bcnwa": {
+        "average_delay_sec": 572.0979748116063,
+        "average_delay_min": 9.534966246860105
+    },
+    "place-bland": {
+        "average_delay_sec": 671.5018457125011,
+        "average_delay_min": 11.191697428541685
+    },
+    "place-bmmnl": {
+        "average_delay_sec": 329.4803784828928,
+        "average_delay_min": 5.491339641381546
+    },
+    "place-bndhl": {
+        "average_delay_sec": 529.8260262891438,
+        "average_delay_min": 8.83043377148573
+    },
+    "place-bomnl": {
+        "average_delay_sec": 476.3832084688066,
+        "average_delay_min": 7.939720141146776
+    },
+    "place-boyls": {
+        "average_delay_sec": 961.534319111291,
+        "average_delay_min": 16.025571985188183
+    },
+    "place-brdwy": {
+        "average_delay_sec": 532.5460171890646,
+        "average_delay_min": 8.875766953151077
+    },
+    "place-brico": {
+        "average_delay_sec": 615.6722642095568,
+        "average_delay_min": 10.261204403492615
+    },
+    "place-brkhl": {
+        "average_delay_sec": 832.5787447562282,
+        "average_delay_min": 13.876312412603802
+    },
+    "place-brmnl": {
+        "average_delay_sec": 655.919040203173,
+        "average_delay_min": 10.931984003386217
+    },
+    "place-brntn": {
+        "average_delay_sec": 2119.53990158529,
+        "average_delay_min": 35.3256650264215
+    },
+    "place-bucen": {
+        "average_delay_sec": 626.4658421105769,
+        "average_delay_min": 10.441097368509615
+    },
+    "place-buest": {
+        "average_delay_sec": 582.9961216688675,
+        "average_delay_min": 9.716602027814458
+    },
+    "place-butlr": {
+        "average_delay_sec": 123.77827748431758,
+        "average_delay_min": 2.062971291405293
+    },
+    "place-bvmnl": {
+        "average_delay_sec": 718.822626201297,
+        "average_delay_min": 11.98037710335495
+    },
+    "place-capst": {
+        "average_delay_sec": 144.70427013701936,
+        "average_delay_min": 2.4117378356169894
+    },
+    "place-ccmnl": {
+        "average_delay_sec": 375.77386647322385,
+        "average_delay_min": 6.262897774553731
+    },
+    "place-cedgr": {
+        "average_delay_sec": 183.4430501493509,
+        "average_delay_min": 3.0573841691558483
+    },
+    "place-cenav": {
+        "average_delay_sec": 125.93638784087095,
+        "average_delay_min": 2.098939797347849
+    },
+    "place-chhil": {
+        "average_delay_sec": 948.0147418952537,
+        "average_delay_min": 15.800245698254228
+    },
+    "place-chill": {
+        "average_delay_sec": 1003.6243847566216,
+        "average_delay_min": 16.727073079277027
+    },
+    "place-chmnl": {
+        "average_delay_sec": 666.8077837635973,
+        "average_delay_min": 11.113463062726622
+    },
+    "place-chncl": {
+        "average_delay_sec": 381.0723723053119,
+        "average_delay_min": 6.351206205088531
+    },
+    "place-chswk": {
+        "average_delay_sec": 1038.2958187406723,
+        "average_delay_min": 17.30493031234454
+    },
+    "place-clmnl": {
+        "average_delay_sec": 592.9788062429577,
+        "average_delay_min": 9.882980104049295
+    },
+    "place-cntsq": {
+        "average_delay_sec": 807.4086062412108,
+        "average_delay_min": 13.45681010402018
+    },
+    "place-coecl": {
+        "average_delay_sec": 874.9763169984097,
+        "average_delay_min": 14.582938616640162
+    },
+    "place-cool": {
+        "average_delay_sec": 410.28305646030554,
+        "average_delay_min": 6.8380509410050925
+    },
+    "place-davis": {
+        "average_delay_sec": 982.9439483325365,
+        "average_delay_min": 16.38239913887561
+    },
+    "place-denrd": {
+        "average_delay_sec": 716.758107092347,
+        "average_delay_min": 11.945968451539118
+    },
+    "place-dwnxg": {
+        "average_delay_sec": 418.7661121497445,
+        "average_delay_min": 6.979435202495742
+    },
+    "place-eliot": {
+        "average_delay_sec": 1106.0333531532171,
+        "average_delay_min": 18.433889219220287
+    },
+    "place-engav": {
+        "average_delay_sec": 697.3754542511747,
+        "average_delay_min": 11.622924237519578
+    },
+    "place-esomr": {
+        "average_delay_sec": 889.455073025226,
+        "average_delay_min": 14.8242512170871
+    },
+    "place-fbkst": {
+        "average_delay_sec": 559.1824780927913,
+        "average_delay_min": 9.319707968213187
+    },
+    "place-fenwd": {
+        "average_delay_sec": 943.8145414846235,
+        "average_delay_min": 15.730242358077058
+    },
+    "place-fenwy": {
+        "average_delay_sec": 680.3871961478256,
+        "average_delay_min": 11.33978660246376
+    },
+    "place-fldcr": {
+        "average_delay_sec": 764.1096678258541,
+        "average_delay_min": 12.735161130430901
+    },
+    "place-forhl": {
+        "average_delay_sec": 1097.4326390221333,
+        "average_delay_min": 18.29054398370222
+    },
+    "place-gilmn": {
+        "average_delay_sec": 863.0720416626691,
+        "average_delay_min": 14.384534027711151
+    },
+    "place-gover": {
+        "average_delay_sec": 1139.2577915175254,
+        "average_delay_min": 18.987629858625425
+    },
+    "place-grigg": {
+        "average_delay_sec": 670.6290035441843,
+        "average_delay_min": 11.177150059069739
+    },
+    "place-grnst": {
+        "average_delay_sec": 776.1061450138623,
+        "average_delay_min": 12.935102416897704
+    },
+    "place-haecl": {
+        "average_delay_sec": 886.9228011918531,
+        "average_delay_min": 14.782046686530885
+    },
+    "place-harsq": {
+        "average_delay_sec": 780.8022554853097,
+        "average_delay_min": 13.013370924755161
+    },
+    "place-harvd": {
+        "average_delay_sec": 660.1469878600165,
+        "average_delay_min": 11.00244979766694
+    },
+    "place-hsmnl": {
+        "average_delay_sec": 1102.3816883992945,
+        "average_delay_min": 18.373028139988243
+    },
+    "place-hwsst": {
+        "average_delay_sec": 361.8245552064411,
+        "average_delay_min": 6.030409253440685
+    },
+    "place-hymnl": {
+        "average_delay_sec": 711.3337423514779,
+        "average_delay_min": 11.855562372524632
+    },
+    "place-jaksn": {
+        "average_delay_sec": 438.6527870226417,
+        "average_delay_min": 7.3108797837106945
+    },
+    "place-jfk": {
+        "average_delay_sec": 532.483248658834,
+        "average_delay_min": 8.874720810980566
+    },
+    "place-kencl": {
+        "average_delay_sec": 734.1081222716765,
+        "average_delay_min": 12.235135371194609
+    },
+    "place-knncl": {
+        "average_delay_sec": 594.419075511213,
+        "average_delay_min": 9.90698459185355
+    },
+    "place-kntst": {
+        "average_delay_sec": 431.6534499767323,
+        "average_delay_min": 7.194224166278872
+    },
+    "place-lake": {
+        "average_delay_sec": 791.1441978012028,
+        "average_delay_min": 13.185736630020047
+    },
+    "place-lech": {
+        "average_delay_sec": 1410.1341497168978,
+        "average_delay_min": 23.502235828614964
+    },
+    "place-lngmd": {
+        "average_delay_sec": 813.9330783661652,
+        "average_delay_min": 13.565551306102753
+    },
+    "place-longw": {
+        "average_delay_sec": 770.9052181642684,
+        "average_delay_min": 12.848420302737805
+    },
+    "place-masta": {
+        "average_delay_sec": 388.7882750263867,
+        "average_delay_min": 6.479804583773112
+    },
+    "place-matt": {
+        "average_delay_sec": 0.0,
+        "average_delay_min": 0.0
+    },
+    "place-mdftf": {
+        "average_delay_sec": 873.62639607816,
+        "average_delay_min": 14.560439934636001
+    },
+    "place-mfa": {
+        "average_delay_sec": 672.5852523031159,
+        "average_delay_min": 11.209754205051931
+    },
+    "place-mgngl": {
+        "average_delay_sec": 883.9417319396415,
+        "average_delay_min": 14.732362198994025
+    },
+    "place-miltt": {
+        "average_delay_sec": 130.19984329853756,
+        "average_delay_min": 2.169997388308959
+    },
+    "place-mispk": {
+        "average_delay_sec": 1044.2057076703486,
+        "average_delay_min": 17.403428461172478
+    },
+    "place-mlmnl": {
+        "average_delay_sec": 1141.669809066423,
+        "average_delay_min": 19.02783015110705
+    },
+    "place-mvbcl": {
+        "average_delay_sec": 266.6853392638464,
+        "average_delay_min": 4.44475565439744
+    },
+    "place-newtn": {
+        "average_delay_sec": 1059.8639975486035,
+        "average_delay_min": 17.664399959143392
+    },
+    "place-newto": {
+        "average_delay_sec": 1087.5036594734813,
+        "average_delay_min": 18.12506099122469
+    },
+    "place-north": {
+        "average_delay_sec": 1168.7396172103522,
+        "average_delay_min": 19.478993620172538
+    },
+    "place-nqncy": {
+        "average_delay_sec": 1000.2941549159491,
+        "average_delay_min": 16.671569248599152
+    },
+    "place-nuniv": {
+        "average_delay_sec": 640.0340076777861,
+        "average_delay_min": 10.667233461296435
+    },
+    "place-ogmnl": {
+        "average_delay_sec": 1147.010629047244,
+        "average_delay_min": 19.11684381745407
+    },
+    "place-orhte": {
+        "average_delay_sec": 398.7092967645123,
+        "average_delay_min": 6.6451549460752055
+    },
+    "place-pktrm": {
+        "average_delay_sec": 908.092139805981,
+        "average_delay_min": 15.13486899676635
+    },
+    "place-portr": {
+        "average_delay_sec": 719.7292326556511,
+        "average_delay_min": 11.995487210927518
+    },
+    "place-prmnl": {
+        "average_delay_sec": 648.2956469660429,
+        "average_delay_min": 10.804927449434048
+    },
+    "place-qamnl": {
+        "average_delay_sec": 1742.6227804628681,
+        "average_delay_min": 29.04371300771447
+    },
+    "place-qnctr": {
+        "average_delay_sec": 726.9325446445505,
+        "average_delay_min": 12.115542410742508
+    },
+    "place-rbmnl": {
+        "average_delay_sec": 327.9413504523605,
+        "average_delay_min": 5.465689174206008
+    },
+    "place-rcmnl": {
+        "average_delay_sec": 365.39000960063197,
+        "average_delay_min": 6.089833493343866
+    },
+    "place-river": {
+        "average_delay_sec": 1463.9016664184603,
+        "average_delay_min": 24.39836110697434
+    },
+    "place-rsmnl": {
+        "average_delay_sec": 869.6045613982678,
+        "average_delay_min": 14.493409356637796
+    },
+    "place-rugg": {
+        "average_delay_sec": 532.8376831928297,
+        "average_delay_min": 8.880628053213828
+    },
+    "place-rvrwy": {
+        "average_delay_sec": 1068.2249864360858,
+        "average_delay_min": 17.803749773934765
+    },
+    "place-sbmnl": {
+        "average_delay_sec": 459.94566624399357,
+        "average_delay_min": 7.66576110406656
+    },
+    "place-sdmnl": {
+        "average_delay_sec": 556.9256047603648,
+        "average_delay_min": 9.282093412672745
+    },
+    "place-shmnl": {
+        "average_delay_sec": 658.1896489880492,
+        "average_delay_min": 10.969827483134152
+    },
+    "place-smary": {
+        "average_delay_sec": 464.598894036312,
+        "average_delay_min": 7.7433149006052
+    },
+    "place-smmnl": {
+        "average_delay_sec": 1024.2128986897606,
+        "average_delay_min": 17.070214978162674
+    },
+    "place-sougr": {
+        "average_delay_sec": 1090.511603457537,
+        "average_delay_min": 18.17519339095895
+    },
+    "place-spmnl": {
+        "average_delay_sec": 1277.4320545543696,
+        "average_delay_min": 21.29053424257283
+    },
+    "place-sstat": {
+        "average_delay_sec": 608.437039809201,
+        "average_delay_min": 10.14061733015335
+    },
+    "place-state": {
+        "average_delay_sec": 314.1519649589686,
+        "average_delay_min": 5.235866082649477
+    },
+    "place-sthld": {
+        "average_delay_sec": 766.6315014616687,
+        "average_delay_min": 12.777191691027811
+    },
+    "place-stpul": {
+        "average_delay_sec": 401.70097375298633,
+        "average_delay_min": 6.695016229216439
+    },
+    "place-sull": {
+        "average_delay_sec": 446.15342550265814,
+        "average_delay_min": 7.4358904250443025
+    },
+    "place-sumav": {
+        "average_delay_sec": 551.6516686345988,
+        "average_delay_min": 9.194194477243313
+    },
+    "place-symcl": {
+        "average_delay_sec": 642.2210900501335,
+        "average_delay_min": 10.703684834168891
+    },
+    "place-tapst": {
+        "average_delay_sec": 512.5435914956827,
+        "average_delay_min": 8.54239319159471
+    },
+    "place-tumnl": {
+        "average_delay_sec": 548.6616400471469,
+        "average_delay_min": 9.144360667452448
+    },
+    "place-unsqu": {
+        "average_delay_sec": 569.2485213149814,
+        "average_delay_min": 9.48747535524969
+    },
+    "place-valrd": {
+        "average_delay_sec": 139.84377236492855,
+        "average_delay_min": 2.330729539415476
+    },
+    "place-waban": {
+        "average_delay_sec": 1247.9646555821914,
+        "average_delay_min": 20.799410926369855
+    },
+    "place-wascm": {
+        "average_delay_sec": 756.4327539500042,
+        "average_delay_min": 12.607212565833404
+    },
+    "place-welln": {
+        "average_delay_sec": 875.7245857182579,
+        "average_delay_min": 14.595409761970965
+    },
+    "place-wimnl": {
+        "average_delay_sec": 256.906027765652,
+        "average_delay_min": 4.281767129427534
+    },
+    "place-wlsta": {
+        "average_delay_sec": 684.1925665801897,
+        "average_delay_min": 11.403209443003162
+    },
+    "place-wondl": {
+        "average_delay_sec": 577.2402687376795,
+        "average_delay_min": 9.620671145627991
+    },
+    "place-woodl": {
+        "average_delay_sec": 1424.6066707809625,
+        "average_delay_min": 23.74344451301604
+    },
+    "place-wrnst": {
+        "average_delay_sec": 726.9148113699201,
+        "average_delay_min": 12.115246856165335
+    }
+}

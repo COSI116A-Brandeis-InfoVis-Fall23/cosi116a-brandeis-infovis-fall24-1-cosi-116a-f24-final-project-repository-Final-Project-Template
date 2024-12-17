@@ -1,0 +1,1334 @@
+{
+    "place-sbmnl": {
+        "weekday": {
+            "overall_average_ons": 205.9814814814815,
+            "peak_time": "7:00:00",
+            "peak_time_average_ons": 4274
+        },
+        "weekend": {
+            "overall_average_ons": 314.4166666666667,
+            "peak_time": "3:00:00",
+            "peak_time_average_ons": 3773
+        }
+    },
+    "place-bucen": {
+        "weekday": {
+            "overall_average_ons": 54.907407407407405,
+            "peak_time": "16:00:00",
+            "peak_time_average_ons": 781
+        },
+        "weekend": {
+            "overall_average_ons": 236.58333333333334,
+            "peak_time": "3:00:00",
+            "peak_time_average_ons": 2839
+        }
+    },
+    "place-brdwy": {
+        "weekday": {
+            "overall_average_ons": 355.8888888888889,
+            "peak_time": "7:00:00",
+            "peak_time_average_ons": 4862
+        },
+        "weekend": {
+            "overall_average_ons": 1180.9166666666667,
+            "peak_time": "3:00:00",
+            "peak_time_average_ons": 14171
+        }
+    },
+    "place-shmnl": {
+        "weekday": {
+            "overall_average_ons": 136.25925925925927,
+            "peak_time": "7:00:00",
+            "peak_time_average_ons": 2646
+        },
+        "weekend": {
+            "overall_average_ons": 502.25,
+            "peak_time": "3:00:00",
+            "peak_time_average_ons": 6027
+        }
+    },
+    "place-symcl": {
+        "weekday": {
+            "overall_average_ons": 115.5925925925926,
+            "peak_time": "9:00:00",
+            "peak_time_average_ons": 1328
+        },
+        "weekend": {
+            "overall_average_ons": 767.0,
+            "peak_time": "3:00:00",
+            "peak_time_average_ons": 9204
+        }
+    },
+    "place-sdmnl": {
+        "weekday": {
+            "overall_average_ons": 35.18518518518518,
+            "peak_time": "7:00:00",
+            "peak_time_average_ons": 577
+        },
+        "weekend": {
+            "overall_average_ons": 184.58333333333334,
+            "peak_time": "3:00:00",
+            "peak_time_average_ons": 2215
+        }
+    },
+    "place-bomnl": {
+        "weekday": {
+            "overall_average_ons": 127.12962962962963,
+            "peak_time": "16:00:00",
+            "peak_time_average_ons": 2967
+        },
+        "weekend": {
+            "overall_average_ons": 309.5,
+            "peak_time": "3:00:00",
+            "peak_time_average_ons": 3714
+        }
+    },
+    "place-newto": {
+        "weekday": {
+            "overall_average_ons": 60.129629629629626,
+            "peak_time": "9:00:00",
+            "peak_time_average_ons": 763
+        },
+        "weekend": {
+            "overall_average_ons": 286.9166666666667,
+            "peak_time": "3:00:00",
+            "peak_time_average_ons": 3443
+        }
+    },
+    "place-armnl": {
+        "weekday": {
+            "overall_average_ons": 488.3703703703704,
+            "peak_time": "16:00:00",
+            "peak_time_average_ons": 9906
+        },
+        "weekend": {
+            "overall_average_ons": 2266.3333333333335,
+            "peak_time": "3:00:00",
+            "peak_time_average_ons": 27196
+        }
+    },
+    "place-fenwy": {
+        "weekday": {
+            "overall_average_ons": 86.46296296296296,
+            "peak_time": "16:00:00",
+            "peak_time_average_ons": 1166
+        },
+        "weekend": {
+            "overall_average_ons": 452.75,
+            "peak_time": "3:00:00",
+            "peak_time_average_ons": 5433
+        }
+    },
+    "place-cntsq": {
+        "weekday": {
+            "overall_average_ons": 874.2407407407408,
+            "peak_time": "16:00:00",
+            "peak_time_average_ons": 11896
+        },
+        "weekend": {
+            "overall_average_ons": 3654.4166666666665,
+            "peak_time": "3:00:00",
+            "peak_time_average_ons": 43853
+        }
+    },
+    "place-engav": {
+        "weekday": {
+            "overall_average_ons": 18.944444444444443,
+            "peak_time": "7:00:00",
+            "peak_time_average_ons": 455
+        },
+        "weekend": {
+            "overall_average_ons": 89.83333333333333,
+            "peak_time": "3:00:00",
+            "peak_time_average_ons": 1078
+        }
+    },
+    "place-jfk": {
+        "weekday": {
+            "overall_average_ons": 610.2592592592592,
+            "peak_time": "16:00:00",
+            "peak_time_average_ons": 7853
+        },
+        "weekend": {
+            "overall_average_ons": 1677.8333333333333,
+            "peak_time": "3:00:00",
+            "peak_time_average_ons": 20134
+        }
+    },
+    "place-ogmnl": {
+        "weekday": {
+            "overall_average_ons": 386.55555555555554,
+            "peak_time": "7:00:00",
+            "peak_time_average_ons": 9806
+        },
+        "weekend": {
+            "overall_average_ons": 1177.0,
+            "peak_time": "3:00:00",
+            "peak_time_average_ons": 14124
+        }
+    },
+    "place-rcmnl": {
+        "weekday": {
+            "overall_average_ons": 274.22222222222223,
+            "peak_time": "13:30:00",
+            "peak_time_average_ons": 3780
+        },
+        "weekend": {
+            "overall_average_ons": 358.75,
+            "peak_time": "3:00:00",
+            "peak_time_average_ons": 4305
+        }
+    },
+    "place-dwnxg": {
+        "weekday": {
+            "overall_average_ons": 1794.537037037037,
+            "peak_time": "16:00:00",
+            "peak_time_average_ons": 59054
+        },
+        "weekend": {
+            "overall_average_ons": 5422.875,
+            "peak_time": "3:00:00",
+            "peak_time_average_ons": 130149
+        }
+    },
+    "place-wlsta": {
+        "weekday": {
+            "overall_average_ons": 141.92592592592592,
+            "peak_time": "7:00:00",
+            "peak_time_average_ons": 3031
+        },
+        "weekend": {
+            "overall_average_ons": 498.5,
+            "peak_time": "3:00:00",
+            "peak_time_average_ons": 5982
+        }
+    },
+    "place-wimnl": {
+        "weekday": {
+            "overall_average_ons": 126.92592592592592,
+            "peak_time": "7:00:00",
+            "peak_time_average_ons": 1786
+        },
+        "weekend": {
+            "overall_average_ons": 629.1666666666666,
+            "peak_time": "3:00:00",
+            "peak_time_average_ons": 7550
+        }
+    },
+    "place-fldcr": {
+        "weekday": {
+            "overall_average_ons": 305.24074074074076,
+            "peak_time": "7:00:00",
+            "peak_time_average_ons": 4318
+        },
+        "weekend": {
+            "overall_average_ons": 1192.25,
+            "peak_time": "3:00:00",
+            "peak_time_average_ons": 14307
+        }
+    },
+    "place-woodl": {
+        "weekday": {
+            "overall_average_ons": 21.814814814814813,
+            "peak_time": "7:00:00",
+            "peak_time_average_ons": 288
+        },
+        "weekend": {
+            "overall_average_ons": 112.41666666666667,
+            "peak_time": "3:00:00",
+            "peak_time_average_ons": 1349
+        }
+    },
+    "place-alsgr": {
+        "weekday": {
+            "overall_average_ons": 40.94444444444444,
+            "peak_time": "9:00:00",
+            "peak_time_average_ons": 722
+        },
+        "weekend": {
+            "overall_average_ons": 215.91666666666666,
+            "peak_time": "3:00:00",
+            "peak_time_average_ons": 2591
+        }
+    },
+    "place-orhte": {
+        "weekday": {
+            "overall_average_ons": 255.0185185185185,
+            "peak_time": "7:00:00",
+            "peak_time_average_ons": 4607
+        },
+        "weekend": {
+            "overall_average_ons": 1192.5833333333333,
+            "peak_time": "3:00:00",
+            "peak_time_average_ons": 14311
+        }
+    },
+    "place-river": {
+        "weekday": {
+            "overall_average_ons": 26.74074074074074,
+            "peak_time": "7:00:00",
+            "peak_time_average_ons": 343
+        },
+        "weekend": {
+            "overall_average_ons": 171.91666666666666,
+            "peak_time": "3:00:00",
+            "peak_time_average_ons": 2063
+        }
+    },
+    "place-brkhl": {
+        "weekday": {
+            "overall_average_ons": 47.24074074074074,
+            "peak_time": "9:00:00",
+            "peak_time_average_ons": 689
+        },
+        "weekend": {
+            "overall_average_ons": 198.08333333333334,
+            "peak_time": "3:00:00",
+            "peak_time_average_ons": 2377
+        }
+    },
+    "place-mvbcl": {
+        "weekday": {
+            "overall_average_ons": 658.7592592592592,
+            "peak_time": "7:00:00",
+            "peak_time_average_ons": 9671
+        },
+        "weekend": {
+            "overall_average_ons": 3441.3333333333335,
+            "peak_time": "3:00:00",
+            "peak_time_average_ons": 41296
+        }
+    },
+    "place-forhl": {
+        "weekday": {
+            "overall_average_ons": 752.3148148148148,
+            "peak_time": "7:00:00",
+            "peak_time_average_ons": 13947
+        },
+        "weekend": {
+            "overall_average_ons": 1144.1666666666667,
+            "peak_time": "3:00:00",
+            "peak_time_average_ons": 13730
+        }
+    },
+    "place-harvd": {
+        "weekday": {
+            "overall_average_ons": 118.92592592592592,
+            "peak_time": "9:00:00",
+            "peak_time_average_ons": 1879
+        },
+        "weekend": {
+            "overall_average_ons": 774.1666666666666,
+            "peak_time": "3:00:00",
+            "peak_time_average_ons": 9290
+        }
+    },
+    "place-mlmnl": {
+        "weekday": {
+            "overall_average_ons": 705.1481481481482,
+            "peak_time": "7:00:00",
+            "peak_time_average_ons": 13963
+        },
+        "weekend": {
+            "overall_average_ons": 2537.8333333333335,
+            "peak_time": "3:00:00",
+            "peak_time_average_ons": 30454
+        }
+    },
+    "place-bckhl": {
+        "weekday": {
+            "overall_average_ons": 8.5,
+            "peak_time": "7:00:00",
+            "peak_time_average_ons": 126
+        },
+        "weekend": {
+            "overall_average_ons": 35.25,
+            "peak_time": "3:00:00",
+            "peak_time_average_ons": 423
+        }
+    },
+    "place-ccmnl": {
+        "weekday": {
+            "overall_average_ons": 306.5925925925926,
+            "peak_time": "9:00:00",
+            "peak_time_average_ons": 4216
+        },
+        "weekend": {
+            "overall_average_ons": 731.3333333333334,
+            "peak_time": "3:00:00",
+            "peak_time_average_ons": 8776
+        }
+    },
+    "place-wrnst": {
+        "weekday": {
+            "overall_average_ons": 51.27777777777778,
+            "peak_time": "7:00:00",
+            "peak_time_average_ons": 795
+        },
+        "weekend": {
+            "overall_average_ons": 239.33333333333334,
+            "peak_time": "3:00:00",
+            "peak_time_average_ons": 2872
+        }
+    },
+    "place-alfcl": {
+        "weekday": {
+            "overall_average_ons": 670.8888888888889,
+            "peak_time": "7:00:00",
+            "peak_time_average_ons": 14424
+        },
+        "weekend": {
+            "overall_average_ons": 2081.8333333333335,
+            "peak_time": "3:00:00",
+            "peak_time_average_ons": 24982
+        }
+    },
+    "place-qamnl": {
+        "weekday": {
+            "overall_average_ons": 275.5,
+            "peak_time": "7:00:00",
+            "peak_time_average_ons": 6439
+        },
+        "weekend": {
+            "overall_average_ons": 468.5,
+            "peak_time": "3:00:00",
+            "peak_time_average_ons": 5622
+        }
+    },
+    "place-fbkst": {
+        "weekday": {
+            "overall_average_ons": 22.12962962962963,
+            "peak_time": "7:00:00",
+            "peak_time_average_ons": 419
+        },
+        "weekend": {
+            "overall_average_ons": 98.41666666666667,
+            "peak_time": "3:00:00",
+            "peak_time_average_ons": 1181
+        }
+    },
+    "place-grigg": {
+        "weekday": {
+            "overall_average_ons": 48.666666666666664,
+            "peak_time": "9:00:00",
+            "peak_time_average_ons": 829
+        },
+        "weekend": {
+            "overall_average_ons": 240.75,
+            "peak_time": "3:00:00",
+            "peak_time_average_ons": 2889
+        }
+    },
+    "place-fenwd": {
+        "weekday": {
+            "overall_average_ons": 14.87037037037037,
+            "peak_time": "9:00:00",
+            "peak_time_average_ons": 195
+        },
+        "weekend": {
+            "overall_average_ons": 62.916666666666664,
+            "peak_time": "3:00:00",
+            "peak_time_average_ons": 755
+        }
+    },
+    "place-buest": {
+        "weekday": {
+            "overall_average_ons": 49.55555555555556,
+            "peak_time": "16:00:00",
+            "peak_time_average_ons": 679
+        },
+        "weekend": {
+            "overall_average_ons": 190.5,
+            "peak_time": "3:00:00",
+            "peak_time_average_ons": 2286
+        }
+    },
+    "place-rugg": {
+        "weekday": {
+            "overall_average_ons": 572.7222222222222,
+            "peak_time": "16:00:00",
+            "peak_time_average_ons": 9471
+        },
+        "weekend": {
+            "overall_average_ons": 3072.1666666666665,
+            "peak_time": "3:00:00",
+            "peak_time_average_ons": 36866
+        }
+    },
+    "place-tapst": {
+        "weekday": {
+            "overall_average_ons": 21.444444444444443,
+            "peak_time": "7:00:00",
+            "peak_time_average_ons": 402
+        },
+        "weekend": {
+            "overall_average_ons": 119.08333333333333,
+            "peak_time": "3:00:00",
+            "peak_time_average_ons": 1429
+        }
+    },
+    "place-smmnl": {
+        "weekday": {
+            "overall_average_ons": 141.07407407407408,
+            "peak_time": "7:00:00",
+            "peak_time_average_ons": 2704
+        },
+        "weekend": {
+            "overall_average_ons": 463.75,
+            "peak_time": "3:00:00",
+            "peak_time_average_ons": 5565
+        }
+    },
+    "place-hymnl": {
+        "weekday": {
+            "overall_average_ons": 469.9259259259259,
+            "peak_time": "16:00:00",
+            "peak_time_average_ons": 6819
+        },
+        "weekend": {
+            "overall_average_ons": 3228.3333333333335,
+            "peak_time": "3:00:00",
+            "peak_time_average_ons": 38740
+        }
+    },
+    "place-rsmnl": {
+        "weekday": {
+            "overall_average_ons": 66.68518518518519,
+            "peak_time": "9:00:00",
+            "peak_time_average_ons": 980
+        },
+        "weekend": {
+            "overall_average_ons": 369.5833333333333,
+            "peak_time": "3:00:00",
+            "peak_time_average_ons": 4435
+        }
+    },
+    "place-gover": {
+        "weekday": {
+            "overall_average_ons": 817.8055555555555,
+            "peak_time": "16:00:00",
+            "peak_time_average_ons": 23162
+        },
+        "weekend": {
+            "overall_average_ons": 4853.208333333333,
+            "peak_time": "3:00:00",
+            "peak_time_average_ons": 116477
+        }
+    },
+    "place-aport": {
+        "weekday": {
+            "overall_average_ons": 443.7037037037037,
+            "peak_time": "9:00:00",
+            "peak_time_average_ons": 4898
+        },
+        "weekend": {
+            "overall_average_ons": 2776.5833333333335,
+            "peak_time": "3:00:00",
+            "peak_time_average_ons": 33319
+        }
+    },
+    "place-tumnl": {
+        "weekday": {
+            "overall_average_ons": 353.05555555555554,
+            "peak_time": "16:00:00",
+            "peak_time_average_ons": 6587
+        },
+        "weekend": {
+            "overall_average_ons": 1083.0833333333333,
+            "peak_time": "3:00:00",
+            "peak_time_average_ons": 12997
+        }
+    },
+    "place-hwsst": {
+        "weekday": {
+            "overall_average_ons": 15.851851851851851,
+            "peak_time": "9:00:00",
+            "peak_time_average_ons": 216
+        },
+        "weekend": {
+            "overall_average_ons": 76.08333333333333,
+            "peak_time": "3:00:00",
+            "peak_time_average_ons": 913
+        }
+    },
+    "place-sull": {
+        "weekday": {
+            "overall_average_ons": 499.5,
+            "peak_time": "7:00:00",
+            "peak_time_average_ons": 6466
+        },
+        "weekend": {
+            "overall_average_ons": 2120.0833333333335,
+            "peak_time": "3:00:00",
+            "peak_time_average_ons": 25441
+        }
+    },
+    "place-nuniv": {
+        "weekday": {
+            "overall_average_ons": 65.11111111111111,
+            "peak_time": "16:00:00",
+            "peak_time_average_ons": 905
+        },
+        "weekend": {
+            "overall_average_ons": 334.9166666666667,
+            "peak_time": "3:00:00",
+            "peak_time_average_ons": 4019
+        }
+    },
+    "place-chncl": {
+        "weekday": {
+            "overall_average_ons": 331.4074074074074,
+            "peak_time": "16:00:00",
+            "peak_time_average_ons": 5214
+        },
+        "weekend": {
+            "overall_average_ons": 1762.25,
+            "peak_time": "3:00:00",
+            "peak_time_average_ons": 21147
+        }
+    },
+    "place-kntst": {
+        "weekday": {
+            "overall_average_ons": 16.48148148148148,
+            "peak_time": "9:00:00",
+            "peak_time_average_ons": 246
+        },
+        "weekend": {
+            "overall_average_ons": 73.25,
+            "peak_time": "3:00:00",
+            "peak_time_average_ons": 879
+        }
+    },
+    "place-welln": {
+        "weekday": {
+            "overall_average_ons": 429.462962962963,
+            "peak_time": "7:00:00",
+            "peak_time_average_ons": 8217
+        },
+        "weekend": {
+            "overall_average_ons": 1545.25,
+            "peak_time": "3:00:00",
+            "peak_time_average_ons": 18543
+        }
+    },
+    "place-davis": {
+        "weekday": {
+            "overall_average_ons": 683.2592592592592,
+            "peak_time": "7:00:00",
+            "peak_time_average_ons": 15038
+        },
+        "weekend": {
+            "overall_average_ons": 2617.3333333333335,
+            "peak_time": "3:00:00",
+            "peak_time_average_ons": 31408
+        }
+    },
+    "place-sougr": {
+        "weekday": {
+            "overall_average_ons": 9.0,
+            "peak_time": "7:00:00",
+            "peak_time_average_ons": 176
+        },
+        "weekend": {
+            "overall_average_ons": 59.166666666666664,
+            "peak_time": "3:00:00",
+            "peak_time_average_ons": 710
+        }
+    },
+    "place-chhil": {
+        "weekday": {
+            "overall_average_ons": 45.22222222222222,
+            "peak_time": "16:00:00",
+            "peak_time_average_ons": 588
+        },
+        "weekend": {
+            "overall_average_ons": 223.91666666666666,
+            "peak_time": "3:00:00",
+            "peak_time_average_ons": 2687
+        }
+    },
+    "place-newtn": {
+        "weekday": {
+            "overall_average_ons": 40.425925925925924,
+            "peak_time": "7:00:00",
+            "peak_time_average_ons": 513
+        },
+        "weekend": {
+            "overall_average_ons": 157.08333333333334,
+            "peak_time": "3:00:00",
+            "peak_time_average_ons": 1885
+        }
+    },
+    "place-nqncy": {
+        "weekday": {
+            "overall_average_ons": 425.3703703703704,
+            "peak_time": "7:00:00",
+            "peak_time_average_ons": 7846
+        },
+        "weekend": {
+            "overall_average_ons": 2078.5833333333335,
+            "peak_time": "3:00:00",
+            "peak_time_average_ons": 24943
+        }
+    },
+    "place-chswk": {
+        "weekday": {
+            "overall_average_ons": 22.555555555555557,
+            "peak_time": "7:00:00",
+            "peak_time_average_ons": 374
+        },
+        "weekend": {
+            "overall_average_ons": 132.75,
+            "peak_time": "3:00:00",
+            "peak_time_average_ons": 1593
+        }
+    },
+    "place-andrw": {
+        "weekday": {
+            "overall_average_ons": 362.85185185185185,
+            "peak_time": "7:00:00",
+            "peak_time_average_ons": 4752
+        },
+        "weekend": {
+            "overall_average_ons": 1405.0,
+            "peak_time": "3:00:00",
+            "peak_time_average_ons": 16860
+        }
+    },
+    "place-stpul": {
+        "weekday": {
+            "overall_average_ons": 32.351851851851855,
+            "peak_time": "9:00:00",
+            "peak_time_average_ons": 930
+        },
+        "weekend": {
+            "overall_average_ons": 166.5,
+            "peak_time": "3:00:00",
+            "peak_time_average_ons": 3996
+        }
+    },
+    "place-qnctr": {
+        "weekday": {
+            "overall_average_ons": 454.5740740740741,
+            "peak_time": "7:00:00",
+            "peak_time_average_ons": 8875
+        },
+        "weekend": {
+            "overall_average_ons": 1049.5,
+            "peak_time": "3:00:00",
+            "peak_time_average_ons": 12594
+        }
+    },
+    "place-jaksn": {
+        "weekday": {
+            "overall_average_ons": 320.3333333333333,
+            "peak_time": "7:00:00",
+            "peak_time_average_ons": 5034
+        },
+        "weekend": {
+            "overall_average_ons": 784.5,
+            "peak_time": "3:00:00",
+            "peak_time_average_ons": 9414
+        }
+    },
+    "place-mispk": {
+        "weekday": {
+            "overall_average_ons": 27.61111111111111,
+            "peak_time": "9:00:00",
+            "peak_time_average_ons": 442
+        },
+        "weekend": {
+            "overall_average_ons": 134.91666666666666,
+            "peak_time": "3:00:00",
+            "peak_time_average_ons": 1619
+        }
+    },
+    "place-bvmnl": {
+        "weekday": {
+            "overall_average_ons": 78.37037037037037,
+            "peak_time": "9:00:00",
+            "peak_time_average_ons": 1166
+        },
+        "weekend": {
+            "overall_average_ons": 358.6666666666667,
+            "peak_time": "3:00:00",
+            "peak_time_average_ons": 4304
+        }
+    },
+    "place-chmnl": {
+        "weekday": {
+            "overall_average_ons": 610.2037037037037,
+            "peak_time": "16:00:00",
+            "peak_time_average_ons": 11309
+        },
+        "weekend": {
+            "overall_average_ons": 1421.75,
+            "peak_time": "3:00:00",
+            "peak_time_average_ons": 17061
+        }
+    },
+    "place-astao": {
+        "weekday": {
+            "overall_average_ons": 213.33333333333334,
+            "peak_time": "16:00:00",
+            "peak_time_average_ons": 3571
+        },
+        "weekend": {
+            "overall_average_ons": 1216.3333333333333,
+            "peak_time": "3:00:00",
+            "peak_time_average_ons": 14596
+        }
+    },
+    "place-bndhl": {
+        "weekday": {
+            "overall_average_ons": 15.12962962962963,
+            "peak_time": "7:00:00",
+            "peak_time_average_ons": 328
+        },
+        "weekend": {
+            "overall_average_ons": 62.75,
+            "peak_time": "3:00:00",
+            "peak_time_average_ons": 753
+        }
+    },
+    "place-wascm": {
+        "weekday": {
+            "overall_average_ons": 48.72222222222222,
+            "peak_time": "9:00:00",
+            "peak_time_average_ons": 829
+        },
+        "weekend": {
+            "overall_average_ons": 310.4166666666667,
+            "peak_time": "3:00:00",
+            "peak_time_average_ons": 3725
+        }
+    },
+    "place-grnst": {
+        "weekday": {
+            "overall_average_ons": 193.38888888888889,
+            "peak_time": "7:00:00",
+            "peak_time_average_ons": 3760
+        },
+        "weekend": {
+            "overall_average_ons": 280.0833333333333,
+            "peak_time": "3:00:00",
+            "peak_time_average_ons": 3361
+        }
+    },
+    "place-sthld": {
+        "weekday": {
+            "overall_average_ons": 32.7962962962963,
+            "peak_time": "7:00:00",
+            "peak_time_average_ons": 648
+        },
+        "weekend": {
+            "overall_average_ons": 173.33333333333334,
+            "peak_time": "3:00:00",
+            "peak_time_average_ons": 2080
+        }
+    },
+    "place-wondl": {
+        "weekday": {
+            "overall_average_ons": 390.85185185185185,
+            "peak_time": "7:00:00",
+            "peak_time_average_ons": 8385
+        },
+        "weekend": {
+            "overall_average_ons": 1699.0833333333333,
+            "peak_time": "3:00:00",
+            "peak_time_average_ons": 20389
+        }
+    },
+    "place-bcnfd": {
+        "weekday": {
+            "overall_average_ons": 37.888888888888886,
+            "peak_time": "9:00:00",
+            "peak_time_average_ons": 635
+        },
+        "weekend": {
+            "overall_average_ons": 177.0,
+            "peak_time": "3:00:00",
+            "peak_time_average_ons": 2124
+        }
+    },
+    "place-boyls": {
+        "weekday": {
+            "overall_average_ons": 428.537037037037,
+            "peak_time": "16:00:00",
+            "peak_time_average_ons": 6053
+        },
+        "weekend": {
+            "overall_average_ons": 2914.6666666666665,
+            "peak_time": "3:00:00",
+            "peak_time_average_ons": 34976
+        }
+    },
+    "place-bmmnl": {
+        "weekday": {
+            "overall_average_ons": 189.96296296296296,
+            "peak_time": "7:00:00",
+            "peak_time_average_ons": 3658
+        },
+        "weekend": {
+            "overall_average_ons": 853.9166666666666,
+            "peak_time": "3:00:00",
+            "peak_time_average_ons": 10247
+        }
+    },
+    "place-bbsta": {
+        "weekday": {
+            "overall_average_ons": 910.7777777777778,
+            "peak_time": "16:00:00",
+            "peak_time_average_ons": 17505
+        },
+        "weekend": {
+            "overall_average_ons": 2719.5,
+            "peak_time": "3:00:00",
+            "peak_time_average_ons": 32634
+        }
+    },
+    "place-asmnl": {
+        "weekday": {
+            "overall_average_ons": 518.574074074074,
+            "peak_time": "7:00:00",
+            "peak_time_average_ons": 9707
+        },
+        "weekend": {
+            "overall_average_ons": 1745.5,
+            "peak_time": "3:00:00",
+            "peak_time_average_ons": 20946
+        }
+    },
+    "place-spmnl": {
+        "weekday": {
+            "overall_average_ons": 175.7037037037037,
+            "peak_time": "16:00:00",
+            "peak_time_average_ons": 2674
+        },
+        "weekend": {
+            "overall_average_ons": 861.5833333333334,
+            "peak_time": "3:00:00",
+            "peak_time_average_ons": 10339
+        }
+    },
+    "place-cool": {
+        "weekday": {
+            "overall_average_ons": 97.5925925925926,
+            "peak_time": "9:00:00",
+            "peak_time_average_ons": 1307
+        },
+        "weekend": {
+            "overall_average_ons": 646.8333333333334,
+            "peak_time": "3:00:00",
+            "peak_time_average_ons": 7762
+        }
+    },
+    "place-bland": {
+        "weekday": {
+            "overall_average_ons": 34.574074074074076,
+            "peak_time": "16:00:00",
+            "peak_time_average_ons": 507
+        },
+        "weekend": {
+            "overall_average_ons": 112.83333333333333,
+            "peak_time": "3:00:00",
+            "peak_time_average_ons": 1354
+        }
+    },
+    "place-eliot": {
+        "weekday": {
+            "overall_average_ons": 23.74074074074074,
+            "peak_time": "7:00:00",
+            "peak_time_average_ons": 470
+        },
+        "weekend": {
+            "overall_average_ons": 102.08333333333333,
+            "peak_time": "3:00:00",
+            "peak_time_average_ons": 1225
+        }
+    },
+    "place-north": {
+        "weekday": {
+            "overall_average_ons": 569.1574074074074,
+            "peak_time": "16:00:00",
+            "peak_time_average_ons": 14805
+        },
+        "weekend": {
+            "overall_average_ons": 2100.0833333333335,
+            "peak_time": "3:00:00",
+            "peak_time_average_ons": 50402
+        }
+    },
+    "place-smary": {
+        "weekday": {
+            "overall_average_ons": 41.574074074074076,
+            "peak_time": "9:00:00",
+            "peak_time_average_ons": 505
+        },
+        "weekend": {
+            "overall_average_ons": 265.25,
+            "peak_time": "3:00:00",
+            "peak_time_average_ons": 3183
+        }
+    },
+    "place-aqucl": {
+        "weekday": {
+            "overall_average_ons": 289.1296296296296,
+            "peak_time": "16:00:00",
+            "peak_time_average_ons": 5674
+        },
+        "weekend": {
+            "overall_average_ons": 1930.0,
+            "peak_time": "3:00:00",
+            "peak_time_average_ons": 23160
+        }
+    },
+    "place-state": {
+        "weekday": {
+            "overall_average_ons": 911.4814814814815,
+            "peak_time": "16:00:00",
+            "peak_time_average_ons": 30926
+        },
+        "weekend": {
+            "overall_average_ons": 3263.2916666666665,
+            "peak_time": "3:00:00",
+            "peak_time_average_ons": 78319
+        }
+    },
+    "place-hsmnl": {
+        "weekday": {
+            "overall_average_ons": 21.462962962962962,
+            "peak_time": "9:00:00",
+            "peak_time_average_ons": 317
+        },
+        "weekend": {
+            "overall_average_ons": 88.16666666666667,
+            "peak_time": "3:00:00",
+            "peak_time_average_ons": 1058
+        }
+    },
+    "place-masta": {
+        "weekday": {
+            "overall_average_ons": 329.05555555555554,
+            "peak_time": "16:00:00",
+            "peak_time_average_ons": 4666
+        },
+        "weekend": {
+            "overall_average_ons": 1214.1666666666667,
+            "peak_time": "3:00:00",
+            "peak_time_average_ons": 14570
+        }
+    },
+    "place-clmnl": {
+        "weekday": {
+            "overall_average_ons": 21.85185185185185,
+            "peak_time": "7:00:00",
+            "peak_time_average_ons": 385
+        },
+        "weekend": {
+            "overall_average_ons": 116.41666666666667,
+            "peak_time": "3:00:00",
+            "peak_time_average_ons": 1397
+        }
+    },
+    "place-brmnl": {
+        "weekday": {
+            "overall_average_ons": 74.14814814814815,
+            "peak_time": "16:00:00",
+            "peak_time_average_ons": 1189
+        },
+        "weekend": {
+            "overall_average_ons": 251.58333333333334,
+            "peak_time": "3:00:00",
+            "peak_time_average_ons": 3019
+        }
+    },
+    "place-brntn": {
+        "weekday": {
+            "overall_average_ons": 258.962962962963,
+            "peak_time": "7:00:00",
+            "peak_time_average_ons": 5068
+        },
+        "weekend": {
+            "overall_average_ons": 619.0,
+            "peak_time": "3:00:00",
+            "peak_time_average_ons": 7428
+        }
+    },
+    "place-harsq": {
+        "weekday": {
+            "overall_average_ons": 1077.6666666666667,
+            "peak_time": "16:00:00",
+            "peak_time_average_ons": 15197
+        },
+        "weekend": {
+            "overall_average_ons": 5377.916666666667,
+            "peak_time": "3:00:00",
+            "peak_time_average_ons": 64535
+        }
+    },
+    "place-knncl": {
+        "weekday": {
+            "overall_average_ons": 972.1111111111111,
+            "peak_time": "16:00:00",
+            "peak_time_average_ons": 24250
+        },
+        "weekend": {
+            "overall_average_ons": 1886.5833333333333,
+            "peak_time": "3:00:00",
+            "peak_time_average_ons": 22639
+        }
+    },
+    "place-mfa": {
+        "weekday": {
+            "overall_average_ons": 58.925925925925924,
+            "peak_time": "16:00:00",
+            "peak_time_average_ons": 828
+        },
+        "weekend": {
+            "overall_average_ons": 347.0,
+            "peak_time": "3:00:00",
+            "peak_time_average_ons": 4164
+        }
+    },
+    "place-lake": {
+        "weekday": {
+            "overall_average_ons": 20.462962962962962,
+            "peak_time": "16:00:00",
+            "peak_time_average_ons": 273
+        },
+        "weekend": {
+            "overall_average_ons": 105.0,
+            "peak_time": "3:00:00",
+            "peak_time_average_ons": 1260
+        }
+    },
+    "place-lech": {
+        "weekday": {
+            "overall_average_ons": 332.4259259259259,
+            "peak_time": "16:00:00",
+            "peak_time_average_ons": 4742
+        },
+        "weekend": {
+            "overall_average_ons": 1805.4166666666667,
+            "peak_time": "3:00:00",
+            "peak_time_average_ons": 21665
+        }
+    },
+    "place-sumav": {
+        "weekday": {
+            "overall_average_ons": 29.11111111111111,
+            "peak_time": "7:00:00",
+            "peak_time_average_ons": 519
+        },
+        "weekend": {
+            "overall_average_ons": 131.75,
+            "peak_time": "3:00:00",
+            "peak_time_average_ons": 1581
+        }
+    },
+    "place-prmnl": {
+        "weekday": {
+            "overall_average_ons": 187.24074074074073,
+            "peak_time": "16:00:00",
+            "peak_time_average_ons": 3038
+        },
+        "weekend": {
+            "overall_average_ons": 1244.75,
+            "peak_time": "3:00:00",
+            "peak_time_average_ons": 14937
+        }
+    },
+    "place-waban": {
+        "weekday": {
+            "overall_average_ons": 22.14814814814815,
+            "peak_time": "7:00:00",
+            "peak_time_average_ons": 414
+        },
+        "weekend": {
+            "overall_average_ons": 88.83333333333333,
+            "peak_time": "3:00:00",
+            "peak_time_average_ons": 1066
+        }
+    },
+    "place-lngmd": {
+        "weekday": {
+            "overall_average_ons": 78.83333333333333,
+            "peak_time": "16:00:00",
+            "peak_time_average_ons": 1077
+        },
+        "weekend": {
+            "overall_average_ons": 346.3333333333333,
+            "peak_time": "3:00:00",
+            "peak_time_average_ons": 4156
+        }
+    },
+    "place-bcnwa": {
+        "weekday": {
+            "overall_average_ons": 28.75925925925926,
+            "peak_time": "7:00:00",
+            "peak_time_average_ons": 458
+        },
+        "weekend": {
+            "overall_average_ons": 151.08333333333334,
+            "peak_time": "3:00:00",
+            "peak_time_average_ons": 1813
+        }
+    },
+    "place-coecl": {
+        "weekday": {
+            "overall_average_ons": 861.2592592592592,
+            "peak_time": "16:00:00",
+            "peak_time_average_ons": 13950
+        },
+        "weekend": {
+            "overall_average_ons": 4834.083333333333,
+            "peak_time": "3:00:00",
+            "peak_time_average_ons": 58009
+        }
+    },
+    "place-kencl": {
+        "weekday": {
+            "overall_average_ons": 582.3148148148148,
+            "peak_time": "16:00:00",
+            "peak_time_average_ons": 7575
+        },
+        "weekend": {
+            "overall_average_ons": 4107.75,
+            "peak_time": "3:00:00",
+            "peak_time_average_ons": 49293
+        }
+    },
+    "place-rbmnl": {
+        "weekday": {
+            "overall_average_ons": 181.2962962962963,
+            "peak_time": "7:00:00",
+            "peak_time_average_ons": 2589
+        },
+        "weekend": {
+            "overall_average_ons": 971.25,
+            "peak_time": "3:00:00",
+            "peak_time_average_ons": 11655
+        }
+    },
+    "place-brico": {
+        "weekday": {
+            "overall_average_ons": 66.33333333333333,
+            "peak_time": "9:00:00",
+            "peak_time_average_ons": 1210
+        },
+        "weekend": {
+            "overall_average_ons": 408.3333333333333,
+            "peak_time": "3:00:00",
+            "peak_time_average_ons": 4900
+        }
+    },
+    "place-pktrm": {
+        "weekday": {
+            "overall_average_ons": 1820.8333333333333,
+            "peak_time": "16:00:00",
+            "peak_time_average_ons": 54642
+        },
+        "weekend": {
+            "overall_average_ons": 8920.375,
+            "peak_time": "3:00:00",
+            "peak_time_average_ons": 214089
+        }
+    },
+    "place-babck": {
+        "weekday": {
+            "overall_average_ons": 45.94444444444444,
+            "peak_time": "9:00:00",
+            "peak_time_average_ons": 712
+        },
+        "weekend": {
+            "overall_average_ons": 262.5833333333333,
+            "peak_time": "3:00:00",
+            "peak_time_average_ons": 3151
+        }
+    },
+    "place-haecl": {
+        "weekday": {
+            "overall_average_ons": 428.3703703703704,
+            "peak_time": "16:00:00",
+            "peak_time_average_ons": 11116
+        },
+        "weekend": {
+            "overall_average_ons": 2396.25,
+            "peak_time": "3:00:00",
+            "peak_time_average_ons": 57510
+        }
+    },
+    "place-longw": {
+        "weekday": {
+            "overall_average_ons": 69.92592592592592,
+            "peak_time": "16:00:00",
+            "peak_time_average_ons": 1015
+        },
+        "weekend": {
+            "overall_average_ons": 231.58333333333334,
+            "peak_time": "3:00:00",
+            "peak_time_average_ons": 2779
+        }
+    },
+    "place-denrd": {
+        "weekday": {
+            "overall_average_ons": 18.37037037037037,
+            "peak_time": "7:00:00",
+            "peak_time_average_ons": 430
+        },
+        "weekend": {
+            "overall_average_ons": 92.25,
+            "peak_time": "3:00:00",
+            "peak_time_average_ons": 1107
+        }
+    },
+    "place-chill": {
+        "weekday": {
+            "overall_average_ons": 13.518518518518519,
+            "peak_time": "7:00:00",
+            "peak_time_average_ons": 175
+        },
+        "weekend": {
+            "overall_average_ons": 84.08333333333333,
+            "peak_time": "3:00:00",
+            "peak_time_average_ons": 1009
+        }
+    },
+    "place-sstat": {
+        "weekday": {
+            "overall_average_ons": 1597.851851851852,
+            "peak_time": "16:00:00",
+            "peak_time_average_ons": 31743
+        },
+        "weekend": {
+            "overall_average_ons": 4393.5,
+            "peak_time": "3:00:00",
+            "peak_time_average_ons": 52722
+        }
+    },
+    "place-rvrwy": {
+        "weekday": {
+            "overall_average_ons": 18.40740740740741,
+            "peak_time": "7:00:00",
+            "peak_time_average_ons": 356
+        },
+        "weekend": {
+            "overall_average_ons": 93.83333333333333,
+            "peak_time": "3:00:00",
+            "peak_time_average_ons": 1126
+        }
+    },
+    "place-portr": {
+        "weekday": {
+            "overall_average_ons": 485.24074074074076,
+            "peak_time": "7:00:00",
+            "peak_time_average_ons": 10306
+        },
+        "weekend": {
+            "overall_average_ons": 1818.75,
+            "peak_time": "3:00:00",
+            "peak_time_average_ons": 21825
+        }
+    }
+}
