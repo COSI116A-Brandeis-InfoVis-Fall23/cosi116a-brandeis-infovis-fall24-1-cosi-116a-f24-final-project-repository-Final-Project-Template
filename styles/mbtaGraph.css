@@ -177,3 +177,23 @@ a.section-pick-two .viz .picker .loading.err:hover {
   pointer-events: none; /* Prevent the tooltip from blocking mouseover */
   z-index: 1000; /* Ensure tooltip appears above other elements */
 }
+
+.line-data-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.line-data-table th, .line-data-table td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: center;
+}
+
+.line-data-table th {
+  background-color: #f4f4f4;
+  font-weight: bold;
+}
+
+.line-data-table tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
