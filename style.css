@@ -9,6 +9,10 @@ h1, h2, h3 {
 	line-height: 1.2
 }
 
+.caption {
+	font-style: normal; 
+  }
+
 /* Your text should be in a nice narrow column */
 .content-column {
 	max-width: 650px;
