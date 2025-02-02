@@ -1,0 +1,22 @@
+{
+    "Blue": {
+        "cause": "CONSTRUCTION",
+        "count": 6021
+    },
+    "Green": {
+        "cause": "TECHNICAL_PROBLEM",
+        "count": 12811
+    },
+    "Mattapan": {
+        "cause": "TECHNICAL_PROBLEM",
+        "count": 436
+    },
+    "Orange": {
+        "cause": "MAINTENANCE",
+        "count": 13161
+    },
+    "Red": {
+        "cause": "MAINTENANCE",
+        "count": 45396
+    }
+}
